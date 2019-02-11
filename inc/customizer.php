@@ -311,7 +311,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		$wp_customize->add_control( 'conversions_headings_fonts', array(
 			'label'      => __('Heading font', 'conversions'),
 			'type' => 'select',
-			'description' => __('Select your desired font for the headings.', 'conversions'),
+			'description' => __('Select your Google font for headings.', 'conversions'),
 			'section' => 'conversions_typography',
 			'choices' => $font_choices
 		) );
@@ -323,7 +323,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		$wp_customize->add_control( 'conversions_body_fonts', array(
 			'label'      => __('Body font', 'conversions'),
 			'type' => 'select',
-			'description' => __( 'Select your desired font for the body.', 'conversions' ),
+			'description' => __( 'Select your Google font for body.', 'conversions' ),
 			'section' => 'conversions_typography',
 			'choices' => $font_choices
 		) );
