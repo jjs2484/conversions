@@ -49,6 +49,8 @@ function conversions_customizer_css_ouput()
     ?>
 
          <style type="text/css">
+         	/* Container width customizer styles */
+         	.container-fluid { max-width: <?php echo get_theme_mod('conversions_container_width', '1140'); ?>px; }
          	/* Logo customizer styles */
          	a.navbar-brand img { 
          		max-width: <?php echo get_theme_mod('conversions_logo_width', '200'); ?>px; 

@@ -9,7 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 $header_position = get_theme_mod( 'conversions_header_position' );
-$container = get_theme_mod( 'conversions_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -33,9 +32,7 @@ $container = get_theme_mod( 'conversions_container_type' );
 
 		<nav class="navbar navbar-expand-lg navbar-dark">
 
-		<?php if ( 'container' == $container ) : ?>
-			<div class="container">
-		<?php endif; ?>
+			<div class="container-fluid">
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
@@ -72,9 +69,8 @@ $container = get_theme_mod( 'conversions_container_type' );
 						'walker'          => new conversions_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-			<?php if ( 'container' == $container ) : ?>
+
 			</div><!-- .container -->
-			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
 

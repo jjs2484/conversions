@@ -374,30 +374,24 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'panel'             => 'conversions_appearance_settings',
 		) );
 
-		$wp_customize->add_setting( 'conversions_container_type', array(
-			'default'           => 'container',
-			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
-			'capability'        => 'edit_theme_options',
+		$wp_customize->add_setting( 'conversions_container_width' , array(
+			'default'       => '1140',
+			'type'          => 'theme_mod',
+			'capability'    => 'edit_theme_options',
 			'transport'     => 'refresh',
 		) );
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'conversions_container_type', array(
-					'label'       => __( 'Container Width', 'conversions' ),
-					'description' => __( 'Choose between Bootstrap\'s container and container-fluid', 'conversions' ),
-					'section'     => 'conversions_theme_layout_options',
-					'settings'    => 'conversions_container_type',
-					'type'        => 'select',
-					'choices'     => array(
-						'container'       => __( 'Fixed width container', 'conversions' ),
-						'container-fluid' => __( 'Full width container', 'conversions' ),
-					),
-					'priority'    => '10',
-				)
-			) );
+		$wp_customize->add_control( 'conversions_container_width_control', array(
+			'label'      => 'Logo width',
+			'description'=> 'Max container width in px',
+			'section'    => 'conversions_theme_layout_options',
+			'settings'   => 'conversions_container_width',
+			'priority'   => 10,
+			'type'       => 'number',
+			'input_attrs'=> array( 
+				'min' => 1,
+				'max' => 9999,
+			),
+		) );
 
 		$wp_customize->add_setting( 'conversions_sidebar_position', array(
 			'default'           => 'right',

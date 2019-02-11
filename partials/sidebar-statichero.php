@@ -5,11 +5,9 @@
  * @package conversions
  */
 
-$container = get_theme_mod( 'conversions_container_type' );
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
 ?>
 
 <?php if ( is_active_sidebar( 'statichero' ) ) : ?>
@@ -18,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="wrapper" id="wrapper-static-hero">
 
-			<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
+			<div class="container-fluid" id="wrapper-static-content" tabindex="-1">
 
 				<div class="row">
 

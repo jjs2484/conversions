@@ -10,15 +10,13 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-$container = get_theme_mod( 'conversions_container_type' );
 ?>
 
 <?php get_template_part( 'partials/sidebar', 'footerfull' ); ?>
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="container-fluid">
 
 		<div class="row">
 

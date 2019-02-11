@@ -8,9 +8,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-$container = get_theme_mod( 'conversions_container_type' );
-
 ?>
 
 <?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
@@ -19,7 +16,7 @@ $container = get_theme_mod( 'conversions_container_type' );
 
 	<div class="wrapper" id="wrapper-footer-full">
 
-		<div class="<?php echo esc_attr( $container ); ?>" id="footer-full-content" tabindex="-1">
+		<div class="container-fluid" id="footer-full-content" tabindex="-1">
 
 			<div class="row">
 

@@ -40,9 +40,8 @@ add_action('woocommerce_before_main_content', 'conversions_woocommerce_wrapper_s
 add_action('woocommerce_after_main_content', 'conversions_woocommerce_wrapper_end', 10);
 if ( ! function_exists( 'conversions_woocommerce_wrapper_start' ) ) {
 	function conversions_woocommerce_wrapper_start() {
-		$container   = get_theme_mod( 'conversions_container_type' );
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
-	  echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
+	  echo '<div class="container-fluid" id="content" tabindex="-1">';
 		echo '<div class="row">';
 		get_template_part( 'partials/left-sidebar-check' );
 		echo '<main class="site-main" id="main">';
