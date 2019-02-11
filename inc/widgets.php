@@ -63,20 +63,17 @@ if ( ! function_exists( 'conversions_widget_classes' ) ) {
 			$widget_count = count( $sidebars_widgets_count[ $sidebar_id ] );
 
 			$widget_classes = 'widget-count-' . $widget_count;
-			if ( 0 === $widget_count % 4 || $widget_count > 6 ) {
-				// Four widgets per row if there are exactly four or more than six.
+			if ( 0 === $widget_count % 4 || $widget_count > 4 ) {
+				// Four widgets per row if there are four or more.
 				$widget_classes .= ' col-md-3';
-			} elseif ( 6 === $widget_count ) {
-				// If two widgets are published.
-				$widget_classes .= ' col-md-2';
 			} elseif ( $widget_count >= 3 ) {
-				// Three widgets per row if there's three or more widgets.
+				// Three widgets per row if there are three or more.
 				$widget_classes .= ' col-md-4';
 			} elseif ( 2 === $widget_count ) {
-				// If two widgets are published.
+				// Two widgets per row if there are only two.
 				$widget_classes .= ' col-md-6';
 			} elseif ( 1 === $widget_count ) {
-				// If just on widget is active.
+				// One widgets per row if only one widget is active.
 				$widget_classes .= ' col-md-12';
 			}
 
