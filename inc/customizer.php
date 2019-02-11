@@ -270,8 +270,26 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'description'       => __('Select your typography settings', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_appearance_settings',
-		) );	
+		) );
 		// Create our settings
+		$wp_customize->add_setting( 'conversions_google_fonts' , array(
+			'default'       => 'enable_gfonts',
+			'type'          => 'theme_mod',
+			'capability'    => 'edit_theme_options',
+			'transport'     => 'refresh',
+		) );
+		$wp_customize->add_control( 'conversions_google_fonts_control', array(
+			'label'      => 'Google fonts',
+			'description'=> 'Enable or disable Google fonts If disabled native browser fonts will be used',
+			'section'    => 'conversions_typography',
+			'settings'   => 'conversions_google_fonts',
+			'priority'   => 1,
+			'type'       => 'select',
+        	'choices'    => array( 
+          		'enable_gfonts' => 'Enable',
+        		'disable_gfonts' => 'Disable',
+        	),
+		) );
 		$font_choices = array(
 			'Droid Sans:400,700' => 'Droid Sans',
 			'Droid Serif:400,700,400italic,700italic' => 'Droid Serif',
