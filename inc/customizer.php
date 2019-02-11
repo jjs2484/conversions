@@ -289,7 +289,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'Ubuntu:400,700,400italic,700italic' => 'Ubuntu',
 		);
 		$wp_customize->add_setting( 'conversions_headings_fonts', array(
-			'default'       => 'Roboto',
+			'default'       => 'Roboto:400,400italic,700,700italic',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
 		) );
@@ -300,7 +300,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'choices' => $font_choices
 		) );
 		$wp_customize->add_setting( 'conversions_body_fonts', array(
-			'default'       => 'Roboto',
+			'default'       => 'Roboto:400,400italic,700,700italic',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
 		) );
