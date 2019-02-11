@@ -273,19 +273,16 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		) );	
 		// Create our settings
 		$font_choices = array(
-			'Roboto:400,400italic,700,700italic' => 'Roboto',
-			'Open Sans:400italic,700italic,400,700' => 'Open Sans',
 			'Droid Sans:400,700' => 'Droid Sans',
 			'Droid Serif:400,700,400italic,700italic' => 'Droid Serif',
+			'Francois One:400' => 'Francois One',
 			'Lato:400,700,400italic,700italic' => 'Lato',
-			'Arvo:400,700,400italic,700italic' => 'Arvo',
+			'Libre Baskerville:400,400italic,700' => 'Libre Baskerville',
 			'Lora:400,700,400italic,700italic' => 'Lora',
 			'Merriweather:400,300italic,300,400italic,700,700italic' => 'Merriweather',
+			'Open Sans:400italic,700italic,400,700' => 'Open Sans',
 			'Oxygen:400,300,700' => 'Oxygen',
-			'Francois One:400' => 'Francois One',
-			'Josefin Sans:400,300,600,700' => 'Josefin Sans',
-			'Libre Baskerville:400,400italic,700' => 'Libre Baskerville',
-			'Arimo:400,700,400italic,700italic' => 'Arimo',
+			'Roboto:400,400italic,700,700italic' => 'Roboto',
 			'Ubuntu:400,700,400italic,700italic' => 'Ubuntu',
 		);
 		$wp_customize->add_setting( 'conversions_headings_fonts', array(
@@ -294,6 +291,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'transport'     => 'refresh',
 		) );
 		$wp_customize->add_control( 'conversions_headings_fonts', array(
+			'label'      => __('Heading font', 'conversions'),
 			'type' => 'select',
 			'description' => __('Select your desired font for the headings.', 'conversions'),
 			'section' => 'conversions_typography',
@@ -305,6 +303,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'transport'     => 'refresh',
 		) );
 		$wp_customize->add_control( 'conversions_body_fonts', array(
+			'label'      => __('Body font', 'conversions'),
 			'type' => 'select',
 			'description' => __( 'Select your desired font for the body.', 'conversions' ),
 			'section' => 'conversions_typography',
