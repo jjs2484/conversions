@@ -42,6 +42,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'type'          => 'theme_mod',
 			'capability'    => 'edit_theme_options',
 			'transport'     => 'refresh',
+			'sanitize_callback' => 'absint', //converts value to a non-negative integer
 		) );
 		$wp_customize->add_control( 'conversions_logo_width_control', array(
 			'label'      => 'Logo width',
@@ -379,10 +380,11 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'type'          => 'theme_mod',
 			'capability'    => 'edit_theme_options',
 			'transport'     => 'refresh',
+			'sanitize_callback' => 'absint', //converts value to a non-negative integer
 		) );
 		$wp_customize->add_control( 'conversions_container_width_control', array(
-			'label'      => 'Logo width',
-			'description'=> 'Max container width in px',
+			'label'      => 'Max container width',
+			'description'=> 'Specify the max container width in px',
 			'section'    => 'conversions_theme_layout_options',
 			'settings'   => 'conversions_container_width',
 			'priority'   => 10,
