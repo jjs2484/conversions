@@ -1,0 +1,20 @@
+/*
+Theme Name: conversions
+Author: uniquelylost
+Author URI: https://ndstud.io
+Description: Combination of Automattic´s _s theme and Bootstrap 4.
+Version: 1.0
+License: GNU GPL version 2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: conversions
+
+Resource Licenses:
+Bootstrap 4: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+jQuery: https://jquery.org | (Code licensed under MIT)
+WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+
+This file is just used to identify the theme in WordPress.
+The compiled CSS output can be found in /build/main.css
+The SASS sources for it can be found in /sass/
+*/

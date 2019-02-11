@@ -1,0 +1,30 @@
+{
+  "name": "conversions",
+  "version": "1.0.0",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uniquelylost/conversions.git"
+  },
+  "author": "uniquelylost",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uniquelylost/conversions/issues"
+  },
+  "homepage": "https://github.com/uniquelylost/conversions#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "node-sass": "^4.10.0"
+  },
+  "dependencies": {},
+  "description": ""
+}
