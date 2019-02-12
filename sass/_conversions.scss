@@ -1,3 +1,8 @@
+// No browser horizontal scrollbars
+html, body {
+  overflow-x: hidden;
+}
+
 // Some basic padding for all wrappers
 .wrapper {
   padding: $grid-gutter-width 0; }
@@ -86,15 +91,45 @@ a.skip-link {
     font-weight: $font-weight-normal;
   }
   
-  ul.navbar-nav {
-    display: inline-block;
-    li.menu-item {
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    
+    ul.navbar-nav {
       display: inline-block;
-      a.nav-link {
-        white-space: nowrap;
+      li.menu-item {
+        display: inline-block;
+        a.nav-link {
+          white-space: nowrap;
+        }
       }
     }
+
   }
+
+  // mobile devices 
+  @media (max-width: 991px) {
+    .offcanvas-collapse {
+      position: fixed;
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      overflow-y: auto;
+      visibility: hidden;
+      background-color: #343a40;
+      /* transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out; */
+      /* transition: transform .3s ease-in-out, visibility .3s ease-in-out; */
+      transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+      z-index: 999;
+    }
+    .offcanvas-collapse.open {
+      visibility: visible;
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+
 }
 
 // Navbar dropdown styles
