@@ -9003,8 +9003,7 @@ a.text-dark:hover, a.text-dark:focus {
 .wrapper#wrapper-sticky {
   border-bottom: 1px solid #dee2e6; }
 
-#wrapper-footer-full,
-#wrapper-static-hero {
+#wrapper-footer-full {
   background-color: #e9ecef; }
 
 .wp-caption {
