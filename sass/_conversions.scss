@@ -1,8 +1,4 @@
-// No browser horizontal scrollbars
-html, body {
-  overflow-x: hidden;
-}
-
+// admin bar space
 .admin-bar #wrapper-navbar.fixed-top {
   top: 46px;
   @media screen and (min-width: 783px) {

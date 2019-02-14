@@ -147,40 +147,76 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 20,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_header_link_color' , array(
+
+		//-----------------------------------------------------
+		// Navigation section
+		//-----------------------------------------------------
+		$wp_customize->add_section( 'conversions_nav' , array(
+			'title'             => __('Navigation', 'conversions'),
+			'priority'          => 37,
+			'description'       => __('Select your navigation settings', 'conversions'),
+			'capability'        => 'edit_theme_options',
+			'panel'             => 'conversions_appearance_settings',
+		) );	
+		// Create our settings
+		$wp_customize->add_setting( 'conversions_nav_mobile_type', array(
+			'default'           => 'offcanvas',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'capability'        => 'edit_theme_options',
+			'transport'     => 'refresh',
+		) );
+		$wp_customize->add_control( 
+			new WP_Customize_Control(
+				$wp_customize,
+				'conversions_nav_mobile_type', array(
+					'label'       => __( 'Mobile navigation type', 'conversions' ),
+					'description' => __( 'Offcanvas or slide down mobile nav?', 'conversions' ),
+					'section'     => 'conversions_nav',
+					'settings'    => 'conversions_nav_mobile_type',
+					'type'        => 'select',
+					'choices'     => array(
+						'offcanvas' => __( 'Offcanvas', 'conversions' ),
+						'collapse'       => __( 'Slide down', 'conversions' ),
+					),
+					'priority'    => '10',
+				)
+		) );
+
+
+		$wp_customize->add_setting( 'conversions_nav_link_color' , array(
 			'default'       => '#ffffff',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
-		$wp_customize->add_control( 'conversions_header_link_color_control', array(
+		$wp_customize->add_control( 'conversions_nav_link_color_control', array(
 			'label'      => __('Link color', 'conversions'),
-			'section'    => 'conversions_header',
-			'settings'   => 'conversions_header_link_color',
-			'priority'   => 31,
+			'section'    => 'conversions_nav',
+			'settings'   => 'conversions_nav_link_color',
+			'priority'   => 11,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_header_link_hover_color' , array(
+		$wp_customize->add_setting( 'conversions_nav_link_hover_color' , array(
 			'default'       => '#cccccc',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
-		$wp_customize->add_control( 'conversions_header_link_hover_color_control', array(
+		$wp_customize->add_control( 'conversions_nav_link_hover_color_control', array(
 			'label'      => __('Link hover color', 'conversions'),
-			'section'    => 'conversions_header',
-			'settings'   => 'conversions_header_link_hover_color',
-			'priority'   => 40,
+			'section'    => 'conversions_nav',
+			'settings'   => 'conversions_nav_link_hover_color',
+			'priority'   => 12,
 			'type'       => 'color',
 		) );
-
 
 		//-----------------------------------------------------
 		// Footer colors section
 		//-----------------------------------------------------
 		$wp_customize->add_section( 'conversions_footer' , array(
 			'title'             => __('Footer', 'conversions'),
-			'priority'          => 37,
+			'priority'          => 38,
 			'description'       => __('Select your footer colors', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_appearance_settings',
@@ -258,7 +294,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		$wp_customize->add_section( 'conversions_background' , array(
 			'title'             => __('Background', 'conversions'),
-			'priority'          => 38,
+			'priority'          => 39,
 			'description'       => __('Select your background color', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_appearance_settings',
@@ -284,7 +320,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		$wp_customize->add_section( 'conversions_typography' , array(
 			'title'             => __('Typography', 'conversions'),
-			'priority'          => 39,
+			'priority'          => 40,
 			'description'       => __('Select your typography settings', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_appearance_settings',
@@ -406,7 +442,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'title'       => __( 'Layout', 'conversions' ),
 			'capability'  => 'edit_theme_options',
 			'description' => __( 'Container width and sidebar defaults', 'conversions' ),
-			'priority'    => 40,
+			'priority'    => 41,
 			'panel'             => 'conversions_appearance_settings',
 		) );
 
@@ -466,7 +502,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		$wp_customize->add_section( 'conversions_copyright' , array(
 			'title'             => __('Copyright', 'conversions'),
-			'priority'          => 41,
+			'priority'          => 42,
 			'description'       => __('Change your copyright settings', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_appearance_settings',

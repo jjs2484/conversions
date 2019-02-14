@@ -8989,9 +8989,6 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
-html, body {
-  overflow-x: hidden; }
-
 .admin-bar #wrapper-navbar.fixed-top {
   top: 46px; }
   @media screen and (min-width: 783px) {

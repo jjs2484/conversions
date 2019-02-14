@@ -8,7 +8,16 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+// customizer variables
 $header_position = get_theme_mod( 'conversions_header_position' );
+$mobile_nav_type = get_theme_mod( 'conversions_nav_mobile_type' );
+if ($mobile_nav_type == 'collapse') {
+	$mobile_nav_container = 'collapse navbar-collapse';
+}
+else {
+	$mobile_nav_container = 'navbar-collapse offcanvas-collapse';
+}
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -53,7 +62,7 @@ $header_position = get_theme_mod( 'conversions_header_position' );
 					} ?><!-- end custom logo -->
 
 
-				<button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'conversions' ); ?>">
+				<button class="navbar-toggler" type="button" data-toggle="<?php echo $mobile_nav_type; ?>" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'conversions' ); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
@@ -61,7 +70,7 @@ $header_position = get_theme_mod( 'conversions_header_position' );
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'navbar-collapse offcanvas-collapse',
+						'container_class' => $mobile_nav_container,
 						'container_id'    => 'navbarNavDropdown',
 						'menu_class'      => 'navbar-nav ml-auto',
 						'fallback_cb'     => '',
