@@ -1,4 +1,4 @@
-@import "theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or conversions variables here
+@import "variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or conversions variables here
 @import "bootstrap4";// <--------- Loads Bootstrap3 or Bootstrap4. Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
 @import "conversions";// <-------- Loads the conversions defaults. Just a few classes to incorporate BS in WP
 @import "woocommerce";// <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
