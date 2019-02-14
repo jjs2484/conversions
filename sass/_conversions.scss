@@ -3,6 +3,13 @@ html, body {
   overflow-x: hidden;
 }
 
+.admin-bar #wrapper-navbar.fixed-top {
+  top: 46px;
+  @media screen and (min-width: 783px) {
+    top: 32px;
+  }
+}
+
 // Some basic padding for all wrappers
 .wrapper {
   padding: $grid-gutter-width 0; }
@@ -107,12 +114,13 @@ a.skip-link {
   }
 
   // mobile devices 
-  @media (max-width: 991px) {
+  @media (max-width: 991.98px) {
     .offcanvas-collapse {
       position: fixed;
       bottom: 0;
       left: 100%;
       width: 100%;
+      height: 100%;
       padding-right: 1rem;
       padding-left: 1rem;
       overflow-y: auto;

@@ -35,20 +35,20 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		$wp_customize->get_section( 'background_image' )->active_callback = '__return_false';
 
 		//-----------------------------------------------------
-		// Logo width setting added to site identity panel
+		// Logo height setting added to site identity panel
 		//-----------------------------------------------------
-		$wp_customize->add_setting( 'conversions_logo_width' , array(
-			'default'       => '200',
+		$wp_customize->add_setting( 'conversions_logo_height' , array(
+			'default'       => '60',
 			'type'          => 'theme_mod',
 			'capability'    => 'edit_theme_options',
 			'transport'     => 'refresh',
 			'sanitize_callback' => 'absint', //converts value to a non-negative integer
 		) );
-		$wp_customize->add_control( 'conversions_logo_width_control', array(
-			'label'      => 'Logo width',
-			'description'=> 'Max logo width in px',
+		$wp_customize->add_control( 'conversions_logo_height_control', array(
+			'label'      => 'Logo height',
+			'description'=> 'Max logo height in px',
 			'section'    => 'title_tagline',
-			'settings'   => 'conversions_logo_width',
+			'settings'   => 'conversions_logo_height',
 			'priority'   => 8,
 			'type'       => 'number',
 			'input_attrs'=> array( 
@@ -80,7 +80,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		) );	
 		// Create our settings
 		$wp_customize->add_setting( 'conversions_header_position', array(
-			'default'           => 'header-p-n',
+			'default'           => 'fixed-top',
 			'type'              => 'theme_mod',
 			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
 			'capability'        => 'edit_theme_options',
@@ -90,18 +90,36 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			new WP_Customize_Control(
 				$wp_customize,
 				'conversions_header_position', array(
-					'label'       => __( 'Sticky Header', 'conversions' ),
-					'description' => __( 'Should the header be fixed or sticky?', 'conversions' ),
+					'label'       => __( 'Header position', 'conversions' ),
+					'description' => __( 'Should the header be fixed or normal?', 'conversions' ),
 					'section'     => 'conversions_header',
 					'settings'    => 'conversions_header_position',
 					'type'        => 'select',
 					'choices'     => array(
 						'header-p-n' => __( 'Normal', 'conversions' ),
 						'fixed-top'       => __( 'Fixed', 'conversions' ),
-						'sticky-top'       => __( 'Sticky', 'conversions' ),
 					),
 					'priority'    => '10',
 				)
+		) );
+		$wp_customize->add_setting( 'conversions_header_tb_padding' , array(
+			'default'       => '8',
+			'type'          => 'theme_mod',
+			'capability'    => 'edit_theme_options',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'absint', //converts value to a non-negative integer
+		) );
+		$wp_customize->add_control( 'conversions_header_tb_padding_control', array(
+			'label'      => 'Header top and bottom padding',
+			'description'=> 'Top and bottom padding in px',
+			'section'    => 'conversions_header',
+			'settings'   => 'conversions_header_tb_padding',
+			'priority'   => 11,
+			'type'       => 'number',
+			'input_attrs'=> array( 
+				'min' => 1,
+				'max' => 1000,
+			),
 		) );
 		$wp_customize->add_setting( 'conversions_header_background_color' , array(
 			'default'       => '#111111',
@@ -113,7 +131,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'label'      => __('Background color', 'conversions'),
 			'section'    => 'conversions_header',
 			'settings'   => 'conversions_header_background_color',
-			'priority'   => 11,
+			'priority'   => 12,
 			'type'       => 'color',
 		) );
 		$wp_customize->add_setting( 'conversions_header_text_color' , array(
