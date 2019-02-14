@@ -1,21 +1,6 @@
 /**
  * If fixed header calculate the height add margin to content below 
 */
-// jQuery(document).ready(function () {
-
-	// Are we using a fixed header?
-    // var fixedHeader = document.getElementById("wrapper-navbar").classList;
-    // if (fixedHeader.contains("fixed-top")) {
-	
-		// get height of header and adminbar
-		// var fixedHeight = jQuery('#wrapper-navbar.fixed-top').innerHeight();
-	
-		// apply height to page as margin-top
-		// jQuery('#page-wrapper').css({'margin-top' : fixedHeight + 'px'});
-	// }
-
-// });
-
 (function($) {
 
     var resizeTimer; // Set resizeTimer to empty so it resets on page load
