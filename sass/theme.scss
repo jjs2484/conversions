@@ -1,11 +1,66 @@
-@import "variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or conversions variables here
-@import "bootstrap4";// <--------- Loads Bootstrap3 or Bootstrap4. Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
-@import "conversions";// <-------- Loads the conversions defaults. Just a few classes to incorporate BS in WP
-@import "woocommerce";// <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+// Loads variables
+@import "variables";
 
-//Optional files - If you dont use the corresponding scripts/fonts comment em out
-@import "fontawesome"; // <------- Font Awesome Icon font
-@import "underscores"; // <------- Underscores media styles
+// Loads Bootstrap4
+@import "../src/sass/bootstrap4/functions";
+@import "../src/sass/bootstrap4/variables";
+@import "../src/sass/bootstrap4/mixins";
+@import "../src/sass/bootstrap4/root";
+@import "../src/sass/bootstrap4/reboot";
+@import "../src/sass/bootstrap4/type";
+@import "../src/sass/bootstrap4/images";
+@import "../src/sass/bootstrap4/code";
+@import "../src/sass/bootstrap4/grid";
+@import "../src/sass/bootstrap4/tables";
+@import "../src/sass/bootstrap4/forms";
+@import "../src/sass/bootstrap4/buttons";
+@import "../src/sass/bootstrap4/transitions";
+@import "../src/sass/bootstrap4/dropdown";
+@import "../src/sass/bootstrap4/button-group";
+@import "../src/sass/bootstrap4/input-group";
+@import "../src/sass/bootstrap4/custom-forms";
+@import "../src/sass/bootstrap4/nav";
+@import "../src/sass/bootstrap4/navbar";
+@import "../src/sass/bootstrap4/card";
+@import "../src/sass/bootstrap4/breadcrumb";
+@import "../src/sass/bootstrap4/pagination";
+@import "../src/sass/bootstrap4/badge";
+@import "../src/sass/bootstrap4/jumbotron";
+@import "../src/sass/bootstrap4/alert";
+@import "../src/sass/bootstrap4/progress";
+@import "../src/sass/bootstrap4/media";
+@import "../src/sass/bootstrap4/list-group";
+@import "../src/sass/bootstrap4/close";
+@import "../src/sass/bootstrap4/modal";
+@import "../src/sass/bootstrap4/tooltip";
+@import "../src/sass/bootstrap4/popover";
+@import "../src/sass/bootstrap4/carousel";
+@import "../src/sass/bootstrap4/utilities";
+@import "../src/sass/bootstrap4/print";
 
-// Any additional imported files //
-@import "contact-form7"; // Contact Form 7 - Bootstrap 4 support
+// Loads conversions styles
+@import "conversions";
+
+// Loads WooCommerce style fixes
+@import "woocommerce";
+
+// Loads Font Awesome Icon font
+@import '../src/sass/fontawesome/variables';
+@import '../src/sass/fontawesome/mixins';
+@import '../src/sass/fontawesome/core';
+@import '../src/sass/fontawesome/larger';
+@import '../src/sass/fontawesome/fixed-width';
+@import '../src/sass/fontawesome/list';
+@import '../src/sass/fontawesome/bordered-pulled';
+@import '../src/sass/fontawesome/animated';
+@import '../src/sass/fontawesome/rotated-flipped';
+@import '../src/sass/fontawesome/stacked';
+@import '../src/sass/fontawesome/icons';
+@import '../src/sass/fontawesome/screen-reader';
+@import '../src/sass/fontawesome/solid';
+
+// Loads Underscores media styles
+@import "../src/sass/underscores/galleries";
+
+// Loads contact Form 7 - Bootstrap 4 support
+@import "contact-form7";
