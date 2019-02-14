@@ -159,6 +159,32 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'panel'             => 'conversions_appearance_settings',
 		) );	
 		// Create our settings
+		$wp_customize->add_setting( 'conversions_nav_link_color' , array(
+			'default'       => '#ffffff',
+			'type'          => 'theme_mod',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( 'conversions_nav_link_color_control', array(
+			'label'      => __('Link color', 'conversions'),
+			'section'    => 'conversions_nav',
+			'settings'   => 'conversions_nav_link_color',
+			'priority'   => 10,
+			'type'       => 'color',
+		) );
+		$wp_customize->add_setting( 'conversions_nav_link_hover_color' , array(
+			'default'       => '#cccccc',
+			'type'          => 'theme_mod',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( 'conversions_nav_link_hover_color_control', array(
+			'label'      => __('Link hover color', 'conversions'),
+			'section'    => 'conversions_nav',
+			'settings'   => 'conversions_nav_link_hover_color',
+			'priority'   => 11,
+			'type'       => 'color',
+		) );
 		$wp_customize->add_setting( 'conversions_nav_mobile_type', array(
 			'default'           => 'offcanvas',
 			'type'              => 'theme_mod',
@@ -179,36 +205,8 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 						'offcanvas' => __( 'Offcanvas', 'conversions' ),
 						'collapse'       => __( 'Slide down', 'conversions' ),
 					),
-					'priority'    => '10',
+					'priority'    => '12',
 				)
-		) );
-
-
-		$wp_customize->add_setting( 'conversions_nav_link_color' , array(
-			'default'       => '#ffffff',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_nav_link_color_control', array(
-			'label'      => __('Link color', 'conversions'),
-			'section'    => 'conversions_nav',
-			'settings'   => 'conversions_nav_link_color',
-			'priority'   => 11,
-			'type'       => 'color',
-		) );
-		$wp_customize->add_setting( 'conversions_nav_link_hover_color' , array(
-			'default'       => '#cccccc',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_nav_link_hover_color_control', array(
-			'label'      => __('Link hover color', 'conversions'),
-			'section'    => 'conversions_nav',
-			'settings'   => 'conversions_nav_link_hover_color',
-			'priority'   => 12,
-			'type'       => 'color',
 		) );
 
 		//-----------------------------------------------------
