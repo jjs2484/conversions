@@ -573,8 +573,30 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		) );
 
 		//-----------------------------------------------------
-		// Homepage
+		// Social media icons section
 		//-----------------------------------------------------
+ 		$wp_customize->add_section( 'conversions_social', array(
+     		'title' => __( 'Social Media Icons', 'conversions' ),
+     		'priority' => 43,
+ 		));
+ 		// Create our settings
+ 		$social_sites = conversions_get_social_sites();
+ 
+ 		foreach( $social_sites as $social_site ) {
+ 
+     		$wp_customize->add_setting( "$social_site", array(
+         		'type' => 'theme_mod',
+         		'capability' => 'edit_theme_options',
+         		'sanitize_callback' => 'esc_url_raw',
+     		));
+     		$wp_customize->add_control( $social_site, array(
+         		'label' => __("$social_site URL:", 'conversions'),
+         		'section' => 'conversions_social',
+         		'type' => 'text',
+         		'priority' => 5,
+     		));
+ 
+ 		}
 	
 	}
 	add_action( 'customize_register', 'conversions_theme_customize_register' );

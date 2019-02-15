@@ -26,7 +26,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<div class="site-info">
 
+
 						<?php 
+							// copyright
 							echo "&copy;" . date("Y") . " - ";
 							
 							$copyright_text = esc_html( get_theme_mod( 'conversions_copyright_text' ) );
@@ -38,6 +40,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 							echo " - <a href='https://themer.com'>conversions theme by themer</a>";
 						?>
+
+
+						<?php do_action ( 'conversions_output_social' ); ?>
+						
 
 					</div><!-- .site-info -->
 

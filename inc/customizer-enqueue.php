@@ -62,7 +62,12 @@ function conversions_customizer_css_ouput()
 	}
 
 	// fixed header height calc variable
-	$c_logo_height = get_theme_mod('conversions_logo_height', '60');
+	if ( has_custom_logo() ) {
+    	$c_logo_height = get_theme_mod('conversions_logo_height', '60');
+	}
+	else {
+		$c_logo_height = 30;
+	}
 	$c_header_padding = get_theme_mod('conversions_header_tb_padding', '8');
 	$c_logo_padding = 10;
 	$c_total_fheader_height = $c_logo_height + ($c_header_padding * 2) + $c_logo_padding;

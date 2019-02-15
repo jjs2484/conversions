@@ -18,6 +18,7 @@ $conversions_includes = array(
 	'/pagination.php',                      // Custom pagination for this theme.
 	'/extras.php',                          // Custom functions that act independently of the theme templates.
 	'/customizer.php',                      // Customizer additions.
+	'/customizer-social.php',               // Customizer social icons.
 	'/customizer-enqueue.php',              // Customizer enqueue styles.
 	'/custom-comments.php',                 // Custom Comments file.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
