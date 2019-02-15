@@ -1,21 +1,26 @@
 <?php
 // social media icons list
 function conversions_get_social_sites() {
-     // Store social site names in array
-     $social_sites = array(
-         'twitter', 
-         'facebook', 
-         'google-plus',
-         'flickr',
-         'pinterest', 
-         'youtube',
-         'vimeo',
-         'tumblr',
-         'dribbble',
-         'rss',
-         'linkedin',
-         'instagram',
-         'email'
+    // Store social site names in array
+    $social_sites = array(
+        'amazon',
+        'discord',
+        'dribbble',
+        'facebook',
+        'flickr',
+        'github',
+        'google my business',
+        'instagram',
+        'linkedin',
+        'pinterest',
+        'reddit',
+        'slack',
+        'tumblr',
+        'twitter',
+        'vimeo',
+        'wordpress',
+        'yelp',
+        'youtube',
      );
  return $social_sites;
 }
@@ -36,25 +41,23 @@ function conversions_show_social_icons() {
     // For each active social site, add it as a list item
     if ( !empty( $active_sites ) ) {
         
-        echo "<ul class='social-media-icons'>";
+        echo "<div class='social-media-icons col-md'>";
  
         foreach ( $active_sites as $active_site ) { ?>
 
-            <li>
-             	<a href="<?php echo get_theme_mod( $active_site ); ?>">
-             		<?php if( $active_site == 'vimeo' ) { ?>
-                 		<i class="fas fa-<?php echo $active_site; ?>-square"></i> 
-                    <?php } else if( $active_site == 'email' ) { ?>
-                 		<i class="fas fa-envelope"></i> 
-                    <?php } else { ?>
-                 		<i class="fab fa-<?php echo $active_site; ?>"></i> <?php
-             		} ?>
-             	</a>
-            </li> 
+            <a href="<?php echo get_theme_mod( $active_site ); ?>">
+             	<?php if( $active_site == 'dribbble' ) { ?>
+                 	<i class="fab fa-<?php echo $active_site; ?>-square"></i>
+                <?php } elseif( $active_site == 'google my business' ) { ?>
+                    <i class="fas fa-map-marker-alt"></i>
+                <?php } else { ?>
+                 	<i class="fab fa-<?php echo $active_site; ?>"></i> <?php
+             	} ?>
+             </a>
 
         <?php }
 
-        echo "</ul>";
+        echo "</div>";
     }
 }
 							

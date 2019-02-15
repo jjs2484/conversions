@@ -577,6 +577,9 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
  		$wp_customize->add_section( 'conversions_social', array(
      		'title' => __( 'Social Media Icons', 'conversions' ),
+     		'description'       => __('Add social icons', 'conversions'),
+			'capability'        => 'edit_theme_options',
+			'panel'             => 'conversions_appearance_settings',
      		'priority' => 43,
  		));
  		// Create our settings

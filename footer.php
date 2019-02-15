@@ -24,26 +24,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<footer class="site-footer" id="colophon">
 
-					<div class="site-info">
+					<div class="site-info row">
 
-
-						<?php 
-							// copyright
-							echo "&copy;" . date("Y") . " - ";
+						<div class="copyright col-md">
+							<?php 
+								// copyright
+								echo "&copy;" . date("Y") . " - ";
 							
-							$copyright_text = esc_html( get_theme_mod( 'conversions_copyright_text' ) );
-							if( $copyright_text ) {
-								echo esc_html( get_theme_mod( 'conversions_copyright_text' ) );
-							} else {
-								echo bloginfo('name');
-							}
+								$copyright_text = esc_html( get_theme_mod( 'conversions_copyright_text' ) );
+								if( $copyright_text ) {
+									echo esc_html( get_theme_mod( 'conversions_copyright_text' ) );
+								} else {
+									echo bloginfo('name');
+								}
 
-							echo " - <a href='https://themer.com'>conversions theme by themer</a>";
-						?>
-
-
-						<?php do_action ( 'conversions_output_social' ); ?>
+								echo " - <a href='https://themer.com'>conversions theme by themer</a>";
+							?>
+						</div>
 						
+						<?php do_action ( 'conversions_output_social' ); ?>
 
 					</div><!-- .site-info -->
 
