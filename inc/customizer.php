@@ -576,10 +576,53 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
      		'priority' => 80,
  		));
  		// Create our settings
+ 		$wp_customize->add_setting( 'conversions_social_size' , array(
+			'default'       => '22',
+			'type'          => 'theme_mod',
+			'capability'    => 'edit_theme_options',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'absint', //converts value to a non-negative integer
+		) );
+		$wp_customize->add_control( 'conversions_social_size_control', array(
+			'label'      => 'Social icons size',
+			'description'=> 'Icons size in px',
+			'section'    => 'conversions_social',
+			'settings'   => 'conversions_social_size',
+			'priority'   => 10,
+			'type'       => 'number',
+			'input_attrs'=> array( 
+				'min' => 1,
+				'max' => 1000,
+			),
+		) );
+		$wp_customize->add_setting( 'conversions_social_link_color' , array(
+			'default'       => '#2600e6',
+			'type'          => 'theme_mod',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( 'conversions_social_link_color_control', array(
+			'label'      => __('Link color', 'conversions'),
+			'section'    => 'conversions_social',
+			'settings'   => 'conversions_social_link_color',
+			'priority'   => 20,
+			'type'       => 'color',
+		) );	
+		$wp_customize->add_setting( 'conversions_social_link_hover_color' , array(
+			'default'       => '#2600e6',
+			'type'          => 'theme_mod',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( 'conversions_social_link_hover_color_control', array(
+			'label'      => __('Link hover color', 'conversions'),
+			'section'    => 'conversions_social',
+			'settings'   => 'conversions_social_link_hover_color',
+			'priority'   => 30,
+			'type'       => 'color',
+		) );
  		$social_sites = conversions_get_social_sites();
- 
  		foreach( $social_sites as $social_site ) {
- 
      		$wp_customize->add_setting( "$social_site", array(
          		'type' => 'theme_mod',
          		'capability' => 'edit_theme_options',
@@ -589,9 +632,8 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
          		'label' => __("$social_site URL:", 'conversions'),
          		'section' => 'conversions_social',
          		'type' => 'text',
-         		'priority' => 5,
+         		'priority' => 40,
      		));
- 
  		}
 	
 	}

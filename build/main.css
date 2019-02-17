@@ -9109,15 +9109,12 @@ a.skip-link {
       -ms-flex-align: center;
           align-items: center; }
 #wrapper-footer .social-media-icons ul.list-inline {
-  margin-bottom: 0;
-  font-size: 22px; }
+  margin-bottom: 0; }
   @media (min-width: 768px) {
     #wrapper-footer .social-media-icons ul.list-inline {
       text-align: right; } }
   #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
     margin-right: .2rem; }
-  #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item i {
-    font-size: 22px; }
 
 .woocommerce-input-wrapper {
   width: 100%; }
