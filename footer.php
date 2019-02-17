@@ -26,9 +26,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<div class="site-info row">
 
+						<!-- copyright -->
 						<div class="copyright col-md">
-							<?php 
-								// copyright
+							<?php
 								echo "&copy;" . date("Y") . " - ";
 							
 								$copyright_text = esc_html( get_theme_mod( 'conversions_copyright_text' ) );
@@ -42,7 +42,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 							?>
 						</div>
 						
-						<?php do_action ( 'conversions_output_social' ); ?>
+						<?php
+							// social icons - /inc/customizer-social.php
+							do_action ( 'conversions_output_social' ); 
+						?>
 
 					</div><!-- .site-info -->
 
