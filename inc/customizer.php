@@ -37,7 +37,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		// Logo height setting added to site identity panel
 		//-----------------------------------------------------
-		$wp_customize->add_setting( 'conversions_logo_height' , array(
+		$wp_customize->add_setting( 'conversions_logo_height', array(
 			'default'       => '60',
 			'type'          => 'theme_mod',
 			'capability'    => 'edit_theme_options',
@@ -70,7 +70,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		// Header section
 		//-----------------------------------------------------
-		$wp_customize->add_section( 'conversions_header' , array(
+		$wp_customize->add_section( 'conversions_header', array(
 			'title'             => __('Header', 'conversions'),
 			'priority'          => 10,
 			'description'       => __('Select your header colors', 'conversions'),
@@ -101,7 +101,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 					'priority'    => '10',
 				)
 		) );
-		$wp_customize->add_setting( 'conversions_header_tb_padding' , array(
+		$wp_customize->add_setting( 'conversions_header_tb_padding', array(
 			'default'       => '8',
 			'type'          => 'theme_mod',
 			'capability'    => 'edit_theme_options',
@@ -120,7 +120,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 				'max' => 1000,
 			),
 		) );
-		$wp_customize->add_setting( 'conversions_header_background_color' , array(
+		$wp_customize->add_setting( 'conversions_header_background_color', array(
 			'default'       => '#111111',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -133,7 +133,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 12,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_header_text_color' , array(
+		$wp_customize->add_setting( 'conversions_header_text_color', array(
 			'default'       => '#ffffff',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -158,7 +158,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'panel'             => 'conversions_theme_options',
 		) );	
 		// Create our settings
-		$wp_customize->add_setting( 'conversions_nav_link_color' , array(
+		$wp_customize->add_setting( 'conversions_nav_link_color', array(
 			'default'       => '#ffffff',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -171,7 +171,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 10,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_nav_link_hover_color' , array(
+		$wp_customize->add_setting( 'conversions_nav_link_hover_color', array(
 			'default'       => '#cccccc',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -211,7 +211,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		// Background color
 		//-----------------------------------------------------
-		$wp_customize->add_section( 'conversions_background' , array(
+		$wp_customize->add_section( 'conversions_background', array(
 			'title'             => __('Background', 'conversions'),
 			'priority'          => 30,
 			'description'       => __('Select your background color', 'conversions'),
@@ -219,7 +219,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'panel'             => 'conversions_theme_options',
 		) );	
 		// Create our settings
-		$wp_customize->add_setting( 'conversions_background_color' , array(
+		$wp_customize->add_setting( 'conversions_background_color', array(
 			'default'       => '#ffffff',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -244,7 +244,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'panel'             => 'conversions_theme_options',
 		) );
 
-		$wp_customize->add_setting( 'conversions_container_width' , array(
+		$wp_customize->add_setting( 'conversions_container_width', array(
 			'default'       => '1140',
 			'type'          => 'theme_mod',
 			'capability'    => 'edit_theme_options',
@@ -295,7 +295,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		// Typography section
 		//-----------------------------------------------------
-		$wp_customize->add_section( 'conversions_typography' , array(
+		$wp_customize->add_section( 'conversions_typography', array(
 			'title'             => __('Typography', 'conversions'),
 			'priority'          => 50,
 			'description'       => __('Select your typography settings', 'conversions'),
@@ -303,7 +303,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'panel'             => 'conversions_theme_options',
 		) );
 		// Create our settings
-		$wp_customize->add_setting( 'conversions_google_fonts' , array(
+		$wp_customize->add_setting( 'conversions_google_fonts', array(
 			'default'       => 'enable_gfonts',
 			'type'          => 'theme_mod',
 			'capability'    => 'edit_theme_options',
@@ -358,7 +358,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'section' => 'conversions_typography',
 			'choices' => $font_choices
 		) );
-		$wp_customize->add_setting( 'conversions_typography_heading_color' , array(
+		$wp_customize->add_setting( 'conversions_typography_heading_color', array(
 			'default'       => '#222222',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -371,7 +371,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 20,
 			'type'       => 'color',
 		) );	
-		$wp_customize->add_setting( 'conversions_typography_text_color' , array(
+		$wp_customize->add_setting( 'conversions_typography_text_color', array(
 			'default'       => '#111111',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -384,7 +384,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 30,
 			'type'       => 'color',
 		) );	
-		$wp_customize->add_setting( 'conversions_typography_link_color' , array(
+		$wp_customize->add_setting( 'conversions_typography_link_color', array(
 			'default'       => '#2600e6',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -397,7 +397,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 40,
 			'type'       => 'color',
 		) );	
-		$wp_customize->add_setting( 'conversions_typography_link_hover_color' , array(
+		$wp_customize->add_setting( 'conversions_typography_link_hover_color', array(
 			'default'       => '#2600e6',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -422,7 +422,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'panel'             => 'conversions_theme_options',
 		) );	
 		// Create our settings
-		$wp_customize->add_setting( 'conversions_footer_background_color' , array(
+		$wp_customize->add_setting( 'conversions_footer_background_color', array(
 			'default'       => '#3c3d45',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -435,7 +435,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 10,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_footer_heading_color' , array(
+		$wp_customize->add_setting( 'conversions_footer_heading_color', array(
 			'default'       => '#ffffff',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -448,7 +448,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 20,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_footer_text_color' , array(
+		$wp_customize->add_setting( 'conversions_footer_text_color', array(
 			'default'       => '#ffffff',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -461,7 +461,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 30,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_footer_link_color' , array(
+		$wp_customize->add_setting( 'conversions_footer_link_color', array(
 			'default'       => '#00ffff',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -474,7 +474,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 40,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_footer_link_hover_color' , array(
+		$wp_customize->add_setting( 'conversions_footer_link_hover_color', array(
 			'default'       => '#dddddd',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -491,7 +491,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		// Copyright section
 		//-----------------------------------------------------
-		$wp_customize->add_section( 'conversions_copyright' , array(
+		$wp_customize->add_section( 'conversions_copyright', array(
 			'title'             => __('Copyright', 'conversions'),
 			'priority'          => 70,
 			'description'       => __('Change your copyright settings', 'conversions'),
@@ -499,7 +499,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'panel'             => 'conversions_theme_options',
 		) );
 		// Create our settings
-		$wp_customize->add_setting( 'conversions_copyright_text' , array(
+		$wp_customize->add_setting( 'conversions_copyright_text', array(
 			'default'       => 'conversions',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -512,7 +512,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 10,
 			'type'       => 'text',
 		) );
-		$wp_customize->add_setting( 'conversions_copyright_background_color' , array(
+		$wp_customize->add_setting( 'conversions_copyright_background_color', array(
 			'default'       => '#ffffff',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -525,7 +525,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 20,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_copyright_text_color' , array(
+		$wp_customize->add_setting( 'conversions_copyright_text_color', array(
 			'default'       => '#111111',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -538,7 +538,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 30,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_copyright_link_color' , array(
+		$wp_customize->add_setting( 'conversions_copyright_link_color', array(
 			'default'       => '#2600e6',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -551,7 +551,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 40,
 			'type'       => 'color',
 		) );	
-		$wp_customize->add_setting( 'conversions_copyright_link_hover_color' , array(
+		$wp_customize->add_setting( 'conversions_copyright_link_hover_color', array(
 			'default'       => '#2600e6',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -599,7 +599,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 					'priority'    => '10',
 				)
 		) );
- 		$wp_customize->add_setting( 'conversions_social_size' , array(
+ 		$wp_customize->add_setting( 'conversions_social_size', array(
 			'default'       => '22',
 			'type'          => 'theme_mod',
 			'capability'    => 'edit_theme_options',
