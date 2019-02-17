@@ -170,3 +170,31 @@ a.skip-link {
     }
   }
 }
+
+#wrapper-footer {
+  .site-info {
+    align-items: center;
+  }
+  .social-media-icons {
+    
+    ul.list-inline {
+      margin-bottom: 0;
+      font-size: 22px;
+      @media (min-width: 768px) {
+        text-align: right;
+      }
+
+      li.list-inline-item:not(:last-child) {
+        margin-right: .2rem;
+      }
+
+      li.list-inline-item {
+        i {
+          font-size: 22px;
+        }
+      }
+
+    }
+  }
+}
+    

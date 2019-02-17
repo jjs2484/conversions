@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									echo bloginfo('name');
 								}
 
-								echo " - <a href='https://themer.com'>conversions theme by themer</a>";
+								echo " - <a href='https://themer.com'>Conversions theme</a>";
 							?>
 						</div>
 						

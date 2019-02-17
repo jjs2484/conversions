@@ -42,20 +42,26 @@ function conversions_show_social_icons() {
     if ( !empty( $active_sites ) ) {
         
         echo "<div class='social-media-icons col-md'>";
+
+            echo "<ul class='list-inline'>";
  
-        foreach ( $active_sites as $active_site ) { ?>
+                foreach ( $active_sites as $active_site ) { ?>
 
-            <a href="<?php echo get_theme_mod( $active_site ); ?>">
-             	<?php if( $active_site == 'dribbble' ) { ?>
-                 	<i class="fab fa-<?php echo $active_site; ?>-square"></i>
-                <?php } elseif( $active_site == 'google my business' ) { ?>
-                    <i class="fas fa-map-marker-alt"></i>
-                <?php } else { ?>
-                 	<i class="fab fa-<?php echo $active_site; ?>"></i> <?php
-             	} ?>
-             </a>
+                    <li class="list-inline-item">
+                        <a href="<?php echo get_theme_mod( $active_site ); ?>">
+                            <?php if( $active_site == 'dribbble' ) { ?>
+                                <i class="fab fa-<?php echo $active_site; ?>-square"></i>
+                            <?php } elseif( $active_site == 'google my business' ) { ?>
+                                <i class="fas fa-map-marker-alt"></i>
+                            <?php } else { ?>
+                                <i class="fab fa-<?php echo $active_site; ?>"></i>
+                            <?php } ?>
+                        </a>
+                    </li>
 
-        <?php }
+                <?php }
+
+            echo "</ul>";
 
         echo "</div>";
     }
