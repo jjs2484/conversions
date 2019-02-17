@@ -73,7 +73,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		$wp_customize->add_section( 'conversions_header' , array(
 			'title'             => __('Header', 'conversions'),
-			'priority'          => 36,
+			'priority'          => 10,
 			'description'       => __('Select your header colors', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_theme_options',
@@ -153,7 +153,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		$wp_customize->add_section( 'conversions_nav' , array(
 			'title'             => __('Navigation', 'conversions'),
-			'priority'          => 37,
+			'priority'          => 20,
 			'description'       => __('Select your navigation settings', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_theme_options',
@@ -210,89 +210,11 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		) );
 
 		//-----------------------------------------------------
-		// Footer colors section
-		//-----------------------------------------------------
-		$wp_customize->add_section( 'conversions_footer' , array(
-			'title'             => __('Footer', 'conversions'),
-			'priority'          => 38,
-			'description'       => __('Select your footer colors', 'conversions'),
-			'capability'        => 'edit_theme_options',
-			'panel'             => 'conversions_theme_options',
-		) );	
-		// Create our settings
-		$wp_customize->add_setting( 'conversions_footer_background_color' , array(
-			'default'       => '#3c3d45',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_footer_background_color_control', array(
-			'label'      => __('Background color', 'conversions'),
-			'section'    => 'conversions_footer',
-			'settings'   => 'conversions_footer_background_color',
-			'priority'   => 10,
-			'type'       => 'color',
-		) );
-		$wp_customize->add_setting( 'conversions_footer_heading_color' , array(
-			'default'       => '#ffffff',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_footer_heading_color_control', array(
-			'label'      => __('Heading color', 'conversions'),
-			'section'    => 'conversions_footer',
-			'settings'   => 'conversions_footer_heading_color',
-			'priority'   => 20,
-			'type'       => 'color',
-		) );
-		$wp_customize->add_setting( 'conversions_footer_text_color' , array(
-			'default'       => '#ffffff',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_footer_text_color_control', array(
-			'label'      => __('Text color', 'conversions'),
-			'section'    => 'conversions_footer',
-			'settings'   => 'conversions_footer_text_color',
-			'priority'   => 30,
-			'type'       => 'color',
-		) );
-		$wp_customize->add_setting( 'conversions_footer_link_color' , array(
-			'default'       => '#00ffff',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_footer_link_color_control', array(
-			'label'      => __('Link color', 'conversions'),
-			'section'    => 'conversions_footer',
-			'settings'   => 'conversions_footer_link_color',
-			'priority'   => 40,
-			'type'       => 'color',
-		) );
-		$wp_customize->add_setting( 'conversions_footer_link_hover_color' , array(
-			'default'       => '#dddddd',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_footer_link_hover_color_control', array(
-			'label'      => __('Link hover color', 'conversions'),
-			'section'    => 'conversions_footer',
-			'settings'   => 'conversions_footer_link_hover_color',
-			'priority'   => 50,
-			'type'       => 'color',
-		) );
-
-
-		//-----------------------------------------------------
-		// Background colors section
+		// Background color
 		//-----------------------------------------------------
 		$wp_customize->add_section( 'conversions_background' , array(
 			'title'             => __('Background', 'conversions'),
-			'priority'          => 39,
+			'priority'          => 30,
 			'description'       => __('Select your background color', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_theme_options',
@@ -312,13 +234,71 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'type'       => 'color',
 		) );
 
+		//-----------------------------------------------------
+		// Layout settings
+		//-----------------------------------------------------
+		$wp_customize->add_section( 'conversions_theme_layout_options', array(
+			'title'       => __( 'Layout', 'conversions' ),
+			'capability'  => 'edit_theme_options',
+			'description' => __( 'Container width and sidebar defaults', 'conversions' ),
+			'priority'    => 40,
+			'panel'             => 'conversions_theme_options',
+		) );
+
+		$wp_customize->add_setting( 'conversions_container_width' , array(
+			'default'       => '1140',
+			'type'          => 'theme_mod',
+			'capability'    => 'edit_theme_options',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'absint', //converts value to a non-negative integer
+		) );
+		$wp_customize->add_control( 'conversions_container_width_control', array(
+			'label'      => 'Max container width',
+			'description'=> 'Specify the max container width in px',
+			'section'    => 'conversions_theme_layout_options',
+			'settings'   => 'conversions_container_width',
+			'priority'   => 10,
+			'type'       => 'number',
+			'input_attrs'=> array( 
+				'min' => 1,
+				'max' => 9999,
+			),
+		) );
+		$wp_customize->add_setting( 'conversions_sidebar_position', array(
+			'default'           => 'right',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+			'transport'     => 'refresh',
+		) );
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'conversions_sidebar_position', array(
+					'label'       => __( 'Sidebar Positioning', 'conversions' ),
+					'description' => __( 'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
+					'conversions' ),
+					'section'     => 'conversions_theme_layout_options',
+					'settings'    => 'conversions_sidebar_position',
+					'type'        => 'select',
+					'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+					'choices'     => array(
+						'right' => __( 'Right sidebar', 'conversions' ),
+						'left'  => __( 'Left sidebar', 'conversions' ),
+						'both'  => __( 'Left & Right sidebars', 'conversions' ),
+						'none'  => __( 'No sidebar', 'conversions' ),
+					),
+					'priority'    => '20',
+				)
+			) 
+		);
 
 		//-----------------------------------------------------
 		// Typography section
 		//-----------------------------------------------------
 		$wp_customize->add_section( 'conversions_typography' , array(
 			'title'             => __('Typography', 'conversions'),
-			'priority'          => 40,
+			'priority'          => 50,
 			'description'       => __('Select your typography settings', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_theme_options',
@@ -432,75 +412,89 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'type'       => 'color',
 		) );
 
-
 		//-----------------------------------------------------
-		// Layout settings section
+		// Footer colors
 		//-----------------------------------------------------
-		$wp_customize->add_section( 'conversions_theme_layout_options', array(
-			'title'       => __( 'Layout', 'conversions' ),
-			'capability'  => 'edit_theme_options',
-			'description' => __( 'Container width and sidebar defaults', 'conversions' ),
-			'priority'    => 41,
-			'panel'             => 'conversions_theme_options',
-		) );
-
-		$wp_customize->add_setting( 'conversions_container_width' , array(
-			'default'       => '1140',
-			'type'          => 'theme_mod',
-			'capability'    => 'edit_theme_options',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'absint', //converts value to a non-negative integer
-		) );
-		$wp_customize->add_control( 'conversions_container_width_control', array(
-			'label'      => 'Max container width',
-			'description'=> 'Specify the max container width in px',
-			'section'    => 'conversions_theme_layout_options',
-			'settings'   => 'conversions_container_width',
-			'priority'   => 10,
-			'type'       => 'number',
-			'input_attrs'=> array( 
-				'min' => 1,
-				'max' => 9999,
-			),
-		) );
-
-		$wp_customize->add_setting( 'conversions_sidebar_position', array(
-			'default'           => 'right',
-			'type'              => 'theme_mod',
-			'sanitize_callback' => 'sanitize_text_field',
+		$wp_customize->add_section( 'conversions_footer' , array(
+			'title'             => __('Footer', 'conversions'),
+			'priority'          => 60,
+			'description'       => __('Select your footer colors', 'conversions'),
 			'capability'        => 'edit_theme_options',
+			'panel'             => 'conversions_theme_options',
+		) );	
+		// Create our settings
+		$wp_customize->add_setting( 'conversions_footer_background_color' , array(
+			'default'       => '#3c3d45',
+			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
 		) );
-
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize,
-				'conversions_sidebar_position', array(
-					'label'       => __( 'Sidebar Positioning', 'conversions' ),
-					'description' => __( 'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
-					'conversions' ),
-					'section'     => 'conversions_theme_layout_options',
-					'settings'    => 'conversions_sidebar_position',
-					'type'        => 'select',
-					'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
-					'choices'     => array(
-						'right' => __( 'Right sidebar', 'conversions' ),
-						'left'  => __( 'Left sidebar', 'conversions' ),
-						'both'  => __( 'Left & Right sidebars', 'conversions' ),
-						'none'  => __( 'No sidebar', 'conversions' ),
-					),
-					'priority'    => '20',
-				)
-			) 
-		);
-
+		$wp_customize->add_control( 'conversions_footer_background_color_control', array(
+			'label'      => __('Background color', 'conversions'),
+			'section'    => 'conversions_footer',
+			'settings'   => 'conversions_footer_background_color',
+			'priority'   => 10,
+			'type'       => 'color',
+		) );
+		$wp_customize->add_setting( 'conversions_footer_heading_color' , array(
+			'default'       => '#ffffff',
+			'type'          => 'theme_mod',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( 'conversions_footer_heading_color_control', array(
+			'label'      => __('Heading color', 'conversions'),
+			'section'    => 'conversions_footer',
+			'settings'   => 'conversions_footer_heading_color',
+			'priority'   => 20,
+			'type'       => 'color',
+		) );
+		$wp_customize->add_setting( 'conversions_footer_text_color' , array(
+			'default'       => '#ffffff',
+			'type'          => 'theme_mod',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( 'conversions_footer_text_color_control', array(
+			'label'      => __('Text color', 'conversions'),
+			'section'    => 'conversions_footer',
+			'settings'   => 'conversions_footer_text_color',
+			'priority'   => 30,
+			'type'       => 'color',
+		) );
+		$wp_customize->add_setting( 'conversions_footer_link_color' , array(
+			'default'       => '#00ffff',
+			'type'          => 'theme_mod',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( 'conversions_footer_link_color_control', array(
+			'label'      => __('Link color', 'conversions'),
+			'section'    => 'conversions_footer',
+			'settings'   => 'conversions_footer_link_color',
+			'priority'   => 40,
+			'type'       => 'color',
+		) );
+		$wp_customize->add_setting( 'conversions_footer_link_hover_color' , array(
+			'default'       => '#dddddd',
+			'type'          => 'theme_mod',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( 'conversions_footer_link_hover_color_control', array(
+			'label'      => __('Link hover color', 'conversions'),
+			'section'    => 'conversions_footer',
+			'settings'   => 'conversions_footer_link_hover_color',
+			'priority'   => 50,
+			'type'       => 'color',
+		) );
 
 		//-----------------------------------------------------
 		// Copyright section
 		//-----------------------------------------------------
 		$wp_customize->add_section( 'conversions_copyright' , array(
 			'title'             => __('Copyright', 'conversions'),
-			'priority'          => 42,
+			'priority'          => 70,
 			'description'       => __('Change your copyright settings', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_theme_options',
@@ -580,7 +574,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
      		'description'       => __('Add social icons', 'conversions'),
 			'capability'        => 'edit_theme_options',
 			'panel'             => 'conversions_theme_options',
-     		'priority' => 43,
+     		'priority' => 80,
  		));
  		// Create our settings
  		$social_sites = conversions_get_social_sites();
