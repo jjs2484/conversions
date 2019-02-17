@@ -61,9 +61,9 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		// Create appearance panel
 		//-----------------------------------------------------
 
-		$wp_customize->add_panel( 'conversions_appearance_settings', array(
+		$wp_customize->add_panel( 'conversions_theme_options', array(
 			'priority'       => 36,
-			'title'          => 'Appearance Settings',
+			'title'          => 'Theme Options',
 			'description'    => 'Change colors, fonts, and more.',
 			'capability'        => 'edit_theme_options',
 		) );
@@ -76,7 +76,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'          => 36,
 			'description'       => __('Select your header colors', 'conversions'),
 			'capability'        => 'edit_theme_options',
-			'panel'             => 'conversions_appearance_settings',
+			'panel'             => 'conversions_theme_options',
 		) );	
 		// Create our settings
 		$wp_customize->add_setting( 'conversions_header_position', array(
@@ -156,7 +156,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'          => 37,
 			'description'       => __('Select your navigation settings', 'conversions'),
 			'capability'        => 'edit_theme_options',
-			'panel'             => 'conversions_appearance_settings',
+			'panel'             => 'conversions_theme_options',
 		) );	
 		// Create our settings
 		$wp_customize->add_setting( 'conversions_nav_link_color' , array(
@@ -217,7 +217,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'          => 38,
 			'description'       => __('Select your footer colors', 'conversions'),
 			'capability'        => 'edit_theme_options',
-			'panel'             => 'conversions_appearance_settings',
+			'panel'             => 'conversions_theme_options',
 		) );	
 		// Create our settings
 		$wp_customize->add_setting( 'conversions_footer_background_color' , array(
@@ -295,7 +295,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'          => 39,
 			'description'       => __('Select your background color', 'conversions'),
 			'capability'        => 'edit_theme_options',
-			'panel'             => 'conversions_appearance_settings',
+			'panel'             => 'conversions_theme_options',
 		) );	
 		// Create our settings
 		$wp_customize->add_setting( 'conversions_background_color' , array(
@@ -321,7 +321,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'          => 40,
 			'description'       => __('Select your typography settings', 'conversions'),
 			'capability'        => 'edit_theme_options',
-			'panel'             => 'conversions_appearance_settings',
+			'panel'             => 'conversions_theme_options',
 		) );
 		// Create our settings
 		$wp_customize->add_setting( 'conversions_google_fonts' , array(
@@ -441,7 +441,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'capability'  => 'edit_theme_options',
 			'description' => __( 'Container width and sidebar defaults', 'conversions' ),
 			'priority'    => 41,
-			'panel'             => 'conversions_appearance_settings',
+			'panel'             => 'conversions_theme_options',
 		) );
 
 		$wp_customize->add_setting( 'conversions_container_width' , array(
@@ -503,7 +503,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'          => 42,
 			'description'       => __('Change your copyright settings', 'conversions'),
 			'capability'        => 'edit_theme_options',
-			'panel'             => 'conversions_appearance_settings',
+			'panel'             => 'conversions_theme_options',
 		) );
 		// Create our settings
 		$wp_customize->add_setting( 'conversions_copyright_text' , array(
@@ -579,7 +579,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
      		'title' => __( 'Social Media Icons', 'conversions' ),
      		'description'       => __('Add social icons', 'conversions'),
 			'capability'        => 'edit_theme_options',
-			'panel'             => 'conversions_appearance_settings',
+			'panel'             => 'conversions_theme_options',
      		'priority' => 43,
  		));
  		// Create our settings
