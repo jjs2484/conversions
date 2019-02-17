@@ -60,7 +60,6 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		//-----------------------------------------------------
 		// Create appearance panel
 		//-----------------------------------------------------
-
 		$wp_customize->add_panel( 'conversions_theme_options', array(
 			'priority'       => 36,
 			'title'          => 'Theme Options',
