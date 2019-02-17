@@ -576,6 +576,29 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
      		'priority' => 80,
  		));
  		// Create our settings
+		$wp_customize->add_setting( 'conversions_social_link_target', array(
+			'default'           => '_self',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'capability'        => 'edit_theme_options',
+			'transport'     => 'refresh',
+		) );
+		$wp_customize->add_control( 
+			new WP_Customize_Control(
+				$wp_customize,
+				'conversions_social_link_target', array(
+					'label'       => __( 'Link open behavior', 'conversions' ),
+					'description' => __( 'Open links in same window or new window?', 'conversions' ),
+					'section'     => 'conversions_social',
+					'settings'    => 'conversions_social_link_target',
+					'type'        => 'select',
+					'choices'     => array(
+						'_self' => __( 'Same widow', 'conversions' ),
+						'_blank'       => __( 'New window', 'conversions' ),
+					),
+					'priority'    => '10',
+				)
+		) );
  		$wp_customize->add_setting( 'conversions_social_size' , array(
 			'default'       => '22',
 			'type'          => 'theme_mod',
@@ -588,14 +611,14 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'description'=> 'Icons size in px',
 			'section'    => 'conversions_social',
 			'settings'   => 'conversions_social_size',
-			'priority'   => 10,
+			'priority'   => 20,
 			'type'       => 'number',
 			'input_attrs'=> array( 
 				'min' => 1,
 				'max' => 1000,
 			),
 		) );
-		$wp_customize->add_setting( 'conversions_social_link_color' , array(
+		$wp_customize->add_setting( 'conversions_social_link_color', array(
 			'default'       => '#2600e6',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -605,10 +628,10 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'label'      => __('Link color', 'conversions'),
 			'section'    => 'conversions_social',
 			'settings'   => 'conversions_social_link_color',
-			'priority'   => 20,
+			'priority'   => 30,
 			'type'       => 'color',
 		) );	
-		$wp_customize->add_setting( 'conversions_social_link_hover_color' , array(
+		$wp_customize->add_setting( 'conversions_social_link_hover_color', array(
 			'default'       => '#2600e6',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
@@ -618,7 +641,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'label'      => __('Link hover color', 'conversions'),
 			'section'    => 'conversions_social',
 			'settings'   => 'conversions_social_link_hover_color',
-			'priority'   => 30,
+			'priority'   => 40,
 			'type'       => 'color',
 		) );
  		$social_sites = conversions_get_social_sites();
@@ -632,7 +655,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
          		'label' => __("$social_site URL:", 'conversions'),
          		'section' => 'conversions_social',
          		'type' => 'text',
-         		'priority' => 40,
+         		'priority' => 50,
      		));
  		}
 	

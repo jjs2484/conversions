@@ -48,7 +48,7 @@ function conversions_show_social_icons() {
                 foreach ( $active_sites as $active_site ) { ?>
 
                     <li class="list-inline-item">
-                        <a href="<?php echo get_theme_mod( $active_site ); ?>">
+                        <a href="<?php echo get_theme_mod( $active_site ); ?>" target="<?php echo get_theme_mod('conversions_social_link_target', '_self'); ?>">
                             <?php if( $active_site == 'dribbble' ) { ?>
                                 <i class="fab fa-<?php echo $active_site; ?>-square"></i>
                             <?php } elseif( $active_site == 'google my business' ) { ?>
