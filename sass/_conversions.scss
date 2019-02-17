@@ -1,4 +1,11 @@
-// admin bar space
+// adminbar position
+html #wpadminbar {
+  @media screen and (max-width:600px) {
+    position: fixed;
+  }
+}
+
+// adminbar space
 .admin-bar #wrapper-navbar.fixed-top {
   top: 46px;
   @media screen and (min-width: 783px) {
@@ -175,25 +182,33 @@ a.skip-link {
   .site-info {
     align-items: center;
   }
+  .copyright {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    @media (min-width: 768px) {
+      justify-content: start;
+      order: 1;
+    }
+  }
   .social-media-icons {
+    display: flex;
+    justify-content: center;
+    order: 1;
+    margin-bottom: .5rem;
+    @media (min-width: 768px) {
+      justify-content: end;
+      order: 2;
+      margin-bottom: 0;
+    }
     
     ul.list-inline {
       margin-bottom: 0;
-      @media (min-width: 768px) {
-        text-align: right;
-      }
-
       li.list-inline-item:not(:last-child) {
         margin-right: .2rem;
       }
-
-      li.list-inline-item {
-        i {
-
-        }
-      }
-
     }
+
   }
 }
     

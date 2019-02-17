@@ -8983,6 +8983,10 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+@media screen and (max-width: 600px) {
+  html #wpadminbar {
+    position: fixed; } }
+
 .admin-bar #wrapper-navbar.fixed-top {
   top: 46px; }
   @media screen and (min-width: 783px) {
@@ -9108,13 +9112,48 @@ a.skip-link {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-#wrapper-footer .social-media-icons ul.list-inline {
-  margin-bottom: 0; }
+#wrapper-footer .copyright {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2; }
   @media (min-width: 768px) {
-    #wrapper-footer .social-media-icons ul.list-inline {
-      text-align: right; } }
-  #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
-    margin-right: .2rem; }
+    #wrapper-footer .copyright {
+      -webkit-justify-content: start;
+          -ms-flex-pack: start;
+              justify-content: start;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; } }
+#wrapper-footer .social-media-icons {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-bottom: .5rem; }
+  @media (min-width: 768px) {
+    #wrapper-footer .social-media-icons {
+      -webkit-justify-content: end;
+          -ms-flex-pack: end;
+              justify-content: end;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2;
+      margin-bottom: 0; } }
+  #wrapper-footer .social-media-icons ul.list-inline {
+    margin-bottom: 0; }
+    #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
+      margin-right: .2rem; }
 
 .woocommerce-input-wrapper {
   width: 100%; }
