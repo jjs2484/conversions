@@ -31,7 +31,7 @@ function conversions_gfont_scripts() {
 add_action( 'wp_enqueue_scripts', 'conversions_gfont_scripts' );
 
 /**
- * Customizer choices style inline
+ * Customizer choices style output
  */
 function conversions_customizer_css_ouput()
 {

@@ -35,7 +35,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		$wp_customize->get_section( 'background_image' )->active_callback = '__return_false';
 
 		//-----------------------------------------------------
-		// Logo height setting added to site identity panel
+		// Add logo height to site identity panel
 		//-----------------------------------------------------
 		$wp_customize->add_setting( 'conversions_logo_height', array(
 			'default'       => '60',
@@ -58,7 +58,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		) );
 
 		//-----------------------------------------------------
-		// Create appearance panel
+		// Create theme options panel
 		//-----------------------------------------------------
 		$wp_customize->add_panel( 'conversions_theme_options', array(
 			'priority'       => 36,
@@ -181,7 +181,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'label'      => __('Link hover color', 'conversions'),
 			'section'    => 'conversions_nav',
 			'settings'   => 'conversions_nav_link_hover_color',
-			'priority'   => 11,
+			'priority'   => 20,
 			'type'       => 'color',
 		) );
 		$wp_customize->add_setting( 'conversions_nav_mobile_type', array(
@@ -204,8 +204,62 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 						'offcanvas' => __( 'Offcanvas', 'conversions' ),
 						'collapse'       => __( 'Slide down', 'conversions' ),
 					),
-					'priority'    => '12',
+					'priority'    => '30',
 				)
+		) );
+		$wp_customize->add_setting( 'conversions_nav_button', array(
+			'default'           => 'no',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'capability'        => 'edit_theme_options',
+			'transport'     => 'refresh',
+		) );
+		$wp_customize->add_control( 
+			new WP_Customize_Control(
+				$wp_customize,
+				'conversions_nav_button', array(
+					'label'       => __( 'Add button to navigation', 'conversions' ),
+					'description' => __( 'Want to append a conversion button to the nav?', 'conversions' ),
+					'section'     => 'conversions_nav',
+					'settings'    => 'conversions_nav_button',
+					'type'        => 'select',
+					'choices'     => array(
+						'no' => __( 'No button', 'conversions' ),
+						'btn-primary' => __( 'Primary button', 'conversions' ),
+						'btn-secondary' => __( 'Secondary button', 'conversions' ),
+						'btn-success' => __( 'Success button', 'conversions' ),
+						'btn-danger' => __( 'Danger button', 'conversions' ),
+						'btn-warning' => __( 'Warning button', 'conversions' ),
+						'btn-info' => __( 'Info button', 'conversions' ),
+					),
+					'priority'    => '40',
+				)
+		) );
+		$wp_customize->add_setting( 'conversions_nav_button_text', array(
+			'default'       => 'Click me',
+			'type'          => 'theme_mod',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'wp_filter_nohtml_kses',
+		) );
+		$wp_customize->add_control( 'conversions_nav_button_text_control', array(
+			'label'      => 'Navigation button text',
+			'section'    => 'conversions_nav',
+			'settings'   => 'conversions_nav_button_text',
+			'priority'   => 50,
+			'type'       => 'text',
+		) );
+		$wp_customize->add_setting( 'conversions_nav_button_url', array(
+			'default'       => 'https://wordpress.org',
+			'type'          => 'theme_mod',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'wp_filter_nohtml_kses',
+		) );
+		$wp_customize->add_control( 'conversions_nav_button_url_control', array(
+			'label'      => 'Navigation button URL',
+			'section'    => 'conversions_nav',
+			'settings'   => 'conversions_nav_button_url',
+			'priority'   => 60,
+			'type'       => 'text',
 		) );
 
 		//-----------------------------------------------------

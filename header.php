@@ -9,13 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-// customizer variables
-$header_position = get_theme_mod( 'conversions_header_position' );
-$mobile_nav_type = get_theme_mod( 'conversions_nav_mobile_type' );
+// header position
+$header_position = get_theme_mod( 'conversions_header_position', 'fixed-top' );
+
+// mobile navigation type
+$mobile_nav_type = get_theme_mod( 'conversions_nav_mobile_type', 'offcanvas' );
 if ($mobile_nav_type == 'collapse') {
 	$mobile_nav_container = 'collapse navbar-collapse';
-}
-else {
+} else {
 	$mobile_nav_container = 'navbar-collapse offcanvas-collapse';
 }
 ?>
@@ -56,29 +57,40 @@ else {
 
 						<?php endif; ?>
 
-
 					<?php } else {
 						the_custom_logo();
 					} ?><!-- end custom logo -->
-
 
 				<button class="navbar-toggler" type="button" data-toggle="<?php echo $mobile_nav_type; ?>" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'conversions' ); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => $mobile_nav_container,
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav ml-auto',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'depth'           => 2,
-						'walker'          => new conversions_WP_Bootstrap_Navwalker(),
-					)
-				); ?>
+				<?php
+					// navigation button
+					$nav_button_type = get_theme_mod( 'conversions_nav_button', 'no' );
+					if ($nav_button_type == 'no') {
+						$nav_button = '<ul id="%1$s" class="%2$s">%3$s</ul>';
+					} else {
+						$nav_button_text = get_theme_mod( 'conversions_nav_button_text', 'Click me' );
+						$nav_button_url = get_theme_mod( 'conversions_nav_button_url', 'https://wordpress.org' );
+						$nav_button = '<ul id="%1$s" class="%2$s">%3$s <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item nav-item"><a title="' . $nav_button_text . '" href="' . $nav_button_url . '" class="btn ' . $nav_button_type . '">' . $nav_button_text . '</a></li> </ul>';
+					}
+
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'container_class' => $mobile_nav_container,
+							'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'navbar-nav ml-auto',
+							'items_wrap'	  => $nav_button,
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu',
+							'depth'           => 2,
+							'walker'          => new conversions_WP_Bootstrap_Navwalker(),
+						)
+					); 
+				?>
 
 			</div><!-- .container -->
 
