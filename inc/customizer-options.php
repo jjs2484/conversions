@@ -620,7 +620,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		) );
 
 		//-----------------------------------------------------
-		// Social media icons section
+		// Social media icons
 		//-----------------------------------------------------
  		$wp_customize->add_section( 'conversions_social', array(
      		'title' => __( 'Social Media Icons', 'conversions' ),
@@ -712,6 +712,42 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
          		'priority' => 50,
      		));
  		}
+
+ 		//-----------------------------------------------------
+		// WooCommerce Options
+		//-----------------------------------------------------
+ 		$wp_customize->add_section( 'conversions_woocommerce', array(
+     		'title' => __( 'WooCommerce', 'conversions' ),
+     		'description'       => __('WooCommerce Options', 'conversions'),
+			'capability'        => 'edit_theme_options',
+			'panel'             => 'conversions_theme_options',
+     		'priority' => 90,
+     		'theme_supports' => array('woocommerce'),
+ 		));
+ 		// Create our settings
+		$wp_customize->add_setting( 'conversions_wccart_nav', array(
+			'default'           => 'yes',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'capability'        => 'edit_theme_options',
+			'transport'     => 'refresh',
+		) );
+		$wp_customize->add_control( 
+			new WP_Customize_Control(
+				$wp_customize,
+				'conversions_wccart_nav', array(
+					'label'       => __( 'Show cart in navigation', 'conversions' ),
+					'description' => __( 'Want to show the cart in the nav?', 'conversions' ),
+					'section'     => 'conversions_woocommerce',
+					'settings'    => 'conversions_wccart_nav',
+					'type'        => 'select',
+					'choices'     => array(
+						'yes' => __( 'Show cart', 'conversions' ),
+						'no'       => __( 'No cart', 'conversions' ),
+					),
+					'priority'    => '10',
+				)
+		) );
 	
 	}
 	add_action( 'customize_register', 'conversions_theme_customize_register' );
