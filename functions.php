@@ -19,7 +19,7 @@ $conversions_includes = array(
 	'/extras.php',                          // Custom functions that act independently of the theme templates.
 	'/customizer-options.php',              // Customizer additions.
 	'/customizer-social.php',               // Customizer social icons.
-	'/customizer-output.php',               // Customizer enqueue styles.
+	'/customizer-output.php',               // Customizer output styles.
 	'/custom-comments.php',                 // Custom Comments file.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
 	'/woocommerce.php',                     // Load WooCommerce functions.
