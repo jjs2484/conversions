@@ -9161,7 +9161,7 @@ a.skip-link {
 figure.woocommerce-product-gallery__wrapper {
   max-width: inherit !important; }
 
-#main-menu i.fas.fa-shopping-bag {
+#main-menu a.cart-customlocation i.fas.fa-shopping-bag {
   font-size: 20px;
   margin-right: 5px; }
 
