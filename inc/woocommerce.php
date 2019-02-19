@@ -67,9 +67,8 @@ if ( ! function_exists( 'conversions_append_cart_icon' ) ) {
 		if ( class_exists( 'woocommerce' ) ) {
 			if ( $args->theme_location === 'primary' ) {
 
-				$cart_link = sprintf( '<li class="cart menu-item nav-item menu-item-type-post_type menu-item-object-page"><a class="cart-customlocation nav-link" href="%s" title="%s"><i class="fas fa-shopping-bag"></i>%s</a></li>',
+				$cart_link = sprintf( '<li class="cart menu-item nav-item menu-item-type-post_type menu-item-object-page"><a class="cart-customlocation nav-link" href="%s" title="View your shopping cart"><i class="fas fa-shopping-bag"></i>%s</a></li>',
 					wc_get_cart_url(),
-					_e( 'View your shopping cart' ),
 					sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() )
 				);
 				// Add the cart link to the end of the menu.
