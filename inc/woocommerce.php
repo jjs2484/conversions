@@ -57,6 +57,45 @@ function conversions_woocommerce_wrapper_end() {
 	}
 }
 
+/**
+* Append cart item (and cart count) to end of main menu.
+*/
+add_filter( 'wp_nav_menu_items', 'conversions_append_cart_icon', 10, 2 );
+if ( ! function_exists( 'conversions_append_cart_icon' ) ) {
+
+	function conversions_append_cart_icon( $items, $args ) {
+		if ( class_exists( 'woocommerce' ) ) {
+			if ( $args->theme_location === 'primary' ) {
+
+				$cart_link = sprintf( '<li class="cart menu-item nav-item menu-item-type-post_type menu-item-object-page"><a class="cart-customlocation nav-link" href="%s" title="%s"><i class="fas fa-shopping-bag"></i>%s</a></li>',
+					wc_get_cart_url(),
+					_e( 'View your shopping cart' ),
+					sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() )
+				);
+				// Add the cart link to the end of the menu.
+				$items = $items . $cart_link;
+			}
+		}
+		return $items;
+	}
+}
+
+/**
+ * Update cart contents with Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+	<a class="cart-customlocation nav-link" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="View your shopping cart"><i class="fas fa-shopping-bag"></i><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'conversions'), $woocommerce->cart->cart_contents_count);?></a>
+	<?php
+	$fragments['a.cart-customlocation.nav-link'] = ob_get_clean();
+	return $fragments;
+}
 
 /**
  * Filter hook function monkey patching form classes

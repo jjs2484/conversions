@@ -84,9 +84,9 @@ function conversions_customizer_css_ouput()
 			width: auto;
 		}
 		
-		<?php if (get_theme_mod( 'conversions_header_position' ) == 'fixed-top') { ?>
+		<?php if (get_theme_mod( 'conversions_header_position', 'fixed-top' ) == 'fixed-top') { ?>
 			/* Fixed header height */
-			#page-wrapper { 
+			#page-wrapper, #single-wrapper, #woocommerce-wrapper { 
 				margin-top: <?php echo $c_total_fheader_height; ?>px; 
 			}
 		<?php } ?>

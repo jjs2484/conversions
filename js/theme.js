@@ -17,7 +17,7 @@
             var fixedHeight = jQuery('#wrapper-navbar.fixed-top').innerHeight();
     
             // apply height to page as margin-top
-            jQuery('#page-wrapper').css({'margin-top' : fixedHeight + 'px'});
+            jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper').css({'margin-top' : fixedHeight + 'px'});
         }
     };
 
@@ -50,16 +50,16 @@ jQuery(function () {
      	// set offcanvas top position
     	jQuery('.offcanvas-collapse.open').css({'top' : OAsum + 'px'});
     	
-    	// Are we using a non-fixed or sticky header?
+    	// Check if we are using a non-fixed header
     	var offcanvasRHeader = document.getElementById("wrapper-navbar").classList;
     	// If so lets toggle fixed while offcanvas is open
 		if (offcanvasRHeader.contains("header-p-n")) {
     		offcanvasRHeader.toggle("fixed-top");
-    		if (jQuery('#page-wrapper')[0].hasAttribute('style')) {
-    			jQuery("#page-wrapper").removeAttr("style");
+    		if (jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper')[0].hasAttribute('style')) {
+    			jQuery("#page-wrapper, #single-wrapper, #woocommerce-wrapper").removeAttr("style");
     		}
     		else {
-    			jQuery('#page-wrapper').css({'margin-top' : offcanvasHeight + 'px'});
+    			jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper').css({'margin-top' : offcanvasHeight + 'px'});
     		}
     	}
 	})
