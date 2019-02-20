@@ -26,6 +26,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</div>
 
-	</div><!-- #wrapper-footer-full -->
+	</div><!-- end #wrapper-footer-full -->
 
 <?php endif; ?>

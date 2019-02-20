@@ -31,7 +31,15 @@ html #wpadminbar {
 .wrapper#wrapper-sticky { border-bottom: 1px solid $gray-300; }
 
 // Adding some contrast background color to footer full widget
-#wrapper-footer-full { background-color: $gray-200; }
+#wrapper-footer-full { 
+  background-color: $gray-200; 
+  .footer-widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+}
 
 // Necessary WP classes
 .wp-caption { font-size: inherit; }
