@@ -748,6 +748,29 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 					'priority'    => '10',
 				)
 		) );
+		$wp_customize->add_setting( 'conversions_wccheckout_columns', array(
+			'default'           => 'two-column',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'capability'        => 'edit_theme_options',
+			'transport'     => 'refresh',
+		) );
+		$wp_customize->add_control( 
+			new WP_Customize_Control(
+				$wp_customize,
+				'conversions_wccheckout_columns', array(
+					'label'       => __( 'Checkout columns', 'conversions' ),
+					'description' => __( 'How many columns should the checkout be?', 'conversions' ),
+					'section'     => 'conversions_woocommerce',
+					'settings'    => 'conversions_wccheckout_columns',
+					'type'        => 'select',
+					'choices'     => array(
+						'two-column' => __( 'Two column', 'conversions' ),
+						'one-column'       => __( 'One column', 'conversions' ),
+					),
+					'priority'    => '20',
+				)
+		) );
 	
 	}
 	add_action( 'customize_register', 'conversions_theme_customize_register' );
