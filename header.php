@@ -67,15 +67,6 @@ if ($mobile_nav_type == 'collapse') {
 
 				<!-- The WordPress Menu goes here -->
 				<?php
-					// navigation button
-					$nav_button_type = get_theme_mod( 'conversions_nav_button', 'no' );
-					if ($nav_button_type == 'no') {
-						$nav_button = '<ul id="%1$s" class="%2$s">%3$s</ul>';
-					} else {
-						$nav_button_text = get_theme_mod( 'conversions_nav_button_text', 'Click me' );
-						$nav_button_url = get_theme_mod( 'conversions_nav_button_url', 'https://wordpress.org' );
-						$nav_button = '<ul id="%1$s" class="%2$s">%3$s <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item nav-item"><a title="' . $nav_button_text . '" href="' . $nav_button_url . '" class="btn ' . $nav_button_type . '">' . $nav_button_text . '</a></li> </ul>';
-					}
 
 					wp_nav_menu(
 						array(
@@ -83,7 +74,6 @@ if ($mobile_nav_type == 'collapse') {
 							'container_class' => $mobile_nav_container,
 							'container_id'    => 'navbarNavDropdown',
 							'menu_class'      => 'navbar-nav ml-auto',
-							'items_wrap'	  => $nav_button,
 							'fallback_cb'     => '',
 							'menu_id'         => 'main-menu',
 							'depth'           => 2,

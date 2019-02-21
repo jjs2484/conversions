@@ -1,4 +1,14 @@
 <?php
+/**
+ * conversions customizer social icon output
+ *
+ * @package conversions
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}
+
 // social media icons list
 function conversions_get_social_sites() {
     // Store social site names in array

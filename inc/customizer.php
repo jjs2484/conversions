@@ -261,6 +261,29 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 60,
 			'type'       => 'text',
 		) );
+		$wp_customize->add_setting( 'conversions_nav_search_icon', array(
+			'default'           => 'show',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'capability'        => 'edit_theme_options',
+			'transport'     => 'refresh',
+		) );
+		$wp_customize->add_control( 
+			new WP_Customize_Control(
+				$wp_customize,
+				'conversions_nav_search_icon', array(
+					'label'       => __( 'Show search icon?', 'conversions' ),
+					'description' => __( 'Show or hide a search icon in the nav.', 'conversions' ),
+					'section'     => 'conversions_nav',
+					'settings'    => 'conversions_nav_search_icon',
+					'type'        => 'select',
+					'choices'     => array(
+						'show' => __( 'Show search icon', 'conversions' ),
+						'hide'       => __( 'Hide search icon', 'conversions' ),
+					),
+					'priority'    => '70',
+				)
+		) );
 
 		//-----------------------------------------------------
 		// Background color

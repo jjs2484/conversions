@@ -1,4 +1,13 @@
 <?php
+/**
+ * conversions customizer main output for scripts and styles
+ *
+ * @package conversions
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 /**
  * Enqueue google font

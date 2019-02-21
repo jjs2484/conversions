@@ -1,0 +1,99 @@
+<?php
+/**
+ * conversions customizer filter nav and add options
+ *
+ * @package conversions
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+// Navigation button
+add_filter( 'wp_nav_menu_items', 'conversions_add_navbar_button', 10, 2 );
+
+if ( ! function_exists( 'conversions_add_navbar_button' ) ) {
+	function conversions_add_navbar_button( $items, $args ) {
+		if ( $args->theme_location === 'primary' ) {
+			
+			// Append Navigation Button?
+			// get nav button customizer setting whether to show button or not
+			$nav_button_type = get_theme_mod( 'conversions_nav_button', 'no' );
+			if ($nav_button_type != 'no') {
+				// get nav button text option
+				$nav_button_text = get_theme_mod( 'conversions_nav_button_text', 'Click me' );
+				// get nav button url option
+				$nav_button_url = get_theme_mod( 'conversions_nav_button_url', 'https://wordpress.org' );
+				// output the nav button with options
+				$nav_button = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item nav-item"><a title="' . $nav_button_text . '" href="' . $nav_button_url . '" class="btn ' . $nav_button_type . '">' . $nav_button_text . '</a></li>';
+				// Add the nav button to the end of the menu.
+				$items = $items . $nav_button;
+			}
+			
+			// Append WooCommerce Cart Icon?
+			// first check if woocommerce is active
+			if ( class_exists( 'woocommerce' ) ) {
+				// get customizer option whether to show cart icon or not
+				if (get_theme_mod( 'conversions_wccart_nav', 'yes' ) == 'yes') {
+					// get WC cart totals and if = 0 only show icon with no text
+					$cart_totals = WC()->cart->get_cart_contents_count();
+					if( WC()->cart->get_cart_contents_count() > 0) {
+						$cart_totals = WC()->cart->get_cart_contents_count();
+					}
+					else {
+						$cart_totals = '';
+					}
+					// output the cart icon with item count
+					$cart_link = sprintf( '<li class="cart menu-item nav-item" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a class="cart-customlocation nav-link" href="%s" title="View your shopping cart"><i class="fas fa-shopping-bag"></i>%s</a></li>',
+						wc_get_cart_url(),
+						$cart_totals
+					);
+					// Add the cart icon to the end of the menu.
+					$items = $items . $cart_link;
+				}
+			}
+
+			// Append Search Icon?
+			// get search icon customizer setting whether to show or not
+			$nav_search_icon = get_theme_mod( 'conversions_nav_search_icon', 'show' );
+			if ($nav_search_icon != 'hide') {
+				// output the nav button with options
+				$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item nav-item"><a title="Search" href="#" class="nav-link"><i class="fas fa-search"></i></a></li>';
+				// Add the nav button to the end of the menu.
+				$items = $items . $nav_search;
+			}
+
+		}
+		return $items;
+	}
+}
+
+
+/**
+ * Update WooCommerce cart contents with Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+
+if ( ! function_exists( 'woocommerce_header_add_to_cart_fragment' ) ) {
+	function woocommerce_header_add_to_cart_fragment( $fragments ) {
+		global $woocommerce;
+
+		ob_start();
+
+		$cart_totals = WC()->cart->get_cart_contents_count();
+		if( WC()->cart->get_cart_contents_count() > 0)
+		{
+			$cart_totals = WC()->cart->get_cart_contents_count();
+		}
+		else 
+		{
+			$cart_totals = '';
+		}
+
+		?>
+		<a class="cart-customlocation nav-link" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="View your shopping cart"><i class="fas fa-shopping-bag"></i><?php echo $cart_totals; ?></a>
+		<?php
+		$fragments['a.cart-customlocation.nav-link'] = ob_get_clean();
+		return $fragments;
+	}
+}
