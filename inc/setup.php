@@ -9,11 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-// Set the content width based on the theme's design and stylesheet.
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
 add_action( 'after_setup_theme', 'conversions_setup' );
 
 if ( ! function_exists ( 'conversions_setup' ) ) {

@@ -10,10 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Navigation button
-add_filter( 'wp_nav_menu_items', 'conversions_add_navbar_button', 10, 2 );
+add_filter( 'wp_nav_menu_items', 'conversions_add_navbar_buttons', 10, 2 );
 
-if ( ! function_exists( 'conversions_add_navbar_button' ) ) {
-	function conversions_add_navbar_button( $items, $args ) {
+if ( ! function_exists( 'conversions_add_navbar_buttons' ) ) {
+	function conversions_add_navbar_buttons( $items, $args ) {
 		if ( $args->theme_location === 'primary' ) {
 			
 			// Append Navigation Button?
@@ -25,7 +25,7 @@ if ( ! function_exists( 'conversions_add_navbar_button' ) ) {
 				// get nav button url option
 				$nav_button_url = get_theme_mod( 'conversions_nav_button_url', 'https://wordpress.org' );
 				// output the nav button with options
-				$nav_button = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item nav-item"><a title="' . $nav_button_text . '" href="' . $nav_button_url . '" class="btn ' . $nav_button_type . '">' . $nav_button_text . '</a></li>';
+				$nav_button = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-callout-button menu-item nav-item"><a title="' . $nav_button_text . '" href="' . $nav_button_url . '" class="btn ' . $nav_button_type . '">' . $nav_button_text . '</a></li>';
 				// Add the nav button to the end of the menu.
 				$items = $items . $nav_button;
 			}
@@ -58,7 +58,7 @@ if ( ! function_exists( 'conversions_add_navbar_button' ) ) {
 			$nav_search_icon = get_theme_mod( 'conversions_nav_search_icon', 'show' );
 			if ($nav_search_icon != 'hide') {
 				// output the nav button with options
-				$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item nav-item"><a title="Search" href="#" class="nav-link"><i class="fas fa-search"></i></a></li>';
+				$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a title="Search" href="#" class="nav-link"><i class="fas fa-search"></i></a></li>';
 				// Add the nav button to the end of the menu.
 				$items = $items . $nav_search;
 			}
