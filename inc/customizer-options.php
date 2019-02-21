@@ -329,7 +329,7 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 				$wp_customize,
 				'conversions_sidebar_position', array(
 					'label'       => __( 'Sidebar Positioning', 'conversions' ),
-					'description' => __( 'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
+					'description' => __( 'Set sidebar\'s default position. Can either be: right, left, or none. Note: this can be overridden on individual pages.',
 					'conversions' ),
 					'section'     => 'conversions_theme_layout_options',
 					'settings'    => 'conversions_sidebar_position',
@@ -338,7 +338,6 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 					'choices'     => array(
 						'right' => __( 'Right sidebar', 'conversions' ),
 						'left'  => __( 'Left sidebar', 'conversions' ),
-						'both'  => __( 'Left & Right sidebars', 'conversions' ),
 						'none'  => __( 'No sidebar', 'conversions' ),
 					),
 					'priority'    => '20',
