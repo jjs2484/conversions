@@ -14,7 +14,7 @@ if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 }
 
 // which sidebar is selected?
-$sidebar_pos = get_theme_mod( 'conversions_sidebar_position' );
+$sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' );
 ?>
 
 <?php 

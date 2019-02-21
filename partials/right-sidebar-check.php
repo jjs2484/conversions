@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- #closing the primary container from /partials/left-sidebar-check.php -->
 
-<?php $sidebar_pos = get_theme_mod( 'conversions_sidebar_position' ); ?>
+<?php $sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' ); ?>
 
 <?php if ( 'right' === $sidebar_pos ) : ?>
 
