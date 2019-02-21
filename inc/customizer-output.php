@@ -145,6 +145,14 @@ function conversions_customizer_css_ouput()
 				body.woocommerce-checkout #order_review, body.woocommerce-checkout #order_review_heading { width: 48%; float: right; margin-right: 0; }
 			}
 		<?php } ?>
+		/* Sidebar */
+		<?php if (get_theme_mod( 'conversions_sidebar_mvisibility', 'show' ) == 'hide') { ?>
+			@media (max-width: 767.98px) {
+				#left-sidebar, #right-sidebar {
+					display: none;
+				}
+			}
+		<?php } ?>
 	</style>
          
 	<?php

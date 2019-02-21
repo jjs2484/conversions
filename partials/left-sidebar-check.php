@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <?php
-$sidebar_pos = get_theme_mod( 'conversions_sidebar_position' );
+$sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' );
 ?>
 
 <?php if ( 'left' === $sidebar_pos ) : ?>

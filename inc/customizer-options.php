@@ -345,6 +345,34 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			) 
 		);
 
+
+		$wp_customize->add_setting( 'conversions_sidebar_mvisibility', array(
+			'default'           => 'show',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+			'transport'     => 'refresh',
+		) );
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'conversions_sidebar_mvisibility', array(
+					'label'       => __( 'Hide sidebar on mobile?', 'conversions' ),
+					'description' => __( 'Should we hide the sidebar on small screens?',
+					'conversions' ),
+					'section'     => 'conversions_theme_layout_options',
+					'settings'    => 'conversions_sidebar_mvisibility',
+					'type'        => 'select',
+					'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+					'choices'     => array(
+						'show' => __( 'Show sidebar', 'conversions' ),
+						'hide'  => __( 'Hide sidebar', 'conversions' ),
+					),
+					'priority'    => '30',
+				)
+			) 
+		);
+
 		//-----------------------------------------------------
 		// Typography section
 		//-----------------------------------------------------
