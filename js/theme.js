@@ -49,6 +49,10 @@ jQuery(function () {
 
      	// set offcanvas top position
     	jQuery('.offcanvas-collapse.open').css({'top' : OAsum + 'px'});
+
+        // set html and body overflow-x: hidden to prevent horizontal scrollbar
+        jQuery('html').toggleClass('offcanvas-overflowx');
+        jQuery('body').toggleClass('offcanvas-overflowx');
     	
     	// Check if we are using a non-fixed header
     	var offcanvasRHeader = document.getElementById("wrapper-navbar").classList;

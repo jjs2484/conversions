@@ -53,12 +53,12 @@ if ( ! function_exists( 'conversions_add_navbar_buttons' ) ) {
 				}
 			}
 
-			// Append Search Icon?
+			// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 			// get search icon customizer setting whether to show or not
 			$nav_search_icon = get_theme_mod( 'conversions_nav_search_icon', 'show' );
 			if ($nav_search_icon != 'hide') {
-				// output the nav button with options
-				$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a title="Search" href="#" class="nav-link"><i class="fas fa-search"></i></a></li>';
+				// output the nav search icon if active.
+				$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a title="Search" href="#csearchModal" data-toggle="modal" class="nav-link"><i class="fas fa-search"></i></a></li>';
 				// Add the nav button to the end of the menu.
 				$items = $items . $nav_search;
 			}
@@ -67,6 +67,44 @@ if ( ! function_exists( 'conversions_add_navbar_buttons' ) ) {
 		return $items;
 	}
 }
+
+/**
+ * Output the search modal html in the footer if is active in the nav
+ */
+if ( ! function_exists( 'coversions_nav_search_modal' ) ) {
+	
+	function coversions_nav_search_modal() {
+    	$nav_search_icon = get_theme_mod( 'conversions_nav_search_icon', 'show' );
+		if ($nav_search_icon != 'hide') {
+
+			// Add modal window for search
+			$search_form = get_search_form( $echo );
+			echo 
+				'<div id="csearchModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="Search" aria-hidden="true">',
+
+					'<div class="modal-dialog">',
+
+						'<div class="modal-content">',
+
+							'<div class="modal-header"><button class="btn btn-secondary" data-dismiss="modal">close</button></div>',
+
+							'<div class="modal-body">',
+								'<h3 id="myModalLabel" class="modal-title">Start typing and press enter to search</h3>',
+								''.$search_form.'',
+							'</div>',
+							
+						'</div>',
+
+					'</div>',
+
+				'</div>';
+		}
+		else {
+			return;
+		}
+	}
+}
+add_action( 'wp_footer', 'coversions_nav_search_modal', 100 );
 
 
 /**

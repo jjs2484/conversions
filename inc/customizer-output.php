@@ -108,12 +108,6 @@ function conversions_customizer_css_ouput()
 		/* Nav styles */
 		.navbar.navbar-dark .navbar-nav a.nav-link { color: <?php echo get_theme_mod('conversions_nav_link_color', '#ffffff'); ?>; }
 		.navbar.navbar-dark .navbar-nav .nav-link:focus, .navbar.navbar-dark .navbar-nav .nav-link:hover { color: <?php echo get_theme_mod('conversions_nav_link_hover_color', '#cccccc'); ?>; }
-		<?php if (get_theme_mod( 'conversions_nav_mobile_type', 'offcanvas' ) == 'offcanvas') { ?>
-			/* offcanvas no horizontal scrollbar */
-			html, body {
-  				overflow-x: hidden;
-			}
-		<?php } ?>
 		/* Footer styles */
 		#wrapper-footer-full { background-color: <?php echo get_theme_mod('conversions_footer_background_color', '#3c3d45'); ?>; }
 		#footer-full-content .h1, #footer-full-content .h2, #footer-full-content .h3, #footer-full-content .h4, #footer-full-content .h5, #footer-full-content .h6, #footer-full-content h1, #footer-full-content h2, #footer-full-content h3, #footer-full-content h4, #footer-full-content h5, #footer-full-content h6 { color: <?php echo get_theme_mod('conversions_footer_heading_color', '#ffffff'); ?>; }

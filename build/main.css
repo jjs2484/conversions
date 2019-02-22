@@ -1927,7 +1927,37 @@ select.form-control:focus::-ms-value,
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
-  .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
+  .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg, #csearchModal form#searchform input.form-control-plaintext.field.form-control, #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=text], .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=text],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=search],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=search],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=url],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=url],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=tel],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=tel],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=number],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=number],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=range],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=range],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=date],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=date],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=month],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=month],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=week],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=week],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=time],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=time],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=datetime],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=datetime],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=datetime-local],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=datetime-local],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=color],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=color],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=email],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=email],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=file],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=file],
+  #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field[type=submit],
+  .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field[type=submit], #csearchModal form#searchform .wpcf7 input.form-control-plaintext.field.wpcf7-validation-errors, .wpcf7 #csearchModal form#searchform input.form-control-plaintext.field.wpcf7-validation-errors {
     padding-right: 0;
     padding-left: 0; }
 
@@ -1938,7 +1968,37 @@ select.form-control:focus::-ms-value,
   line-height: 1.5;
   border-radius: 0.2rem; }
 
-.form-control-lg {
+.form-control-lg, #csearchModal form#searchform input.field.form-control, #csearchModal form#searchform .wpcf7 input.field[type=text], .wpcf7 #csearchModal form#searchform input.field[type=text],
+#csearchModal form#searchform .wpcf7 input.field[type=search],
+.wpcf7 #csearchModal form#searchform input.field[type=search],
+#csearchModal form#searchform .wpcf7 input.field[type=url],
+.wpcf7 #csearchModal form#searchform input.field[type=url],
+#csearchModal form#searchform .wpcf7 input.field[type=tel],
+.wpcf7 #csearchModal form#searchform input.field[type=tel],
+#csearchModal form#searchform .wpcf7 input.field[type=number],
+.wpcf7 #csearchModal form#searchform input.field[type=number],
+#csearchModal form#searchform .wpcf7 input.field[type=range],
+.wpcf7 #csearchModal form#searchform input.field[type=range],
+#csearchModal form#searchform .wpcf7 input.field[type=date],
+.wpcf7 #csearchModal form#searchform input.field[type=date],
+#csearchModal form#searchform .wpcf7 input.field[type=month],
+.wpcf7 #csearchModal form#searchform input.field[type=month],
+#csearchModal form#searchform .wpcf7 input.field[type=week],
+.wpcf7 #csearchModal form#searchform input.field[type=week],
+#csearchModal form#searchform .wpcf7 input.field[type=time],
+.wpcf7 #csearchModal form#searchform input.field[type=time],
+#csearchModal form#searchform .wpcf7 input.field[type=datetime],
+.wpcf7 #csearchModal form#searchform input.field[type=datetime],
+#csearchModal form#searchform .wpcf7 input.field[type=datetime-local],
+.wpcf7 #csearchModal form#searchform input.field[type=datetime-local],
+#csearchModal form#searchform .wpcf7 input.field[type=color],
+.wpcf7 #csearchModal form#searchform input.field[type=color],
+#csearchModal form#searchform .wpcf7 input.field[type=email],
+.wpcf7 #csearchModal form#searchform input.field[type=email],
+#csearchModal form#searchform .wpcf7 input.field[type=file],
+.wpcf7 #csearchModal form#searchform input.field[type=file],
+#csearchModal form#searchform .wpcf7 input.field[type=submit],
+.wpcf7 #csearchModal form#searchform input.field[type=submit], #csearchModal form#searchform .wpcf7 input.field.wpcf7-validation-errors, .wpcf7 #csearchModal form#searchform input.field.wpcf7-validation-errors {
   height: calc(2.875rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -9238,6 +9298,51 @@ a.skip-link {
     margin-bottom: 0; }
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
       margin-right: .2rem; }
+
+html.offcanvas-overflowx, body.offcanvas-overflowx {
+  overflow-x: hidden; }
+
+.admin-bar #csearchModal {
+  z-index: 100000; }
+
+#csearchModal .modal-dialog {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  padding: 0; }
+#csearchModal .modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+  background: #111; }
+#csearchModal .modal-header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  border-bottom: 0; }
+#csearchModal .modal-title {
+  color: #fff;
+  margin-bottom: .5em; }
+#csearchModal .modal-body {
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  #csearchModal .modal-body p {
+    color: #ddd; }
 
 .woocommerce-input-wrapper {
   width: 100%; }
