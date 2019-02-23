@@ -9127,9 +9127,6 @@ a.text-dark:hover, a.text-dark:focus {
 .wrapper {
   padding: 30px 0; }
 
-#wrapper-hero {
-  padding: 0px !important; }
-
 .sticky,
 .gallery-caption,
 .bypostauthor {
@@ -9187,9 +9184,6 @@ a.skip-link {
   top: 0px;
   right: 0px; }
 
-.jumbotron {
-  margin-bottom: 0px; }
-
 .navbar.navbar-light .navbar-brand a {
   color: rgba(0, 0, 0, 0.9); }
   .navbar.navbar-light .navbar-brand a:hover, .navbar.navbar-light .navbar-brand a:focus {
@@ -9229,6 +9223,9 @@ a.skip-link {
     -ms-transform: translateX(-100%);
         transform: translateX(-100%); } }
 
+html.offcanvas-overflowx, body.offcanvas-overflowx {
+  overflow-x: hidden; }
+
 .navbar-dark .navbar-nav .dropdown-menu .nav-link {
   display: block;
   width: 100%;
@@ -9251,6 +9248,48 @@ a.skip-link {
   .navbar-dark .navbar-nav .dropdown-menu .nav-link.disabled, .navbar-dark .navbar-nav .dropdown-menu .nav-link:disabled {
     color: #6c757d !important;
     background-color: transparent; }
+
+.admin-bar #csearchModal {
+  z-index: 100000; }
+
+#csearchModal .modal-dialog {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  padding: 0; }
+#csearchModal .modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+  background: #111; }
+#csearchModal .modal-header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  border-bottom: 0; }
+#csearchModal .modal-title {
+  color: #fff;
+  margin-bottom: .5em; }
+#csearchModal .modal-body {
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  #csearchModal .modal-body p {
+    color: #ddd; }
 
 #wrapper-footer .site-info {
   -webkit-align-items: center;
@@ -9298,51 +9337,6 @@ a.skip-link {
     margin-bottom: 0; }
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
       margin-right: .2rem; }
-
-html.offcanvas-overflowx, body.offcanvas-overflowx {
-  overflow-x: hidden; }
-
-.admin-bar #csearchModal {
-  z-index: 100000; }
-
-#csearchModal .modal-dialog {
-  position: fixed;
-  margin: 0;
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  padding: 0; }
-#csearchModal .modal-content {
-  height: auto;
-  min-height: 100%;
-  border-radius: 0;
-  background: #111; }
-#csearchModal .modal-header {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  border-bottom: 0; }
-#csearchModal .modal-title {
-  color: #fff;
-  margin-bottom: .5em; }
-#csearchModal .modal-body {
-  -webkit-justify-content: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  #csearchModal .modal-body p {
-    color: #ddd; }
 
 .woocommerce-input-wrapper {
   width: 100%; }

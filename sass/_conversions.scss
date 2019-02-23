@@ -1,11 +1,11 @@
-// adminbar position
+// adminbar position fix on small screens
 html #wpadminbar {
   @media screen and (max-width:600px) {
     position: fixed;
   }
 }
 
-// adminbar space
+// adminbar add space when active
 .admin-bar #wrapper-navbar.fixed-top {
   top: 46px;
   @media screen and (min-width: 783px) {
@@ -15,10 +15,8 @@ html #wpadminbar {
 
 // Some basic padding for all wrappers
 .wrapper {
-  padding: $grid-gutter-width 0; }
-
-// Reset hero wrapper padding to 0
-#wrapper-hero { padding: 0px !important; }
+  padding: $grid-gutter-width 0; 
+}
 
 // Adding basic WordPress classes to pass the WordPress.org tests
 .sticky,
@@ -42,28 +40,33 @@ html #wpadminbar {
 }
 
 // Necessary WP classes
-.wp-caption { font-size: inherit; }
-
-.wp-caption-text { font-size: inherit; }
-
-.screen-reader-text { @extend .sr-only; }
-
+.wp-caption { 
+  font-size: inherit; 
+}
+.wp-caption-text { 
+  font-size: inherit; 
+}
+.screen-reader-text { 
+  @extend .sr-only; 
+}
 .alignleft {
   display: inline;
   float: left;
   margin-right: 1.5em;
 }
-
 .alignright {
   display: inline;
   float: right;
   margin-left: 1.5em;
 }
-
-.aligncenter { @extend .mx-auto; }
+.aligncenter { 
+  @extend .mx-auto; 
+}
 
 // Post design
-.entry-footer span { padding-right: 10px; }
+.entry-footer span { 
+  padding-right: 10px; 
+}
 
 // Limit featured image size to 100%
 img.wp-post-image,
@@ -83,14 +86,10 @@ a.skip-link {
   right: 0px;
 }
 
-// Reset Jumbotron default margin
-.jumbotron { margin-bottom: 0px; }
-
 // Navbar styles
 .navbar {
   &.navbar-light .navbar-brand a {
      color: $navbar-light-active-color;
-
     @include hover-focus {
       color: $navbar-light-active-color;
     }
@@ -98,7 +97,6 @@ a.skip-link {
 
   &.navbar-dark .navbar-brand a {
     color: $navbar-dark-active-color;
-
     @include hover-focus {
       color: $navbar-dark-active-color;
     }
@@ -110,7 +108,6 @@ a.skip-link {
   
   // Large devices (desktops, 992px and up)
   @media (min-width: 992px) {
-    
     ul.navbar-nav {
       display: inline-block;
       li.menu-item {
@@ -120,10 +117,9 @@ a.skip-link {
         }
       }
     }
-
   }
 
-  // mobile devices 
+  // offcanvas menu on mobile devices 
   @media (max-width: 991.98px) {
     .offcanvas-collapse {
       position: fixed;
@@ -147,6 +143,11 @@ a.skip-link {
     }
   }
 
+}
+
+// when offcanvas open prevent horizontal scrolling
+html.offcanvas-overflowx, body.offcanvas-overflowx {
+  overflow-x: hidden;
 }
 
 // Navbar dropdown styles
@@ -186,44 +187,7 @@ a.skip-link {
   }
 }
 
-#wrapper-footer {
-  .site-info {
-    align-items: center;
-  }
-  .copyright {
-    display: flex;
-    justify-content: center;
-    order: 2;
-    @media (min-width: 768px) {
-      justify-content: start;
-      order: 1;
-    }
-  }
-  .social-media-icons {
-    display: flex;
-    justify-content: center;
-    order: 1;
-    margin-bottom: .5rem;
-    @media (min-width: 768px) {
-      justify-content: end;
-      order: 2;
-      margin-bottom: 0;
-    }
-    
-    ul.list-inline {
-      margin-bottom: 0;
-      li.list-inline-item:not(:last-child) {
-        margin-right: .2rem;
-      }
-    }
-
-  }
-}
-
-html.offcanvas-overflowx, body.offcanvas-overflowx {
-  overflow-x: hidden;
-}
-
+// navbar search modal
 .admin-bar #csearchModal {
   z-index: 100000;
 }
@@ -262,5 +226,40 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   }
   form#searchform input.field.form-control {
     @extend .form-control-lg;
+  }
+}
+
+// copyright and social icons layout
+#wrapper-footer {
+  .site-info {
+    align-items: center;
+  }
+  .copyright {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    @media (min-width: 768px) {
+      justify-content: start;
+      order: 1;
+    }
+  }
+  .social-media-icons {
+    display: flex;
+    justify-content: center;
+    order: 1;
+    margin-bottom: .5rem;
+    @media (min-width: 768px) {
+      justify-content: end;
+      order: 2;
+      margin-bottom: 0;
+    }
+    
+    ul.list-inline {
+      margin-bottom: 0;
+      li.list-inline-item:not(:last-child) {
+        margin-right: .2rem;
+      }
+    }
+
   }
 }
