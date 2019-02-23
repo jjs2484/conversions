@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<?php
 								echo "&copy;" . date("Y") . " - ";
 							
-								$copyright_text = esc_html( get_theme_mod( 'conversions_copyright_text' ) );
+								$copyright_text = esc_html( get_theme_mod( 'conversions_copyright_text', 'conversions' ) );
 								if( $copyright_text ) {
 									echo esc_html( get_theme_mod( 'conversions_copyright_text' ) );
 								} else {

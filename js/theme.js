@@ -17,7 +17,7 @@
             var fixedHeight = jQuery('#wrapper-navbar.fixed-top').innerHeight();
     
             // apply height to page as margin-top
-            jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper').css({'margin-top' : fixedHeight + 'px'});
+            jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper').css({'margin-top' : fixedHeight + 'px'});
         }
     };
 
@@ -59,11 +59,11 @@ jQuery(function () {
     	// If so lets toggle fixed while offcanvas is open
 		if (offcanvasRHeader.contains("header-p-n")) {
     		offcanvasRHeader.toggle("fixed-top");
-    		if (jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper')[0].hasAttribute('style')) {
-    			jQuery("#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper").removeAttr("style");
+    		if (jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper')[0].hasAttribute('style')) {
+    			jQuery("#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper").removeAttr("style");
     		}
     		else {
-    			jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper').css({'margin-top' : offcanvasHeight + 'px'});
+    			jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper').css({'margin-top' : offcanvasHeight + 'px'});
     		}
     	}
 	})
