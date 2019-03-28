@@ -78,7 +78,7 @@ if ( ! function_exists( 'coversions_nav_search_modal' ) ) {
 		if ($nav_search_icon != 'hide') {
 
 			// Add modal window for search
-			$search_form = get_search_form( $echo );
+			$search_form = get_search_form();
 			echo 
 				'<div id="csearchModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="Search" aria-hidden="true">',
 
