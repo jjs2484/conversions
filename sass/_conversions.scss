@@ -204,7 +204,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     height: auto;
     min-height: 100%;
     border-radius: 0;
-    background: #111;
+    background: #333;
   }
   .modal-header {
     display: flex;
@@ -226,6 +226,13 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   }
   form#searchform input.field.form-control {
     @extend .form-control-lg;
+  }
+  button.close {
+    opacity: 1;
+  }
+  i.fa-times {
+    color:#eee;
+    font-size: 30px;
   }
 }
 

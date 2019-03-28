@@ -9263,7 +9263,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   height: auto;
   min-height: 100%;
   border-radius: 0;
-  background: #111; }
+  background: #333; }
 #csearchModal .modal-header {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9290,6 +9290,11 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
           align-items: center; }
   #csearchModal .modal-body p {
     color: #ddd; }
+#csearchModal button.close {
+  opacity: 1; }
+#csearchModal i.fa-times {
+  color: #eee;
+  font-size: 30px; }
 
 #wrapper-footer .site-info {
   -webkit-align-items: center;

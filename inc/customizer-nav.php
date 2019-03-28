@@ -78,7 +78,7 @@ if ( ! function_exists( 'coversions_nav_search_modal' ) ) {
 		if ($nav_search_icon != 'hide') {
 
 			// Add modal window for search
-			$search_form = get_search_form();
+			$search_form = get_search_form(false);
 			echo 
 				'<div id="csearchModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="Search" aria-hidden="true">',
 
@@ -86,7 +86,9 @@ if ( ! function_exists( 'coversions_nav_search_modal' ) ) {
 
 						'<div class="modal-content">',
 
-							'<div class="modal-header"><button class="btn btn-secondary" data-dismiss="modal">close</button></div>',
+							'<div class="modal-header">',
+								'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>',
+							'</div>',
 
 							'<div class="modal-body">',
 								'<h3 id="myModalLabel" class="modal-title">Start typing and press enter to search</h3>',
