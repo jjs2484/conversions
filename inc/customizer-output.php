@@ -128,7 +128,7 @@ function conversions_customizer_css_ouput()
 		a { color: <?php echo get_theme_mod('conversions_typography_link_color', '#2600e6'); ?>; }
 		a:hover { color: <?php echo get_theme_mod('conversions_typography_link_hover_color', '#2600e6'); ?>; }
 		/* Copyright styles */
-		#wrapper-footer { background-color: <?php echo get_theme_mod('conversions_copyright_background_color', '#ffffff'); ?>; }
+		#wrapper-footer { background-color: <?php echo get_theme_mod('conversions_copyright_background_color', '#eeeeee'); ?>; }
 		#wrapper-footer .site-info .copyright { color: <?php echo get_theme_mod('conversions_copyright_text_color', '#111111'); ?>; }
 		#wrapper-footer .site-info .copyright a { color: <?php echo get_theme_mod('conversions_copyright_link_color', '#2600e6'); ?>; }
 		#wrapper-footer .site-info .copyright a:hover { color: <?php echo get_theme_mod('conversions_copyright_link_hover_color', '#2600e6'); ?>; }

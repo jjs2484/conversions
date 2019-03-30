@@ -9343,6 +9343,16 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
       margin-right: .2rem; }
 
+#left-sidebar, #right-sidebar {
+  margin-top: 1.2rem; }
+  @media (min-width: 768px) {
+    #left-sidebar, #right-sidebar {
+      margin-top: .5rem; } }
+  #left-sidebar .widget, #right-sidebar .widget {
+    padding-bottom: .9rem; }
+    #left-sidebar .widget .widget-title, #right-sidebar .widget .widget-title {
+      border-bottom: 1px solid #ddd; }
+
 .woocommerce-input-wrapper {
   width: 100%; }
 
