@@ -28,20 +28,6 @@ html #wpadminbar {
 // Separate sticky wrapper from main content
 .wrapper#wrapper-sticky { border-bottom: 1px solid $gray-300; }
 
-// footer full widget area
-#wrapper-footer-full { 
-  background-color: $gray-200; 
-  .footer-widget {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    @media (max-width: 576px) {
-      margin-bottom: 0.75rem;
-    }
-  }
-}
-
 // Necessary WP classes
 .wp-caption { 
   font-size: inherit; 
@@ -197,7 +183,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     height: auto;
     min-height: 100%;
     border-radius: 0;
-    background: #333;
+    background: #343A40;
   }
   .modal-header {
     display: flex;
@@ -226,6 +212,20 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   i.fa-times {
     color:#eee;
     font-size: 30px;
+  }
+}
+
+// footer full widget area
+#wrapper-footer-full { 
+  background-color: $gray-200; 
+  .footer-widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    @media (max-width: 576px) {
+      margin-bottom: 0.75rem;
+    }
   }
 }
 
