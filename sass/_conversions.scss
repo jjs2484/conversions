@@ -126,37 +126,66 @@ a.skip-link {
 }
 
 #wrapper-navbar nav {
-  &.navbar-dark.bg-dark {
+  &.navbar-dark {
     a.nav-link { 
       color: rgb(255, 255, 255);
       &:hover{
         color: rgba(255,255,255,.8);
       }
     }
-    .offcanvas-collapse {
-      background-color: #343A40;
-    }
   }
-  &.navbar-light.bg-light {
+  &.navbar-light {
     a.nav-link {
       color: rgba(0,0,0,.9);
       &:hover{
         color: rgba(0,0,0,.7);
       }
     }
+  }
+
+  &.navbar-dark.bg-dark {
+    .offcanvas-collapse {
+      background-color: #343A40;
+    }
+  }
+  &.navbar-light.bg-light {
     .offcanvas-collapse {
       background-color: #F8F9FA;
     }
   }
-  &.navbar-dark.bg-primary {
-    a.nav-link { 
-      color: rgb(255, 255, 255);
-      &:hover{
-        color: rgba(255,255,255,.8);
-      }
+  &.navbar-light.bg-white {
+    .offcanvas-collapse {
+      background-color: #FFFFFF;
     }
+  }
+  &.navbar-dark.bg-primary {
     .offcanvas-collapse {
       background-color: #5533FF;
+    }
+  }
+  &.navbar-dark.bg-secondary {
+    .offcanvas-collapse {
+      background-color: #6C757D;
+    }
+  }
+  &.navbar-dark.bg-success {
+    .offcanvas-collapse {
+      background-color: #28A745;
+    }
+  }
+  &.navbar-dark.bg-danger {
+    .offcanvas-collapse {
+      background-color: #DC3545;
+    }
+  }
+  &.navbar-light.bg-warning {
+    .offcanvas-collapse {
+      background-color: #FFC107;
+    }
+  }
+  &.navbar-dark.bg-info {
+    .offcanvas-collapse {
+      background-color: #17A2B8;
     }
   }
 }

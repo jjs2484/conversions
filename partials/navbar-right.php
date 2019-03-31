@@ -10,18 +10,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // header color scheme
-$header_color_scheme = get_theme_mod( 'conversions_header_scheme', 'bg-dark' );
-if ($header_color_scheme == 'bg-dark') {
-	$header_color_scheme = 'navbar-dark bg-dark';
-} elseif ($header_color_scheme == 'bg-light') {
-	$header_color_scheme = 'navbar-light bg-light';
-} elseif ($header_color_scheme == 'bg-primary') {
-	$header_color_scheme = 'navbar-dark bg-primary';
+$header_color_scheme = get_theme_mod( 'conversions_header_color_scheme', 'dark' );
+switch( $header_color_scheme )
+{
+	case 'dark':
+		$header_color_scheme = 'navbar-dark bg-dark';
+		break;
+	case 'light':
+		$header_color_scheme = 'navbar-light bg-light';
+		break;
+	case 'white':
+		$header_color_scheme = 'navbar-light bg-white';
+		break;
+	case 'primary':
+		$header_color_scheme = 'navbar-dark bg-primary';
+		break;
+	case 'secondary':
+		$header_color_scheme = 'navbar-dark bg-secondary';
+		break;
+	case 'success':
+		$header_color_scheme = 'navbar-dark bg-success';
+		break;
+	case 'danger':
+		$header_color_scheme = 'navbar-dark bg-danger';
+		break;
+	case 'warning':
+		$header_color_scheme = 'navbar-light bg-warning';
+		break;
+	case 'info':
+		$header_color_scheme = 'navbar-dark bg-info';
+		break;		
+	default:
+		$header_color_scheme = 'navbar-dark bg-dark';
 }
 
 // mobile navigation type
-$mobile_nav_container = get_theme_mod( 'conversions_nav_mobile_type', 'offcanvas' );
-if ($mobile_nav_container == 'collapse') {
+$mobile_nav_type = get_theme_mod( 'conversions_nav_mobile_type', 'offcanvas' );
+if ($mobile_nav_type == 'collapse') {
 	$mobile_nav_container = 'collapse navbar-collapse';
 } else {
 	$mobile_nav_container = 'navbar-collapse offcanvas-collapse';

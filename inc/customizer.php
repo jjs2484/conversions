@@ -120,9 +120,8 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 				'max' => 1000,
 			),
 		) );
-
-		$wp_customize->add_setting( 'conversions_header_scheme', array(
-			'default'           => 'bg-dark',
+		$wp_customize->add_setting( 'conversions_header_color_scheme', array(
+			'default'           => 'dark',
 			'type'              => 'theme_mod',
 			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
 			'capability'        => 'edit_theme_options',
@@ -131,18 +130,47 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		$wp_customize->add_control( 
 			new WP_Customize_Control(
 				$wp_customize,
-				'conversions_header_scheme', array(
+				'conversions_header_color_scheme', array(
 					'label'       => __( 'Header color scheme', 'conversions' ),
 					'description' => __( 'Choose a header color scheme', 'conversions' ),
 					'section'     => 'conversions_header',
-					'settings'    => 'conversions_header_scheme',
+					'settings'    => 'conversions_header_color_scheme',
 					'type'        => 'select',
 					'choices'     => array(
-						'bg-dark' => __( 'Dark', 'conversions' ),
-						'bg-light' => __( 'Light', 'conversions' ),
-						'bg-primary' => __( 'Blue', 'conversions' ),
+						'dark' => __( 'Dark', 'conversions' ),
+						'light' => __( 'Light', 'conversions' ),
+						'white' => __( 'White', 'conversions' ),
+						'primary' => __( 'Primary', 'conversions' ),
+						'secondary' => __( 'Secondary', 'conversions' ),
+						'success' => __( 'Success', 'conversions' ),
+						'danger' => __( 'Danger', 'conversions' ),
+						'warning' => __( 'Warning', 'conversions' ),
+						'info' => __( 'Info', 'conversions' ),
 					),
-					'priority'    => '12',
+					'priority'    => '20',
+				)
+		) );
+		$wp_customize->add_setting( 'conversions_header_dropshadow', array(
+			'default'           => 'no',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'capability'        => 'edit_theme_options',
+			'transport'     => 'refresh',
+		) );
+		$wp_customize->add_control( 
+			new WP_Customize_Control(
+				$wp_customize,
+				'conversions_header_dropshadow', array(
+					'label'       => __( 'Header drop shadow', 'conversions' ),
+					'description' => __( 'Add a drop shadoow to the header?', 'conversions' ),
+					'section'     => 'conversions_header',
+					'settings'    => 'conversions_header_dropshadow',
+					'type'        => 'select',
+					'choices'     => array(
+						'yes' => __( 'Yes', 'conversions' ),
+						'no' => __( 'No', 'conversions' ),
+					),
+					'priority'    => '30',
 				)
 		) );
 
@@ -340,8 +368,6 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 				)
 			) 
 		);
-
-
 		$wp_customize->add_setting( 'conversions_sidebar_mvisibility', array(
 			'default'           => 'show',
 			'type'              => 'theme_mod',
