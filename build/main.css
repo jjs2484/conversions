@@ -9150,6 +9150,9 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media (max-width: 576px) {
+      #wrapper-footer-full .footer-widget {
+        margin-bottom: 0.75rem; } }
 
 .wp-caption {
   font-size: inherit; }
