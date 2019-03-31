@@ -103,11 +103,6 @@ function conversions_customizer_css_ouput()
 			padding-top: <?php echo get_theme_mod('conversions_header_tb_padding', '8'); ?>px;
 			padding-bottom: <?php echo get_theme_mod('conversions_header_tb_padding', '8'); ?>px;
 		}
-		.navbar.navbar-dark, .navbar .offcanvas-collapse { background-color: <?php echo get_theme_mod('conversions_header_background_color', '#111111'); ?>; }
-		.navbar.navbar-dark a.navbar-brand, .navbar.navbar-dark a.navbar-brand:focus, .navbar.navbar-dark a.navbar-brand:hover { color: <?php echo get_theme_mod('conversions_header_text_color', '#ffffff'); ?>; }
-		/* Nav styles */
-		.navbar.navbar-dark .navbar-nav a.nav-link { color: <?php echo get_theme_mod('conversions_nav_link_color', '#ffffff'); ?>; }
-		.navbar.navbar-dark .navbar-nav .nav-link:focus, .navbar.navbar-dark .navbar-nav .nav-link:hover { color: <?php echo get_theme_mod('conversions_nav_link_hover_color', '#cccccc'); ?>; }
 		/* Footer styles */
 		#wrapper-footer-full { background-color: <?php echo get_theme_mod('conversions_footer_background_color', '#3c3d45'); ?>; }
 		#footer-full-content .h1, #footer-full-content .h2, #footer-full-content .h3, #footer-full-content .h4, #footer-full-content .h5, #footer-full-content .h6, #footer-full-content h1, #footer-full-content h2, #footer-full-content h3, #footer-full-content h4, #footer-full-content h5, #footer-full-content h6 { color: <?php echo get_theme_mod('conversions_footer_heading_color', '#ffffff'); ?>; }

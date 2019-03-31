@@ -120,31 +120,30 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 				'max' => 1000,
 			),
 		) );
-		$wp_customize->add_setting( 'conversions_header_background_color', array(
-			'default'       => '#111111',
-			'type'          => 'theme_mod',
+
+		$wp_customize->add_setting( 'conversions_header_scheme', array(
+			'default'           => 'bg-dark',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'capability'        => 'edit_theme_options',
 			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
 		) );
-		$wp_customize->add_control( 'conversions_header_background_color_control', array(
-			'label'      => __('Background color', 'conversions'),
-			'section'    => 'conversions_header',
-			'settings'   => 'conversions_header_background_color',
-			'priority'   => 12,
-			'type'       => 'color',
-		) );
-		$wp_customize->add_setting( 'conversions_header_text_color', array(
-			'default'       => '#ffffff',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_header_text_color_control', array(
-			'label'      => __('Text color', 'conversions'),
-			'section'    => 'conversions_header',
-			'settings'   => 'conversions_header_text_color',
-			'priority'   => 20,
-			'type'       => 'color',
+		$wp_customize->add_control( 
+			new WP_Customize_Control(
+				$wp_customize,
+				'conversions_header_scheme', array(
+					'label'       => __( 'Header color scheme', 'conversions' ),
+					'description' => __( 'Choose a header color scheme', 'conversions' ),
+					'section'     => 'conversions_header',
+					'settings'    => 'conversions_header_scheme',
+					'type'        => 'select',
+					'choices'     => array(
+						'bg-dark' => __( 'Dark', 'conversions' ),
+						'bg-light' => __( 'Light', 'conversions' ),
+						'bg-primary' => __( 'Blue', 'conversions' ),
+					),
+					'priority'    => '12',
+				)
 		) );
 
 		//-----------------------------------------------------
@@ -158,32 +157,6 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'panel'             => 'conversions_theme_options',
 		) );	
 		// Create our settings
-		$wp_customize->add_setting( 'conversions_nav_link_color', array(
-			'default'       => '#ffffff',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_nav_link_color_control', array(
-			'label'      => __('Link color', 'conversions'),
-			'section'    => 'conversions_nav',
-			'settings'   => 'conversions_nav_link_color',
-			'priority'   => 10,
-			'type'       => 'color',
-		) );
-		$wp_customize->add_setting( 'conversions_nav_link_hover_color', array(
-			'default'       => '#cccccc',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_nav_link_hover_color_control', array(
-			'label'      => __('Link hover color', 'conversions'),
-			'section'    => 'conversions_nav',
-			'settings'   => 'conversions_nav_link_hover_color',
-			'priority'   => 20,
-			'type'       => 'color',
-		) );
 		$wp_customize->add_setting( 'conversions_nav_mobile_type', array(
 			'default'           => 'offcanvas',
 			'type'              => 'theme_mod',

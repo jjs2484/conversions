@@ -12,6 +12,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 // header position
 $header_position = get_theme_mod( 'conversions_header_position', 'fixed-top' );
 
+// header color scheme
+$header_scheme = get_theme_mod( 'conversions_header_scheme', 'bg-dark' );
+if ($header_scheme == 'bg-dark') {
+	$header_color_scheme = 'navbar-dark bg-dark';
+} elseif ($header_scheme == 'bg-light') {
+	$header_color_scheme = 'navbar-light bg-light';
+} elseif ($header_scheme == 'bg-primary') {
+	$header_color_scheme = 'navbar-dark bg-primary';
+}
+
 // mobile navigation type
 $mobile_nav_type = get_theme_mod( 'conversions_nav_mobile_type', 'offcanvas' );
 if ($mobile_nav_type == 'collapse') {
@@ -40,7 +50,7 @@ if ($mobile_nav_type == 'collapse') {
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'conversions' ); ?></a>
 
-		<nav class="navbar navbar-expand-lg navbar-dark">
+		<nav class="navbar navbar-expand-lg <?php echo $header_color_scheme; ?>">
 
 			<div class="container-fluid">
 
