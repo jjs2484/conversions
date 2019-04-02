@@ -51,6 +51,46 @@ html #wpadminbar {
 .aligncenter { 
   @extend .mx-auto; 
 }
+table { 
+  @extend .table;
+  @extend .table-bordered;
+  border-spacing: 0;
+  &.table thead th, thead th {
+    border-bottom-width: 1px;
+  }
+}
+blockquote {
+  padding: 10px 20px;
+  border-left: 5px solid #aaa;
+  cite {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #555;
+    margin-top: .5rem;
+  }
+}
+cite {
+  color: #555;
+}
+code {
+  background-color: rgba(0,0,0,.05);
+  padding: .202em .5407911001em;
+  color: #444;
+}
+pre {
+  color: #444;
+  background-color: rgba(0,0,0,.05);
+  padding: 1em;
+  max-width: 100%;
+  overflow: auto;
+}
+.widget.widget_calendar {
+  .table td, .table th, table td, table th {
+    padding: 0;
+    text-align: center;
+  }
+}
 
 // Post design
 .entry-footer span { 

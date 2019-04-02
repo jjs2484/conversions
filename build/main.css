@@ -1487,34 +1487,37 @@ pre {
 
   .offset-xl-11 {
     margin-left: 91.66667%; } }
-.table {
+.table, table {
   width: 100%;
   margin-bottom: 1rem;
   background-color: transparent; }
-  .table th,
-  .table td {
+  .table th, table th,
+  .table td,
+  table td {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6; }
-  .table thead th {
+  .table thead th, table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6; }
-  .table tbody + tbody {
+  .table tbody + tbody, table tbody + tbody {
     border-top: 2px solid #dee2e6; }
-  .table .table {
+  .table .table, table .table, .table table, table table {
     background-color: #fff; }
 
 .table-sm th,
 .table-sm td {
   padding: 0.3rem; }
 
-.table-bordered {
+.table-bordered, table {
   border: 1px solid #dee2e6; }
-  .table-bordered th,
-  .table-bordered td {
+  .table-bordered th, table th,
+  .table-bordered td,
+  table td {
     border: 1px solid #dee2e6; }
-  .table-bordered thead th,
-  .table-bordered thead td {
+  .table-bordered thead th, table thead th,
+  .table-bordered thead td,
+  table thead td {
     border-bottom-width: 2px; }
 
 .table-borderless th,
@@ -1628,11 +1631,11 @@ pre {
   .table-hover .table-active:hover > th {
     background-color: rgba(0, 0, 0, 0.075); }
 
-.table .thead-dark th {
+.table .thead-dark th, table .thead-dark th {
   color: #fff;
   background-color: #212529;
   border-color: #32383e; }
-.table .thead-light th {
+.table .thead-light th, table .thead-light th {
   color: #495057;
   background-color: #e9ecef;
   border-color: #dee2e6; }
@@ -1644,7 +1647,7 @@ pre {
   .table-dark td,
   .table-dark thead th {
     border-color: #32383e; }
-  .table-dark.table-bordered {
+  .table-dark.table-bordered, table.table-dark {
     border: 0; }
   .table-dark.table-striped tbody tr:nth-of-type(odd) {
     background-color: rgba(255, 255, 255, 0.05); }
@@ -1658,7 +1661,7 @@ pre {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
-    .table-responsive-sm > .table-bordered {
+    .table-responsive-sm > .table-bordered, .table-responsive-sm > table {
       border: 0; } }
 @media (max-width: 767.98px) {
   .table-responsive-md {
@@ -1667,7 +1670,7 @@ pre {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
-    .table-responsive-md > .table-bordered {
+    .table-responsive-md > .table-bordered, .table-responsive-md > table {
       border: 0; } }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
@@ -1676,7 +1679,7 @@ pre {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
-    .table-responsive-lg > .table-bordered {
+    .table-responsive-lg > .table-bordered, .table-responsive-lg > table {
       border: 0; } }
 @media (max-width: 1199.98px) {
   .table-responsive-xl {
@@ -1685,7 +1688,7 @@ pre {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
-    .table-responsive-xl > .table-bordered {
+    .table-responsive-xl > .table-bordered, .table-responsive-xl > table {
       border: 0; } }
 .table-responsive {
   display: block;
@@ -1693,7 +1696,7 @@ pre {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar; }
-  .table-responsive > .table-bordered {
+  .table-responsive > .table-bordered, .table-responsive > table {
     border: 0; }
 
 .form-control, .wpcf7 input[type=text],
@@ -9093,14 +9096,16 @@ a.text-dark:hover, a.text-dark:focus {
   .badge {
     border: 1px solid #000; }
 
-  .table {
+  .table, table {
     border-collapse: collapse !important; }
-    .table td,
-    .table th {
+    .table td, table td,
+    .table th,
+    table th {
       background-color: #fff !important; }
 
-  .table-bordered th,
-  .table-bordered td {
+  .table-bordered th, table th,
+  .table-bordered td,
+  table td {
     border: 1px solid #dee2e6 !important; }
 
   .table-dark {
@@ -9111,7 +9116,7 @@ a.text-dark:hover, a.text-dark:focus {
     .table-dark tbody + tbody {
       border-color: #dee2e6; }
 
-  .table .thead-dark th {
+  .table .thead-dark th, table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
 @media screen and (max-width: 600px) {
@@ -9150,6 +9155,40 @@ a.text-dark:hover, a.text-dark:focus {
   display: inline;
   float: right;
   margin-left: 1.5em; }
+
+table {
+  border-spacing: 0; }
+  table.table thead th, table thead th, table thead th {
+    border-bottom-width: 1px; }
+
+blockquote {
+  padding: 10px 20px;
+  border-left: 5px solid #aaa; }
+  blockquote cite {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #555;
+    margin-top: .5rem; }
+
+cite {
+  color: #555; }
+
+code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: .202em .5407911001em;
+  color: #444; }
+
+pre {
+  color: #444;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  max-width: 100%;
+  overflow: auto; }
+
+.widget.widget_calendar .table td, .widget.widget_calendar table td, .widget.widget_calendar .table th, .widget.widget_calendar table th, .widget.widget_calendar table td, .widget.widget_calendar table th {
+  padding: 0;
+  text-align: center; }
 
 .entry-footer span {
   padding-right: 10px; }
@@ -9363,6 +9402,9 @@ figure.woocommerce-product-gallery__wrapper {
 #main-menu a.cart-customlocation i.fas.fa-shopping-bag {
   font-size: 20px;
   margin-right: 5px; }
+
+.woocommerce table.shop_table {
+  border-collapse: collapse; }
 
 .woocommerce-message,
 .woocommerce-info,
