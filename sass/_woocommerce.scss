@@ -171,13 +171,15 @@ p.no-comments {
 	.woocommerce-breadcrumb a, .product_meta a {
 		color: #777;
 	}
-	.woocommerce div.product p.price, .woocommerce div.product span.price {
+	div.product p.price .woocommerce-Price-amount {
 		color: #555;
 	}
-	.woocommerce .star-rating {
-		color: #F7DE00;
-	}
-	.summary .entry-summary .woocommerce-review-link {
-		color: #777;
+	.woocommerce-product-rating {
+		.star-rating {
+			color: #F7DE00;
+		}
+		.woocommerce-review-link {
+			color: #777;
+		}
 	}
 }

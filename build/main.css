@@ -9548,11 +9548,11 @@ p.no-comments {
   border-top: 1px solid rgba(0, 0, 0, 0.05); }
 .single-product.woocommerce .woocommerce-breadcrumb a, .single-product.woocommerce .product_meta a {
   color: #777; }
-.single-product.woocommerce .woocommerce div.product p.price, .single-product.woocommerce .woocommerce div.product span.price {
+.single-product.woocommerce div.product p.price .woocommerce-Price-amount {
   color: #555; }
-.single-product.woocommerce .woocommerce .star-rating {
+.single-product.woocommerce .woocommerce-product-rating .star-rating {
   color: #F7DE00; }
-.single-product.woocommerce .summary .entry-summary .woocommerce-review-link {
+.single-product.woocommerce .woocommerce-product-rating .woocommerce-review-link {
   color: #777; }
 
 .fa,
