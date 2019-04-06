@@ -115,8 +115,6 @@ function conversions_customizer_css_ouput()
 		#footer-full-content p, #footer-full-content table, #footer-full-content li, #footer-full-content caption { color: <?php echo get_theme_mod('conversions_footer_text_color', '#ffffff'); ?>; }
 		#footer-full-content a { color: <?php echo get_theme_mod('conversions_footer_link_color', '#00ffff'); ?>; }
 		#footer-full-content a:hover { color: <?php echo get_theme_mod('conversions_footer_link_hover_color', '#dddddd'); ?>; }
-		/* Background color */
-		body { background-color: <?php echo get_theme_mod('conversions_background_color', '#ffffff'); ?>; }
 		/* Typography styles */
 		.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { 
 			color: <?php echo get_theme_mod('conversions_typography_heading_color', '#222222'); ?>; 

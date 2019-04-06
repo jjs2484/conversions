@@ -287,31 +287,6 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		) );
 
 		//-----------------------------------------------------
-		// Background color
-		//-----------------------------------------------------
-		$wp_customize->add_section( 'conversions_background', array(
-			'title'             => __('Background', 'conversions'),
-			'priority'          => 30,
-			'description'       => __('Select your background color', 'conversions'),
-			'capability'        => 'edit_theme_options',
-			'panel'             => 'conversions_theme_options',
-		) );	
-		// Create our settings
-		$wp_customize->add_setting( 'conversions_background_color', array(
-			'default'       => '#ffffff',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_background_color_control', array(
-			'label'      => __('Background color', 'conversions'),
-			'section'    => 'conversions_background',
-			'settings'   => 'conversions_background_color',
-			'priority'   => 10,
-			'type'       => 'color',
-		) );
-
-		//-----------------------------------------------------
 		// Layout settings
 		//-----------------------------------------------------
 		$wp_customize->add_section( 'conversions_theme_layout_options', array(
