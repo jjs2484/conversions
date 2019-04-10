@@ -9210,6 +9210,12 @@ a.text-dark:hover, a.text-dark:focus {
 .wrapper {
   padding: 30px 0 3em; }
 
+#wrapper-footer-full.wrapper {
+  padding-bottom: 30px; }
+
+#wrapper-footer.wrapper {
+  padding-bottom: 30px; }
+
 .sticky,
 .gallery-caption,
 .bypostauthor {
@@ -9264,7 +9270,7 @@ pre {
   max-width: 100%;
   overflow: auto; }
 
-.widget.widget_calendar .table td, .widget.widget_calendar table td, .widget.widget_calendar .table th, .widget.widget_calendar table th, .widget.widget_calendar table td, .widget.widget_calendar table th {
+.widget.widget_calendar .table td, .widget.widget_calendar table td, .widget.widget_calendar .table th, .widget.widget_calendar table th, .widget.widget_calendar table td, .widget.widget_calendar table th, .footer-widget.widget_calendar .table td, .footer-widget.widget_calendar table td, .footer-widget.widget_calendar .table th, .footer-widget.widget_calendar table th, .footer-widget.widget_calendar table td, .footer-widget.widget_calendar table th {
   padding: 0;
   text-align: center; }
 

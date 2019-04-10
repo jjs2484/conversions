@@ -17,6 +17,13 @@ html #wpadminbar {
 .wrapper {
   padding: 30px 0 3em; 
 }
+// Footer and copyright bottom padding same as top padding
+#wrapper-footer-full.wrapper {
+  padding-bottom: 30px;
+}
+#wrapper-footer.wrapper {
+  padding-bottom: 30px;
+}
 
 // Adding basic WordPress classes to pass the WordPress.org tests
 .sticky,
@@ -85,7 +92,7 @@ pre {
   max-width: 100%;
   overflow: auto;
 }
-.widget.widget_calendar {
+.widget.widget_calendar, .footer-widget.widget_calendar {
   .table td, .table th, table td, table th {
     padding: 0;
     text-align: center;
