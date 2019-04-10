@@ -105,7 +105,7 @@ function conversions_customizer_css_ouput()
 			padding-bottom: <?php echo get_theme_mod('conversions_header_bottom_padding', '8'); ?>px;
 		}
 		<?php if (get_theme_mod( 'conversions_header_dropshadow', 'no' ) == 'yes') { ?>
-			/* Fixed header height */
+			/* Header drop shadow */
 			#wrapper-navbar nav.navbar { 
 				box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 			}
