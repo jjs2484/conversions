@@ -101,44 +101,6 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 					'priority'    => '10',
 				)
 		) );
-		$wp_customize->add_setting( 'conversions_header_top_padding', array(
-			'default'       => '8',
-			'type'          => 'theme_mod',
-			'capability'    => 'edit_theme_options',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'absint', //converts value to a non-negative integer
-		) );
-		$wp_customize->add_control( 'conversions_header_top_padding_control', array(
-			'label'      => 'Header top padding',
-			'description'=> 'Top padding in px',
-			'section'    => 'conversions_header',
-			'settings'   => 'conversions_header_top_padding',
-			'priority'   => 11,
-			'type'       => 'number',
-			'input_attrs'=> array( 
-				'min' => 1,
-				'max' => 1000,
-			),
-		) );
-		$wp_customize->add_setting( 'conversions_header_bottom_padding', array(
-			'default'       => '8',
-			'type'          => 'theme_mod',
-			'capability'    => 'edit_theme_options',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'absint', //converts value to a non-negative integer
-		) );
-		$wp_customize->add_control( 'conversions_header_bottom_padding_control', array(
-			'label'      => 'Header bottom padding',
-			'description'=> 'Bottom padding in px',
-			'section'    => 'conversions_header',
-			'settings'   => 'conversions_header_bottom_padding',
-			'priority'   => 12,
-			'type'       => 'number',
-			'input_attrs'=> array( 
-				'min' => 1,
-				'max' => 1000,
-			),
-		) );
 		$wp_customize->add_setting( 'conversions_header_color_scheme', array(
 			'default'           => 'dark',
 			'type'              => 'theme_mod',
@@ -191,6 +153,44 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 					),
 					'priority'    => '30',
 				)
+		) );
+		$wp_customize->add_setting( 'conversions_header_top_padding', array(
+			'default'       => '8',
+			'type'          => 'theme_mod',
+			'capability'    => 'edit_theme_options',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'absint', //converts value to a non-negative integer
+		) );
+		$wp_customize->add_control( 'conversions_header_top_padding_control', array(
+			'label'      => 'Header top padding',
+			'description'=> 'Top padding in px',
+			'section'    => 'conversions_header',
+			'settings'   => 'conversions_header_top_padding',
+			'priority'   => 40,
+			'type'       => 'number',
+			'input_attrs'=> array( 
+				'min' => 1,
+				'max' => 1000,
+			),
+		) );
+		$wp_customize->add_setting( 'conversions_header_bottom_padding', array(
+			'default'       => '8',
+			'type'          => 'theme_mod',
+			'capability'    => 'edit_theme_options',
+			'transport'     => 'refresh',
+			'sanitize_callback' => 'absint', //converts value to a non-negative integer
+		) );
+		$wp_customize->add_control( 'conversions_header_bottom_padding_control', array(
+			'label'      => 'Header bottom padding',
+			'description'=> 'Bottom padding in px',
+			'section'    => 'conversions_header',
+			'settings'   => 'conversions_header_bottom_padding',
+			'priority'   => 50,
+			'type'       => 'number',
+			'input_attrs'=> array( 
+				'min' => 1,
+				'max' => 1000,
+			),
 		) );
 
 		//-----------------------------------------------------
