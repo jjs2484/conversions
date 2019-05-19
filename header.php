@@ -25,7 +25,7 @@ $header_position = get_theme_mod( 'conversions_header_position', 'fixed-top' );
 </head>
 
 <body <?php body_class(); ?>>
-
+<?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->

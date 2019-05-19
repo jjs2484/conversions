@@ -19,7 +19,7 @@ if ( ! function_exists( 'conversions_scripts' ) ) {
 		$theme_version = $the_theme->get( 'Version' );
 		
 		$css_version = $theme_version . '.' . filemtime(get_template_directory() . '/build/main.min.css');
-		wp_enqueue_style( 'conversions-styles', get_stylesheet_directory_uri() . '/build/main.min.css', array(), $css_version );
+		wp_enqueue_style( 'conversions-styles', get_template_directory_uri() . '/build/main.min.css', array(), $css_version );
 
 		wp_enqueue_script( 'jquery');
 		
