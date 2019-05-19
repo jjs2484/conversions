@@ -7,23 +7,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uniquelylost/conversions.git"
+    "url": "git+https://github.com/jessesneider/conversions.git"
   },
-  "author": "uniquelylost",
+  "author": "jessesneider",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/uniquelylost/conversions/issues"
+    "url": "https://github.com/jessesneider/conversions/issues"
   },
-  "homepage": "https://github.com/uniquelylost/conversions#readme",
+  "homepage": "https://github.com/jessesneider/conversions#readme",
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.0.4",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
-    "node-sass": "^4.10.0"
+    "node-sass": "^4.12.0"
   },
   "dependencies": {},
   "description": ""
