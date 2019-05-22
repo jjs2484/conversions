@@ -40,12 +40,6 @@
 @import "../src/sass/bootstrap4/utilities";
 @import "../src/sass/bootstrap4/print";
 
-// Loads conversions styles
-@import "conversions";
-
-// Loads WooCommerce style fixes
-@import "woocommerce";
-
 // Loads Font Awesome Icon font
 @import '../src/sass/fontawesome/variables';
 @import '../src/sass/fontawesome/mixins';
@@ -64,6 +58,12 @@
 
 // Loads Underscores media styles
 @import "../src/sass/underscores/galleries";
+
+// Loads conversions styles
+@import "conversions";
+
+// Loads WooCommerce style fixes
+@import "woocommerce";
 
 // Loads contact Form 7 - Bootstrap 4 support
 @import "contact-form7";
