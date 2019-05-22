@@ -10750,6 +10750,9 @@ readers do not read off random characters that represent icons */
 .fa-air-freshener:before {
   content: ""; }
 
+.fa-airbnb:before {
+  content: ""; }
+
 .fa-algolia:before {
   content: ""; }
 
@@ -11002,6 +11005,9 @@ readers do not read off random characters that represent icons */
 .fa-battery-three-quarters:before {
   content: ""; }
 
+.fa-battle-net:before {
+  content: ""; }
+
 .fa-bed:before {
   content: ""; }
 
@@ -11113,6 +11119,9 @@ readers do not read off random characters that represent icons */
 .fa-bookmark:before {
   content: ""; }
 
+.fa-bootstrap:before {
+  content: ""; }
+
 .fa-bowling-ball:before {
   content: ""; }
 
@@ -11151,6 +11160,9 @@ readers do not read off random characters that represent icons */
 
 .fa-btc:before {
   content: ""; }
+
+.fa-buffer:before {
+  content: ""; }
 
 .fa-bug:before {
   content: ""; }
@@ -11415,6 +11427,9 @@ readers do not read off random characters that represent icons */
 
 .fa-chrome:before {
   content: ""; }
+
+.fa-chromecast:before {
+  content: ""; }
 
 .fa-church:before {
   content: ""; }
@@ -11929,6 +11944,9 @@ readers do not read off random characters that represent icons */
 .fa-euro-sign:before {
   content: ""; }
 
+.fa-evernote:before {
+  content: ""; }
+
 .fa-exchange-alt:before {
   content: ""; }
 
@@ -12264,6 +12282,9 @@ readers do not read off random characters that represent icons */
 
 .fa-git:before {
   content: ""; }
+
+.fa-git-alt:before {
+  content: ""; }
 
 .fa-git-square:before {
   content: ""; }
@@ -12708,6 +12729,9 @@ readers do not read off random characters that represent icons */
 
 .fa-italic:before {
   content: ""; }
+
+.fa-itch-io:before {
+  content: ""; }
 
 .fa-itunes:before {
   content: ""; }
@@ -13669,6 +13693,9 @@ readers do not read off random characters that represent icons */
 .fa-safari:before {
   content: ""; }
 
+.fa-salesforce:before {
+  content: ""; }
+
 .fa-sass:before {
   content: ""; }
 
@@ -13948,6 +13975,9 @@ readers do not read off random characters that represent icons */
 .fa-speakap:before {
   content: ""; }
 
+.fa-speaker-deck:before {
+  content: ""; }
+
 .fa-spider:before {
   content: ""; }
 
@@ -13980,6 +14010,9 @@ readers do not read off random characters that represent icons */
 
 .fa-stack-overflow:before {
   content: ""; }
+
+.fa-stackpath:before {
+  content: ""; }
 
 .fa-stamp:before {
   content: ""; }
@@ -14112,6 +14145,9 @@ readers do not read off random characters that represent icons */
 
 .fa-swimming-pool:before {
   content: ""; }
+
+.fa-symfony:before {
+  content: ""; }
 
 .fa-synagogue:before {
   content: ""; }
@@ -14620,6 +14656,12 @@ readers do not read off random characters that represent icons */
 .fa-water:before {
   content: ""; }
 
+.fa-wave-square:before {
+  content: ""; }
+
+.fa-waze:before {
+  content: ""; }
+
 .fa-weebly:before {
   content: ""; }
 
@@ -14731,6 +14773,9 @@ readers do not read off random characters that represent icons */
 .fa-yahoo:before {
   content: ""; }
 
+.fa-yammer:before {
+  content: ""; }
+
 .fa-yandex:before {
   content: ""; }
 
@@ -14779,6 +14824,10 @@ readers do not read off random characters that represent icons */
   position: static;
   width: auto; }
 
+/*!
+ * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
@@ -14791,6 +14840,10 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
+/*!
+ * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 @font-face {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
