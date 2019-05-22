@@ -68,8 +68,14 @@ if ( ! function_exists ( 'conversions_setup' ) ) {
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
 
-		// Add support for responsive embedded content.
+		// add fallback to core block styles - gutenberg
+		add_theme_support( 'wp-block-styles' );
+
+		// Add support for responsive embedded content - gutenberg
 		add_theme_support( 'responsive-embeds' );
+
+		// Add support for wide images - gutenberg
+		add_theme_support( 'align-wide' );
 
 		// Check and setup theme default settings.
 		conversions_setup_theme_default_settings();
