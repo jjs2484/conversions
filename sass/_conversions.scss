@@ -93,9 +93,14 @@ pre {
   overflow: auto;
 }
 .widget.widget_calendar, .footer-widget.widget_calendar {
-  .table td, .table th, table td, table th {
-    padding: 0;
-    text-align: center;
+  table#wp-calendar {
+    table-layout: fixed;
+    max-width: 250px;
+    width: 100%;
+    td, th {
+      padding: .25em;
+      text-align: center;
+    }
   }
 }
 
