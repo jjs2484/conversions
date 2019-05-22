@@ -1,7 +1,7 @@
 // Loads variables
 @import "variables";
 
-// Loads Bootstrap4
+// Loads Bootstrap v4.3.1
 @import "../src/sass/bootstrap4/functions";
 @import "../src/sass/bootstrap4/variables";
 @import "../src/sass/bootstrap4/mixins";
@@ -31,10 +31,12 @@
 @import "../src/sass/bootstrap4/media";
 @import "../src/sass/bootstrap4/list-group";
 @import "../src/sass/bootstrap4/close";
+@import "../src/sass/bootstrap4/toasts";
 @import "../src/sass/bootstrap4/modal";
 @import "../src/sass/bootstrap4/tooltip";
 @import "../src/sass/bootstrap4/popover";
 @import "../src/sass/bootstrap4/carousel";
+@import "../src/sass/bootstrap4/spinners";
 @import "../src/sass/bootstrap4/utilities";
 @import "../src/sass/bootstrap4/print";
 
