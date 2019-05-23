@@ -14869,6 +14869,21 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     #left-sidebar .widget .widget-title, #right-sidebar .widget .widget-title {
       border-bottom: 1px solid #ddd; }
 
+#full-width-page-wrapper {
+  overflow: hidden; }
+  #full-width-page-wrapper .wp-block-cover,
+  #full-width-page-wrapper .wp-block-cover-image,
+  #full-width-page-wrapper .wp-block-cover-image.has-parallax,
+  #full-width-page-wrapper .wp-block-cover.has-parallax,
+  #full-width-page-wrapper .wp-block-image.alignfull img
+   {
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw; }
+
 .woocommerce-input-wrapper {
   width: 100%; }
 
