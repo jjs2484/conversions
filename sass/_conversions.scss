@@ -57,7 +57,8 @@ html #wpadminbar {
   margin-left: 1.5em;
 }
 .aligncenter { 
-  @extend .mx-auto; 
+  @extend .mx-auto;
+  text-align: center;
 }
 table { 
   @extend .table;
@@ -361,6 +362,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 }
 
 // Gutenberg styles
+// images
 #full-width-page-wrapper {
   .wp-block-cover, 
   .wp-block-cover-image, 
@@ -375,6 +377,24 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     margin-left: -50vw;
     margin-right: -50vw;
   }
+}
+// separators
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+  max-width: 100px;
+}
+.wp-block-separator {
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0,.2);
+  margin: 1.65em auto;
+}
+.wp-block-separator.is-style-wide {
+  border-bottom-width: 1px;
+}
+// buttons
+a.wp-block-button__link:hover {
+  text-decoration: none;
+  opacity: .9;
+  transition: .2s;
 }
 
 // Page and Post fullscreen featured image

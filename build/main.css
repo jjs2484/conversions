@@ -14629,6 +14629,9 @@ readers do not read off random characters that represent icons */
   float: right;
   margin-left: 1.5em; }
 
+.aligncenter {
+  text-align: center; }
+
 table {
   border-spacing: 0; }
   table.table thead th, table thead th, table thead th {
@@ -14882,6 +14885,22 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw; }
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+  max-width: 100px; }
+
+.wp-block-separator {
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  margin: 1.65em auto; }
+
+.wp-block-separator.is-style-wide {
+  border-bottom-width: 1px; }
+
+a.wp-block-button__link:hover {
+  text-decoration: none;
+  opacity: .9;
+  transition: .2s; }
 
 .conversions-hero-cover {
   width: 100vw;
