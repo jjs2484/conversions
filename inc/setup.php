@@ -54,6 +54,9 @@ if ( ! function_exists ( 'conversions_setup' ) ) {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		// Add fullscreen thumbnail size
+		add_image_size( 'fullscreen', 1920, 9999 );
+
 		/*
 		 * Adding support for Widget edit icons in customizer
 		 */

@@ -7063,9 +7063,10 @@
     
             // get height of header and adminbar
             var fixedHeight = jQuery('#wrapper-navbar.fixed-top').innerHeight();
+            var AdjustedfixedHeight = fixedHeight - 1;
     
             // apply height to page as margin-top
-            jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper').css({'margin-top' : fixedHeight + 'px'});
+            jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper').css({'margin-top' : AdjustedfixedHeight + 'px'});
         }
     };
 
@@ -7097,8 +7098,8 @@ jQuery(function () {
         var adminBarHeight = jQuery('#wpadminbar').innerHeight();
         
         // if adminbar is null lets not include it
-        if (adminBarHeight == null) { var OAsum = offcanvasHeight - 2; }
-        else { var OAsum = offcanvasHeight + adminBarHeight - 2; }
+        if (adminBarHeight == null) { var OAsum = offcanvasHeight - 3; }
+        else { var OAsum = offcanvasHeight + adminBarHeight - 3; }
 
         // set offcanvas top position
         jQuery('.offcanvas-collapse.open').css({'top' : OAsum + 'px'});

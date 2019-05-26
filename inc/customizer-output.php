@@ -80,7 +80,7 @@ function conversions_customizer_css_ouput()
 	$header_top_padding = get_theme_mod('conversions_header_top_padding', '8');
 	$header_bottom_padding = get_theme_mod('conversions_header_bottom_padding', '8');
 	$logo_padding = 10;
-	$total_header_height = $logo_height + $header_top_padding + $header_bottom_padding + $logo_padding;
+	$total_header_height = $logo_height + $header_top_padding + $header_bottom_padding + $logo_padding - 1;
 
     ?>
 

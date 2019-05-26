@@ -14,17 +14,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php
+
+			if ( ! has_post_thumbnail() ) // check if featured image is set
+			{
+				echo the_title( '<h1 class="entry-title">', '</h1>' );
+			}
+		?>
 
 		<div class="entry-meta">
-
-			<?php conversions_posted_on(); ?>
-
-		</div><!-- .entry-meta -->
+    		<?php conversions_posted_on(); ?>
+    	</div>
 
 	</header><!-- .entry-header -->
-
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
 
