@@ -72,13 +72,17 @@ if ( ! function_exists ( 'conversions_setup' ) ) {
 		add_theme_support( 'custom-logo' );
 
 		// add fallback to core block styles - gutenberg
-		add_theme_support( 'wp-block-styles' );
+		// add_theme_support( 'wp-block-styles' );
 
 		// Add support for responsive embedded content - gutenberg
 		add_theme_support( 'responsive-embeds' );
 
 		// Add support for wide images - gutenberg
 		add_theme_support( 'align-wide' );
+
+		// Editor Styles
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'build/editor-style.css' );
 
 		// Check and setup theme default settings.
 		conversions_setup_theme_default_settings();

@@ -26,6 +26,7 @@ module.exports = function(grunt) {
     			},
       			files: {
         			'build/main.css': 'sass/theme.scss',
+        			'build/editor-style.css': 'sass/editor-style.scss',
       			}
     		}
 		},
