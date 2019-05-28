@@ -364,12 +364,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 // Gutenberg styles
 // images
 #full-width-page-wrapper {
-  .wp-block-cover, 
-  .wp-block-cover-image, 
-  .wp-block-cover-image.has-parallax, 
-  .wp-block-cover.has-parallax,
-  .wp-block-image.alignfull img
-  {
+  .alignfull {
     width: 100vw;
     max-width: 100vw;
     position: relative;

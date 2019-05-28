@@ -1,9 +1,9 @@
-// Fix billing field wrapper
+// Billing field wrapper
 .woocommerce-input-wrapper {
 	width: 100%;
 }
 
-// Woocommerce product gallery slider width fix
+// Woocommerce product gallery slider width
 figure.woocommerce-product-gallery__wrapper { 
   max-width: inherit !important; 
 }
@@ -14,7 +14,7 @@ figure.woocommerce-product-gallery__wrapper {
 	margin-right: 5px;
 }
 
-// cart and checkout table fix
+// Cart and checkout table
 .woocommerce table.shop_table {
 	border-collapse: collapse;
 }
@@ -76,6 +76,10 @@ figure.woocommerce-product-gallery__wrapper {
 			background-color: #6c757d;
 			border-color: #6c757d;
 		}
+	}
+	.star-rating {
+		margin: 0 auto .5em;
+		color: #f7de00;
 	}
 }
 
