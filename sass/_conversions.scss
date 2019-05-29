@@ -94,7 +94,17 @@ pre {
   max-width: 100%;
   overflow: auto;
 }
-.widget.widget_calendar, .footer-widget.widget_calendar {
+table#wp-calendar {
+  caption {
+    text-align: center;
+    caption-side: top;
+  }
+  th {
+    background: #edeff0;
+  }
+}
+.widget.widget_calendar, 
+.footer-widget.widget_calendar {
   table#wp-calendar {
     table-layout: fixed;
     max-width: 250px;
@@ -105,7 +115,11 @@ pre {
     }
   }
 }
-
+.footer-widget.widget_calendar {
+  table#wp-calendar {
+    background: none;
+  }
+}
 // Post design
 .entry-footer span { 
   padding-right: 10px; 
@@ -390,6 +404,10 @@ a.wp-block-button__link:hover {
   text-decoration: none;
   opacity: .9;
   transition: .2s;
+}
+// calender
+.wp-block-calendar tbody td, .wp-block-calendar th {
+  padding: 8px;
 }
 
 // Page and Post fullscreen featured image

@@ -14662,13 +14662,25 @@ pre {
   max-width: 100%;
   overflow: auto; }
 
-.widget.widget_calendar table#wp-calendar, .footer-widget.widget_calendar table#wp-calendar {
+table#wp-calendar caption {
+  text-align: center;
+  caption-side: top; }
+table#wp-calendar th {
+  background: #edeff0; }
+
+.widget.widget_calendar table#wp-calendar,
+.footer-widget.widget_calendar table#wp-calendar {
   table-layout: fixed;
   max-width: 250px;
   width: 100%; }
-  .widget.widget_calendar table#wp-calendar td, .widget.widget_calendar table#wp-calendar th, .footer-widget.widget_calendar table#wp-calendar td, .footer-widget.widget_calendar table#wp-calendar th {
+  .widget.widget_calendar table#wp-calendar td, .widget.widget_calendar table#wp-calendar th,
+  .footer-widget.widget_calendar table#wp-calendar td,
+  .footer-widget.widget_calendar table#wp-calendar th {
     padding: .25em;
     text-align: center; }
+
+.footer-widget.widget_calendar table#wp-calendar {
+  background: none; }
 
 .entry-footer span {
   padding-right: 10px; }
@@ -14896,6 +14908,9 @@ a.wp-block-button__link:hover {
   text-decoration: none;
   opacity: .9;
   transition: .2s; }
+
+.wp-block-calendar tbody td, .wp-block-calendar th {
+  padding: 8px; }
 
 .conversions-hero-cover {
   width: 100vw;
