@@ -14669,7 +14669,7 @@ table#wp-calendar th {
     padding: .25em;
     text-align: center; }
 
-.footer-widget.widget_calendar table#wp-calendar {
+.footer-widget.widget_calendar table#wp-calendar th {
   background: none; }
 
 .entry-footer span {
