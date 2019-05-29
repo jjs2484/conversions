@@ -1,0 +1,54 @@
+// Footer and copyright bottom padding
+#wrapper-footer-full.wrapper {
+  padding-bottom: 30px;
+}
+#wrapper-footer.wrapper {
+  padding-bottom: 30px;
+}
+// footer full widget area
+#wrapper-footer-full { 
+  background-color: $gray-200; 
+  .footer-widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    @media (max-width: 576px) {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+// copyright and social icons layout
+#wrapper-footer {
+  .site-info {
+    align-items: center;
+  }
+  .copyright {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    @media (min-width: 768px) {
+      justify-content: start;
+      order: 1;
+    }
+  }
+  .social-media-icons {
+    display: flex;
+    justify-content: center;
+    order: 1;
+    margin-bottom: .5rem;
+    @media (min-width: 768px) {
+      justify-content: end;
+      order: 2;
+      margin-bottom: 0;
+    }
+    
+    ul.list-inline {
+      margin-bottom: 0;
+      li.list-inline-item:not(:last-child) {
+        margin-right: .2rem;
+      }
+    }
+
+  }
+}

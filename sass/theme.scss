@@ -58,12 +58,21 @@
 
 // Loads Underscores media styles
 @import "../src/sass/underscores/galleries";
-
-// Loads conversions styles
-@import "conversions";
-
-// Loads WooCommerce style fixes
+// Loads adminbar styles
+@import "adminbar";
+// Loads basic wp classes
+@import "wp-classes";
+// Loads navbar styles
+@import "navbar";
+// Loads content styles
+@import "content";
+// Loads sidebar styles
+@import "sidebar";
+// Loads footer styles
+@import "footer";
+// Loads gutenberg styles
+@import "gutenberg";
+// Loads WooCommerce styles
 @import "woocommerce";
-
-// Loads contact Form 7 - Bootstrap 4 support
+// Loads contact Form 7 styles
 @import "contact-form7";

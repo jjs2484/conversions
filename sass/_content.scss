@@ -1,0 +1,60 @@
+// Some basic styling for page/post wrappers
+.wrapper {
+  padding: 30px 0 3em; 
+  overflow: hidden;
+}
+
+// Page and Post fullscreen featured image
+.conversions-hero-cover {
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  margin: -30px -50vw 2em;
+  background-color: #000;
+  background-size: cover;
+  background-position: 50%;
+  min-height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: inherit;
+    opacity: .5;
+    z-index: 1;
+  }
+
+  .conversions-hero-cover__inner-container {
+    width: calc(100% - 70px);
+    z-index: 1;
+    h1 {
+      color: #f8f9f9;
+    }
+  }
+}
+
+.single-post {
+  .entry-meta.featured {
+    color: #f8f9f9;
+    a {
+      color: #f8f9f9;
+      &:hover {
+        color: #d8dede;
+      }
+    }
+  }
+}
+
+// post styles
+.entry-meta {
+  margin: 0 0 1em;
+  font-size: .9rem;
+}
