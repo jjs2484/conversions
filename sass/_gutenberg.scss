@@ -22,13 +22,85 @@
 .wp-block-separator.is-style-wide {
   border-bottom-width: 1px;
 }
-// buttons
-a.wp-block-button__link:hover {
-  text-decoration: none;
-  opacity: .9;
-  transition: .2s;
+
+// Gutenberg color options
+// -- see editor-color-palette in functions.php
+$colors: (
+  'primary' : #5533ff,
+  'secondary' : #6c757d,
+  'success' : #28a745,
+  'danger' : #dc3545,
+  'info' : #17a2b8,
+  'dark' : #343a40,
+);
+
+@each $name, $color in $colors {
+  .has-#{$name}-color {
+    color: $color;
+  }
+  .has-#{$name}-background-color {
+    background-color: $color;
+  }
 }
-// calender
+
+/* Button block
+--------------------------------------------- */
+.wp-block-button {
+  &.is-style-default .wp-block-button__link {
+    @extend .btn;
+    border-radius: 28px;
+  }
+  &.is-style-squared .wp-block-button__link {
+    @extend .btn;
+    border-radius: 0;
+  }
+  &.is-style-outline .wp-block-button__link {
+    @extend .btn;
+    @extend .btn-outline-primary;
+    border-radius: 28px;
+  }
+}
+
+.wp-block-button__link {
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:not(.has-text-color) {
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &:not(.has-background) {
+    $default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
+    background-color: $default;
+
+    &:hover,
+    &:focus {
+      background-color: darken( $default, 20% );
+    }
+  }
+
+  @each $name, $color in $colors {
+
+    &.has-#{$name}-color:hover,
+    &.has-#{$name}-color:focus {
+      color: $color;
+    }
+
+    &.has-#{$name}-background-color:hover,
+    &.has-#{$name}-background-color:focus {
+      background-color: darken( $color, 20% );
+    }
+  }
+
+}
+
+// calender widget
 .wp-block-calendar tbody td, .wp-block-calendar th {
   padding: 8px;
 }

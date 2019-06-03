@@ -80,6 +80,40 @@ if ( ! function_exists ( 'conversions_setup' ) ) {
 		// Add support for wide images - gutenberg
 		add_theme_support( 'align-wide' );
 
+		// Register the color palette options
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name'  => __( 'Primary', 'conversions' ),
+				'slug'  => 'primary',
+				'color'	=> '#5533ff',
+			),
+			array(
+				'name'  => __( 'Secondary', 'conversions' ),
+				'slug'  => 'secondary',
+				'color' => '#6c757d',
+			),
+			array(
+				'name'  => __( 'Success', 'conversions' ),
+				'slug'  => 'success',
+				'color' => '#28a745',
+			),
+			array(
+				'name'	=> __( 'Danger', 'conversions' ),
+				'slug'	=> 'danger',
+				'color'	=> '#dc3545',
+			),
+			array(
+				'name'	=> __( 'Info', 'conversions' ),
+				'slug'	=> 'info',
+				'color'	=> '#17a2b8',
+			),
+			array(
+				'name'	=> __( 'Dark', 'conversions' ),
+				'slug'	=> 'dark',
+				'color'	=> '#343a40',
+			),
+		) );
+
 		// Editor Styles
 		add_theme_support( 'editor-styles' );
 		add_editor_style( 'build/editor-style.css' );
