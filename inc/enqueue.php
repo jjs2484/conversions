@@ -32,3 +32,13 @@ if ( ! function_exists( 'conversions_scripts' ) ) {
 } // endif function_exists( 'conversions_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'conversions_scripts' );
+
+/**
+ * Gutenberg scripts and styles
+ */
+if ( ! function_exists( 'conversions_gutenberg_scripts' ) ) {
+	function conversions_gutenberg_scripts() {
+		wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/js/editor.js' ), true );
+	}
+	add_action( 'enqueue_block_editor_assets', 'conversions_gutenberg_scripts' );
+}

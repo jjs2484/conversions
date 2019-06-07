@@ -1,5 +1,7 @@
 // Gutenberg styles
-// images
+
+/* Images
+--------------------------------------------- */
 #full-width-page-wrapper {
   .alignfull {
     width: 100vw;
@@ -10,7 +12,9 @@
     margin-right: -50vw;
   }
 }
-// separators
+
+/* Separators
+--------------------------------------------- */
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
   max-width: 100px;
 }
@@ -23,7 +27,8 @@
   border-bottom-width: 1px;
 }
 
-// Gutenberg color options
+/* Gutenberg color options
+--------------------------------------------- */
 // -- see editor-color-palette in functions.php
 $colors: (
   'primary' : #5533ff,
@@ -35,9 +40,11 @@ $colors: (
 );
 
 @each $name, $color in $colors {
+
   .has-#{$name}-color {
     color: $color;
   }
+
   .has-#{$name}-background-color {
     background-color: $color;
   }
@@ -46,61 +53,66 @@ $colors: (
 /* Button block
 --------------------------------------------- */
 .wp-block-button {
-  &.is-style-default .wp-block-button__link {
-    @extend .btn;
-    border-radius: 28px;
+  a.wp-block-button__link[style*="background-color"]:hover {
+    filter: brightness(85%);
   }
-  &.is-style-squared .wp-block-button__link {
-    @extend .btn;
-    border-radius: 0;
-  }
-  &.is-style-outline .wp-block-button__link {
-    @extend .btn;
-    @extend .btn-outline-primary;
-    border-radius: 28px;
-  }
-}
-
-.wp-block-button__link {
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:not(.has-text-color) {
-    color: white;
-
+  // universal button styles
+  .wp-block-button__link {
+    border-radius: .25rem;
     &:hover {
-      color: white;
+      text-decoration: none;
+    }
+    @extend .btn;
+  }
+  
+  // default button styles
+  &.is-style-c-default {
+    .wp-block-button__link {
+      &:not(.has-background) {
+        @extend .btn-primary;
+      }
+      // Get user defined colors
+      @each $name, $color in $colors {
+        &.has-#{$name}-background-color {
+          @extend .btn-#{$name};
+        }   
+      }
     }
   }
 
-  &:not(.has-background) {
-    $default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
-    background-color: $default;
-
-    &:hover,
-    &:focus {
-      background-color: darken( $default, 20% );
+  &.is-style-c-full-width {
+    .wp-block-button__link {
+      @extend .btn-block;
+      &:not(.has-background) {
+        @extend .btn-primary;
+      }
+      // Get user defined colors
+      @each $name, $color in $colors {
+        &.has-#{$name}-background-color {
+          @extend .btn-#{$name};
+        }
+      }
     }
   }
 
-  @each $name, $color in $colors {
-
-    &.has-#{$name}-color:hover,
-    &.has-#{$name}-color:focus {
-      color: $color;
-    }
-
-    &.has-#{$name}-background-color:hover,
-    &.has-#{$name}-background-color:focus {
-      background-color: darken( $color, 20% );
+  &.is-style-c-outline {
+    .wp-block-button__link {
+      &:not(.has-background) {
+        @extend .btn-outline-primary;
+      }
+      // Get user defined colors
+      @each $name, $color in $colors {
+        &.has-#{$name}-background-color {
+          @extend .btn-outline-#{$name};
+        }   
+      }
     }
   }
 
 }
 
-// calender widget
+/* Calender widget
+--------------------------------------------- */
 .wp-block-calendar tbody td, .wp-block-calendar th {
   padding: 8px;
 }
