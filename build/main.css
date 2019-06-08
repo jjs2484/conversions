@@ -3041,80 +3041,80 @@ fieldset:disabled #footer-full-content .woocommerce.widget_shopping_cart .woocom
     .btn-dark:not(:disabled):not(.disabled):active:focus, .wp-block-button.is-style-c-default .wp-block-button__link.has-dark-background-color:not(:disabled):not(.disabled):active:focus, .wp-block-button.is-style-c-full-width .wp-block-button__link.has-dark-background-color:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus, .wp-block-button.is-style-c-default .wp-block-button__link.has-dark-background-color:not(:disabled):not(.disabled).active:focus, .wp-block-button.is-style-c-full-width .wp-block-button__link.has-dark-background-color:not(:disabled):not(.disabled).active:focus, .show > .btn-dark.dropdown-toggle:focus, .wp-block-button.is-style-c-default .show > .dropdown-toggle.wp-block-button__link.has-dark-background-color:focus, .wp-block-button.is-style-c-full-width .show > .dropdown-toggle.wp-block-button__link.has-dark-background-color:focus {
       box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5); }
 
-.btn-outline-primary, .wp-block-button.is-style-c-outline .wp-block-button__link:not(.has-background), .wp-block-button.is-style-c-outline .wp-block-button__link.has-primary-background-color, .wpcf7 input[type=submit] {
+.btn-outline-primary, .wpcf7 input[type=submit] {
   color: #5533ff;
   border-color: #5533ff; }
-  .btn-outline-primary:hover, .wp-block-button.is-style-c-outline .wp-block-button__link:hover:not(.has-background), .wp-block-button.is-style-c-outline .wp-block-button__link.has-primary-background-color:hover, .wpcf7 input[type=submit]:hover {
+  .btn-outline-primary:hover, .wpcf7 input[type=submit]:hover {
     color: #fff;
     background-color: #5533ff;
     border-color: #5533ff; }
-  .btn-outline-primary:focus, .wp-block-button.is-style-c-outline .wp-block-button__link:focus:not(.has-background), .wp-block-button.is-style-c-outline .wp-block-button__link.has-primary-background-color:focus, .wpcf7 input[type=submit]:focus, .btn-outline-primary.focus, .wp-block-button.is-style-c-outline .focus.wp-block-button__link:not(.has-background), .wp-block-button.is-style-c-outline .focus.wp-block-button__link.has-primary-background-color, .wpcf7 input.focus[type=submit] {
+  .btn-outline-primary:focus, .wpcf7 input[type=submit]:focus, .btn-outline-primary.focus, .wpcf7 input.focus[type=submit] {
     box-shadow: 0 0 0 0.2rem rgba(85, 51, 255, 0.5); }
-  .btn-outline-primary.disabled, .wp-block-button.is-style-c-outline .disabled.wp-block-button__link:not(.has-background), .wp-block-button.is-style-c-outline .disabled.wp-block-button__link.has-primary-background-color, .wpcf7 input.disabled[type=submit], .btn-outline-primary:disabled, .wp-block-button.is-style-c-outline .wp-block-button__link:disabled:not(.has-background), .wp-block-button.is-style-c-outline .wp-block-button__link.has-primary-background-color:disabled, .wpcf7 input[type=submit]:disabled {
+  .btn-outline-primary.disabled, .wpcf7 input.disabled[type=submit], .btn-outline-primary:disabled, .wpcf7 input[type=submit]:disabled {
     color: #5533ff;
     background-color: transparent; }
-  .btn-outline-primary:not(:disabled):not(.disabled):active, .wp-block-button.is-style-c-outline .wp-block-button__link:not(:disabled):not(.disabled):active:not(.has-background), .wp-block-button.is-style-c-outline .wp-block-button__link.has-primary-background-color:not(:disabled):not(.disabled):active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .wp-block-button.is-style-c-outline .wp-block-button__link:not(:disabled):not(.disabled).active:not(.has-background), .wp-block-button.is-style-c-outline .wp-block-button__link.has-primary-background-color:not(:disabled):not(.disabled).active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link:not(.has-background), .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-primary-background-color, .wpcf7 .show > input.dropdown-toggle[type=submit] {
+  .btn-outline-primary:not(:disabled):not(.disabled):active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle, .wpcf7 .show > input.dropdown-toggle[type=submit] {
     color: #fff;
     background-color: #5533ff;
     border-color: #5533ff; }
-    .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link:not(:disabled):not(.disabled):active:focus:not(.has-background), .wp-block-button.is-style-c-outline .wp-block-button__link.has-primary-background-color:not(:disabled):not(.disabled):active:focus, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link:not(:disabled):not(.disabled).active:focus:not(.has-background), .wp-block-button.is-style-c-outline .wp-block-button__link.has-primary-background-color:not(:disabled):not(.disabled).active:focus, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link:focus:not(.has-background), .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-primary-background-color:focus, .wpcf7 .show > input.dropdown-toggle[type=submit]:focus {
+    .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus, .wpcf7 .show > input.dropdown-toggle[type=submit]:focus {
       box-shadow: 0 0 0 0.2rem rgba(85, 51, 255, 0.5); }
 
-.btn-outline-secondary, .wp-block-button.is-style-c-outline .wp-block-button__link.has-secondary-background-color {
+.btn-outline-secondary {
   color: #6c757d;
   border-color: #6c757d; }
-  .btn-outline-secondary:hover, .wp-block-button.is-style-c-outline .wp-block-button__link.has-secondary-background-color:hover {
+  .btn-outline-secondary:hover {
     color: #fff;
     background-color: #6c757d;
     border-color: #6c757d; }
-  .btn-outline-secondary:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-secondary-background-color:focus, .btn-outline-secondary.focus, .wp-block-button.is-style-c-outline .focus.wp-block-button__link.has-secondary-background-color {
+  .btn-outline-secondary:focus, .btn-outline-secondary.focus {
     box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); }
-  .btn-outline-secondary.disabled, .wp-block-button.is-style-c-outline .disabled.wp-block-button__link.has-secondary-background-color, .btn-outline-secondary:disabled, .wp-block-button.is-style-c-outline .wp-block-button__link.has-secondary-background-color:disabled {
+  .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
     color: #6c757d;
     background-color: transparent; }
-  .btn-outline-secondary:not(:disabled):not(.disabled):active, .wp-block-button.is-style-c-outline .wp-block-button__link.has-secondary-background-color:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .wp-block-button.is-style-c-outline .wp-block-button__link.has-secondary-background-color:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-secondary-background-color {
+  .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
     color: #fff;
     background-color: #6c757d;
     border-color: #6c757d; }
-    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-secondary-background-color:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-secondary-background-color:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-secondary-background-color:focus {
+    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); }
 
-.btn-outline-success, .wp-block-button.is-style-c-outline .wp-block-button__link.has-success-background-color {
+.btn-outline-success {
   color: #28a745;
   border-color: #28a745; }
-  .btn-outline-success:hover, .wp-block-button.is-style-c-outline .wp-block-button__link.has-success-background-color:hover {
+  .btn-outline-success:hover {
     color: #fff;
     background-color: #28a745;
     border-color: #28a745; }
-  .btn-outline-success:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-success-background-color:focus, .btn-outline-success.focus, .wp-block-button.is-style-c-outline .focus.wp-block-button__link.has-success-background-color {
+  .btn-outline-success:focus, .btn-outline-success.focus {
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5); }
-  .btn-outline-success.disabled, .wp-block-button.is-style-c-outline .disabled.wp-block-button__link.has-success-background-color, .btn-outline-success:disabled, .wp-block-button.is-style-c-outline .wp-block-button__link.has-success-background-color:disabled {
+  .btn-outline-success.disabled, .btn-outline-success:disabled {
     color: #28a745;
     background-color: transparent; }
-  .btn-outline-success:not(:disabled):not(.disabled):active, .wp-block-button.is-style-c-outline .wp-block-button__link.has-success-background-color:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active, .wp-block-button.is-style-c-outline .wp-block-button__link.has-success-background-color:not(:disabled):not(.disabled).active, .show > .btn-outline-success.dropdown-toggle, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-success-background-color {
+  .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active, .show > .btn-outline-success.dropdown-toggle {
     color: #fff;
     background-color: #28a745;
     border-color: #28a745; }
-    .btn-outline-success:not(:disabled):not(.disabled):active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-success-background-color:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-success-background-color:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-success.dropdown-toggle:focus, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-success-background-color:focus {
+    .btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-success.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5); }
 
-.btn-outline-info, .wp-block-button.is-style-c-outline .wp-block-button__link.has-info-background-color {
+.btn-outline-info {
   color: #17a2b8;
   border-color: #17a2b8; }
-  .btn-outline-info:hover, .wp-block-button.is-style-c-outline .wp-block-button__link.has-info-background-color:hover {
+  .btn-outline-info:hover {
     color: #fff;
     background-color: #17a2b8;
     border-color: #17a2b8; }
-  .btn-outline-info:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-info-background-color:focus, .btn-outline-info.focus, .wp-block-button.is-style-c-outline .focus.wp-block-button__link.has-info-background-color {
+  .btn-outline-info:focus, .btn-outline-info.focus {
     box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5); }
-  .btn-outline-info.disabled, .wp-block-button.is-style-c-outline .disabled.wp-block-button__link.has-info-background-color, .btn-outline-info:disabled, .wp-block-button.is-style-c-outline .wp-block-button__link.has-info-background-color:disabled {
+  .btn-outline-info.disabled, .btn-outline-info:disabled {
     color: #17a2b8;
     background-color: transparent; }
-  .btn-outline-info:not(:disabled):not(.disabled):active, .wp-block-button.is-style-c-outline .wp-block-button__link.has-info-background-color:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active, .wp-block-button.is-style-c-outline .wp-block-button__link.has-info-background-color:not(:disabled):not(.disabled).active, .show > .btn-outline-info.dropdown-toggle, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-info-background-color {
+  .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active, .show > .btn-outline-info.dropdown-toggle {
     color: #fff;
     background-color: #17a2b8;
     border-color: #17a2b8; }
-    .btn-outline-info:not(:disabled):not(.disabled):active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-info-background-color:not(:disabled):not(.disabled):active:focus, .btn-outline-info:not(:disabled):not(.disabled).active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-info-background-color:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-info.dropdown-toggle:focus, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-info-background-color:focus {
+    .btn-outline-info:not(:disabled):not(.disabled):active:focus, .btn-outline-info:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-info.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5); }
 
 .btn-outline-warning {
@@ -3136,23 +3136,23 @@ fieldset:disabled #footer-full-content .woocommerce.widget_shopping_cart .woocom
     .btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-warning.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5); }
 
-.btn-outline-danger, .wp-block-button.is-style-c-outline .wp-block-button__link.has-danger-background-color {
+.btn-outline-danger {
   color: #dc3545;
   border-color: #dc3545; }
-  .btn-outline-danger:hover, .wp-block-button.is-style-c-outline .wp-block-button__link.has-danger-background-color:hover {
+  .btn-outline-danger:hover {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545; }
-  .btn-outline-danger:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-danger-background-color:focus, .btn-outline-danger.focus, .wp-block-button.is-style-c-outline .focus.wp-block-button__link.has-danger-background-color {
+  .btn-outline-danger:focus, .btn-outline-danger.focus {
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); }
-  .btn-outline-danger.disabled, .wp-block-button.is-style-c-outline .disabled.wp-block-button__link.has-danger-background-color, .btn-outline-danger:disabled, .wp-block-button.is-style-c-outline .wp-block-button__link.has-danger-background-color:disabled {
+  .btn-outline-danger.disabled, .btn-outline-danger:disabled {
     color: #dc3545;
     background-color: transparent; }
-  .btn-outline-danger:not(:disabled):not(.disabled):active, .wp-block-button.is-style-c-outline .wp-block-button__link.has-danger-background-color:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active, .wp-block-button.is-style-c-outline .wp-block-button__link.has-danger-background-color:not(:disabled):not(.disabled).active, .show > .btn-outline-danger.dropdown-toggle, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-danger-background-color {
+  .btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active, .show > .btn-outline-danger.dropdown-toggle {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545; }
-    .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-danger-background-color:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-danger-background-color:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-danger.dropdown-toggle:focus, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-danger-background-color:focus {
+    .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-danger.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); }
 
 .btn-outline-light {
@@ -3174,23 +3174,23 @@ fieldset:disabled #footer-full-content .woocommerce.widget_shopping_cart .woocom
     .btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-light.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
 
-.btn-outline-dark, .wp-block-button.is-style-c-outline .wp-block-button__link.has-dark-background-color {
+.btn-outline-dark {
   color: #343a40;
   border-color: #343a40; }
-  .btn-outline-dark:hover, .wp-block-button.is-style-c-outline .wp-block-button__link.has-dark-background-color:hover {
+  .btn-outline-dark:hover {
     color: #fff;
     background-color: #343a40;
     border-color: #343a40; }
-  .btn-outline-dark:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-dark-background-color:focus, .btn-outline-dark.focus, .wp-block-button.is-style-c-outline .focus.wp-block-button__link.has-dark-background-color {
+  .btn-outline-dark:focus, .btn-outline-dark.focus {
     box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
-  .btn-outline-dark.disabled, .wp-block-button.is-style-c-outline .disabled.wp-block-button__link.has-dark-background-color, .btn-outline-dark:disabled, .wp-block-button.is-style-c-outline .wp-block-button__link.has-dark-background-color:disabled {
+  .btn-outline-dark.disabled, .btn-outline-dark:disabled {
     color: #343a40;
     background-color: transparent; }
-  .btn-outline-dark:not(:disabled):not(.disabled):active, .wp-block-button.is-style-c-outline .wp-block-button__link.has-dark-background-color:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active, .wp-block-button.is-style-c-outline .wp-block-button__link.has-dark-background-color:not(:disabled):not(.disabled).active, .show > .btn-outline-dark.dropdown-toggle, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-dark-background-color {
+  .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active, .show > .btn-outline-dark.dropdown-toggle {
     color: #fff;
     background-color: #343a40;
     border-color: #343a40; }
-    .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-dark-background-color:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus, .wp-block-button.is-style-c-outline .wp-block-button__link.has-dark-background-color:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark.dropdown-toggle:focus, .wp-block-button.is-style-c-outline .show > .dropdown-toggle.wp-block-button__link.has-dark-background-color:focus {
+    .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
 
 .btn-link {

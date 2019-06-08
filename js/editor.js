@@ -9,11 +9,6 @@ wp.domReady( () => {
     });
 
     wp.blocks.registerBlockStyle( 'core/button', {
-        name: 'c-outline',
-        label: 'Outline',
-    });
-
-    wp.blocks.registerBlockStyle( 'core/button', {
         name: 'c-full-width',
         label: 'Full Width',
     } );

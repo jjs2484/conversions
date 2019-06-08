@@ -95,20 +95,6 @@ $colors: (
     }
   }
 
-  &.is-style-c-outline {
-    .wp-block-button__link {
-      &:not(.has-background) {
-        @extend .btn-outline-primary;
-      }
-      // Get user defined colors
-      @each $name, $color in $colors {
-        &.has-#{$name}-background-color {
-          @extend .btn-outline-#{$name};
-        }   
-      }
-    }
-  }
-
 }
 
 /* Calender widget
