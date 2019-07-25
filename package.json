@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jessesneider/conversions.git"
+    "url": "git+https://github.com/jjs2484/conversions.git"
   },
-  "author": "jessesneider",
+  "author": "jjs2484",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jessesneider/conversions/issues"
+    "url": "https://github.com/jjs2484/conversions/issues"
   },
-  "homepage": "https://github.com/jessesneider/conversions#readme",
+  "homepage": "https://github.com/jjs2484/conversions#readme",
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-autoprefixer": "^3.0.4",
