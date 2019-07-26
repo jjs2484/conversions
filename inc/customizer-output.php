@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Enqueue google font
  */
 function conversions_gfont_scripts() {
-	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts'));
+	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
 	
 	if( $google_fonts_state == 'enable_gfonts' ) {
 		
@@ -37,6 +37,7 @@ function conversions_gfont_scripts() {
 		}
 	}
 }
+// add to frontend
 add_action( 'wp_enqueue_scripts', 'conversions_gfont_scripts' );
 
 /**
@@ -46,7 +47,7 @@ function conversions_customizer_css_ouput()
 {
 	
 	// google fonts variables
-	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts'));
+	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
 	
 	if( $google_fonts_state == 'enable_gfonts' ) {
 		$headings_font = esc_html(get_theme_mod('conversions_headings_fonts'));

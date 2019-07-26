@@ -29,8 +29,7 @@ if ( ! function_exists( 'conversions_scripts' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 	}
-} // endif function_exists( 'conversions_scripts' ).
-
+}
 add_action( 'wp_enqueue_scripts', 'conversions_scripts' );
 
 /**
@@ -40,5 +39,82 @@ if ( ! function_exists( 'conversions_gutenberg_scripts' ) ) {
 	function conversions_gutenberg_scripts() {
 		wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/js/editor.js' ), true );
 	}
-	add_action( 'enqueue_block_editor_assets', 'conversions_gutenberg_scripts' );
 }
+add_action( 'enqueue_block_editor_assets', 'conversions_gutenberg_scripts' );
+
+
+
+/**
+ * Enqueue Gutenberg editor stylesheet and fonts
+ * @action enqueue_block_editor_assets
+ */
+function conversions_enqueue_gutenberg() {
+ 	
+ 	// Editor styles
+	wp_register_style( 'conversions-gutenberg', get_stylesheet_directory_uri() . '/build/gutenberg-editor-style.css' );
+	wp_enqueue_style( 'conversions-gutenberg' );
+
+	// Are Google fonts enabled?
+	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
+	if( $google_fonts_state == 'enable_gfonts' ) {
+		
+		// Enqueue headings font
+		$headings_font = esc_html(get_theme_mod('conversions_headings_fonts', 'Roboto:400,400italic,700,700italic'));
+		wp_register_style( 'conversions-gutenberg-heading-font', '//fonts.googleapis.com/css?family='. $headings_font );
+		wp_enqueue_style( 'conversions-gutenberg-heading-font' );
+
+		// Enqueue body font
+		$body_font = esc_html(get_theme_mod('conversions_body_fonts', 'Roboto:400,400italic,700,700italic'));
+		if( $body_font === $headings_font ) {
+			return;
+		}
+		else {
+			wp_register_style( 'conversions-gutenberg-body-font', '//fonts.googleapis.com/css?family='. $body_font );
+			wp_enqueue_style( 'conversions-gutenberg-body-font' );
+		}
+
+		// create variables for inline styles
+		$headings_font_pieces = explode(":", $headings_font);
+		$headings_font = $headings_font_pieces[0];
+		$body_font_pieces = explode(":", $body_font);
+		$body_font = $body_font_pieces[0];
+	
+	} else {
+		$headings_font = "Arial, Helvetica, sans-serif";
+		$body_font = "Arial, Helvetica, sans-serif";
+	}
+
+	$headings_color = esc_html(get_theme_mod('conversions_typography_heading_color', '#222222'));
+	$body_color = esc_html(get_theme_mod('conversions_typography_text_color', '#111111'));
+    $links_color = esc_html(get_theme_mod('conversions_typography_link_color', '#2600e6'));
+    $links_color_hover = esc_html(get_theme_mod('conversions_typography_link_hover_color', '#2600e6'));
+
+	$custom_gb_css = "
+		.editor-post-title__block .editor-post-title__input,
+    	.editor-writing-flow .wp-block h1,
+		.editor-writing-flow .wp-block h3,
+		.editor-writing-flow .wp-block h3,
+ 		.editor-writing-flow .wp-block h4 {
+			color: {$headings_color};
+			font-family: {$headings_font};
+		}
+		.editor-writing-flow .wp-block textarea,
+		.editor-writing-flow .wp-block .wp-block-freeform,
+		.editor-rich-text p,
+		.wp-block-quote__citation {
+			color: {$body_color};
+			font-family: {$body_font};
+		}
+		.editor-writing-flow .wp-block a {
+			color: {$links_color};
+			text-decoration: none;
+		}
+		.editor-writing-flow .wp-block a:hover {
+			color: {$links_color_hover};
+			text-decoration: none;
+		}
+	";
+	wp_add_inline_style( 'conversions-gutenberg', $custom_gb_css );
+
+}
+add_action( 'enqueue_block_editor_assets', 'conversions_enqueue_gutenberg' );

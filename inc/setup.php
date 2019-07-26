@@ -114,10 +114,6 @@ if ( ! function_exists ( 'conversions_setup' ) ) {
 			),
 		) );
 
-		// Editor Styles
-		add_theme_support( 'editor-styles' );
-		add_editor_style( 'build/editor-style.css' );
-
 		// Check and setup theme default settings.
 		conversions_setup_theme_default_settings();
 
