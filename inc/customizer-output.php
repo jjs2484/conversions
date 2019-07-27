@@ -13,31 +13,24 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Enqueue google font
  */
 function conversions_gfont_scripts() {
+
 	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
-	
 	if( $google_fonts_state == 'enable_gfonts' ) {
-		
 		// headings font
-		$headings_font = esc_html(get_theme_mod('conversions_headings_fonts'));
-		if( $headings_font ) {
-			wp_enqueue_style( 'conversions-headings-fonts', '//fonts.googleapis.com/css?family='. $headings_font );
-		} else {
-			wp_enqueue_style( 'conversions-roboto', '//fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic');
-		}
+		$headings_font = esc_html(get_theme_mod('conversions_headings_fonts', 'Roboto:400,400italic,700,700italic'));
+		wp_enqueue_style( 'conversions-headings-fonts', '//fonts.googleapis.com/css?family='. $headings_font );
 
 		// body font
-		$body_font = esc_html(get_theme_mod('conversions_body_fonts'));
-		if( $body_font ) {
-			if( $body_font === $headings_font ) {
-				return;
-			}
-			else {
-				wp_enqueue_style( 'conversions-body-fonts', '//fonts.googleapis.com/css?family='. $body_font );
-			}
+		$body_font = esc_html(get_theme_mod('conversions_body_fonts', 'Roboto:400,400italic,700,700italic'));
+		if( $body_font === $headings_font ) {
+			return;
+		}
+		else {
+			wp_enqueue_style( 'conversions-body-fonts', '//fonts.googleapis.com/css?family='. $body_font );
 		}
 	}
+
 }
-// add to frontend
 add_action( 'wp_enqueue_scripts', 'conversions_gfont_scripts' );
 
 /**
@@ -46,26 +39,21 @@ add_action( 'wp_enqueue_scripts', 'conversions_gfont_scripts' );
 function conversions_customizer_css_ouput()
 {
 	
-	// google fonts variables
+	// fonts variables
 	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
 	
 	if( $google_fonts_state == 'enable_gfonts' ) {
-		$headings_font = esc_html(get_theme_mod('conversions_headings_fonts'));
-		if ( $headings_font ) {
-			$font_pieces = explode(":", $headings_font);
-			$headings_font = $font_pieces[0];
-		}
-		else {
-			$headings_font = "Roboto";
-		}
-		$body_font = esc_html(get_theme_mod('conversions_body_fonts'));
-		if ( $body_font ) {
-			$font_pieces = explode(":", $body_font);
-			$body_font = $font_pieces[0];
-		}
-		else {
-			$body_font = "Roboto";
-		}
+		
+		// headings
+		$headings_font = esc_html(get_theme_mod('conversions_headings_fonts', 'Roboto:400,400italic,700,700italic'));
+		$heading_font_pieces = explode(":", $headings_font);
+		$headings_font = $heading_font_pieces[0];
+
+		// body
+		$body_font = esc_html(get_theme_mod('conversions_body_fonts', 'Roboto:400,400italic,700,700italic'));
+		$body_font_pieces = explode(":", $body_font);
+		$body_font = $body_font_pieces[0];
+
 	} else {
 		$headings_font = "Arial, Helvetica, sans-serif";
 		$body_font = "Arial, Helvetica, sans-serif";
