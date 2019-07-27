@@ -14663,9 +14663,8 @@ readers do not read off random characters that represent icons */
   border-bottom: 1px solid #dee2e6; }
 
 a:hover {
-  -webkit-filter: brightness(85%);
-          filter: brightness(85%);
-  text-decoration: none; }
+  -webkit-filter: brightness(75%);
+          filter: brightness(75%); }
 
 .wp-caption {
   font-size: inherit; }
