@@ -48,7 +48,7 @@ get_header();
 
 						<?php if ( ! empty( $curauth->user_description ) ) : ?>
 							<dt><?php esc_html_e( 'Profile', 'conversions' ); ?></dt>
-							<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
+							<dd><?php esc_html_e( $curauth->user_description, 'conversions' ); ?></dd>
 						<?php endif; ?>
 					</dl>
 

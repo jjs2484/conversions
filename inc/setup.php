@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 
 add_action( 'after_setup_theme', 'conversions_setup' );
 
-if ( ! function_exists ( 'conversions_setup' ) ) {
+if ( ! function_exists( 'conversions_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
