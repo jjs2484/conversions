@@ -14995,8 +14995,6 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
       margin-right: .2rem; }
 
-/* Images
---------------------------------------------- */
 #full-width-page-wrapper .alignfull {
   width: 100vw;
   max-width: 100vw;
@@ -15005,8 +15003,6 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   margin-left: -50vw;
   margin-right: -50vw; }
 
-/* Separators
---------------------------------------------- */
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
   max-width: 100px; }
 
@@ -15018,8 +15014,25 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 .wp-block-separator.is-style-wide {
   border-bottom-width: 1px; }
 
-/* Gutenberg color options
---------------------------------------------- */
+.wp-block-cover-image .wp-block-cover-image-text,
+.wp-block-cover-image .wp-block-cover-text,
+.wp-block-cover-image h2,
+.wp-block-cover-image h3,
+.wp-block-cover-image h4,
+.wp-block-cover-image h5,
+.wp-block-cover-image h6,
+.wp-block-cover .wp-block-cover-image-text,
+.wp-block-cover .wp-block-cover-text,
+.wp-block-cover h2,
+.wp-block-cover h3,
+.wp-block-cover h4,
+.wp-block-cover h5,
+.wp-block-cover h6 {
+  max-width: 100%; }
+
+.wp-block-calendar tbody td, .wp-block-calendar th {
+  padding: 8px; }
+
 .has-primary-color {
   color: #5533ff; }
 
@@ -15056,8 +15069,6 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 .has-dark-background-color {
   background-color: #343a40; }
 
-/* Button block
---------------------------------------------- */
 .wp-block-button a.wp-block-button__link[style*="background-color"]:hover {
   -webkit-filter: brightness(85%);
           filter: brightness(85%); }
@@ -15065,11 +15076,6 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   border-radius: .25rem; }
   .wp-block-button .wp-block-button__link:hover {
     text-decoration: none; }
-
-/* Calender widget
---------------------------------------------- */
-.wp-block-calendar tbody td, .wp-block-calendar th {
-  padding: 8px; }
 
 .woocommerce-input-wrapper {
   width: 100%; }
