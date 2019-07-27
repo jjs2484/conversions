@@ -86,6 +86,7 @@ function conversions_enqueue_gutenberg() {
 	$headings_color = esc_html(get_theme_mod('conversions_typography_heading_color', '#222222'));
 	$body_color = esc_html(get_theme_mod('conversions_typography_text_color', '#111111'));
     $links_color = esc_html(get_theme_mod('conversions_typography_link_color', '#2600e6'));
+    $container_width = esc_html(get_theme_mod('conversions_container_width', '1140'));
 
 	$custom_gb_css = "
 		.editor-styles-wrapper .editor-writing-flow .editor-post-title__block .editor-post-title__input,
@@ -104,6 +105,12 @@ function conversions_enqueue_gutenberg() {
 		.editor-styles-wrapper a {
 			color: {$links_color};
 			text-decoration: none;
+		}
+		.wp-block {
+    		max-width: {$container_width}px;
+		}
+		.wp-block[data-align='wide'] {
+    		max-width: {$container_width}px;
 		}
 	";
 	wp_add_inline_style( 'conversions-gutenberg', $custom_gb_css );

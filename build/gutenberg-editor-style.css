@@ -389,14 +389,13 @@ input[type="button"].btn-block,
 .wp-block-button.is-style-c-full-width input[type="button"].wp-block-button__link {
   width: 100%; }
 
-/* Links hover
---------------------------------------------- */
+.wp-block[data-align="full"] {
+  max-width: 100%; }
+
 .editor-styles-wrapper a:hover {
   filter: brightness(85%);
   text-decoration: none; }
 
-/* Gutenberg color options
---------------------------------------------- */
 .has-primary-color {
   color: #5533ff; }
 
@@ -433,8 +432,6 @@ input[type="button"].btn-block,
 .has-dark-background-color {
   background-color: #343a40; }
 
-/* Button block
---------------------------------------------- */
 .wp-block-button a.wp-block-button__link[style*="background-color"]:hover {
   filter: brightness(85%); }
 .wp-block-button .wp-block-button__link {

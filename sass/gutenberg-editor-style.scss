@@ -4,15 +4,18 @@
 @import "../src/sass/bootstrap4/mixins";
 @import "../src/sass/bootstrap4/buttons";
 
-/* Links hover
---------------------------------------------- */
+// Editor widths
+.wp-block[data-align="full"] {
+    max-width: 100%;
+}
+
+// Links hover
 .editor-styles-wrapper a:hover {
   filter: brightness(85%);
   text-decoration: none;
 }
 
-/* Gutenberg color options
---------------------------------------------- */
+// Gutenberg color options
 // -- see editor-color-palette in functions.php
 $colors: (
   'primary' : #5533ff,
@@ -34,8 +37,7 @@ $colors: (
   }
 }
 
-/* Button block
---------------------------------------------- */
+// Button block
 .wp-block-button {
   a.wp-block-button__link[style*="background-color"]:hover {
     filter: brightness(85%);
