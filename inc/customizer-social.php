@@ -75,5 +75,4 @@ function conversions_show_social_icons() {
 
         echo "</div>";
     }
-}
-							
+}						

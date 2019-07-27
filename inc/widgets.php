@@ -129,4 +129,4 @@ if ( ! function_exists( 'conversions_widgets_init' ) ) {
 		);
 
 	}
-} // endif function_exists( 'conversions_widgets_init' ).
+} // endif function_exists( 'conversions_widgets_init' )
