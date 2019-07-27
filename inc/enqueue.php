@@ -90,26 +90,24 @@ function conversions_enqueue_gutenberg() {
     $links_color_hover = esc_html(get_theme_mod('conversions_typography_link_hover_color', '#2600e6'));
 
 	$custom_gb_css = "
-		.editor-post-title__block .editor-post-title__input,
-    	.editor-writing-flow .wp-block h1,
-		.editor-writing-flow .wp-block h3,
-		.editor-writing-flow .wp-block h3,
- 		.editor-writing-flow .wp-block h4 {
+		.editor-styles-wrapper .editor-writing-flow .editor-post-title__block .editor-post-title__input,
+    	.editor-styles-wrapper .editor-writing-flow .wp-block-heading h1, 
+    	.editor-styles-wrapper .editor-writing-flow .wp-block-heading h2, 
+    	.editor-styles-wrapper .editor-writing-flow .wp-block-heading h3,
+    	.editor-styles-wrapper .editor-writing-flow .wp-block-heading h4,
+    	.editor-styles-wrapper .editor-writing-flow .wp-block-heading h5 {
 			color: {$headings_color};
 			font-family: {$headings_font};
 		}
-		.editor-writing-flow .wp-block textarea,
-		.editor-writing-flow .wp-block .wp-block-freeform,
-		.editor-rich-text p,
-		.wp-block-quote__citation {
+		.editor-styles-wrapper .editor-writing-flow {
 			color: {$body_color};
 			font-family: {$body_font};
 		}
-		.editor-writing-flow .wp-block a {
+		.editor-styles-wrapper .editor-writing-flow .wp-block a {
 			color: {$links_color};
 			text-decoration: none;
 		}
-		.editor-writing-flow .wp-block a:hover {
+		.editor-styles-wrapper .editor-writing-flow .wp-block a:hover {
 			color: {$links_color_hover};
 			text-decoration: none;
 		}
