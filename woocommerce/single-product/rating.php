@@ -14,9 +14,10 @@
  * @package WooCommerce/Templates
  * @version 3.6.1
  */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 global $product;
 if ( ! wc_review_ratings_enabled() ) {
 	return;

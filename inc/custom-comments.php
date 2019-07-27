@@ -5,9 +5,8 @@
  * @package conversions
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 // Comments form.
 add_filter( 'comment_form_default_fields', 'conversions_bootstrap_comment_form_fields' );

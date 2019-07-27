@@ -7,9 +7,8 @@
  * @package conversions
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 ?>
 
 <?php get_template_part( 'partials/sidebar', 'footerfull' ); ?>

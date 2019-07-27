@@ -5,9 +5,8 @@
  * @package conversions
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 // Navigation button
 add_filter( 'wp_nav_menu_items', 'conversions_add_navbar_buttons', 10, 2 );

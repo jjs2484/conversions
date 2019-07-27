@@ -5,9 +5,8 @@
  * @package conversions
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 ?>
 
 </div><!-- #closing the primary container from /partials/left-sidebar-check.php -->

@@ -5,9 +5,8 @@
  * @package conversions
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 add_filter( 'body_class', 'conversions_body_classes' );
 

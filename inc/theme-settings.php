@@ -6,9 +6,8 @@
  *
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 if ( ! function_exists ( 'conversions_setup_theme_default_settings' ) ) {
 	function conversions_setup_theme_default_settings() {

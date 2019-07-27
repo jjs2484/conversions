@@ -4,9 +4,10 @@
  *
  * @package WP-Bootstrap-Navwalker
  */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 /*
  * Class Name: WP_Bootstrap_Navwalker
  * Plugin Name: WP Bootstrap Navwalker

@@ -14,9 +14,10 @@
  * @package WooCommerce/Templates
  * @version 3.6.1
  */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>

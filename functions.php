@@ -5,9 +5,8 @@
  * @package conversions
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 $conversions_includes = array(
 	'/theme-settings.php',                  // Initialize theme default settings.
