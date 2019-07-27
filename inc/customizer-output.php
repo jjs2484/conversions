@@ -39,7 +39,7 @@ add_action( 'wp_enqueue_scripts', 'conversions_gfont_scripts' );
 function conversions_customizer_css_ouput()
 {
 	
-	// fonts variables
+	// font variables
 	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
 	
 	if( $google_fonts_state == 'enable_gfonts' ) {
@@ -59,7 +59,7 @@ function conversions_customizer_css_ouput()
 		$body_font = "Arial, Helvetica, sans-serif";
 	}
 
-	// fixed header height calc variable
+	// fixed header height calc variables
 	if ( has_custom_logo() ) {
     	$logo_height = get_theme_mod('conversions_logo_height', '60');
 	}
@@ -140,9 +140,7 @@ function conversions_customizer_css_ouput()
 		/* Sidebar */
 		<?php if (get_theme_mod( 'conversions_sidebar_mvisibility', 'show' ) == 'hide') { ?>
 			@media (max-width: 767.98px) {
-				#left-sidebar, #right-sidebar {
-					display: none;
-				}
+				#left-sidebar, #right-sidebar { display: none; }
 			}
 		<?php } ?>
 	</style>
