@@ -6,13 +6,12 @@
 
 // Editor widths
 .wp-block[data-align="full"] {
-    max-width: 100%;
+    max-width: none;
 }
 
 // Links hover
 .editor-styles-wrapper a:hover {
-  filter: brightness(85%);
-  text-decoration: none;
+  filter: brightness(75%);
 }
 
 // Gutenberg color options

@@ -390,11 +390,10 @@ input[type="button"].btn-block,
   width: 100%; }
 
 .wp-block[data-align="full"] {
-  max-width: 100%; }
+  max-width: none; }
 
 .editor-styles-wrapper a:hover {
-  filter: brightness(85%);
-  text-decoration: none; }
+  filter: brightness(75%); }
 
 .has-primary-color {
   color: #5533ff; }
