@@ -51,5 +51,3 @@ if ( ! function_exists ( 'conversions_pagination' ) ) {
         <?php
     }
 }
-
-?>

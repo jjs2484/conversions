@@ -68,4 +68,4 @@ get_header();
 
 </div><!-- Wrapper end -->
 
-<?php get_footer(); ?>
+<?php get_footer();

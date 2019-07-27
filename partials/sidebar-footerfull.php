@@ -27,4 +27,4 @@ defined( 'ABSPATH' ) || exit;
 
 	</div><!-- end #wrapper-footer-full -->
 
-<?php endif; ?>
+<?php endif;
