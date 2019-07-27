@@ -14662,6 +14662,11 @@ readers do not read off random characters that represent icons */
 .wrapper#wrapper-sticky {
   border-bottom: 1px solid #dee2e6; }
 
+a:hover {
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+  text-decoration: none; }
+
 .wp-caption {
   font-size: inherit; }
 

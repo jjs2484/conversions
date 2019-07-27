@@ -492,19 +492,6 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'settings'   => 'conversions_typography_link_color',
 			'priority'   => 40,
 			'type'       => 'color',
-		) );	
-		$wp_customize->add_setting( 'conversions_typography_link_hover_color', array(
-			'default'       => '#2600e6',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_typography_link_hover_color_control', array(
-			'label'      => __('Link hover color', 'conversions'),
-			'section'    => 'conversions_typography',
-			'settings'   => 'conversions_typography_link_hover_color',
-			'priority'   => 50,
-			'type'       => 'color',
 		) );
 
 		//-----------------------------------------------------

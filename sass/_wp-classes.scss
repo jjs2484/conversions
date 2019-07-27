@@ -7,6 +7,10 @@
 // Separate sticky wrapper from main content
 .wrapper#wrapper-sticky { border-bottom: 1px solid $gray-300; }
 // Necessary WP classes
+a:hover {
+  filter: brightness(85%);
+  text-decoration: none;
+}
 .wp-caption { 
   font-size: inherit; 
 }

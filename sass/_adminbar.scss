@@ -1,10 +1,11 @@
-// adminbar position fix on small screens
+// Adminbar position fix on small screens
 html #wpadminbar {
   @media screen and (max-width:600px) {
     position: fixed;
   }
 }
-// adminbar add space when active
+
+// Adminbar add space when active
 .admin-bar #wrapper-navbar.fixed-top {
   top: 46px;
   @media screen and (min-width: 783px) {
