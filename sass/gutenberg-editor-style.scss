@@ -4,6 +4,13 @@
 @import "../src/sass/bootstrap4/mixins";
 @import "../src/sass/bootstrap4/buttons";
 
+/* Links hover
+--------------------------------------------- */
+.editor-styles-wrapper a:hover {
+  filter: brightness(85%);
+  text-decoration: none;
+}
+
 /* Gutenberg color options
 --------------------------------------------- */
 // -- see editor-color-palette in functions.php

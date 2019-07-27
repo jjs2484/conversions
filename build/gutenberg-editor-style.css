@@ -389,6 +389,12 @@ input[type="button"].btn-block,
 .wp-block-button.is-style-c-full-width input[type="button"].wp-block-button__link {
   width: 100%; }
 
+/* Links hover
+--------------------------------------------- */
+.editor-styles-wrapper a:hover {
+  filter: brightness(85%);
+  text-decoration: none; }
+
 /* Gutenberg color options
 --------------------------------------------- */
 .has-primary-color {

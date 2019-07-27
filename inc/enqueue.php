@@ -101,7 +101,7 @@ function conversions_enqueue_gutenberg() {
 			color: {$body_color};
 			font-family: {$body_font};
 		}
-		.editor-styles-wrapper .editor-writing-flow .wp-block a {
+		.editor-styles-wrapper a {
 			color: {$links_color};
 			text-decoration: none;
 		}
