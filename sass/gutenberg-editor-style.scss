@@ -10,25 +10,43 @@
     max-width: none;
 }
 
-// Block cover inner text width
-.wp-block-cover-image .wp-block-cover-image-text, 
-.wp-block-cover-image .wp-block-cover-text, 
-.wp-block-cover-image h2, 
-.wp-block-cover-image h3,
-.wp-block-cover-image h4,
-.wp-block-cover-image h5,
-.wp-block-cover-image h6,
-.wp-block-cover .wp-block-cover-image-text, 
-.wp-block-cover .wp-block-cover-text, 
-.wp-block-cover h2,
-.wp-block-cover h3,
-.wp-block-cover h4,
-.wp-block-cover h5,
-.wp-block-cover h6 {
-  max-width: 100%;
+// Cover block text width
+.wp-block-cover-image {
+  .wp-block-cover-image-text, 
+  .wp-block-cover-text, 
+  h2, 
+  h3,
+  h4,
+  h5,
+  h6 {
+    max-width: 100%;
+  }
+}
+.wp-block-cover {
+  .wp-block-cover-image-text, 
+  .wp-block-cover-text, 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    max-width: 100%;
+  }
 }
 
-// Links hover
+// Block quotes
+blockquote {
+  padding: 10px 20px;
+  border-left: 5px solid #aaa;
+  .wp-block-quote__citation {
+    color: #555;
+    font-size: 80%;
+    margin-top: .5em;
+    line-height: 1.4;
+  }
+}
+
+// a links hover
 .editor-styles-wrapper a:hover {
   filter: brightness(75%);
 }
@@ -57,7 +75,7 @@ $colors: (
 
 // Button block
 .wp-block-button {
-  a.wp-block-button__link[style*="background-color"]:hover {
+  a.wp-block-button__link:hover {
     filter: brightness(85%);
   }
   // universal button styles
