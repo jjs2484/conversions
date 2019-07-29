@@ -71,7 +71,7 @@ $colors: (
 
 // Button block
 .wp-block-button {
-  a.wp-block-button__link:hover {
+  a.wp-block-button__link[style*="background-color"]:hover {
     filter: brightness(85%);
   }
   // universal button styles

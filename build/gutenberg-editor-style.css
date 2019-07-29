@@ -410,10 +410,10 @@ input[type="button"].btn-block,
 .wp-block-cover h6 {
   max-width: 100%; }
 
-blockquote {
+blockquote .wp-block-quote {
   padding: 10px 20px;
   border-left: 5px solid #aaa; }
-  blockquote .wp-block-quote__citation {
+  blockquote .wp-block-quote .wp-block-quote__citation {
     color: #555;
     font-size: 80%;
     margin-top: .5em;
@@ -459,6 +459,8 @@ blockquote {
   background-color: #343a40; }
 
 .wp-block-button a.wp-block-button__link:hover {
+  filter: brightness(85%); }
+.wp-block-button a.wp-block-button__link.has-background:hover {
   filter: brightness(85%); }
 .wp-block-button .wp-block-button__link {
   border-radius: .25rem; }

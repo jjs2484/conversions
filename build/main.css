@@ -15069,7 +15069,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 .has-dark-background-color {
   background-color: #343a40; }
 
-.wp-block-button a.wp-block-button__link:hover {
+.wp-block-button a.wp-block-button__link[style*="background-color"]:hover {
   -webkit-filter: brightness(85%);
           filter: brightness(85%); }
 .wp-block-button .wp-block-button__link {

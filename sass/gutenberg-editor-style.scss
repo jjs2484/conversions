@@ -35,7 +35,7 @@
 }
 
 // Block quotes
-blockquote {
+blockquote .wp-block-quote {
   padding: 10px 20px;
   border-left: 5px solid #aaa;
   .wp-block-quote__citation {
@@ -76,6 +76,9 @@ $colors: (
 // Button block
 .wp-block-button {
   a.wp-block-button__link:hover {
+    filter: brightness(85%);
+  }
+  a.wp-block-button__link.has-background:hover {
     filter: brightness(85%);
   }
   // universal button styles
