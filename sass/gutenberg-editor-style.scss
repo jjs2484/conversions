@@ -1,4 +1,5 @@
-// Import Bootstrap stuff we need
+// Import Bootstrap
+@import "variables";
 @import "../src/sass/bootstrap4/functions";
 @import "../src/sass/bootstrap4/variables";
 @import "../src/sass/bootstrap4/mixins";
@@ -68,6 +69,19 @@ $colors: (
     @extend .btn;
   }
   
+  // button styles if none defined
+  .wp-block-button__link {
+    &:not(.has-background) {
+      @extend .btn-primary;
+    }
+    // Get user defined colors
+    @each $name, $color in $colors {
+      &.has-#{$name}-background-color {
+        @extend .btn-#{$name};
+      }   
+    }
+  }
+
   // default button styles
   &.is-style-c-default {
     .wp-block-button__link {

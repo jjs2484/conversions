@@ -6,6 +6,7 @@ wp.domReady( () => {
     wp.blocks.registerBlockStyle( 'core/button', {
         name: 'c-default',
         label: 'Default',
+        isDefault: true
     });
 
     wp.blocks.registerBlockStyle( 'core/button', {
