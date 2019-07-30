@@ -95,9 +95,11 @@ function conversions_enqueue_gutenberg() {
     	.editor-styles-wrapper .editor-writing-flow .wp-block-heading h3,
     	.editor-styles-wrapper .editor-writing-flow .wp-block-heading h4,
     	.editor-styles-wrapper .editor-writing-flow .wp-block-heading h5 {
+			color: {$headings_color};
 			font-family: {$headings_font};
 		}
 		.editor-styles-wrapper .editor-writing-flow {
+			color: {$body_color};
 			font-family: {$body_font};
 		}
 		.editor-styles-wrapper a {

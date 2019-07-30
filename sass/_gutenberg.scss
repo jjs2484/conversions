@@ -47,6 +47,11 @@
   padding: 8px;
 }
 
+// Pull quote cite color
+.wp-block-pullquote cite {
+  color: #555;
+}
+
 // Gutenberg color options
 // -- see editor-color-palette in functions.php
 $colors: (
@@ -71,7 +76,7 @@ $colors: (
 
 // Button block
 .wp-block-button {
-  a.wp-block-button__link[style*="background-color"]:hover {
+  a.wp-block-button__link:hover {
     filter: brightness(85%);
   }
   // universal button styles

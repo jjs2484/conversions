@@ -56,11 +56,6 @@ if ( ! function_exists( 'conversions_setup' ) ) {
 		// Add fullscreen thumbnail size
 		add_image_size( 'fullscreen', 1920, 9999 );
 
-		/*
-		 * Adding support for Widget edit icons in customizer
-		 */
-		add_theme_support( 'customize-selective-refresh-widgets' );
-
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'conversions_custom_background_args', array(
 			'default-color' => 'ffffff',

@@ -63,7 +63,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 1rem; }
 
 p {
   margin-top: 0;
@@ -293,7 +293,7 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-weight: 500;
   line-height: 1.2; }
 
@@ -15033,6 +15033,9 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 .wp-block-calendar tbody td, .wp-block-calendar th {
   padding: 8px; }
 
+.wp-block-pullquote cite {
+  color: #555; }
+
 .has-primary-color {
   color: #5533ff; }
 
@@ -15069,7 +15072,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 .has-dark-background-color {
   background-color: #343a40; }
 
-.wp-block-button a.wp-block-button__link[style*="background-color"]:hover {
+.wp-block-button a.wp-block-button__link:hover {
   -webkit-filter: brightness(85%);
           filter: brightness(85%); }
 .wp-block-button .wp-block-button__link {
