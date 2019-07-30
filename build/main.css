@@ -15010,9 +15010,8 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   border: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   margin: 1.65em auto; }
-
-.wp-block-separator.is-style-wide {
-  border-bottom-width: 1px; }
+  .wp-block-separator.is-style-wide {
+    border-bottom-width: 1px; }
 
 .wp-block-cover-image .wp-block-cover-image-text,
 .wp-block-cover-image .wp-block-cover-text,

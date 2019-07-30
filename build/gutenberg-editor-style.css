@@ -395,6 +395,11 @@ input[type="button"].btn-block,
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-weight: 500; }
 
+.wp-block-separator {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
+  .wp-block-separator.is-style-wide {
+    border-bottom-width: 1px; }
+
 .wp-block-cover-image .wp-block-cover-image-text,
 .wp-block-cover-image .wp-block-cover-text,
 .wp-block-cover-image h2,

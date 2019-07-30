@@ -19,9 +19,9 @@
   border: none;
   border-bottom: 2px solid rgba(0,0,0,.2);
   margin: 1.65em auto;
-}
-.wp-block-separator.is-style-wide {
-  border-bottom-width: 1px;
+  &.is-style-wide {
+    border-bottom-width: 1px;
+  }
 }
 
 // Block cover inner text width
@@ -101,7 +101,6 @@ $colors: (
     }
   }
   
-  // default button styles
   &.is-style-c-default {
     .wp-block-button__link {
       &:not(.has-background) {

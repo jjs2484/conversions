@@ -5,7 +5,7 @@
 @import "../src/sass/bootstrap4/mixins";
 @import "../src/sass/bootstrap4/buttons";
 
-// Editor widths
+// Full block width
 .wp-block[data-align="full"] {
     max-width: none;
 }
@@ -13,6 +13,14 @@
 // Titles
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
+}
+
+// Separators
+.wp-block-separator {
+  border-bottom: 2px solid rgba(0,0,0,.2);
+  &.is-style-wide {
+    border-bottom-width: 1px;
+  }
 }
 
 // Cover block text width
@@ -123,7 +131,6 @@ $colors: (
     }
   }
 
-  // default button styles
   &.is-style-c-default {
     .wp-block-button__link {
       &:not(.has-background) {
