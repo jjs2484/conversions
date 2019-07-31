@@ -65,9 +65,6 @@ if ( ! function_exists( 'conversions_setup' ) ) {
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
 
-		// add fallback to core block styles - gutenberg
-		// add_theme_support( 'wp-block-styles' );
-
 		// Add support for responsive embedded content - gutenberg
 		add_theme_support( 'responsive-embeds' );
 
