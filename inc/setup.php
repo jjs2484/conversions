@@ -105,9 +105,6 @@ if ( ! function_exists( 'conversions_setup' ) ) {
 			),
 		) );
 
-		// Check and setup theme default settings.
-		conversions_setup_theme_default_settings();
-
 	}
 }
 
