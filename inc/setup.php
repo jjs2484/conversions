@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme basic setup.
+ * Theme setup.
  *
  * @package conversions
  */
@@ -65,13 +65,16 @@ if ( ! function_exists( 'conversions_setup' ) ) {
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
 
+		// Add classic editor styles
+		add_editor_style( 'build/classic-editor-style.css' );
+
 		// Add support for responsive embedded content - gutenberg
 		add_theme_support( 'responsive-embeds' );
 
 		// Add support for wide images - gutenberg
 		add_theme_support( 'align-wide' );
 
-		// Register the color palette options
+		// Register the color palette options - gutenberg
 		add_theme_support( 'editor-color-palette', array(
 			array(
 				'name'  => __( 'Primary', 'conversions' ),
