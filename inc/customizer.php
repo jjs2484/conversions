@@ -8,8 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
-	function conversions_theme_customize_register( $wp_customize ) {
+if ( ! function_exists( 'conversions_customize_register' ) ) {
+	function conversions_customize_register( $wp_customize ) {
 
 		/**
 		 * Select sanitization function
@@ -763,5 +763,5 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 		) );
 	
 	}
-	add_action( 'customize_register', 'conversions_theme_customize_register' );
+	add_action( 'customize_register', 'conversions_customize_register' );
 }
