@@ -1,4 +1,3 @@
-    
 <?php
 /**
  * Check and setup theme's default settings
@@ -36,9 +35,9 @@ if ( ! function_exists( 'conversions_theme_default_settings' ) ) {
 		// Header section
 		//-----------------------------------------------------
 		// Header color scheme
-		$conversions_header_color_scheme = get_theme_mod( 'conversions_header_color_scheme' );
-		if ( '' == $conversions_header_color_scheme ) {
-			set_theme_mod( 'conversions_header_color_scheme', 'dark' );
+		$conversions_header_colors = get_theme_mod( 'conversions_header_colors' );
+		if ( '' == $conversions_header_colors ) {
+			set_theme_mod( 'conversions_header_colors', 'dark' );
 		}
 		// Header dropshadow
 		$conversions_header_dropshadow = get_theme_mod( 'conversions_header_dropshadow' );
@@ -46,14 +45,14 @@ if ( ! function_exists( 'conversions_theme_default_settings' ) ) {
 			set_theme_mod( 'conversions_header_dropshadow', 'no' );
 		}
 		// Header top-padding
-		$conversions_header_top_padding = get_theme_mod( 'conversions_header_top_padding' );
-		if ( '' == $conversions_header_top_padding ) {
-			set_theme_mod( 'conversions_header_top_padding', '8' );
+		$conversions_header_tpadding = get_theme_mod( 'conversions_header_tpadding' );
+		if ( '' == $conversions_header_tpadding ) {
+			set_theme_mod( 'conversions_header_tpadding', '8' );
 		}
 		// Header bottom-padding
-		$conversions_header_bottom_padding = get_theme_mod( 'conversions_header_bottom_padding' );
-		if ( '' == $conversions_header_bottom_padding ) {
-			set_theme_mod( 'conversions_header_bottom_padding', '8' );
+		$conversions_header_bpadding = get_theme_mod( 'conversions_header_bpadding' );
+		if ( '' == $conversions_header_bpadding ) {
+			set_theme_mod( 'conversions_header_bpadding', '8' );
 		}
 
 		//-----------------------------------------------------
@@ -123,14 +122,14 @@ if ( ! function_exists( 'conversions_theme_default_settings' ) ) {
 			set_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
 		}
 		// Headings font color
-		$conversions_typography_heading_color = get_theme_mod( 'conversions_typography_heading_color' );
-		if ( '' == $conversions_typography_heading_color ) {
-			set_theme_mod( 'conversions_typography_heading_color', '#222222' );
+		$conversions_heading_color = get_theme_mod( 'conversions_heading_color' );
+		if ( '' == $conversions_heading_color ) {
+			set_theme_mod( 'conversions_heading_color', '#222222' );
 		}
 		// Body font color
-		$conversions_typography_text_color = get_theme_mod( 'conversions_typography_text_color' );
-		if ( '' == $conversions_typography_text_color ) {
-			set_theme_mod( 'conversions_typography_text_color', '#111111' );
+		$conversions_text_color = get_theme_mod( 'conversions_text_color' );
+		if ( '' == $conversions_text_color ) {
+			set_theme_mod( 'conversions_text_color', '#111111' );
 		}
 		// Link color
 		$conversions_typography_link_color = get_theme_mod( 'conversions_typography_link_color' );

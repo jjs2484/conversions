@@ -18,7 +18,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		 * @param WP_Customize_Setting $setting Setting instance.
 		 * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
 		 */
-        function conversions_theme_slug_sanitize_select( $input, $setting ){
+        function conversions_sanitize_select( $input, $setting ){
             // Ensure input is a slug (lowercase alphanumeric characters, dashes and underscores are allowed only).
             $input = sanitize_key( $input );
            	// Get the list of possible select options.
@@ -80,7 +80,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		$wp_customize->add_setting( 'conversions_header_position', array(
 			'default'           => 'fixed-top',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'sanitize_callback' => 'conversions_sanitize_select',
 			'capability'        => 'edit_theme_options',
 			'transport'     => 'refresh',
 		) );
@@ -100,21 +100,21 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 					'priority'    => '10',
 				)
 		) );
-		$wp_customize->add_setting( 'conversions_header_color_scheme', array(
+		$wp_customize->add_setting( 'conversions_header_colors', array(
 			'default'           => 'dark',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'sanitize_callback' => 'conversions_sanitize_select',
 			'capability'        => 'edit_theme_options',
 			'transport'     => 'refresh',
 		) );
 		$wp_customize->add_control( 
 			new WP_Customize_Control(
 				$wp_customize,
-				'conversions_header_color_scheme', array(
+				'conversions_header_colors', array(
 					'label'       => __( 'Header color scheme', 'conversions' ),
 					'description' => __( 'Choose a header color scheme', 'conversions' ),
 					'section'     => 'conversions_header',
-					'settings'    => 'conversions_header_color_scheme',
+					'settings'    => 'conversions_header_colors',
 					'type'        => 'select',
 					'choices'     => array(
 						'dark' => __( 'Dark', 'conversions' ),
@@ -133,7 +133,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		$wp_customize->add_setting( 'conversions_header_dropshadow', array(
 			'default'           => 'no',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'sanitize_callback' => 'conversions_sanitize_select',
 			'capability'        => 'edit_theme_options',
 			'transport'     => 'refresh',
 		) );
@@ -153,18 +153,18 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 					'priority'    => '30',
 				)
 		) );
-		$wp_customize->add_setting( 'conversions_header_top_padding', array(
+		$wp_customize->add_setting( 'conversions_header_tpadding', array(
 			'default'       => '8',
 			'type'          => 'theme_mod',
 			'capability'    => 'edit_theme_options',
 			'transport'     => 'refresh',
 			'sanitize_callback' => 'absint', //converts value to a non-negative integer
 		) );
-		$wp_customize->add_control( 'conversions_header_top_padding_control', array(
+		$wp_customize->add_control( 'conversions_header_tpadding_control', array(
 			'label'      => 'Header top padding',
 			'description'=> 'Top padding in px',
 			'section'    => 'conversions_header',
-			'settings'   => 'conversions_header_top_padding',
+			'settings'   => 'conversions_header_tpadding',
 			'priority'   => 40,
 			'type'       => 'number',
 			'input_attrs'=> array( 
@@ -172,18 +172,18 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 				'max' => 1000,
 			),
 		) );
-		$wp_customize->add_setting( 'conversions_header_bottom_padding', array(
+		$wp_customize->add_setting( 'conversions_header_bpadding', array(
 			'default'       => '8',
 			'type'          => 'theme_mod',
 			'capability'    => 'edit_theme_options',
 			'transport'     => 'refresh',
 			'sanitize_callback' => 'absint', //converts value to a non-negative integer
 		) );
-		$wp_customize->add_control( 'conversions_header_bottom_padding_control', array(
+		$wp_customize->add_control( 'conversions_header_bpadding_control', array(
 			'label'      => 'Header bottom padding',
 			'description'=> 'Bottom padding in px',
 			'section'    => 'conversions_header',
-			'settings'   => 'conversions_header_bottom_padding',
+			'settings'   => 'conversions_header_bpadding',
 			'priority'   => 50,
 			'type'       => 'number',
 			'input_attrs'=> array( 
@@ -206,7 +206,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		$wp_customize->add_setting( 'conversions_nav_mobile_type', array(
 			'default'           => 'offcanvas',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'sanitize_callback' => 'conversions_sanitize_select',
 			'capability'        => 'edit_theme_options',
 			'transport'     => 'refresh',
 		) );
@@ -229,7 +229,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		$wp_customize->add_setting( 'conversions_nav_button', array(
 			'default'           => 'no',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'sanitize_callback' => 'conversions_sanitize_select',
 			'capability'        => 'edit_theme_options',
 			'transport'     => 'refresh',
 		) );
@@ -283,7 +283,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		$wp_customize->add_setting( 'conversions_nav_search_icon', array(
 			'default'           => 'show',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'sanitize_callback' => 'conversions_sanitize_select',
 			'capability'        => 'edit_theme_options',
 			'transport'     => 'refresh',
 		) );
@@ -307,7 +307,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		//-----------------------------------------------------
 		// Layout settings
 		//-----------------------------------------------------
-		$wp_customize->add_section( 'conversions_theme_layout_options', array(
+		$wp_customize->add_section( 'conversions_layout_options', array(
 			'title'       => __( 'Layout', 'conversions' ),
 			'capability'  => 'edit_theme_options',
 			'description' => __( 'Container width and sidebar defaults', 'conversions' ),
@@ -325,7 +325,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		$wp_customize->add_control( 'conversions_container_width_control', array(
 			'label'      => 'Max container width',
 			'description'=> 'Specify the max container width in px',
-			'section'    => 'conversions_theme_layout_options',
+			'section'    => 'conversions_layout_options',
 			'settings'   => 'conversions_container_width',
 			'priority'   => 10,
 			'type'       => 'number',
@@ -348,10 +348,10 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 					'label'       => __( 'Sidebar Positioning', 'conversions' ),
 					'description' => __( 'Set sidebar\'s default position. Can either be: right, left, or none. Note: this can be overridden on individual pages.',
 					'conversions' ),
-					'section'     => 'conversions_theme_layout_options',
+					'section'     => 'conversions_layout_options',
 					'settings'    => 'conversions_sidebar_position',
 					'type'        => 'select',
-					'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+					'sanitize_callback' => 'conversions_sanitize_select',
 					'choices'     => array(
 						'right' => __( 'Right sidebar', 'conversions' ),
 						'left'  => __( 'Left sidebar', 'conversions' ),
@@ -375,10 +375,10 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 					'label'       => __( 'Hide sidebar on mobile?', 'conversions' ),
 					'description' => __( 'Should we hide the sidebar on small screens?',
 					'conversions' ),
-					'section'     => 'conversions_theme_layout_options',
+					'section'     => 'conversions_layout_options',
 					'settings'    => 'conversions_sidebar_mvisibility',
 					'type'        => 'select',
-					'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+					'sanitize_callback' => 'conversions_sanitize_select',
 					'choices'     => array(
 						'show' => __( 'Show sidebar', 'conversions' ),
 						'hide'  => __( 'Hide sidebar', 'conversions' ),
@@ -454,29 +454,29 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 			'section' => 'conversions_typography',
 			'choices' => $font_choices
 		) );
-		$wp_customize->add_setting( 'conversions_typography_heading_color', array(
+		$wp_customize->add_setting( 'conversions_heading_color', array(
 			'default'       => '#222222',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
-		$wp_customize->add_control( 'conversions_typography_heading_color_control', array(
+		$wp_customize->add_control( 'conversions_heading_color_control', array(
 			'label'      => __('Heading color', 'conversions'),
 			'section'    => 'conversions_typography',
-			'settings'   => 'conversions_typography_heading_color',
+			'settings'   => 'conversions_heading_color',
 			'priority'   => 20,
 			'type'       => 'color',
 		) );	
-		$wp_customize->add_setting( 'conversions_typography_text_color', array(
+		$wp_customize->add_setting( 'conversions_text_color', array(
 			'default'       => '#111111',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
-		$wp_customize->add_control( 'conversions_typography_text_color_control', array(
+		$wp_customize->add_control( 'conversions_text_color_control', array(
 			'label'      => __('Text color', 'conversions'),
 			'section'    => 'conversions_typography',
-			'settings'   => 'conversions_typography_text_color',
+			'settings'   => 'conversions_text_color',
 			'priority'   => 30,
 			'type'       => 'color',
 		) );	
@@ -636,7 +636,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		$wp_customize->add_setting( 'conversions_social_link_target', array(
 			'default'           => '_self',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'sanitize_callback' => 'conversions_sanitize_select',
 			'capability'        => 'edit_theme_options',
 			'transport'     => 'refresh',
 		) );
@@ -718,7 +718,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		$wp_customize->add_setting( 'conversions_wccart_nav', array(
 			'default'           => 'yes',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'sanitize_callback' => 'conversions_sanitize_select',
 			'capability'        => 'edit_theme_options',
 			'transport'     => 'refresh',
 		) );
@@ -741,7 +741,7 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 		$wp_customize->add_setting( 'conversions_wccheckout_columns', array(
 			'default'           => 'two-column',
 			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_theme_slug_sanitize_select',
+			'sanitize_callback' => 'conversions_sanitize_select',
 			'capability'        => 'edit_theme_options',
 			'transport'     => 'refresh',
 		) );

@@ -65,8 +65,8 @@ function conversions_customizer_css_ouput()
 	else {
 		$logo_height = 30;
 	}
-	$header_top_padding = get_theme_mod('conversions_header_top_padding', '8');
-	$header_bottom_padding = get_theme_mod('conversions_header_bottom_padding', '8');
+	$header_top_padding = get_theme_mod('conversions_header_tpadding', '8');
+	$header_bottom_padding = get_theme_mod('conversions_header_bpadding', '8');
 	$logo_padding = 10;
 	$total_header_height = $logo_height + $header_top_padding + $header_bottom_padding + $logo_padding - 1;
 
@@ -89,8 +89,8 @@ function conversions_customizer_css_ouput()
 			}
 		<?php } ?>
 		.navbar { 
-			padding-top: <?php echo get_theme_mod('conversions_header_top_padding', '8'); ?>px;
-			padding-bottom: <?php echo get_theme_mod('conversions_header_bottom_padding', '8'); ?>px;
+			padding-top: <?php echo get_theme_mod('conversions_header_tpadding', '8'); ?>px;
+			padding-bottom: <?php echo get_theme_mod('conversions_header_bpadding', '8'); ?>px;
 		}
 		<?php if (get_theme_mod( 'conversions_header_dropshadow', 'no' ) == 'yes') { ?>
 			/* Header drop shadow */
@@ -105,11 +105,11 @@ function conversions_customizer_css_ouput()
 		#footer-full-content a { color: <?php echo get_theme_mod('conversions_footer_link_color', '#00ffff'); ?>; }
 		/* Typography styles */
 		.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { 
-			color: <?php echo get_theme_mod('conversions_typography_heading_color', '#222222'); ?>; 
+			color: <?php echo get_theme_mod('conversions_heading_color', '#222222'); ?>; 
 			font-family: <?php echo $headings_font; ?>;
 		}
 		body, input, select, textarea { 
-			color: <?php echo get_theme_mod('conversions_typography_text_color', '#111111'); ?>;
+			color: <?php echo get_theme_mod('conversions_text_color', '#111111'); ?>;
 			font-family: <?php echo $body_font; ?>;
 		}
 		a { color: <?php echo get_theme_mod('conversions_typography_link_color', '#2600e6'); ?>; }

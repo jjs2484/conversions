@@ -81,8 +81,8 @@ function conversions_enqueue_gutenberg() {
 		$body_font = "Arial, Helvetica, sans-serif";
 	}
 
-	$headings_color = esc_html(get_theme_mod('conversions_typography_heading_color', '#222222'));
-	$body_color = esc_html(get_theme_mod('conversions_typography_text_color', '#111111'));
+	$headings_color = esc_html(get_theme_mod('conversions_heading_color', '#222222'));
+	$body_color = esc_html(get_theme_mod('conversions_text_color', '#111111'));
     $links_color = esc_html(get_theme_mod('conversions_typography_link_color', '#2600e6'));
     $container_width = esc_html(get_theme_mod('conversions_container_width', '1140'));
 
@@ -170,8 +170,8 @@ function mcc_classic_editor_dynamic_styles( $mceInit ) {
 		$body_font = "Arial, Helvetica, sans-serif";
 	}
 
-	$headings_color = esc_html(get_theme_mod('conversions_typography_heading_color', '#222222'));
-	$body_color = esc_html(get_theme_mod('conversions_typography_text_color', '#111111'));
+	$headings_color = esc_html(get_theme_mod('conversions_heading_color', '#222222'));
+	$body_color = esc_html(get_theme_mod('conversions_text_color', '#111111'));
     $links_color = esc_html(get_theme_mod('conversions_typography_link_color', '#2600e6'));
 
     // Add them to the classic editor

@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // header color scheme
-$header_color_scheme = get_theme_mod( 'conversions_header_color_scheme', 'dark' );
+$header_color_scheme = get_theme_mod( 'conversions_header_colors', 'dark' );
 switch( $header_color_scheme )
 {
 	case 'dark':
