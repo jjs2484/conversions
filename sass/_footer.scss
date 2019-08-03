@@ -7,7 +7,9 @@
 }
 // footer full widget area
 #wrapper-footer-full { 
-  background-color: $gray-200; 
+  #footer-full-content a:hover { 
+    filter: brightness(75%);
+  }
   .footer-widget {
     display: flex;
     flex-direction: column;
@@ -31,6 +33,9 @@
       justify-content: start;
       order: 1;
     }
+    a:hover { 
+      filter: brightness(75%);
+    }
   }
   .social-media-icons {
     display: flex;
@@ -48,6 +53,10 @@
       li.list-inline-item:not(:last-child) {
         margin-right: .2rem;
       }
+    }
+
+    ul li.list-inline-item i:hover {
+      filter: brightness(75%); 
     }
 
   }

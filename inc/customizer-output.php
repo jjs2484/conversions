@@ -103,7 +103,6 @@ function conversions_customizer_css_ouput()
 		#footer-full-content .h1, #footer-full-content .h2, #footer-full-content .h3, #footer-full-content .h4, #footer-full-content .h5, #footer-full-content .h6, #footer-full-content h1, #footer-full-content h2, #footer-full-content h3, #footer-full-content h4, #footer-full-content h5, #footer-full-content h6 { color: <?php echo get_theme_mod('conversions_footer_heading_color', '#ffffff'); ?>; }
 		#footer-full-content p, #footer-full-content table, #footer-full-content li, #footer-full-content caption { color: <?php echo get_theme_mod('conversions_footer_text_color', '#ffffff'); ?>; }
 		#footer-full-content a { color: <?php echo get_theme_mod('conversions_footer_link_color', '#00ffff'); ?>; }
-		#footer-full-content a:hover { color: <?php echo get_theme_mod('conversions_footer_link_hover_color', '#dddddd'); ?>; }
 		/* Typography styles */
 		.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { 
 			color: <?php echo get_theme_mod('conversions_typography_heading_color', '#222222'); ?>; 
@@ -118,14 +117,11 @@ function conversions_customizer_css_ouput()
 		#wrapper-footer { background-color: <?php echo get_theme_mod('conversions_copyright_background_color', '#eeeeee'); ?>; }
 		#wrapper-footer .site-info .copyright { color: <?php echo get_theme_mod('conversions_copyright_text_color', '#111111'); ?>; }
 		#wrapper-footer .site-info .copyright a { color: <?php echo get_theme_mod('conversions_copyright_link_color', '#2600e6'); ?>; }
-		#wrapper-footer .site-info .copyright a:hover { color: <?php echo get_theme_mod('conversions_copyright_link_hover_color', '#2600e6'); ?>; }
 		/* Social icons */
 		#wrapper-footer .social-media-icons ul li.list-inline-item i { 
 			font-size: <?php echo get_theme_mod('conversions_social_size', '22'); ?>px;
 			color: <?php echo get_theme_mod('conversions_social_link_color', '#2600e6'); ?>;
 		}
-		#wrapper-footer .social-media-icons ul li.list-inline-item i:hover {
-			color: <?php echo get_theme_mod('conversions_social_link_hover_color', '#2600e6'); ?>; }
 		/* WooCommerce */
 		<?php if (get_theme_mod( 'conversions_wccheckout_columns', 'two-column' ) == 'two-column') { ?>
 			@media screen and (min-width:768px) {

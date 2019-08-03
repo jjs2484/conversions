@@ -9,7 +9,8 @@
 defined( 'ABSPATH' ) || exit;
 
 $conversions_includes = array(
-	'/setup.php',							// Theme setup and custom theme supports.
+	'/theme-settings.php',					// Initialize theme default settings.
+	'/setup.php',							// Theme setup
 	'/widgets.php',							// Register widget area.
 	'/enqueue.php',							// Enqueue scripts and styles.
 	'/template-tags.php',					// Custom template tags for this theme.

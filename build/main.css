@@ -14929,24 +14929,25 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 #wrapper-footer.wrapper {
   padding-bottom: 30px; }
 
-#wrapper-footer-full {
-  background-color: #e9ecef; }
-  #wrapper-footer-full .footer-widget {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-justify-content: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    @media (max-width: 576px) {
-      #wrapper-footer-full .footer-widget {
-        margin-bottom: 0.75rem; } }
+#wrapper-footer-full #footer-full-content a:hover {
+  -webkit-filter: brightness(75%);
+          filter: brightness(75%); }
+#wrapper-footer-full .footer-widget {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 576px) {
+    #wrapper-footer-full .footer-widget {
+      margin-bottom: 0.75rem; } }
 
 #wrapper-footer .site-info {
   -webkit-align-items: center;
@@ -14970,6 +14971,9 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
       -webkit-order: 1;
           -ms-flex-order: 1;
               order: 1; } }
+  #wrapper-footer .copyright a:hover {
+    -webkit-filter: brightness(75%);
+            filter: brightness(75%); }
 #wrapper-footer .social-media-icons {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14994,6 +14998,9 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     margin-bottom: 0; }
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
       margin-right: .2rem; }
+  #wrapper-footer .social-media-icons ul li.list-inline-item i:hover {
+    -webkit-filter: brightness(75%);
+            filter: brightness(75%); }
 
 #full-width-page-wrapper .alignfull {
   width: 100vw;

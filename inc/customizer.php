@@ -557,19 +557,6 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'priority'   => 40,
 			'type'       => 'color',
 		) );
-		$wp_customize->add_setting( 'conversions_footer_link_hover_color', array(
-			'default'       => '#dddddd',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_footer_link_hover_color_control', array(
-			'label'      => __('Link hover color', 'conversions'),
-			'section'    => 'conversions_footer',
-			'settings'   => 'conversions_footer_link_hover_color',
-			'priority'   => 50,
-			'type'       => 'color',
-		) );
 
 		//-----------------------------------------------------
 		// Copyright section
@@ -632,19 +619,6 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'section'    => 'conversions_copyright',
 			'settings'   => 'conversions_copyright_link_color',
 			'priority'   => 40,
-			'type'       => 'color',
-		) );	
-		$wp_customize->add_setting( 'conversions_copyright_link_hover_color', array(
-			'default'       => '#2600e6',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_copyright_link_hover_color_control', array(
-			'label'      => __('Link hover color', 'conversions'),
-			'section'    => 'conversions_copyright',
-			'settings'   => 'conversions_copyright_link_hover_color',
-			'priority'   => 50,
 			'type'       => 'color',
 		) );
 
@@ -712,19 +686,6 @@ if ( ! function_exists( 'conversions_theme_customize_register' ) ) {
 			'section'    => 'conversions_social',
 			'settings'   => 'conversions_social_link_color',
 			'priority'   => 30,
-			'type'       => 'color',
-		) );	
-		$wp_customize->add_setting( 'conversions_social_link_hover_color', array(
-			'default'       => '#2600e6',
-			'type'          => 'theme_mod',
-			'transport'     => 'refresh',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( 'conversions_social_link_hover_color_control', array(
-			'label'      => __('Link hover color', 'conversions'),
-			'section'    => 'conversions_social',
-			'settings'   => 'conversions_social_link_hover_color',
-			'priority'   => 40,
 			'type'       => 'color',
 		) );
  		$social_sites = conversions_get_social_sites();
