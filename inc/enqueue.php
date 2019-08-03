@@ -83,7 +83,7 @@ function conversions_enqueue_gutenberg() {
 
 	$headings_color = esc_html(get_theme_mod('conversions_heading_color', '#222222'));
 	$body_color = esc_html(get_theme_mod('conversions_text_color', '#111111'));
-    $links_color = esc_html(get_theme_mod('conversions_typography_link_color', '#2600e6'));
+    $links_color = esc_html(get_theme_mod('conversions_link_color', '#2600e6'));
     $container_width = esc_html(get_theme_mod('conversions_container_width', '1140'));
 
 	$custom_gb_css = "
@@ -172,7 +172,7 @@ function mcc_classic_editor_dynamic_styles( $mceInit ) {
 
 	$headings_color = esc_html(get_theme_mod('conversions_heading_color', '#222222'));
 	$body_color = esc_html(get_theme_mod('conversions_text_color', '#111111'));
-    $links_color = esc_html(get_theme_mod('conversions_typography_link_color', '#2600e6'));
+    $links_color = esc_html(get_theme_mod('conversions_link_color', '#2600e6'));
 
     // Add them to the classic editor
     $styles = 'body.mce-content-body { color:'.$body_color.';font-family:'.$body_font.'; } body.mce-content-body h1, body.mce-content-body h2, body.mce-content-body h3, body.mce-content-body h4, body.mce-content-body h5, body.mce-content-body h6 { color:'.$headings_color.';font-family:'.$headings_font.'; } body.mce-content-body a { color:'.$links_color.'; }';

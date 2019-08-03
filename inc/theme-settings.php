@@ -132,9 +132,9 @@ if ( ! function_exists( 'conversions_theme_default_settings' ) ) {
 			set_theme_mod( 'conversions_text_color', '#111111' );
 		}
 		// Link color
-		$conversions_typography_link_color = get_theme_mod( 'conversions_typography_link_color' );
-		if ( '' == $conversions_typography_link_color ) {
-			set_theme_mod( 'conversions_typography_link_color', '#2600e6' );
+		$conversions_link_color = get_theme_mod( 'conversions_link_color' );
+		if ( '' == $conversions_link_color ) {
+			set_theme_mod( 'conversions_link_color', '#2600e6' );
 		}
 
 		//-----------------------------------------------------

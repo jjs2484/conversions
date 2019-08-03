@@ -480,16 +480,16 @@ if ( ! function_exists( 'conversions_customize_register' ) ) {
 			'priority'   => 30,
 			'type'       => 'color',
 		) );	
-		$wp_customize->add_setting( 'conversions_typography_link_color', array(
+		$wp_customize->add_setting( 'conversions_link_color', array(
 			'default'       => '#2600e6',
 			'type'          => 'theme_mod',
 			'transport'     => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
-		$wp_customize->add_control( 'conversions_typography_link_color_control', array(
+		$wp_customize->add_control( 'conversions_link_color_control', array(
 			'label'      => __('Link color', 'conversions'),
 			'section'    => 'conversions_typography',
-			'settings'   => 'conversions_typography_link_color',
+			'settings'   => 'conversions_link_color',
 			'priority'   => 40,
 			'type'       => 'color',
 		) );
