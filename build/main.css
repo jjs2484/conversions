@@ -14913,14 +14913,14 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   margin: 0 0 1em;
   font-size: .9rem; }
 
-#left-sidebar, #right-sidebar {
+#sidebar-2, #sidebar-1 {
   margin-top: 1.2rem; }
   @media (min-width: 768px) {
-    #left-sidebar, #right-sidebar {
+    #sidebar-2, #sidebar-1 {
       margin-top: .5rem; } }
-  #left-sidebar .widget, #right-sidebar .widget {
+  #sidebar-2 .widget, #sidebar-1 .widget {
     padding-bottom: .9rem; }
-    #left-sidebar .widget .widget-title, #right-sidebar .widget .widget-title {
+    #sidebar-2 .widget .widget-title, #sidebar-1 .widget .widget-title {
       border-bottom: 1px solid #ddd; }
 
 #wrapper-footer-full.wrapper {

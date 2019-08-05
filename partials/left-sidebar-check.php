@@ -22,7 +22,7 @@ $sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' );
 	
 	// if left sidebar is selected
 	if ( 'left' === $sidebar_pos ) {
-		if ( is_active_sidebar( 'left-sidebar' )) { ?>
+		if ( is_active_sidebar( 'sidebar-2' )) { ?>
 			<div class="col-md-8 col-xl-9 content-area" id="primary">
 		<?php }
 		else { ?>
@@ -31,7 +31,7 @@ $sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' );
 	} 
 	// if right sidebar is selected
 	elseif ( 'right' === $sidebar_pos ) {
-		if ( is_active_sidebar( 'right-sidebar' )) { ?>
+		if ( is_active_sidebar( 'sidebar-1' )) { ?>
 			<div class="col-md-8 col-xl-9 content-area" id="primary">
 		<?php }
 		else { ?>

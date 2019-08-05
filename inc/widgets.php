@@ -95,7 +95,7 @@ if ( ! function_exists( 'conversions_widgets_init' ) ) {
 		register_sidebar(
 			array(
 				'name'          => __( 'Right Sidebar', 'conversions' ),
-				'id'            => 'right-sidebar',
+				'id'            => 'sidebar-1',
 				'description'   => __( 'Right sidebar widget area', 'conversions' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
@@ -107,7 +107,7 @@ if ( ! function_exists( 'conversions_widgets_init' ) ) {
 		register_sidebar(
 			array(
 				'name'          => __( 'Left Sidebar', 'conversions' ),
-				'id'            => 'left-sidebar',
+				'id'            => 'sidebar-2',
 				'description'   => __( 'Left sidebar widget area', 'conversions' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
@@ -119,7 +119,7 @@ if ( ! function_exists( 'conversions_widgets_init' ) ) {
 		register_sidebar(
 			array(
 				'name'          => __( 'Footer Full', 'conversions' ),
-				'id'            => 'footerfull',
+				'id'            => 'sidebar-3',
 				'description'   => __( 'Full sized footer widget with dynamic grid', 'conversions' ),
 				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .footer-widget -->',

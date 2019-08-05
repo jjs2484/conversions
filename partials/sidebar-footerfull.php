@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
+<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
 
 	<!-- ******************* The Footer Full-width Widget Area ******************* -->
 
@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="row">
 
-				<?php dynamic_sidebar( 'footerfull' ); ?>
+				<?php dynamic_sidebar( 'sidebar-3' ); ?>
 
 			</div>
 

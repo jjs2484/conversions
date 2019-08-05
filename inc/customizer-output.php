@@ -110,7 +110,7 @@ function conversions_customizer_css_ouput()
 		<?php if (get_theme_mod( 'conversions_sidebar_mvisibility', 'show' ) == 'hide') { ?>
 			/* Sidebar */
 			@media (max-width: 767.98px) {
-				#left-sidebar, #right-sidebar { display: none; }
+				#sidebar-2, #sidebar-1 { display: none; }
 			}
 		<?php } ?>
 	</style>

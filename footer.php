@@ -57,7 +57,7 @@ defined( 'ABSPATH' ) || exit;
 
 </div><!-- wrapper end -->
 
-</div><!-- #page we need this extra closing tag here -->
+</div><!-- #page end -->
 
 <?php wp_footer(); ?>
 

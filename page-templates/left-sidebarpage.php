@@ -22,7 +22,7 @@ get_header();
 			<?php get_template_part( 'partials/sidebar', 'left' ); ?>
 
 			<div
-				class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
+				class="<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
 				id="primary">
 
 				<main class="site-main" id="main" role="main">

@@ -8,7 +8,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if ( ! is_active_sidebar( 'left-sidebar' ) ) {
+if ( ! is_active_sidebar( 'sidebar-2' ) ) {
 	return;
 }
 
@@ -18,9 +18,9 @@ $sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' );
 
 <?php 
 	if ( 'left' === $sidebar_pos ) { ?>
-		<div class="col-md-4 col-xl-3 widget-area" id="left-sidebar" role="complementary">
+		<div class="col-md-4 col-xl-3 widget-area" id="sidebar-2" role="complementary">
 	<?php } 
 ?>
-<?php dynamic_sidebar( 'left-sidebar' ); ?>
+<?php dynamic_sidebar( 'sidebar-2' ); ?>
 
-</div><!-- #left-sidebar -->
+</div><!-- #sidebar-2 -->
