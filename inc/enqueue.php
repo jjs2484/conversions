@@ -77,8 +77,8 @@ function conversions_enqueue_gutenberg() {
 		$body_font = $body_font_pieces[0];
 	
 	} else {
-		$headings_font = "Arial, Helvetica, sans-serif";
-		$body_font = "Arial, Helvetica, sans-serif";
+		$headings_font = "Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont";
+		$body_font = "Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont";
 	}
 
 	$headings_color = esc_html(get_theme_mod('conversions_heading_color', '#222222'));
@@ -166,8 +166,8 @@ function mcc_classic_editor_dynamic_styles( $mceInit ) {
 		$body_font = $body_font_pieces[0];
 		
 	} else {
-		$headings_font = "Arial, Helvetica, sans-serif";
-		$body_font = "Arial, Helvetica, sans-serif";
+		$headings_font = "Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont";
+		$body_font = "Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont";
 	}
 
 	$headings_color = esc_html(get_theme_mod('conversions_heading_color', '#222222'));

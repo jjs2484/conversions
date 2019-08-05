@@ -54,8 +54,8 @@ function conversions_customizer_css_ouput()
 		$body_font = $body_font_pieces[0];
 
 	} else {
-		$headings_font = "Arial, Helvetica, sans-serif";
-		$body_font = "Arial, Helvetica, sans-serif";
+		$headings_font = "Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont";
+		$body_font = "Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont";
 	}
 
 	// fixed header height calc variables
