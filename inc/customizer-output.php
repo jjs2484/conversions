@@ -122,8 +122,8 @@ function conversions_customizer_css_ouput()
 			font-size: <?php echo get_theme_mod('conversions_social_size', '22'); ?>px;
 			color: <?php echo get_theme_mod('conversions_social_link_color', '#2600e6'); ?>;
 		}
-		/* WooCommerce */
 		<?php if (get_theme_mod( 'conversions_wccheckout_columns', 'two-column' ) == 'two-column') { ?>
+			/* WooCommerce */
 			@media screen and (min-width:768px) {
 				body.woocommerce-checkout #customer_details { width: 48%; float: left; margin-right: 1.9%; }
 				body.woocommerce-checkout .col-12.col-md-7.conversions-wcbilling { flex: 0 0 100%; -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; max-width: 100%; }
@@ -131,8 +131,8 @@ function conversions_customizer_css_ouput()
 				body.woocommerce-checkout #order_review, body.woocommerce-checkout #order_review_heading { width: 48%; float: right; margin-right: 0; }
 			}
 		<?php } ?>
-		/* Sidebar */
 		<?php if (get_theme_mod( 'conversions_sidebar_mvisibility', 'show' ) == 'hide') { ?>
+			/* Sidebar */
 			@media (max-width: 767.98px) {
 				#left-sidebar, #right-sidebar { display: none; }
 			}
