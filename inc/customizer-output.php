@@ -9,30 +9,6 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Enqueue google font
- */
-function conversions_gfont_scripts() {
-
-	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
-	if( $google_fonts_state == 'enable_gfonts' ) {
-		// headings font
-		$headings_font = esc_html(get_theme_mod('conversions_headings_fonts', 'Roboto:400,400italic,700,700italic'));
-		wp_enqueue_style( 'conversions-headings-fonts', '//fonts.googleapis.com/css?family='. $headings_font );
-
-		// body font
-		$body_font = esc_html(get_theme_mod('conversions_body_fonts', 'Roboto:400,400italic,700,700italic'));
-		if( $body_font === $headings_font ) {
-			return;
-		}
-		else {
-			wp_enqueue_style( 'conversions-body-fonts', '//fonts.googleapis.com/css?family='. $body_font );
-		}
-	}
-
-}
-add_action( 'wp_enqueue_scripts', 'conversions_gfont_scripts' );
-
-/**
  * Customizer choices style output
  */
 function conversions_customizer_css_ouput()

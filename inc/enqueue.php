@@ -31,21 +31,49 @@ if ( ! function_exists( 'conversions_scripts' ) ) {
 }
 add_action( 'wp_enqueue_scripts', 'conversions_scripts' );
 
+
+/**
+ * Enqueue google fonts on frontend
+ */
+if ( ! function_exists( 'conversions_gfont_scripts' ) ) {
+function conversions_gfont_scripts() {
+
+	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
+	if( $google_fonts_state == 'enable_gfonts' ) {
+		// headings font
+		$headings_font = esc_html(get_theme_mod('conversions_headings_fonts', 'Roboto:400,400italic,700,700italic'));
+		wp_enqueue_style( 'conversions-heading-gfont', '//fonts.googleapis.com/css?family='. $headings_font );
+
+		// body font
+		$body_font = esc_html(get_theme_mod('conversions_body_fonts', 'Roboto:400,400italic,700,700italic'));
+		if( $body_font === $headings_font ) {
+			return;
+		}
+		else {
+			wp_enqueue_style( 'conversions-body-gfont', '//fonts.googleapis.com/css?family='. $body_font );
+		}
+	}
+
+}
+}
+add_action( 'wp_enqueue_scripts', 'conversions_gfont_scripts' );
+
 /**
  * Gutenberg editor block scripts
 */
-if ( ! function_exists( 'conversions_gutenberg_scripts' ) ) {
-	function conversions_gutenberg_scripts() {
+if ( ! function_exists( 'conversions_gb_editor_scripts' ) ) {
+	function conversions_gb_editor_scripts() {
 		wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/js/editor.js' ), true );
 	}
 }
-add_action( 'enqueue_block_editor_assets', 'conversions_gutenberg_scripts' );
+add_action( 'enqueue_block_editor_assets', 'conversions_gb_editor_scripts' );
 
 /**
  * Enqueue Gutenberg editor stylesheet and fonts
  * @action enqueue_block_editor_assets
 */
-function conversions_enqueue_gutenberg() {
+if ( ! function_exists( 'conversions_gb_editor_styles' ) ) {
+function conversions_gb_editor_styles() {
  	
  	// Editor styles
 	wp_register_style( 'conversions-gutenberg', get_stylesheet_directory_uri() . '/build/gutenberg-editor-style.css' );
@@ -115,13 +143,14 @@ function conversions_enqueue_gutenberg() {
 	wp_add_inline_style( 'conversions-gutenberg', $custom_gb_css );
 
 }
-add_action( 'enqueue_block_editor_assets', 'conversions_enqueue_gutenberg' );
+}
+add_action( 'enqueue_block_editor_assets', 'conversions_gb_editor_styles' );
 
 /**
  * Register Google Fonts in classic editor
 */
-if ( ! function_exists( 'mcc_gfonts_editor_style' ) ) {
-	function mcc_gfonts_editor_style() {
+if ( ! function_exists( 'conversions_classic_editor_gfonts' ) ) {
+	function conversions_classic_editor_gfonts() {
 		// Are Google fonts enabled?
 		$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
 		if( $google_fonts_state == 'enable_gfonts' ) {
@@ -143,13 +172,13 @@ if ( ! function_exists( 'mcc_gfonts_editor_style' ) ) {
 		}
 	}
 }
-add_action( 'after_setup_theme', 'mcc_gfonts_editor_style' );
+add_action( 'after_setup_theme', 'conversions_classic_editor_gfonts' );
 
 /**
  * Add theme mods to classic editor
 */
-add_filter('tiny_mce_before_init','mcc_classic_editor_dynamic_styles');
-function mcc_classic_editor_dynamic_styles( $mceInit ) {
+if ( ! function_exists( 'conversions_classic_editor_styles' ) ) {
+function conversions_classic_editor_styles( $mceInit ) {
 
 	// Are Google fonts enabled?
 	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
@@ -183,3 +212,5 @@ function mcc_classic_editor_dynamic_styles( $mceInit ) {
     }
     return $mceInit;
 }
+}
+add_filter('tiny_mce_before_init','conversions_classic_editor_styles');
