@@ -10,71 +10,57 @@ defined( 'ABSPATH' ) || exit;
 
 if ( ! function_exists( 'conversions_scripts' ) ) {
 	/**
-	 * Load theme's JavaScript and CSS sources.
+	 * Load theme's JavaScript and CSS resources.
 	 */
 	function conversions_scripts() {
 		// Get the theme data.
 		$the_theme = wp_get_theme();
 		$theme_version = $the_theme->get( 'Version' );
 		
+		// CSS
 		$css_version = $theme_version . '.' . filemtime(get_template_directory() . '/build/main.min.css');
 		wp_enqueue_style( 'conversions-styles', get_template_directory_uri() . '/build/main.min.css', array(), $css_version );
 
+		// jQuery
 		wp_enqueue_script( 'jquery');
 		
+		// Javascript
 		$js_version = $theme_version . '.' . filemtime(get_template_directory() . '/build/theme.min.js');
 		wp_enqueue_script( 'conversions-scripts', get_template_directory_uri() . '/build/theme.min.js', array(), $js_version, true );
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+
+		// Google fonts
+		$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
+		if( $google_fonts_state == 'enable_gfonts' ) {
+			// headings font
+			$headings_font = esc_html(get_theme_mod('conversions_headings_fonts', 'Roboto:400,400italic,700,700italic'));
+			wp_enqueue_style( 'conversions-heading-gfont', '//fonts.googleapis.com/css?family='. $headings_font );
+
+			// body font
+			$body_font = esc_html(get_theme_mod('conversions_body_fonts', 'Roboto:400,400italic,700,700italic'));
+			if( $body_font === $headings_font ) {
+				return;
+			}
+			else {
+				wp_enqueue_style( 'conversions-body-gfont', '//fonts.googleapis.com/css?family='. $body_font );
+			}
+		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 'conversions_scripts' );
 
-
 /**
- * Enqueue google fonts on frontend
- */
-if ( ! function_exists( 'conversions_gfont_scripts' ) ) {
-function conversions_gfont_scripts() {
-
-	$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
-	if( $google_fonts_state == 'enable_gfonts' ) {
-		// headings font
-		$headings_font = esc_html(get_theme_mod('conversions_headings_fonts', 'Roboto:400,400italic,700,700italic'));
-		wp_enqueue_style( 'conversions-heading-gfont', '//fonts.googleapis.com/css?family='. $headings_font );
-
-		// body font
-		$body_font = esc_html(get_theme_mod('conversions_body_fonts', 'Roboto:400,400italic,700,700italic'));
-		if( $body_font === $headings_font ) {
-			return;
-		}
-		else {
-			wp_enqueue_style( 'conversions-body-gfont', '//fonts.googleapis.com/css?family='. $body_font );
-		}
-	}
-
-}
-}
-add_action( 'wp_enqueue_scripts', 'conversions_gfont_scripts' );
-
-/**
- * Gutenberg editor block scripts
-*/
-if ( ! function_exists( 'conversions_gb_editor_scripts' ) ) {
-	function conversions_gb_editor_scripts() {
-		wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/js/editor.js' ), true );
-	}
-}
-add_action( 'enqueue_block_editor_assets', 'conversions_gb_editor_scripts' );
-
-/**
- * Enqueue Gutenberg editor stylesheet and fonts
+ * Enqueue Gutenberg editor scripts, styles, and fonts
  * @action enqueue_block_editor_assets
 */
-if ( ! function_exists( 'conversions_gb_editor_styles' ) ) {
-function conversions_gb_editor_styles() {
+if ( ! function_exists( 'conversions_gb_editor_scripts' ) ) {
+function conversions_gb_editor_scripts() {
  	
+ 	// Editor scripts
+ 	wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/js/editor.js' ), true );
+
  	// Editor styles
 	wp_register_style( 'conversions-gutenberg', get_stylesheet_directory_uri() . '/build/gutenberg-editor-style.css' );
 	wp_enqueue_style( 'conversions-gutenberg' );
@@ -144,7 +130,7 @@ function conversions_gb_editor_styles() {
 
 }
 }
-add_action( 'enqueue_block_editor_assets', 'conversions_gb_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'conversions_gb_editor_scripts' );
 
 /**
  * Register Google Fonts in classic editor
