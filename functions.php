@@ -19,7 +19,7 @@ $conversions_includes = array(
 	'/customizer.php',						// Customizer additions.
 	'/customizer-social.php',				// Customizer social icons.
 	'/customizer-nav.php',					// Customizer nav filter with options.
-	'/customizer-output.php',				// Customizer output styles.
+	'/customizer-css.php',					// Customizer output CSS styles.
 	'/custom-comments.php',					// Custom Comments file.
 	'/class-wp-bootstrap-navwalker.php',	// Load custom WordPress nav walker.
 	'/woocommerce.php',						// Load WooCommerce functions.
