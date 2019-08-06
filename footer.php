@@ -25,24 +25,32 @@ defined( 'ABSPATH' ) || exit;
 
 					<div class="site-info row">
 
-						<!-- copyright -->
 						<div class="copyright col-md">
-							<?php
-								echo "&copy;" . date("Y") . " - ";
 							
+							&copy; <?php echo date("Y"); ?>
+
+							<?php echo "&nbsp;|&nbsp;"; ?>
+
+							<?php 
 								$copyright_text = esc_html( get_theme_mod( 'conversions_copyright_text', 'conversions' ) );
-								if( $copyright_text ) {
-									echo esc_html( get_theme_mod( 'conversions_copyright_text' ) );
-								} else {
-									echo bloginfo('name');
-								}
-								echo " - <a href='https://themer.com'>Conversions theme</a>";
+								$blog_info = get_bloginfo( 'name' );
 							?>
+							<?php if ( ! empty( $copyright_text ) ) { ?>
+								<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( get_theme_mod( 'conversions_copyright_text' ) ); ?></a>
+							<?php } elseif ( ! empty( $blog_info ) ) { ?>
+								<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+							<?php } ?>
+
+							<?php echo "&nbsp;|&nbsp;"; ?>
+
+							<?php if ( function_exists( 'the_privacy_policy_link' ) ) {
+								the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
+							} ?>
+
 						</div>
 						
 						<?php
-							// social icons - /inc/customizer-social.php
-							do_action ( 'conversions_output_social' ); 
+							do_action ( 'conversions_output_social' ); // inc/customizer-social.php 
 						?>
 
 					</div><!-- .site-info -->
