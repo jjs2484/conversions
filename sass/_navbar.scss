@@ -139,7 +139,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   }
   .modal-header {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     border-bottom: 0;
   }
   .modal-title {
@@ -147,7 +147,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     margin-bottom: .5em;
   }
   .modal-body {
-    justify-content: start;
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     align-items: center;

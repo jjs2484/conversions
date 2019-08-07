@@ -31,16 +31,16 @@ module.exports = function(grunt) {
       			}
     		}
 		},
-		autoprefixer:{
-			options: {
-  				browsers: ['last 10 versions']
-			},
-    		dist:{
-        		files:{
-          			'build/main.css':'build/main.css'
-        		}
-      		}
-    	},
+    	postcss: {
+  			options: {
+    			processors: [
+      				require('autoprefixer')({overrideBrowserslist: ['last 10 version']})
+    			]
+  			},
+  			dist: {
+    			src: 'build/main.css'
+  			}
+		},
   		cssmin: {
   			target: {
    				files: {
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 		watch: {
   			scripts: {
 				files: ['sass/*.scss'],
-				tasks: ['sass', 'autoprefixer', 'cssmin'],
+				tasks: ['sass', 'postcss', 'cssmin'],
   			},
 		},
 	});
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
 	// Load plugins
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('@lodder/grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -68,7 +68,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('concat-js', ['concat:js']);
 	grunt.registerTask('uglify-js', ['uglify']);
 	grunt.registerTask('compile-sass', ['sass']);
-	grunt.registerTask('prefix-css', ['autoprefixer']);
+	grunt.registerTask('prefix-css', ['postcss']);
 	grunt.registerTask('min-css', ['cssmin']);
 	
 	// Run All Tasks

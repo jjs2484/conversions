@@ -13,7 +13,7 @@
   .footer-widget {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     @media (max-width: 576px) {
       margin-bottom: 0.75rem;
