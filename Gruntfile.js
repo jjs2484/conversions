@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		concat: {
 			js: {
-				src: ['src/js/bootstrap4/bootstrap.bundle.js','src/js/skip-link-focus-fix.js','js/theme.js'],
+				src: ['src/js/bootstrap4/bootstrap.bundle.js','src/js/skip-link-focus-fix.js', 'src/js/slick/slick.js', 'js/theme.js'],
 				dest: 'build/theme.js'
 			}
 		},

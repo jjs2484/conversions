@@ -4,6 +4,121 @@
   overflow: hidden;
 }
 
+#homepage-wrapper.wrapper {
+  padding: 0;
+
+  // Hero section
+  section#c-hero {
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 83vh;
+    padding: 2rem 0;
+    h1 {
+      color: white;
+    }
+    .c-hero-video-btn {
+      &.btn-circle {
+        width: 50px;
+        height: 50px;
+        line-height: 49px;
+        font-size: 1.05rem;
+        text-align: center;
+        padding: 0;
+        border-radius: 50%;
+        i {
+          color: #444;
+        }
+      }
+    }
+    #c-hero-modal {
+      .modal-dialog {
+        max-width: 800px;
+        margin: 100px auto 10px;
+      }
+      .modal-body {
+        padding:0px;
+      }
+      .close {
+        position:absolute;
+        right:-30px;
+        top:0;
+        z-index:999;
+        font-size:2rem;
+        font-weight: normal;
+        color:#fff;
+        opacity:1;
+      }
+    }
+  }
+
+  // Clients section
+  section#c-clients {
+    img.client {
+      width: 6rem;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .slick-slider {
+      .slick-prev {
+        left: -10px;
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          content: "\f053";
+          color: #aaa;
+          opacity: 1;
+        }
+      }
+      .slick-next {
+        right: -10px;
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          content:  "\f054";
+          color: #aaa;
+          opacity: 1;       
+        }
+      }
+      .slick-slide {
+        text-align: center;
+        &::before {
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+        }
+        img {
+          vertical-align: middle;
+          display: inline-block;
+        }   
+      }
+    } 
+  }
+
+  // Icon block section
+  section#c-icon-block {
+    &.container-fluid {
+      @media (max-width: 767.98px) {
+        max-width: 540px;
+      }
+    }
+    .h6, h6 {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .c-icon {
+      i {
+        font-size: 3rem;
+      }
+    }
+  }
+
+}
+.modal-open #c-hero-modal.modal {
+  overflow-y: scroll;
+}
+
 // Page and Post fullscreen featured image
 .conversions-hero-cover {
   width: 100vw;

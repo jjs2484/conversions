@@ -60,7 +60,7 @@ function conversions_customizer_css_ouput()
 		/* Header styles */
 		<?php if (get_theme_mod( 'conversions_header_position', 'fixed-top' ) == 'fixed-top') { ?>
 			/* Fixed header height */
-			#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper { 
+			#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper { 
 				margin-top: <?php echo $total_header_height; ?>px; 
 			}
 		<?php } ?>
