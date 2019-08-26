@@ -19,7 +19,7 @@
     h1 {
       color: white;
     }
-    .c-hero-video-btn {
+    .c-hero__video-btn {
       &.btn-circle {
         width: 50px;
         height: 50px;
@@ -33,7 +33,7 @@
         }
       }
     }
-    #c-hero-modal {
+    #c-hero__bs-modal {
       .modal-dialog {
         max-width: 800px;
         margin: 100px auto 10px;

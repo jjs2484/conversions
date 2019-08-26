@@ -12,3 +12,8 @@ html #wpadminbar {
     top: 32px;
   }
 }
+
+// Lower z-index when fancybox is open
+#wpadminbar.compensate-for-scrollbar {
+	z-index: 99991;
+}

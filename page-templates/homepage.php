@@ -32,13 +32,18 @@ get_header();
     				<!-- Button link -->
     				<a href="#" class="btn btn-primary btn-lg">Large button</a>
     				
-    				<!-- Button modal video -->
-					<button type="button" class="c-hero-video-btn btn btn-light btn-circle ml-2" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#c-hero-modal">
+    				<!-- fancybox button modal video -->
+    				<a data-fancybox="c-hero__fb-video" class="c-hero__video-btn btn btn-light btn-circle ml-2" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+    					<i class="fa fa-play"></i>
+					</a>
+
+					<!-- bootstrap button modal video -->
+					<button type="button" class="c-hero__video-btn btn btn-light btn-circle ml-2" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#c-hero__bs-modal">
 						<i class="fa fa-play"></i>
             		</button>
 
 					<!-- Modal -->
-					<div class="modal fade" id="c-hero-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal fade" id="c-hero__bs-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   						<div class="modal-dialog" role="document">
     						<div class="modal-content">
 								<div class="modal-body">

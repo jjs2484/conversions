@@ -86,25 +86,25 @@ jQuery(function () {
 });
 
 /**
- * Hero youtube modal 
+ * Hero YouTube modal 
 */
 jQuery(document).ready(function() {
 
     // Gets the video src from the data-src on each button
     var $videoSrc;  
-    jQuery('.c-hero-video-btn').click(function() {
+    jQuery('.c-hero__video-btn').click(function() {
         $videoSrc = jQuery(this).data( "src" );
     });
     console.log($videoSrc);
 
     // when the modal is opened autoplay it  
-    jQuery('#c-hero-modal').on('shown.bs.modal', function (e) {
+    jQuery('#c-hero__bs-modal').on('shown.bs.modal', function (e) {
         // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-        jQuery("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+        jQuery("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0&amp;rel=0" ); 
     })
 
     // stop playing the youtube video when I close the modal
-    jQuery('#c-hero-modal').on('hide.bs.modal', function (e) {
+    jQuery('#c-hero__bs-modal').on('hide.bs.modal', function (e) {
         // a poor man's stop video
         jQuery("#video").attr('src',$videoSrc); 
     }) 
@@ -112,42 +112,58 @@ jQuery(document).ready(function() {
 // document ready  
 });
 
+/**
+ * Initialize Slick client section
+*/
+jQuery(document).ready(function(){
+    jQuery('.c-clients__carousel').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+            }
+        },
+        {
+            breakpoint: 554,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+            }
+        }
+        ]
+    });
+});
 
-  jQuery(document).ready(function(){
-  jQuery('.c-clients__carousel').slick({
-    arrows: true,
-  dots: false,
-  infinite: true,
-  slidesToShow: 5,
-  slidesToScroll: 5,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-      }
+/**
+ * Initialize fancybox options
+*/
+jQuery('[data-fancybox="c-hero__fb-video"]').fancybox({
+    // Options go here
+    youtube : {
+        showinfo : 0,
+        autoplay : 1,
+        rel : 0
     },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-      }
+    onInit : function() {
+        jQuery("#wrapper-navbar").addClass("compensate-for-scrollbar");
+        jQuery("#wpadminbar").addClass("compensate-for-scrollbar");
     },
-    {
-      breakpoint: 554,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      }
+    afterClose : function() {
+        jQuery("#wrapper-navbar").removeClass("compensate-for-scrollbar");
+        jQuery("#wpadminbar").removeClass("compensate-for-scrollbar");
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-    
-
-
-  });
 });
