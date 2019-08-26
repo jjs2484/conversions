@@ -32,10 +32,10 @@ get_header();
 				// echo inline styles for background image
     			echo '<style type="text/css">';
 	    		echo '.conversions-hero-cover {background-image: url('. $medium[0] .');}';
-	    		echo '@media (min-width: 300px) { .conversions-hero-cover {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('.  $medium_large[0] .');} }';
-	    		echo '@media (min-width: 768px) { .conversions-hero-cover {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $large[0] .');} }';
-	    		echo '@media (min-width: 1024px) { .conversions-hero-cover {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $fullscreen[0] .');} }';
-	    		echo '@media (min-width: 1920px) { .conversions-hero-cover {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $full[0] .');} }';
+	    		echo '@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('.  $medium_large[0] .');} }';
+	    		echo '@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $large[0] .');} }';
+	    		echo '@media (min-width: 1024px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $fullscreen[0] .');} }';
+	    		echo '@media (min-width: 1920px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $full[0] .');} }';
     			echo '</style>';
 
     			// echo html for background image
