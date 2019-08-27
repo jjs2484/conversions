@@ -16519,20 +16519,6 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
       border-radius: 50%; }
       #homepage-wrapper.wrapper section#c-hero .c-hero__video-btn.btn-circle i {
         color: #444; }
-    #homepage-wrapper.wrapper section#c-hero #c-hero__bs-modal .modal-dialog {
-      max-width: 800px;
-      margin: 100px auto 10px; }
-    #homepage-wrapper.wrapper section#c-hero #c-hero__bs-modal .modal-body {
-      padding: 0px; }
-    #homepage-wrapper.wrapper section#c-hero #c-hero__bs-modal .close {
-      position: absolute;
-      right: -30px;
-      top: 0;
-      z-index: 999;
-      font-size: 2rem;
-      font-weight: normal;
-      color: #fff;
-      opacity: 1; }
   #homepage-wrapper.wrapper section#c-clients img.client {
     width: 6rem;
     height: auto;
@@ -16569,9 +16555,12 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     font-weight: bold; }
   #homepage-wrapper.wrapper section#c-icon-block .c-icon i {
     font-size: 3rem; }
-
-.modal-open #c-hero-modal.modal {
-  overflow-y: scroll; }
+  @media (min-width: 768px) {
+    #homepage-wrapper.wrapper section#c-cta .w-md-80 {
+      width: 80%; } }
+  @media (min-width: 992px) {
+    #homepage-wrapper.wrapper section#c-cta .w-lg-60 {
+      width: 60%; } }
 
 .conversions-hero-cover {
   width: 100vw;

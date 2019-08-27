@@ -33,25 +33,6 @@
         }
       }
     }
-    #c-hero__bs-modal {
-      .modal-dialog {
-        max-width: 800px;
-        margin: 100px auto 10px;
-      }
-      .modal-body {
-        padding:0px;
-      }
-      .close {
-        position:absolute;
-        right:-30px;
-        top:0;
-        z-index:999;
-        font-size:2rem;
-        font-weight: normal;
-        color:#fff;
-        opacity:1;
-      }
-    }
   }
 
   // Clients section
@@ -114,9 +95,20 @@
     }
   }
 
-}
-.modal-open #c-hero-modal.modal {
-  overflow-y: scroll;
+  // Call-to-action section
+  section#c-cta {
+    .w-md-80 {
+      @media (min-width: 768px) {
+        width: 80%;
+      }
+    }
+    .w-lg-60 {
+      @media (min-width: 992px) {
+        width: 60%;
+      }
+    }
+  }
+
 }
 
 // Page and Post fullscreen featured image

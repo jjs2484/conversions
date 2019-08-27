@@ -37,41 +37,19 @@ get_header();
     					<i class="fa fa-play"></i>
 					</a>
 
-					<!-- Bootstrap button video modal -->
-					<button type="button" class="c-hero__video-btn btn btn-light btn-circle ml-2" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#c-hero__bs-modal">
-						<i class="fa fa-play"></i>
-            		</button>
-
-					<!-- Bootstrap video modal -->
-					<div class="modal fade" id="c-hero__bs-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  						<div class="modal-dialog" role="document">
-    						<div class="modal-content">
-								<div class="modal-body">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>        
-        							<!-- 16:9 aspect ratio -->
-									<div class="embed-responsive embed-responsive-16by9">
-  										<iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
   				</div>
   			</div>
 		</div>
 	</section>
 
 	<!-- Clients section -->
-	<section id="c-clients" style="background-color: #eee;">
+	<section id="c-clients" class="border border-right-0 border-left-0" style="background-color: #F3F3F3;">
 		<div class="container-fluid">
 			<div class="row">
   				<div class="col-12">
 
   					<!-- Client logos -->
-					<div class="c-clients__carousel text-center mb-0 py-3">
+					<div class="c-clients__carousel text-center mb-0 py-4">
   						<div class="c-clients__item py-6 px-3">
     						<img class="client" src="//i.imgur.com/NpmZS3w.png" alt="Image Description">
   						</div>
@@ -178,6 +156,31 @@ get_header();
 
 		</div>
 	</section>
+
+	<!-- Call-to-action section -->
+	<section id="c-cta" style="background-color: #F3F3F3;">
+		<div class="container-fluid">
+			<div class="row">
+  				<div class="col-12">
+
+					<div class="w-md-80 w-lg-60 text-center py-5 mx-auto">
+  						<!-- Call-to-action text -->
+  						<div class="mb-4">
+    						<h2 class="h3">Get started today!</h2>
+    						<p class="text-muted">Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?</p>
+  						</div>
+  						<!-- Call-to-action button -->
+  						<a class="btn btn-primary btn-lg mb-2 mb-md-0 mr-md-2" href="#">
+    						Get Access
+  						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
 
 </div><!-- Wrapper end -->
 

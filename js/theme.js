@@ -86,33 +86,6 @@ jQuery(function () {
 });
 
 /**
- * Hero YouTube modal 
-*/
-jQuery(document).ready(function() {
-
-    // Gets the video src from the data-src on each button
-    var $videoSrc;  
-    jQuery('.c-hero__video-btn').click(function() {
-        $videoSrc = jQuery(this).data( "src" );
-    });
-    console.log($videoSrc);
-
-    // when the modal is opened autoplay it  
-    jQuery('#c-hero__bs-modal').on('shown.bs.modal', function (e) {
-        // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-        jQuery("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0&amp;rel=0" ); 
-    })
-
-    // stop playing the youtube video when I close the modal
-    jQuery('#c-hero__bs-modal').on('hide.bs.modal', function (e) {
-        // a poor man's stop video
-        jQuery("#video").attr('src',$videoSrc); 
-    }) 
-
-// document ready  
-});
-
-/**
  * Initialize Slick client section
 */
 jQuery(document).ready(function(){
