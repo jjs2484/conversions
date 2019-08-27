@@ -157,6 +157,105 @@ get_header();
 		</div>
 	</section>
 
+
+	<!-- Pricing section -->
+	<section id="c-pricing">
+		<div class="container-fluid my-5">
+			<div class="row justify-content-lg-center">
+
+				<!-- Pricing table #1 -->
+  				<div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+    				<div class="card">
+      					<header class="card-header bg-white text-center p-4">
+        					<h4 class="h5 text-primary mb-3">Company</h4>
+        					<span class="d-block">
+          						<span class="display-4">
+            						$69
+          						</span>
+          						<span class="d-block text-secondary">
+          							per month
+          						</span>
+        					</span>
+      					</header>
+      					<div class="card-body pt-4 pb-5 px-5">
+        					<ul class="list-unstyled mb-4">
+          						<li class="d-flex align-items-center py-2">
+          							<span class="fa fa-check mr-3"></span>
+          							Community support
+          						</li>
+          						<li class="d-flex align-items-center py-2">
+          							<span class="fa fa-check mr-3"></span>
+          							400+ pages
+          						</li>
+          						<li class="d-flex align-items-center py-2">
+          							<span class="fa fa-check mr-3"></span>
+          							100+ header variations
+          						</li>
+          						<li class="d-flex align-items-center py-2">
+          							<span class="fa fa-check mr-3"></span>
+          							20+ home page options
+          						</li>
+        					</ul>
+							<button type="button" class="btn btn-block btn-primary">
+								Start Free Trial
+							</button>
+      					</div>
+    				</div>
+  				</div>
+
+  				<!-- Pricing table #2 -->
+  				<div class="col-sm-6 col-lg-4">
+    				<div class="card">
+      					<header class="card-header bg-white text-center p-4">
+        					<h4 class="h5 text-success mb-3">Enterprise</h4>
+        					<span class="d-block">
+          						<span class="display-4">
+            						$69
+          						</span>
+          						<span class="d-block text-secondary">
+          							per month
+          						</span>
+        					</span>
+      					</header>
+      					<div class="card-body pt-4 pb-5 px-5">
+        					<ul class="list-unstyled mb-4">
+          						<li class="d-flex align-items-center py-2">
+          							<span class="fa fa-check mr-3"></span>
+          							Community support
+          						</li>
+          						<li class="d-flex align-items-center py-2">
+          							<span class="fa fa-check mr-3"></span>
+          							400+ pages
+          						</li>
+          						<li class="d-flex align-items-center py-2">
+          							<span class="fa fa-check mr-3"></span>
+          							100+ header variations
+          						</li>
+          						<li class="d-flex align-items-center py-2">
+          							<span class="fa fa-check mr-3"></span>
+          							20+ home page options
+          						</li>
+          						<li class="d-flex align-items-center py-2">
+          							<span class="fa fa-check mr-3"></span>
+          							Priority Support
+          						</li>
+          						<li class="d-flex align-items-center py-2">
+          							<span class="fa fa-check mr-3"></span>
+          							More features
+          						</li>
+        					</ul>
+        					<button type="button" class="btn btn-block btn-success">
+        						Contact Us
+        					</button>
+      					</div>
+    				</div>
+  				</div>
+
+			</div>
+		</div>
+	</section>
+
+
 	<!-- Call-to-action section -->
 	<section id="c-cta" style="background-color: #F3F3F3;">
 		<div class="container-fluid">
