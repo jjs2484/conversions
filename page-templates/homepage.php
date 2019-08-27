@@ -32,17 +32,17 @@ get_header();
     				<!-- Button link -->
     				<a href="#" class="btn btn-primary btn-lg">Large button</a>
     				
-    				<!-- fancybox button modal video -->
+    				<!-- Fancybox button modal video -->
     				<a data-fancybox="c-hero__fb-video" class="c-hero__video-btn btn btn-light btn-circle ml-2" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
     					<i class="fa fa-play"></i>
 					</a>
 
-					<!-- bootstrap button modal video -->
+					<!-- Bootstrap button video modal -->
 					<button type="button" class="c-hero__video-btn btn btn-light btn-circle ml-2" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#c-hero__bs-modal">
 						<i class="fa fa-play"></i>
             		</button>
 
-					<!-- Modal -->
+					<!-- Bootstrap video modal -->
 					<div class="modal fade" id="c-hero__bs-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   						<div class="modal-dialog" role="document">
     						<div class="modal-content">
@@ -70,6 +70,7 @@ get_header();
 			<div class="row">
   				<div class="col-12">
 
+  					<!-- Client logos -->
 					<div class="c-clients__carousel text-center mb-0 py-3">
   						<div class="c-clients__item py-6 px-3">
     						<img class="client" src="//i.imgur.com/NpmZS3w.png" alt="Image Description">
@@ -93,15 +94,17 @@ get_header();
 		</div>
 	</section>
 
-	<!-- Icon Blocks -->
+	<!-- Features icon block -->
 	<section id="c-icon-block" class="container-fluid my-5">
 		<div class="row">
 			
+			<!-- Title -->
 			<div class="col-12">
 				<h2>Icon Block Section</h2>
 				<hr>
 			</div>
 			
+			<!-- Icon block #1 -->
 			<div class="col-md-6 mb-5">
 				<div class="media pr-lg-4">
 					<span class="c-icon mr-3 mt-2">
@@ -118,6 +121,7 @@ get_header();
 				</div>
 			</div>
 			
+			<!-- Icon block #2 -->
 			<div class="col-md-6 mb-5">
 				<div class="media pl-lg-4">
 					<span class="c-icon mr-3 mt-2">
@@ -134,8 +138,11 @@ get_header();
 				</div>
 			</div>
 
+			<!-- Icon block separator -->
 			<div class="w-100"></div>
+			<!-- End separator -->
 
+			<!-- Icon block #3 -->
 			<div class="col-md-6 mb-5">
 				<div class="media pr-lg-4">
 					<span class="c-icon mr-3 mt-2">
@@ -152,6 +159,7 @@ get_header();
 				</div>
 			</div>
 
+			<!-- Icon block #4 -->
 			<div class="col-md-6 mb-5">
 				<div class="media pl-lg-4">
 					<span class="c-icon mr-3 mt-2">
