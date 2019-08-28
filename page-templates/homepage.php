@@ -78,8 +78,12 @@ get_header();
 			
 			<!-- Title -->
 			<div class="col-12">
-				<h2>Icon Block Section</h2>
-				<hr>
+				<div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
+					<h3>Features section</h3>
+					<p class="text-muted">
+						We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
+					</p>
+				</div>
 			</div>
 			
 			<!-- Icon block #1 -->
@@ -159,9 +163,19 @@ get_header();
 
 
 	<!-- Pricing section -->
-	<section id="c-pricing">
+	<section id="c-pricing" style="background-color: #F3F3F3;">
 		<div class="container-fluid py-5">
-			<div class="row justify-content-lg-center">
+			<div class="row justify-content-sm-center">
+
+				<!-- Title -->
+				<div class="col-12">
+					<div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
+						<h3>Pricing table section</h3>
+						<p class="text-muted">
+							We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
+						</p>
+					</div>
+				</div>
 
 				<!-- Pricing table #1 -->
   				<div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
@@ -260,7 +274,17 @@ get_header();
 	<!-- News Section -->
 	<section id="c-news">
 		<div class="container-fluid py-5">
-			<div class="row justify-content-lg-center">
+			<div class="row justify-content-sm-center">
+
+			<!-- Title -->
+			<div class="col-12">
+				<div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
+					<h3>Latest News</h3>
+					<p class="text-muted">
+						We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
+					</p>
+				</div>
+			</div>
 
     		<?php
     			// Get latest posts

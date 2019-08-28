@@ -16495,6 +16495,14 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   padding: 30px 0 3em;
   overflow: hidden; }
 
+@media (min-width: 768px) {
+  .w-md-80 {
+    width: 80%; } }
+
+@media (min-width: 992px) {
+  .w-lg-60 {
+    width: 59%; } }
+
 #homepage-wrapper.wrapper {
   padding: 0; }
   #homepage-wrapper.wrapper section#c-hero {
@@ -16555,12 +16563,6 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     font-weight: bold; }
   #homepage-wrapper.wrapper section#c-icon-block .c-icon i {
     font-size: 3rem; }
-  @media (min-width: 768px) {
-    #homepage-wrapper.wrapper section#c-cta .w-md-80 {
-      width: 80%; } }
-  @media (min-width: 992px) {
-    #homepage-wrapper.wrapper section#c-cta .w-lg-60 {
-      width: 60%; } }
   @media (max-width: 991.98px) {
     #homepage-wrapper.wrapper section#c-news div.col-sm-6.col-lg-4.mb-4.mb-lg-3:nth-of-type(3) {
       display: none; } }
