@@ -43,7 +43,7 @@ get_header();
 	</section>
 
 	<!-- Clients section -->
-	<section id="c-clients" class="border border-right-0 border-left-0" style="background-color: #F3F3F3;">
+	<section id="c-clients" class="border-top border-bottom" style="background-color: #F3F3F3;">
 		<div class="container-fluid">
 			<div class="row">
   				<div class="col-12">
@@ -73,7 +73,7 @@ get_header();
 	</section>
 
 	<!-- Features icon block -->
-	<section id="c-icon-block" class="container-fluid my-5">
+	<section id="c-icon-block" class="container-fluid py-5">
 		<div class="row">
 			
 			<!-- Title -->
@@ -160,12 +160,12 @@ get_header();
 
 	<!-- Pricing section -->
 	<section id="c-pricing">
-		<div class="container-fluid my-5">
+		<div class="container-fluid py-5">
 			<div class="row justify-content-lg-center">
 
 				<!-- Pricing table #1 -->
   				<div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-    				<div class="card">
+    				<div class="card shadow">
       					<header class="card-header bg-white text-center p-4">
         					<h4 class="h5 text-primary mb-3">Company</h4>
         					<span class="d-block">
@@ -205,7 +205,7 @@ get_header();
 
   				<!-- Pricing table #2 -->
   				<div class="col-sm-6 col-lg-4">
-    				<div class="card">
+    				<div class="card shadow">
       					<header class="card-header bg-white text-center p-4">
         					<h4 class="h5 text-success mb-3">Enterprise</h4>
         					<span class="d-block">
@@ -256,6 +256,59 @@ get_header();
 	</section>
 
 
+
+	<!-- News Section -->
+	<section id="c-news">
+		<div class="container-fluid py-5">
+			<div class="row justify-content-lg-center">
+
+    		<?php
+    			// Get latest posts
+    			$recent_posts = wp_get_recent_posts(array(
+        			'numberposts' => 3, // Number of recent posts thumbnails to display
+        			'post_status' => 'publish' // Show only the published posts
+    			)); 
+    		?>
+    
+    		
+    		<?php foreach($recent_posts as $post) : ?>
+
+  				<!-- Post item -->
+  				<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
+    				<article class="card border-0 shadow h-100 mb-3">
+      					<!-- Post image -->
+      					<a class="c-news__img-link" href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>" title="<?php echo $post['post_title'] ?>">
+      						<?php echo get_the_post_thumbnail( $post['ID'], 'homepage-news', array( 'class' => 'card-img-top' ) ); ?>
+      					</a>
+      					<div class="card-body pb-1">
+        					<h3 class="h5">
+          						<a href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>">
+          							<?php echo esc_html( $post['post_title'] ); ?>
+          						</a>
+        					</h3>
+        					<p class="text-muted">
+          						<?php echo wp_trim_words( $post[ 'post_content' ], 15, '...' ); ?>
+          					</p>
+      					</div>
+      					<div class="card-footer text-muted border-0 d-flex justify-content-between align-items-center small">
+        					<div class="d-flex align-items-center">
+          						<?php echo esc_html( the_author_meta( 'display_name', $post['post_author'] ) ); ?>
+        					</div>
+        					<div class="d-flex align-items-center">
+          						<?php echo esc_html( date( 'F d', strtotime( $post['post_date'] ) ) ); ?>
+        					</div>
+      					</div>
+    				</article>
+  				</div>
+  				<!-- End Post Item -->
+
+  			<?php endforeach; wp_reset_query(); ?>
+
+			</div>
+		</div>
+	</section>
+
+
 	<!-- Call-to-action section -->
 	<section id="c-cta" style="background-color: #F3F3F3;">
 		<div class="container-fluid">
@@ -278,6 +331,7 @@ get_header();
 			</div>
 		</div>
 	</section>
+
 
 
 

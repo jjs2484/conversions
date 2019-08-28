@@ -56,6 +56,9 @@ if ( ! function_exists( 'conversions_setup' ) ) {
 		// Add fullscreen thumbnail size
 		add_image_size( 'fullscreen', 1920, 9999 );
 
+		// Add 
+		add_image_size( 'homepage-news', 9999, 200 );
+
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'conversions_custom_background_args', array(
 			'default-color' => 'ffffff',

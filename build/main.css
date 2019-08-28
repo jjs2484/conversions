@@ -16561,6 +16561,13 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   @media (min-width: 992px) {
     #homepage-wrapper.wrapper section#c-cta .w-lg-60 {
       width: 60%; } }
+  @media (max-width: 991.98px) {
+    #homepage-wrapper.wrapper section#c-news div.col-sm-6.col-lg-4.mb-4.mb-lg-3:nth-of-type(3) {
+      display: none; } }
+  #homepage-wrapper.wrapper section#c-news a.c-news__img-link:hover {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
 
 .conversions-hero-cover {
   width: 100vw;
