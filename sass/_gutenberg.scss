@@ -55,12 +55,12 @@
 // Gutenberg color options
 // -- see editor-color-palette in functions.php
 $colors: (
-  'primary' : #5533ff,
+  'primary' : #007BFF,
   'secondary' : #6c757d,
-  'success' : #28a745,
+  'success' : #019875,
   'danger' : #dc3545,
   'info' : #17a2b8,
-  'dark' : #343a40,
+  'dark' : #151B26,
 );
 
 @each $name, $color in $colors {

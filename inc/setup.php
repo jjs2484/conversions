@@ -82,7 +82,7 @@ if ( ! function_exists( 'conversions_setup' ) ) {
 			array(
 				'name'  => __( 'Primary', 'conversions' ),
 				'slug'  => 'primary',
-				'color'	=> '#5533ff',
+				'color'	=> '#007BFF',
 			),
 			array(
 				'name'  => __( 'Secondary', 'conversions' ),
@@ -92,7 +92,7 @@ if ( ! function_exists( 'conversions_setup' ) ) {
 			array(
 				'name'  => __( 'Success', 'conversions' ),
 				'slug'  => 'success',
-				'color' => '#28a745',
+				'color' => '#019875',
 			),
 			array(
 				'name'	=> __( 'Danger', 'conversions' ),
@@ -107,7 +107,7 @@ if ( ! function_exists( 'conversions_setup' ) ) {
 			array(
 				'name'	=> __( 'Dark', 'conversions' ),
 				'slug'	=> 'dark',
-				'color'	=> '#343a40',
+				'color'	=> '#151B26',
 			),
 		) );
 
