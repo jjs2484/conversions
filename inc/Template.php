@@ -84,7 +84,7 @@ class Template
 			sprintf(
 				/* translators: %s: Name of current post */
 				esc_html__( 'Edit %s', 'conversions' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				the_title( '<span class="sr-only">"', '"</span>', false )
 			),
 			'<span class="edit-link">',
 			'</span>'
