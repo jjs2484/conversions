@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="entry-meta">
 
-				<?php conversions_posted_on(); ?>
+				<?php conversions()->template->posted_on(); ?>
 
 			</div><!-- .entry-meta -->
 
@@ -36,7 +36,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<footer class="entry-footer">
 
-		<?php conversions_entry_footer(); ?>
+		<?php conversions()->template->entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

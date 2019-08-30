@@ -38,7 +38,7 @@ switch( $header_color_scheme )
 		break;
 	case 'info':
 		$header_color_scheme = 'navbar-dark bg-info';
-		break;		
+		break;
 	default:
 		$header_color_scheme = 'navbar-dark bg-dark';
 }
@@ -89,9 +89,9 @@ if ($mobile_nav_type == 'collapse') {
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
-						'walker'          => new conversions_WP_Bootstrap_Navwalker(),
+						'walker'          => new conversions\WP_Bootstrap_Navwalker(),
 					)
-				); 
+				);
 			?>
 
 		</div><!-- .container -->

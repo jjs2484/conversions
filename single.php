@@ -59,7 +59,7 @@ get_header();
 
 					<?php get_template_part( 'partials/content', 'single' ); ?>
 
-						<?php conversions_post_nav(); ?>
+						<?php conversions()->template->post_nav(); ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.

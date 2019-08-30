@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php if ( 'post' == get_post_type() ) : ?>
 
 			<div class="entry-meta">
-				<?php conversions_posted_on(); ?>
+				<?php conversions()->template->posted_on(); ?>
 			</div><!-- .entry-meta -->
 
 		<?php endif; ?>
@@ -46,7 +46,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<footer class="entry-footer">
 
-		<?php conversions_entry_footer(); ?>
+		<?php conversions()->template->entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

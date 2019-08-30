@@ -1,22 +1,23 @@
 <?php
-/**
- * Declaring widgets
- *
- * @package conversions
- */
 
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+namespace conversions;
 
 /**
- * Add filter to the parameters passed to a widget's display callback.
- * The filter is evaluated on both the front and the back end!
- *
- * @link https://developer.wordpress.org/reference/hooks/dynamic_sidebar_params/
- */
-add_filter( 'dynamic_sidebar_params', 'conversions_widget_classes' );
+	@brief		Widget functions.
+	@since		2019-08-15 23:01:47
+**/
+class Widgets
+{
+	/**
+		@brief		Constructor.
+		@since		2019-08-15 23:01:47
+	**/
+	public function __construct()
+	{
+		add_action( 'widgets_init', [ $this, 'widgets_init' ] );
+		add_filter( 'dynamic_sidebar_params', [ $this, 'dynamic_sidebar_params' ] );
+	}
 
-if ( ! function_exists( 'conversions_widget_classes' ) ) {
 	/**
 	 * Count number of visible widgets in a sidebar and add classes to widgets accordingly,
 	 * so widgets can be displayed one, two, three or four per row.
@@ -46,8 +47,8 @@ if ( ! function_exists( 'conversions_widget_classes' ) ) {
 	 * }
 	 * @return array $params
 	 */
-	function conversions_widget_classes( $params ) {
-
+	public function dynamic_sidebar_params( $params )
+	{
 		global $sidebars_widgets;
 
 		/*
@@ -81,17 +82,14 @@ if ( ! function_exists( 'conversions_widget_classes' ) ) {
 		}
 
 		return $params;
-
 	}
-} // endif function_exists( 'conversions_widget_classes' ).
 
-add_action( 'widgets_init', 'conversions_widgets_init' );
-
-if ( ! function_exists( 'conversions_widgets_init' ) ) {
 	/**
-	 * Initializes themes widgets.
-	 */
-	function conversions_widgets_init() {
+		@brief		widgets_init
+		@since		2019-08-18 20:09:38
+	**/
+	public function widgets_init()
+	{
 		register_sidebar(
 			array(
 				'name'          => __( 'Right Sidebar', 'conversions' ),
@@ -127,6 +125,6 @@ if ( ! function_exists( 'conversions_widgets_init' ) ) {
 				'after_title'   => '</h3>',
 			)
 		);
-
 	}
-} // endif function_exists( 'conversions_widgets_init' )
+}
+conversions()->widgets = new Widgets();

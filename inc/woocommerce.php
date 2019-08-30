@@ -1,27 +1,44 @@
 <?php
+
+namespace conversions;
+
 /**
- * Add WooCommerce support
- *
- * @package conversions
- */
-
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
-
-add_action( 'after_setup_theme', 'conversions_woocommerce_support' );
-if ( ! function_exists( 'conversions_woocommerce_support' ) ) {
+	@brief		WooCommerce functionality.
+	@since		2019-08-06 21:44:43
+**/
+class WooCommerce
+{
 	/**
-	 * Declares WooCommerce theme support.
-	 */
-	function conversions_woocommerce_support() {
+		@brief		Constructor.
+		@since		2019-08-06 21:45:26
+	**/
+	public function __construct()
+	{
+		/**
+		* First unhook the WooCommerce wrappers
+		*/
+		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
+		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );
 
+		add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ] );
+		add_action( 'woocommerce_before_main_content',	[ $this, 'woocommerce_before_main_content' ] );
+		add_action( 'woocommerce_after_main_content',	[ $this, 'woocommerce_after_main_content' ] );
+
+		$this->review_ratings();
+	}
+
+	/**
+		@brief		Declares WooCommerce theme support.
+		@since		2019-08-06 21:46:05
+	**/
+	function after_setup_theme()
+	{
 		// Is WooCommerce active?
-        if ( ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-            return;
-        }
+		if ( ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) )
+			return;
 
- 		// Add theme support
-        add_theme_support('woocommerce');
+		// Add theme support
+		add_theme_support('woocommerce');
 
 		// Add New Woocommerce 3.0.0 Product Gallery support
 		add_theme_support( 'wc-product-gallery-lightbox' );
@@ -29,52 +46,50 @@ if ( ! function_exists( 'conversions_woocommerce_support' ) ) {
 		add_theme_support( 'wc-product-gallery-slider' );
 
 		// hook in and customizer form fields.
-		add_filter( 'woocommerce_form_field_args', 'conversions_wc_form_field_args', 10, 3 );
+		add_filter( 'woocommerce_form_field_args', [ $this, 'woocommerce_form_field_args' ], 10, 3 );
 	}
-}
 
-/**
-* First unhook the WooCommerce wrappers
-*/
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+	/**
+		@brief		Enable review ratings support.
+		@since		2019-08-06 21:53:11
+	**/
+	public function review_ratings()
+	{
+		if ( is_admin() )
+			return;
+		if ( function_exists( 'wc_review_ratings_enabled' ) )
+			return;
 
-/**
-* Then hook in your own functions to display the wrappers your theme requires
-*/
-add_action('woocommerce_before_main_content', 'conversions_woocommerce_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'conversions_woocommerce_wrapper_end', 10);
-if ( ! function_exists( 'conversions_woocommerce_wrapper_start' ) ) {
-	function conversions_woocommerce_wrapper_start() {
-		echo '<div class="wrapper" id="woocommerce-wrapper">';
-	  echo '<div class="container-fluid" id="content" tabindex="-1">';
-		echo '<div class="row">';
-		get_template_part( 'partials/left-sidebar-check' );
-		echo '<main class="site-main" id="main">';
+		/**
+		 * Check if reviews are enabled.
+		 *
+		 * Function introduced in WooCommerce 3.6.0., include it for backward compatibility.
+		 *
+		 * @return bool
+		 */
+		function wc_reviews_enabled()
+		{
+			return 'yes' === get_option( 'woocommerce_enable_reviews' );
+		}
+
+		/**
+		 * Check if reviews ratings are enabled.
+		 *
+		 * Function introduced in WooCommerce 3.6.0., include it for backward compatibility.
+		 *
+		 * @return bool
+		 */
+		function wc_review_ratings_enabled()
+		{
+			return wc_reviews_enabled() && 'yes' === get_option( 'woocommerce_enable_review_rating' );
+		}
 	}
-}
-if ( ! function_exists( 'conversions_woocommerce_wrapper_end' ) ) {
-function conversions_woocommerce_wrapper_end() {
-	echo '</main><!-- #main -->';
-	get_template_part( 'partials/right-sidebar-check' );
-  echo '</div><!-- .row -->';
-	echo '</div><!-- Container end -->';
-	echo '</div><!-- Wrapper end -->';
-	}
-}
 
-/**
- * Filter hook function monkey patching form classes
- * Author: Adriano Monecchi http://stackoverflow.com/a/36724593/307826
- *
- * @param string $args Form attributes.
- * @param string $key Not in use.
- * @param null   $value Not in use.
- *
- * @return mixed
- */
-if ( ! function_exists ( 'conversions_wc_form_field_args' ) ) {
-	function conversions_wc_form_field_args( $args, $key, $value = null ) {
+	/**
+		@brief		woocommerce_form_field_args
+		@since		2019-08-06 21:48:52
+	**/
+	function woocommerce_form_field_args( $args, $key, $value = null ) {
 		// Start field type switch case.
 		switch ( $args['type'] ) {
 			/* Targets all select input type elements, except the country and state select input types */
@@ -141,27 +156,32 @@ if ( ! function_exists ( 'conversions_wc_form_field_args' ) ) {
 		} // end switch ($args).
 		return $args;
 	}
-}
 
-if ( ! is_admin() && ! function_exists( 'wc_review_ratings_enabled' ) ) {
 	/**
-	 * Check if reviews are enabled.
-	 *
-	 * Function introduced in WooCommerce 3.6.0., include it for backward compatibility.
-	 *
-	 * @return bool
-	 */
-	function wc_reviews_enabled() {
-		return 'yes' === get_option( 'woocommerce_enable_reviews' );
+		@brief		woocommerce_before_main_content
+		@since		2019-08-06 21:54:04
+	**/
+	public function woocommerce_before_main_content()
+	{
+		echo '<div class="wrapper" id="woocommerce-wrapper">';
+		echo '<div class="container-fluid" id="content" tabindex="-1">';
+		echo '<div class="row">';
+		get_template_part( 'partials/left-sidebar-check' );
+		echo '<main class="site-main" id="main">';
 	}
+
 	/**
-	 * Check if reviews ratings are enabled.
-	 *
-	 * Function introduced in WooCommerce 3.6.0., include it for backward compatibility.
-	 *
-	 * @return bool
-	 */
-	function wc_review_ratings_enabled() {
-		return wc_reviews_enabled() && 'yes' === get_option( 'woocommerce_enable_review_rating' );
+		@brief		woocommerce_after_main_content
+		@since		2019-08-06 21:55:30
+	**/
+	public function woocommerce_after_main_content()
+	{
+		echo '</main><!-- #main -->';
+		get_template_part( 'partials/right-sidebar-check' );
+		echo '</div><!-- .row -->';
+		echo '</div><!-- Container end -->';
+		echo '</div><!-- Wrapper end -->';
 	}
+
 }
+new WooCommerce();

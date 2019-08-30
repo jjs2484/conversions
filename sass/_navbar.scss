@@ -65,50 +65,49 @@
       }
     }
   }
-
   &.navbar-dark.bg-dark {
     .offcanvas-collapse {
-      background-color: #343A40;
+      background-color: $dark;
     }
   }
   &.navbar-light.bg-light {
     .offcanvas-collapse {
-      background-color: #F8F9FA;
+      background-color: $light;
     }
   }
   &.navbar-light.bg-white {
     .offcanvas-collapse {
-      background-color: #FFFFFF;
+      background-color: $white;
     }
   }
   &.navbar-dark.bg-primary {
     .offcanvas-collapse {
-      background-color: #5533FF;
+      background-color: $primary;
     }
   }
   &.navbar-dark.bg-secondary {
     .offcanvas-collapse {
-      background-color: #6C757D;
+      background-color: $secondary;
     }
   }
   &.navbar-dark.bg-success {
     .offcanvas-collapse {
-      background-color: #28A745;
+      background-color: $success;
     }
   }
   &.navbar-dark.bg-danger {
     .offcanvas-collapse {
-      background-color: #DC3545;
+      background-color: $danger;
     }
   }
   &.navbar-light.bg-warning {
     .offcanvas-collapse {
-      background-color: #FFC107;
+      background-color: $warning;
     }
   }
   &.navbar-dark.bg-info {
     .offcanvas-collapse {
-      background-color: #17A2B8;
+      background-color: $info;
     }
   }
 }
@@ -135,7 +134,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     height: auto;
     min-height: 100%;
     border-radius: 0;
-    background: #343A40;
+    background: $dark;
   }
   .modal-header {
     display: flex;
