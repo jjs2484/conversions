@@ -142,7 +142,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     border-bottom: 0;
   }
   .modal-title {
-    color: #fff;
+    color: $white;
     margin-bottom: .5em;
   }
   .modal-body {
@@ -161,7 +161,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     opacity: 1;
   }
   i.fa-times {
-    color:#eee;
+    color: $gray-200;
     font-size: 30px;
   }
 }

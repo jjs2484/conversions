@@ -299,7 +299,7 @@ get_header();
 
   				<!-- Post item -->
   				<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
-    				<article class="card border-0 shadow-sm h-100 mb-3">
+    				<article class="card shadow-sm h-100 mb-3">
       					<!-- Post image -->
       					<a class="c-news__img-link" href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>" title="<?php echo $post['post_title'] ?>">
       						<?php echo get_the_post_thumbnail( $post['ID'], 'homepage-news', array( 'class' => 'card-img-top' ) ); ?>

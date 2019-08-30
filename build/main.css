@@ -16488,7 +16488,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 #csearchModal button.close {
   opacity: 1; }
 #csearchModal i.fa-times {
-  color: #eee;
+  color: #e9ecef;
   font-size: 30px; }
 
 .wrapper {
@@ -16629,7 +16629,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   #sidebar-2 .widget, #sidebar-1 .widget {
     padding-bottom: .9rem; }
     #sidebar-2 .widget .widget-title, #sidebar-1 .widget .widget-title {
-      border-bottom: 1px solid #ddd; }
+      border-bottom: 1px solid #dee2e6; }
 
 #wrapper-footer-full.wrapper {
   padding-bottom: 30px; }
