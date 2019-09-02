@@ -270,9 +270,84 @@ get_header();
 	</section>
 
 
+  <!-- Testimonial Section -->
+  <section id="c-testimonials">
+    <div class="container-fluid py-5">
+      <div class="row">
+
+      <!-- Title -->
+      <div class="col-12">
+        <div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
+          <h3>What people say about us</h3>
+          <p class="text-muted">
+            We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
+          </p>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="col-12">
+         
+        <!-- Slick Carousel -->
+        <div class="c-testimonials__carousel">
+            
+          <!-- Testimonial -->
+          <div class="c-testimonials__item">
+            <blockquote class="quote-card border-right border-bottom border-top shadow mx-5 mb-4">
+              <p class="h5">
+                Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
+              </p>
+              <div class="d-flex justify-content-between">
+                <cite>
+                  <span class="d-block">Mark McManus</span>
+                  <span class="d-block">Associate Director of Spotify</span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </cite>
+                <div class="c-testimonials__carousel--nav align-self-end">
+                  <i class="fas fa-chevron-left slick-arrow mr-2"></i>
+                  <i class="fas fa-chevron-right slick-arrow"></i>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+
+          <!-- Testimonial -->
+          <div class="c-testimonials__item">
+            <blockquote class="quote-card border-right border-bottom border-top shadow mx-5 mb-4">
+              <p class="h5">
+                Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
+              </p>
+              <div class="d-flex justify-content-between">
+                <cite>
+                  <span class="d-block">Mark McManus</span>
+                  <span class="d-block">Associate Director of Spotify</span>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </cite>
+                <div class="c-testimonials__carousel--nav align-self-end">
+                  <i class="fas fa-chevron-left slick-arrow mr-2"></i>
+                  <i class="fas fa-chevron-right slick-arrow"></i>
+                </div>
+              </div>
+            </blockquote>   
+          </div>
+
+        </div> <!-- End Slick Carousel -->
+      </div>
+      </div>
+    </div>
+  </section>
+
 
 	<!-- News Section -->
-	<section id="c-news">
+	<section id="c-news" style="background-color: #F3F3F3;">
 		<div class="container-fluid py-5">
 			<div class="row justify-content-sm-center">
 
@@ -299,7 +374,7 @@ get_header();
 
   				<!-- Post item -->
   				<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
-    				<article class="card shadow-sm h-100 mb-3">
+    				<article class="card shadow h-100 mb-3">
       					<!-- Post image -->
       					<a class="c-news__img-link" href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>" title="<?php echo $post['post_title'] ?>">
       						<?php echo get_the_post_thumbnail( $post['ID'], 'homepage-news', array( 'class' => 'card-img-top' ) ); ?>
@@ -334,7 +409,7 @@ get_header();
 
 
 	<!-- Call-to-action section -->
-	<section id="c-cta" style="background-color: #F3F3F3;">
+	<section id="c-cta">
 		<div class="container-fluid">
 			<div class="row">
   				<div class="col-12">

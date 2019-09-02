@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -10884,6 +10890,10 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th, table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+/*!
+ * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 .fa,
 .fas,
 .far,
@@ -16537,8 +16547,11 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     #homepage-wrapper.wrapper section#c-clients .slick-slider .slick-prev::before {
       font-family: "Font Awesome 5 Free";
       content: "\f053";
-      color: #aaa;
+      color: #8c98a4;
       opacity: 1; }
+      #homepage-wrapper.wrapper section#c-clients .slick-slider .slick-prev::before:hover {
+        -webkit-filter: brightness(85%);
+                filter: brightness(85%); }
   #homepage-wrapper.wrapper section#c-clients .slick-slider .slick-next {
     right: -10px; }
     #homepage-wrapper.wrapper section#c-clients .slick-slider .slick-next::before {
@@ -16546,6 +16559,9 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
       content: "\f054";
       color: #aaa;
       opacity: 1; }
+      #homepage-wrapper.wrapper section#c-clients .slick-slider .slick-next::before:hover {
+        -webkit-filter: brightness(85%);
+                filter: brightness(85%); }
   #homepage-wrapper.wrapper section#c-clients .slick-slider .slick-slide {
     text-align: center; }
     #homepage-wrapper.wrapper section#c-clients .slick-slider .slick-slide::before {
@@ -16570,6 +16586,37 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
+  #homepage-wrapper.wrapper section#c-testimonials .quote-card {
+    padding: 20px;
+    padding-left: 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
+    border-radius: 10px; }
+    #homepage-wrapper.wrapper section#c-testimonials .quote-card::before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f10d";
+      position: absolute;
+      top: 5px;
+      left: 12px;
+      font-size: 2.25em;
+      color: #ddd; }
+    #homepage-wrapper.wrapper section#c-testimonials .quote-card p {
+      line-height: 1.5; }
+    #homepage-wrapper.wrapper section#c-testimonials .quote-card cite {
+      font-size: 1rem;
+      margin-top: .75rem; }
+      #homepage-wrapper.wrapper section#c-testimonials .quote-card cite .fa-star {
+        color: orange; }
+    #homepage-wrapper.wrapper section#c-testimonials .quote-card .c-testimonials__carousel--nav i {
+      color: #8c98a4;
+      font-size: 1.2rem; }
+      #homepage-wrapper.wrapper section#c-testimonials .quote-card .c-testimonials__carousel--nav i:hover {
+        cursor: pointer;
+        -webkit-filter: brightness(85%);
+                filter: brightness(85%); }
 
 .conversions-hero-cover {
   width: 100vw;
