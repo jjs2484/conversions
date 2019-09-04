@@ -16,7 +16,7 @@ get_header();
 <div id="homepage-wrapper" class="wrapper">
 
 	<!-- Hero Section -->
-	<section id="c-hero" class="d-flex align-items-center">
+	<section class="c-hero d-flex align-items-center">
   		<div class="container-fluid">
   			<div class="row">
            		<div class="col-lg-6">
@@ -33,7 +33,7 @@ get_header();
     				<a href="#" class="btn btn-primary btn-lg">Large button</a>
     				
     				<!-- Fancybox button modal video -->
-    				<a data-fancybox="c-hero__fb-video" class="c-hero__video-btn btn btn-light btn-circle ml-2" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+    				<a data-fancybox="c-hero__fb-video" class="c-hero__video-btn btn btn-light btn--circle ml-2" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
     					<i class="fa fa-play"></i>
 					</a>
 
@@ -43,7 +43,7 @@ get_header();
 	</section>
 
 	<!-- Clients section -->
-	<section id="c-clients" class="border-top border-bottom" style="background-color: #F3F3F3;">
+	<section class="c-clients border-top border-bottom" style="background-color: #F3F3F3;">
 		<div class="container-fluid">
 			<div class="row">
   				<div class="col-12">
@@ -73,7 +73,7 @@ get_header();
 	</section>
 
 	<!-- Features icon block -->
-	<section id="c-icon-block" class="container-fluid py-5">
+	<section class="c-icon-block container-fluid py-5">
 		<div class="row">
 			
 			<!-- Title -->
@@ -89,7 +89,7 @@ get_header();
 			<!-- Icon block #1 -->
 			<div class="col-md-6 mb-5">
 				<div class="media pr-lg-4">
-					<span class="c-icon mr-3 mt-2">
+					<span class="c-icon-block__icon mr-3 mt-2">
 						<i class="fas fa-coffee text-success"></i>
 					</span>
 					<div class="media-body">
@@ -106,7 +106,7 @@ get_header();
 			<!-- Icon block #2 -->
 			<div class="col-md-6 mb-5">
 				<div class="media pl-lg-4">
-					<span class="c-icon mr-3 mt-2">
+					<span class="c-icon-block__icon mr-3 mt-2">
 						<i class="fab fa-phoenix-framework text-danger"></i>
 					</span>
 					<div class="media-body">
@@ -127,7 +127,7 @@ get_header();
 			<!-- Icon block #3 -->
 			<div class="col-md-6 mb-5">
 				<div class="media pr-lg-4">
-					<span class="c-icon mr-3 mt-2">
+					<span class="c-icon-block__icon mr-3 mt-2">
 						<i class="fab fa-wordpress text-primary"></i>
 					</span>
 					<div class="media-body">
@@ -144,7 +144,7 @@ get_header();
 			<!-- Icon block #4 -->
 			<div class="col-md-6 mb-5">
 				<div class="media pl-lg-4">
-					<span class="c-icon mr-3 mt-2">
+					<span class="c-icon-block__icon mr-3 mt-2">
 						<i class="fas fa-coffee text-success"></i>
 					</span>
 					<div class="media-body">
@@ -271,7 +271,7 @@ get_header();
 
 
   <!-- Testimonial Section -->
-  <section id="c-testimonials">
+  <section class="c-testimonials">
     <div class="container-fluid py-5">
       <div class="row">
 
@@ -293,7 +293,7 @@ get_header();
             
           <!-- Testimonial -->
           <div class="c-testimonials__item">
-            <blockquote class="quote-card border-right border-bottom border-top shadow mx-5 mb-4">
+            <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-4">
               <p class="h5">
                 Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
               </p>
@@ -307,7 +307,7 @@ get_header();
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                 </cite>
-                <div class="c-testimonials__carousel--nav align-self-end">
+                <div class="c-testimonials__nav align-self-end">
                   <i class="fas fa-chevron-left slick-arrow mr-2"></i>
                   <i class="fas fa-chevron-right slick-arrow"></i>
                 </div>
@@ -317,7 +317,7 @@ get_header();
 
           <!-- Testimonial -->
           <div class="c-testimonials__item">
-            <blockquote class="quote-card border-right border-bottom border-top shadow mx-5 mb-4">
+            <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-4">
               <p class="h5">
                 Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
               </p>
@@ -331,7 +331,7 @@ get_header();
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                 </cite>
-                <div class="c-testimonials__carousel--nav align-self-end">
+                <div class="c-testimonials__nav align-self-end">
                   <i class="fas fa-chevron-left slick-arrow mr-2"></i>
                   <i class="fas fa-chevron-right slick-arrow"></i>
                 </div>
@@ -347,7 +347,7 @@ get_header();
 
 
 	<!-- News Section -->
-	<section id="c-news" style="background-color: #F3F3F3;">
+	<section class="c-news" style="background-color: #F3F3F3;">
 		<div class="container-fluid py-5">
 			<div class="row justify-content-sm-center">
 
@@ -361,45 +361,46 @@ get_header();
 				</div>
 			</div>
 
-    		<?php
-    			// Get latest posts
-    			$recent_posts = wp_get_recent_posts(array(
-        			'numberposts' => 3, // Number of recent posts thumbnails to display
-        			'post_status' => 'publish' // Show only the published posts
-    			)); 
-    		?>
+    	<?php
+    		// Get latest posts
+    		$recent_posts = wp_get_recent_posts(array(
+        		'numberposts' => 3, // Number of recent posts thumbnails to display
+        		'post_status' => 'publish' // Show only the published posts
+    		)); 
+    	?>
     
     		
-    		<?php foreach($recent_posts as $post) : ?>
+    	<?php foreach($recent_posts as $post) : ?>
 
-  				<!-- Post item -->
-  				<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
-    				<article class="card shadow h-100 mb-3">
-      					<!-- Post image -->
-      					<a class="c-news__img-link" href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>" title="<?php echo $post['post_title'] ?>">
-      						<?php echo get_the_post_thumbnail( $post['ID'], 'homepage-news', array( 'class' => 'card-img-top' ) ); ?>
-      					</a>
-      					<div class="card-body pb-1">
-        					<h3 class="h5">
-          						<a href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>">
-          							<?php echo esc_html( $post['post_title'] ); ?>
-          						</a>
-        					</h3>
-        					<p class="text-muted">
-          						<?php echo wp_trim_words( $post[ 'post_content' ], 15, '...' ); ?>
-          					</p>
-      					</div>
-      					<div class="card-footer text-muted border-0 d-flex justify-content-between align-items-center small">
-        					<div class="d-flex align-items-center">
-          						<?php echo esc_html( the_author_meta( 'display_name', $post['post_author'] ) ); ?>
-        					</div>
-        					<div class="d-flex align-items-center">
-          						<?php echo esc_html( date( 'F d', strtotime( $post['post_date'] ) ) ); ?>
-        					</div>
-      					</div>
-    				</article>
-  				</div>
-  				<!-- End Post Item -->
+  			<!-- Post item -->
+  			<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
+    			<article class="card shadow h-100 mb-3">
+      			
+            <!-- Post image -->
+      			<a class="c-news__img-link" href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>" title="<?php echo $post['post_title'] ?>">
+      				<?php echo get_the_post_thumbnail( $post['ID'], 'homepage-news', array( 'class' => 'card-img-top' ) ); ?>
+      			</a>
+      			<div class="card-body pb-1">
+        			<h3 class="h5">
+          		  <a href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>">
+                  <?php echo esc_html( $post['post_title'] ); ?>
+          		  </a>
+        			</h3>
+        			<p class="text-muted">
+          			<?php echo wp_trim_words( $post[ 'post_content' ], 15, '...' ); ?>
+          		</p>
+      			</div>
+      			<div class="card-footer text-muted border-0 d-flex justify-content-between align-items-center small">
+        			<div class="d-flex align-items-center">
+          			<?php echo esc_html( the_author_meta( 'display_name', $post['post_author'] ) ); ?>
+        			</div>
+              <div class="d-flex align-items-center">
+          			<?php echo esc_html( date( 'F d', strtotime( $post['post_date'] ) ) ); ?>
+        			</div>
+      			</div>
+    			</article>
+  			</div>
+  			<!-- End Post Item -->
 
   			<?php endforeach; wp_reset_query(); ?>
 
