@@ -86,84 +86,87 @@ get_header();
 				</div>
 			</div>
 			
-			<!-- Icon block #1 -->
-			<div class="col-md-6 mb-5">
-				<div class="media pr-lg-4">
-					<span class="c-icon-block__icon mr-3 mt-2">
-						<i class="fas fa-coffee text-success"></i>
-					</span>
-					<div class="media-body">
-						<h3 class="h6">Professional design</h3>
-						<p class="mb-2 text-muted">Achieve virtually any look and layout from within the one template.</p>
-						<a href="#">
-							Read more
-							<span class="fa fa-angle-right align-middle ml-1"></span>
-						</a>
-					</div>
-				</div>
-			</div>
 			
-			<!-- Icon block #2 -->
-			<div class="col-md-6 mb-5">
-				<div class="media pl-lg-4">
-					<span class="c-icon-block__icon mr-3 mt-2">
-						<i class="fab fa-phoenix-framework text-danger"></i>
-					</span>
-					<div class="media-body">
-						<h3 class="h6">Unlimited power</h3>
-						<p class="mb-2 text-muted">Find what you need in one template and combine features at will.</p>
-						<a href="#">
-							Read more
-							<span class="fa fa-angle-right align-middle ml-1"></span>
-						</a>
-					</div>
-				</div>
-			</div>
 
-			<!-- Icon block separator -->
-			<div class="w-100"></div>
-			<!-- End separator -->
 
-			<!-- Icon block #3 -->
-			<div class="col-md-6 mb-5">
-				<div class="media pr-lg-4">
-					<span class="c-icon-block__icon mr-3 mt-2">
-						<i class="fab fa-wordpress text-primary"></i>
-					</span>
-					<div class="media-body">
-						<h3 class="h6">Super-light</h3>
-						<p class="mb-2 text-muted">Manage document assembly with sophisticated yet super-light templates.</p>
-						<a href="#">
-							Read more
-							<span class="fa fa-angle-right align-middle ml-1"></span>
- 						</a>
-					</div>
-				</div>
-			</div>
 
-			<!-- Icon block #4 -->
-			<div class="col-md-6 mb-5">
-				<div class="media pl-lg-4">
-					<span class="c-icon-block__icon mr-3 mt-2">
-						<i class="fas fa-coffee text-success"></i>
-					</span>
-					<div class="media-body">
-						<h3 class="h6">Fully documented</h3>
-						<p class="mb-2 text-muted">Every component and plugin is well documented with live examples.</p>
-						<a href="#">
-							Read more
-							<span class="fa fa-angle-right align-middle ml-1"></span>
-						</a>
-					</div>
-				</div>
-			</div>
+
+      
+
+      <!-- Features -->
+  <div class="card-deck d-block d-lg-flex">
+    <div class="card border-0 mb-3 mb-lg-0 text-center">
+      <!-- Icon Blocks -->
+      <div class="card-body p-1">
+        <span class="c-icon-block__icon">
+            <i class="fas fa-coffee text-success"></i>
+          </span>
+        <h3 class="h5">Responsive</h3>
+        <p class="text-muted">Front is an incredibly beautiful, fully responsive, and mobile-first projects on the web.</p>
+        <a href="#">Explore now <span class="fas fa-angle-right align-middle ml-2"></span></a>
+      </div>
+      <!-- End Icon Blocks -->
+    </div>
+
+    <div class="card border-0 mb-3 mb-lg-0 text-center">
+      <!-- Icon Blocks -->
+      <div class="card-body p-1">
+        <span class="c-icon-block__icon">
+            <i class="fas fa-coffee text-success"></i>
+          </span>
+        <h3 class="h5">Customizable</h3>
+        <p class="text-muted">Front template can be easily customized with its cutting-edge components and features.</p>
+        <a href="#">Explore now <span class="fas fa-angle-right align-middle ml-2"></span></a>
+      </div>
+      <!-- End Icon Blocks -->
+    </div>
+
+    <div class="card border-0 mb-3 mb-lg-0 text-center">
+      <!-- Icon Blocks -->
+      <div class="card-body p-1">
+        <span class="c-icon-block__icon">
+            <i class="fas fa-coffee text-success"></i>
+          </span>
+        <h3 class="h5">Documentation</h3>
+        <p class="text-muted">Every component and plugin is well documented with live examples.</p>
+        <a href="#">Explore now <span class="fas fa-angle-right align-middle ml-2"></span></a>
+      </div>
+      <!-- End Icon Blocks -->
+    </div>
+
+    <div class="card border-0 mb-3 mb-lg-0 text-center">
+      <!-- Icon Blocks -->
+      <div class="card-body p-1">
+        <span class="c-icon-block__icon">
+            <i class="fas fa-coffee text-success"></i>
+          </span>
+        <h3 class="h5">Documentation</h3>
+        <p class="text-muted">Every component and plugin is well documented with live examples.</p>
+        <a href="#">Explore now <span class="fas fa-angle-right align-middle ml-2"></span></a>
+      </div>
+      <!-- End Icon Blocks -->
+    </div>
+  </div>
+<!-- End Features -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 		</div>
 	</section>
 
 
 	<!-- Pricing section -->
-	<section id="c-pricing" style="background-color: #F3F3F3;">
+	<section class="c-pricing" style="background-color: #F3F3F3;">
 		<div class="container-fluid py-5">
 			<div class="row justify-content-sm-center">
 
@@ -178,7 +181,7 @@ get_header();
 				</div>
 
 				<!-- Pricing table #1 -->
-  				<div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+  				<div class="col-sm-12 col-lg-4 mb-3 mb-lg-0">
     				<div class="card shadow">
       					<header class="card-header bg-white text-center p-4">
         					<h4 class="h5 text-primary mb-3">Company</h4>
@@ -186,7 +189,7 @@ get_header();
           						<span class="display-4">
             						$69
           						</span>
-          						<span class="d-block text-secondary">
+          						<span class="d-block text-muted">
           							per month
           						</span>
         					</span>
@@ -218,7 +221,7 @@ get_header();
   				</div>
 
   				<!-- Pricing table #2 -->
-  				<div class="col-sm-6 col-lg-4">
+  				<div class="col-sm-12 col-lg-4 mb-3 mb-lg-0">
     				<div class="card shadow">
       					<header class="card-header bg-white text-center p-4">
         					<h4 class="h5 text-success mb-3">Enterprise</h4>
@@ -226,7 +229,7 @@ get_header();
           						<span class="display-4">
             						$69
           						</span>
-          						<span class="d-block text-secondary">
+          						<span class="d-block text-muted">
           							per month
           						</span>
         					</span>
@@ -264,6 +267,62 @@ get_header();
       					</div>
     				</div>
   				</div>
+
+          <!-- Pricing table #3 -->
+          <div class="col-sm-12 col-lg-4 mb-3 mb-lg-0">
+            <div class="card shadow">
+                <header class="card-header bg-white text-center p-4">
+                  <h4 class="h5 text-danger mb-3">Enterprise</h4>
+                  <span class="d-block">
+                      <span class="display-4">
+                        $69
+                      </span>
+                      <span class="d-block text-muted">
+                        per month
+                      </span>
+                  </span>
+                </header>
+                <div class="card-body pt-4 pb-5 px-5">
+                  <ul class="list-unstyled mb-4">
+                      <li class="d-flex align-items-center py-2">
+                        <span class="fa fa-check mr-3"></span>
+                        Community support
+                      </li>
+                      <li class="d-flex align-items-center py-2">
+                        <span class="fa fa-check mr-3"></span>
+                        400+ pages
+                      </li>
+                      <li class="d-flex align-items-center py-2">
+                        <span class="fa fa-check mr-3"></span>
+                        100+ header variations
+                      </li>
+                      <li class="d-flex align-items-center py-2">
+                        <span class="fa fa-check mr-3"></span>
+                        20+ home page options
+                      </li>
+                      <li class="d-flex align-items-center py-2">
+                        <span class="fa fa-check mr-3"></span>
+                        Priority Support
+                      </li>
+                      <li class="d-flex align-items-center py-2">
+                        <span class="fa fa-check mr-3"></span>
+                        More features
+                      </li>
+                      <li class="d-flex align-items-center py-2">
+                        <span class="fa fa-check mr-3"></span>
+                        Priority Support
+                      </li>
+                      <li class="d-flex align-items-center py-2">
+                        <span class="fa fa-check mr-3"></span>
+                        More features
+                      </li>
+                  </ul>
+                  <button type="button" class="btn btn-block btn-danger">
+                    Contact Us
+                  </button>
+                </div>
+            </div>
+          </div>
 
 			</div>
 		</div>

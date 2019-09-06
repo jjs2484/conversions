@@ -65,9 +65,11 @@ get_header();
 							<li>
 								<a rel="bookmark" href="<?php the_permalink() ?>"
 								   title="<?php esc_html_e( 'Permanent Link:', 'conversions' ); ?> <?php the_title(); ?>">
-									<?php the_title(); ?></a>,
-								<?php conversions_posted_on(); ?> <?php esc_html_e( 'in',
-								'conversions' ); ?> <?php the_category( '&' ); ?>
+									<?php the_title(); ?>
+								</a>,
+								<?php conversions()->template->posted_on(); ?> 
+								<?php esc_html_e( 'in', 'conversions' ); ?> 
+								<?php the_category( '&' ); ?>
 							</li>
 						<?php endwhile; ?>
 
@@ -84,7 +86,7 @@ get_header();
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php conversions_pagination(); ?>
+			<?php conversions()->template->pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'partials/right-sidebar-check' ); ?>

@@ -202,5 +202,27 @@ class Template
 		);
 		echo $posted_on . $byline; // WPCS: XSS OK.
 	}
+
+	/**
+		@brief		Reading Time.
+		@since		2019-09-05 16:55:18
+	**/
+	public function reading_time() {
+    	$content = get_the_content();
+    	$word_count = str_word_count( strip_tags( $content ) );
+    	$readingtime = ceil($word_count / 200);
+
+    	if ($readingtime == 1) {
+      		$timer = " minute";
+    	} else {
+      		$timer = " minutes";
+    	}
+    	$totalreadingtime = $readingtime . $timer;
+
+		$totalreadingtime = sprintf("<i class='fas fa-clock'></i> Reading time: %s.", esc_html( $totalreadingtime ) );
+		
+		echo $totalreadingtime;
+    	
+	}
 }
 conversions()->template = new Template();

@@ -99,18 +99,19 @@ section.c-clients {
 
 // Icon block section
 section.c-icon-block {
-  &.container-fluid {
-    @media (max-width: 767.98px) {
-      max-width: 540px;
-    }
-  }
-  .h6, h6 {
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
   .c-icon-block__icon {
     i {
       font-size: 3rem;
+    }
+  }
+}
+
+// Pricing section
+.c-pricing {
+  .card {
+    @include media-breakpoint-down(md) {
+      max-width: 24rem;
+      margin: 0 auto;
     }
   }
 }

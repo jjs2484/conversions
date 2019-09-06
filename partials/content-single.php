@@ -22,7 +22,12 @@ defined( 'ABSPATH' ) || exit;
 		?>
 
 		<div class="entry-meta">
-			<?php conversions()->template->posted_on(); ?>
+			<span class="d-block">
+				<?php conversions()->template->posted_on(); ?>
+			</span>
+			<span class="d-block">
+				<?php conversions()->template->reading_time(); ?>
+			</span>
     	</div>
 
 	</header><!-- .entry-header -->

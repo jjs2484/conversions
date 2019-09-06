@@ -16574,14 +16574,13 @@ section.c-clients .slick-slider .slick-slide {
     vertical-align: middle;
     display: inline-block; }
 
-@media (max-width: 767.98px) {
-  section.c-icon-block.container-fluid {
-    max-width: 540px; } }
-section.c-icon-block .h6, section.c-icon-block h6 {
-  font-size: 1.1rem;
-  font-weight: bold; }
 section.c-icon-block .c-icon-block__icon i {
   font-size: 3rem; }
+
+@media (max-width: 991.98px) {
+  .c-pricing .card {
+    max-width: 24rem;
+    margin: 0 auto; } }
 
 @media (max-width: 991.98px) {
   section.c-news div.col-sm-6.col-lg-4.mb-4.mb-lg-3:nth-of-type(3) {
