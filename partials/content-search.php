@@ -9,35 +9,45 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('card shadow-sm mb-5'); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<div class="card-body pb-1">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-		'</a></h2>' ); ?>
+		<header class="entry-header">
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+			<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
-			<div class="entry-meta">
+			<?php if ( 'post' == get_post_type() ) : ?>
 
-				<?php conversions()->template->posted_on(); ?>
+				<div class="entry-meta">
+					<span class="d-block">
+						<?php conversions()->template->posted_on(); ?>
+					</span>
+					<span class="d-block">
+						<?php conversions()->template->reading_time(); ?>
+					</span>
+				</div><!-- .entry-meta -->
 
-			</div><!-- .entry-meta -->
+			<?php endif; ?>
 
-		<?php endif; ?>
+		</header><!-- .entry-header -->
 
-	</header><!-- .entry-header -->
+		<div class="entry-summary">
 
-	<div class="entry-summary">
+			<?php the_excerpt(); ?>
 
-		<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
 
-	</div><!-- .entry-summary -->
+	</div>
 
-	<footer class="entry-footer">
+	<div class="card-footer text-muted d-flex justify-content-between align-items-center small">
+		
+		<footer class="entry-footer">
+			<div class="d-flex align-items-center">
+          		<?php conversions()->template->entry_footer(); ?>
+        	</div>
+		</footer><!-- .entry-footer -->
 
-		<?php conversions()->template->entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
+	</div>
 
 </article><!-- #post-## -->

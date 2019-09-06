@@ -211,18 +211,10 @@ class Template
     	$content = get_the_content();
     	$word_count = str_word_count( strip_tags( $content ) );
     	$readingtime = ceil($word_count / 200);
-
-    	if ($readingtime == 1) {
-      		$timer = " minute";
-    	} else {
-      		$timer = " minutes";
-    	}
-    	$totalreadingtime = $readingtime . $timer;
-
-		$totalreadingtime = sprintf("<i class='far fa-clock'></i> Reading time: %s.", esc_html( $totalreadingtime ) );
+      	$time_unit = esc_html_x( 'min read', 'time unit', 'conversions' );
+		$totalreadingtime = sprintf("<i class='far fa-clock'></i> %d %s", esc_html( $readingtime ), $time_unit );
 		
-		echo $totalreadingtime;
-    	
+		echo $totalreadingtime;	
 	}
 }
 conversions()->template = new Template();

@@ -449,7 +449,7 @@ get_header();
           			<?php echo wp_trim_words( $post[ 'post_content' ], 15, '...' ); ?>
           		</p>
       			</div>
-      			<div class="card-footer text-muted border-0 d-flex justify-content-between align-items-center small">
+      			<div class="card-footer text-muted d-flex justify-content-between align-items-center small">
         			<div class="d-flex align-items-center">
           			<?php echo esc_html( the_author_meta( 'display_name', $post['post_author'] ) ); ?>
         			</div>

@@ -10,49 +10,55 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('card shadow-sm mb-5'); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<!-- Post image -->
+	<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
+		<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'card-img-top' ) ); ?>
+	</a>
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-		'</a></h2>' ); ?>
+	<div class="card-body pb-1">
+	
+		<header class="entry-header">
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+			<?php the_title( sprintf( '<h2 class="h3 entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
-			<div class="entry-meta">
-				<span class="d-block">
-					<?php conversions()->template->posted_on(); ?>
-				</span>
-				<span class="d-block">
-					<?php conversions()->template->reading_time(); ?>
-				</span>
-			</div><!-- .entry-meta -->
+			<?php if ( 'post' == get_post_type() ) : ?>
 
-		<?php endif; ?>
+				<div class="entry-meta">
+					<span class="d-block">
+						<?php conversions()->template->posted_on(); ?>
+					</span>
+					<span class="d-block">
+						<?php conversions()->template->reading_time(); ?>
+					</span>
+				</div><!-- .entry-meta -->
 
-	</header><!-- .entry-header -->
+			<?php endif; ?>
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+		</header><!-- .entry-header -->
 
-	<div class="entry-content">
+		<div class="entry-content">
 
-		<?php
-		the_excerpt();
-		?>
+			<?php the_excerpt(); ?>
 
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'conversions' ),
-			'after'  => '</div>',
-		) );
-		?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'conversions' ),
+					'after'  => '</div>',
+				) );
+			?>
 
-	</div><!-- .entry-content -->
+		</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	</div>
 
-		<?php conversions()->template->entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
+	<div class="card-footer text-muted d-flex justify-content-between align-items-center small">
+		<footer class="entry-footer">
+			<div class="d-flex align-items-center">
+          		<?php conversions()->template->entry_footer(); ?>
+        	</div>
+		</footer><!-- .entry-footer -->
+	</div>
 
 </article><!-- #post-## -->

@@ -203,20 +203,34 @@ section.c-testimonials {
   }
 }
 
+// Single post
 .single-post {
-  .entry-meta.featured {
-    color: #f8f9f9;
-    a {
-      color: #f8f9f9;
-      &:hover {
-        color: #d8dede;
-      }
-    }
+  .entry-meta, .entry-meta a, .entry-footer, .entry-footer a {
+    color: #6c757d;
+  }
+  .entry-meta {
+    margin: 0 0 1em;
+    font-size: .9rem;
   }
 }
 
-// Post styles
-.entry-meta {
-  margin: 0 0 1em;
-  font-size: .9rem;
+// Blog indexes
+.blog, .archive, .search {
+  article.card {
+    a.c-news__img-link:hover {
+      transition: .3s;
+    }
+    .card-img-top {
+      height: 20rem;
+      object-fit: cover;
+      width: 100%;
+    }
+    .entry-meta, .entry-meta a, .entry-footer, .entry-footer a {
+      color: #6c757d;
+    }
+    .entry-meta {
+      margin: 0 0 1em;
+      font-size: .9rem;
+    }
+  }
 }
