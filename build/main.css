@@ -10891,13 +10891,14 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 /*!
- * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.10.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
 .fas,
 .far,
 .fal,
+.fad,
 .fab {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -11339,6 +11340,12 @@ readers do not read off random characters that represent icons */
 .fa-balance-scale:before {
   content: ""; }
 
+.fa-balance-scale-left:before {
+  content: ""; }
+
+.fa-balance-scale-right:before {
+  content: ""; }
+
 .fa-ban:before {
   content: ""; }
 
@@ -11407,6 +11414,9 @@ readers do not read off random characters that represent icons */
 
 .fa-bicycle:before {
   content: ""; }
+
+.fa-biking:before {
+  content: ""; }
 
 .fa-bimobject:before {
   content: ""; }
@@ -11494,6 +11504,15 @@ readers do not read off random characters that represent icons */
 
 .fa-bootstrap:before {
   content: ""; }
+
+.fa-border-all:before {
+  content: ""; }
+
+.fa-border-none:before {
+  content: ""; }
+
+.fa-border-style:before {
+  content: ""; }
 
 .fa-bowling-ball:before {
   content: ""; }
@@ -11966,6 +11985,9 @@ readers do not read off random characters that represent icons */
 .fa-copyright:before {
   content: ""; }
 
+.fa-cotton-bureau:before {
+  content: ""; }
+
 .fa-couch:before {
   content: ""; }
 
@@ -12367,6 +12389,9 @@ readers do not read off random characters that represent icons */
 
 .fa-facebook-square:before {
   content: ""; }
+
+.fa-fan:before {
+  content: ""; }
 
 .fa-fantasy-flight-games:before {
   content: ""; }
@@ -13046,6 +13071,9 @@ readers do not read off random characters that represent icons */
 .fa-icicles:before {
   content: ""; }
 
+.fa-icons:before {
+  content: ""; }
+
 .fa-id-badge:before {
   content: ""; }
 
@@ -13559,9 +13587,6 @@ readers do not read off random characters that represent icons */
 .fa-nimblr:before {
   content: ""; }
 
-.fa-nintendo-switch:before {
-  content: ""; }
-
 .fa-node:before {
   content: ""; }
 
@@ -13745,14 +13770,23 @@ readers do not read off random characters that represent icons */
 .fa-phone:before {
   content: ""; }
 
+.fa-phone-alt:before {
+  content: ""; }
+
 .fa-phone-slash:before {
   content: ""; }
 
 .fa-phone-square:before {
   content: ""; }
 
+.fa-phone-square-alt:before {
+  content: ""; }
+
 .fa-phone-volume:before {
   content: ""; }
+
+.fa-photo-video:before {
+  content: ""; }
 
 .fa-php:before {
   content: ""; }
@@ -13975,6 +14009,9 @@ readers do not read off random characters that represent icons */
 
 .fa-registered:before {
   content: ""; }
+
+.fa-remove-format:before {
+  content: ""; }
 
 .fa-renren:before {
   content: ""; }
@@ -14312,14 +14349,26 @@ readers do not read off random characters that represent icons */
 .fa-sort-alpha-down:before {
   content: ""; }
 
+.fa-sort-alpha-down-alt:before {
+  content: ""; }
+
 .fa-sort-alpha-up:before {
   content: ""; }
+
+.fa-sort-alpha-up-alt:before {
+  content: ""; }
 
 .fa-sort-amount-down:before {
   content: ""; }
 
+.fa-sort-amount-down-alt:before {
+  content: ""; }
+
 .fa-sort-amount-up:before {
   content: ""; }
+
+.fa-sort-amount-up-alt:before {
+  content: ""; }
 
 .fa-sort-down:before {
   content: ""; }
@@ -14327,8 +14376,14 @@ readers do not read off random characters that represent icons */
 .fa-sort-numeric-down:before {
   content: ""; }
 
+.fa-sort-numeric-down-alt:before {
+  content: ""; }
+
 .fa-sort-numeric-up:before {
   content: ""; }
+
+.fa-sort-numeric-up-alt:before {
+  content: ""; }
 
 .fa-sort-up:before {
   content: ""; }
@@ -14350,6 +14405,9 @@ readers do not read off random characters that represent icons */
 
 .fa-speaker-deck:before {
   content: ""; }
+
+.fa-spell-check:before {
+  content: ""; }
 
 .fa-spider:before {
   content: ""; }
@@ -14993,6 +15051,9 @@ readers do not read off random characters that represent icons */
 .fa-vnv:before {
   content: ""; }
 
+.fa-voicemail:before {
+  content: ""; }
+
 .fa-volleyball-ball:before {
   content: ""; }
 
@@ -15198,7 +15259,7 @@ readers do not read off random characters that represent icons */
   width: auto; }
 
 /*!
- * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.10.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -15214,7 +15275,22 @@ readers do not read off random characters that represent icons */
   font-weight: 900; }
 
 /*!
- * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.10.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("../fonts/fa-regular-400.eot");
+  src: url("../fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.woff") format("woff"), url("../fonts/fa-regular-400.ttf") format("truetype"), url("../fonts/fa-regular-400.svg#fontawesome") format("svg"); }
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400; }
+
+/*!
+ * Font Awesome Free 5.10.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {

@@ -219,7 +219,7 @@ class Template
     	}
     	$totalreadingtime = $readingtime . $timer;
 
-		$totalreadingtime = sprintf("<i class='fas fa-clock'></i> Reading time: %s.", esc_html( $totalreadingtime ) );
+		$totalreadingtime = sprintf("<i class='far fa-clock'></i> Reading time: %s.", esc_html( $totalreadingtime ) );
 		
 		echo $totalreadingtime;
     	
