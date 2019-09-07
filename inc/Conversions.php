@@ -35,6 +35,7 @@ namespace conversions
 			require_once( __DIR__ . '/Template.php' );
 			require_once( __DIR__ . '/Widgets.php' );
 			require_once( __DIR__ . '/WooCommerce.php' );
+			require_once( __DIR__ . '/WP_Bootstrap_Comment-Walker.php' );
 			require_once( __DIR__ . '/WP_Bootstrap_Navwalker.php' );
 
 			$this->setup();

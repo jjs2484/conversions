@@ -74,16 +74,16 @@ if ( post_password_required() ) {
 
 		<?php endif; // check for comment navigation. ?>
 
-		<ol class="comment-list">
-
+		<ul class="list-unstyled">
 			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
+				wp_list_comments( array(
+					'style'         => 'ul',
+					'short_ping'    => true,
+					'avatar_size'   => '64',
+					'walker'        => new conversions\WP_Bootstrap_Comment_Walker(),
+				) );
 			?>
-
-		</ol><!-- .comment-list -->
+		</ul><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			
