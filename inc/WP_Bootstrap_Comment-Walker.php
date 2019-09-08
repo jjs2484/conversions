@@ -259,14 +259,6 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
     protected function get_comment_author_avatar( $comment, $args )
     {
         $avatar_string = get_avatar( $comment, $args['avatar_size'],'','', array('class'=>"comment_avatar mr-3") );
-        $comment_author_url = get_comment_author_url( $comment );
-        if ( '' !== $comment_author_url ) {
-            $avatar_string = sprintf(
-                '<a href="%1$s" class="author-link url" rel="external nofollow">%2$s</a>',
-                esc_url($comment_author_url),
-                $avatar_string
-            );
-        };
         return $avatar_string;
     }
     /**

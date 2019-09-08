@@ -228,6 +228,9 @@ section.c-testimonials {
     .entry-meta, .entry-meta a, .entry-footer, .entry-footer a {
       color: #6c757d;
     }
+    .entry-meta a, .entry-footer a {
+      font-weight: bold;
+    }
     .entry-meta {
       margin: 0 0 1em;
       font-size: .9rem;

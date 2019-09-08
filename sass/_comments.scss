@@ -2,10 +2,25 @@
 #comments {
   &.comments-area {
     .comment.media {
+
+      // stack on smaller screens
       flex-direction: column;
       @include media-breakpoint-up(lg) {
         flex-direction: row;
       }
+
+      // Children styles
+      ul.children {
+        padding-left: 1em;
+        @include media-breakpoint-up(lg) {
+          padding-left: .5em;
+        }
+        img.avatar {
+          height: 38px;
+          width: auto;
+        }
+      }
+
     }
   }
 }

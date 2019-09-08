@@ -16754,6 +16754,8 @@ section.c-testimonials .c-testimonials__quote {
   width: 100%; }
 .blog article.card .entry-meta, .blog article.card .entry-meta a, .blog article.card .entry-footer, .blog article.card .entry-footer a, .archive article.card .entry-meta, .archive article.card .entry-meta a, .archive article.card .entry-footer, .archive article.card .entry-footer a, .search article.card .entry-meta, .search article.card .entry-meta a, .search article.card .entry-footer, .search article.card .entry-footer a {
   color: #6c757d; }
+.blog article.card .entry-meta a, .blog article.card .entry-footer a, .archive article.card .entry-meta a, .archive article.card .entry-footer a, .search article.card .entry-meta a, .search article.card .entry-footer a {
+  font-weight: bold; }
 .blog article.card .entry-meta, .archive article.card .entry-meta, .search article.card .entry-meta {
   margin: 0 0 1em;
   font-size: .9rem; }
@@ -16771,6 +16773,14 @@ section.c-testimonials .c-testimonials__quote {
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
               flex-direction: row; } }
+  #comments.comments-area .comment.media ul.children {
+    padding-left: 1em; }
+    @media (min-width: 992px) {
+      #comments.comments-area .comment.media ul.children {
+        padding-left: .5em; } }
+    #comments.comments-area .comment.media ul.children img.avatar {
+      height: 38px;
+      width: auto; }
 
 #sidebar-2, #sidebar-1 {
   margin-top: 1.2rem; }
