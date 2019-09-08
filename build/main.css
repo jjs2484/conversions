@@ -16758,6 +16758,20 @@ section.c-testimonials .c-testimonials__quote {
   margin: 0 0 1em;
   font-size: .9rem; }
 
+#comments.comments-area .comment.media {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 992px) {
+    #comments.comments-area .comment.media {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+
 #sidebar-2, #sidebar-1 {
   margin-top: 1.2rem; }
   @media (min-width: 768px) {

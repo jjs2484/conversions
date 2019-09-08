@@ -1,0 +1,11 @@
+// Comments section
+#comments {
+  &.comments-area {
+    .comment.media {
+      flex-direction: column;
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+      }
+    }
+  }
+}
