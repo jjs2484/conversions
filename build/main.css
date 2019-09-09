@@ -16768,21 +16768,13 @@ section.c-testimonials .c-testimonials__quote {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
-  @media (min-width: 992px) {
-    #comments.comments-area .comment.media {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row; } }
   #comments.comments-area .comment.media ul.children {
     padding-left: 1em; }
     @media (min-width: 992px) {
       #comments.comments-area .comment.media ul.children {
-        padding-left: .5em; } }
-    #comments.comments-area .comment.media ul.children img.avatar {
-      height: 38px;
-      width: auto; }
+        padding-left: .75em; } }
+  #comments.comments-area .comment.media .avatar {
+    border-radius: 50%; }
   #comments.comments-area .comment.media .media-heading::before {
     font-family: "Font Awesome 5 Free";
     content: "\f007";
@@ -16798,6 +16790,11 @@ section.c-testimonials .c-testimonials__quote {
     content: "\f02e";
     color: #6c757d;
     margin-right: 2px; }
+  #comments.comments-area .comment.media .comment-content {
+    background: #f7f7f7;
+    border: 1px solid #e3e3e3;
+    padding: 1.5rem 1.5rem .75rem;
+    border-radius: 5px; }
 
 #sidebar-2, #sidebar-1 {
   margin-top: 1.2rem; }

@@ -148,13 +148,13 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 ?>
         <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $class_str, $comment ); ?>>
 
-                <?php if ( 0 != $args['avatar_size'] && 'pingback' !== $type && 'trackback' !== $type ) { ?>
-					<?php echo $this->get_comment_author_avatar( $comment, $args ); ?>
-                <?php }; ?>
+                <div class="commenter d-inline-flex mb-2">
+                    
+                    <?php if ( 0 != $args['avatar_size'] && 'pingback' !== $type && 'trackback' !== $type ) { ?>
+					   <?php echo $this->get_comment_author_avatar( $comment, $args ); ?>
+                    <?php }; ?>
 
-                <div class="media-body">
-
-                    <footer class="comment-meta">
+                    <div class="comment-meta">
                         <div class="comment-author vcard">
                             <?php printf( __( '%s <span class="says sr-only">says:</span>', 'conversions' ), sprintf( '<b class="media-heading fn">%s</b>', get_comment_author_link( $comment ) ) ); ?>
                         </div><!-- /.comment-author -->
@@ -170,23 +170,28 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
                                 <?php esc_html_e( 'Permalink', 'conversions' ); ?>
                                 </a>
                             </span>
-                        </div><!-- /.comment-metadata -->
+                        </ul><!-- /.comment-metadata -->
 
                         <?php if ( '0' == $comment->comment_approved ) : ?>
                             <p class="comment-awaiting-moderation">
                                 <?php esc_html_e( 'Your comment is awaiting moderation.', 'conversions' ); ?>
                             </p>
                         <?php endif; ?>
-                    </footer><!-- /.comment-meta -->
+                    </div><!-- /.comment-meta -->
 
-                    <div class="comment-content">
-                        <?php comment_text(); ?>
-                    </div><!-- /.comment-content -->
+                </div>
 
-                    <ul class="list-inline">
-                    	<?php edit_comment_link( __( 'Edit' ), '<span class="edit-link list-inline-item">', '</span>' ); ?>
-                    	<?php $this->comment_reply_link( $comment, $depth, $args, $add_below = 'reply-comment' ); ?>
-                	</ul><!-- comment actions -->
+                <div class="media-body w-100">
+                    <div class="mb-4">
+                        <div class="comment-content">
+                            <?php comment_text(); ?>
+                        </div><!-- /.comment-content -->
+
+                        <ul class="list-inline">
+                    	   <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link list-inline-item">', '</span>' ); ?>
+                    	   <?php $this->comment_reply_link( $comment, $depth, $args, $add_below = 'reply-comment' ); ?>
+                	   </ul><!-- comment actions -->
+                    </div>
 
                     <?php if ( $is_parent ) { ?>
                         <div class="child-comments">
