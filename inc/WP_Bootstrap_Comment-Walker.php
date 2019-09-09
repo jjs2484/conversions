@@ -156,21 +156,26 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 
                     <footer class="comment-meta">
                         <div class="comment-author vcard">
-                            <?php printf( __( '%s <span class="says sr-only">says:</span>' ), sprintf( '<b class="media-heading fn">%s</b>', get_comment_author_link( $comment ) ) ); ?>
+                            <?php printf( __( '%s <span class="says sr-only">says:</span>', 'conversions' ), sprintf( '<b class="media-heading fn">%s</b>', get_comment_author_link( $comment ) ) ); ?>
                         </div><!-- /.comment-author -->
 
-                        <div class="comment-metadata">
-                            <a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
-                                <time datetime="<?php comment_time( 'c' ); ?>">
-                                    <?php
-                                    	printf( _x( '%s ago', '%s = human-readable time difference', 'conversions' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
-                                    ?>
-                                </time>
-                            </a>
+                        <ul class="comment-metadata list-inline">
+                            <time class="list-inline-item" datetime="<?php comment_time( 'c' ); ?>">
+                                <?php
+                                    printf( _x( '%s ago', '%s = human-readable time difference', 'conversions' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
+                                ?>
+                            </time>
+                            <span class="comm-perm list-inline-item">
+                                <a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
+                                <?php esc_html_e( 'Permalink', 'conversions' ); ?>
+                                </a>
+                            </span>
                         </div><!-- /.comment-metadata -->
 
                         <?php if ( '0' == $comment->comment_approved ) : ?>
-                            <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
+                            <p class="comment-awaiting-moderation">
+                                <?php esc_html_e( 'Your comment is awaiting moderation.', 'conversions' ); ?>
+                            </p>
                         <?php endif; ?>
                     </footer><!-- /.comment-meta -->
 
