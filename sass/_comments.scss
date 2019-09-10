@@ -8,15 +8,14 @@
 
       // Children styles
       ul.children {
-        padding-left: 1em;
-        @include media-breakpoint-up(lg) {
-          padding-left: .75em;
-        }
+        padding-left: .75em;
       }
 
       // Avatar
       .avatar {
         border-radius: 50%;
+        height: 100%;
+        align-self: flex-start;
       }
 
       // Icons
@@ -27,6 +26,10 @@
           content: "\f007";
           color: $text-muted;
           margin-right: 5px;
+        }
+        a {
+          color: $text-muted;
+          text-decoration: underline;
         }
       }
       // time
@@ -45,6 +48,10 @@
           content: "\f02e";
           color: $text-muted;
           margin-right: 2px;
+        }
+        a {
+          color: $text-muted;
+          text-decoration: underline;
         }
       }
 

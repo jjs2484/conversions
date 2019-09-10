@@ -148,7 +148,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 ?>
         <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $class_str, $comment ); ?>>
 
-                <div class="commenter d-inline-flex mb-2">
+                <div class="commenter d-flex flex-row mb-1">
                     
                     <?php if ( 0 != $args['avatar_size'] && 'pingback' !== $type && 'trackback' !== $type ) { ?>
 					   <?php echo $this->get_comment_author_avatar( $comment, $args ); ?>
@@ -173,9 +173,9 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
                         </ul><!-- /.comment-metadata -->
 
                         <?php if ( '0' == $comment->comment_approved ) : ?>
-                            <p class="comment-awaiting-moderation">
+                            <div class="alert alert-warning my-2 comment-awaiting-moderation" role="alert">
                                 <?php esc_html_e( 'Your comment is awaiting moderation.', 'conversions' ); ?>
-                            </p>
+                            </div>
                         <?php endif; ?>
                     </div><!-- /.comment-meta -->
 
