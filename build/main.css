@@ -16737,13 +16737,39 @@ section.c-testimonials .c-testimonials__quote {
     .conversions-hero-cover .conversions-hero-cover__inner-container h1 {
       color: #f8f9f9; }
 
-.single-post .entry-meta, .single-post .entry-meta a, .single-post .entry-footer, .single-post .entry-footer a {
+.entry-footer {
   color: #6c757d; }
-.single-post .entry-meta a, .single-post .entry-footer a {
-  text-decoration: underline; }
-.single-post .entry-meta {
+  .entry-footer a {
+    color: #6c757d;
+    text-decoration: underline; }
+
+.entry-meta {
   margin: 0 0 1em;
-  font-size: .9rem; }
+  font-size: .9rem;
+  color: #6c757d; }
+  .entry-meta a {
+    color: #6c757d;
+    text-decoration: underline; }
+  .entry-meta .author::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f007";
+    color: #6c757d;
+    margin-right: 2px; }
+  .entry-meta .posted-on::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f073";
+    color: #6c757d;
+    margin-right: 3px; }
+  .entry-meta .c-single-comments::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f075";
+    color: #6c757d;
+    margin-right: 2px; }
+  .entry-meta .c-reading-time::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f017";
+    color: #6c757d;
+    margin-right: 2px; }
 
 .blog article.card a.c-news__img-link:hover, .archive article.card a.c-news__img-link:hover, .search article.card a.c-news__img-link:hover {
   -webkit-transition: .3s;
@@ -16754,13 +16780,6 @@ section.c-testimonials .c-testimonials__quote {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%; }
-.blog article.card .entry-meta, .blog article.card .entry-meta a, .blog article.card .entry-footer, .blog article.card .entry-footer a, .archive article.card .entry-meta, .archive article.card .entry-meta a, .archive article.card .entry-footer, .archive article.card .entry-footer a, .search article.card .entry-meta, .search article.card .entry-meta a, .search article.card .entry-footer, .search article.card .entry-footer a {
-  color: #6c757d; }
-.blog article.card .entry-meta a, .blog article.card .entry-footer a, .archive article.card .entry-meta a, .archive article.card .entry-footer a, .search article.card .entry-meta a, .search article.card .entry-footer a {
-  text-decoration: underline; }
-.blog article.card .entry-meta, .archive article.card .entry-meta, .search article.card .entry-meta {
-  margin: 0 0 1em;
-  font-size: .9rem; }
 
 #comments.comments-area .comment.media {
   -webkit-box-orient: vertical;

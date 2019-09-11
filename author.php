@@ -66,10 +66,9 @@ get_header();
 								<a rel="bookmark" href="<?php the_permalink() ?>"
 								   title="<?php esc_html_e( 'Permanent Link:', 'conversions' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?>
-								</a>,
-								<?php conversions()->template->posted_on(); ?> 
-								<?php esc_html_e( 'in', 'conversions' ); ?> 
-								<?php the_category( '&' ); ?>
+								</a>
+								<?php esc_html_e( 'posted on', 'conversions' ); ?>
+								<?php conversions()->template->posted_on(); ?>
 							</li>
 						<?php endwhile; ?>
 

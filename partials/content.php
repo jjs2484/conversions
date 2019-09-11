@@ -26,13 +26,14 @@ defined( 'ABSPATH' ) || exit;
 			<?php if ( 'post' == get_post_type() ) : ?>
 
 				<div class="entry-meta">
-					<span class="d-block">
-						<?php conversions()->template->posted_on(); ?>
-					</span>
-					<span class="d-block">
-						<?php conversions()->template->reading_time(); ?>
-					</span>
-				</div><!-- .entry-meta -->
+					<ul class="byline list-inline">
+						<li class="list-inline-item"><?php conversions()->template->posted_by(); ?></li>
+						<li class="list-inline-item"><?php conversions()->template->posted_on(); ?></li>
+						<div class="w-100 d-block d-sm-none"></div>
+						<li class="list-inline-item"><?php conversions()->template->reading_time(); ?></li>
+						<li class="list-inline-item"><?php conversions()->template->single_comments(); ?></li>
+					</ul>
+    			</div>
 
 			<?php endif; ?>
 

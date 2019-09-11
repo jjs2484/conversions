@@ -75,11 +75,6 @@ class Template
 				printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'conversions' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'conversions' ), esc_html__( '1 Comment', 'conversions' ), esc_html__( '% Comments', 'conversions' ) );
-			echo '</span>';
-		}
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
@@ -169,6 +164,22 @@ class Template
 	}
 
 	/**
+		@brief		Posted by.
+		@since		2019-09-10 23:14:42
+	**/
+	public function posted_by()
+	{
+		$byline      = apply_filters(
+			'conversions_posted_by', sprintf(
+				'<span class="author vcard"><a class="url fn n" href="%1$s"> %2$s</a></span>',
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+				esc_html( get_the_author() )
+			)
+		);
+		echo $byline; // WPCS: XSS OK.
+	}
+
+	/**
 		@brief		Posted on.
 		@since		2019-08-18 19:55:38
 	**/
@@ -181,21 +192,11 @@ class Template
 		);
 		$posted_on   = apply_filters(
 			'conversions_posted_on', sprintf(
-				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
-				esc_html_x( 'Posted on', 'post date', 'conversions' ),
-				esc_url( get_permalink() ),
+				'<span class="posted-on">%1$s</span>',
 				apply_filters( 'conversions_posted_on_time', $time_string )
 			)
 		);
-		$byline      = apply_filters(
-			'conversions_posted_by', sprintf(
-				'<span class="byline"> %1$s<span class="author vcard"><a class="url fn n" href="%2$s"> %3$s</a></span></span>',
-				$posted_on ? esc_html_x( 'by', 'post author', 'conversions' ) : esc_html_x( 'Posted by', 'post author', 'conversions' ),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_html( get_the_author() )
-			)
-		);
-		echo $posted_on . $byline; // WPCS: XSS OK.
+		echo $posted_on; // WPCS: XSS OK.
 	}
 
 	/**
@@ -207,9 +208,29 @@ class Template
     	$word_count = str_word_count( strip_tags( $content ) );
     	$readingtime = ceil($word_count / 200);
       	$time_unit = esc_html_x( 'min read', 'time unit', 'conversions' );
-		$totalreadingtime = sprintf("<i class='far fa-clock'></i> %d %s", esc_html( $readingtime ), $time_unit );
+		$totalreadingtime = sprintf("<span class='c-reading-time'>%d %s</span>", esc_html( $readingtime ), $time_unit );
 		
 		echo $totalreadingtime;	
 	}
+
+
+	/**
+		@brief		Single comments display and link.
+		@since		2019-09-10 17:11:10
+	**/
+	public function single_comments() {
+		
+		$num_comments = get_comments_number(); // get_comments_number returns only a numeric value
+
+		if ( comments_open() ) {
+			if ( $num_comments == 0 ) {
+				$comments = __('No Comments', 'conversions');
+			} elseif ( $num_comments > 0 ) {
+				$comments = $num_comments;
+			}
+			echo '<span class="c-single-comments"><a href="' . get_comments_link() .'">'. $comments.'</a></span>';
+		}
+	}
+
 }
 conversions()->template = new Template();
