@@ -331,7 +331,7 @@ class Template
 			$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullscreen', false );
 
 			// Inline styles for background image
-    		'<style type="text/css">
+    		echo '<style type="text/css">
 	    		.conversions-hero-cover {background-image: url('. $medium[0] .');}
 	    		@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('.  $medium_large[0] .');} }
 	    		@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $large[0] .');} }
@@ -341,7 +341,7 @@ class Template
     		// HTML for background image and title
     		echo '<div class="col-sm-12">
         		<div class="conversions-hero-cover">
-        			<div class="conversions-hero-cover__inner-container">'.the_title( '<h1 class="entry-title text-center">', '</h1>' ).'</div>
+        			<div class="conversions-hero-cover__inner-container"><h1 class="entry-title text-center">'.get_the_title( $post->ID ).'</h1></div>
         		</div>
         	</div>';
     	}
