@@ -437,7 +437,11 @@ get_header();
       			
             <!-- Post image -->
       			<a class="c-news__img-link" href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>" title="<?php echo $post['post_title'] ?>">
-      				<?php echo get_the_post_thumbnail( $post['ID'], 'homepage-news', array( 'class' => 'card-img-top' ) ); ?>
+              <?php if ( has_post_thumbnail() ) : ?>
+                <?php echo get_the_post_thumbnail( $post['ID'], 'homepage-news', array( 'class' => 'card-img-top' ) ); ?>
+              <?php else : ?>
+                <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
+              <?php endif; ?>
       			</a>
       			<div class="card-body pb-1">
         			<h3 class="h5">

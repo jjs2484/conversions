@@ -291,7 +291,11 @@ class Template
       			
             				<!-- Post image -->
       						<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
-      							<?php the_post_thumbnail( 'medium' ); ?>
+      							<?php if ( has_post_thumbnail() ) : ?>
+        							<?php the_post_thumbnail( 'homepage-news', array( 'class' => 'card-img-top' ) ); ?>
+    							<?php else : ?>
+        							<img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
+    							<?php endif; ?>
       						</a>
       						<div class="card-body pb-1">
         						<h4 class="h5">
