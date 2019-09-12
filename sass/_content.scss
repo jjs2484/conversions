@@ -253,6 +253,16 @@ section.c-testimonials {
   }
 }
 
+// Single post meta/navs spacing
+.single-post {
+  .entry-footer, .post-navigation {
+    margin: 1.5rem 0;
+  }
+  .comment-navigation {
+    margin: 1rem 0;
+  }
+}
+
 // Blog indexes
 .blog, .archive, .search {
   article.card {

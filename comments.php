@@ -27,22 +27,22 @@ if ( post_password_required() ) {
 
 	<?php if ( have_comments() ) : ?>
 
-		<h2 class="comments-title">
+		<h3 class="comments-title pb-2 border-bottom">
 			
 			<?php
 				$comments_number = get_comments_number();
 				if ( 1 === (int)$comments_number ) {
 					printf(
 						/* translators: %s: post title */
-						esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'conversions' ),
+						esc_html_x( 'One comment on &ldquo;%s&rdquo;', 'comments title', 'conversions' ),
 						'<span>' . get_the_title() . '</span>'
 					);
 				} else {
 					printf( // WPCS: XSS OK.
 						/* translators: 1: number of comments, 2: post title */
 						esc_html( _nx(
-							'%1$s thought on &ldquo;%2$s&rdquo;',
-							'%1$s thoughts on &ldquo;%2$s&rdquo;',
+							'%1$s comment on &ldquo;%2$s&rdquo;',
+							'%1$s comments on &ldquo;%2$s&rdquo;',
 							$comments_number,
 							'comments title',
 							'conversions'
@@ -53,7 +53,7 @@ if ( post_password_required() ) {
 				}
 			?>
 
-		</h2><!-- .comments-title -->
+		</h3><!-- .comments-title -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			

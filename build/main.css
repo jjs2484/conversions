@@ -16771,6 +16771,11 @@ section.c-testimonials .c-testimonials__quote {
     color: #6c757d;
     margin-right: 2px; }
 
+.single-post .entry-footer, .single-post .post-navigation {
+  margin: 1.5rem 0; }
+.single-post .comment-navigation {
+  margin: 1rem 0; }
+
 .blog article.card a.c-news__img-link:hover, .archive article.card a.c-news__img-link:hover, .search article.card a.c-news__img-link:hover {
   -webkit-transition: .3s;
   -o-transition: .3s;

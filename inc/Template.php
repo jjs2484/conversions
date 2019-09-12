@@ -232,5 +232,121 @@ class Template
 		}
 	}
 
+	/**
+		@brief		Related posts
+		@since		2019-09-11 20:35:17
+	**/
+	public function related_posts() {
+	
+		global $post;
+	
+		// tags
+		$tags = wp_get_post_tags($post->ID); //retrieve a list of tags for current post  
+		$tag_ids = array();
+		foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id; //loop through list of tags and store term_id of each
+
+		$args=array(
+			'tag__in' => $tag_ids, //use tag ids that are within $tag_ids array
+			'post__not_in' => array($post->ID), //don’t retrieve current post
+			'post_type' => 'post', //specify post type to retrieve
+			'post_status' => 'publish', //retrieve only published posts
+			'posts_per_page' => 3, //specify number of related posts to show
+			'orderby' => array( 'comment_count' => 'DESC'), //how you want to order your posts
+			'no_found_rows' => true, //use for better query performance
+			'cache_results' => false, //use for better query performance
+			'ignore_sticky_posts' => 1, //ignore sticky posts
+		);
+	
+		// categories
+		/*
+		$cats = get_the_category($post->ID);
+	
+		$args=array(
+			'category__in' => $cat[0],
+			'post__not_in' => array($post->ID),
+			'post_type' => 'post',
+			'post_status' => 'publish',
+			'posts_per_page' => 3,
+			'orderby' => array('comment_count' => 'DESC'),
+			'no_found_rows' => true,
+			'cache_results' => false
+		);
+		*/
+
+		$query_related_posts = new \WP_query( $args );
+
+		if( $query_related_posts->have_posts() ) { ?>
+		
+			<div id="c-related-posts" class="row">
+				<div class="col-12">
+					<h3 class="pb-2 border-bottom"><?php esc_html_e( 'Related Posts', 'conversions' ); ?></h3>
+				</div>
+
+				<?php while( $query_related_posts->have_posts() ) {
+					$query_related_posts->the_post(); ?>
+
+					<!-- Post item -->
+  					<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
+    					<article class="card shadow h-100 mb-3">
+      			
+            				<!-- Post image -->
+      						<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
+      							<?php the_post_thumbnail( 'medium' ); ?>
+      						</a>
+      						<div class="card-body pb-1">
+        						<h4 class="h5">
+          		  					<a href="<?php echo esc_url( get_permalink() ); ?>">
+                  						<?php the_title(); ?>
+          		  					</a>
+        						</h4>
+        						<p class="text-muted">
+          						<?php echo wp_trim_words( get_the_content(), 15, '...' ); ?>
+          						</p>
+      						</div>
+      			
+    					</article>
+  					</div>
+  					<!-- End Post Item -->
+	
+				<?php }
+			echo '</div>';
+		}
+		wp_reset_postdata();
+	}
+
+	/**
+		@brief		Fullscreen featured image
+		@since		2019-09-12 11:17:04
+	**/
+	public function fullscreen_featured_image() {
+
+		global $post;
+			
+		if ( has_post_thumbnail( $post->ID ) ) // check if featured image is set
+		{
+			// Get featured image sizes
+			$medium	= wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium', false );
+			$medium_large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium_large', false );
+			$large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
+			$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullscreen', false );
+
+			// Inline styles for background image
+    		'<style type="text/css">
+	    		.conversions-hero-cover {background-image: url('. $medium[0] .');}
+	    		@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('.  $medium_large[0] .');} }
+	    		@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $large[0] .');} }
+	    		@media (min-width: 1024px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $fullscreen[0] .');} }
+    		</style>';
+
+    		// HTML for background image and title
+    		echo '<div class="col-sm-12">
+        		<div class="conversions-hero-cover">
+        			<div class="conversions-hero-cover__inner-container">'.the_title( '<h1 class="entry-title text-center">', '</h1>' ).'</div>
+        		</div>
+        	</div>';
+    	}
+
+	}
+
 }
 conversions()->template = new Template();
