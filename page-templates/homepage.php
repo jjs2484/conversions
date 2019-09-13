@@ -438,7 +438,7 @@ get_header();
             <!-- Post image -->
       			<a class="c-news__img-link" href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>" title="<?php echo $post['post_title'] ?>">
               <?php if ( has_post_thumbnail() ) : ?>
-                <?php echo get_the_post_thumbnail( $post['ID'], 'homepage-news', array( 'class' => 'card-img-top' ) ); ?>
+                <?php echo get_the_post_thumbnail( $post['ID'], 'news-image', array( 'class' => 'card-img-top' ) ); ?>
               <?php else : ?>
                 <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
               <?php endif; ?>

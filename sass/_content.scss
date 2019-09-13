@@ -16,6 +16,11 @@
   }
 }
 
+// News image hover effect
+a.c-news__img-link:hover {
+  transition: .3s;
+}
+
 // Homepage wrapper
 #homepage-wrapper.wrapper {
   padding: 0;
@@ -123,9 +128,6 @@ section.c-news {
       display: none;
     }
   }
-  a.c-news__img-link:hover {
-    transition: .3s;
-  }
 }
 
 // Testimonials section
@@ -215,6 +217,17 @@ section.c-testimonials {
   margin: 0 0 1em;
   font-size: .9rem;
   color: $text-muted;
+  ul.byline {
+    .list-inline-item {
+      @include media-breakpoint-down(xs) {
+        display: inline;
+        &:nth-child(2)::after {
+          white-space: pre;
+          content: '\A';
+        }
+      }
+    }
+  }
   a {
     color: $text-muted;
     text-decoration: underline;
@@ -253,9 +266,9 @@ section.c-testimonials {
   }
 }
 
-// Single post meta/navs spacing
+// Single post meta/navs/related spacing
 .single-post {
-  .entry-footer, .post-navigation {
+  .entry-footer, .post-navigation, .c-related-posts {
     margin: 1.5rem 0;
   }
   .comment-navigation {
@@ -266,13 +279,20 @@ section.c-testimonials {
 // Blog indexes
 .blog, .archive, .search {
   article.card {
-    a.c-news__img-link:hover {
-      transition: .3s;
-    }
     .card-img-top {
       height: 20rem;
       object-fit: cover;
       width: 100%;
     }
+  }
+}
+
+// Related posts
+.c-related-posts {
+  .col-12 {
+    padding: 0;
+  }
+  p {
+    font-size: .9rem;
   }
 }

@@ -845,27 +845,26 @@ namespace conversions
 
 				// Add modal window for search
 				$search_form = get_search_form(false);
-				echo
-					'<div id="csearchModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="Search" aria-hidden="true">',
+				echo '<div id="csearchModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="csearchModal__label" aria-hidden="true">',
 
-						'<div class="modal-dialog">',
+					'<div class="modal-dialog">',
 
-							'<div class="modal-content">',
+						'<div class="modal-content">',
 
-								'<div class="modal-header">',
-									'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>',
-								'</div>',
+							'<div class="modal-header">',
+								'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>',
+							'</div>',
 
-								'<div class="modal-body">',
-									'<h3 id="myModalLabel" class="modal-title">Start typing and press enter to search</h3>',
-									''.$search_form.'',
-								'</div>',
-
+							'<div class="modal-body">',
+								'<h3 id="csearchModal__label" class="modal-title">'.esc_html__( 'Start typing and press enter to search', 'conversions' ).'</h3>',
+								''.$search_form.'',
 							'</div>',
 
 						'</div>',
 
-					'</div>';
+					'</div>',
+
+				'</div>';
 			}
 		}
 

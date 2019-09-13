@@ -83,8 +83,8 @@ namespace conversions
 			// Add fullscreen thumbnail size
 			add_image_size( 'fullscreen', 1920, 9999 );
 			
-			// Add homepage news image size
-			add_image_size( 'homepage-news', 550, 320, true );
+			// Add news image size
+			add_image_size( 'news-image', 550, 320, true );
 
 			// Set up the WordPress core custom background feature.
 			add_theme_support( 'custom-background', apply_filters( 'conversions_custom_background_args', array(

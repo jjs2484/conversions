@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 	
 		<header class="entry-header">
 
-			<?php the_title( sprintf( '<h2 class="h3 entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+			<?php the_title( sprintf( '<h2 class="h3 entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<?php if ( 'post' == get_post_type() ) : ?>
 
@@ -29,7 +29,6 @@ defined( 'ABSPATH' ) || exit;
 					<ul class="byline list-inline">
 						<li class="list-inline-item"><?php conversions()->template->posted_by(); ?></li>
 						<li class="list-inline-item"><?php conversions()->template->posted_on(); ?></li>
-						<div class="w-100 d-block d-sm-none"></div>
 						<li class="list-inline-item"><?php conversions()->template->reading_time(); ?></li>
 						<li class="list-inline-item"><?php conversions()->template->single_comments(); ?></li>
 					</ul>

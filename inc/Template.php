@@ -277,7 +277,7 @@ class Template
 
 		if( $query_related_posts->have_posts() ) { ?>
 		
-			<div id="c-related-posts" class="row">
+			<div class="c-related-posts row">
 				<div class="col-12">
 					<h3 class="pb-2 border-bottom"><?php esc_html_e( 'Related Posts', 'conversions' ); ?></h3>
 				</div>
@@ -287,18 +287,18 @@ class Template
 
 					<!-- Post item -->
   					<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
-    					<article class="card shadow h-100 mb-3">
+    					<article class="card shadow-sm h-100 mb-3">
       			
             				<!-- Post image -->
       						<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
       							<?php if ( has_post_thumbnail() ) : ?>
-        							<?php the_post_thumbnail( 'homepage-news', array( 'class' => 'card-img-top' ) ); ?>
+        							<?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
     							<?php else : ?>
-        							<img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
+        							<img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
     							<?php endif; ?>
       						</a>
       						<div class="card-body pb-1">
-        						<h4 class="h5">
+        						<h4 class="h6">
           		  					<a href="<?php echo esc_url( get_permalink() ); ?>">
                   						<?php the_title(); ?>
           		  					</a>
@@ -335,7 +335,7 @@ class Template
 			$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullscreen', false );
 
 			// Inline styles for background image
-    		echo '<style type="text/css">
+    		echo '<style>
 	    		.conversions-hero-cover {background-image: url('. $medium[0] .');}
 	    		@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('.  $medium_large[0] .');} }
 	    		@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $large[0] .');} }

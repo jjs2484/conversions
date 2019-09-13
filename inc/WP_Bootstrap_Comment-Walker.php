@@ -160,16 +160,20 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
                         </div><!-- /.comment-author -->
 
                         <ul class="comment-metadata list-inline">
-                            <time class="list-inline-item" datetime="<?php comment_time( 'c' ); ?>">
-                                <?php
-                                    printf( _x( '%s ago', '%s = human-readable time difference', 'conversions' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
-                                ?>
-                            </time>
-                            <span class="comm-perm list-inline-item">
-                                <a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
-                                <?php esc_html_e( 'Permalink', 'conversions' ); ?>
-                                </a>
-                            </span>
+                            <li class="list-inline-item">
+                                <time datetime="<?php comment_time( 'c' ); ?>">
+                                    <?php
+                                        printf( _x( '%s ago', '%s = human-readable time difference', 'conversions' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
+                                    ?>
+                                </time>
+                            </li>
+                            <li class="list-inline-item">
+                                <span class="comm-perm list-inline-item">
+                                    <a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
+                                        <?php esc_html_e( 'Permalink', 'conversions' ); ?>
+                                    </a>
+                                </span>
+                            </li>
                         </ul><!-- /.comment-metadata -->
 
                         <?php if ( '0' == $comment->comment_approved ) : ?>
@@ -188,8 +192,12 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
                         </div><!-- /.comment-content -->
 
                         <ul class="list-inline">
-                    	   <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link list-inline-item">', '</span>' ); ?>
-                    	   <?php $this->comment_reply_link( $comment, $depth, $args, $add_below = 'reply-comment' ); ?>
+                            <li class="list-inline-item">
+                    	       <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
+                            </li>
+                            <li class="list-inline-item">
+                    	       <?php $this->comment_reply_link( $comment, $depth, $args, $add_below = 'reply-comment' ); ?>
+                            </li>
                 	   </ul><!-- comment actions -->
                     </div>
 
@@ -292,7 +300,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
             'add_below' => $add_below,
             'depth'     => $depth,
             'max_depth' => $args['max_depth'],
-            'before'    => '<div id="reply-comment-'.$comment->comment_ID.'" class="reply list-inline-item">',
+            'before'    => '<div id="reply-comment-'.$comment->comment_ID.'" class="reply">',
             'after'     => '</div>'
         ) ) );
     }
