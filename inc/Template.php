@@ -336,10 +336,10 @@ class Template
 
 			// Inline styles for background image
     		echo '<style>
-	    		.conversions-hero-cover {background-image: url('. $medium[0] .');}
-	    		@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('.  $medium_large[0] .');} }
-	    		@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $large[0] .');} }
-	    		@media (min-width: 1024px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. $fullscreen[0] .');} }
+	    		.conversions-hero-cover {background-image: url('. esc_url($medium[0]) .');}
+	    		@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('.  esc_url($medium_large[0]) .');} }
+	    		@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. esc_url($large[0]) .');} }
+	    		@media (min-width: 1024px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. esc_url($fullscreen[0]) .');} }
     		</style>';
 
     		// HTML for background image and title

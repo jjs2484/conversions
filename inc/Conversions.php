@@ -86,6 +86,9 @@ namespace conversions
 			// Add news image size
 			add_image_size( 'news-image', 550, 320, true );
 
+			// Add blog index image size
+			add_image_size( 'blog-index', 1200, 480, true );
+
 			// Set up the WordPress core custom background feature.
 			add_theme_support( 'custom-background', apply_filters( 'conversions_custom_background_args', array(
 				'default-color' => 'ffffff',
