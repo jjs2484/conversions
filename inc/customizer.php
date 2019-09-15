@@ -748,6 +748,7 @@ namespace conversions
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
+				'sanitize_callback' => 'conversions_sanitize_float',
 			) );
 			$wp_customize->add_control( 'conversions_blog_overlay_control', array(
 				'label'      => 'Featured image overlay',
@@ -1100,7 +1101,7 @@ namespace
 	/**
 	 * Select sanitization function
 	 *
-	 * @param string               $input   Slug to sanitize.
+	 * @param string $input Slug to sanitize.
 	 * @param WP_Customize_Setting $setting Setting instance.
 	 * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
 	 */
@@ -1112,5 +1113,19 @@ namespace
 		$choices = $setting->manager->get_control( $setting->id )->choices;
 		// If the input is a valid key, return it; otherwise, return the default.
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+	}
+
+	/**
+	 * Float sanitization function.
+	 *
+	 */
+	function conversions_sanitize_float( $input ) {
+    	if ( $input == 0 || 1 ) {
+    		return $input;
+    	}
+    	else {
+    		$input = filter_var( $input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
+    		return $input;
+    	}
 	}
 }
