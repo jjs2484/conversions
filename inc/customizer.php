@@ -1,5 +1,4 @@
 <?php
-
 namespace conversions
 {
 	/**
@@ -21,7 +20,6 @@ namespace conversions
 			add_filter( 'woocommerce_add_to_cart_fragments', [ $this, 'woocommerce_add_to_cart_fragments' ] );
 			add_filter( 'wp_nav_menu_items', [ $this, 'wp_nav_menu_items' ], 10, 2 );
 		}
-
 		/**
 			@brief		conversions_output_social
 			@since		2019-08-15 23:29:01
@@ -34,36 +32,29 @@ namespace conversions
 					$active_sites[] = $social_site;
 				}
 			}
-
 			// For each active social site, add it as a list item
 			if ( !empty( $active_sites ) ) {
-
 				echo "<div class='social-media-icons col-md'>";
-
 					echo "<ul class='list-inline'>";
-
 						foreach ( $active_sites as $active_site ) { ?>
 
 							<li class="list-inline-item">
-								<a href="<?php echo get_theme_mod( $active_site ); ?>" target="<?php echo get_theme_mod('conversions_social_link_target', '_self'); ?>">
+								<a href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>" target="<?php echo esc_attr( get_theme_mod('conversions_social_link_target', '_self') ); ?>">
 									<?php if( $active_site == 'dribbble' ) { ?>
-										<i class="fab fa-<?php echo $active_site; ?>-square"></i>
+										<i class="fab fa-<?php echo esc_attr( $active_site ); ?>-square"></i>
 									<?php } elseif( $active_site == 'google my business' ) { ?>
 										<i class="fas fa-map-marker-alt"></i>
 									<?php } else { ?>
-										<i class="fab fa-<?php echo $active_site; ?>"></i>
+										<i class="fab fa-<?php echo esc_attr( $active_site ); ?>"></i>
 									<?php } ?>
 								</a>
 							</li>
 
 						<?php }
-
 					echo "</ul>";
-
 				echo "</div>";
 			}
 		}
-
 		/**
 			@brief		customize_register
 			@since		2019-08-15 23:32:18
@@ -75,7 +66,6 @@ namespace conversions
 			//-----------------------------------------------------
 			$wp_customize->get_section( 'colors' )->active_callback = '__return_false';
 			$wp_customize->get_section( 'background_image' )->active_callback = '__return_false';
-
 			//-----------------------------------------------------
 			// Add logo height to site identity panel
 			//-----------------------------------------------------
@@ -98,7 +88,6 @@ namespace conversions
 					'max' => 1000,
 				),
 			) );
-
 			//-----------------------------------------------------
 			// Create theme options panel
 			//-----------------------------------------------------
@@ -108,7 +97,6 @@ namespace conversions
 				'description'    => 'Change colors, fonts, and more.',
 				'capability'        => 'edit_theme_options',
 			) );
-
 			//-----------------------------------------------------
 			// Header section
 			//-----------------------------------------------------
@@ -234,7 +222,6 @@ namespace conversions
 					'max' => 1000,
 				),
 			) );
-
 			//-----------------------------------------------------
 			// Navigation section
 			//-----------------------------------------------------
@@ -346,7 +333,6 @@ namespace conversions
 						'priority'    => '70',
 					)
 			) );
-
 			//-----------------------------------------------------
 			// Layout settings
 			//-----------------------------------------------------
@@ -357,7 +343,6 @@ namespace conversions
 				'priority'    => 40,
 				'panel'             => 'conversions_theme_options',
 			) );
-
 			$wp_customize->add_setting( 'conversions_container_width', array(
 				'default'       => '1140',
 				'type'          => 'theme_mod',
@@ -380,7 +365,7 @@ namespace conversions
 			$wp_customize->add_setting( 'conversions_sidebar_position', array(
 				'default'           => 'right',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
@@ -407,7 +392,7 @@ namespace conversions
 			$wp_customize->add_setting( 'conversions_sidebar_mvisibility', array(
 				'default'           => 'show',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
@@ -430,7 +415,6 @@ namespace conversions
 					)
 				)
 			);
-
 			//-----------------------------------------------------
 			// Typography section
 			//-----------------------------------------------------
@@ -445,6 +429,7 @@ namespace conversions
 			$wp_customize->add_setting( 'conversions_google_fonts', array(
 				'default'       => 'enable_gfonts',
 				'type'          => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
@@ -476,9 +461,11 @@ namespace conversions
 			$wp_customize->add_setting( 'conversions_headings_fonts', array(
 				'default'       => 'Roboto:400,400italic,700,700italic',
 				'type'          => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
-			$wp_customize->add_control( 'conversions_headings_fonts', array(
+			$wp_customize->add_control( 'conversions_headings_fonts_control', array(
 				'label'      => __('Heading font', 'conversions'),
 				'type' => 'select',
 				'description' => __('Select your Google font for headings.', 'conversions'),
@@ -488,9 +475,11 @@ namespace conversions
 			$wp_customize->add_setting( 'conversions_body_fonts', array(
 				'default'       => 'Roboto:400,400italic,700,700italic',
 				'type'          => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
-			$wp_customize->add_control( 'conversions_body_fonts', array(
+			$wp_customize->add_control( 'conversions_body_fonts_control', array(
 				'label'      => __('Body font', 'conversions'),
 				'type' => 'select',
 				'description' => __( 'Select your Google font for the body.', 'conversions' ),
@@ -536,7 +525,6 @@ namespace conversions
 				'priority'   => 40,
 				'type'       => 'color',
 			) );
-
 			//-----------------------------------------------------
 			// Footer colors
 			//-----------------------------------------------------
@@ -600,7 +588,6 @@ namespace conversions
 				'priority'   => 40,
 				'type'       => 'color',
 			) );
-
 			//-----------------------------------------------------
 			// Copyright section
 			//-----------------------------------------------------
@@ -664,7 +651,6 @@ namespace conversions
 				'priority'   => 40,
 				'type'       => 'color',
 			) );
-
 			//-----------------------------------------------------
 			// Social media icons
 			//-----------------------------------------------------
@@ -747,6 +733,75 @@ namespace conversions
 			}
 
 			//-----------------------------------------------------
+			// Blog section
+			//-----------------------------------------------------
+			$wp_customize->add_section( 'conversions_blog', array(
+				'title'             => __('Blog', 'conversions'),
+				'priority'          => 90,
+				'description'       => __('Change your blog settings', 'conversions'),
+				'capability'        => 'edit_theme_options',
+				'panel'             => 'conversions_theme_options',
+			) );
+			// Create our settings
+			$wp_customize->add_setting( 'conversions_blog_overlay', array(
+				'default'       => '0.5',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control( 'conversions_blog_overlay_control', array(
+				'label'      => 'Featured image overlay',
+				'description'=> 'Darken or lighten the featured image overlay.',
+				'section'    => 'conversions_blog',
+				'settings'   => 'conversions_blog_overlay',
+				'priority'   => 1,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 0.0,
+					'max' => 1.0,
+					'step'  => 0.1,
+				),
+			) );
+			$wp_customize->add_setting( 'conversions_blog_related', array(
+				'default'       => 'enable',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'conversions_sanitize_select',
+			) );
+			$wp_customize->add_control( 'conversions_blog_related_control', array(
+				'label'      => 'Related posts',
+				'description'=> 'Enable or disable related posts from showing on single posts.',
+				'section'    => 'conversions_blog',
+				'settings'   => 'conversions_blog_related',
+				'priority'   => 10,
+				'type'       => 'select',
+				'choices'    => array(
+					'enable' => 'Enable',
+					'disable' => 'Disable',
+				),
+			) );
+			$wp_customize->add_setting( 'conversions_blog_taxonomy', array(
+				'default'       => 'categories',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'conversions_sanitize_select',
+			) );
+			$wp_customize->add_control( 'conversions_blog_taxonomy_control', array(
+				'label'      => 'Related posts taxonomy',
+				'description'=> 'Use categories or tags to show related posts?',
+				'section'    => 'conversions_blog',
+				'settings'   => 'conversions_blog_taxonomy',
+				'priority'   => 20,
+				'type'       => 'select',
+				'choices'    => array(
+					'tags' => 'Tags',
+					'categories' => 'Categories',
+				),
+			) );
+
+			//-----------------------------------------------------
 			// WooCommerce Options
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_woocommerce', array(
@@ -754,7 +809,7 @@ namespace conversions
 				'description'       => __('WooCommerce Options', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_theme_options',
-				'priority' => 90,
+				'priority' => 100,
 				'theme_supports' => array('woocommerce'),
 			));
 			// Create our settings
@@ -805,7 +860,6 @@ namespace conversions
 					)
 			) );
 		}
-
 		/**
 			@brief		Return a list of social media icons.
 			@since		2019-08-15 23:29:22
@@ -833,7 +887,6 @@ namespace conversions
 				'youtube',
 			];
 		}
-
 		/**
 			@brief		wp_footer
 			@since		2019-08-15 23:16:11
@@ -842,32 +895,23 @@ namespace conversions
 		{
 			$nav_search_icon = get_theme_mod( 'conversions_nav_search_icon', 'show' );
 			if ($nav_search_icon != 'hide') {
-
 				// Add modal window for search
 				$search_form = get_search_form(false);
 				echo '<div id="csearchModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="csearchModal__label" aria-hidden="true">',
-
 					'<div class="modal-dialog">',
-
 						'<div class="modal-content">',
-
 							'<div class="modal-header">',
 								'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>',
 							'</div>',
-
 							'<div class="modal-body">',
 								'<h3 id="csearchModal__label" class="modal-title">'.esc_html__( 'Start typing and press enter to search', 'conversions' ).'</h3>',
 								''.$search_form.'',
 							'</div>',
-
 						'</div>',
-
 					'</div>',
-
 				'</div>';
 			}
 		}
-
 		/**
 			@brief		wp_head
 			@since		2019-08-15 23:12:24
@@ -876,24 +920,19 @@ namespace conversions
 		{
 			// font variables
 			$google_fonts_state = esc_html(get_theme_mod('conversions_google_fonts', 'enable_gfonts'));
-
 			if( $google_fonts_state == 'enable_gfonts' ) {
-
 				// headings
 				$headings_font = esc_html(get_theme_mod('conversions_headings_fonts', 'Roboto:400,400italic,700,700italic'));
 				$heading_font_pieces = explode(":", $headings_font);
 				$headings_font = $heading_font_pieces[0];
-
 				// body
 				$body_font = esc_html(get_theme_mod('conversions_body_fonts', 'Roboto:400,400italic,700,700italic'));
 				$body_font_pieces = explode(":", $body_font);
 				$body_font = $body_font_pieces[0];
-
 			} else {
 				$headings_font = "Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont";
 				$body_font = "Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont";
 			}
-
 			// fixed header height calc variables
 			if ( has_custom_logo() ) {
 				$logo_height = get_theme_mod('conversions_logo_height', '60');
@@ -905,7 +944,6 @@ namespace conversions
 			$header_bottom_padding = get_theme_mod('conversions_header_bpadding', '8');
 			$logo_padding = 10;
 			$total_header_height = $logo_height + $header_top_padding + $header_bottom_padding + $logo_padding - 1;
-
 			?>
 
 			<style type="text/css">
@@ -977,7 +1015,6 @@ namespace conversions
 
 			<?php
 		}
-
 		/**
 			@brief		woocommerce_add_to_cart_fragments
 			@since		2019-08-15 23:17:37
@@ -985,9 +1022,7 @@ namespace conversions
 		public function woocommerce_add_to_cart_fragments( $fragments )
 		{
 			global $woocommerce;
-
 			ob_start();
-
 			$cart_totals = WC()->cart->get_cart_contents_count();
 			if( WC()->cart->get_cart_contents_count() > 0)
 			{
@@ -997,15 +1032,12 @@ namespace conversions
 			{
 				$cart_totals = '';
 			}
-
 			?>
 			<a class="cart-customlocation nav-link" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="View your shopping cart"><i class="fas fa-shopping-bag"></i><?php echo $cart_totals; ?></a>
 			<?php
 			$fragments['a.cart-customlocation.nav-link'] = ob_get_clean();
-
 			return $fragments;
 		}
-
 		/**
 			@brief		wp_nav_menu_items
 			@since		2019-08-15 23:15:12
@@ -1013,7 +1045,6 @@ namespace conversions
 		public function wp_nav_menu_items( $items, $args )
 		{
 			if ( $args->theme_location === 'primary' ) {
-
 				// Append Navigation Button?
 				// get nav button customizer setting whether to show button or not
 				$nav_button_type = get_theme_mod( 'conversions_nav_button', 'no' );
@@ -1027,7 +1058,6 @@ namespace conversions
 					// Add the nav button to the end of the menu.
 					$items = $items . $nav_button;
 				}
-
 				// Append WooCommerce Cart Icon?
 				// first check if woocommerce is active
 				if ( class_exists( 'woocommerce' ) ) {
@@ -1050,7 +1080,6 @@ namespace conversions
 						$items = $items . $cart_link;
 					}
 				}
-
 				// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 				// get search icon customizer setting whether to show or not
 				$nav_search_icon = get_theme_mod( 'conversions_nav_search_icon', 'show' );
@@ -1060,7 +1089,6 @@ namespace conversions
 					// Add the nav button to the end of the menu.
 					$items = $items . $nav_search;
 				}
-
 			}
 			return $items;
 		}

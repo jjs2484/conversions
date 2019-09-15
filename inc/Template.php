@@ -237,85 +237,100 @@ class Template
 		@since		2019-09-11 20:35:17
 	**/
 	public function related_posts() {
-	
-		global $post;
-	
-		// tags
-		$tags = wp_get_post_tags($post->ID); //retrieve a list of tags for current post  
-		$tag_ids = array();
-		foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id; //loop through list of tags and store term_id of each
 
-		$args=array(
-			'tag__in' => $tag_ids, //use tag ids that are within $tag_ids array
-			'post__not_in' => array($post->ID), //don’t retrieve current post
-			'post_type' => 'post', //specify post type to retrieve
-			'post_status' => 'publish', //retrieve only published posts
-			'posts_per_page' => 3, //specify number of related posts to show
-			'orderby' => array( 'comment_count' => 'DESC'), //how you want to order your posts
-			'no_found_rows' => true, //use for better query performance
-			'cache_results' => false, //use for better query performance
-			'ignore_sticky_posts' => 1, //ignore sticky posts
-		);
+		// Are related posts enabled?
+		$related_posts_state = esc_html(get_theme_mod('conversions_blog_related', 'enable'));
+		if( $related_posts_state == 'enable' ) {
 	
-		// categories
-		/*
-		$cats = get_the_category($post->ID);
+			global $post;
+			
+			$related_posts_tax = esc_html(get_theme_mod('conversions_blog_taxonomy', 'categories'));
+			if( $related_posts_tax == 'tags' ) 
+			{
+				
+				// tags
+				$tags = wp_get_post_tags($post->ID); //retrieve a list of tags for current post  
+				$tag_ids = array();
+				foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id; //loop through list of tags and store term_id of each
+
+				$args=array(
+					'tag__in' => $tag_ids, //use tag ids that are within $tag_ids array
+					'post__not_in' => array($post->ID), //don’t retrieve current post
+					'post_type' => 'post', //specify post type to retrieve
+					'post_status' => 'publish', //retrieve only published posts
+					'posts_per_page' => 3, //specify number of related posts to show
+					'orderby' => array( 'comment_count' => 'DESC'), //how you want to order your posts
+					'no_found_rows' => true, //use for better query performance
+					'cache_results' => false, //use for better query performance
+					'ignore_sticky_posts' => 1, //ignore sticky posts
+				);
+
+			} else {
 	
-		$args=array(
-			'category__in' => $cat[0],
-			'post__not_in' => array($post->ID),
-			'post_type' => 'post',
-			'post_status' => 'publish',
-			'posts_per_page' => 3,
-			'orderby' => array('comment_count' => 'DESC'),
-			'no_found_rows' => true,
-			'cache_results' => false
-		);
-		*/
+				// categories
+				$cats = get_the_category($post->ID);
+	
+				$args=array(
+					'category__in' => $cats[0],
+					'post__not_in' => array($post->ID),
+					'post_type' => 'post',
+					'post_status' => 'publish',
+					'posts_per_page' => 3,
+					'orderby' => array('comment_count' => 'DESC'),
+					'no_found_rows' => true,
+					'cache_results' => false,
+					'ignore_sticky_posts' => 1,
+				);
+			
+			}
 
-		$query_related_posts = new \WP_query( $args );
+			$query_related_posts = new \WP_query( $args );
 
-		if( $query_related_posts->have_posts() ) { ?>
+			if( $query_related_posts->have_posts() ) { ?>
 		
-			<div class="c-related-posts row">
-				<div class="col-12">
-					<h3 class="pb-2 border-bottom"><?php esc_html_e( 'Related Posts', 'conversions' ); ?></h3>
-				</div>
+				<div class="c-related-posts row">
+					<div class="col-12">
+						<h3 class="pb-2 border-bottom"><?php esc_html_e( 'Related Posts', 'conversions' ); ?></h3>
+					</div>
 
-				<?php while( $query_related_posts->have_posts() ) {
-					$query_related_posts->the_post(); ?>
+					<?php while( $query_related_posts->have_posts() ) {
+						$query_related_posts->the_post(); ?>
 
-					<!-- Post item -->
-  					<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
-    					<article class="card shadow-sm h-100 mb-3">
+						<!-- Post item -->
+  						<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
+    						<article class="card shadow-sm h-100 mb-3">
       			
-            				<!-- Post image -->
-      						<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
-      							<?php if ( has_post_thumbnail() ) : ?>
-        							<?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
-    							<?php else : ?>
-        							<img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
-    							<?php endif; ?>
-      						</a>
-      						<div class="card-body pb-1">
-        						<h4 class="h6">
-          		  					<a href="<?php echo esc_url( get_permalink() ); ?>">
-                  						<?php the_title(); ?>
-          		  					</a>
-        						</h4>
-        						<p class="text-muted">
-          						<?php echo wp_trim_words( get_the_content(), 15, '...' ); ?>
-          						</p>
-      						</div>
+            					<!-- Post image -->
+      							<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
+      								<?php if ( has_post_thumbnail() ) : ?>
+        								<?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
+    								<?php else : ?>
+        								<img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
+    								<?php endif; ?>
+      							</a>
+      							<div class="card-body pb-1">
+        							<h4 class="h6">
+          		  						<a href="<?php echo esc_url( get_permalink() ); ?>">
+                  							<?php the_title(); ?>
+          		  						</a>
+        							</h4>
+        							<p class="text-muted">
+          								<?php
+          									$related_content = strip_shortcodes( get_the_content() );
+          									echo wp_trim_words( $related_content, 15, '...' ); 
+          								?>
+          							</p>
+      							</div>
       			
-    					</article>
-  					</div>
-  					<!-- End Post Item -->
+    						</article>
+  						</div>
+  						<!-- End Post Item -->
 	
-				<?php }
-			echo '</div>';
+					<?php }
+				echo '</div>';
+			}
+			wp_reset_postdata();
 		}
-		wp_reset_postdata();
 	}
 
 	/**
@@ -334,12 +349,15 @@ class Template
 			$large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
 			$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullscreen', false );
 
+			// Get the customizer setting
+			$blog_img_overlay = get_theme_mod('conversions_blog_overlay', '0.5');
+
 			// Inline styles for background image
     		echo '<style>
 	    		.conversions-hero-cover {background-image: url('. esc_url($medium[0]) .');}
-	    		@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('.  esc_url($medium_large[0]) .');} }
-	    		@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. esc_url($large[0]) .');} }
-	    		@media (min-width: 1024px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('. esc_url($fullscreen[0]) .');} }
+	    		@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .'), rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .')), url('.  esc_url($medium_large[0]) .');} }
+	    		@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .'), rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .')), url('. esc_url($large[0]) .');} }
+	    		@media (min-width: 1024px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .'), rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .')), url('. esc_url($fullscreen[0]) .');} }
     		</style>';
 
     		// HTML for background image and title

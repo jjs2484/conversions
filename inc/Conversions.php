@@ -177,7 +177,10 @@ namespace conversions
 				'conversions_social_size' => '22',
 				'conversions_social_link_color' => '#2600e6',
 				'conversions_wccart_nav' => 'yes',
-				'conversions_wccheckout_columns' => 'two-column'
+				'conversions_wccheckout_columns' => 'two-column',
+				'conversions_blog_overlay' => '0.5',
+				'conversions_blog_related' => 'enable',
+				'conversions_blog_taxonomy' => 'categories'
 			);
 
 			foreach ($defaults as $c => $v) {
