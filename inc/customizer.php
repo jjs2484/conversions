@@ -758,8 +758,8 @@ namespace conversions
 				'priority'   => 1,
 				'type'       => 'number',
 				'input_attrs'=> array(
-					'min' => 0.0,
-					'max' => 1.0,
+					'min' => 0,
+					'max' => 1,
 					'step'  => 0.1,
 				),
 			) );
@@ -895,7 +895,7 @@ namespace conversions
 		public function wp_footer()
 		{
 			$nav_search_icon = get_theme_mod( 'conversions_nav_search_icon', 'show' );
-			if ($nav_search_icon != 'hide') {
+			if ( $nav_search_icon != 'hide' ) {
 				// Add modal window for search
 				$search_form = get_search_form(false);
 				echo '<div id="csearchModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="csearchModal__label" aria-hidden="true">',
@@ -1084,7 +1084,7 @@ namespace conversions
 				// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 				// get search icon customizer setting whether to show or not
 				$nav_search_icon = get_theme_mod( 'conversions_nav_search_icon', 'show' );
-				if ($nav_search_icon != 'hide') {
+				if ( $nav_search_icon != 'hide' ) {
 					// output the nav search icon if active.
 					$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a title="Search" href="#csearchModal" data-toggle="modal" class="nav-link"><i class="fas fa-search"></i></a></li>';
 					// Add the nav button to the end of the menu.
@@ -1120,12 +1120,7 @@ namespace
 	 *
 	 */
 	function conversions_sanitize_float( $input ) {
-    	if ( $input == 0 || 1 ) {
-    		return $input;
-    	}
-    	else {
-    		$input = filter_var( $input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
-    		return $input;
-    	}
-	}
+    	$input = filter_var( $input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
+    	return $input;
+    }
 }
