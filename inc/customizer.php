@@ -77,8 +77,8 @@ namespace conversions
 				'sanitize_callback' => 'absint', //converts value to a non-negative integer
 			) );
 			$wp_customize->add_control( 'conversions_logo_height_control', array(
-				'label'      => 'Logo height',
-				'description'=> 'Max logo height in px',
+				'label'      => __('Logo height', 'conversions'),
+				'description'=> __('Max logo height in px', 'conversions'),
 				'section'    => 'title_tagline',
 				'settings'   => 'conversions_logo_height',
 				'priority'   => 8,
@@ -93,8 +93,8 @@ namespace conversions
 			//-----------------------------------------------------
 			$wp_customize->add_panel( 'conversions_theme_options', array(
 				'priority'       => 36,
-				'title'          => 'Theme Options',
-				'description'    => 'Change colors, fonts, and more.',
+				'title'          => __('Theme Options', 'conversions'),
+				'description'    => __('Change colors, fonts, and more.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 			) );
 			//-----------------------------------------------------
@@ -192,8 +192,8 @@ namespace conversions
 				'sanitize_callback' => 'absint', //converts value to a non-negative integer
 			) );
 			$wp_customize->add_control( 'conversions_header_tpadding_control', array(
-				'label'      => 'Header top padding',
-				'description'=> 'Top padding in px',
+				'label'      => __( 'Header top padding', 'conversions' ),
+				'description'=> __( 'Top padding in px', 'conversions' ),
 				'section'    => 'conversions_header',
 				'settings'   => 'conversions_header_tpadding',
 				'priority'   => 40,
@@ -211,8 +211,8 @@ namespace conversions
 				'sanitize_callback' => 'absint', //converts value to a non-negative integer
 			) );
 			$wp_customize->add_control( 'conversions_header_bpadding_control', array(
-				'label'      => 'Header bottom padding',
-				'description'=> 'Bottom padding in px',
+				'label'      => __( 'Header bottom padding', 'conversions' ),
+				'description'=> __( 'Bottom padding in px', 'conversions' ),
 				'section'    => 'conversions_header',
 				'settings'   => 'conversions_header_bpadding',
 				'priority'   => 50,
@@ -291,7 +291,8 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_nav_button_text_control', array(
-				'label'      => 'Navigation button text',
+				'label'      => __( 'Navigation button text', 'conversions' ),
+				'description'=> __('Add text for button to display.', 'conversions'),
 				'section'    => 'conversions_nav',
 				'settings'   => 'conversions_nav_button_text',
 				'priority'   => 50,
@@ -304,7 +305,8 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_nav_button_url_control', array(
-				'label'      => 'Navigation button URL',
+				'label'      => __( 'Navigation button URL', 'conversions' ),
+				'description'=> __('Where should the button link to?', 'conversions'),
 				'section'    => 'conversions_nav',
 				'settings'   => 'conversions_nav_button_url',
 				'priority'   => 60,
@@ -341,7 +343,7 @@ namespace conversions
 				'capability'  => 'edit_theme_options',
 				'description' => __( 'Container width and sidebar defaults', 'conversions' ),
 				'priority'    => 40,
-				'panel'             => 'conversions_theme_options',
+				'panel'			=> 'conversions_theme_options',
 			) );
 			$wp_customize->add_setting( 'conversions_container_width', array(
 				'default'       => '1140',
@@ -351,8 +353,8 @@ namespace conversions
 				'sanitize_callback' => 'absint', //converts value to a non-negative integer
 			) );
 			$wp_customize->add_control( 'conversions_container_width_control', array(
-				'label'      => 'Max container width',
-				'description'=> 'Specify the max container width in px',
+				'label'      => __( 'Max container width', 'conversions' ),
+				'description'=> __( 'Specify the max container width in px', 'conversions' ),
 				'section'    => 'conversions_layout_options',
 				'settings'   => 'conversions_container_width',
 				'priority'   => 10,
@@ -433,30 +435,34 @@ namespace conversions
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
-			$wp_customize->add_control( 'conversions_google_fonts', array(
-				'label'      => 'Google fonts',
-				'description'=> 'Enable or disable Google fonts If disabled native browser fonts will be used',
-				'section'    => 'conversions_typography',
-				'settings'   => 'conversions_google_fonts',
-				'priority'   => 1,
-				'type'       => 'select',
-				'choices'    => array(
-					'enable_gfonts' => 'Enable',
-					'disable_gfonts' => 'Disable',
-				),
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_google_fonts', array(
+						'label'       => __( 'Google fonts', 'conversions' ),
+						'description' => __( 'Enable or disable Google fonts If disabled native browser fonts will be used.', 'conversions' ),
+						'section'     => 'conversions_typography',
+						'settings'    => 'conversions_google_fonts',
+						'type'        => 'select',
+						'choices'     => array(
+							'enable_gfonts' => __( 'Enable', 'conversions' ),
+							'disable_gfonts' => __( 'Disable', 'conversions' ),
+						),
+						'priority'    => '1',
+					)
 			) );
 			$font_choices = array(
-				'Droid Sans:400,700' => 'Droid Sans',
-				'Droid Serif:400,700,400italic,700italic' => 'Droid Serif',
-				'Francois One:400' => 'Francois One',
-				'Lato:400,700,400italic,700italic' => 'Lato',
-				'Libre Baskerville:400,400italic,700' => 'Libre Baskerville',
-				'Lora:400,700,400italic,700italic' => 'Lora',
-				'Merriweather:400,300italic,300,400italic,700,700italic' => 'Merriweather',
-				'Open Sans:400italic,700italic,400,700' => 'Open Sans',
-				'Oxygen:400,300,700' => 'Oxygen',
-				'Roboto:400,400italic,700,700italic' => 'Roboto',
-				'Ubuntu:400,700,400italic,700italic' => 'Ubuntu',
+				'Droid Sans:400,700' => __( 'Droid Sans', 'conversions' ),
+				'Droid Serif:400,700,400italic,700italic' => __( 'Droid Serif', 'conversions' ),
+				'Francois One:400' => __( 'Francois One', 'conversions' ),
+				'Lato:400,700,400italic,700italic' => __( 'Lato', 'conversions' ),
+				'Libre Baskerville:400,400italic,700' => __( 'Libre Baskerville', 'conversions' ),
+				'Lora:400,700,400italic,700italic' => __( 'Lora', 'conversions' ),
+				'Merriweather:400,300italic,300,400italic,700,700italic' => __( 'Merriweather', 'conversions' ),
+				'Open Sans:400italic,700italic,400,700' => __( 'Open Sans', 'conversions' ),
+				'Oxygen:400,300,700' => __( 'Oxygen', 'conversions' ),
+				'Roboto:400,400italic,700,700italic' => __( 'Roboto', 'conversions' ),
+				'Ubuntu:400,700,400italic,700italic' => __( 'Ubuntu', 'conversions' ),
 			);
 			$wp_customize->add_setting( 'conversions_headings_fonts', array(
 				'default'       => 'Roboto:400,400italic,700,700italic',
@@ -465,12 +471,18 @@ namespace conversions
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
-			$wp_customize->add_control( 'conversions_headings_fonts', array(
-				'label'      => __('Heading font', 'conversions'),
-				'type' => 'select',
-				'description' => __('Select your Google font for headings.', 'conversions'),
-				'section' => 'conversions_typography',
-				'choices' => $font_choices
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_headings_fonts', array(
+						'label'       => __( 'Heading font', 'conversions' ),
+						'description' => __( 'Select your Google font for headings.', 'conversions' ),
+						'section'     => 'conversions_typography',
+						'settings'    => 'conversions_headings_fonts',
+						'type'        => 'select',
+						'choices' => $font_choices,
+						'priority'    => '2',
+					)
 			) );
 			$wp_customize->add_setting( 'conversions_body_fonts', array(
 				'default'       => 'Roboto:400,400italic,700,700italic',
@@ -479,12 +491,18 @@ namespace conversions
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
-			$wp_customize->add_control( 'conversions_body_fonts', array(
-				'label'      => __('Body font', 'conversions'),
-				'type' => 'select',
-				'description' => __( 'Select your Google font for the body.', 'conversions' ),
-				'section' => 'conversions_typography',
-				'choices' => $font_choices
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_body_fonts', array(
+						'label'       => __( 'Body font', 'conversions' ),
+						'description' => __( 'Select your Google font for the body.', 'conversions' ),
+						'section'     => 'conversions_typography',
+						'settings'    => 'conversions_body_fonts',
+						'type'        => 'select',
+						'choices' => $font_choices,
+						'priority'    => '3',
+					)
 			) );
 			$wp_customize->add_setting( 'conversions_heading_color', array(
 				'default'       => '#222222',
@@ -494,6 +512,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_heading_color_control', array(
 				'label'      => __('Heading color', 'conversions'),
+				'description'=> __('Choose a color for the headings text.', 'conversions'),
 				'section'    => 'conversions_typography',
 				'settings'   => 'conversions_heading_color',
 				'priority'   => 20,
@@ -507,6 +526,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_text_color_control', array(
 				'label'      => __('Text color', 'conversions'),
+				'description'=> __('Choose a color for the body text.', 'conversions'),
 				'section'    => 'conversions_typography',
 				'settings'   => 'conversions_text_color',
 				'priority'   => 30,
@@ -520,6 +540,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_link_color_control', array(
 				'label'      => __('Link color', 'conversions'),
+				'description'=> __('Choose a color for links.', 'conversions'),
 				'section'    => 'conversions_typography',
 				'settings'   => 'conversions_link_color',
 				'priority'   => 40,
@@ -544,6 +565,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_background_color_control', array(
 				'label'      => __('Background color', 'conversions'),
+				'description'=> __('Choose a footer background color.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_background_color',
 				'priority'   => 10,
@@ -557,6 +579,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_heading_color_control', array(
 				'label'      => __('Heading color', 'conversions'),
+				'description'=> __('Choose heading color for footer.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_heading_color',
 				'priority'   => 20,
@@ -570,6 +593,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_text_color_control', array(
 				'label'      => __('Text color', 'conversions'),
+				'description'=> __('Choose text color for footer.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_text_color',
 				'priority'   => 30,
@@ -583,6 +607,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_link_color_control', array(
 				'label'      => __('Link color', 'conversions'),
+				'description'=> __('Choose link color for footer.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_link_color',
 				'priority'   => 40,
@@ -606,7 +631,8 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_copyright_text_control', array(
-				'label'      => 'Copyright text',
+				'label'      => __('Copyright text', 'conversions'),
+				'description'=> __('Type your copyright text.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_text',
 				'priority'   => 10,
@@ -620,6 +646,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_copyright_background_color_control', array(
 				'label'      => __('Copyright background color', 'conversions'),
+				'description'=> __('Choose copyright background color.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_background_color',
 				'priority'   => 20,
@@ -633,6 +660,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_copyright_text_color_control', array(
 				'label'      => __('Text color', 'conversions'),
+				'description'=> __('Choose copyright text color.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_text_color',
 				'priority'   => 30,
@@ -646,6 +674,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_copyright_link_color_control', array(
 				'label'      => __('Link color', 'conversions'),
+				'description'=> __('Choose copyright link color.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_link_color',
 				'priority'   => 40,
@@ -693,8 +722,8 @@ namespace conversions
 				'sanitize_callback' => 'absint', //converts value to a non-negative integer
 			) );
 			$wp_customize->add_control( 'conversions_social_size_control', array(
-				'label'      => 'Social icons size',
-				'description'=> 'Icons size in px',
+				'label'      => __( 'Social icons size', 'conversions' ),
+				'description'=> __( 'Icons size in px', 'conversions' ),
 				'section'    => 'conversions_social',
 				'settings'   => 'conversions_social_size',
 				'priority'   => 20,
@@ -711,7 +740,8 @@ namespace conversions
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
 			$wp_customize->add_control( 'conversions_social_link_color_control', array(
-				'label'      => __('Link color', 'conversions'),
+				'label'      => __('Social icon color', 'conversions'),
+				'description'       => __('Choose social icon color.', 'conversions'),
 				'section'    => 'conversions_social',
 				'settings'   => 'conversions_social_link_color',
 				'priority'   => 30,
@@ -751,8 +781,8 @@ namespace conversions
 				'sanitize_callback' => 'conversions_sanitize_float',
 			) );
 			$wp_customize->add_control( 'conversions_blog_overlay_control', array(
-				'label'      => 'Featured image overlay',
-				'description'=> 'Darken or lighten the featured image overlay.',
+				'label'      => __('Featured image overlay', 'conversions'),
+				'description'=> __('Darken or lighten the featured image overlay.', 'conversions'),
 				'section'    => 'conversions_blog',
 				'settings'   => 'conversions_blog_overlay',
 				'priority'   => 1,
@@ -770,17 +800,21 @@ namespace conversions
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'conversions_sanitize_select',
 			) );
-			$wp_customize->add_control( 'conversions_blog_related', array(
-				'label'      => 'Related posts',
-				'description'=> 'Enable or disable related posts from showing on single posts.',
-				'section'    => 'conversions_blog',
-				'settings'   => 'conversions_blog_related',
-				'priority'   => 10,
-				'type'       => 'select',
-				'choices'    => array(
-					'enable' => 'Enable',
-					'disable' => 'Disable',
-				),
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_blog_related', array(
+						'label'       => __( 'Related posts', 'conversions' ),
+						'description' => __( 'Enable or disable related posts from showing on single posts.', 'conversions' ),
+						'section'     => 'conversions_blog',
+						'settings'    => 'conversions_blog_related',
+						'type'        => 'select',
+						'choices'    => array(
+							'enable' => __( 'Enable', 'conversions' ),
+							'disable' => __( 'Disable', 'conversions' ),
+						),
+						'priority'    => '10',
+					)
 			) );
 			$wp_customize->add_setting( 'conversions_blog_taxonomy', array(
 				'default'       => 'categories',
@@ -789,17 +823,21 @@ namespace conversions
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'conversions_sanitize_select',
 			) );
-			$wp_customize->add_control( 'conversions_blog_taxonomy', array(
-				'label'      => 'Related posts taxonomy',
-				'description'=> 'Use categories or tags to show related posts?',
-				'section'    => 'conversions_blog',
-				'settings'   => 'conversions_blog_taxonomy',
-				'priority'   => 20,
-				'type'       => 'select',
-				'choices'    => array(
-					'tags' => 'Tags',
-					'categories' => 'Categories',
-				),
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_blog_taxonomy', array(
+						'label'       => __( 'Related posts taxonomy', 'conversions' ),
+						'description' => __( 'Use categories or tags to show related posts?', 'conversions' ),
+						'section'     => 'conversions_blog',
+						'settings'    => 'conversions_blog_taxonomy',
+						'type'        => 'select',
+						'choices'    => array(
+							'tags' => __( 'Tags', 'conversions' ),
+							'categories' => __( 'Categories', 'conversions' ),
+						),
+						'priority'    => '20',
+					)
 			) );
 
 			//-----------------------------------------------------
