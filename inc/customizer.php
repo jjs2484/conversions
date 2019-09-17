@@ -1034,7 +1034,7 @@ namespace conversions
 				$cart_totals = '';
 			}
 			?>
-			<a class="cart-customlocation nav-link" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="View your shopping cart"><i class="fas fa-shopping-bag"></i><?php echo $cart_totals; ?></a>
+			<a class="cart-customlocation nav-link" title="<?php esc_html__( 'View your shopping cart', 'conversions' ); ?>" href="<?php echo esc_url( wc_get_cart_url() ); ?>"><i class="fas fa-shopping-bag"></i><?php echo $cart_totals; ?></a>
 			<?php
 			$fragments['a.cart-customlocation.nav-link'] = ob_get_clean();
 			return $fragments;
@@ -1048,14 +1048,14 @@ namespace conversions
 			if ( $args->theme_location === 'primary' ) {
 				// Append Navigation Button?
 				// get nav button customizer setting whether to show button or not
-				$nav_button_type = get_theme_mod( 'conversions_nav_button', 'no' );
-				if ($nav_button_type != 'no') {
+				$nav_button_type = esc_html( get_theme_mod( 'conversions_nav_button', 'no' ) );
+				if ( $nav_button_type != 'no' ) {
 					// get nav button text option
 					$nav_button_text = get_theme_mod( 'conversions_nav_button_text', 'Click me' );
 					// get nav button url option
 					$nav_button_url = get_theme_mod( 'conversions_nav_button_url', 'https://wordpress.org' );
 					// output the nav button with options
-					$nav_button = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-callout-button menu-item nav-item"><a title="' . $nav_button_text . '" href="' . $nav_button_url . '" class="btn ' . $nav_button_type . '">' . $nav_button_text . '</a></li>';
+					$nav_button = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-callout-button menu-item nav-item"><a title="' . esc_html( $nav_button_text ) . '" href="' . esc_url( $nav_button_url ) . '" class="btn ' . esc_attr( $nav_button_type ) . '">' . esc_html( $nav_button_text ) . '</a></li>';
 					// Add the nav button to the end of the menu.
 					$items = $items . $nav_button;
 				}
@@ -1063,7 +1063,7 @@ namespace conversions
 				// first check if woocommerce is active
 				if ( class_exists( 'woocommerce' ) ) {
 					// get customizer option whether to show cart icon or not
-					if (get_theme_mod( 'conversions_wccart_nav', 'yes' ) == 'yes') {
+					if ( esc_html( get_theme_mod( 'conversions_wccart_nav', 'yes' ) == 'yes') ) {
 						// get WC cart totals and if = 0 only show icon with no text
 						$cart_totals = WC()->cart->get_cart_contents_count();
 						if( WC()->cart->get_cart_contents_count() > 0) {
@@ -1073,7 +1073,7 @@ namespace conversions
 							$cart_totals = '';
 						}
 						// output the cart icon with item count
-						$cart_link = sprintf( '<li class="cart menu-item nav-item" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a class="cart-customlocation nav-link" href="%s" title="View your shopping cart"><i class="fas fa-shopping-bag"></i>%s</a></li>',
+						$cart_link = sprintf( '<li class="cart menu-item nav-item" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a title="' . esc_html__( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i class="fas fa-shopping-bag"></i>%s</a></li>',
 							wc_get_cart_url(),
 							$cart_totals
 						);
@@ -1083,10 +1083,10 @@ namespace conversions
 				}
 				// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 				// get search icon customizer setting whether to show or not
-				$nav_search_icon = get_theme_mod( 'conversions_nav_search_icon', 'show' );
+				$nav_search_icon = esc_html( get_theme_mod( 'conversions_nav_search_icon', 'show' ) );
 				if ( $nav_search_icon != 'hide' ) {
 					// output the nav search icon if active.
-					$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a title="Search" href="#csearchModal" data-toggle="modal" class="nav-link"><i class="fas fa-search"></i></a></li>';
+					$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a title="' . esc_html__( 'Search', 'conversions' ) . '" href="#csearchModal" data-toggle="modal" class="nav-link"><i class="fas fa-search"></i></a></li>';
 					// Add the nav button to the end of the menu.
 					$items = $items . $nav_search;
 				}
