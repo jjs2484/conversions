@@ -45,7 +45,7 @@ switch( $header_color_scheme )
 
 // mobile navigation type
 $mobile_nav_type = get_theme_mod( 'conversions_nav_mobile_type', 'offcanvas' );
-if ($mobile_nav_type == 'collapse') {
+if ( $mobile_nav_type == 'collapse' ) {
 	$mobile_nav_container = 'collapse navbar-collapse';
 } else {
 	$mobile_nav_container = 'navbar-collapse offcanvas-collapse';

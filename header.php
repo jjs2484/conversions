@@ -28,7 +28,7 @@ $header_position = get_theme_mod( 'conversions_header_position', 'fixed-top' );
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="<?php echo $header_position; ?>" itemscope itemtype="http://schema.org/WebSite">
+	<div id="wrapper-navbar" class="<?php echo esc_attr( $header_position ); ?>" itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'conversions' ); ?></a>
 
