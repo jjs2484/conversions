@@ -995,7 +995,7 @@ namespace conversions
 					width: auto;
 				}
 				/* Header styles */
-				<?php if ( esc_html( get_theme_mod( 'conversions_header_position', 'fixed-top' ) == 'fixed-top' ) ) { ?>
+				<?php if ( get_theme_mod( 'conversions_header_position', 'fixed-top' ) == 'fixed-top' ) { ?>
 					/* Fixed header height */
 					#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper { 
 						margin-top: <?php echo esc_html( $total_header_height ); ?>px; 
