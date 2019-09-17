@@ -433,7 +433,7 @@ namespace conversions
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
-			$wp_customize->add_control( 'conversions_google_fonts_control', array(
+			$wp_customize->add_control( 'conversions_google_fonts', array(
 				'label'      => 'Google fonts',
 				'description'=> 'Enable or disable Google fonts If disabled native browser fonts will be used',
 				'section'    => 'conversions_typography',
@@ -465,7 +465,7 @@ namespace conversions
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
-			$wp_customize->add_control( 'conversions_headings_fonts_control', array(
+			$wp_customize->add_control( 'conversions_headings_fonts', array(
 				'label'      => __('Heading font', 'conversions'),
 				'type' => 'select',
 				'description' => __('Select your Google font for headings.', 'conversions'),
@@ -479,7 +479,7 @@ namespace conversions
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
-			$wp_customize->add_control( 'conversions_body_fonts_control', array(
+			$wp_customize->add_control( 'conversions_body_fonts', array(
 				'label'      => __('Body font', 'conversions'),
 				'type' => 'select',
 				'description' => __( 'Select your Google font for the body.', 'conversions' ),
@@ -770,7 +770,7 @@ namespace conversions
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'conversions_sanitize_select',
 			) );
-			$wp_customize->add_control( 'conversions_blog_related_control', array(
+			$wp_customize->add_control( 'conversions_blog_related', array(
 				'label'      => 'Related posts',
 				'description'=> 'Enable or disable related posts from showing on single posts.',
 				'section'    => 'conversions_blog',
@@ -789,7 +789,7 @@ namespace conversions
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'conversions_sanitize_select',
 			) );
-			$wp_customize->add_control( 'conversions_blog_taxonomy_control', array(
+			$wp_customize->add_control( 'conversions_blog_taxonomy', array(
 				'label'      => 'Related posts taxonomy',
 				'description'=> 'Use categories or tags to show related posts?',
 				'section'    => 'conversions_blog',
@@ -1107,12 +1107,11 @@ namespace
 	 */
 	function conversions_sanitize_select( $input, $setting )
 	{
-		// Ensure input is a slug (lowercase alphanumeric characters, dashes and underscores are allowed only).
-		$input = sanitize_key( $input );
-		// Get the list of possible select options.
-		$choices = $setting->manager->get_control( $setting->id )->choices;
-		// If the input is a valid key, return it; otherwise, return the default.
-		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+		$control = $setting->manager->get_control( $setting->id );
+		$valid = $control->choices;
+
+		//return input if valid or return default option
+		return ( array_key_exists( $input, $valid ) ? $input : $setting->default );
 	}
 
 	/**
