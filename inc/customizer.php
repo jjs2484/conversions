@@ -452,9 +452,11 @@ namespace conversions
 					)
 			) );
 			$font_choices = array(
+				'Comfortaa:400,700' => __( 'Comfortaa', 'conversions' ),
 				'Droid Sans:400,700' => __( 'Droid Sans', 'conversions' ),
 				'Droid Serif:400,700,400italic,700italic' => __( 'Droid Serif', 'conversions' ),
-				'Francois One:400' => __( 'Francois One', 'conversions' ),
+				'Handlee:400' => __( 'Handlee', 'conversions' ),
+				'Indie Flower:400' => __( 'Indie Flower', 'conversions' ),
 				'Lato:400,700,400italic,700italic' => __( 'Lato', 'conversions' ),
 				'Libre Baskerville:400,400italic,700' => __( 'Libre Baskerville', 'conversions' ),
 				'Lora:400,700,400italic,700italic' => __( 'Lora', 'conversions' ),
@@ -462,6 +464,8 @@ namespace conversions
 				'Open Sans:400italic,700italic,400,700' => __( 'Open Sans', 'conversions' ),
 				'Oxygen:400,300,700' => __( 'Oxygen', 'conversions' ),
 				'Roboto:400,400italic,700,700italic' => __( 'Roboto', 'conversions' ),
+				'Roboto Slab:400,700' => __( 'Roboto Slab', 'conversions' ),
+				'Special Elite:400' => __( 'Special Elite', 'conversions' ),
 				'Ubuntu:400,700,400italic,700italic' => __( 'Ubuntu', 'conversions' ),
 			);
 			$wp_customize->add_setting( 'conversions_headings_fonts', array(
