@@ -16,6 +16,7 @@ class Template
 	{
 		add_action( 'edit_category', [ $this, 'category_transient_flusher' ] );
 		add_action( 'save_post', [ $this, 'category_transient_flusher' ] );
+		add_filter( 'post_class', [ $this, 'conversions_sticky_classes' ] ); 
 	}
 
 	/**
@@ -239,12 +240,12 @@ class Template
 	public function related_posts() {
 
 		// Are related posts enabled?
-		$related_posts_state = esc_html(get_theme_mod('conversions_blog_related', 'enable'));
+		$related_posts_state = get_theme_mod( 'conversions_blog_related', 'enable' );
 		if( $related_posts_state == 'enable' ) {
 	
 			global $post;
 			
-			$related_posts_tax = esc_html(get_theme_mod('conversions_blog_taxonomy', 'categories'));
+			$related_posts_tax = get_theme_mod( 'conversions_blog_taxonomy', 'categories' );
 			if( $related_posts_tax == 'tags' ) 
 			{
 				
@@ -368,6 +369,32 @@ class Template
         	</div>';
     	}
 
+	}
+
+	/**
+ 	* Adds .border-{color} class names to sticky posts.
+ 	*
+ 	* @param array $classes An array of post classes.
+ 	* @param array $class   An array of additional classes added to the post.
+ 	* @param int   $post_id The post ID.
+ 	*
+ 	* @return array
+ 	*/
+	function conversions_sticky_classes( $classes ) {
+
+    	// Bail if this is not a sticky post.
+    	if ( ! is_sticky() ) {
+        	return $classes;
+		}
+
+		$sticky_posts_highlight = get_theme_mod( 'conversions_blog_sticky_posts', 'primary' );
+		$body_classes = get_body_class();
+
+		if( $sticky_posts_highlight != 'no' && in_array('blog', $body_classes) ) {
+    		$classes[] = 'border-' . $sticky_posts_highlight;
+    	}
+
+    	return $classes;
 	}
 
 }

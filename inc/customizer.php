@@ -777,6 +777,34 @@ namespace conversions
 				'panel'             => 'conversions_theme_options',
 			) );
 			// Create our settings
+			$wp_customize->add_setting( 'conversions_blog_sticky_posts', array(
+				'default'           => 'primary',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_blog_sticky_posts', array(
+						'label'       => __( 'Sticky post highlight color', 'conversions' ),
+						'description' => __( 'Choose the highlight color for sticky posts on the blog index.', 'conversions' ),
+						'section'     => 'conversions_blog',
+						'settings'    => 'conversions_blog_sticky_posts',
+						'type'        => 'select',
+						'choices'     => array(
+							'no' => __( 'None', 'conversions' ),
+							'primary' => __( 'Primary', 'conversions' ),
+							'secondary' => __( 'Secondary', 'conversions' ),
+							'success' => __( 'Success', 'conversions' ),
+							'danger' => __( 'Danger', 'conversions' ),
+							'warning' => __( 'Warning', 'conversions' ),
+							'info' => __( 'Info', 'conversions' ),
+						),
+						'priority'    => '1',
+					)
+			) );
 			$wp_customize->add_setting( 'conversions_blog_overlay', array(
 				'default'       => '0.5',
 				'type'          => 'theme_mod',
@@ -786,10 +814,10 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_blog_overlay_control', array(
 				'label'      => __('Featured image overlay', 'conversions'),
-				'description'=> __('Darken or lighten the featured image overlay.', 'conversions'),
+				'description'=> __('Darken or lighten single posts featured images.', 'conversions'),
 				'section'    => 'conversions_blog',
 				'settings'   => 'conversions_blog_overlay',
-				'priority'   => 1,
+				'priority'   => 2,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 0,
@@ -817,7 +845,7 @@ namespace conversions
 							'enable' => __( 'Enable', 'conversions' ),
 							'disable' => __( 'Disable', 'conversions' ),
 						),
-						'priority'    => '10',
+						'priority'    => '3',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_blog_taxonomy', array(
@@ -840,7 +868,7 @@ namespace conversions
 							'tags' => __( 'Tags', 'conversions' ),
 							'categories' => __( 'Categories', 'conversions' ),
 						),
-						'priority'    => '20',
+						'priority'    => '4',
 					)
 			) );
 
