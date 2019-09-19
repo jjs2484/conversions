@@ -39,15 +39,15 @@ namespace conversions
 						foreach ( $active_sites as $active_site ) { ?>
 
 							<li class="list-inline-item">
-								<a href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>" target="<?php echo esc_html( get_theme_mod('conversions_social_link_target', '_self') ); ?>">
+								<a title="<?php echo esc_html( $active_site ); ?>" href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>" target="<?php echo esc_html( get_theme_mod('conversions_social_link_target', '_self') ); ?>">
 									<?php if( $active_site == 'dribbble' ) { ?>
-										<i aria-hidden="true" class="fab fa-<?php echo esc_attr( $active_site ); ?>-square" title="<?php echo esc_html( $active_site ); ?>"></i>
+										<i aria-hidden="true" class="fab fa-<?php echo esc_attr( $active_site ); ?>-square"></i>
 										<span class="sr-only"><?php echo esc_html( $active_site ); ?></span>
 									<?php } elseif( $active_site == 'google my business' ) { ?>
-										<i aria-hidden="true" class="fas fa-map-marker-alt" title="<?php echo esc_html( $active_site ); ?>"></i>
+										<i aria-hidden="true" class="fas fa-map-marker-alt"></i>
 										<span class="sr-only"><?php echo esc_html( $active_site ); ?></span>
 									<?php } else { ?>
-										<i aria-hidden="true" class="fab fa-<?php echo esc_attr( $active_site ); ?>" title="<?php echo esc_html( $active_site ); ?>"></i>
+										<i aria-hidden="true" class="fab fa-<?php echo esc_attr( $active_site ); ?>"></i>
 											<span class="sr-only"><?php echo esc_html( $active_site ); ?></span>
 									<?php } ?>
 								</a>
@@ -1159,7 +1159,8 @@ namespace conversions
 				$nav_search_icon = esc_html( get_theme_mod( 'conversions_nav_search_icon', 'show' ) );
 				if ( $nav_search_icon != 'hide' ) {
 					// output the nav search icon if active.
-					$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a title="' . __( 'Search', 'conversions' ) . '" href="#csearchModal" data-toggle="modal" class="nav-link"><i class="fas fa-search"></i></a></li>';
+					$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a href="#csearchModal" data-toggle="modal" class="nav-link" title="' . __( 'Search', 'conversions' ) . '"><i aria-hidden="true" class="fas fa-search"></i><span class="sr-only">' . __( 'Search', 'conversions' ) . '</span></a></li>';
+
 					// Add the nav button to the end of the menu.
 					$items = $items . $nav_search;
 				}

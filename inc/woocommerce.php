@@ -45,8 +45,11 @@ class WooCommerce
 		add_theme_support( 'wc-product-gallery-zoom' );
 		add_theme_support( 'wc-product-gallery-slider' );
 
-		// hook in and customizer form fields.
+		// Hook in and customizer form fields.
 		add_filter( 'woocommerce_form_field_args', [ $this, 'woocommerce_form_field_args' ], 10, 3 );
+
+		// Remove the default woo sidebar since we call our own.
+		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 	}
 
 	/**
