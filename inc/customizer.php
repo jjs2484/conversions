@@ -39,13 +39,16 @@ namespace conversions
 						foreach ( $active_sites as $active_site ) { ?>
 
 							<li class="list-inline-item">
-								<a href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>" target="<?php echo esc_attr( get_theme_mod('conversions_social_link_target', '_self') ); ?>">
+								<a href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>" target="<?php echo esc_html( get_theme_mod('conversions_social_link_target', '_self') ); ?>">
 									<?php if( $active_site == 'dribbble' ) { ?>
-										<i class="fab fa-<?php echo esc_attr( $active_site ); ?>-square"></i>
+										<i aria-hidden="true" class="fab fa-<?php echo esc_attr( $active_site ); ?>-square" title="<?php echo esc_html( $active_site ); ?>"></i>
+										<span class="sr-only"><?php echo esc_html( $active_site ); ?></span>
 									<?php } elseif( $active_site == 'google my business' ) { ?>
-										<i class="fas fa-map-marker-alt"></i>
+										<i aria-hidden="true" class="fas fa-map-marker-alt" title="<?php echo esc_html( $active_site ); ?>"></i>
+										<span class="sr-only"><?php echo esc_html( $active_site ); ?></span>
 									<?php } else { ?>
-										<i class="fab fa-<?php echo esc_attr( $active_site ); ?>"></i>
+										<i aria-hidden="true" class="fab fa-<?php echo esc_attr( $active_site ); ?>" title="<?php echo esc_html( $active_site ); ?>"></i>
+											<span class="sr-only"><?php echo esc_html( $active_site ); ?></span>
 									<?php } ?>
 								</a>
 							</li>
@@ -1104,7 +1107,7 @@ namespace conversions
 				$cart_totals = '';
 			}
 			?>
-			<a class="cart-customlocation nav-link" title="<?php esc_html__( 'View your shopping cart', 'conversions' ); ?>" href="<?php echo esc_url( wc_get_cart_url() ); ?>"><i class="fas fa-shopping-bag"></i><?php echo $cart_totals; ?></a>
+			<a class="cart-customlocation nav-link" title="<?php _e( 'View your shopping cart', 'conversions' ); ?>" href="<?php echo esc_url( wc_get_cart_url() ); ?>"><i class="fas fa-shopping-bag"></i><?php echo $cart_totals; ?></a>
 			<?php
 			$fragments['a.cart-customlocation.nav-link'] = ob_get_clean();
 			return $fragments;
@@ -1143,7 +1146,7 @@ namespace conversions
 							$cart_totals = '';
 						}
 						// output the cart icon with item count
-						$cart_link = sprintf( '<li class="cart menu-item nav-item" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a title="' . esc_html__( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i class="fas fa-shopping-bag"></i>%s</a></li>',
+						$cart_link = sprintf( '<li class="cart menu-item nav-item" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i class="fas fa-shopping-bag"></i>%s</a></li>',
 							wc_get_cart_url(),
 							$cart_totals
 						);
@@ -1156,7 +1159,7 @@ namespace conversions
 				$nav_search_icon = esc_html( get_theme_mod( 'conversions_nav_search_icon', 'show' ) );
 				if ( $nav_search_icon != 'hide' ) {
 					// output the nav search icon if active.
-					$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a title="' . esc_html__( 'Search', 'conversions' ) . '" href="#csearchModal" data-toggle="modal" class="nav-link"><i class="fas fa-search"></i></a></li>';
+					$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a title="' . __( 'Search', 'conversions' ) . '" href="#csearchModal" data-toggle="modal" class="nav-link"><i class="fas fa-search"></i></a></li>';
 					// Add the nav button to the end of the menu.
 					$items = $items . $nav_search;
 				}
