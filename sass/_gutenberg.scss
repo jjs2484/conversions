@@ -53,13 +53,15 @@
 }
 
 // Gutenberg color options
-// -- see editor-color-palette in functions.php
+// -- see editor-color-palette in inc/Conversions.php
 $colors: (
   'primary' : #007BFF,
   'secondary' : #6c757d,
   'success' : #019875,
   'danger' : #dc3545,
+  'warning' : #ffc107,
   'info' : #17a2b8,
+  'light' : #f8f9fa,
   'dark' : #151B26,
 );
 
@@ -76,9 +78,6 @@ $colors: (
 
 // Button block
 .wp-block-button {
-  a.wp-block-button__link:hover {
-    filter: brightness(85%);
-  }
   // universal button styles
   .wp-block-button__link {
     border-radius: .25rem;

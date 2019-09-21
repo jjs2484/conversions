@@ -92,7 +92,8 @@ class Enqueue
 
 		$headings_color = get_theme_mod( 'conversions_heading_color', '#222222' );
 		$body_color = get_theme_mod( 'conversions_text_color', '#111111' );
-		$links_color = get_theme_mod( 'conversions_link_color', '#2600e6' );
+		$links_color = get_theme_mod( 'conversions_link_color', '#0057b4' );
+		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#004086' );
 		$container_width = get_theme_mod( 'conversions_container_width', '1140' );
 
 		$custom_gb_css = '
@@ -113,6 +114,10 @@ class Enqueue
 			.wp-block-freeform.block-library-rich-text__tinymce a {
 				color: '.esc_html($links_color).';
 				text-decoration: none;
+			}
+			.editor-styles-wrapper a:hover,
+			.wp-block-freeform.block-library-rich-text__tinymce a:hover {
+				color: '.esc_html($links_hcolor).';
 			}
 			.wp-block {
 				max-width: '.esc_html($container_width).'px;
@@ -151,10 +156,11 @@ class Enqueue
 
 		$headings_color = get_theme_mod( 'conversions_heading_color', '#222222' );
 		$body_color = get_theme_mod( 'conversions_text_color', '#111111' );
-		$links_color = get_theme_mod( 'conversions_link_color', '#2600e6' );
+		$links_color = get_theme_mod( 'conversions_link_color', '#0057b4' );
+		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#004086' );
 
 		// Add them to the classic editor
-		$styles = 'body.mce-content-body { color:'.esc_html($body_color).';font-family:'.esc_html($body_font).'; } body.mce-content-body h1, body.mce-content-body h2, body.mce-content-body h3, body.mce-content-body h4, body.mce-content-body h5, body.mce-content-body h6 { color:'.esc_html($headings_color).';font-family:'.esc_html($headings_font).'; } body.mce-content-body a { color:'.esc_html($links_color).'; }';
+		$styles = 'body.mce-content-body { color:'.esc_html($body_color).';font-family:'.esc_html($body_font).'; } body.mce-content-body h1, body.mce-content-body h2, body.mce-content-body h3, body.mce-content-body h4, body.mce-content-body h5, body.mce-content-body h6 { color:'.esc_html($headings_color).';font-family:'.esc_html($headings_font).'; } body.mce-content-body a { color:'.esc_html($links_color).'; } body.mce-content-body a:hover { color:'.esc_html($links_hcolor).'; }';
 		if ( isset( $mceInit['content_style'] ) ) {
 			$mceInit['content_style'] .= ' ' . $styles . ' ';
 		} else {

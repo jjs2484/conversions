@@ -276,13 +276,15 @@ namespace conversions
 						'settings'    => 'conversions_nav_button',
 						'type'        => 'select',
 						'choices'     => array(
-							'no' => __( 'No button', 'conversions' ),
-							'btn-primary' => __( 'Primary button', 'conversions' ),
-							'btn-secondary' => __( 'Secondary button', 'conversions' ),
-							'btn-success' => __( 'Success button', 'conversions' ),
-							'btn-danger' => __( 'Danger button', 'conversions' ),
-							'btn-warning' => __( 'Warning button', 'conversions' ),
-							'btn-info' => __( 'Info button', 'conversions' ),
+							'no' => __( 'None', 'conversions' ),
+							'btn-primary' => __( 'Primary', 'conversions' ),
+							'btn-secondary' => __( 'Secondary', 'conversions' ),
+							'btn-success' => __( 'Success', 'conversions' ),
+							'btn-danger' => __( 'Danger', 'conversions' ),
+							'btn-warning' => __( 'Warning', 'conversions' ),
+							'btn-info' => __( 'Info', 'conversions' ),
+							'btn-light' => __( 'Light', 'conversions' ),
+							'btn-dark' => __( 'Dark', 'conversions' ),
 						),
 						'priority'    => '40',
 					)
@@ -540,7 +542,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_link_color', array(
-				'default'       => '#2600e6',
+				'default'       => '#0057b4',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -551,6 +553,20 @@ namespace conversions
 				'section'    => 'conversions_typography',
 				'settings'   => 'conversions_link_color',
 				'priority'   => 40,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_link_hcolor', array(
+				'default'       => '#004086',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_link_hcolor_control', array(
+				'label'      => __('Link hover color', 'conversions'),
+				'description'=> __('Choose a hover color for links.', 'conversions'),
+				'section'    => 'conversions_typography',
+				'settings'   => 'conversions_link_hcolor',
+				'priority'   => 50,
 				'type'       => 'color',
 			) );
 			//-----------------------------------------------------
@@ -607,7 +623,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_footer_link_color', array(
-				'default'       => '#00ffff',
+				'default'       => '#ccffff',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -618,6 +634,21 @@ namespace conversions
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_link_color',
 				'priority'   => 40,
+				'type'       => 'color',
+			) );
+
+			$wp_customize->add_setting( 'conversions_footer_link_hcolor', array(
+				'default'       => '#c9dede',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_footer_link_hcolor_control', array(
+				'label'      => __('Link hover color', 'conversions'),
+				'description'=> __('Choose link hover color for footer.', 'conversions'),
+				'section'    => 'conversions_footer',
+				'settings'   => 'conversions_footer_link_hcolor',
+				'priority'   => 50,
 				'type'       => 'color',
 			) );
 			//-----------------------------------------------------
@@ -674,7 +705,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_copyright_link_color', array(
-				'default'       => '#2600e6',
+				'default'       => '#0057b4',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -685,6 +716,21 @@ namespace conversions
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_link_color',
 				'priority'   => 40,
+				'type'       => 'color',
+			) );
+
+			$wp_customize->add_setting( 'conversions_copyright_link_hcolor', array(
+				'default'       => '#004086',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_copyright_link_hcolor_control', array(
+				'label'      => __('Link hover color', 'conversions'),
+				'description'=> __('Choose copyright link hover color.', 'conversions'),
+				'section'    => 'conversions_copyright',
+				'settings'   => 'conversions_copyright_link_hcolor',
+				'priority'   => 50,
 				'type'       => 'color',
 			) );
 			//-----------------------------------------------------
@@ -741,7 +787,7 @@ namespace conversions
 				),
 			) );
 			$wp_customize->add_setting( 'conversions_social_link_color', array(
-				'default'       => '#2600e6',
+				'default'       => '#0057b4',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -752,6 +798,20 @@ namespace conversions
 				'section'    => 'conversions_social',
 				'settings'   => 'conversions_social_link_color',
 				'priority'   => 30,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_social_link_hcolor', array(
+				'default'       => '#004086',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_social_link_hcolor_control', array(
+				'label'      => __('Social icon hover color', 'conversions'),
+				'description'       => __('Choose social icon hover color.', 'conversions'),
+				'section'    => 'conversions_social',
+				'settings'   => 'conversions_social_link_hcolor',
+				'priority'   => 40,
 				'type'       => 'color',
 			) );
 			$social_sites = $this->get_social_sites();
@@ -1050,7 +1110,8 @@ namespace conversions
 				#wrapper-footer-full { background-color: <?php echo esc_html( get_theme_mod( 'conversions_footer_background_color', '#3c3d45' ) ); ?>; }
 				#footer-full-content .h1, #footer-full-content .h2, #footer-full-content .h3, #footer-full-content .h4, #footer-full-content .h5, #footer-full-content .h6, #footer-full-content h1, #footer-full-content h2, #footer-full-content h3, #footer-full-content h4, #footer-full-content h5, #footer-full-content h6 { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_heading_color', '#ffffff' ) ); ?>; }
 				#footer-full-content p, #footer-full-content table, #footer-full-content li, #footer-full-content caption { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_text_color', '#ffffff' ) ); ?>; }
-				#footer-full-content a { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_link_color', '#00ffff' ) ); ?>; }
+				#footer-full-content a { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_link_color', '#ccffff' ) ); ?>; }
+				#footer-full-content a:hover { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_link_hcolor', '#c9dede' ) ); ?>; }
 				/* Typography styles */
 				.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 					color: <?php echo esc_html( get_theme_mod('conversions_heading_color', '#222222' ) ); ?>;
@@ -1060,15 +1121,20 @@ namespace conversions
 					color: <?php echo esc_html( get_theme_mod( 'conversions_text_color', '#111111' ) ); ?>;
 					font-family: <?php echo esc_html( $body_font ); ?>;
 				}
-				a { color: <?php echo esc_html( get_theme_mod( 'conversions_link_color', '#2600e6' ) ); ?>; }
+				a { color: <?php echo esc_html( get_theme_mod( 'conversions_link_color', '#0057b4' ) ); ?>; }
+				a:hover { color: <?php echo esc_html( get_theme_mod( 'conversions_link_hcolor', '#004086' ) ); ?>; }
 				/* Copyright styles */
 				#wrapper-footer { background-color: <?php echo esc_html( get_theme_mod( 'conversions_copyright_background_color', '#eeeeee' ) ); ?>; }
 				#wrapper-footer .site-info .copyright { color: <?php echo esc_html( get_theme_mod( 'conversions_copyright_text_color', '#111111' ) ); ?>; }
-				#wrapper-footer .site-info .copyright a { color: <?php echo esc_html( get_theme_mod('conversions_copyright_link_color', '#2600e6' ) ); ?>; }
+				#wrapper-footer .site-info .copyright a { color: <?php echo esc_html( get_theme_mod('conversions_copyright_link_color', '#0057b4' ) ); ?>; }
+				#wrapper-footer .site-info .copyright a:hover { color: <?php echo esc_html( get_theme_mod('conversions_copyright_link_hcolor', '#004086' ) ); ?>; }
 				/* Social icons */
 				#wrapper-footer .social-media-icons ul li.list-inline-item i {
 					font-size: <?php echo esc_html( get_theme_mod( 'conversions_social_size', '22' ) ); ?>px;
-					color: <?php echo esc_html( get_theme_mod( 'conversions_social_link_color', '#2600e6' ) ); ?>;
+					color: <?php echo esc_html( get_theme_mod( 'conversions_social_link_color', '#0057b4' ) ); ?>;
+				}
+				#wrapper-footer .social-media-icons ul li.list-inline-item i:hover {
+					color: <?php echo esc_html( get_theme_mod( 'conversions_social_link_hcolor', '#004086' ) ); ?>;
 				}
 				<?php if ( esc_html( get_theme_mod( 'conversions_wccheckout_columns', 'two-column' ) == 'two-column' ) ) { ?>
 					/* WooCommerce */

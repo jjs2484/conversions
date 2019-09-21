@@ -17,8 +17,15 @@
 }
 
 // News image hover effect
-a.c-news__img-link:hover {
-  transition: .3s;
+a.c-news__img-link {
+  background: #000000;
+  img {
+    transition: .3s;
+    &:hover {
+      transition: .3s;
+      opacity: .8;
+    }
+  }
 }
 
 // Homepage wrapper
@@ -70,9 +77,7 @@ section.c-clients {
         content: "\f053";
         color: #8c98a4;
         opacity: 1;
-        &:hover {
-          filter: brightness(85%);
-        }
+        font-weight: 700;
       }
     }
     .slick-next {
@@ -82,9 +87,7 @@ section.c-clients {
         content:  "\f054";
         color: #aaa;
         opacity: 1;
-        &:hover {
-          filter: brightness(85%);
-        }     
+        font-weight: 700;
       }
     }
     .slick-slide {
@@ -164,7 +167,7 @@ section.c-testimonials {
       font-size: 1.2rem;
       &:hover {
         cursor: pointer;
-        filter: brightness(85%);
+        color: #77818B;
       }
     }
   }
@@ -217,17 +220,6 @@ section.c-testimonials {
   margin: 0 0 1em;
   font-size: .9rem;
   color: $text-muted;
-  ul.byline {
-    .list-inline-item {
-      @include media-breakpoint-down(xs) {
-        display: inline;
-        &:nth-child(2)::after {
-          white-space: pre;
-          content: '\A';
-        }
-      }
-    }
-  }
   a {
     color: $text-muted;
     text-decoration: underline;

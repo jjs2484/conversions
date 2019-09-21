@@ -76,12 +76,6 @@ blockquote.wp-block-quote {
   }
 }
 
-// a links hover
-.editor-styles-wrapper a:hover,
-.wp-block-freeform.block-library-rich-text__tinymce a:hover {
-  filter: brightness(75%);
-}
-
 // Classic editor block
 .wp-block-freeform.block-library-rich-text__tinymce {
   // Titles
@@ -141,7 +135,9 @@ $colors: (
   'secondary' : #6c757d,
   'success' : #019875,
   'danger' : #dc3545,
+  'warning' : #ffc107,
   'info' : #17a2b8,
+  'light' : #f8f9fa,
   'dark' : #151B26,
 );
 
@@ -158,9 +154,6 @@ $colors: (
 
 // Button block
 .wp-block-button {
-  .wp-block-button__link:hover {
-    filter: brightness(85%);
-  }
 
   // universal button styles
   .wp-block-button__link {
