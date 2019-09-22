@@ -897,6 +897,35 @@ namespace conversions
 						'priority'    => '2',
 					)
 			) );
+			$wp_customize->add_setting( 'conversions_comment_btn', array(
+				'default'           => 'btn-secondary',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_comment_btn', array(
+						'label'       => __( 'Comment button color', 'conversions' ),
+						'description' => __( 'Choose the comment button color.', 'conversions' ),
+						'section'     => 'conversions_blog',
+						'settings'    => 'conversions_comment_btn',
+						'type'        => 'select',
+						'choices'     => array(
+							'btn-primary' => __( 'Primary', 'conversions' ),
+							'btn-secondary' => __( 'Secondary', 'conversions' ),
+							'btn-success' => __( 'Success', 'conversions' ),
+							'btn-danger' => __( 'Danger', 'conversions' ),
+							'btn-warning' => __( 'Warning', 'conversions' ),
+							'btn-info' => __( 'Info', 'conversions' ),
+							'btn-light' => __( 'Light', 'conversions' ),
+							'btn-dark' => __( 'Dark', 'conversions' ),
+						),
+						'priority'    => '3',
+					)
+			) );
 			$wp_customize->add_setting( 'conversions_blog_overlay', array(
 				'default'       => '0.5',
 				'type'          => 'theme_mod',
@@ -909,7 +938,7 @@ namespace conversions
 				'description'=> __('Darken or lighten single posts featured images.', 'conversions'),
 				'section'    => 'conversions_blog',
 				'settings'   => 'conversions_blog_overlay',
-				'priority'   => 3,
+				'priority'   => 4,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 0,
@@ -937,7 +966,7 @@ namespace conversions
 							'enable' => __( 'Enable', 'conversions' ),
 							'disable' => __( 'Disable', 'conversions' ),
 						),
-						'priority'    => '4',
+						'priority'    => '5',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_blog_taxonomy', array(
@@ -960,7 +989,7 @@ namespace conversions
 							'tags' => __( 'Tags', 'conversions' ),
 							'categories' => __( 'Categories', 'conversions' ),
 						),
-						'priority'    => '5',
+						'priority'    => '6',
 					)
 			) );
 
