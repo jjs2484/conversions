@@ -176,23 +176,35 @@ p.no-comments {
 		.woocommerce-product-rating {
 			margin-bottom: 1em;
 			.woocommerce-review-link {
-				color: #777;
+				color: $text-muted;
 			}
 		}
 		.woocommerce-tabs .panel {
 			margin: 0 0 3em;
 		}
-		p.price .woocommerce-Price-amount {
-			color: #555;
-		}
-		.entry-summary .quantity input.qty {
-			@extend .form-control;
-			width: 3.631em;
-    		text-align: center;
+		.entry-summary {
+			p.price .woocommerce-Price-amount {
+				color: $gray-700;
+			}
+			.quantity input.qty {
+				@extend .form-control;
+				width: 3.631em;
+    			text-align: center;
+			}
+			table.variations {
+				select {
+					@extend .form-control;
+				}
+			}
+			.single_variation_wrap {
+				.price .woocommerce-Price-amount {
+					color: $gray-700;
+				}
+			}
 		}
 	}
 	.woocommerce-breadcrumb a, .product_meta a {
-		color: #777;
+		color: $text-muted;
 	}
 	.star-rating {
 		color: #F7DE00;

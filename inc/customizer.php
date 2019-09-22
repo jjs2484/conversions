@@ -1166,14 +1166,16 @@ namespace conversions
 			$cart_totals = WC()->cart->get_cart_contents_count();
 			if( WC()->cart->get_cart_contents_count() > 0)
 			{
-				$cart_totals = WC()->cart->get_cart_contents_count();
+				$cart_totals = sprintf( '%s<span class="sr-only">' . __( ' items in your shopping cart', 'conversions' ) . '</span>',
+					WC()->cart->get_cart_contents_count()
+				);
 			}
 			else
 			{
-				$cart_totals = '';
+				$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
 			}
 			?>
-			<a class="cart-customlocation nav-link" title="<?php _e( 'View your shopping cart', 'conversions' ); ?>" href="<?php echo esc_url( wc_get_cart_url() ); ?>"><i class="fas fa-shopping-bag"></i><?php echo $cart_totals; ?></a>
+			<a class="cart-customlocation nav-link" title="<?php _e( 'View your shopping cart', 'conversions' ); ?>" href="<?php echo esc_url( wc_get_cart_url() ); ?>"><i aria-hidden="true" class="fas fa-shopping-bag"></i><?php echo $cart_totals; ?></a>
 			<?php
 			$fragments['a.cart-customlocation.nav-link'] = ob_get_clean();
 			return $fragments;
@@ -1206,13 +1208,15 @@ namespace conversions
 						// get WC cart totals and if = 0 only show icon with no text
 						$cart_totals = WC()->cart->get_cart_contents_count();
 						if( WC()->cart->get_cart_contents_count() > 0) {
-							$cart_totals = WC()->cart->get_cart_contents_count();
+							$cart_totals = sprintf( '%s<span class="sr-only">' . __( ' items in your shopping cart', 'conversions' ) . '</span>',
+								WC()->cart->get_cart_contents_count()
+							);
 						}
 						else {
-							$cart_totals = '';
+							$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
 						}
 						// output the cart icon with item count
-						$cart_link = sprintf( '<li class="cart menu-item nav-item" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i class="fas fa-shopping-bag"></i>%s</a></li>',
+						$cart_link = sprintf( '<li class="cart menu-item nav-item" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-bag"></i>%s</a></li>',
 							wc_get_cart_url(),
 							$cart_totals
 						);

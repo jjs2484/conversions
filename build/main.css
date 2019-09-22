@@ -1888,7 +1888,7 @@ pre {
   .table-responsive > .table-bordered, .table-responsive > table {
     border: 0; }
 
-.form-control, .single-product.woocommerce div.product .entry-summary .quantity input.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment, body.woocommerce-cart .product-quantity .quantity input.qty, .wpcf7 input[type=text],
+.form-control, .single-product.woocommerce div.product .entry-summary .quantity input.qty, .single-product.woocommerce div.product .entry-summary table.variations select, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment, body.woocommerce-cart .product-quantity .quantity input.qty, .wpcf7 input[type=text],
 .wpcf7 input[type=search],
 .wpcf7 input[type=url],
 .wpcf7 input[type=tel],
@@ -1924,7 +1924,7 @@ pre {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .form-control, .single-product.woocommerce div.product .entry-summary .quantity input.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment, body.woocommerce-cart .product-quantity .quantity input.qty, .wpcf7 input[type=text],
+    .form-control, .single-product.woocommerce div.product .entry-summary .quantity input.qty, .single-product.woocommerce div.product .entry-summary table.variations select, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment, body.woocommerce-cart .product-quantity .quantity input.qty, .wpcf7 input[type=text],
     .wpcf7 input[type=search],
     .wpcf7 input[type=url],
     .wpcf7 input[type=tel],
@@ -1945,7 +1945,7 @@ pre {
       -webkit-transition: none;
       -o-transition: none;
       transition: none; } }
-  .form-control::-ms-expand, .single-product.woocommerce div.product .entry-summary .quantity input.qty::-ms-expand, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment::-ms-expand, body.woocommerce-cart .product-quantity .quantity input.qty::-ms-expand, .wpcf7 input[type=text]::-ms-expand,
+  .form-control::-ms-expand, .single-product.woocommerce div.product .entry-summary .quantity input.qty::-ms-expand, .single-product.woocommerce div.product .entry-summary table.variations select::-ms-expand, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment::-ms-expand, body.woocommerce-cart .product-quantity .quantity input.qty::-ms-expand, .wpcf7 input[type=text]::-ms-expand,
   .wpcf7 input[type=search]::-ms-expand,
   .wpcf7 input[type=url]::-ms-expand,
   .wpcf7 input[type=tel]::-ms-expand,
@@ -1965,7 +1965,7 @@ pre {
   .wpcf7 textarea::-ms-expand, .wpcf7 .wpcf7-validation-errors::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .form-control:focus, .single-product.woocommerce div.product .entry-summary .quantity input.qty:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:focus, body.woocommerce-cart .product-quantity .quantity input.qty:focus, .wpcf7 input[type=text]:focus,
+  .form-control:focus, .single-product.woocommerce div.product .entry-summary .quantity input.qty:focus, .single-product.woocommerce div.product .entry-summary table.variations select:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:focus, body.woocommerce-cart .product-quantity .quantity input.qty:focus, .wpcf7 input[type=text]:focus,
   .wpcf7 input[type=search]:focus,
   .wpcf7 input[type=url]:focus,
   .wpcf7 input[type=tel]:focus,
@@ -1989,7 +1989,7 @@ pre {
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .form-control::-webkit-input-placeholder, .single-product.woocommerce div.product .entry-summary .quantity input.qty::-webkit-input-placeholder, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment::-webkit-input-placeholder, body.woocommerce-cart .product-quantity .quantity input.qty::-webkit-input-placeholder, .wpcf7 input[type=text]::-webkit-input-placeholder,
+  .form-control::-webkit-input-placeholder, .single-product.woocommerce div.product .entry-summary .quantity input.qty::-webkit-input-placeholder, .single-product.woocommerce div.product .entry-summary table.variations select::-webkit-input-placeholder, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment::-webkit-input-placeholder, body.woocommerce-cart .product-quantity .quantity input.qty::-webkit-input-placeholder, .wpcf7 input[type=text]::-webkit-input-placeholder,
   .wpcf7 input[type=search]::-webkit-input-placeholder,
   .wpcf7 input[type=url]::-webkit-input-placeholder,
   .wpcf7 input[type=tel]::-webkit-input-placeholder,
@@ -2009,7 +2009,7 @@ pre {
   .wpcf7 textarea::-webkit-input-placeholder, .wpcf7 .wpcf7-validation-errors::-webkit-input-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control::-moz-placeholder, .single-product.woocommerce div.product .entry-summary .quantity input.qty::-moz-placeholder, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment::-moz-placeholder, body.woocommerce-cart .product-quantity .quantity input.qty::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder,
+  .form-control::-moz-placeholder, .single-product.woocommerce div.product .entry-summary .quantity input.qty::-moz-placeholder, .single-product.woocommerce div.product .entry-summary table.variations select::-moz-placeholder, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment::-moz-placeholder, body.woocommerce-cart .product-quantity .quantity input.qty::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder,
   .wpcf7 input[type=search]::-moz-placeholder,
   .wpcf7 input[type=url]::-moz-placeholder,
   .wpcf7 input[type=tel]::-moz-placeholder,
@@ -2029,7 +2029,7 @@ pre {
   .wpcf7 textarea::-moz-placeholder, .wpcf7 .wpcf7-validation-errors::-moz-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:-ms-input-placeholder, .single-product.woocommerce div.product .entry-summary .quantity input.qty:-ms-input-placeholder, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:-ms-input-placeholder, body.woocommerce-cart .product-quantity .quantity input.qty:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder,
+  .form-control:-ms-input-placeholder, .single-product.woocommerce div.product .entry-summary .quantity input.qty:-ms-input-placeholder, .single-product.woocommerce div.product .entry-summary table.variations select:-ms-input-placeholder, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:-ms-input-placeholder, body.woocommerce-cart .product-quantity .quantity input.qty:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder,
   .wpcf7 input[type=search]:-ms-input-placeholder,
   .wpcf7 input[type=url]:-ms-input-placeholder,
   .wpcf7 input[type=tel]:-ms-input-placeholder,
@@ -2049,7 +2049,7 @@ pre {
   .wpcf7 textarea:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control::-ms-input-placeholder, .single-product.woocommerce div.product .entry-summary .quantity input.qty::-ms-input-placeholder, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment::-ms-input-placeholder, body.woocommerce-cart .product-quantity .quantity input.qty::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder,
+  .form-control::-ms-input-placeholder, .single-product.woocommerce div.product .entry-summary .quantity input.qty::-ms-input-placeholder, .single-product.woocommerce div.product .entry-summary table.variations select::-ms-input-placeholder, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment::-ms-input-placeholder, body.woocommerce-cart .product-quantity .quantity input.qty::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder,
   .wpcf7 input[type=search]::-ms-input-placeholder,
   .wpcf7 input[type=url]::-ms-input-placeholder,
   .wpcf7 input[type=tel]::-ms-input-placeholder,
@@ -2069,7 +2069,7 @@ pre {
   .wpcf7 textarea::-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors::-ms-input-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control::placeholder, .single-product.woocommerce div.product .entry-summary .quantity input.qty::placeholder, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment::placeholder, body.woocommerce-cart .product-quantity .quantity input.qty::placeholder, .wpcf7 input[type=text]::placeholder,
+  .form-control::placeholder, .single-product.woocommerce div.product .entry-summary .quantity input.qty::placeholder, .single-product.woocommerce div.product .entry-summary table.variations select::placeholder, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment::placeholder, body.woocommerce-cart .product-quantity .quantity input.qty::placeholder, .wpcf7 input[type=text]::placeholder,
   .wpcf7 input[type=search]::placeholder,
   .wpcf7 input[type=url]::placeholder,
   .wpcf7 input[type=tel]::placeholder,
@@ -2089,7 +2089,7 @@ pre {
   .wpcf7 textarea::placeholder, .wpcf7 .wpcf7-validation-errors::placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:disabled, .single-product.woocommerce div.product .entry-summary .quantity input.qty:disabled, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:disabled, body.woocommerce-cart .product-quantity .quantity input.qty:disabled, .wpcf7 input[type=text]:disabled,
+  .form-control:disabled, .single-product.woocommerce div.product .entry-summary .quantity input.qty:disabled, .single-product.woocommerce div.product .entry-summary table.variations select:disabled, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:disabled, body.woocommerce-cart .product-quantity .quantity input.qty:disabled, .wpcf7 input[type=text]:disabled,
   .wpcf7 input[type=search]:disabled,
   .wpcf7 input[type=url]:disabled,
   .wpcf7 input[type=tel]:disabled,
@@ -2106,7 +2106,7 @@ pre {
   .wpcf7 input[type=file]:disabled,
   .wpcf7 input[type=submit]:disabled,
   .wpcf7 select:disabled,
-  .wpcf7 textarea:disabled, .wpcf7 .wpcf7-validation-errors:disabled, .form-control[readonly], .single-product.woocommerce div.product .entry-summary .quantity input[readonly].qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea[readonly]#comment, body.woocommerce-cart .product-quantity .quantity input[readonly].qty, .wpcf7 input[readonly][type=text],
+  .wpcf7 textarea:disabled, .wpcf7 .wpcf7-validation-errors:disabled, .form-control[readonly], .single-product.woocommerce div.product .entry-summary .quantity input[readonly].qty, .single-product.woocommerce div.product .entry-summary table.variations select[readonly], .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea[readonly]#comment, body.woocommerce-cart .product-quantity .quantity input[readonly].qty, .wpcf7 input[readonly][type=text],
   .wpcf7 input[readonly][type=search],
   .wpcf7 input[readonly][type=url],
   .wpcf7 input[readonly][type=tel],
@@ -2127,7 +2127,7 @@ pre {
     background-color: #e9ecef;
     opacity: 1; }
 
-select.form-control:focus::-ms-value,
+select.form-control:focus::-ms-value, .single-product.woocommerce div.product .entry-summary table.variations select:focus::-ms-value,
 .wpcf7 select:focus::-ms-value {
   color: #495057;
   background-color: #fff; }
@@ -2245,8 +2245,8 @@ select.form-control:focus::-ms-value,
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-select.form-control[size],
-.wpcf7 select[size], select.form-control[multiple],
+select.form-control[size], .single-product.woocommerce div.product .entry-summary table.variations select[size],
+.wpcf7 select[size], select.form-control[multiple], .single-product.woocommerce div.product .entry-summary table.variations select[multiple],
 .wpcf7 select[multiple] {
   height: auto; }
 
@@ -2329,7 +2329,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   background-color: rgba(1, 152, 117, 0.9);
   border-radius: 0.25rem; }
 
-.was-validated .form-control:valid, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:valid, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:valid, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:valid, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:valid, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:valid, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:valid, .was-validated .wpcf7 input[type=text]:valid, .wpcf7 .was-validated input[type=text]:valid,
+.was-validated .form-control:valid, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:valid, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:valid, .was-validated .single-product.woocommerce div.product .entry-summary table.variations select:valid, .single-product.woocommerce div.product .entry-summary table.variations .was-validated select:valid, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:valid, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:valid, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:valid, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:valid, .was-validated .wpcf7 input[type=text]:valid, .wpcf7 .was-validated input[type=text]:valid,
 .was-validated .wpcf7 input[type=search]:valid,
 .wpcf7 .was-validated input[type=search]:valid,
 .was-validated .wpcf7 input[type=url]:valid,
@@ -2363,7 +2363,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
 .was-validated .wpcf7 select:valid,
 .wpcf7 .was-validated select:valid,
 .was-validated .wpcf7 textarea:valid,
-.wpcf7 .was-validated textarea:valid, .was-validated .wpcf7 .wpcf7-validation-errors:valid, .wpcf7 .was-validated .wpcf7-validation-errors:valid, .form-control.is-valid, .single-product.woocommerce div.product .entry-summary .quantity input.is-valid.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-valid#comment, body.woocommerce-cart .product-quantity .quantity input.is-valid.qty, .wpcf7 input.is-valid[type=text],
+.wpcf7 .was-validated textarea:valid, .was-validated .wpcf7 .wpcf7-validation-errors:valid, .wpcf7 .was-validated .wpcf7-validation-errors:valid, .form-control.is-valid, .single-product.woocommerce div.product .entry-summary .quantity input.is-valid.qty, .single-product.woocommerce div.product .entry-summary table.variations select.is-valid, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-valid#comment, body.woocommerce-cart .product-quantity .quantity input.is-valid.qty, .wpcf7 input.is-valid[type=text],
 .wpcf7 input.is-valid[type=search],
 .wpcf7 input.is-valid[type=url],
 .wpcf7 input.is-valid[type=tel],
@@ -2387,7 +2387,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); }
-  .was-validated .form-control:valid:focus, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:valid:focus, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:valid:focus, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:valid:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:valid:focus, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:valid:focus, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:valid:focus, .was-validated .wpcf7 input[type=text]:valid:focus, .wpcf7 .was-validated input[type=text]:valid:focus,
+  .was-validated .form-control:valid:focus, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:valid:focus, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:valid:focus, .was-validated .single-product.woocommerce div.product .entry-summary table.variations select:valid:focus, .single-product.woocommerce div.product .entry-summary table.variations .was-validated select:valid:focus, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:valid:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:valid:focus, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:valid:focus, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:valid:focus, .was-validated .wpcf7 input[type=text]:valid:focus, .wpcf7 .was-validated input[type=text]:valid:focus,
   .was-validated .wpcf7 input[type=search]:valid:focus,
   .wpcf7 .was-validated input[type=search]:valid:focus,
   .was-validated .wpcf7 input[type=url]:valid:focus,
@@ -2421,7 +2421,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   .was-validated .wpcf7 select:valid:focus,
   .wpcf7 .was-validated select:valid:focus,
   .was-validated .wpcf7 textarea:valid:focus,
-  .wpcf7 .was-validated textarea:valid:focus, .was-validated .wpcf7 .wpcf7-validation-errors:valid:focus, .wpcf7 .was-validated .wpcf7-validation-errors:valid:focus, .form-control.is-valid:focus, .single-product.woocommerce div.product .entry-summary .quantity input.is-valid.qty:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-valid#comment:focus, body.woocommerce-cart .product-quantity .quantity input.is-valid.qty:focus, .wpcf7 input.is-valid[type=text]:focus,
+  .wpcf7 .was-validated textarea:valid:focus, .was-validated .wpcf7 .wpcf7-validation-errors:valid:focus, .wpcf7 .was-validated .wpcf7-validation-errors:valid:focus, .form-control.is-valid:focus, .single-product.woocommerce div.product .entry-summary .quantity input.is-valid.qty:focus, .single-product.woocommerce div.product .entry-summary table.variations select.is-valid:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-valid#comment:focus, body.woocommerce-cart .product-quantity .quantity input.is-valid.qty:focus, .wpcf7 input.is-valid[type=text]:focus,
   .wpcf7 input.is-valid[type=search]:focus,
   .wpcf7 input.is-valid[type=url]:focus,
   .wpcf7 input.is-valid[type=tel]:focus,
@@ -2442,7 +2442,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
     border-color: #019875;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(1, 152, 117, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(1, 152, 117, 0.25); }
-  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:valid ~ .valid-feedback, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:valid ~ .valid-feedback, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:valid ~ .valid-feedback, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:valid ~ .valid-feedback, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:valid ~ .valid-feedback, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:valid ~ .valid-feedback, .was-validated .wpcf7 input[type=text]:valid ~ .valid-feedback, .wpcf7 .was-validated input[type=text]:valid ~ .valid-feedback,
+  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:valid ~ .valid-feedback, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:valid ~ .valid-feedback, .was-validated .single-product.woocommerce div.product .entry-summary table.variations select:valid ~ .valid-feedback, .single-product.woocommerce div.product .entry-summary table.variations .was-validated select:valid ~ .valid-feedback, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:valid ~ .valid-feedback, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:valid ~ .valid-feedback, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:valid ~ .valid-feedback, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:valid ~ .valid-feedback, .was-validated .wpcf7 input[type=text]:valid ~ .valid-feedback, .wpcf7 .was-validated input[type=text]:valid ~ .valid-feedback,
   .was-validated .wpcf7 input[type=search]:valid ~ .valid-feedback,
   .wpcf7 .was-validated input[type=search]:valid ~ .valid-feedback,
   .was-validated .wpcf7 input[type=url]:valid ~ .valid-feedback,
@@ -2480,6 +2480,8 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   .was-validated .form-control:valid ~ .valid-tooltip,
   .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:valid ~ .valid-tooltip,
   .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:valid ~ .valid-tooltip,
+  .was-validated .single-product.woocommerce div.product .entry-summary table.variations select:valid ~ .valid-tooltip,
+  .single-product.woocommerce div.product .entry-summary table.variations .was-validated select:valid ~ .valid-tooltip,
   .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:valid ~ .valid-tooltip,
   .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:valid ~ .valid-tooltip,
   .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:valid ~ .valid-tooltip,
@@ -2521,7 +2523,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   .was-validated .wpcf7 textarea:valid ~ .valid-tooltip,
   .wpcf7 .was-validated textarea:valid ~ .valid-tooltip,
   .was-validated .wpcf7 .wpcf7-validation-errors:valid ~ .valid-tooltip,
-  .wpcf7 .was-validated .wpcf7-validation-errors:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .single-product.woocommerce div.product .entry-summary .quantity input.is-valid.qty ~ .valid-feedback, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-valid#comment ~ .valid-feedback, body.woocommerce-cart .product-quantity .quantity input.is-valid.qty ~ .valid-feedback, .wpcf7 input.is-valid[type=text] ~ .valid-feedback,
+  .wpcf7 .was-validated .wpcf7-validation-errors:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .single-product.woocommerce div.product .entry-summary .quantity input.is-valid.qty ~ .valid-feedback, .single-product.woocommerce div.product .entry-summary table.variations select.is-valid ~ .valid-feedback, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-valid#comment ~ .valid-feedback, body.woocommerce-cart .product-quantity .quantity input.is-valid.qty ~ .valid-feedback, .wpcf7 input.is-valid[type=text] ~ .valid-feedback,
   .wpcf7 input.is-valid[type=search] ~ .valid-feedback,
   .wpcf7 input.is-valid[type=url] ~ .valid-feedback,
   .wpcf7 input.is-valid[type=tel] ~ .valid-feedback,
@@ -2541,6 +2543,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   .wpcf7 textarea.is-valid ~ .valid-feedback, .wpcf7 .is-valid.wpcf7-validation-errors ~ .valid-feedback,
   .form-control.is-valid ~ .valid-tooltip,
   .single-product.woocommerce div.product .entry-summary .quantity input.is-valid.qty ~ .valid-tooltip,
+  .single-product.woocommerce div.product .entry-summary table.variations select.is-valid ~ .valid-tooltip,
   .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-valid#comment ~ .valid-tooltip,
   body.woocommerce-cart .product-quantity .quantity input.is-valid.qty ~ .valid-tooltip,
   .wpcf7 input.is-valid[type=text] ~ .valid-tooltip,
@@ -2645,7 +2648,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   background-color: rgba(220, 53, 69, 0.9);
   border-radius: 0.25rem; }
 
-.was-validated .form-control:invalid, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:invalid, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:invalid, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:invalid, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:invalid, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:invalid, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:invalid, .was-validated .wpcf7 input[type=text]:invalid, .wpcf7 .was-validated input[type=text]:invalid,
+.was-validated .form-control:invalid, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:invalid, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:invalid, .was-validated .single-product.woocommerce div.product .entry-summary table.variations select:invalid, .single-product.woocommerce div.product .entry-summary table.variations .was-validated select:invalid, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:invalid, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:invalid, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:invalid, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:invalid, .was-validated .wpcf7 input[type=text]:invalid, .wpcf7 .was-validated input[type=text]:invalid,
 .was-validated .wpcf7 input[type=search]:invalid,
 .wpcf7 .was-validated input[type=search]:invalid,
 .was-validated .wpcf7 input[type=url]:invalid,
@@ -2679,7 +2682,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
 .was-validated .wpcf7 select:invalid,
 .wpcf7 .was-validated select:invalid,
 .was-validated .wpcf7 textarea:invalid,
-.wpcf7 .was-validated textarea:invalid, .was-validated .wpcf7 .wpcf7-validation-errors:invalid, .wpcf7 .was-validated .wpcf7-validation-errors:invalid, .form-control.is-invalid, .single-product.woocommerce div.product .entry-summary .quantity input.is-invalid.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-invalid#comment, body.woocommerce-cart .product-quantity .quantity input.is-invalid.qty, .wpcf7 input.is-invalid[type=text],
+.wpcf7 .was-validated textarea:invalid, .was-validated .wpcf7 .wpcf7-validation-errors:invalid, .wpcf7 .was-validated .wpcf7-validation-errors:invalid, .form-control.is-invalid, .single-product.woocommerce div.product .entry-summary .quantity input.is-invalid.qty, .single-product.woocommerce div.product .entry-summary table.variations select.is-invalid, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-invalid#comment, body.woocommerce-cart .product-quantity .quantity input.is-invalid.qty, .wpcf7 input.is-invalid[type=text],
 .wpcf7 input.is-invalid[type=search],
 .wpcf7 input.is-invalid[type=url],
 .wpcf7 input.is-invalid[type=tel],
@@ -2703,7 +2706,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); }
-  .was-validated .form-control:invalid:focus, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:invalid:focus, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:invalid:focus, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:invalid:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:invalid:focus, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:invalid:focus, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:invalid:focus, .was-validated .wpcf7 input[type=text]:invalid:focus, .wpcf7 .was-validated input[type=text]:invalid:focus,
+  .was-validated .form-control:invalid:focus, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:invalid:focus, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:invalid:focus, .was-validated .single-product.woocommerce div.product .entry-summary table.variations select:invalid:focus, .single-product.woocommerce div.product .entry-summary table.variations .was-validated select:invalid:focus, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:invalid:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:invalid:focus, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:invalid:focus, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:invalid:focus, .was-validated .wpcf7 input[type=text]:invalid:focus, .wpcf7 .was-validated input[type=text]:invalid:focus,
   .was-validated .wpcf7 input[type=search]:invalid:focus,
   .wpcf7 .was-validated input[type=search]:invalid:focus,
   .was-validated .wpcf7 input[type=url]:invalid:focus,
@@ -2737,7 +2740,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   .was-validated .wpcf7 select:invalid:focus,
   .wpcf7 .was-validated select:invalid:focus,
   .was-validated .wpcf7 textarea:invalid:focus,
-  .wpcf7 .was-validated textarea:invalid:focus, .was-validated .wpcf7 .wpcf7-validation-errors:invalid:focus, .wpcf7 .was-validated .wpcf7-validation-errors:invalid:focus, .form-control.is-invalid:focus, .single-product.woocommerce div.product .entry-summary .quantity input.is-invalid.qty:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-invalid#comment:focus, body.woocommerce-cart .product-quantity .quantity input.is-invalid.qty:focus, .wpcf7 input.is-invalid[type=text]:focus,
+  .wpcf7 .was-validated textarea:invalid:focus, .was-validated .wpcf7 .wpcf7-validation-errors:invalid:focus, .wpcf7 .was-validated .wpcf7-validation-errors:invalid:focus, .form-control.is-invalid:focus, .single-product.woocommerce div.product .entry-summary .quantity input.is-invalid.qty:focus, .single-product.woocommerce div.product .entry-summary table.variations select.is-invalid:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-invalid#comment:focus, body.woocommerce-cart .product-quantity .quantity input.is-invalid.qty:focus, .wpcf7 input.is-invalid[type=text]:focus,
   .wpcf7 input.is-invalid[type=search]:focus,
   .wpcf7 input.is-invalid[type=url]:focus,
   .wpcf7 input.is-invalid[type=tel]:focus,
@@ -2758,7 +2761,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
     border-color: #dc3545;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:invalid ~ .invalid-feedback, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:invalid ~ .invalid-feedback, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:invalid ~ .invalid-feedback, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:invalid ~ .invalid-feedback, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:invalid ~ .invalid-feedback, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:invalid ~ .invalid-feedback, .was-validated .wpcf7 input[type=text]:invalid ~ .invalid-feedback, .wpcf7 .was-validated input[type=text]:invalid ~ .invalid-feedback,
+  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:invalid ~ .invalid-feedback, .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:invalid ~ .invalid-feedback, .was-validated .single-product.woocommerce div.product .entry-summary table.variations select:invalid ~ .invalid-feedback, .single-product.woocommerce div.product .entry-summary table.variations .was-validated select:invalid ~ .invalid-feedback, .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:invalid ~ .invalid-feedback, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:invalid ~ .invalid-feedback, .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:invalid ~ .invalid-feedback, body.woocommerce-cart .product-quantity .quantity .was-validated input.qty:invalid ~ .invalid-feedback, .was-validated .wpcf7 input[type=text]:invalid ~ .invalid-feedback, .wpcf7 .was-validated input[type=text]:invalid ~ .invalid-feedback,
   .was-validated .wpcf7 input[type=search]:invalid ~ .invalid-feedback,
   .wpcf7 .was-validated input[type=search]:invalid ~ .invalid-feedback,
   .was-validated .wpcf7 input[type=url]:invalid ~ .invalid-feedback,
@@ -2796,6 +2799,8 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   .was-validated .form-control:invalid ~ .invalid-tooltip,
   .was-validated .single-product.woocommerce div.product .entry-summary .quantity input.qty:invalid ~ .invalid-tooltip,
   .single-product.woocommerce div.product .entry-summary .quantity .was-validated input.qty:invalid ~ .invalid-tooltip,
+  .was-validated .single-product.woocommerce div.product .entry-summary table.variations select:invalid ~ .invalid-tooltip,
+  .single-product.woocommerce div.product .entry-summary table.variations .was-validated select:invalid ~ .invalid-tooltip,
   .was-validated .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment:invalid ~ .invalid-tooltip,
   .single-product.woocommerce #review_form_wrapper #review_form form#commentform .was-validated textarea#comment:invalid ~ .invalid-tooltip,
   .was-validated body.woocommerce-cart .product-quantity .quantity input.qty:invalid ~ .invalid-tooltip,
@@ -2837,7 +2842,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   .was-validated .wpcf7 textarea:invalid ~ .invalid-tooltip,
   .wpcf7 .was-validated textarea:invalid ~ .invalid-tooltip,
   .was-validated .wpcf7 .wpcf7-validation-errors:invalid ~ .invalid-tooltip,
-  .wpcf7 .was-validated .wpcf7-validation-errors:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .single-product.woocommerce div.product .entry-summary .quantity input.is-invalid.qty ~ .invalid-feedback, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-invalid#comment ~ .invalid-feedback, body.woocommerce-cart .product-quantity .quantity input.is-invalid.qty ~ .invalid-feedback, .wpcf7 input.is-invalid[type=text] ~ .invalid-feedback,
+  .wpcf7 .was-validated .wpcf7-validation-errors:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .single-product.woocommerce div.product .entry-summary .quantity input.is-invalid.qty ~ .invalid-feedback, .single-product.woocommerce div.product .entry-summary table.variations select.is-invalid ~ .invalid-feedback, .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-invalid#comment ~ .invalid-feedback, body.woocommerce-cart .product-quantity .quantity input.is-invalid.qty ~ .invalid-feedback, .wpcf7 input.is-invalid[type=text] ~ .invalid-feedback,
   .wpcf7 input.is-invalid[type=search] ~ .invalid-feedback,
   .wpcf7 input.is-invalid[type=url] ~ .invalid-feedback,
   .wpcf7 input.is-invalid[type=tel] ~ .invalid-feedback,
@@ -2857,6 +2862,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
   .wpcf7 textarea.is-invalid ~ .invalid-feedback, .wpcf7 .is-invalid.wpcf7-validation-errors ~ .invalid-feedback,
   .form-control.is-invalid ~ .invalid-tooltip,
   .single-product.woocommerce div.product .entry-summary .quantity input.is-invalid.qty ~ .invalid-tooltip,
+  .single-product.woocommerce div.product .entry-summary table.variations select.is-invalid ~ .invalid-tooltip,
   .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea.is-invalid#comment ~ .invalid-tooltip,
   body.woocommerce-cart .product-quantity .quantity input.is-invalid.qty ~ .invalid-tooltip,
   .wpcf7 input.is-invalid[type=text] ~ .invalid-tooltip,
@@ -2990,7 +2996,7 @@ textarea.form-control, .single-product.woocommerce #review_form_wrapper #review_
           -ms-flex-align: center;
               align-items: center;
       margin-bottom: 0; }
-    .form-inline .form-control, .form-inline .single-product.woocommerce div.product .entry-summary .quantity input.qty, .single-product.woocommerce div.product .entry-summary .quantity .form-inline input.qty, .form-inline .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .form-inline textarea#comment, .form-inline body.woocommerce-cart .product-quantity .quantity input.qty, body.woocommerce-cart .product-quantity .quantity .form-inline input.qty, .form-inline .wpcf7 input[type=text], .wpcf7 .form-inline input[type=text],
+    .form-inline .form-control, .form-inline .single-product.woocommerce div.product .entry-summary .quantity input.qty, .single-product.woocommerce div.product .entry-summary .quantity .form-inline input.qty, .form-inline .single-product.woocommerce div.product .entry-summary table.variations select, .single-product.woocommerce div.product .entry-summary table.variations .form-inline select, .form-inline .single-product.woocommerce #review_form_wrapper #review_form form#commentform textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .form-inline textarea#comment, .form-inline body.woocommerce-cart .product-quantity .quantity input.qty, body.woocommerce-cart .product-quantity .quantity .form-inline input.qty, .form-inline .wpcf7 input[type=text], .wpcf7 .form-inline input[type=text],
     .form-inline .wpcf7 input[type=search],
     .wpcf7 .form-inline input[type=search],
     .form-inline .wpcf7 input[type=url],
@@ -3884,7 +3890,7 @@ input[type="button"].btn-block,
       -ms-flex-align: stretch;
           align-items: stretch;
   width: 100%; }
-  .input-group > .form-control, .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment, body.woocommerce-cart .product-quantity .quantity .input-group > input.qty, .wpcf7 .input-group > input[type=text],
+  .input-group > .form-control, .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty, .single-product.woocommerce div.product .entry-summary table.variations .input-group > select, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment, body.woocommerce-cart .product-quantity .quantity .input-group > input.qty, .wpcf7 .input-group > input[type=text],
   .wpcf7 .input-group > input[type=search],
   .wpcf7 .input-group > input[type=url],
   .wpcf7 .input-group > input[type=tel],
@@ -3912,7 +3918,7 @@ input[type="button"].btn-block,
             flex: 1 1 auto;
     width: 1%;
     margin-bottom: 0; }
-    .input-group > .form-control + .form-control, .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + .form-control, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + .form-control, body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + .form-control, .wpcf7 .input-group > input[type=text] + .form-control,
+    .input-group > .form-control + .form-control, .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + .form-control, .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + .form-control, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + .form-control, body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + .form-control, .wpcf7 .input-group > input[type=text] + .form-control,
     .wpcf7 .input-group > input[type=search] + .form-control,
     .wpcf7 .input-group > input[type=url] + .form-control,
     .wpcf7 .input-group > input[type=tel] + .form-control,
@@ -3929,7 +3935,7 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > input[type=file] + .form-control,
     .wpcf7 .input-group > input[type=submit] + .form-control,
     .wpcf7 .input-group > select + .form-control,
-    .wpcf7 .input-group > textarea + .form-control, .wpcf7 .input-group > .wpcf7-validation-errors + .form-control, .single-product.woocommerce div.product .entry-summary .quantity .input-group > .form-control + input.qty, .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform div.product .entry-summary .quantity .input-group > textarea#comment + input.qty, .single-product.woocommerce div.product .entry-summary .quantity #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input.qty, body.woocommerce-cart .product-quantity .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input.qty, .single-product.woocommerce div.product .entry-summary body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + input.qty, .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input[type=text] + input.qty, .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input[type=text] + input.qty,
+    .wpcf7 .input-group > textarea + .form-control, .wpcf7 .input-group > .wpcf7-validation-errors + .form-control, .single-product.woocommerce div.product .entry-summary .quantity .input-group > .form-control + input.qty, .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input.qty, .single-product.woocommerce div.product .entry-summary table.variations .quantity .input-group > select + input.qty, .single-product.woocommerce div.product .entry-summary .quantity table.variations .input-group > select + input.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform div.product .entry-summary .quantity .input-group > textarea#comment + input.qty, .single-product.woocommerce div.product .entry-summary .quantity #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input.qty, body.woocommerce-cart .product-quantity .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input.qty, .single-product.woocommerce div.product .entry-summary body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + input.qty, .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input[type=text] + input.qty, .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input[type=text] + input.qty,
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input[type=search] + input.qty,
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input[type=search] + input.qty,
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input[type=url] + input.qty,
@@ -3963,7 +3969,41 @@ input[type="button"].btn-block,
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > select + input.qty,
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > select + input.qty,
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > textarea + input.qty,
-    .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > textarea + input.qty, .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > .wpcf7-validation-errors + input.qty, .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > .wpcf7-validation-errors + input.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > .form-control + textarea#comment, .single-product.woocommerce div.product .entry-summary .quantity #review_form_wrapper #review_form form#commentform .input-group > input.qty + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform div.product .entry-summary .quantity .input-group > input.qty + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + textarea#comment, body.woocommerce-cart .product-quantity .quantity .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > input.qty + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + textarea#comment, .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > input[type=text] + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > input[type=text] + textarea#comment,
+    .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > textarea + input.qty, .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > .wpcf7-validation-errors + input.qty, .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > .wpcf7-validation-errors + input.qty, .single-product.woocommerce div.product .entry-summary table.variations .input-group > .form-control + select, .single-product.woocommerce div.product .entry-summary .quantity table.variations .input-group > input.qty + select, .single-product.woocommerce div.product .entry-summary table.variations .quantity .input-group > input.qty + select, .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + select, .single-product.woocommerce #review_form_wrapper #review_form form#commentform div.product .entry-summary table.variations .input-group > textarea#comment + select, .single-product.woocommerce div.product .entry-summary table.variations #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + select, body.woocommerce-cart .product-quantity .quantity .single-product.woocommerce div.product .entry-summary table.variations .input-group > input.qty + select, .single-product.woocommerce div.product .entry-summary table.variations body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + select, .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=text] + select, .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=text] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=search] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=search] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=url] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=url] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=tel] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=tel] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=number] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=number] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=range] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=range] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=date] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=date] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=month] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=month] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=week] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=week] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=time] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=time] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=datetime] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=datetime] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=datetime-local] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=datetime-local] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=color] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=color] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=email] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=email] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=file] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=file] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > input[type=submit] + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > input[type=submit] + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > textarea + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > textarea + select, .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > .wpcf7-validation-errors + select, .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > .wpcf7-validation-errors + select, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > .form-control + textarea#comment, .single-product.woocommerce div.product .entry-summary .quantity #review_form_wrapper #review_form form#commentform .input-group > input.qty + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform div.product .entry-summary .quantity .input-group > input.qty + textarea#comment, .single-product.woocommerce div.product .entry-summary table.variations #review_form_wrapper #review_form form#commentform .input-group > select + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform div.product .entry-summary table.variations .input-group > select + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + textarea#comment, body.woocommerce-cart .product-quantity .quantity .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > input.qty + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + textarea#comment, .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > input[type=text] + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > input[type=text] + textarea#comment,
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > input[type=search] + textarea#comment,
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > input[type=search] + textarea#comment,
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > input[type=url] + textarea#comment,
@@ -3997,7 +4037,7 @@ input[type="button"].btn-block,
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > select + textarea#comment,
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > select + textarea#comment,
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea + textarea#comment,
-    .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea + textarea#comment, .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > .wpcf7-validation-errors + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > .wpcf7-validation-errors + textarea#comment, body.woocommerce-cart .product-quantity .quantity .input-group > .form-control + input.qty, .single-product.woocommerce div.product .entry-summary body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + input.qty, body.woocommerce-cart .product-quantity .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform body.woocommerce-cart .product-quantity .quantity .input-group > textarea#comment + input.qty, body.woocommerce-cart .product-quantity .quantity .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input.qty, body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + input.qty, .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > input[type=text] + input.qty, body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input[type=text] + input.qty,
+    .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea + textarea#comment, .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > .wpcf7-validation-errors + textarea#comment, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > .wpcf7-validation-errors + textarea#comment, body.woocommerce-cart .product-quantity .quantity .input-group > .form-control + input.qty, .single-product.woocommerce div.product .entry-summary body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + input.qty, body.woocommerce-cart .product-quantity .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input.qty, .single-product.woocommerce div.product .entry-summary table.variations body.woocommerce-cart .product-quantity .quantity .input-group > select + input.qty, body.woocommerce-cart .product-quantity .quantity .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform body.woocommerce-cart .product-quantity .quantity .input-group > textarea#comment + input.qty, body.woocommerce-cart .product-quantity .quantity .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input.qty, body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + input.qty, .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > input[type=text] + input.qty, body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input[type=text] + input.qty,
     .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > input[type=search] + input.qty,
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input[type=search] + input.qty,
     .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > input[type=url] + input.qty,
@@ -4031,7 +4071,7 @@ input[type="button"].btn-block,
     .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > select + input.qty,
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > select + input.qty,
     .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > textarea + input.qty,
-    body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > textarea + input.qty, .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > .wpcf7-validation-errors + input.qty, body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > .wpcf7-validation-errors + input.qty, .wpcf7 .input-group > .form-control + input[type=text], .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=text], .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=text], .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=text], .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=text], body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=text], .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + input[type=text], .wpcf7 .input-group > input[type=text] + input[type=text],
+    body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > textarea + input.qty, .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > .wpcf7-validation-errors + input.qty, body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > .wpcf7-validation-errors + input.qty, .wpcf7 .input-group > .form-control + input[type=text], .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=text], .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=text], .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=text], .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=text], .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=text], .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=text], body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=text], .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + input[type=text], .wpcf7 .input-group > input[type=text] + input[type=text],
     .wpcf7 .input-group > input[type=search] + input[type=text],
     .wpcf7 .input-group > input[type=url] + input[type=text],
     .wpcf7 .input-group > input[type=tel] + input[type=text],
@@ -4052,6 +4092,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=search],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=search],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=search],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=search],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=search],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=search],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=search],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=search],
@@ -4078,6 +4120,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=url],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=url],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=url],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=url],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=url],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=url],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=url],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=url],
@@ -4104,6 +4148,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=tel],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=tel],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=tel],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=tel],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=tel],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=tel],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=tel],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=tel],
@@ -4130,6 +4176,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=number],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=number],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=number],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=number],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=number],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=number],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=number],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=number],
@@ -4156,6 +4204,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=range],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=range],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=range],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=range],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=range],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=range],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=range],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=range],
@@ -4182,6 +4232,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=date],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=date],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=date],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=date],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=date],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=date],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=date],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=date],
@@ -4208,6 +4260,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=month],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=month],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=month],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=month],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=month],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=month],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=month],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=month],
@@ -4234,6 +4288,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=week],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=week],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=week],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=week],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=week],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=week],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=week],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=week],
@@ -4260,6 +4316,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=time],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=time],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=time],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=time],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=time],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=time],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=time],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=time],
@@ -4286,6 +4344,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=datetime],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=datetime],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=datetime],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=datetime],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=datetime],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=datetime],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=datetime],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=datetime],
@@ -4312,6 +4372,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=datetime-local],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=datetime-local],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=datetime-local],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=datetime-local],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=datetime-local],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=datetime-local],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=datetime-local],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=datetime-local],
@@ -4338,6 +4400,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=color],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=color],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=color],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=color],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=color],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=color],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=color],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=color],
@@ -4364,6 +4428,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=email],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=email],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=email],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=email],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=email],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=email],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=email],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=email],
@@ -4390,6 +4456,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=file],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=file],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=file],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=file],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=file],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=file],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=file],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=file],
@@ -4416,6 +4484,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + input[type=submit],
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + input[type=submit],
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + input[type=submit],
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + input[type=submit],
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + input[type=submit],
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + input[type=submit],
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + input[type=submit],
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + input[type=submit],
@@ -4442,6 +4512,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + select,
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + select,
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + select,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + select,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + select,
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + select,
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + select,
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + select,
@@ -4468,6 +4540,8 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .form-control + textarea,
     .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + textarea,
     .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + textarea,
+    .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + textarea,
+    .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + textarea,
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + textarea,
     .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + textarea,
     body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + textarea,
@@ -4490,7 +4564,7 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > input[type=submit] + textarea,
     .wpcf7 .input-group > select + textarea,
     .wpcf7 .input-group > textarea + textarea,
-    .wpcf7 .input-group > .wpcf7-validation-errors + textarea, .wpcf7 .input-group > .form-control + .wpcf7-validation-errors, .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + .wpcf7-validation-errors, .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + .wpcf7-validation-errors, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + .wpcf7-validation-errors, .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + .wpcf7-validation-errors, body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + .wpcf7-validation-errors, .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=text] + .wpcf7-validation-errors,
+    .wpcf7 .input-group > .wpcf7-validation-errors + textarea, .wpcf7 .input-group > .form-control + .wpcf7-validation-errors, .single-product.woocommerce div.product .entry-summary .quantity .wpcf7 .input-group > input.qty + .wpcf7-validation-errors, .wpcf7 .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + .wpcf7-validation-errors, .single-product.woocommerce div.product .entry-summary table.variations .wpcf7 .input-group > select + .wpcf7-validation-errors, .wpcf7 .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + .wpcf7-validation-errors, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .wpcf7 .input-group > textarea#comment + .wpcf7-validation-errors, .wpcf7 .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + .wpcf7-validation-errors, body.woocommerce-cart .product-quantity .quantity .wpcf7 .input-group > input.qty + .wpcf7-validation-errors, .wpcf7 body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=text] + .wpcf7-validation-errors,
     .wpcf7 .input-group > input[type=search] + .wpcf7-validation-errors,
     .wpcf7 .input-group > input[type=url] + .wpcf7-validation-errors,
     .wpcf7 .input-group > input[type=tel] + .wpcf7-validation-errors,
@@ -4510,6 +4584,7 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > textarea + .wpcf7-validation-errors, .wpcf7 .input-group > .wpcf7-validation-errors + .wpcf7-validation-errors,
     .input-group > .form-control + .custom-select,
     .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + .custom-select,
+    .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + .custom-select,
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + .custom-select,
     body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + .custom-select,
     .wpcf7 .input-group > input[type=text] + .custom-select,
@@ -4533,6 +4608,7 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .wpcf7-validation-errors + .custom-select,
     .input-group > .form-control + .custom-file,
     .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty + .custom-file,
+    .single-product.woocommerce div.product .entry-summary table.variations .input-group > select + .custom-file,
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment + .custom-file,
     body.woocommerce-cart .product-quantity .quantity .input-group > input.qty + .custom-file,
     .wpcf7 .input-group > input[type=text] + .custom-file,
@@ -4556,6 +4632,7 @@ input[type="button"].btn-block,
     .wpcf7 .input-group > .wpcf7-validation-errors + .custom-file,
     .input-group > .form-control-plaintext + .form-control,
     .single-product.woocommerce div.product .entry-summary .quantity .input-group > .form-control-plaintext + input.qty,
+    .single-product.woocommerce div.product .entry-summary table.variations .input-group > .form-control-plaintext + select,
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > .form-control-plaintext + textarea#comment,
     body.woocommerce-cart .product-quantity .quantity .input-group > .form-control-plaintext + input.qty,
     .wpcf7 .input-group > .form-control-plaintext + input[type=text],
@@ -4581,6 +4658,7 @@ input[type="button"].btn-block,
     .input-group > .form-control-plaintext + .custom-file,
     .input-group > .custom-select + .form-control,
     .single-product.woocommerce div.product .entry-summary .quantity .input-group > .custom-select + input.qty,
+    .single-product.woocommerce div.product .entry-summary table.variations .input-group > .custom-select + select,
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > .custom-select + textarea#comment,
     body.woocommerce-cart .product-quantity .quantity .input-group > .custom-select + input.qty,
     .wpcf7 .input-group > .custom-select + input[type=text],
@@ -4606,6 +4684,7 @@ input[type="button"].btn-block,
     .input-group > .custom-select + .custom-file,
     .input-group > .custom-file + .form-control,
     .single-product.woocommerce div.product .entry-summary .quantity .input-group > .custom-file + input.qty,
+    .single-product.woocommerce div.product .entry-summary table.variations .input-group > .custom-file + select,
     .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > .custom-file + textarea#comment,
     body.woocommerce-cart .product-quantity .quantity .input-group > .custom-file + input.qty,
     .wpcf7 .input-group > .custom-file + input[type=text],
@@ -4630,7 +4709,7 @@ input[type="button"].btn-block,
     .input-group > .custom-file + .custom-select,
     .input-group > .custom-file + .custom-file {
       margin-left: -1px; }
-  .input-group > .form-control:focus, .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment:focus, body.woocommerce-cart .product-quantity .quantity .input-group > input.qty:focus, .wpcf7 .input-group > input[type=text]:focus,
+  .input-group > .form-control:focus, .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty:focus, .single-product.woocommerce div.product .entry-summary table.variations .input-group > select:focus, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment:focus, body.woocommerce-cart .product-quantity .quantity .input-group > input.qty:focus, .wpcf7 .input-group > input[type=text]:focus,
   .wpcf7 .input-group > input[type=search]:focus,
   .wpcf7 .input-group > input[type=url]:focus,
   .wpcf7 .input-group > input[type=tel]:focus,
@@ -4653,7 +4732,7 @@ input[type="button"].btn-block,
     z-index: 3; }
   .input-group > .custom-file .custom-file-input:focus {
     z-index: 4; }
-  .input-group > .form-control:not(:last-child), .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty:not(:last-child), .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment:not(:last-child), body.woocommerce-cart .product-quantity .quantity .input-group > input.qty:not(:last-child), .wpcf7 .input-group > input[type=text]:not(:last-child),
+  .input-group > .form-control:not(:last-child), .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty:not(:last-child), .single-product.woocommerce div.product .entry-summary table.variations .input-group > select:not(:last-child), .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment:not(:last-child), body.woocommerce-cart .product-quantity .quantity .input-group > input.qty:not(:last-child), .wpcf7 .input-group > input[type=text]:not(:last-child),
   .wpcf7 .input-group > input[type=search]:not(:last-child),
   .wpcf7 .input-group > input[type=url]:not(:last-child),
   .wpcf7 .input-group > input[type=tel]:not(:last-child),
@@ -4674,7 +4753,7 @@ input[type="button"].btn-block,
   .input-group > .custom-select:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .input-group > .form-control:not(:first-child), .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty:not(:first-child), .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment:not(:first-child), body.woocommerce-cart .product-quantity .quantity .input-group > input.qty:not(:first-child), .wpcf7 .input-group > input[type=text]:not(:first-child),
+  .input-group > .form-control:not(:first-child), .single-product.woocommerce div.product .entry-summary .quantity .input-group > input.qty:not(:first-child), .single-product.woocommerce div.product .entry-summary table.variations .input-group > select:not(:first-child), .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group > textarea#comment:not(:first-child), body.woocommerce-cart .product-quantity .quantity .input-group > input.qty:not(:first-child), .wpcf7 .input-group > input[type=text]:not(:first-child),
   .wpcf7 .input-group > input[type=search]:not(:first-child),
   .wpcf7 .input-group > input[type=url]:not(:first-child),
   .wpcf7 .input-group > input[type=tel]:not(:first-child),
@@ -4842,7 +4921,7 @@ input[type="button"].btn-block,
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group-lg > .form-control:not(textarea), .single-product.woocommerce div.product .entry-summary .quantity .input-group-lg > input.qty:not(textarea), .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group-lg > textarea#comment:not(textarea), body.woocommerce-cart .product-quantity .quantity .input-group-lg > input.qty:not(textarea), .wpcf7 .input-group-lg > input[type=text]:not(textarea),
+.input-group-lg > .form-control:not(textarea), .single-product.woocommerce div.product .entry-summary .quantity .input-group-lg > input.qty:not(textarea), .single-product.woocommerce div.product .entry-summary table.variations .input-group-lg > select:not(textarea), .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group-lg > textarea#comment:not(textarea), body.woocommerce-cart .product-quantity .quantity .input-group-lg > input.qty:not(textarea), .wpcf7 .input-group-lg > input[type=text]:not(textarea),
 .wpcf7 .input-group-lg > input[type=search]:not(textarea),
 .wpcf7 .input-group-lg > input[type=url]:not(textarea),
 .wpcf7 .input-group-lg > input[type=tel]:not(textarea),
@@ -4863,7 +4942,7 @@ input[type="button"].btn-block,
 .input-group-lg > .custom-select {
   height: calc(1.5em + 1rem + 2px); }
 
-.input-group-lg > .form-control, .single-product.woocommerce div.product .entry-summary .quantity .input-group-lg > input.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group-lg > textarea#comment, body.woocommerce-cart .product-quantity .quantity .input-group-lg > input.qty, .wpcf7 .input-group-lg > input[type=text],
+.input-group-lg > .form-control, .single-product.woocommerce div.product .entry-summary .quantity .input-group-lg > input.qty, .single-product.woocommerce div.product .entry-summary table.variations .input-group-lg > select, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group-lg > textarea#comment, body.woocommerce-cart .product-quantity .quantity .input-group-lg > input.qty, .wpcf7 .input-group-lg > input[type=text],
 .wpcf7 .input-group-lg > input[type=search],
 .wpcf7 .input-group-lg > input[type=url],
 .wpcf7 .input-group-lg > input[type=tel],
@@ -4897,7 +4976,7 @@ input[type="button"].btn-block,
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.input-group-sm > .form-control:not(textarea), .single-product.woocommerce div.product .entry-summary .quantity .input-group-sm > input.qty:not(textarea), .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group-sm > textarea#comment:not(textarea), body.woocommerce-cart .product-quantity .quantity .input-group-sm > input.qty:not(textarea), .wpcf7 .input-group-sm > input[type=text]:not(textarea),
+.input-group-sm > .form-control:not(textarea), .single-product.woocommerce div.product .entry-summary .quantity .input-group-sm > input.qty:not(textarea), .single-product.woocommerce div.product .entry-summary table.variations .input-group-sm > select:not(textarea), .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group-sm > textarea#comment:not(textarea), body.woocommerce-cart .product-quantity .quantity .input-group-sm > input.qty:not(textarea), .wpcf7 .input-group-sm > input[type=text]:not(textarea),
 .wpcf7 .input-group-sm > input[type=search]:not(textarea),
 .wpcf7 .input-group-sm > input[type=url]:not(textarea),
 .wpcf7 .input-group-sm > input[type=tel]:not(textarea),
@@ -4918,7 +4997,7 @@ input[type="button"].btn-block,
 .input-group-sm > .custom-select {
   height: calc(1.5em + 0.5rem + 2px); }
 
-.input-group-sm > .form-control, .single-product.woocommerce div.product .entry-summary .quantity .input-group-sm > input.qty, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group-sm > textarea#comment, body.woocommerce-cart .product-quantity .quantity .input-group-sm > input.qty, .wpcf7 .input-group-sm > input[type=text],
+.input-group-sm > .form-control, .single-product.woocommerce div.product .entry-summary .quantity .input-group-sm > input.qty, .single-product.woocommerce div.product .entry-summary table.variations .input-group-sm > select, .single-product.woocommerce #review_form_wrapper #review_form form#commentform .input-group-sm > textarea#comment, body.woocommerce-cart .product-quantity .quantity .input-group-sm > input.qty, .wpcf7 .input-group-sm > input[type=text],
 .wpcf7 .input-group-sm > input[type=search],
 .wpcf7 .input-group-sm > input[type=url],
 .wpcf7 .input-group-sm > input[type=tel],
@@ -17171,16 +17250,18 @@ p.no-comments {
 .single-product.woocommerce div.product .woocommerce-product-rating {
   margin-bottom: 1em; }
   .single-product.woocommerce div.product .woocommerce-product-rating .woocommerce-review-link {
-    color: #777; }
+    color: #6c757d; }
 .single-product.woocommerce div.product .woocommerce-tabs .panel {
   margin: 0 0 3em; }
-.single-product.woocommerce div.product p.price .woocommerce-Price-amount {
-  color: #555; }
+.single-product.woocommerce div.product .entry-summary p.price .woocommerce-Price-amount {
+  color: #495057; }
 .single-product.woocommerce div.product .entry-summary .quantity input.qty {
   width: 3.631em;
   text-align: center; }
+.single-product.woocommerce div.product .entry-summary .single_variation_wrap .price .woocommerce-Price-amount {
+  color: #495057; }
 .single-product.woocommerce .woocommerce-breadcrumb a, .single-product.woocommerce .product_meta a {
-  color: #777; }
+  color: #6c757d; }
 .single-product.woocommerce .star-rating {
   color: #F7DE00; }
 .single-product.woocommerce #respond input#submit.btn.btn-secondary, .single-product.woocommerce #respond .wp-block-button input#submit.btn-secondary.wp-block-button__link, .wp-block-button .single-product.woocommerce #respond input#submit.btn-secondary.wp-block-button__link, .single-product.woocommerce #respond .wp-block-button input#submit.wp-block-button__link.has-secondary-background-color, .wp-block-button .single-product.woocommerce #respond input#submit.wp-block-button__link.has-secondary-background-color, .single-product.woocommerce #respond .wpcf7 input#submit.btn-secondary[type=submit], .wpcf7 .single-product.woocommerce #respond input#submit.btn-secondary[type=submit] {
