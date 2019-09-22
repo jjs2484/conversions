@@ -40,12 +40,10 @@ defined( 'ABSPATH' ) || exit;
 
 	</div>
 
-	<div class="card-footer text-muted d-flex justify-content-between align-items-center small">
+	<div class="card-footer text-muted small">
 		
 		<footer class="entry-footer">
-			<div class="d-flex align-items-center">
-          		<?php conversions()->template->entry_footer(); ?>
-        	</div>
+          	<?php conversions()->template->entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 
 	</div>
