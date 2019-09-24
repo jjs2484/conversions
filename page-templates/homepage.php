@@ -17,54 +17,54 @@ get_header();
 
 	<!-- Hero Section -->
 	<section class="c-hero d-flex align-items-center">
-  		<div class="container-fluid">
-  			<div class="row">
-           		<div class="col-lg-6">
+  	<div class="container-fluid">
+  		<div class="row">
+        <div class="col-lg-6">
            			
-           			<!-- Title -->
-    				<h1 class="display-4">Fluid jumbotron</h1>
+          <!-- Title -->
+    			<h1 class="display-4">Fluid jumbotron</h1>
     				
-    				<!-- Description -->
-    				<p class="lead">
-    					This is a modified jumbotron that occupies the entire horizontal space of its parent.
-    				</p>
+    			<!-- Description -->
+    			<p class="lead">
+    				This is a modified jumbotron that occupies the entire horizontal space of its parent.
+    			</p>
     				
-    				<!-- Button link -->
-    				<a href="#" class="btn btn-primary btn-lg">Large button</a>
+    			<!-- Button link -->
+    			<a href="#" class="btn btn-primary btn-lg">Large button</a>
     				
-    				<!-- Fancybox button modal video -->
-    				<a data-fancybox="c-hero__fb-video" class="c-hero__video-btn btn btn-light btn--circle ml-2" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
-    					<i class="fa fa-play"></i>
-					</a>
+    			<!-- Fancybox button modal video -->
+    			<a data-fancybox="c-hero__fb-video" class="c-hero__video-btn btn btn-light btn--circle ml-2" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+    				<i class="fa fa-play"></i>
+          </a>
 
-  				</div>
   			</div>
+  		</div>
 		</div>
-	</section>
+  </section>
 
 	<!-- Clients section -->
 	<section class="c-clients border-top border-bottom" style="background-color: #F3F3F3;">
 		<div class="container-fluid">
 			<div class="row">
-  				<div class="col-12">
+  			<div class="col-12">
 
-  					<!-- Client logos -->
+  				<!-- Client logos -->
 					<div class="c-clients__carousel text-center mb-0 py-4">
-  						<div class="c-clients__item py-6 px-3">
-    						<img class="client" src="//i.imgur.com/NpmZS3w.png" alt="Image Description">
-  						</div>
-  						<div class="c-clients__item py-6 px-3">
-    						<img class="client" src="//i.imgur.com/ZjU7Zl4.png" alt="Image Description">
-  						</div>
+  					<div class="c-clients__item py-6 px-3">
+    					<img class="client" src="//i.imgur.com/NpmZS3w.png" alt="Image Description">
+  					</div>
+  					<div class="c-clients__item py-6 px-3">
+    					<img class="client" src="//i.imgur.com/ZjU7Zl4.png" alt="Image Description">
+  					</div>
 						<div class="c-clients__item py-6 px-3">
-    						<img class="client" src="//i.imgur.com/zRZLfx0.png" alt="Image Description">
+    					<img class="client" src="//i.imgur.com/zRZLfx0.png" alt="Image Description">
 						</div>
-  						<div class="c-clients__item py-6 px-3">
-    						<img class="client" src="//i.imgur.com/HAyRaOh.png" alt="Image Description">
-  						</div>
-  						<div class="c-clients__item py-6 px-3">
-    						<img class="client" src="//i.imgur.com/HAyRaOh.png" alt="Image Description">
-  						</div>
+  					<div class="c-clients__item py-6 px-3">
+    					<img class="client" src="//i.imgur.com/HAyRaOh.png" alt="Image Description">
+  					</div>
+  					<div class="c-clients__item py-6 px-3">
+    					<img class="client" src="//i.imgur.com/HAyRaOh.png" alt="Image Description">
+  					</div>
 					</div>
 
 				</div>
@@ -85,13 +85,6 @@ get_header();
 					</p>
 				</div>
 			</div>
-			
-			
-
-
-
-
-      
 
       <!-- Features -->
   <div class="card-deck d-block d-lg-flex">
@@ -148,18 +141,6 @@ get_header();
     </div>
   </div>
 <!-- End Features -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 		</div>
 	</section>
@@ -334,72 +315,72 @@ get_header();
     <div class="container-fluid py-5">
       <div class="row">
 
-      <!-- Title -->
-      <div class="col-12">
-        <div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
-          <h3>What people say about us</h3>
-          <p class="text-muted">
-            We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
-          </p>
+        <!-- Title -->
+        <div class="col-12">
+          <div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
+            <h3>What people say about us</h3>
+            <p class="text-muted">
+              We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <!-- Testimonials -->
-      <div class="col-12">
+        <!-- Testimonials -->
+        <div class="col-12">
          
-        <!-- Slick Carousel -->
-        <div class="c-testimonials__carousel">
+          <!-- Slick Carousel -->
+          <div class="c-testimonials__carousel">
             
-          <!-- Testimonial -->
-          <div class="c-testimonials__item">
-            <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-4">
-              <p class="h5">
-                Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
-              </p>
-              <div class="d-flex justify-content-between">
-                <cite>
-                  <span class="d-block">Mark McManus</span>
-                  <span class="d-block">Associate Director of Spotify</span>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </cite>
-                <div class="c-testimonials__nav align-self-end">
-                  <i class="fas fa-chevron-left slick-arrow mr-2"></i>
-                  <i class="fas fa-chevron-right slick-arrow"></i>
+            <!-- Testimonial -->
+            <div class="c-testimonials__item">
+              <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-4">
+                <p class="h5">
+                  Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
+                </p>
+                <div class="d-flex justify-content-between">
+                  <cite>
+                    <span class="d-block">Mark McManus</span>
+                    <span class="d-block">Associate Director of Spotify</span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </cite>
+                  <div class="c-testimonials__nav align-self-end">
+                    <i class="fas fa-chevron-left slick-arrow mr-2"></i>
+                    <i class="fas fa-chevron-right slick-arrow"></i>
+                  </div>
                 </div>
-              </div>
-            </blockquote>
-          </div>
+              </blockquote>
+            </div>
 
-          <!-- Testimonial -->
-          <div class="c-testimonials__item">
-            <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-4">
-              <p class="h5">
-                Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
-              </p>
-              <div class="d-flex justify-content-between">
-                <cite>
-                  <span class="d-block">Mark McManus</span>
-                  <span class="d-block">Associate Director of Spotify</span>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </cite>
-                <div class="c-testimonials__nav align-self-end">
-                  <i class="fas fa-chevron-left slick-arrow mr-2"></i>
-                  <i class="fas fa-chevron-right slick-arrow"></i>
+            <!-- Testimonial -->
+            <div class="c-testimonials__item">
+              <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-4">
+                <p class="h5">
+                  Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
+                </p>
+                <div class="d-flex justify-content-between">
+                  <cite>
+                    <span class="d-block">Mark McManus</span>
+                    <span class="d-block">Associate Director of Spotify</span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </cite>
+                  <div class="c-testimonials__nav align-self-end">
+                    <i class="fas fa-chevron-left slick-arrow mr-2"></i>
+                    <i class="fas fa-chevron-right slick-arrow"></i>
+                  </div>
                 </div>
-              </div>
-            </blockquote>   
-          </div>
+              </blockquote>   
+            </div>
 
-        </div> <!-- End Slick Carousel -->
-      </div>
+          </div> <!-- End Slick Carousel -->
+        </div>
       </div>
     </div>
   </section>
@@ -410,26 +391,26 @@ get_header();
 		<div class="container-fluid py-5">
 			<div class="row justify-content-sm-center">
 
-			<!-- Title -->
-			<div class="col-12">
-				<div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
-					<h3>Latest News</h3>
-					<p class="text-muted">
-						We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
-					</p>
-				</div>
-			</div>
+        <!-- Title -->
+        <div class="col-12">
+				  <div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
+            <h3>Latest News</h3>
+            <p class="text-muted">
+						  We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
+            </p>
+				  </div>
+        </div>
 
-    	<?php
-    		// Get latest posts
-    		$recent_posts = wp_get_recent_posts(array(
+        <?php
+    		  // Get latest posts
+    		  $recent_posts = wp_get_recent_posts(array(
         		'numberposts' => 3, // Number of recent posts thumbnails to display
         		'post_status' => 'publish' // Show only the published posts
-    		)); 
-    	?>
+    		  )); 
+        ?>
     
     		
-    	<?php foreach($recent_posts as $post) : ?>
+        <?php foreach($recent_posts as $post) : ?>
 
   			<!-- Post item -->
   			<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
@@ -476,26 +457,24 @@ get_header();
 	<section id="c-cta">
 		<div class="container-fluid">
 			<div class="row">
-  				<div class="col-12">
+  			<div class="col-12">
 
-					<div class="w-md-80 w-lg-60 text-center my-5 mx-auto">
-  						<!-- Call-to-action text -->
-  						<div class="mb-4">
-    						<h2 class="h3">Get started today!</h2>
-    						<p class="text-muted">Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?</p>
-  						</div>
-  						<!-- Call-to-action button -->
-  						<a class="btn btn-primary btn-lg mb-2 mb-md-0 mr-md-2" href="#">
-    						Get Access
-  						</a>
-					</div>
+          <div class="w-md-80 w-lg-60 text-center my-5 mx-auto">
+  					<!-- Call-to-action text -->
+  					<div class="mb-4">
+    					<h2 class="h3">Get started today!</h2>
+    					<p class="text-muted">Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?</p>
+  					</div>
+  					<!-- Call-to-action button -->
+  					<a class="btn btn-primary btn-lg mb-2 mb-md-0 mr-md-2" href="#">
+    					Get Access
+  					</a>
+          </div>
 
 				</div>
-			</div>
+      </div>
 		</div>
 	</section>
-
-
 
 
 </div><!-- Wrapper end -->
