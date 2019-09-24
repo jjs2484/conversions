@@ -192,7 +192,7 @@ namespace conversions
 				'conversions_social_link_hcolor' => '#004086',
 				'conversions_wccart_nav' => 'yes',
 				'conversions_wccheckout_columns' => 'two-column',
-				'conversions_blog_overlay' => '0.5',
+				'conversions_blog_img_overlay' => '.5',
 				'conversions_blog_related' => 'enable',
 				'conversions_blog_taxonomy' => 'categories'
 			);

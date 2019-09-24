@@ -926,25 +926,37 @@ namespace conversions
 						'priority'    => '3',
 					)
 			) );
-			$wp_customize->add_setting( 'conversions_blog_overlay', array(
-				'default'       => '0.5',
-				'type'          => 'theme_mod',
-				'capability'    => 'edit_theme_options',
+			$wp_customize->add_setting( 'conversions_blog_img_overlay', array(
+				'default'           => '.5',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'conversions_sanitize_float',
 			) );
-			$wp_customize->add_control( 'conversions_blog_overlay_control', array(
-				'label'      => __('Featured image overlay', 'conversions'),
-				'description'=> __('Darken or lighten single posts featured images.', 'conversions'),
-				'section'    => 'conversions_blog',
-				'settings'   => 'conversions_blog_overlay',
-				'priority'   => 4,
-				'type'       => 'number',
-				'input_attrs'=> array(
-					'min' => 0,
-					'max' => 1,
-					'step'  => 0.1,
-				),
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_blog_img_overlay', array(
+						'label'       => __( 'Featured image overlay', 'conversions' ),
+						'description' => __( 'Darken or lighten single posts featured images.', 'conversions' ),
+						'section'     => 'conversions_blog',
+						'settings'    => 'conversions_blog_img_overlay',
+						'type'        => 'select',
+						'choices'     => array(
+							'0' => __( '0%', 'conversions' ),
+							'.1' => __( '10%', 'conversions' ),
+							'.2' => __( '20%', 'conversions' ),
+							'.3' => __( '30%', 'conversions' ),
+							'.4' => __( '40%', 'conversions' ),
+							'.5' => __( '50%', 'conversions' ),
+							'.6' => __( '60%', 'conversions' ),
+							'.7' => __( '70%', 'conversions' ),
+							'.8' => __( '80%', 'conversions' ),
+							'.9' => __( '90%', 'conversions' ),
+							'1' => __( '100%', 'conversions' ),
+						),
+						'priority'    => '4',
+					)
 			) );
 			$wp_customize->add_setting( 'conversions_blog_related', array(
 				'default'       => 'enable',

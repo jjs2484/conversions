@@ -351,7 +351,7 @@ class Template
 			$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullscreen', false );
 
 			// Get the customizer setting
-			$blog_img_overlay = get_theme_mod('conversions_blog_overlay', '0.5');
+			$blog_img_overlay = get_theme_mod('conversions_blog_img_overlay', '.5');
 
 			// Inline styles for background image
     		echo '<style>
