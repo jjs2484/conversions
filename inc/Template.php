@@ -172,7 +172,7 @@ class Template
 	{
 		$byline      = apply_filters(
 			'conversions_posted_by', sprintf(
-				'<span class="author vcard"><a class="url fn n" href="%1$s"> %2$s</a></span>',
+				'<span class="author vcard c-posted-by"><a class="url fn n" href="%1$s"> %2$s</a></span>',
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_html( get_the_author() )
 			)
@@ -193,7 +193,7 @@ class Template
 		);
 		$posted_on   = apply_filters(
 			'conversions_posted_on', sprintf(
-				'<span class="posted-on">%1$s</span>',
+				'<span class="c-posted-on">%1$s</span>',
 				apply_filters( 'conversions_posted_on_time', $time_string )
 			)
 		);

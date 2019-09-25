@@ -385,7 +385,6 @@ get_header();
     </div>
   </section>
 
-
 	<!-- News Section -->
 	<section class="c-news" style="background-color: #F3F3F3;">
 		<div class="container-fluid py-5">
@@ -401,52 +400,57 @@ get_header();
 				  </div>
         </div>
 
-        <?php
-    		  // Get latest posts
-    		  $recent_posts = wp_get_recent_posts(array(
-        		'numberposts' => 3, // Number of recent posts thumbnails to display
-        		'post_status' => 'publish' // Show only the published posts
-    		  )); 
+        <?php 
+        // Get latest posts
+        $args=array(
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'posts_per_page' => 3,
+          'orderby' => array( 'comment_count' => 'DESC'),
+          'ignore_sticky_posts' => 1,
+        );
+
+        $recent_posts = new WP_Query( $args );
+        while ($recent_posts -> have_posts()) : $recent_posts -> the_post(); 
         ?>
-    
-    		
-        <?php foreach($recent_posts as $post) : ?>
 
-  			<!-- Post item -->
-  			<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
-    			<article class="card shadow h-100 mb-3">
-      			
-            <!-- Post image -->
-      			<a class="c-news__img-link" href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>" title="<?php echo $post['post_title'] ?>">
-              <?php if ( has_post_thumbnail() ) : ?>
-                <?php echo get_the_post_thumbnail( $post['ID'], 'news-image', array( 'class' => 'card-img-top' ) ); ?>
-              <?php else : ?>
-                <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
-              <?php endif; ?>
-      			</a>
-      			<div class="card-body pb-1">
-        			<h3 class="h5">
-          		  <a href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>">
-                  <?php echo esc_html( $post['post_title'] ); ?>
-          		  </a>
-        			</h3>
-        			<p class="text-muted">
-          			<?php echo wp_trim_words( $post[ 'post_content' ], 15, '...' ); ?>
-          		</p>
-      			</div>
-      			<div class="card-footer text-muted d-flex justify-content-between align-items-center small">
-        			<div class="d-flex align-items-center">
-          			<?php echo esc_html( the_author_meta( 'display_name', $post['post_author'] ) ); ?>
-        			</div>
-              <div class="d-flex align-items-center">
-          			<?php echo esc_html( date( 'F d', strtotime( $post['post_date'] ) ) ); ?>
-        			</div>
-      			</div>
-    			</article>
-  			</div>
-  			<!-- End Post Item -->
+          <!-- Post item -->
+          <div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
+            <article class="card shadow h-100 mb-3">
+            
+              <!-- Post image -->
+              <a class="c-news__img-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>">
+                <?php if ( has_post_thumbnail() ) : ?>
+                  <?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
+                <?php else : ?>
+                  <img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
+                <?php endif; ?>
+              </a>
+              <div class="card-body pb-1">
+                <h3 class="h5">
+                  <a href="<?php esc_url( the_permalink() ); ?>">
+                    <?php the_title(); ?>
+                  </a>
+                </h3>
+                <p class="text-muted">
+                  <?php
+                    $related_content = strip_shortcodes( get_the_content() );
+                    echo wp_trim_words( $related_content, 15, '...' ); 
+                  ?>
+                </p>
+              </div>
+              <div class="card-footer text-muted d-flex justify-content-between align-items-center small">
+                <?php conversions()->template->posted_on(); ?>
+                <?php conversions()->template->reading_time(); ?>
+              </div>
+            </article>
+          </div>
+          <!-- End Post Item -->
 
-  			<?php endforeach; wp_reset_query(); ?>
+        <?php 
+        endwhile;
+        wp_reset_postdata();
+        ?>
 
 			</div>
 		</div>

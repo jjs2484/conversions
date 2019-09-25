@@ -16761,7 +16761,8 @@ section.c-testimonials .c-testimonials__quote {
     top: 5px;
     left: 12px;
     font-size: 2.25em;
-    color: #ddd; }
+    color: #ddd;
+    font-weight: 700; }
   section.c-testimonials .c-testimonials__quote p {
     line-height: 1.5; }
   section.c-testimonials .c-testimonials__quote cite {
@@ -16829,26 +16830,30 @@ section.c-testimonials .c-testimonials__quote {
   .entry-meta a {
     color: #6c757d;
     text-decoration: underline; }
-  .entry-meta .author::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f007";
-    color: #6c757d;
-    margin-right: 2px; }
-  .entry-meta .posted-on::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f073";
-    color: #6c757d;
-    margin-right: 3px; }
-  .entry-meta .c-single-comments::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f075";
-    color: #6c757d;
-    margin-right: 2px; }
-  .entry-meta .c-reading-time::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f017";
-    color: #6c757d;
-    margin-right: 2px; }
+
+.c-posted-by::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f007";
+  color: #6c757d;
+  margin-right: 2px; }
+
+.c-posted-on::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f073";
+  color: #6c757d;
+  margin-right: 3px; }
+
+.c-single-comments::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f075";
+  color: #6c757d;
+  margin-right: 2px; }
+
+.c-reading-time::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f017";
+  color: #6c757d;
+  margin-right: 2px; }
 
 .single-post .entry-footer, .single-post .post-navigation, .single-post .c-related-posts {
   margin: 1.5rem 0; }

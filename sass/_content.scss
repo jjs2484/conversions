@@ -1,10 +1,10 @@
-// Basic styling for page/post wrappers
+// Basic wrapper styling
 .wrapper {
   padding: 30px 0 3em; 
   overflow: hidden;
 }
 
-// Width restriction utilities
+// Width utilities
 .w-md-80 {
   @media (min-width: 768px) {
     width: 80%;
@@ -16,7 +16,7 @@
   }
 }
 
-// News image hover effect
+// News img hover
 a.c-news__img-link {
   background: #000000;
   img {
@@ -151,6 +151,7 @@ section.c-testimonials {
       left: 12px;
       font-size: 2.25em;
       color: #ddd;
+      font-weight: 700;
     }
     p {
       line-height: 1.5;
@@ -173,7 +174,7 @@ section.c-testimonials {
   }
 }
 
-// Page and Post fullscreen featured image
+// Page/Post featured image
 .conversions-hero-cover {
   width: 100vw;
   max-width: 100vw;
@@ -209,7 +210,7 @@ section.c-testimonials {
   }
 }
 
-// Entry meta
+// Post entry meta
 .entry-footer {
   color: $text-muted;
   a {
@@ -225,37 +226,42 @@ section.c-testimonials {
     color: $text-muted;
     text-decoration: underline;
   }
-  .author {
-    &::before {
-      font-family: "Font Awesome 5 Free";
-      content: "\f007";
-      color: $text-muted;
-      margin-right: 2px;
-    }
+}
+
+// post author icon
+.c-posted-by {
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f007";
+    color: $text-muted;
+    margin-right: 2px;
   }
-  .posted-on {
-    &::before {
-      font-family: "Font Awesome 5 Free";
-      content: "\f073";
-      color: $text-muted;
-      margin-right: 3px;
-    }
+}
+// post date icon
+.c-posted-on {
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f073";
+    color: $text-muted;
+    margin-right: 3px;
   }
-  .c-single-comments {
-    &::before {
-      font-family: "Font Awesome 5 Free";
-      content: "\f075";
-      color: $text-muted;
-      margin-right: 2px;
-    }
+}
+// post comments icon
+.c-single-comments {
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f075";
+    color: $text-muted;
+    margin-right: 2px;
   }
-  .c-reading-time {
-    &::before {
-      font-family: "Font Awesome 5 Free";
-      content: "\f017";
-      color: $text-muted;
-      margin-right: 2px;
-    }
+}
+// post reading time icon
+.c-reading-time {
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f017";
+    color: $text-muted;
+    margin-right: 2px;
   }
 }
 

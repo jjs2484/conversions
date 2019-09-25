@@ -21,10 +21,10 @@ defined( 'ABSPATH' ) || exit;
 
 				<div class="entry-meta">
 					<ul class="byline list-inline">
-						<li class="list-inline-item"><?php conversions()->template->posted_by(); ?></li>
-						<li class="list-inline-item"><?php conversions()->template->posted_on(); ?></li>
-						<li class="list-inline-item"><?php conversions()->template->reading_time(); ?></li>
-						<li class="list-inline-item"><?php conversions()->template->single_comments(); ?></li>
+						<li class="list-inline-item cpb"><?php conversions()->template->posted_by(); ?></li>
+						<li class="list-inline-item cpo"><?php conversions()->template->posted_on(); ?></li>
+						<li class="list-inline-item crt"><?php conversions()->template->reading_time(); ?></li>
+						<li class="list-inline-item csc"><?php conversions()->template->single_comments(); ?></li>
 					</ul>
     			</div>
 
