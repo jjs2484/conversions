@@ -1,4 +1,29 @@
-// Basic wrapper styling
+// All inputs except radios and checkboxes inherit form-control
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+select,
+textarea {
+  @extend .form-control;
+}
+
+input[type="file"] {
+  @extend .form-control-file;
+}
+
+// Basic wrapper
 .wrapper {
   padding: 30px 0 3em; 
   overflow: hidden;

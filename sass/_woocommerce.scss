@@ -187,14 +187,8 @@ p.no-comments {
 				color: $gray-700;
 			}
 			.quantity input.qty {
-				@extend .form-control;
 				width: 3.631em;
     			text-align: center;
-			}
-			table.variations {
-				select {
-					@extend .form-control;
-				}
 			}
 			.single_variation_wrap {
 				.price .woocommerce-Price-amount {
@@ -208,9 +202,6 @@ p.no-comments {
 	}
 	.star-rating {
 		color: #F7DE00;
-	}
-	#review_form_wrapper #review_form form#commentform textarea#comment {
-		@extend .form-control;
 	}
 	#respond input#submit.btn.btn-secondary {
 		color: $white;
@@ -229,7 +220,6 @@ p.no-comments {
 // Cart page
 body.woocommerce-cart {
 	.product-quantity .quantity input.qty {
-		@extend .form-control;
 		width: 3.631em;
     	text-align: center;
 	}

@@ -1,7 +1,10 @@
 // Comments section
 #comments {
   &.comments-area {
-    .comment.media {
+    #respond.comment-respond {
+      margin-top: 1em;
+    }
+    .comment .media {
 
       // stack on smaller screens
       flex-direction: column;
@@ -9,6 +12,7 @@
       // Children styles
       ul.children {
         padding-left: .75em;
+        list-style: none;
       }
 
       // Avatar

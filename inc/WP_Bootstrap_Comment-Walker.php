@@ -131,7 +131,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
         $tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
         $type = get_comment_type();
         $comment_classes = array();
-        $comment_classes[] = 'media';
+
         // if it's a parent
         if ( $this->has_children ) {
             $comment_classes[] = 'parent';
@@ -147,6 +147,8 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
         $class_str = implode(' ', $comment_classes);
 ?>
         <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $class_str, $comment ); ?>>
+
+            <div class="media">
 
                 <div class="commenter d-flex flex-row mb-1">
                     
@@ -168,7 +170,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
                                 </time>
                             </li>
                             <li class="list-inline-item">
-                                <span class="comm-perm list-inline-item">
+                                <span class="comm-perm">
                                     <a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
                                         <?php esc_html_e( 'Permalink', 'conversions' ); ?>
                                     </a>
@@ -205,6 +207,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
                         <div class="child-comments">
                     <?php } else { ?>
                         </div><!-- /.media-body -->
+                        </div><!-- /.media -->
                     <?php } ?>
 
 <?php
@@ -233,7 +236,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 ?>
                     </div><!-- /.child-comments -->
                 </div><!-- /.media-body -->
-            </article><!-- /.comment-body -->
+            </div><!-- /.media -->
         </<?php echo $tag; ?>><!-- /.parent -->
 
 <?php

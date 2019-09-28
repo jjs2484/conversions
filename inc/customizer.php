@@ -1148,11 +1148,12 @@ namespace conversions
 			$header_bottom_padding = get_theme_mod( 'conversions_header_bpadding', '8' );
 			$logo_padding = 10;
 			$total_header_height = $logo_height + $header_top_padding + $header_bottom_padding + $logo_padding - 1;
+			$header_offset = $total_header_height + 50;
 			?>
 
 			<style>
 				/* Container width */
-				.container-fluid { max-width: <?php echo esc_html( get_theme_mod( 'conversions_container_width', '1140' ) ); ?>px; }
+				.container-fluid { max-width: <?php echo esc_html( get_theme_mod( 'conversions_container_width', '1100' ) ); ?>px; }
 				/* Logo size */
 				a.navbar-brand img {
 					max-height: <?php echo esc_html( get_theme_mod( 'conversions_logo_height', '60' ) ); ?>px;
@@ -1164,6 +1165,14 @@ namespace conversions
 					/* Fixed header height */
 					#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper { 
 						margin-top: <?php echo esc_html( $total_header_height ); ?>px; 
+					}
+					.wrapper :target:before, .wrapper li[id].comment:before { 
+						display: block;
+						content: " ";
+						margin-top: -<?php echo esc_html( $header_offset ); ?>px;
+						height: <?php echo esc_html( $header_offset ); ?>px;
+						visibility: hidden;
+						pointer-events: none;
 					}
 				<?php } ?>
 				.navbar {

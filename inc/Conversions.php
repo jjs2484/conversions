@@ -166,7 +166,7 @@ namespace conversions
 				'conversions_nav_button_text' => 'Click me',
 				'conversions_nav_button_url' => 'https://wordpress.org',
 				'conversions_nav_search_icon' => 'show',
-				'conversions_container_width' => '1140',
+				'conversions_container_width' => '1100',
 				'conversions_sidebar_position' => 'right',
 				'conversions_sidebar_mvisibility' => 'show',
 				'conversions_google_fonts' => 'enable_gfonts',
