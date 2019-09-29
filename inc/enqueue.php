@@ -27,8 +27,7 @@ class Enqueue
 	public function after_setup_theme()
 	{
 		// Are Google fonts enabled?
-		$google_fonts_state = get_theme_mod( 'conversions_google_fonts', 'enable_gfonts' );
-		if( $google_fonts_state == 'enable_gfonts' ) {
+		if ( get_theme_mod( 'conversions_google_fonts', true ) == true ) {
 
 			// Enqueue headings font
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
@@ -61,8 +60,7 @@ class Enqueue
 		wp_enqueue_style( 'conversions-gutenberg' );
 
 		// Are Google fonts enabled?
-		$google_fonts_state = get_theme_mod( 'conversions_google_fonts', 'enable_gfonts' );
-		if( $google_fonts_state == 'enable_gfonts' ) {
+		if ( get_theme_mod( 'conversions_google_fonts', true ) == true ) {
 
 			// Enqueue headings font
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
@@ -136,8 +134,7 @@ class Enqueue
 	public function tiny_mce_before_init( $mceInit )
 	{
 		// Are Google fonts enabled?
-		$google_fonts_state = get_theme_mod( 'conversions_google_fonts', 'enable_gfonts' );
-		if( $google_fonts_state == 'enable_gfonts' ) {
+		if ( get_theme_mod( 'conversions_google_fonts', true ) == true ) {
 
 			// headings font
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
@@ -194,8 +191,7 @@ class Enqueue
 		}
 
 		// Google fonts
-		$google_fonts_state = get_theme_mod( 'conversions_google_fonts', 'enable_gfonts' );
-		if( $google_fonts_state == 'enable_gfonts' ) {
+		if ( get_theme_mod( 'conversions_google_fonts', true ) == true ) {
 			// headings font
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
 			wp_enqueue_style( 'conversions-heading-gfont', '//fonts.googleapis.com/css?family='. esc_html( $headings_font ) );

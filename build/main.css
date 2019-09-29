@@ -16549,7 +16549,7 @@ p.no-comments {
   padding: 1em 1.618em;
   clear: both;
   margin-bottom: 1.618em;
-  background-color: #0f834d;
+  background-color: #019875;
   margin-left: 0;
   border-radius: 2px;
   color: #fff;
@@ -16614,7 +16614,7 @@ p.no-comments {
   background-color: #3d9cd2; }
 
 .woocommerce-error {
-  background-color: #F04124;
+  background-color: #dc3545;
   list-style: none; }
 
 .woocommerce-error::after, .woocommerce-error::before, .woocommerce-info::after, .woocommerce-info::before, .woocommerce-message::after, .woocommerce-message::before, .woocommerce-noreviews::after, .woocommerce-noreviews::before, p.no-comments::after, p.no-comments::before {
@@ -16666,15 +16666,6 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 styles
-*
-* Useful CF7 classes:
-* .wpcf7 the wrapper element
-* .wpcf7-form
-* .wpcf7-form-control
-* .wpcf7-text
-* .wpcf7-email
-* .wpcf7-textarea
-* .wpcf7-submit
 */
 .wpcf7 {
   max-width: 600px; }

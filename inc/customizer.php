@@ -165,9 +165,9 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_header_dropshadow', array(
-				'default'           => 'no',
+				'default'           => true,
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
 				'capability'        => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
@@ -176,14 +176,10 @@ namespace conversions
 					$wp_customize,
 					'conversions_header_dropshadow', array(
 						'label'       => __( 'Header drop shadow', 'conversions' ),
-						'description' => __( 'Add a drop shadoow to the header?', 'conversions' ),
+						'description' => __( 'Add a drop shadow to the header?', 'conversions' ),
 						'section'     => 'conversions_header',
 						'settings'    => 'conversions_header_dropshadow',
-						'type'        => 'select',
-						'choices'     => array(
-							'yes' => __( 'Yes', 'conversions' ),
-							'no' => __( 'No', 'conversions' ),
-						),
+						'type'        => 'checkbox',
 						'priority'    => '30',
 					)
 			) );
@@ -318,9 +314,9 @@ namespace conversions
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_nav_search_icon', array(
-				'default'           => 'show',
+				'default'           => true,
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
 				'capability'        => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
@@ -332,11 +328,7 @@ namespace conversions
 						'description' => __( 'Show or hide a search icon in the nav.', 'conversions' ),
 						'section'     => 'conversions_nav',
 						'settings'    => 'conversions_nav_search_icon',
-						'type'        => 'select',
-						'choices'     => array(
-							'show' => __( 'Show search icon', 'conversions' ),
-							'hide'       => __( 'Hide search icon', 'conversions' ),
-						),
+						'type'        => 'checkbox',
 						'priority'    => '70',
 					)
 			) );
@@ -386,7 +378,6 @@ namespace conversions
 						'section'     => 'conversions_layout_options',
 						'settings'    => 'conversions_sidebar_position',
 						'type'        => 'select',
-						'sanitize_callback' => 'conversions_sanitize_select',
 						'choices'     => array(
 							'right' => __( 'Right sidebar', 'conversions' ),
 							'left'  => __( 'Left sidebar', 'conversions' ),
@@ -397,9 +388,9 @@ namespace conversions
 				)
 			);
 			$wp_customize->add_setting( 'conversions_sidebar_mvisibility', array(
-				'default'           => 'show',
+				'default'           => true,
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
 				'capability'        => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
@@ -407,17 +398,12 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_sidebar_mvisibility', array(
-						'label'       => __( 'Hide sidebar on mobile?', 'conversions' ),
-						'description' => __( 'Should we hide the sidebar on small screens?',
+						'label'       => __( 'Show sidebar on mobile?', 'conversions' ),
+						'description' => __( 'Should we show the sidebar on small screens?',
 						'conversions' ),
 						'section'     => 'conversions_layout_options',
 						'settings'    => 'conversions_sidebar_mvisibility',
-						'type'        => 'select',
-						'sanitize_callback' => 'conversions_sanitize_select',
-						'choices'     => array(
-							'show' => __( 'Show sidebar', 'conversions' ),
-							'hide'  => __( 'Hide sidebar', 'conversions' ),
-						),
+						'type'        => 'checkbox',
 						'priority'    => '30',
 					)
 				)
@@ -434,9 +420,9 @@ namespace conversions
 			) );
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_google_fonts', array(
-				'default'       => 'enable_gfonts',
+				'default'       => true,
 				'type'          => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
@@ -445,14 +431,10 @@ namespace conversions
 					$wp_customize,
 					'conversions_google_fonts', array(
 						'label'       => __( 'Google fonts', 'conversions' ),
-						'description' => __( 'Enable or disable Google fonts If disabled native browser fonts will be used.', 'conversions' ),
+						'description' => __( 'Enable Google fonts? If disabled native fonts will be used.', 'conversions' ),
 						'section'     => 'conversions_typography',
 						'settings'    => 'conversions_google_fonts',
-						'type'        => 'select',
-						'choices'     => array(
-							'enable_gfonts' => __( 'Enable', 'conversions' ),
-							'disable_gfonts' => __( 'Disable', 'conversions' ),
-						),
+						'type'        => 'checkbox',
 						'priority'    => '1',
 					)
 			) );
@@ -959,25 +941,21 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_blog_related', array(
-				'default'       => 'enable',
+				'default'       => true,
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'conversions_sanitize_select',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
 			) );
 			$wp_customize->add_control(
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_blog_related', array(
-						'label'       => __( 'Related posts', 'conversions' ),
-						'description' => __( 'Enable or disable related posts from showing on single posts.', 'conversions' ),
+						'label'       => __( 'Show related posts', 'conversions' ),
+						'description' => __( 'Enable related posts on single posts.', 'conversions' ),
 						'section'     => 'conversions_blog',
 						'settings'    => 'conversions_blog_related',
-						'type'        => 'select',
-						'choices'    => array(
-							'enable' => __( 'Enable', 'conversions' ),
-							'disable' => __( 'Disable', 'conversions' ),
-						),
+						'type'        => 'checkbox',
 						'priority'    => '5',
 					)
 			) );
@@ -1018,9 +996,9 @@ namespace conversions
 			));
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_wccart_nav', array(
-				'default'           => 'yes',
+				'default'           => true,
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
 				'capability'        => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
@@ -1028,15 +1006,11 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_wccart_nav', array(
-						'label'       => __( 'Show cart in navigation', 'conversions' ),
-						'description' => __( 'Want to show the cart in the nav?', 'conversions' ),
+						'label'       => __( 'Cart icon in navigation', 'conversions' ),
+						'description' => __( 'Enable cart icon in the navigation.', 'conversions' ),
 						'section'     => 'conversions_woocommerce',
 						'settings'    => 'conversions_wccart_nav',
-						'type'        => 'select',
-						'choices'     => array(
-							'yes' => __( 'Show cart', 'conversions' ),
-							'no'       => __( 'No cart', 'conversions' ),
-						),
+						'type'        => 'checkbox',
 						'priority'    => '10',
 					)
 			) );
@@ -1097,8 +1071,7 @@ namespace conversions
 		**/
 		public function wp_footer()
 		{
-			$nav_search_icon = get_theme_mod( 'conversions_nav_search_icon', 'show' );
-			if ( $nav_search_icon != 'hide' ) {
+			if ( get_theme_mod( 'conversions_nav_search_icon', true ) == true ) {
 				// Add modal window for search
 				$search_form = get_search_form(false);
 				echo '<div id="csearchModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="csearchModal__label" aria-hidden="true">',
@@ -1123,8 +1096,7 @@ namespace conversions
 		public function wp_head()
 		{
 			// font variables
-			$google_fonts_state = get_theme_mod( 'conversions_google_fonts', 'enable_gfonts' );
-			if( $google_fonts_state == 'enable_gfonts' ) {
+			if ( get_theme_mod( 'conversions_google_fonts', true ) == true ) {
 				// headings
 				$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
 				$heading_font_pieces = explode(":", $headings_font);
@@ -1179,7 +1151,7 @@ namespace conversions
 					padding-top: <?php echo esc_html( get_theme_mod( 'conversions_header_tpadding', '8' ) ); ?>px;
 					padding-bottom: <?php echo esc_html( get_theme_mod( 'conversions_header_bpadding', '8' ) ); ?>px;
 				}
-				<?php if ( esc_html( get_theme_mod( 'conversions_header_dropshadow', 'no' ) == 'yes' ) ) { ?>
+				<?php if ( get_theme_mod( 'conversions_header_dropshadow', true ) == true ) { ?>
 					/* Header drop shadow */
 					#wrapper-navbar nav.navbar {
 						box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
@@ -1224,7 +1196,7 @@ namespace conversions
 						body.woocommerce-checkout #order_review, body.woocommerce-checkout #order_review_heading { width: 48%; float: right; margin-right: 0; }
 					}
 				<?php } ?>
-				<?php if ( esc_html( get_theme_mod( 'conversions_sidebar_mvisibility', 'show' ) == 'hide' ) ) { ?>
+				<?php if ( get_theme_mod( 'conversions_sidebar_mvisibility', true ) == false ) { ?>
 					/* Sidebar */
 					@media (max-width: 767.98px) {
 						#sidebar-2, #sidebar-1 { display: none; }
@@ -1268,7 +1240,7 @@ namespace conversions
 			if ( $args->theme_location === 'primary' ) {
 				// Append Navigation Button?
 				// get nav button customizer setting whether to show button or not
-				$nav_button_type = esc_html( get_theme_mod( 'conversions_nav_button', 'no' ) );
+				$nav_button_type = get_theme_mod( 'conversions_nav_button', 'no' );
 				if ( $nav_button_type != 'no' ) {
 					// get nav button text option
 					$nav_button_text = get_theme_mod( 'conversions_nav_button_text', 'Click me' );
@@ -1283,7 +1255,7 @@ namespace conversions
 				// first check if woocommerce is active
 				if ( class_exists( 'woocommerce' ) ) {
 					// get customizer option whether to show cart icon or not
-					if ( esc_html( get_theme_mod( 'conversions_wccart_nav', 'yes' ) == 'yes') ) {
+					if ( get_theme_mod( 'conversions_wccart_nav', true ) == true ) {
 						// get WC cart totals and if = 0 only show icon with no text
 						$cart_totals = WC()->cart->get_cart_contents_count();
 						if( WC()->cart->get_cart_contents_count() > 0) {
@@ -1304,9 +1276,7 @@ namespace conversions
 					}
 				}
 				// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
-				// get search icon customizer setting whether to show or not
-				$nav_search_icon = esc_html( get_theme_mod( 'conversions_nav_search_icon', 'show' ) );
-				if ( $nav_search_icon != 'hide' ) {
+				if ( get_theme_mod( 'conversions_nav_search_icon', true ) == true ) {
 					// output the nav search icon if active.
 					$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a href="#csearchModal" data-toggle="modal" class="nav-link" title="' . __( 'Search', 'conversions' ) . '"><i aria-hidden="true" class="fas fa-search"></i><span class="sr-only">' . __( 'Search', 'conversions' ) . '</span></a></li>';
 
@@ -1339,10 +1309,17 @@ namespace
 
 	/**
 	 * Float sanitization function.
-	 *
 	 */
-	function conversions_sanitize_float( $input ) {
+	function conversions_sanitize_float( $input ) 
+	{
     	$input = filter_var( $input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
     	return $input;
     }
+
+    /**
+	 * Checkbox sanitization function.
+	 */
+	function conversions_sanitize_checkbox( $input ) {
+		return ( $input === true ) ? true : false;
+	}
 }

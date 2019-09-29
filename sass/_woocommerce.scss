@@ -92,7 +92,7 @@ p.no-comments {
 	padding: 1em 1.618em;
 	clear: both;
 	margin-bottom: 1.618em;
-	background-color: #0f834d;
+	background-color: $success;
 	margin-left: 0;
 	border-radius: 2px;
 	color: $white;
@@ -145,7 +145,7 @@ p.no-comments {
 	background-color: #3d9cd2;
 }
 .woocommerce-error {
-	background-color: #F04124;
+	background-color: $danger;
 	list-style: none;
 }
 .woocommerce-error::after, .woocommerce-error::before, .woocommerce-info::after, .woocommerce-info::before, .woocommerce-message::after, .woocommerce-message::before, .woocommerce-noreviews::after, .woocommerce-noreviews::before, p.no-comments::after, p.no-comments::before {

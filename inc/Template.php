@@ -240,8 +240,7 @@ class Template
 	public function related_posts() {
 
 		// Are related posts enabled?
-		$related_posts_state = get_theme_mod( 'conversions_blog_related', 'enable' );
-		if( $related_posts_state == 'enable' ) {
+		if ( get_theme_mod( 'conversions_blog_related', true ) == true ) {
 	
 			global $post;
 			
