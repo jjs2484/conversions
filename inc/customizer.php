@@ -1014,6 +1014,25 @@ namespace conversions
 						'priority'    => '10',
 					)
 			) );
+			$wp_customize->add_setting( 'conversions_wc_account', array(
+				'default'           => true,
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_wc_account', array(
+						'label'       => __( 'Account icon in navigation', 'conversions' ),
+						'description' => __( 'Enable Account icon in the navigation.', 'conversions' ),
+						'section'     => 'conversions_woocommerce',
+						'settings'    => 'conversions_wc_account',
+						'type'        => 'checkbox',
+						'priority'    => '20',
+					)
+			) );
 			$wp_customize->add_setting( 'conversions_wccheckout_columns', array(
 				'default'           => 'two-column',
 				'type'              => 'theme_mod',
@@ -1034,7 +1053,7 @@ namespace conversions
 							'two-column' => __( 'Two column', 'conversions' ),
 							'one-column'       => __( 'One column', 'conversions' ),
 						),
-						'priority'    => '20',
+						'priority'    => '30',
 					)
 			) );
 		}
@@ -1251,10 +1270,11 @@ namespace conversions
 					// Add the nav button to the end of the menu.
 					$items = $items . $nav_button;
 				}
-				// Append WooCommerce Cart Icon?
-				// first check if woocommerce is active
+				
+				// Is woocommerce is active?
 				if ( class_exists( 'woocommerce' ) ) {
-					// get customizer option whether to show cart icon or not
+					
+					// Append WooCommerce Cart icon?
 					if ( get_theme_mod( 'conversions_wccart_nav', true ) == true ) {
 						// get WC cart totals and if = 0 only show icon with no text
 						$cart_totals = WC()->cart->get_cart_contents_count();
@@ -1274,6 +1294,22 @@ namespace conversions
 						// Add the cart icon to the end of the menu.
 						$items = $items . $cart_link;
 					}
+
+					// Append WooCommerce Account icon?
+					if ( get_theme_mod( 'conversions_wc_account', true ) == true ) {
+						
+						if ( is_user_logged_in() ) {
+ 							$wc_al = __('My Account','conversions');
+ 						} else {
+ 							$wc_al = __( 'Login / Register', 'conversions' );
+ 						}
+						// output the account icon if active.
+						$wc_account_link = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a href="'. esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ).'" class="nav-link" title="'. $wc_al .'"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">' . $wc_al . '</span></a></li>';
+
+						// Add the account to the end of the menu.
+						$items = $items . $wc_account_link;
+					}
+
 				}
 				// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 				if ( get_theme_mod( 'conversions_nav_search_icon', true ) == true ) {

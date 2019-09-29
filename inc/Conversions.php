@@ -191,6 +191,7 @@ namespace conversions
 				'conversions_social_link_color' => '#0057b4',
 				'conversions_social_link_hcolor' => '#004086',
 				'conversions_wccart_nav' => true,
+				'conversions_wc_account' => true,
 				'conversions_wccheckout_columns' => 'two-column',
 				'conversions_blog_img_overlay' => '.5',
 				'conversions_blog_related' => true,
