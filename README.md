@@ -15,8 +15,12 @@
 - [Font Awesome](https://fontawesome.com/) integration (v5.10.2)
 - [Fancybox](http://fancyapps.com/fancybox/3/) integration (v3.5.7)
 - [Slick](https://kenwheeler.github.io/slick/) integration (v1.8.1)
+- WordPress Customizer options for a simple setup process as WordPress intended.
+- 15+ Google fonts included.
 - Gutenberg ready.
+- Accessibility ready.
 - Translation ready.
+- SEO optimized.
 - w3c validated.
 - WooCommerce support.
 - Contact form 7 support.
