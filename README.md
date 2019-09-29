@@ -18,6 +18,7 @@
 - Gutenberg ready.
 - Accessibility ready.
 - Translation ready.
+- Child theme ready.
 - SEO optimized.
 - w3c validated.
 - WooCommerce support.
