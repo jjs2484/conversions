@@ -72,9 +72,9 @@ module.exports = function(grunt) {
 
 	// Register Tasks
 	grunt.registerTask('concat-js', ['concat:js']);
+  grunt.registerTask('compile-sass', ['sass']);
+  grunt.registerTask('prefix-css', ['postcss']);
 	grunt.registerTask('uglify-js', ['uglify']);
-	grunt.registerTask('compile-sass', ['sass']);
-	grunt.registerTask('prefix-css', ['postcss']);
 	grunt.registerTask('min-css', ['cssmin']);
 	
 	// Run All Tasks

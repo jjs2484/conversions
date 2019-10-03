@@ -40,7 +40,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 			<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
 
 			<p>
-				<button type="submit" class="btn btn-outline-primary" name="save_address" value="<?php esc_attr_e( 'Save address', 'conversions' ); ?>"><?php esc_html_e( 'Save address', 'conversions' ); ?></button>
+				<button type="submit" class="btn <?php esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="save_address" value="<?php esc_attr_e( 'Save address', 'conversions' ); ?>"><?php esc_html_e( 'Save address', 'conversions' ); ?></button>
 				<?php wp_nonce_field( 'woocommerce-edit_address', 'woocommerce-edit-address-nonce' ); ?>
 				<input type="hidden" name="action" value="edit_address" />
 			</p>

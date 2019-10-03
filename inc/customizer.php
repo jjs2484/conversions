@@ -64,11 +64,51 @@ namespace conversions
 		**/
 		public function customize_register( $wp_customize )
 		{
+			// font choices
+			$font_choices = array(
+				'Comfortaa:400,700' => __( 'Comfortaa', 'conversions' ),
+				'Droid Sans:400,700' => __( 'Droid Sans', 'conversions' ),
+				'Droid Serif:400,700,400italic,700italic' => __( 'Droid Serif', 'conversions' ),
+				'Handlee:400' => __( 'Handlee', 'conversions' ),
+				'Indie Flower:400' => __( 'Indie Flower', 'conversions' ),
+				'Lato:400,700,400italic,700italic' => __( 'Lato', 'conversions' ),
+				'Libre Baskerville:400,400italic,700' => __( 'Libre Baskerville', 'conversions' ),
+				'Lora:400,700,400italic,700italic' => __( 'Lora', 'conversions' ),
+				'Merriweather:400,300italic,300,400italic,700,700italic' => __( 'Merriweather', 'conversions' ),
+				'Open Sans:400italic,700italic,400,700' => __( 'Open Sans', 'conversions' ),
+				'Oxygen:400,300,700' => __( 'Oxygen', 'conversions' ),
+				'Roboto:400,400italic,700,700italic' => __( 'Roboto', 'conversions' ),
+				'Roboto Slab:400,700' => __( 'Roboto Slab', 'conversions' ),
+				'Special Elite:400' => __( 'Special Elite', 'conversions' ),
+				'Ubuntu:400,700,400italic,700italic' => __( 'Ubuntu', 'conversions' ),
+			);
+
+			// button choices
+			$button_choices = array(
+				'btn-primary' => __( 'Primary', 'conversions' ),
+				'btn-secondary' => __( 'Secondary', 'conversions' ),
+				'btn-success' => __( 'Success', 'conversions' ),
+				'btn-danger' => __( 'Danger', 'conversions' ),
+				'btn-warning' => __( 'Warning', 'conversions' ),
+				'btn-info' => __( 'Info', 'conversions' ),
+				'btn-light' => __( 'Light', 'conversions' ),
+				'btn-dark' => __( 'Dark', 'conversions' ),
+				'btn-outline-primary' => __( 'Primary outline', 'conversions' ),
+				'btn-outline-secondary' => __( 'Secondary outline', 'conversions' ),
+				'btn-outline-success' => __( 'Success outline', 'conversions' ),
+				'btn-outline-danger' => __( 'Danger outline', 'conversions' ),
+				'btn-outline-warning' => __( 'Warning outline', 'conversions' ),
+				'btn-outline-info' => __( 'Info outline', 'conversions' ),
+				'btn-outline-light' => __( 'Light outline', 'conversions' ),
+				'btn-outline-dark' => __( 'Dark outline', 'conversions' ),
+			);
+
 			//-----------------------------------------------------
 			// Remove some default sections
 			//-----------------------------------------------------
 			$wp_customize->get_section( 'colors' )->active_callback = '__return_false';
 			$wp_customize->get_section( 'background_image' )->active_callback = '__return_false';
+
 			//-----------------------------------------------------
 			// Add logo height to site identity panel
 			//-----------------------------------------------------
@@ -77,7 +117,7 @@ namespace conversions
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'absint', //converts value to a non-negative integer
+				'sanitize_callback' => 'absint',
 			) );
 			$wp_customize->add_control( 'conversions_logo_height_control', array(
 				'label'      => __('Logo height', 'conversions'),
@@ -91,6 +131,7 @@ namespace conversions
 					'max' => 1000,
 				),
 			) );
+
 			//-----------------------------------------------------
 			// Create theme options panel
 			//-----------------------------------------------------
@@ -100,6 +141,7 @@ namespace conversions
 				'description'    => __('Change colors, fonts, and more.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 			) );
+
 			//-----------------------------------------------------
 			// Header section
 			//-----------------------------------------------------
@@ -221,6 +263,7 @@ namespace conversions
 					'max' => 1000,
 				),
 			) );
+
 			//-----------------------------------------------------
 			// Navigation section
 			//-----------------------------------------------------
@@ -267,7 +310,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_nav_button', array(
 						'label'       => __( 'Add button to navigation', 'conversions' ),
-						'description' => __( 'Want to append a conversion button to the nav?', 'conversions' ),
+						'description' => __( 'Choose the type of button.', 'conversions' ),
 						'section'     => 'conversions_nav',
 						'settings'    => 'conversions_nav_button',
 						'type'        => 'select',
@@ -281,6 +324,14 @@ namespace conversions
 							'btn-info' => __( 'Info', 'conversions' ),
 							'btn-light' => __( 'Light', 'conversions' ),
 							'btn-dark' => __( 'Dark', 'conversions' ),
+							'btn-outline-primary' => __( 'Primary outline', 'conversions' ),
+							'btn-outline-secondary' => __( 'Secondary outline', 'conversions' ),
+							'btn-outline-success' => __( 'Success outline', 'conversions' ),
+							'btn-outline-danger' => __( 'Danger outline', 'conversions' ),
+							'btn-outline-warning' => __( 'Warning outline', 'conversions' ),
+							'btn-outline-info' => __( 'Info outline', 'conversions' ),
+							'btn-outline-light' => __( 'Light outline', 'conversions' ),
+							'btn-outline-dark' => __( 'Dark outline', 'conversions' ),
 						),
 						'priority'    => '40',
 					)
@@ -332,6 +383,7 @@ namespace conversions
 						'priority'    => '70',
 					)
 			) );
+
 			//-----------------------------------------------------
 			// Layout settings
 			//-----------------------------------------------------
@@ -343,11 +395,11 @@ namespace conversions
 				'panel'			=> 'conversions_theme_options',
 			) );
 			$wp_customize->add_setting( 'conversions_container_width', array(
-				'default'       => '1140',
+				'default'       => '1100',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'absint', //converts value to a non-negative integer
+				'sanitize_callback' => 'absint',
 			) );
 			$wp_customize->add_control( 'conversions_container_width_control', array(
 				'label'      => __( 'Max container width', 'conversions' ),
@@ -373,15 +425,15 @@ namespace conversions
 					$wp_customize,
 					'conversions_sidebar_position', array(
 						'label'       => __( 'Sidebar Positioning', 'conversions' ),
-						'description' => __( 'Set sidebar\'s default position. Can either be: right, left, or none. Note: this can be overridden on individual pages.',
+						'description' => __( 'Set the sidebar position: right, left, or none. Note: this can be overridden on individual pages.',
 						'conversions' ),
 						'section'     => 'conversions_layout_options',
 						'settings'    => 'conversions_sidebar_position',
 						'type'        => 'select',
 						'choices'     => array(
-							'right' => __( 'Right sidebar', 'conversions' ),
-							'left'  => __( 'Left sidebar', 'conversions' ),
-							'none'  => __( 'No sidebar', 'conversions' ),
+							'right' => __( 'Right', 'conversions' ),
+							'left'  => __( 'Left', 'conversions' ),
+							'none'  => __( 'None', 'conversions' ),
 						),
 						'priority'    => '20',
 					)
@@ -399,7 +451,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_sidebar_mvisibility', array(
 						'label'       => __( 'Show sidebar on mobile?', 'conversions' ),
-						'description' => __( 'Should we show the sidebar on small screens?',
+						'description' => __( 'Show or hide the sidebar on mobile screens.',
 						'conversions' ),
 						'section'     => 'conversions_layout_options',
 						'settings'    => 'conversions_sidebar_mvisibility',
@@ -408,6 +460,7 @@ namespace conversions
 					)
 				)
 			);
+
 			//-----------------------------------------------------
 			// Typography section
 			//-----------------------------------------------------
@@ -431,30 +484,13 @@ namespace conversions
 					$wp_customize,
 					'conversions_google_fonts', array(
 						'label'       => __( 'Google fonts', 'conversions' ),
-						'description' => __( 'Enable Google fonts? If disabled native fonts will be used.', 'conversions' ),
+						'description' => __( 'Enable Google fonts? If disabled native fonts will be displayed.', 'conversions' ),
 						'section'     => 'conversions_typography',
 						'settings'    => 'conversions_google_fonts',
 						'type'        => 'checkbox',
 						'priority'    => '1',
 					)
 			) );
-			$font_choices = array(
-				'Comfortaa:400,700' => __( 'Comfortaa', 'conversions' ),
-				'Droid Sans:400,700' => __( 'Droid Sans', 'conversions' ),
-				'Droid Serif:400,700,400italic,700italic' => __( 'Droid Serif', 'conversions' ),
-				'Handlee:400' => __( 'Handlee', 'conversions' ),
-				'Indie Flower:400' => __( 'Indie Flower', 'conversions' ),
-				'Lato:400,700,400italic,700italic' => __( 'Lato', 'conversions' ),
-				'Libre Baskerville:400,400italic,700' => __( 'Libre Baskerville', 'conversions' ),
-				'Lora:400,700,400italic,700italic' => __( 'Lora', 'conversions' ),
-				'Merriweather:400,300italic,300,400italic,700,700italic' => __( 'Merriweather', 'conversions' ),
-				'Open Sans:400italic,700italic,400,700' => __( 'Open Sans', 'conversions' ),
-				'Oxygen:400,300,700' => __( 'Oxygen', 'conversions' ),
-				'Roboto:400,400italic,700,700italic' => __( 'Roboto', 'conversions' ),
-				'Roboto Slab:400,700' => __( 'Roboto Slab', 'conversions' ),
-				'Special Elite:400' => __( 'Special Elite', 'conversions' ),
-				'Ubuntu:400,700,400italic,700italic' => __( 'Ubuntu', 'conversions' ),
-			);
 			$wp_customize->add_setting( 'conversions_headings_fonts', array(
 				'default'       => 'Roboto:400,400italic,700,700italic',
 				'type'          => 'theme_mod',
@@ -503,7 +539,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_heading_color_control', array(
 				'label'      => __('Heading color', 'conversions'),
-				'description'=> __('Choose a color for the headings text.', 'conversions'),
+				'description'=> __('Select a color for headings.', 'conversions'),
 				'section'    => 'conversions_typography',
 				'settings'   => 'conversions_heading_color',
 				'priority'   => 20,
@@ -517,7 +553,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_text_color_control', array(
 				'label'      => __('Text color', 'conversions'),
-				'description'=> __('Choose a color for the body text.', 'conversions'),
+				'description'=> __('Select a color for body text.', 'conversions'),
 				'section'    => 'conversions_typography',
 				'settings'   => 'conversions_text_color',
 				'priority'   => 30,
@@ -531,7 +567,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_link_color_control', array(
 				'label'      => __('Link color', 'conversions'),
-				'description'=> __('Choose a color for links.', 'conversions'),
+				'description'=> __('Select a color for hyperlinks.', 'conversions'),
 				'section'    => 'conversions_typography',
 				'settings'   => 'conversions_link_color',
 				'priority'   => 40,
@@ -545,12 +581,13 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_link_hcolor_control', array(
 				'label'      => __('Link hover color', 'conversions'),
-				'description'=> __('Choose a hover color for links.', 'conversions'),
+				'description'=> __('Select a hover color for links.', 'conversions'),
 				'section'    => 'conversions_typography',
 				'settings'   => 'conversions_link_hcolor',
 				'priority'   => 50,
 				'type'       => 'color',
 			) );
+
 			//-----------------------------------------------------
 			// Footer colors
 			//-----------------------------------------------------
@@ -570,7 +607,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_background_color_control', array(
 				'label'      => __('Background color', 'conversions'),
-				'description'=> __('Choose a footer background color.', 'conversions'),
+				'description'=> __('Select a footer background color.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_background_color',
 				'priority'   => 10,
@@ -584,7 +621,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_heading_color_control', array(
 				'label'      => __('Heading color', 'conversions'),
-				'description'=> __('Choose heading color for footer.', 'conversions'),
+				'description'=> __('Select heading color for footer.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_heading_color',
 				'priority'   => 20,
@@ -598,7 +635,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_text_color_control', array(
 				'label'      => __('Text color', 'conversions'),
-				'description'=> __('Choose text color for footer.', 'conversions'),
+				'description'=> __('Select text color for footer.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_text_color',
 				'priority'   => 30,
@@ -612,7 +649,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_link_color_control', array(
 				'label'      => __('Link color', 'conversions'),
-				'description'=> __('Choose link color for footer.', 'conversions'),
+				'description'=> __('Select link color for footer.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_link_color',
 				'priority'   => 40,
@@ -627,12 +664,13 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_link_hcolor_control', array(
 				'label'      => __('Link hover color', 'conversions'),
-				'description'=> __('Choose link hover color for footer.', 'conversions'),
+				'description'=> __('Select link hover color for footer.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_link_hcolor',
 				'priority'   => 50,
 				'type'       => 'color',
 			) );
+
 			//-----------------------------------------------------
 			// Copyright section
 			//-----------------------------------------------------
@@ -666,7 +704,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_copyright_background_color_control', array(
 				'label'      => __('Copyright background color', 'conversions'),
-				'description'=> __('Choose copyright background color.', 'conversions'),
+				'description'=> __('Select copyright background color.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_background_color',
 				'priority'   => 20,
@@ -680,7 +718,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_copyright_text_color_control', array(
 				'label'      => __('Text color', 'conversions'),
-				'description'=> __('Choose copyright text color.', 'conversions'),
+				'description'=> __('Select copyright text color.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_text_color',
 				'priority'   => 30,
@@ -694,7 +732,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_copyright_link_color_control', array(
 				'label'      => __('Link color', 'conversions'),
-				'description'=> __('Choose copyright link color.', 'conversions'),
+				'description'=> __('Select copyright link color.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_link_color',
 				'priority'   => 40,
@@ -709,12 +747,13 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_copyright_link_hcolor_control', array(
 				'label'      => __('Link hover color', 'conversions'),
-				'description'=> __('Choose copyright link hover color.', 'conversions'),
+				'description'=> __('Select copyright link hover color.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_link_hcolor',
 				'priority'   => 50,
 				'type'       => 'color',
 			) );
+
 			//-----------------------------------------------------
 			// Social media icons
 			//-----------------------------------------------------
@@ -757,8 +796,8 @@ namespace conversions
 				'sanitize_callback' => 'absint', //converts value to a non-negative integer
 			) );
 			$wp_customize->add_control( 'conversions_social_size_control', array(
-				'label'      => __( 'Social icons size', 'conversions' ),
-				'description'=> __( 'Icons size in px', 'conversions' ),
+				'label'      => __( 'Social icon size', 'conversions' ),
+				'description'=> __( 'Icon size in px', 'conversions' ),
 				'section'    => 'conversions_social',
 				'settings'   => 'conversions_social_size',
 				'priority'   => 20,
@@ -776,7 +815,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_social_link_color_control', array(
 				'label'      => __('Social icon color', 'conversions'),
-				'description'       => __('Choose social icon color.', 'conversions'),
+				'description'       => __('Select social icon color.', 'conversions'),
 				'section'    => 'conversions_social',
 				'settings'   => 'conversions_social_link_color',
 				'priority'   => 30,
@@ -790,7 +829,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_social_link_hcolor_control', array(
 				'label'      => __('Social icon hover color', 'conversions'),
-				'description'       => __('Choose social icon hover color.', 'conversions'),
+				'description'       => __('Select social icon hover color.', 'conversions'),
 				'section'    => 'conversions_social',
 				'settings'   => 'conversions_social_link_hcolor',
 				'priority'   => 40,
@@ -834,7 +873,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_blog_sticky_posts', array(
 						'label'       => __( 'Sticky post highlight color', 'conversions' ),
-						'description' => __( 'Choose the highlight color for sticky posts on the blog index.', 'conversions' ),
+						'description' => __( 'Select the highlight color for sticky posts.', 'conversions' ),
 						'section'     => 'conversions_blog',
 						'settings'    => 'conversions_blog_sticky_posts',
 						'type'        => 'select',
@@ -861,21 +900,12 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_blog_more_btn', array(
-						'label'       => __( 'Read more button color', 'conversions' ),
-						'description' => __( 'Choose the read more button color.', 'conversions' ),
+						'label'       => __( 'Read more button type', 'conversions' ),
+						'description' => __( 'Choose the read more button type shown on the blog index.', 'conversions' ),
 						'section'     => 'conversions_blog',
 						'settings'    => 'conversions_blog_more_btn',
 						'type'        => 'select',
-						'choices'     => array(
-							'btn-primary' => __( 'Primary', 'conversions' ),
-							'btn-secondary' => __( 'Secondary', 'conversions' ),
-							'btn-success' => __( 'Success', 'conversions' ),
-							'btn-danger' => __( 'Danger', 'conversions' ),
-							'btn-warning' => __( 'Warning', 'conversions' ),
-							'btn-info' => __( 'Info', 'conversions' ),
-							'btn-light' => __( 'Light', 'conversions' ),
-							'btn-dark' => __( 'Dark', 'conversions' ),
-						),
+						'choices' => $button_choices,
 						'priority'    => '2',
 					)
 			) );
@@ -890,21 +920,12 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_comment_btn', array(
-						'label'       => __( 'Comment button color', 'conversions' ),
-						'description' => __( 'Choose the comment button color.', 'conversions' ),
+						'label'       => __( 'Comment button type', 'conversions' ),
+						'description' => __( 'Choose the comment button type.', 'conversions' ),
 						'section'     => 'conversions_blog',
 						'settings'    => 'conversions_comment_btn',
 						'type'        => 'select',
-						'choices'     => array(
-							'btn-primary' => __( 'Primary', 'conversions' ),
-							'btn-secondary' => __( 'Secondary', 'conversions' ),
-							'btn-success' => __( 'Success', 'conversions' ),
-							'btn-danger' => __( 'Danger', 'conversions' ),
-							'btn-warning' => __( 'Warning', 'conversions' ),
-							'btn-info' => __( 'Info', 'conversions' ),
-							'btn-light' => __( 'Light', 'conversions' ),
-							'btn-dark' => __( 'Dark', 'conversions' ),
-						),
+						'choices' => $button_choices,
 						'priority'    => '3',
 					)
 			) );
@@ -920,7 +941,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_blog_img_overlay', array(
 						'label'       => __( 'Featured image overlay', 'conversions' ),
-						'description' => __( 'Darken or lighten single posts featured images.', 'conversions' ),
+						'description' => __( 'Lighten or darken the featured image overlay on single posts.', 'conversions' ),
 						'section'     => 'conversions_blog',
 						'settings'    => 'conversions_blog_img_overlay',
 						'type'        => 'select',
@@ -971,7 +992,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_blog_taxonomy', array(
 						'label'       => __( 'Related posts taxonomy', 'conversions' ),
-						'description' => __( 'Use categories or tags to show related posts?', 'conversions' ),
+						'description' => __( 'Use categories or tags to find related posts?', 'conversions' ),
 						'section'     => 'conversions_blog',
 						'settings'    => 'conversions_blog_taxonomy',
 						'type'        => 'select',
@@ -1054,6 +1075,66 @@ namespace conversions
 							'one-column'       => __( 'One column', 'conversions' ),
 						),
 						'priority'    => '30',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_wc_primary_btn', array(
+				'default'           => 'btn-outline-primary',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_wc_primary_btn', array(
+						'label'       => __( 'Primary button type', 'conversions' ),
+						'description' => __( 'Choose the primary button type. Applies to: add to cart, apply coupon, update cart, login, register, etc.', 'conversions' ),
+						'section'     => 'conversions_woocommerce',
+						'settings'    => 'conversions_wc_primary_btn',
+						'type'        => 'select',
+						'choices' => $button_choices,
+						'priority'    => '40',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_wc_secondary_btn', array(
+				'default'           => 'btn-outline-secondary',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_wc_secondary_btn', array(
+						'label'       => __( 'Secondary button type', 'conversions' ),
+						'description' => __( 'Choose the secondary button type. Applies to: view cart, download file, etc.', 'conversions' ),
+						'section'     => 'conversions_woocommerce',
+						'settings'    => 'conversions_wc_secondary_btn',
+						'type'        => 'select',
+						'choices' => $button_choices,
+						'priority'    => '45',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_wc_checkout_btn', array(
+				'default'           => 'btn-primary',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_wc_checkout_btn', array(
+						'label'       => __( 'Checkout button type', 'conversions' ),
+						'description' => __( 'Choose the checkout button type. Applies to: proceed to checkout, place order, etc.', 'conversions' ),
+						'section'     => 'conversions_woocommerce',
+						'settings'    => 'conversions_wc_checkout_btn',
+						'type'        => 'select',
+						'choices' => $button_choices,
+						'priority'    => '50',
 					)
 			) );
 		}
@@ -1140,6 +1221,30 @@ namespace conversions
 			$logo_padding = 10;
 			$total_header_height = $logo_height + $header_top_padding + $header_bottom_padding + $logo_padding - 1;
 			$header_offset = $total_header_height + 50;
+
+			// WC button option
+			$wc_primary_btn = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
+			$wc_secondary_btn = get_theme_mod( 'conversions_wc_secondary_btn', 'btn-outline-secondary' );
+
+			// WC button multidimensional array
+			$wc_btns = array(
+				"btn-primary" => array( "btn_bg" => "#007bff", "btn_color" => "#fff", "btn_border" => "#007bff", "btn_bg_hover" => "#0069d9", "btn_color_hover" => "#fff", "btn_border_hover" => "#0069d9" ),
+				"btn-secondary" => array ( "btn_bg" => "#6c757d", "btn_color" => "#fff", "btn_border" => "#6c757d", "btn_bg_hover" => "#5a6268", "btn_color_hover" => "#fff", "btn_border_hover" => "#5a6268" ),
+				"btn-success" => array ( "btn_bg" => "#019875", "btn_color" => "#fff", "btn_border" => "#019875", "btn_bg_hover" => "#017258", "btn_color_hover" => "#fff", "btn_border_hover" => "#017258" ),
+				"btn-danger" => array ( "btn_bg" => "#dc3545", "btn_color" => "#fff", "btn_border" => "#dc3545", "btn_bg_hover" => "#c82333", "btn_color_hover" => "#fff", "btn_border_hover" => "#c82333" ),
+				"btn-warning" => array ( "btn_bg" => "#ffc107", "btn_color" => "#212529", "btn_border" => "#ffc107", "btn_bg_hover" => "#e0a800", "btn_color_hover" => "#212529", "btn_border_hover" => "#e0a800" ),
+				"btn-info" => array ( "btn_bg" => "#17a2b8", "btn_color" => "#fff", "btn_border" => "#17a2b8", "btn_bg_hover" => "#138496", "btn_color_hover" => "#fff", "btn_border_hover" => "#138496" ),
+				"btn-light" => array ( "btn_bg" => "#f8f9fa", "btn_color" => "#212529", "btn_border" => "#f8f9fa", "btn_bg_hover" => "#e2e6ea", "btn_color_hover" => "#212529", "btn_border_hover" => "#e2e6ea" ),
+				"btn-dark" => array ( "btn_bg" => "#151b26", "btn_color" => "#fff", "btn_border" => "#151b26", "btn_bg_hover" => "#07090d", "btn_color_hover" => "#fff", "btn_border_hover" => "#07090d" ),
+				"btn-outline-primary" => array ( "btn_bg" => "transparent", "btn_color" => "#007bff", "btn_border" => "#007bff", "btn_bg_hover" => "#007bff", "btn_color_hover" => "#fff", "btn_border_hover" => "#007bff" ),
+				"btn-outline-secondary" => array ( "btn_bg" => "transparent", "btn_color" => "#6c757d", "btn_border" => "#6c757d", "btn_bg_hover" => "#6c757d", "btn_color_hover" => "#fff", "btn_border_hover" => "#6c757d" ),
+				"btn-outline-success" => array ( "btn_bg" => "transparent", "btn_color" => "#019875", "btn_border" => "#019875", "btn_bg_hover" => "#019875", "btn_color_hover" => "#fff", "btn_border_hover" => "#019875" ),
+				"btn-outline-danger" => array ( "btn_bg" => "transparent", "btn_color" => "#dc3545", "btn_border" => "#dc3545", "btn_bg_hover" => "#dc3545", "btn_color_hover" => "#fff", "btn_border_hover" => "#dc3545" ),
+				"btn-outline-warning" => array ( "btn_bg" => "transparent", "btn_color" => "#ffc107", "btn_border" => "#ffc107", "btn_bg_hover" => "#ffc107", "btn_color_hover" => "#212529", "btn_border_hover" => "#ffc107" ),
+				"btn-outline-info" => array ( "btn_bg" => "transparent", "btn_color" => "#17a2b8", "btn_border" => "#17a2b8", "btn_bg_hover" => "#17a2b8", "btn_color_hover" => "#fff", "btn_border_hover" => "#17a2b8" ),
+				"btn-outline-light" => array ( "btn_bg" => "transparent", "btn_color" => "#f8f9fa", "btn_border" => "#f8f9fa", "btn_bg_hover" => "#f8f9fa", "btn_color_hover" => "#212529", "btn_border_hover" => "#f8f9fa" ),
+				"btn-outline-dark" => array ( "btn_bg" => "transparent", "btn_color" => "#151b26", "btn_border" => "#151b26", "btn_bg_hover" => "#151b26", "btn_color_hover" => "#fff", "btn_border_hover" => "#151b26" ),
+			);
 			?>
 
 			<style>
@@ -1207,7 +1312,7 @@ namespace conversions
 					color: <?php echo esc_html( get_theme_mod( 'conversions_social_link_hcolor', '#004086' ) ); ?>;
 				}
 				<?php if ( esc_html( get_theme_mod( 'conversions_wccheckout_columns', 'two-column' ) == 'two-column' ) ) { ?>
-					/* WooCommerce */
+					/* WooCommerce checkout columns*/
 					@media screen and (min-width:768px) {
 						body.woocommerce-checkout #customer_details { width: 48%; float: left; margin-right: 1.9%; }
 						body.woocommerce-checkout .col-12.col-md-7.conversions-wcbilling { flex: 0 0 100%; -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; max-width: 100%; }
@@ -1215,6 +1320,27 @@ namespace conversions
 						body.woocommerce-checkout #order_review, body.woocommerce-checkout #order_review_heading { width: 48%; float: right; margin-right: 0; }
 					}
 				<?php } ?>
+				/* WooCommerce shop buttons */
+				.woocommerce ul.products li.product .button {
+					background: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_bg"] ); ?>;
+					color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_color"] ); ?>;
+					border: 1px solid <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_border"] ); ?>;
+				}
+				.woocommerce ul.products li.product .button:hover {
+					color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_color_hover"] ); ?>;
+					background-color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_bg_hover"] ); ?>;
+					border-color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_border_hover"] ); ?>;
+				}
+				.woocommerce ul.products li.product .added_to_cart {
+					background: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg"] ); ?>;
+					color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_color"] ); ?>;
+					border: 1px solid <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border"] ); ?>;
+				}
+				.woocommerce ul.products li.product .added_to_cart:hover {
+					color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_color_hover"] ); ?>;
+					background-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg_hover"] ); ?>;
+					border-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border_hover"] ); ?>;
+				}
 				<?php if ( get_theme_mod( 'conversions_sidebar_mvisibility', true ) == false ) { ?>
 					/* Sidebar */
 					@media (max-width: 767.98px) {

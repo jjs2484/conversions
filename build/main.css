@@ -16500,24 +16500,14 @@ figure.woocommerce-product-gallery__wrapper {
     border-radius: 7px; }
   .woocommerce ul.products li.product .button {
     margin-top: .3em;
-    color: #53f;
-    border: 1px solid #53f;
-    background: transparent;
     font-weight: normal; }
-    .woocommerce ul.products li.product .button:hover {
-      color: #fff;
-      background-color: #007bff;
-      border-color: #007bff; }
     .woocommerce ul.products li.product .button.added::after {
       display: none; }
   .woocommerce ul.products li.product .added_to_cart {
-    color: #6c757d;
-    border: 1px solid #6c757d;
     margin-top: .3em;
     margin-bottom: 0;
     margin-right: 0;
     margin-left: 0;
-    background: transparent;
     font-weight: normal;
     font-size: 100%;
     line-height: 1;
@@ -16533,10 +16523,6 @@ figure.woocommerce-product-gallery__wrapper {
     -webkit-box-shadow: none;
             box-shadow: none;
     text-shadow: none; }
-    .woocommerce ul.products li.product .added_to_cart:hover {
-      color: #fff;
-      background-color: #6c757d;
-      border-color: #6c757d; }
   .woocommerce ul.products li.product .star-rating {
     margin: 0 auto .5em;
     color: #f7de00; }

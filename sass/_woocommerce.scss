@@ -36,27 +36,16 @@ figure.woocommerce-product-gallery__wrapper {
 	}
 	.button {
 		margin-top: .3em;
-		color: #53f;
-		border: 1px solid #53f;
-		background: transparent;
 		font-weight: normal;
-		&:hover {
-			color: $white;
-			background-color: #007bff;
-			border-color: #007bff;
-		}
 		&.added::after {
 			display: none;
 		}
 	}
 	.added_to_cart {
-		color: #6c757d;
-		border: 1px solid #6c757d;
 		margin-top: .3em;
 		margin-bottom: 0;
 		margin-right: 0;
 		margin-left: 0;
-		background: transparent;
 		font-weight: normal;
 		font-size: 100%;
 		line-height: 1;
@@ -71,11 +60,6 @@ figure.woocommerce-product-gallery__wrapper {
 		background-image: none;
 		box-shadow: none;
 		text-shadow: none;
-		&:hover {
-			color: $white;
-			background-color: #6c757d;
-			border-color: #6c757d;
-		}
 	}
 	.star-rating {
 		margin: 0 auto .5em;

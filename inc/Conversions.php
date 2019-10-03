@@ -193,6 +193,9 @@ namespace conversions
 				'conversions_wccart_nav' => true,
 				'conversions_wc_account' => true,
 				'conversions_wccheckout_columns' => 'two-column',
+				'conversions_wc_primary_btn' => 'btn-outline-primary',
+				'conversions_wc_secondary_btn' => 'btn-outline-secondary',
+				'conversions_wc_checkout_btn' => 'btn-primary',
 				'conversions_blog_img_overlay' => '.5',
 				'conversions_blog_related' => true,
 				'conversions_blog_taxonomy' => 'categories'

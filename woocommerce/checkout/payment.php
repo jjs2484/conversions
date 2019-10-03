@@ -38,14 +38,14 @@ if ( ! is_ajax() ) {
 	<div class="form-row place-order">
 		<noscript>
 			<?php esc_html_e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'conversions' ); ?>
-			<br/><button type="submit" class="btn btn-primary" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'conversions' ); ?>"><?php esc_html_e( 'Update totals', 'conversions' ); ?></button>
+			<br/><button type="submit" class="btn <?php esc_attr( get_theme_mod( 'conversions_wc_checkout_btn', 'btn-primary' ) ); ?>" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'conversions' ); ?>"><?php esc_html_e( 'Update totals', 'conversions' ); ?></button>
 		</noscript>
 
 		<?php wc_get_template( 'checkout/terms.php' ); ?>
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="btn btn-primary btn-block" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="btn '.esc_attr( get_theme_mod( 'conversions_wc_checkout_btn', 'btn-primary' ) ).' btn-block btn-lg" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 

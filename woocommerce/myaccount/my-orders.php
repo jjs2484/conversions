@@ -73,7 +73,7 @@ if ( $customer_orders ) : ?>
 								
 								if ( ! empty( $actions ) ) {
 									foreach ( $actions as $key => $action ) {
-										echo '<a href="' . esc_url( $action['url'] ) . '" class="btn btn-outline-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
+										echo '<a href="' . esc_url( $action['url'] ) . '" class="btn '.esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ) sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
 									}
 								}
 								?>
