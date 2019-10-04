@@ -1341,6 +1341,29 @@ namespace conversions
 					background-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg_hover"] ); ?>;
 					border-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border_hover"] ); ?>;
 				}
+				.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+					background: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_bg"] ); ?>;
+					color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_color"] ); ?>;
+					border: 1px solid <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_border"] ); ?>;
+				}
+				.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
+					color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_color_hover"] ); ?>;
+					background-color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_bg_hover"] ); ?>;
+					border-color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_border_hover"] ); ?>;
+				}
+				.wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart {
+					background: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg"] ); ?>;
+					color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_color"] ); ?>;
+					border: 1px solid <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border"] ); ?>;
+				}
+				.wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart:hover {
+					color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_color_hover"] ); ?>;
+					background-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg_hover"] ); ?>;
+					border-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border_hover"] ); ?>;
+				}
+				.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
+  					color: <?php echo esc_html( get_theme_mod('conversions_heading_color', '#222222' ) ); ?>;
+				}
 				<?php if ( get_theme_mod( 'conversions_sidebar_mvisibility', true ) == false ) { ?>
 					/* Sidebar */
 					@media (max-width: 767.98px) {

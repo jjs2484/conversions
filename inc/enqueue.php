@@ -151,10 +151,13 @@ class Enqueue
 				color: '.esc_html( $wc_btns[$wc_primary_btn]["btn_color"] ).' !important;
 				border: 1px solid '.esc_html( $wc_btns[$wc_primary_btn]["btn_border"] ).';
 			}
-			.wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
+			.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
 				color: '.esc_html( $wc_btns[$wc_primary_btn]["btn_color_hover"] ).' !important;
 				background-color: '.esc_html( $wc_btns[$wc_primary_btn]["btn_bg_hover"] ).';
 				border-color: '.esc_html( $wc_btns[$wc_primary_btn]["btn_border_hover"] ).';
+			}
+			.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
+  				color: '.esc_html($headings_color).';
 			}
 		';
 		wp_add_inline_style( 'conversions-gutenberg', $custom_gb_css );

@@ -207,3 +207,34 @@ $colors: (
     }
   }
 }
+
+// WooCommerce
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product {
+  
+  .wc-block-grid__product-title {
+    padding: .5em 0;
+    margin-bottom: 0;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  .wc-block-grid__product-price.price {
+    margin-bottom: .5em;
+    color: #555;
+    font-size: .9em;
+    line-height: 1.5;
+  }
+  .wc-block-grid__product-rating {
+    line-height: 1.5;
+    margin-bottom: .5em;
+    .star-rating span::before {
+      color: #f7de00;
+    }
+  }
+  .wc-block-grid__product-image {
+    margin-bottom: .5em;
+    img {
+      border-radius: 7px;
+    }
+  }
+
+}

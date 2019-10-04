@@ -37,29 +37,29 @@ figure.woocommerce-product-gallery__wrapper {
 	.button {
 		margin-top: .3em;
 		font-weight: normal;
+		vertical-align: middle;
+		@extend .btn;
 		&.added::after {
-			display: none;
+      		display: none;
+    	}
+    	&.loading {
+      		padding-right:.75rem;
+      		&::after {
+        		display: none;
+      		}
+    	}
+    	&:focus{
+    		box-shadow: none;
 		}
 	}
 	.added_to_cart {
 		margin-top: .3em;
-		margin-bottom: 0;
-		margin-right: 0;
-		margin-left: 0;
 		font-weight: normal;
-		font-size: 100%;
-		line-height: 1;
-		cursor: pointer;
-		position: relative;
-		text-decoration: none;
-		overflow: visible;
-		padding: .618em 1em;
-		border-radius: 3px;
-		left: auto;
-		display: inline-block;
-		background-image: none;
-		box-shadow: none;
-		text-shadow: none;
+		vertical-align: middle;
+		@extend .btn;
+		&:focus{
+    		box-shadow: none;
+		}
 	}
 	.star-rating {
 		margin: 0 auto .5em;
