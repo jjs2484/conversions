@@ -133,7 +133,11 @@ $colors: (
 
 // WooCommerce
 .wc-block-grid .wc-block-grid__products .wc-block-grid__product {
-  
+  padding: 0 28px 0 0;
+
+  .wc-block-grid__product-link:hover {
+    text-decoration: none;
+  }
   .wc-block-grid__product-title {
     padding: .5em 0;
     margin-bottom: 0;

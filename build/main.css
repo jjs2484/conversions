@@ -16680,43 +16680,47 @@ section.c-testimonials .c-testimonials__quote {
   .wp-block-button .wp-block-button__link:hover {
     text-decoration: none; }
 
-.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
-  padding: .5em 0;
-  margin-bottom: 0;
-  font-size: 1em;
-  font-weight: 500; }
-.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-price.price {
-  margin-bottom: .5em;
-  color: #555;
-  font-size: .9em;
-  line-height: 1.5; }
-.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-rating {
-  line-height: 1.5;
-  margin-bottom: .5em; }
-  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-rating .star-rating span::before {
-    color: #f7de00; }
-.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-image {
-  margin-bottom: .5em; }
-  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-image img {
-    border-radius: 7px; }
-.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
-  font-weight: normal;
-  vertical-align: middle; }
-  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link.added::after {
-    display: none; }
-  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link.loading {
-    padding-right: .75rem; }
-    .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link.loading::after {
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product {
+  padding: 0 28px 0 0; }
+  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-link:hover {
+    text-decoration: none; }
+  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
+    padding: .5em 0;
+    margin-bottom: 0;
+    font-size: 1em;
+    font-weight: 500; }
+  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-price.price {
+    margin-bottom: .5em;
+    color: #555;
+    font-size: .9em;
+    line-height: 1.5; }
+  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-rating {
+    line-height: 1.5;
+    margin-bottom: .5em; }
+    .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-rating .star-rating span::before {
+      color: #f7de00; }
+  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-image {
+    margin-bottom: .5em; }
+    .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-image img {
+      border-radius: 7px; }
+  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+    font-weight: normal;
+    vertical-align: middle; }
+    .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link.added::after {
       display: none; }
-  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:focus {
-    -webkit-box-shadow: none;
-            box-shadow: none; }
-.wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart {
-  font-weight: normal;
-  vertical-align: middle; }
-  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus {
-    -webkit-box-shadow: none;
-            box-shadow: none; }
+    .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link.loading {
+      padding-right: .75rem; }
+      .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link.loading::after {
+        display: none; }
+    .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:focus {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+  .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart {
+    font-weight: normal;
+    vertical-align: middle; }
+    .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
 
 .woocommerce-input-wrapper {
   width: 100%; }
