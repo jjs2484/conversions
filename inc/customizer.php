@@ -1473,19 +1473,6 @@ namespace conversions
 		public function wp_nav_menu_items( $items, $args )
 		{
 			if ( $args->theme_location === 'primary' ) {
-				// Append Navigation Button?
-				// get nav button customizer setting whether to show button or not
-				$nav_button_type = get_theme_mod( 'conversions_nav_button', 'no' );
-				if ( $nav_button_type != 'no' ) {
-					// get nav button text option
-					$nav_button_text = get_theme_mod( 'conversions_nav_button_text', 'Click me' );
-					// get nav button url option
-					$nav_button_url = get_theme_mod( 'conversions_nav_button_url', 'https://wordpress.org' );
-					// output the nav button with options
-					$nav_button = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-callout-button menu-item nav-item"><a title="' . esc_html( $nav_button_text ) . '" href="' . esc_url( $nav_button_url ) . '" class="btn ' . esc_attr( $nav_button_type ) . '">' . esc_html( $nav_button_text ) . '</a></li>';
-					// Add the nav button to the end of the menu.
-					$items = $items . $nav_button;
-				}
 				
 				// Is woocommerce is active?
 				if ( class_exists( 'woocommerce' ) ) {
@@ -1527,6 +1514,7 @@ namespace conversions
 					}
 
 				}
+
 				// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 				if ( get_theme_mod( 'conversions_nav_search_icon', true ) == true ) {
 					// output the nav search icon if active.
@@ -1535,6 +1523,20 @@ namespace conversions
 					// Add the nav button to the end of the menu.
 					$items = $items . $nav_search;
 				}
+
+				// Append Navigation Button?
+				$nav_button_type = get_theme_mod( 'conversions_nav_button', 'no' );
+				if ( $nav_button_type != 'no' ) {
+					// get nav button text option
+					$nav_button_text = get_theme_mod( 'conversions_nav_button_text', 'Click me' );
+					// get nav button url option
+					$nav_button_url = get_theme_mod( 'conversions_nav_button_url', 'https://wordpress.org' );
+					// output the nav button with options
+					$nav_button = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-callout-button menu-item nav-item"><a title="' . esc_html( $nav_button_text ) . '" href="' . esc_url( $nav_button_url ) . '" class="btn ' . esc_attr( $nav_button_type ) . '">' . esc_html( $nav_button_text ) . '</a></li>';
+					// Add the nav button to the end of the menu.
+					$items = $items . $nav_button;
+				}
+				
 			}
 			return $items;
 		}
