@@ -929,38 +929,6 @@ namespace conversions
 						'priority'    => '3',
 					)
 			) );
-			$wp_customize->add_setting( 'conversions_blog_img_overlay', array(
-				'default'           => '.5',
-				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
-				'capability'        => 'edit_theme_options',
-				'transport'     => 'refresh',
-			) );
-			$wp_customize->add_control(
-				new \WP_Customize_Control(
-					$wp_customize,
-					'conversions_blog_img_overlay', array(
-						'label'       => __( 'Featured image overlay', 'conversions' ),
-						'description' => __( 'Lighten or darken the featured image overlay on single posts.', 'conversions' ),
-						'section'     => 'conversions_blog',
-						'settings'    => 'conversions_blog_img_overlay',
-						'type'        => 'select',
-						'choices'     => array(
-							'0' => __( '0%', 'conversions' ),
-							'.1' => __( '10%', 'conversions' ),
-							'.2' => __( '20%', 'conversions' ),
-							'.3' => __( '30%', 'conversions' ),
-							'.4' => __( '40%', 'conversions' ),
-							'.5' => __( '50%', 'conversions' ),
-							'.6' => __( '60%', 'conversions' ),
-							'.7' => __( '70%', 'conversions' ),
-							'.8' => __( '80%', 'conversions' ),
-							'.9' => __( '90%', 'conversions' ),
-							'1' => __( '100%', 'conversions' ),
-						),
-						'priority'    => '4',
-					)
-			) );
 			$wp_customize->add_setting( 'conversions_blog_related', array(
 				'default'       => true,
 				'type'          => 'theme_mod',
@@ -1005,6 +973,77 @@ namespace conversions
 			) );
 
 			//-----------------------------------------------------
+			// Featured image section
+			//-----------------------------------------------------
+			$wp_customize->add_section( 'conversions_featured_img', array(
+				'title'             => __('Featured Image', 'conversions'),
+				'priority'          => 100,
+				'description'       => __('Settings for the featured image displayed on posts and pages.', 'conversions'),
+				'capability'        => 'edit_theme_options',
+				'panel'             => 'conversions_theme_options',
+			) );
+			$wp_customize->add_setting( 'conversions_featured_img_color', array(
+				'default'       => '#000000',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_featured_img_color_control', array(
+				'label'      => __('Overlay color', 'conversions'),
+				'description'=> __('Select a color for the image overlay.', 'conversions'),
+				'section'    => 'conversions_featured_img',
+				'settings'   => 'conversions_featured_img_color',
+				'priority'   => 10,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_featured_img_overlay', array(
+				'default'           => '.5',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_featured_img_overlay', array(
+						'label'       => __( 'Overlay opacity', 'conversions' ),
+						'description' => __( 'Lighten or darken the featured image overlay. Set the contrast high enough so the text is readable.', 'conversions' ),
+						'section'     => 'conversions_featured_img',
+						'settings'    => 'conversions_featured_img_overlay',
+						'type'        => 'select',
+						'choices'     => array(
+							'0' => __( '0%', 'conversions' ),
+							'.1' => __( '10%', 'conversions' ),
+							'.2' => __( '20%', 'conversions' ),
+							'.3' => __( '30%', 'conversions' ),
+							'.4' => __( '40%', 'conversions' ),
+							'.5' => __( '50%', 'conversions' ),
+							'.6' => __( '60%', 'conversions' ),
+							'.7' => __( '70%', 'conversions' ),
+							'.8' => __( '80%', 'conversions' ),
+							'.9' => __( '90%', 'conversions' ),
+							'1' => __( '100%', 'conversions' ),
+						),
+						'priority'    => '20',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_featured_title_color', array(
+				'default'       => '#ffffff',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_featured_title_color_control', array(
+				'label'      => __('Title color', 'conversions'),
+				'description'=> __('Select a color for the title text.', 'conversions'),
+				'section'    => 'conversions_featured_img',
+				'settings'   => 'conversions_featured_title_color',
+				'priority'   => 30,
+				'type'       => 'color',
+			) );
+
+			//-----------------------------------------------------
 			// WooCommerce Options
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_woocommerce', array(
@@ -1012,7 +1051,7 @@ namespace conversions
 				'description'       => __('WooCommerce Options', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_theme_options',
-				'priority' => 100,
+				'priority' => 110,
 				'theme_supports' => array('woocommerce'),
 			));
 			// Create our settings
@@ -1298,6 +1337,7 @@ namespace conversions
 				}
 				a { color: <?php echo esc_html( get_theme_mod( 'conversions_link_color', '#0057b4' ) ); ?>; }
 				a:hover { color: <?php echo esc_html( get_theme_mod( 'conversions_link_hcolor', '#004086' ) ); ?>; }
+				.conversions-hero-cover .conversions-hero-cover__inner-container h1 { color: <?php echo esc_html( get_theme_mod( 'conversions_featured_title_color', '#ffffff' ) ); ?>; }
 				/* Copyright styles */
 				#wrapper-footer { background-color: <?php echo esc_html( get_theme_mod( 'conversions_copyright_background_color', '#eeeeee' ) ); ?>; }
 				#wrapper-footer .site-info .copyright { color: <?php echo esc_html( get_theme_mod( 'conversions_copyright_text_color', '#111111' ) ); ?>; }

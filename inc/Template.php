@@ -350,14 +350,27 @@ class Template
 			$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullscreen', false );
 
 			// Get the customizer setting
-			$blog_img_overlay = get_theme_mod('conversions_blog_img_overlay', '.5');
+			$blog_img_overlay_color = get_theme_mod('conversions_featured_img_color', '#000000');
+			$blog_img_overlay = get_theme_mod('conversions_featured_img_overlay', '.5');
+
+			//convert color from hex to rgb
+			$hex = str_replace('#','', $blog_img_overlay_color);
+			if(strlen($hex) == 3):
+   				$rgbArray['r'] = hexdec(substr($hex,0,1).substr($hex,0,1));
+   				$rgbArray['g'] = hexdec(substr($hex,1,1).substr($hex,1,1));
+   				$rgbArray['b'] = hexdec(substr($hex,2,1).substr($hex,2,1));
+			else:
+   				$rgbArray['r'] = hexdec(substr($hex,0,2));
+   				$rgbArray['g'] = hexdec(substr($hex,2,2));
+   				$rgbArray['b'] = hexdec(substr($hex,4,2));
+			endif;
 
 			// Inline styles for background image
     		echo '<style>
 	    		.conversions-hero-cover {background-image: url('. esc_url($medium[0]) .');}
-	    		@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .'), rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .')), url('.  esc_url($medium_large[0]) .');} }
-	    		@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .'), rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .')), url('. esc_url($large[0]) .');} }
-	    		@media (min-width: 1024px) { .conversions-hero-cover { background-image: linear-gradient(rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .'), rgba(0, 0, 0, '. esc_attr($blog_img_overlay) .')), url('. esc_url($fullscreen[0]) .');} }
+	    		@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .')), url('.  esc_url($medium_large[0]) .');} }
+	    		@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .')), url('. esc_url($large[0]) .');} }
+	    		@media (min-width: 1024px) { .conversions-hero-cover { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .')), url('. esc_url($fullscreen[0]) .');} }
     		</style>';
 
     		// HTML for background image and title
