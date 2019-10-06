@@ -196,6 +196,8 @@ namespace conversions
 				'conversions_wc_primary_btn' => 'btn-outline-primary',
 				'conversions_wc_secondary_btn' => 'btn-outline-secondary',
 				'conversions_wc_checkout_btn' => 'btn-primary',
+				'conversions_featured_img_parallax' => false,
+				'conversions_featured_img_height' => '65',
 				'conversions_featured_img_color' => '#000000',
 				'conversions_featured_img_overlay' => '.5',
 				'conversions_featured_title_color' => '#ffffff',

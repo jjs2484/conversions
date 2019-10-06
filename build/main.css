@@ -16369,7 +16369,7 @@ section.c-testimonials .c-testimonials__quote {
   background-color: #000;
   background-size: cover;
   background-position: 50%;
-  min-height: 430px;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

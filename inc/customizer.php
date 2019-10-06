@@ -982,6 +982,44 @@ namespace conversions
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_theme_options',
 			) );
+			$wp_customize->add_setting( 'conversions_featured_img_parallax', array(
+				'default'       => false,
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_featured_img_parallax', array(
+						'label'       => __( 'Fixed background image', 'conversions' ),
+						'description' => __( 'Check to create a parallax effect when the visitor scrolls.', 'conversions' ),
+						'section'     => 'conversions_featured_img',
+						'settings'    => 'conversions_featured_img_parallax',
+						'type'        => 'checkbox',
+						'priority'    => '1',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_featured_img_height', array(
+				'default'       => '65',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_featured_img_height_control', array(
+				'label'      => __('Featured image height', 'conversions'),
+				'description'=> __('Height in vh units. 10vh is relative to 10% of the current viewport height.', 'conversions'),
+				'section'    => 'conversions_featured_img',
+				'settings'   => 'conversions_featured_img_height',
+				'priority'   => 5,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 100,
+				),
+			) );
 			$wp_customize->add_setting( 'conversions_featured_img_color', array(
 				'default'       => '#000000',
 				'type'          => 'theme_mod',
@@ -1320,6 +1358,14 @@ namespace conversions
 						box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 					}
 				<?php } ?>
+				/* Featured image */
+				.conversions-hero-cover {
+					<?php if ( get_theme_mod( 'conversions_featured_img_parallax', false ) == true ) { ?>
+						background-attachment: fixed;
+					<?php } ?>
+					min-height: <?php echo esc_html( get_theme_mod( 'conversions_featured_img_height', '65' ) ); ?>vh;
+				}
+				
 				/* Footer styles */
 				#wrapper-footer-full { background-color: <?php echo esc_html( get_theme_mod( 'conversions_footer_background_color', '#3c3d45' ) ); ?>; }
 				#footer-full-content .h1, #footer-full-content .h2, #footer-full-content .h3, #footer-full-content .h4, #footer-full-content .h5, #footer-full-content .h6, #footer-full-content h1, #footer-full-content h2, #footer-full-content h3, #footer-full-content h4, #footer-full-content h5, #footer-full-content h6 { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_heading_color', '#ffffff' ) ); ?>; }
