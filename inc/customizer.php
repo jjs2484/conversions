@@ -1113,7 +1113,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_wc_account', array(
-				'default'           => true,
+				'default'           => false,
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_checkbox',
 				'capability'        => 'edit_theme_options',
@@ -1365,7 +1365,6 @@ namespace conversions
 					<?php } ?>
 					min-height: <?php echo esc_html( get_theme_mod( 'conversions_featured_img_height', '65' ) ); ?>vh;
 				}
-				
 				/* Footer styles */
 				#wrapper-footer-full { background-color: <?php echo esc_html( get_theme_mod( 'conversions_footer_background_color', '#3c3d45' ) ); ?>; }
 				#footer-full-content .h1, #footer-full-content .h2, #footer-full-content .h3, #footer-full-content .h4, #footer-full-content .h5, #footer-full-content .h6, #footer-full-content h1, #footer-full-content h2, #footer-full-content h3, #footer-full-content h4, #footer-full-content h5, #footer-full-content h6 { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_heading_color', '#ffffff' ) ); ?>; }
@@ -1397,59 +1396,41 @@ namespace conversions
 				#wrapper-footer .social-media-icons ul li.list-inline-item i:hover {
 					color: <?php echo esc_html( get_theme_mod( 'conversions_social_link_hcolor', '#004086' ) ); ?>;
 				}
-				<?php if ( esc_html( get_theme_mod( 'conversions_wccheckout_columns', 'two-column' ) == 'two-column' ) ) { ?>
-					/* WooCommerce checkout columns*/
-					@media screen and (min-width:768px) {
-						body.woocommerce-checkout #customer_details { width: 48%; float: left; margin-right: 1.9%; }
-						body.woocommerce-checkout .col-12.col-md-7.conversions-wcbilling { flex: 0 0 100%; -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; max-width: 100%; }
-						body.woocommerce-checkout .col-12.col-md-5.conversions-wcshipping { flex: 0 0 100%; -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; max-width: 100%; margin-top: 1em; }
-						body.woocommerce-checkout #order_review, body.woocommerce-checkout #order_review_heading { width: 48%; float: right; margin-right: 0; }
+				<?php if ( class_exists( 'woocommerce' ) ) { ?>
+					<?php if ( esc_html( get_theme_mod( 'conversions_wccheckout_columns', 'two-column' ) == 'two-column' ) ) { ?>
+						/* WooCommerce checkout columns*/
+						@media screen and (min-width:768px) {
+							body.woocommerce-checkout #customer_details { width: 48%; float: left; margin-right: 1.9%; }
+							body.woocommerce-checkout .col-12.col-md-7.conversions-wcbilling { flex: 0 0 100%; -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; max-width: 100%; }
+							body.woocommerce-checkout .col-12.col-md-5.conversions-wcshipping { flex: 0 0 100%; -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; max-width: 100%; margin-top: 1em; }
+							body.woocommerce-checkout #order_review, body.woocommerce-checkout #order_review_heading { width: 48%; float: right; margin-right: 0; }
+						}
+					<?php } ?>
+					/* WooCommerce shop buttons */
+					.woocommerce ul.products li.product .button, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+						background: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_bg"] ); ?>;
+						color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_color"] ); ?>;
+						border: 1px solid <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_border"] ); ?>;
+					}
+					.woocommerce ul.products li.product .button:hover, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
+						color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_color_hover"] ); ?>;
+						background-color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_bg_hover"] ); ?>;
+						border-color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_border_hover"] ); ?>;
+					}
+					.woocommerce ul.products li.product .added_to_cart, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart {
+						background: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg"] ); ?>;
+						color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_color"] ); ?>;
+						border: 1px solid <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border"] ); ?>;
+					}
+					.woocommerce ul.products li.product .added_to_cart:hover, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart:hover {
+						color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_color_hover"] ); ?>;
+						background-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg_hover"] ); ?>;
+						border-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border_hover"] ); ?>;
+					}
+					.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
+  						color: <?php echo esc_html( get_theme_mod('conversions_heading_color', '#222222' ) ); ?>;
 					}
 				<?php } ?>
-				/* WooCommerce shop buttons */
-				.woocommerce ul.products li.product .button {
-					background: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_bg"] ); ?>;
-					color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_color"] ); ?>;
-					border: 1px solid <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_border"] ); ?>;
-				}
-				.woocommerce ul.products li.product .button:hover {
-					color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_color_hover"] ); ?>;
-					background-color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_bg_hover"] ); ?>;
-					border-color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_border_hover"] ); ?>;
-				}
-				.woocommerce ul.products li.product .added_to_cart {
-					background: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg"] ); ?>;
-					color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_color"] ); ?>;
-					border: 1px solid <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border"] ); ?>;
-				}
-				.woocommerce ul.products li.product .added_to_cart:hover {
-					color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_color_hover"] ); ?>;
-					background-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg_hover"] ); ?>;
-					border-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border_hover"] ); ?>;
-				}
-				.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
-					background: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_bg"] ); ?>;
-					color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_color"] ); ?>;
-					border: 1px solid <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_border"] ); ?>;
-				}
-				.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
-					color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_color_hover"] ); ?>;
-					background-color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_bg_hover"] ); ?>;
-					border-color: <?php echo esc_html( $wc_btns[$wc_primary_btn]["btn_border_hover"] ); ?>;
-				}
-				.wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart {
-					background: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg"] ); ?>;
-					color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_color"] ); ?>;
-					border: 1px solid <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border"] ); ?>;
-				}
-				.wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart:hover {
-					color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_color_hover"] ); ?>;
-					background-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_bg_hover"] ); ?>;
-					border-color: <?php echo esc_html( $wc_btns[$wc_secondary_btn]["btn_border_hover"] ); ?>;
-				}
-				.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
-  					color: <?php echo esc_html( get_theme_mod('conversions_heading_color', '#222222' ) ); ?>;
-				}
 				<?php if ( get_theme_mod( 'conversions_sidebar_mvisibility', true ) == false ) { ?>
 					/* Sidebar */
 					@media (max-width: 767.98px) {
@@ -1531,7 +1512,7 @@ namespace conversions
 					}
 
 					// Append WooCommerce Account icon?
-					if ( get_theme_mod( 'conversions_wc_account', true ) == true ) {
+					if ( get_theme_mod( 'conversions_wc_account', false ) == true ) {
 						
 						if ( is_user_logged_in() ) {
  							$wc_al = __('My Account','conversions');
