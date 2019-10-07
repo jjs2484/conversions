@@ -208,3 +208,27 @@ body.woocommerce-cart {
     	text-align: center;
 	}
 }
+
+// Pagination
+.woocommerce nav.woocommerce-pagination {
+	display: flex;
+	justify-content: center;
+	ul {
+		border: 0;
+		&.page-numbers {
+			@extend .pagination;
+			li {
+				border-right: 0;
+				@extend .page-item;
+				span.page-numbers, a.page-numbers {
+					@extend .page-link;
+					&.current {
+						color: $white;
+						background-color: $primary;
+						border-color: $primary;
+					}
+				}
+			}
+		}
+	}
+}

@@ -110,23 +110,14 @@ class Template
         ?>
 
         <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
-
             <ul class="pagination">
-
                 <?php
-
                     foreach ( $links as $key => $link ) { ?>
-
                         <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : '' ?>">
-
                             <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
-
                         </li>
-
                 <?php } ?>
-
             </ul>
-
         </nav>
 
         <?php
@@ -340,8 +331,9 @@ class Template
 	public function fullscreen_featured_image() {
 
 		global $post;
-			
-		if ( has_post_thumbnail( $post->ID ) ) // check if featured image is set
+		
+		// check if featured image is set	
+		if ( has_post_thumbnail( $post->ID ) )
 		{
 			// Get featured image sizes
 			$medium	= wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium', false );

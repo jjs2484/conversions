@@ -47,7 +47,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 			<p class="form-row">
 				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-				<button type="submit" class="btn <?php esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'conversions' ); ?>"><?php esc_html_e( 'Log in', 'conversions' ); ?></button>
+				<button type="submit" class="btn <?php esc_attr_e( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'conversions' ); ?>"><?php esc_html_e( 'Log in', 'conversions' ); ?></button>
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme ml-3">
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'conversions' ); ?></span>
 				</label>
@@ -104,7 +104,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 			<p class="woocommerce-FormRow form-row">
 				<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-				<button type="submit" class="btn <?php esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="register" value="<?php esc_attr_e( 'Register', 'conversions' ); ?>"><?php esc_html_e( 'Register', 'conversions' ); ?></button>
+				<button type="submit" class="btn <?php esc_attr_e( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="register" value="<?php esc_attr_e( 'Register', 'conversions' ); ?>"><?php esc_html_e( 'Register', 'conversions' ); ?></button>
 			</p>
 
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
