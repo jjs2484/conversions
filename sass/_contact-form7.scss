@@ -1,10 +1,9 @@
 /*
-* Use existing Bootstrap 4 classes and
-* variables to extend - override CF7 styles
+* Use existing Bootstrap 4 classes for CF7 styles
 */
 
 // Set max-width in case its just the form and nothing else
-// we do not want a form spanning whole page
+// Do not want a form spanning whole page
 .wpcf7 {
   max-width: 600px;
 

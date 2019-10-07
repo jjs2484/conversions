@@ -6,7 +6,7 @@
   }
   
   // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @include media-breakpoint-up(lg) {
     ul.navbar-nav {
       display: inline-block;
       li.menu-item {
@@ -15,6 +15,9 @@
           white-space: nowrap;
         }
       }
+      li.nav-callout-button.menu-item {
+        margin-left: .5rem;
+      }
     }
   }
 
@@ -22,9 +25,9 @@
     display: block;
   }
 
-  // offcanvas menu on mobile devices 
-  @media (max-width: 991.98px) {
-    .offcanvas-collapse {
+  // Offcanvas on mobile devices 
+  .offcanvas-collapse {
+    @include media-breakpoint-down(md) {
       position: fixed;
       bottom: 0;
       left: 100%;
@@ -34,25 +37,30 @@
       padding-left: 1rem;
       overflow-y: auto;
       visibility: hidden;
-      /* transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out; */
-      /* transition: transform .3s ease-in-out, visibility .3s ease-in-out; */
       transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
       z-index: 999;
-    }
-    .offcanvas-collapse.open {
-      visibility: visible;
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
+      
+      &.open {
+        visibility: visible;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+      }
     }
   }
 
+}
+
+// Offcanvas when open add class to body prevent horizontal scrolling.
+// See js/theme.js -- Toggle offcanvas mobile menu -- function for more details.
+html.offcanvas-overflowx, body.offcanvas-overflowx {
+  overflow-x: hidden;
 }
 
 #wrapper-navbar nav {
   &.navbar-dark {
     a.nav-link { 
       color: rgb(255, 255, 255);
-      &:hover{
+      &:hover {
         color: rgba(255,255,255,.8);
       }
     }
@@ -60,7 +68,7 @@
   &.navbar-light {
     a.nav-link {
       color: rgba(0,0,0,.9);
-      &:hover{
+      &:hover {
         color: rgba(0,0,0,.7);
       }
     }
@@ -112,12 +120,7 @@
   }
 }
 
-// when offcanvas open prevent horizontal scrolling
-html.offcanvas-overflowx, body.offcanvas-overflowx {
-  overflow-x: hidden;
-}
-
-// navbar search modal
+// Nav search modal
 .admin-bar #csearchModal {
   z-index: 100000;
 }

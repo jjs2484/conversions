@@ -16126,7 +16126,9 @@ a.skip-link {
     .navbar ul.navbar-nav li.menu-item {
       display: inline-block; }
       .navbar ul.navbar-nav li.menu-item a.nav-link {
-        white-space: nowrap; } }
+        white-space: nowrap; }
+    .navbar ul.navbar-nav li.nav-callout-button.menu-item {
+      margin-left: .5rem; } }
 .navbar ul.dropdown-menu li.menu-item {
   display: block; }
 @media (max-width: 991.98px) {
@@ -16140,15 +16142,16 @@ a.skip-link {
     padding-left: 1rem;
     overflow-y: auto;
     visibility: hidden;
-    /* transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out; */
-    /* transition: transform .3s ease-in-out, visibility .3s ease-in-out; */
     transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
     z-index: 999; }
-  .navbar .offcanvas-collapse.open {
-    visibility: visible;
-    -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-        transform: translateX(-100%); } }
+    .navbar .offcanvas-collapse.open {
+      visibility: visible;
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%); } }
+
+html.offcanvas-overflowx, body.offcanvas-overflowx {
+  overflow-x: hidden; }
 
 #wrapper-navbar nav.navbar-dark a.nav-link {
   color: white; }
@@ -16176,9 +16179,6 @@ a.skip-link {
   background-color: #ffc107; }
 #wrapper-navbar nav.navbar-dark.bg-info .offcanvas-collapse {
   background-color: #17a2b8; }
-
-html.offcanvas-overflowx, body.offcanvas-overflowx {
-  overflow-x: hidden; }
 
 .admin-bar #csearchModal {
   z-index: 100000; }
@@ -16523,7 +16523,7 @@ section.c-testimonials .c-testimonials__quote {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media (max-width: 576px) {
+  @media (max-width: 575.98px) {
     #wrapper-footer-full .footer-widget {
       margin-bottom: 0.75rem; } }
 
@@ -16891,8 +16891,7 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
   text-align: center; }
 
 /*
-* Use existing Bootstrap 4 classes and
-* variables to extend - override CF7 styles
+* Use existing Bootstrap 4 classes for CF7 styles
 */
 .wpcf7 {
   max-width: 600px; }
