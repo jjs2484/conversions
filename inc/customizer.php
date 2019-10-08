@@ -1175,7 +1175,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_wc_secondary_btn', array(
-				'default'           => 'btn-outline-secondary',
+				'default'           => 'btn-primary',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -1186,32 +1186,12 @@ namespace conversions
 					$wp_customize,
 					'conversions_wc_secondary_btn', array(
 						'label'       => __( 'Secondary button type', 'conversions' ),
-						'description' => __( 'Choose the secondary button type. Applies to: view cart, download file, etc.', 'conversions' ),
+						'description' => __( 'Choose the secondary button type. Applies to: view cart, proceed to checkout, place order, etc.', 'conversions' ),
 						'section'     => 'conversions_woocommerce',
 						'settings'    => 'conversions_wc_secondary_btn',
 						'type'        => 'select',
 						'choices' => $button_choices,
 						'priority'    => '45',
-					)
-			) );
-			$wp_customize->add_setting( 'conversions_wc_checkout_btn', array(
-				'default'           => 'btn-primary',
-				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
-				'capability'        => 'edit_theme_options',
-				'transport'     => 'refresh',
-			) );
-			$wp_customize->add_control(
-				new \WP_Customize_Control(
-					$wp_customize,
-					'conversions_wc_checkout_btn', array(
-						'label'       => __( 'Checkout button type', 'conversions' ),
-						'description' => __( 'Choose the checkout button type. Applies to: proceed to checkout, place order, etc.', 'conversions' ),
-						'section'     => 'conversions_woocommerce',
-						'settings'    => 'conversions_wc_checkout_btn',
-						'type'        => 'select',
-						'choices' => $button_choices,
-						'priority'    => '50',
 					)
 			) );
 		}
@@ -1301,7 +1281,7 @@ namespace conversions
 
 			// WC button option
 			$wc_primary_btn = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
-			$wc_secondary_btn = get_theme_mod( 'conversions_wc_secondary_btn', 'btn-outline-secondary' );
+			$wc_secondary_btn = get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' );
 
 			// WC button multidimensional array
 			$wc_btns = array(

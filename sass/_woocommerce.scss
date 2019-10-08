@@ -232,3 +232,28 @@ body.woocommerce-cart {
 		}
 	}
 }
+
+// WooCommerce review list
+.woocommerce #reviews #comments ol.commentlist {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1em;
+	ul.children {
+		display: flex;
+		flex-direction: column;
+		padding-left: 1em;
+		margin: 20px 0 0 2em;
+	}
+	li {
+		img.avatar {
+			border-radius: 50%;
+			padding: 0;
+			height: auto;
+			width: 44px;
+			border: 0;
+		}
+		.comment-text {
+			margin: 0 0 0 56px;
+		}
+	}
+}

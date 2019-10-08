@@ -16908,6 +16908,38 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
         background-color: #007bff;
         border-color: #007bff; }
 
+.woocommerce #reviews #comments ol.commentlist {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 1em; }
+  .woocommerce #reviews #comments ol.commentlist ul.children {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 1em;
+    margin: 20px 0 0 2em; }
+  .woocommerce #reviews #comments ol.commentlist li img.avatar {
+    border-radius: 50%;
+    padding: 0;
+    height: auto;
+    width: 44px;
+    border: 0; }
+  .woocommerce #reviews #comments ol.commentlist li .comment-text {
+    margin: 0 0 0 56px; }
+
 /*
 * Use existing Bootstrap 4 classes for CF7 styles
 */

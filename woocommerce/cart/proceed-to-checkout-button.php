@@ -23,6 +23,6 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 
-<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="btn <?php esc_attr_e( get_theme_mod( 'conversions_wc_checkout_btn', 'btn-primary' ) ); ?> btn-lg btn-block">
+<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="btn <?php esc_attr_e( get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' ) ); ?> btn-lg btn-block">
 	<?php esc_html_e( 'Proceed to checkout', 'conversions' ); ?>
 </a>
