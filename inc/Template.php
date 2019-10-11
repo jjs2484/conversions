@@ -330,23 +330,28 @@ class Template
 	**/
 	public function fullscreen_featured_image() {
 
-		global $post;
-		
-		// check if featured image is set	
-		if ( has_post_thumbnail( $post->ID ) )
-		{
+			global $post;
+
 			// Get featured image sizes
 			$medium	= wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium', false );
 			$medium_large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium_large', false );
 			$large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
 			$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullscreen', false );
 
-			// Get the customizer setting
-			$blog_img_overlay_color = get_theme_mod('conversions_featured_img_color', '#000000');
-			$blog_img_overlay = get_theme_mod('conversions_featured_img_overlay', '.5');
+			if( is_page_template( 'page-templates/homepage.php' ) ) : // homepage template
+				// Get the customizer setting
+				$img_overlay_color = get_theme_mod('conversions_hh_img_color', '#000000');
+				$img_overlay = get_theme_mod('conversions_hh_img_overlay', '.5');
+				$css_selector = 'section.c-hero';
+			else: // regular posts and pages
+				// Get the customizer setting
+				$img_overlay_color = get_theme_mod('conversions_featured_img_color', '#000000');
+				$img_overlay = get_theme_mod('conversions_featured_img_overlay', '.5');
+				$css_selector = '.conversions-hero-cover';
+			endif;
 
 			//convert color from hex to rgb
-			$hex = str_replace('#','', $blog_img_overlay_color);
+			$hex = str_replace('#','', $img_overlay_color);
 			if(strlen($hex) == 3):
    				$rgbArray['r'] = hexdec(substr($hex,0,1).substr($hex,0,1));
    				$rgbArray['g'] = hexdec(substr($hex,1,1).substr($hex,1,1));
@@ -359,19 +364,11 @@ class Template
 
 			// Inline styles for background image
     		echo '<style>
-	    		.conversions-hero-cover {background-image: url('. esc_url($medium[0]) .');}
-	    		@media (min-width: 300px) { .conversions-hero-cover { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .')), url('.  esc_url($medium_large[0]) .');} }
-	    		@media (min-width: 768px) { .conversions-hero-cover { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .')), url('. esc_url($large[0]) .');} }
-	    		@media (min-width: 1024px) { .conversions-hero-cover { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($blog_img_overlay) .')), url('. esc_url($fullscreen[0]) .');} }
+	    		'.$css_selector.' {background-image: url('. esc_url($medium[0]) .');}
+	    		@media (min-width: 300px) { '.$css_selector.' { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .')), url('.  esc_url($medium_large[0]) .');} }
+	    		@media (min-width: 768px) { '.$css_selector.' { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .')), url('. esc_url($large[0]) .');} }
+	    		@media (min-width: 1024px) { '.$css_selector.' { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .')), url('. esc_url($fullscreen[0]) .');} }
     		</style>';
-
-    		// HTML for background image and title
-    		echo '<div class="col-sm-12">
-        		<div class="conversions-hero-cover">
-        			<div class="conversions-hero-cover__inner-container"><h1 class="entry-title text-center">'.get_the_title( $post->ID ).'</h1></div>
-        		</div>
-        	</div>';
-    	}
 
 	}
 

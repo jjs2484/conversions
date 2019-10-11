@@ -201,7 +201,14 @@ namespace conversions
 				'conversions_featured_img_overlay' => '.5',
 				'conversions_featured_title_color' => '#ffffff',
 				'conversions_blog_related' => true,
-				'conversions_blog_taxonomy' => 'categories'
+				'conversions_blog_taxonomy' => 'categories',
+				'conversions_hh_titlec' => '#ffffff',
+				'conversions_hh_description' => 'This is a modified jumbotron that occupies the entire horizontal space of its parent.',
+				'conversions_hh_descriptionc' => '#ffffff',
+				'conversions_hh_img_parallax' => false,
+				'conversions_hh_img_height' => '80',
+				'conversions_hh_img_color' => '#000000',
+				'conversions_hh_img_overlay' => '.5',
 			);
 
 			foreach ($defaults as $c => $v) {

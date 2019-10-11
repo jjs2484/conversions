@@ -15830,7 +15830,7 @@ jQuery(document).ready(function(){
 /**
  * Initialize fancybox options
 */
-jQuery('[data-fancybox="c-hero__fb-video"]').fancybox({
+jQuery('[data-fancybox="c-hero__fb-video1"]').fancybox({
     // Options go here
     youtube : {
         showinfo : 0,

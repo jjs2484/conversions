@@ -1194,6 +1194,155 @@ namespace conversions
 						'priority'    => '45',
 					)
 			) );
+
+			//-----------------------------------------------------
+			// Homepage section
+			//-----------------------------------------------------
+			$wp_customize->add_panel( 'conversions_homepage', array(
+				'priority'          => 121,
+				'title'             => __('Homepage Design', 'conversions'),
+				'description'       => __('Settings for the Homepage template', 'conversions'),
+				'capability'        => 'edit_theme_options',
+			) );
+
+			//-----------------------------------------------------
+			// Homepage Hero section
+			//-----------------------------------------------------
+			$wp_customize->add_section( 'conversions_homepage_hero', array(
+				'title'             => __('Hero', 'conversions'),
+				'priority'          => 10,
+				'description'       => __('Settings for the homepage hero.', 'conversions'),
+				'capability'        => 'edit_theme_options',
+				'panel'             => 'conversions_homepage',
+			) );
+   			$wp_customize->add_setting( 'conversions_hh_titlec', array(
+				'default'       => '#ffffff',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_hh_titlec_control', array(
+				'label'      => __('Hero title color', 'conversions'),
+				'description'=> __('Select a color for the title text.', 'conversions'),
+				'section'    => 'conversions_homepage_hero',
+				'settings'   => 'conversions_hh_titlec',
+				'priority'   => 2,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_hh_description', array(
+      			'default' => 'This is a modified jumbotron that occupies the entire horizontal space of its parent.',
+      			'type'          => 'theme_mod',
+      			'transport' => 'refresh',
+      			'sanitize_callback' => 'wp_filter_nohtml_kses'
+   			) );
+			$wp_customize->add_control( 'conversions_hh_description', array(
+      			'label'      => __('Hero description', 'conversions'),
+				'description'=> __('Add the homepage hero description text', 'conversions'),
+      			'section' => 'conversions_homepage_hero',
+      			'settings'   => 'conversions_hh_description',
+      			'priority' => 3,
+      			'type' => 'textarea',
+      			'capability' => 'edit_theme_options',
+   			) );
+   			$wp_customize->add_setting( 'conversions_hh_descriptionc', array(
+				'default'       => '#ffffff',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_hh_descriptionc_control', array(
+				'label'      => __('Hero description color', 'conversions'),
+				'description'=> __('Select a color for the description text.', 'conversions'),
+				'section'    => 'conversions_homepage_hero',
+				'settings'   => 'conversions_hh_descriptionc',
+				'priority'   => 4,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_hh_img_parallax', array(
+				'default'       => false,
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hh_img_parallax', array(
+						'label'       => __( 'Fixed background image', 'conversions' ),
+						'description' => __( 'Check to create a parallax effect when the visitor scrolls.', 'conversions' ),
+						'section'     => 'conversions_homepage_hero',
+						'settings'    => 'conversions_hh_img_parallax',
+						'type'        => 'checkbox',
+						'priority'    => '5',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_hh_img_height', array(
+				'default'       => '80',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_hh_img_height_control', array(
+				'label'      => __('Featured image height', 'conversions'),
+				'description'=> __('Height in vh units. 10vh is relative to 10% of the current viewport height.', 'conversions'),
+				'section'    => 'conversions_homepage_hero',
+				'settings'   => 'conversions_hh_img_height',
+				'priority'   => 6,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 100,
+				),
+			) );
+			$wp_customize->add_setting( 'conversions_hh_img_color', array(
+				'default'       => '#000000',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_hh_img_color_control', array(
+				'label'      => __('Overlay color', 'conversions'),
+				'description'=> __('Select a color for the image overlay.', 'conversions'),
+				'section'    => 'conversions_homepage_hero',
+				'settings'   => 'conversions_hh_img_color',
+				'priority'   => 7,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_hh_img_overlay', array(
+				'default'           => '.5',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hh_img_overlay', array(
+						'label'       => __( 'Overlay opacity', 'conversions' ),
+						'description' => __( 'Lighten or darken the featured image overlay. Set the contrast high enough so the text is readable.', 'conversions' ),
+						'section'     => 'conversions_homepage_hero',
+						'settings'    => 'conversions_hh_img_overlay',
+						'type'        => 'select',
+						'choices'     => array(
+							'0' => __( '0%', 'conversions' ),
+							'.1' => __( '10%', 'conversions' ),
+							'.2' => __( '20%', 'conversions' ),
+							'.3' => __( '30%', 'conversions' ),
+							'.4' => __( '40%', 'conversions' ),
+							'.5' => __( '50%', 'conversions' ),
+							'.6' => __( '60%', 'conversions' ),
+							'.7' => __( '70%', 'conversions' ),
+							'.8' => __( '80%', 'conversions' ),
+							'.9' => __( '90%', 'conversions' ),
+							'1' => __( '100%', 'conversions' ),
+						),
+						'priority'    => '8',
+					)
+			) );
+
 		}
 		/**
 			@brief		Return a list of social media icons.
@@ -1417,6 +1566,19 @@ namespace conversions
 						#sidebar-2, #sidebar-1 { display: none; }
 					}
 				<?php } ?>
+				/* Homepage styles */
+				section.c-hero h1 {
+					color: <?php echo esc_html( get_theme_mod('conversions_hh_titlec', '#ffffff' ) ); ?>;
+				}
+				section.c-hero .c-hero__description {
+					color: <?php echo esc_html( get_theme_mod('conversions_hh_descriptionc', '#ffffff' ) ); ?>;
+				}
+				section.c-hero {
+					<?php if ( get_theme_mod( 'conversions_hh_img_parallax', false ) == true ) { ?>
+						background-attachment: fixed;
+					<?php } ?>
+					min-height: <?php echo esc_html( get_theme_mod( 'conversions_hh_img_height', '80' ) ); ?>vh;
+				}
 			</style>
 
 			<?php

@@ -22,7 +22,16 @@ get_header();
 
 		<div class="row">
 
-			<?php conversions()->template->fullscreen_featured_image(); ?>
+			<?php 
+				if ( has_post_thumbnail( get_the_ID() ) ) {
+					
+					// Inline featured image styles
+					conversions()->template->fullscreen_featured_image();
+					
+					// HTML for background image and title
+    				echo '<div class="col-sm-12"><div class="conversions-hero-cover"><div class="conversions-hero-cover__inner-container"><h1 class="entry-title text-center">'.esc_html( get_the_title() ).'</h1></div></div></div>';
+				} 
+			?>
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'partials/left-sidebar-check' ); ?>

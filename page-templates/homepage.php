@@ -15,27 +15,34 @@ get_header();
 
 <div id="homepage-wrapper" class="wrapper">
 
-	<!-- Hero Section -->
+  <?php if ( has_post_thumbnail( get_the_ID() ) ) {
+    conversions()->template->fullscreen_featured_image();
+  } ?>
+
+  <!-- Hero Section -->
 	<section class="c-hero d-flex align-items-center">
   	<div class="container-fluid">
   		<div class="row">
         <div class="col-lg-6">
            			
           <!-- Title -->
-    			<h1 class="display-4">Fluid jumbotron</h1>
+    			<h1 class="display-4"><?php echo esc_html( get_the_title() ); ?></h1>
     				
     			<!-- Description -->
-    			<p class="lead">
-    				This is a modified jumbotron that occupies the entire horizontal space of its parent.
+    			<p class="lead c-hero__description">
+    				<?php echo esc_html( get_theme_mod( 'conversions_hh_description', 'This is a modified jumbotron that occupies the entire horizontal space of its parent.' ) ); ?>
     			</p>
-    				
-    			<!-- Button link -->
-    			<a href="#" class="btn btn-primary btn-lg">Large button</a>
-    				
-    			<!-- Fancybox button modal video -->
-    			<a data-fancybox="c-hero__fb-video" class="c-hero__video-btn btn btn-light btn--circle ml-2" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
-    				<i class="fa fa-play"></i>
-          </a>
+    			
+    			<!-- Button links -->
+          <p class="lead">
+            <a href="#" class="btn btn-primary btn-lg">Large button</a>
+            
+            <!-- Fancybox button modal video -->
+            <a data-fancybox="c-hero__fb-video1" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="c-hero__fb-video">
+              <span class="c-hero__video-btn btn btn-light btn--circle"><i class="fa fa-play"></i></span>
+              <span class="c-hero__video-text btn btn-link text-light">Play video</span>
+            </a>
+          </p>
 
   			</div>
   		</div>
