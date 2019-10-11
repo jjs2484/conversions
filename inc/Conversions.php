@@ -209,6 +209,9 @@ namespace conversions
 				'conversions_hh_img_height' => '80',
 				'conversions_hh_img_color' => '#000000',
 				'conversions_hh_img_overlay' => '.5',
+				'conversions_hh_button' => 'no',
+				'conversions_hh_button_text' => 'Click me',
+				'conversions_hh_button_url' => 'https://wordpress.org',
 			);
 
 			foreach ($defaults as $c => $v) {

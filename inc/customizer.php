@@ -1342,6 +1342,72 @@ namespace conversions
 						'priority'    => '8',
 					)
 			) );
+			$wp_customize->add_setting( 'conversions_hh_button', array(
+				'default'           => 'no',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hh_button', array(
+						'label'       => __( 'Add button to hero', 'conversions' ),
+						'description' => __( 'Choose the type of button.', 'conversions' ),
+						'section'     => 'conversions_homepage_hero',
+						'settings'    => 'conversions_hh_button',
+						'type'        => 'select',
+						'choices'     => array(
+							'no' => __( 'None', 'conversions' ),
+							'btn-primary' => __( 'Primary', 'conversions' ),
+							'btn-secondary' => __( 'Secondary', 'conversions' ),
+							'btn-success' => __( 'Success', 'conversions' ),
+							'btn-danger' => __( 'Danger', 'conversions' ),
+							'btn-warning' => __( 'Warning', 'conversions' ),
+							'btn-info' => __( 'Info', 'conversions' ),
+							'btn-light' => __( 'Light', 'conversions' ),
+							'btn-dark' => __( 'Dark', 'conversions' ),
+							'btn-outline-primary' => __( 'Primary outline', 'conversions' ),
+							'btn-outline-secondary' => __( 'Secondary outline', 'conversions' ),
+							'btn-outline-success' => __( 'Success outline', 'conversions' ),
+							'btn-outline-danger' => __( 'Danger outline', 'conversions' ),
+							'btn-outline-warning' => __( 'Warning outline', 'conversions' ),
+							'btn-outline-info' => __( 'Info outline', 'conversions' ),
+							'btn-outline-light' => __( 'Light outline', 'conversions' ),
+							'btn-outline-dark' => __( 'Dark outline', 'conversions' ),
+						),
+						'priority'    => '9',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_hh_button_text', array(
+				'default'       => 'Click me',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+			$wp_customize->add_control( 'conversions_hh_button_text_control', array(
+				'label'      => __( 'Hero button text', 'conversions' ),
+				'description'=> __('Add text for button to display.', 'conversions'),
+				'section'    => 'conversions_homepage_hero',
+				'settings'   => 'conversions_hh_button_text',
+				'priority'   => 10,
+				'type'       => 'text',
+			) );
+			$wp_customize->add_setting( 'conversions_hh_button_url', array(
+				'default'       => 'https://wordpress.org',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+			$wp_customize->add_control( 'conversions_hh_button_url_control', array(
+				'label'      => __( 'Hero button URL', 'conversions' ),
+				'description'=> __('Where should the button link to?', 'conversions'),
+				'section'    => 'conversions_homepage_hero',
+				'settings'   => 'conversions_hh_button_url',
+				'priority'   => 11,
+				'type'       => 'text',
+			) );
 
 		}
 		/**

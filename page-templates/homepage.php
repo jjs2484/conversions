@@ -15,9 +15,11 @@ get_header();
 
 <div id="homepage-wrapper" class="wrapper">
 
-  <?php if ( has_post_thumbnail( get_the_ID() ) ) {
-    conversions()->template->fullscreen_featured_image();
-  } ?>
+  <?php 
+    if ( has_post_thumbnail( get_the_ID() ) ) {
+      conversions()->template->fullscreen_featured_image();
+    } 
+  ?>
 
   <!-- Hero Section -->
 	<section class="c-hero d-flex align-items-center">
@@ -30,19 +32,33 @@ get_header();
     				
     			<!-- Description -->
     			<p class="lead c-hero__description">
-    				<?php echo esc_html( get_theme_mod( 'conversions_hh_description', 'This is a modified jumbotron that occupies the entire horizontal space of its parent.' ) ); ?>
+    				<?php echo esc_html( get_theme_mod( 'conversions_hh_description' ) ); ?>
     			</p>
+
+          <?php if ( get_theme_mod( 'conversions_nav_button', 'no' ) != 'no' ) : ?>
     			
-    			<!-- Button links -->
-          <p class="lead">
-            <a href="#" class="btn btn-primary btn-lg">Large button</a>
+            <!-- Button links -->
+            <p class="lead">
+
+              <?php 
+                if ( get_theme_mod( 'conversions_nav_button', 'no' ) != 'no' ) {
+                  echo sprintf( '<a href="%s" class="btn %s btn-lg">%s</a>', 
+                    esc_url( get_theme_mod( 'conversions_hh_button_url', 'https://wordpress.org' ) ), 
+                    esc_attr( get_theme_mod( 'conversions_hh_button', 'no' ) ),
+                    esc_html( get_theme_mod( 'conversions_hh_button_text', 'Click me' ) )
+                  );
+                }
+              ?>
             
-            <!-- Fancybox button modal video -->
-            <a data-fancybox="c-hero__fb-video1" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="c-hero__fb-video">
-              <span class="c-hero__video-btn btn btn-light btn--circle"><i class="fa fa-play"></i></span>
-              <span class="c-hero__video-text btn btn-link text-light">Play video</span>
-            </a>
-          </p>
+              <!-- Fancybox button modal video -->
+              <a data-fancybox="c-hero__fb-video1" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="c-hero__fb-video">
+                <span class="c-hero__video-btn btn btn-light btn--circle"><i class="fa fa-play"></i></span>
+                <span class="c-hero__video-text btn btn-link text-light">Play video</span>
+              </a>
+
+            </p>
+
+          <?php endif; ?>
 
   			</div>
   		</div>
