@@ -103,6 +103,14 @@ namespace conversions
 				'btn-outline-dark' => __( 'Dark outline', 'conversions' ),
 			);
 
+			// extra button choices
+			$extra_button_choices = array(
+				'no' => __( 'None', 'conversions' ),
+			);
+
+			// alt button choices
+			$alt_button_choices = array_merge( $extra_button_choices , $button_choices );
+
 			//-----------------------------------------------------
 			// Remove some default sections
 			//-----------------------------------------------------
@@ -314,25 +322,7 @@ namespace conversions
 						'section'     => 'conversions_nav',
 						'settings'    => 'conversions_nav_button',
 						'type'        => 'select',
-						'choices'     => array(
-							'no' => __( 'None', 'conversions' ),
-							'btn-primary' => __( 'Primary', 'conversions' ),
-							'btn-secondary' => __( 'Secondary', 'conversions' ),
-							'btn-success' => __( 'Success', 'conversions' ),
-							'btn-danger' => __( 'Danger', 'conversions' ),
-							'btn-warning' => __( 'Warning', 'conversions' ),
-							'btn-info' => __( 'Info', 'conversions' ),
-							'btn-light' => __( 'Light', 'conversions' ),
-							'btn-dark' => __( 'Dark', 'conversions' ),
-							'btn-outline-primary' => __( 'Primary outline', 'conversions' ),
-							'btn-outline-secondary' => __( 'Secondary outline', 'conversions' ),
-							'btn-outline-success' => __( 'Success outline', 'conversions' ),
-							'btn-outline-danger' => __( 'Danger outline', 'conversions' ),
-							'btn-outline-warning' => __( 'Warning outline', 'conversions' ),
-							'btn-outline-info' => __( 'Info outline', 'conversions' ),
-							'btn-outline-light' => __( 'Light outline', 'conversions' ),
-							'btn-outline-dark' => __( 'Dark outline', 'conversions' ),
-						),
+						'choices'     => $alt_button_choices,
 						'priority'    => '40',
 					)
 			) );
@@ -1358,25 +1348,7 @@ namespace conversions
 						'section'     => 'conversions_homepage_hero',
 						'settings'    => 'conversions_hh_button',
 						'type'        => 'select',
-						'choices'     => array(
-							'no' => __( 'None', 'conversions' ),
-							'btn-primary' => __( 'Primary', 'conversions' ),
-							'btn-secondary' => __( 'Secondary', 'conversions' ),
-							'btn-success' => __( 'Success', 'conversions' ),
-							'btn-danger' => __( 'Danger', 'conversions' ),
-							'btn-warning' => __( 'Warning', 'conversions' ),
-							'btn-info' => __( 'Info', 'conversions' ),
-							'btn-light' => __( 'Light', 'conversions' ),
-							'btn-dark' => __( 'Dark', 'conversions' ),
-							'btn-outline-primary' => __( 'Primary outline', 'conversions' ),
-							'btn-outline-secondary' => __( 'Secondary outline', 'conversions' ),
-							'btn-outline-success' => __( 'Success outline', 'conversions' ),
-							'btn-outline-danger' => __( 'Danger outline', 'conversions' ),
-							'btn-outline-warning' => __( 'Warning outline', 'conversions' ),
-							'btn-outline-info' => __( 'Info outline', 'conversions' ),
-							'btn-outline-light' => __( 'Light outline', 'conversions' ),
-							'btn-outline-dark' => __( 'Dark outline', 'conversions' ),
-						),
+						'choices'     => $alt_button_choices,
 						'priority'    => '9',
 					)
 			) );
@@ -1716,14 +1688,12 @@ namespace conversions
 			global $woocommerce;
 			ob_start();
 			$cart_totals = WC()->cart->get_cart_contents_count();
-			if( WC()->cart->get_cart_contents_count() > 0)
+			if ( WC()->cart->get_cart_contents_count() > 0)
 			{
 				$cart_totals = sprintf( '%s<span class="sr-only">' . __( ' items in your shopping cart', 'conversions' ) . '</span>',
 					WC()->cart->get_cart_contents_count()
 				);
-			}
-			else
-			{
+			} else {
 				$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
 			}
 			?>
@@ -1773,7 +1743,10 @@ namespace conversions
  							$wc_al = __( 'Login / Register', 'conversions' );
  						}
 						// output the account icon if active.
-						$wc_account_link = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a href="'. esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ).'" class="nav-link" title="'. $wc_al .'"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">' . $wc_al . '</span></a></li>';
+						$wc_account_link = sprintf( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
+							esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ),
+							$wc_al
+						);
 
 						// Add the account to the end of the menu.
 						$items = $items . $wc_account_link;
@@ -1783,22 +1756,22 @@ namespace conversions
 
 				// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 				if ( get_theme_mod( 'conversions_nav_search_icon', true ) == true ) {
-					// output the nav search icon if active.
-					$nav_search = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a href="#csearchModal" data-toggle="modal" class="nav-link" title="' . __( 'Search', 'conversions' ) . '"><i aria-hidden="true" class="fas fa-search"></i><span class="sr-only">' . __( 'Search', 'conversions' ) . '</span></a></li>';
+					$nav_search = sprintf( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a href="#csearchModal" data-toggle="modal" class="nav-link" title="%1$s"><i aria-hidden="true" class="fas fa-search"></i><span class="sr-only">%1$s</span></a></li>',
+						__( 'Search', 'conversions' )
+						);
 
 					// Add the nav button to the end of the menu.
 					$items = $items . $nav_search;
 				}
 
 				// Append Navigation Button?
-				$nav_button_type = get_theme_mod( 'conversions_nav_button', 'no' );
-				if ( $nav_button_type != 'no' ) {
-					// get nav button text option
-					$nav_button_text = get_theme_mod( 'conversions_nav_button_text', 'Click me' );
-					// get nav button url option
-					$nav_button_url = get_theme_mod( 'conversions_nav_button_url', 'https://wordpress.org' );
-					// output the nav button with options
-					$nav_button = '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-callout-button menu-item nav-item"><a title="' . esc_html( $nav_button_text ) . '" href="' . esc_url( $nav_button_url ) . '" class="btn ' . esc_attr( $nav_button_type ) . '">' . esc_html( $nav_button_text ) . '</a></li>';
+				if ( get_theme_mod( 'conversions_nav_button', 'no' ) != 'no' ) {
+					$nav_button = sprintf( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-callout-button menu-item nav-item"><a title="%1$s" href="%2$s" class="btn %3$s">%1$s</a></li>',
+						esc_html( get_theme_mod( 'conversions_nav_button_text', 'Click me' ) ),
+						esc_url( get_theme_mod( 'conversions_nav_button_url', 'https://wordpress.org' ) ),
+						esc_attr( get_theme_mod( 'conversions_nav_button', 'no' ) )
+					);
+
 					// Add the nav button to the end of the menu.
 					$items = $items . $nav_button;
 				}
@@ -1839,7 +1812,8 @@ namespace
     /**
 	 * Checkbox sanitization function.
 	 */
-	function conversions_sanitize_checkbox( $input ) {
+	function conversions_sanitize_checkbox( $input ) 
+	{
 		return ( $input === true ) ? true : false;
 	}
 }
