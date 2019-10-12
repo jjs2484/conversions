@@ -67,12 +67,19 @@ section.c-hero {
   h1 {
     word-wrap: break-word;
   }
+  .c-hero__callout-btn {
+    @media (min-width: 576px) {
+      margin-right: 1rem;
+    }
+  }
   .c-hero__fb-video {
     display: block;
-    margin-top: 1rem; 
+    margin-top: 1rem;
+    &:hover {
+      text-decoration: none;
+    } 
     @media (min-width: 576px) {
       display: inline-block;
-      margin-left: 1rem;
       margin-top: 0;
     }
     .c-hero__video-btn {
@@ -89,6 +96,9 @@ section.c-hero {
     .c-hero__video-text {
       padding: 0;
       margin-left: .5rem;
+      &:hover {
+        text-decoration: none;
+      } 
     }
   }
 }

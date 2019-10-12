@@ -44,7 +44,7 @@ get_header();
 
                 // callout button
                 if ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) {
-                  echo sprintf( '<a href="%s" class="btn %s btn-lg">%s</a>', 
+                  echo sprintf( '<a href="%s" class="btn %s btn-lg c-hero__callout-btn">%s</a>', 
                     esc_url( get_theme_mod( 'conversions_hh_button_url', 'https://wordpress.org' ) ), 
                     esc_attr( get_theme_mod( 'conversions_hh_button', 'no' ) ),
                     esc_html( get_theme_mod( 'conversions_hh_button_text', 'Click me' ) )

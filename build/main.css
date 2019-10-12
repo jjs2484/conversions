@@ -16268,13 +16268,17 @@ section.c-hero {
   padding: 2rem 0; }
   section.c-hero h1 {
     word-wrap: break-word; }
+  @media (min-width: 576px) {
+    section.c-hero .c-hero__callout-btn {
+      margin-right: 1rem; } }
   section.c-hero .c-hero__fb-video {
     display: block;
     margin-top: 1rem; }
+    section.c-hero .c-hero__fb-video:hover {
+      text-decoration: none; }
     @media (min-width: 576px) {
       section.c-hero .c-hero__fb-video {
         display: inline-block;
-        margin-left: 1rem;
         margin-top: 0; } }
     section.c-hero .c-hero__fb-video .c-hero__video-btn.btn--circle {
       width: 50px;
@@ -16287,6 +16291,8 @@ section.c-hero {
     section.c-hero .c-hero__fb-video .c-hero__video-text {
       padding: 0;
       margin-left: .5rem; }
+      section.c-hero .c-hero__fb-video .c-hero__video-text:hover {
+        text-decoration: none; }
 
 section.c-clients img.client {
   width: 6rem;
