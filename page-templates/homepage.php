@@ -53,7 +53,7 @@ get_header();
 
                 // video modal
                 if ( get_theme_mod( 'conversions_hh_vbutton', 'no' ) != 'no' ) {
-                  echo sprintf( '<a data-fancybox="c-hero__fb-video1" href="%s" class="c-hero__fb-video"><span class="c-hero__video-btn btn %s btn--circle"><i class="fa fa-play"></i></span><span class="c-hero__video-text btn btn-link text-light">%s</span></a>', 
+                  echo sprintf( '<a data-fancybox="c-hero__fb-video1" href="%1$s" class="c-hero__fb-video"><span class="c-hero__video-btn btn btn-%2$s btn--circle"><i class="fa fa-play"></i></span><span class="c-hero__video-text btn btn-link text-%2$s">%3$s</span></a>', 
                     esc_url( get_theme_mod( 'conversions_hh_vbutton_url', 'https://www.youtube.com/watch?v=_sI_Ps7JSEk' ) ), 
                     esc_attr( get_theme_mod( 'conversions_hh_vbutton', 'no' ) ),
                     esc_html( get_theme_mod( 'conversions_hh_vbutton_text', 'Play Intro' ) )
