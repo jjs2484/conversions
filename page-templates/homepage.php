@@ -35,26 +35,31 @@ get_header();
     				<?php echo esc_html( get_theme_mod( 'conversions_hh_description' ) ); ?>
     			</p>
 
-          <?php if ( get_theme_mod( 'conversions_nav_button', 'no' ) != 'no' ) : ?>
+          <?php if ( ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) || ( get_theme_mod( 'conversions_hh_vbutton', 'no' ) != 'no' ) ) : ?>
     			
             <!-- Button links -->
             <p class="lead">
 
-              <?php 
-                if ( get_theme_mod( 'conversions_nav_button', 'no' ) != 'no' ) {
+              <?php
+
+                // callout button
+                if ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) {
                   echo sprintf( '<a href="%s" class="btn %s btn-lg">%s</a>', 
                     esc_url( get_theme_mod( 'conversions_hh_button_url', 'https://wordpress.org' ) ), 
                     esc_attr( get_theme_mod( 'conversions_hh_button', 'no' ) ),
                     esc_html( get_theme_mod( 'conversions_hh_button_text', 'Click me' ) )
                   );
                 }
+
+                // video modal
+                if ( get_theme_mod( 'conversions_hh_vbutton', 'no' ) != 'no' ) {
+                  echo sprintf( '<a data-fancybox="c-hero__fb-video1" href="%s" class="c-hero__fb-video"><span class="c-hero__video-btn btn %s btn--circle"><i class="fa fa-play"></i></span><span class="c-hero__video-text btn btn-link text-light">%s</span></a>', 
+                    esc_url( get_theme_mod( 'conversions_hh_vbutton_url', 'https://www.youtube.com/watch?v=_sI_Ps7JSEk' ) ), 
+                    esc_attr( get_theme_mod( 'conversions_hh_vbutton', 'no' ) ),
+                    esc_html( get_theme_mod( 'conversions_hh_vbutton_text', 'Play Intro' ) )
+                  );
+                }
               ?>
-            
-              <!-- Fancybox button modal video -->
-              <a data-fancybox="c-hero__fb-video1" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="c-hero__fb-video">
-                <span class="c-hero__video-btn btn btn-light btn--circle"><i class="fa fa-play"></i></span>
-                <span class="c-hero__video-text btn btn-link text-light">Play video</span>
-              </a>
 
             </p>
 

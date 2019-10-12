@@ -1222,8 +1222,8 @@ namespace conversions
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
 			$wp_customize->add_control( 'conversions_hh_titlec_control', array(
-				'label'      => __('Hero title color', 'conversions'),
-				'description'=> __('Select a color for the title text.', 'conversions'),
+				'label'      => __('Title color', 'conversions'),
+				'description'=> __('Select a color for the title.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_titlec',
 				'priority'   => 2,
@@ -1236,8 +1236,8 @@ namespace conversions
       			'sanitize_callback' => 'wp_filter_nohtml_kses'
    			) );
 			$wp_customize->add_control( 'conversions_hh_description', array(
-      			'label'      => __('Hero description', 'conversions'),
-				'description'=> __('Add the homepage hero description text', 'conversions'),
+      			'label'      => __('Description', 'conversions'),
+				'description'=> __('Add the hero description text.', 'conversions'),
       			'section' => 'conversions_homepage_hero',
       			'settings'   => 'conversions_hh_description',
       			'priority' => 3,
@@ -1251,7 +1251,7 @@ namespace conversions
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
 			$wp_customize->add_control( 'conversions_hh_descriptionc_control', array(
-				'label'      => __('Hero description color', 'conversions'),
+				'label'      => __('Description color', 'conversions'),
 				'description'=> __('Select a color for the description text.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_descriptionc',
@@ -1285,7 +1285,7 @@ namespace conversions
 				'sanitize_callback' => 'absint',
 			) );
 			$wp_customize->add_control( 'conversions_hh_img_height_control', array(
-				'label'      => __('Featured image height', 'conversions'),
+				'label'      => __('Hero image height', 'conversions'),
 				'description'=> __('Height in vh units. 10vh is relative to 10% of the current viewport height.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_img_height',
@@ -1303,7 +1303,7 @@ namespace conversions
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
 			$wp_customize->add_control( 'conversions_hh_img_color_control', array(
-				'label'      => __('Overlay color', 'conversions'),
+				'label'      => __('Image overlay color', 'conversions'),
 				'description'=> __('Select a color for the image overlay.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_img_color',
@@ -1321,8 +1321,8 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_hh_img_overlay', array(
-						'label'       => __( 'Overlay opacity', 'conversions' ),
-						'description' => __( 'Lighten or darken the featured image overlay. Set the contrast high enough so the text is readable.', 'conversions' ),
+						'label'       => __( 'Image overlay opacity', 'conversions' ),
+						'description' => __( 'Lighten or darken the hero image overlay. Set the contrast high enough so the text is readable.', 'conversions' ),
 						'section'     => 'conversions_homepage_hero',
 						'settings'    => 'conversions_hh_img_overlay',
 						'type'        => 'select',
@@ -1353,7 +1353,7 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_hh_button', array(
-						'label'       => __( 'Add button to hero', 'conversions' ),
+						'label'       => __( 'Callout button', 'conversions' ),
 						'description' => __( 'Choose the type of button.', 'conversions' ),
 						'section'     => 'conversions_homepage_hero',
 						'settings'    => 'conversions_hh_button',
@@ -1387,7 +1387,7 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_hh_button_text_control', array(
-				'label'      => __( 'Hero button text', 'conversions' ),
+				'label'      => __( 'Callout button text', 'conversions' ),
 				'description'=> __('Add text for button to display.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_button_text',
@@ -1401,11 +1401,77 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_hh_button_url_control', array(
-				'label'      => __( 'Hero button URL', 'conversions' ),
+				'label'      => __( 'Callout button URL', 'conversions' ),
 				'description'=> __('Where should the button link to?', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_button_url',
 				'priority'   => 11,
+				'type'       => 'text',
+			) );
+			$wp_customize->add_setting( 'conversions_hh_vbutton', array(
+				'default'           => 'no',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hh_vbutton', array(
+						'label'       => __( 'Video modal button', 'conversions' ),
+						'description' => __( 'Choose the type of button.', 'conversions' ),
+						'section'     => 'conversions_homepage_hero',
+						'settings'    => 'conversions_hh_vbutton',
+						'type'        => 'select',
+						'choices'     => array(
+							'no' => __( 'None', 'conversions' ),
+							'btn-primary' => __( 'Primary', 'conversions' ),
+							'btn-secondary' => __( 'Secondary', 'conversions' ),
+							'btn-success' => __( 'Success', 'conversions' ),
+							'btn-danger' => __( 'Danger', 'conversions' ),
+							'btn-warning' => __( 'Warning', 'conversions' ),
+							'btn-info' => __( 'Info', 'conversions' ),
+							'btn-light' => __( 'Light', 'conversions' ),
+							'btn-dark' => __( 'Dark', 'conversions' ),
+							'btn-outline-primary' => __( 'Primary outline', 'conversions' ),
+							'btn-outline-secondary' => __( 'Secondary outline', 'conversions' ),
+							'btn-outline-success' => __( 'Success outline', 'conversions' ),
+							'btn-outline-danger' => __( 'Danger outline', 'conversions' ),
+							'btn-outline-warning' => __( 'Warning outline', 'conversions' ),
+							'btn-outline-info' => __( 'Info outline', 'conversions' ),
+							'btn-outline-light' => __( 'Light outline', 'conversions' ),
+							'btn-outline-dark' => __( 'Dark outline', 'conversions' ),
+						),
+						'priority'    => '12',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_hh_vbutton_text', array(
+				'default'       => 'Play Intro',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+			$wp_customize->add_control( 'conversions_hh_vbutton_text_control', array(
+				'label'      => __( 'Video button text', 'conversions' ),
+				'description'=> __('Text to display next to the video button.', 'conversions'),
+				'section'    => 'conversions_homepage_hero',
+				'settings'   => 'conversions_hh_vbutton_text',
+				'priority'   => 13,
+				'type'       => 'text',
+			) );
+			$wp_customize->add_setting( 'conversions_hh_vbutton_url', array(
+				'default'       => 'https://www.youtube.com/watch?v=_sI_Ps7JSEk',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+			$wp_customize->add_control( 'conversions_hh_vbutton_url_control', array(
+				'label'      => __( 'Video URL', 'conversions' ),
+				'description'=> __('Youtube or Vimeo video URL.', 'conversions'),
+				'section'    => 'conversions_homepage_hero',
+				'settings'   => 'conversions_hh_vbutton_url',
+				'priority'   => 14,
 				'type'       => 'text',
 			) );
 

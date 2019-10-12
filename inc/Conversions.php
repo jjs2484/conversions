@@ -212,6 +212,9 @@ namespace conversions
 				'conversions_hh_button' => 'no',
 				'conversions_hh_button_text' => 'Click me',
 				'conversions_hh_button_url' => 'https://wordpress.org',
+				'conversions_hh_vbutton' => 'no',
+				'conversions_hh_vbutton_text' => 'Play Intro',
+				'conversions_hh_vbutton_url' => 'https://www.youtube.com/watch?v=_sI_Ps7JSEk',
 			);
 
 			foreach ($defaults as $c => $v) {
