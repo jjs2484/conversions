@@ -236,38 +236,19 @@ namespace conversions
 						'priority'    => '30',
 					)
 			) );
-			$wp_customize->add_setting( 'conversions_header_tpadding', array(
+			$wp_customize->add_setting( 'conversions_header_tbpadding', array(
 				'default'       => '8',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'absint', //converts value to a non-negative integer
 			) );
-			$wp_customize->add_control( 'conversions_header_tpadding_control', array(
-				'label'      => __( 'Navbar top padding', 'conversions' ),
-				'description'=> __( 'Top padding in px', 'conversions' ),
+			$wp_customize->add_control( 'conversions_header_tbpadding_control', array(
+				'label'      => __( 'Navbar padding', 'conversions' ),
+				'description'=> __( 'Padding in px', 'conversions' ),
 				'section'    => 'conversions_nav',
-				'settings'   => 'conversions_header_tpadding',
+				'settings'   => 'conversions_header_tbpadding',
 				'priority'   => 40,
-				'type'       => 'number',
-				'input_attrs'=> array(
-					'min' => 1,
-					'max' => 1000,
-				),
-			) );
-			$wp_customize->add_setting( 'conversions_header_bpadding', array(
-				'default'       => '8',
-				'type'          => 'theme_mod',
-				'capability'    => 'edit_theme_options',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'absint', //converts value to a non-negative integer
-			) );
-			$wp_customize->add_control( 'conversions_header_bpadding_control', array(
-				'label'      => __( 'Navbar bottom padding', 'conversions' ),
-				'description'=> __( 'Bottom padding in px', 'conversions' ),
-				'section'    => 'conversions_nav',
-				'settings'   => 'conversions_header_bpadding',
-				'priority'   => 50,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
@@ -1537,10 +1518,9 @@ namespace conversions
 			else {
 				$logo_height = 30;
 			}
-			$header_top_padding = get_theme_mod( 'conversions_header_tpadding', '8' );
-			$header_bottom_padding = get_theme_mod( 'conversions_header_bpadding', '8' );
+			$header_tbpadding = get_theme_mod( 'conversions_header_tbpadding', '8' );
 			$logo_padding = 10;
-			$total_header_height = $logo_height + $header_top_padding + $header_bottom_padding + $logo_padding - 1;
+			$total_header_height = $logo_height + $header_tbpadding + $header_tbpadding + $logo_padding - 1;
 			$header_offset = $total_header_height + 50;
 
 			// WC button option
@@ -1593,8 +1573,8 @@ namespace conversions
 					}
 				<?php } ?>
 				.navbar {
-					padding-top: <?php echo esc_html( get_theme_mod( 'conversions_header_tpadding', '8' ) ); ?>px;
-					padding-bottom: <?php echo esc_html( get_theme_mod( 'conversions_header_bpadding', '8' ) ); ?>px;
+					padding-top: <?php echo esc_html( get_theme_mod( 'conversions_header_tbpadding', '8' ) ); ?>px;
+					padding-bottom: <?php echo esc_html( get_theme_mod( 'conversions_header_tbpadding', '8' ) ); ?>px;
 				}
 				<?php if ( get_theme_mod( 'conversions_header_dropshadow', true ) == true ) { ?>
 					/* Header drop shadow */
