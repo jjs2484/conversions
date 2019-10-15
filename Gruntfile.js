@@ -15,50 +15,56 @@ module.exports = function(grunt) {
 			}
 		},
 		uglify: {
-  			options: {
-      			mangle: false,
-   			},
-   			my_target: {
-    			files: {
-        			'build/theme.min.js': ['build/theme.js']
-    			}
+  		options: {
+      	mangle: false,
+   		},
+   		my_target: {
+    		files: {
+        	'build/theme.min.js': ['build/theme.js']
     		}
-  		},
+    	}
+  	},
 		sass: {
-    		dist: {
-     			options: {
-        			style: 'nested',
-        			precision: 5,
-    			},
-      			files: {
-        			'build/main.css': 'sass/theme.scss',
-        			'build/gutenberg-editor-style.css': 'sass/gutenberg-editor-style.scss',
-        			'build/classic-editor-style.css': 'sass/classic-editor-style.scss',
-      			}
+    	dist: {
+     		options: {
+        	style: 'nested',
+        	precision: 5,
+    		},
+      	files: {
+        	'build/main.css': 'sass/theme.scss',
+          'build/font-awesome.css': 'sass/font-awesome.scss',
+        	'build/gutenberg-editor-style.css': 'sass/gutenberg-editor-style.scss',
+        	'build/classic-editor-style.css': 'sass/classic-editor-style.scss',
+          'build/customizer-repeater.css': 'sass/customizer-repeater.scss',
+          'build/fontawesome-iconpicker.css': 'sass/fontawesome-iconpicker.scss',
+      	}
+    	}
+		},
+    postcss: {
+  		options: {
+    		processors: [
+      		require('autoprefixer')({overrideBrowserslist: ['last 10 version']})
+    		]
+  		},
+  		dist: {
+    		src: 'build/main.css'
+  		}
+		},
+  	cssmin: {
+  		target: {
+   			files: {
+    			'build/main.min.css': ['build/main.css'],
+          'build/font-awesome.min.css': ['build/font-awesome.css'],
+          'build/customizer-repeater.min.css': ['build/customizer-repeater.css'],
+          'build/fontawesome-iconpicker.min.css': 'build/fontawesome-iconpicker.css',
     		}
-		},
-    	postcss: {
-  			options: {
-    			processors: [
-      				require('autoprefixer')({overrideBrowserslist: ['last 10 version']})
-    			]
-  			},
-  			dist: {
-    			src: 'build/main.css'
-  			}
-		},
-  		cssmin: {
-  			target: {
-   				files: {
-    				'build/main.min.css': ['build/main.css']
-    			}
-  			}
+  		}
 		},
 		watch: {
-  			scripts: {
-				files: ['sass/*.scss'],
-				tasks: ['sass', 'postcss', 'cssmin'],
-  			},
+  		scripts: {
+			 files: ['sass/*.scss'],
+			 tasks: ['sass', 'postcss', 'cssmin'],
+  		},
 		},
 	});
 

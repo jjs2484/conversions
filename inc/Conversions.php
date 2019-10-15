@@ -151,9 +151,7 @@ namespace conversions
 				),
 			) );
 
-			// check if settings are set, if not set defaults.
-			// Caution: DO NOT check existence using === always check with == .
-
+			// Check if settings are set, if not set defaults.
 			$defaults = array(
 				'conversions_logo_height' => '60',
 				'conversions_header_position' => 'fixed-top',

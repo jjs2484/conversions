@@ -20,6 +20,7 @@ namespace conversions
 			add_filter( 'woocommerce_add_to_cart_fragments', [ $this, 'woocommerce_add_to_cart_fragments' ] );
 			add_filter( 'wp_nav_menu_items', [ $this, 'wp_nav_menu_items' ], 10, 2 );
 		}
+
 		/**
 			@brief		conversions_output_social
 			@since		2019-08-15 23:29:01
@@ -64,6 +65,9 @@ namespace conversions
 		**/
 		public function customize_register( $wp_customize )
 		{
+			// require customizer repeater
+			require get_template_directory() . '/inc/Customizer_Repeater.php';
+			
 			// font choices
 			$font_choices = array(
 				'Comfortaa:400,700' => __( 'Comfortaa', 'conversions' ),
@@ -151,39 +155,15 @@ namespace conversions
 			) );
 
 			//-----------------------------------------------------
-			// Header section
+			// Navigation section
 			//-----------------------------------------------------
-			$wp_customize->add_section( 'conversions_header', array(
-				'title'             => __('Header', 'conversions'),
-				'priority'          => 10,
-				'description'       => __('Select your header colors', 'conversions'),
+			$wp_customize->add_section( 'conversions_nav' , array(
+				'title'             => __('Navbar', 'conversions'),
+				'priority'          => 20,
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_theme_options',
 			) );
 			// Create our settings
-			$wp_customize->add_setting( 'conversions_header_position', array(
-				'default'           => 'fixed-top',
-				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
-				'capability'        => 'edit_theme_options',
-				'transport'     => 'refresh',
-			) );
-			$wp_customize->add_control(
-				new \WP_Customize_Control(
-					$wp_customize,
-					'conversions_header_position', array(
-						'label'       => __( 'Header position', 'conversions' ),
-						'description' => __( 'Should the header be fixed or normal?', 'conversions' ),
-						'section'     => 'conversions_header',
-						'settings'    => 'conversions_header_position',
-						'type'        => 'select',
-						'choices'     => array(
-							'header-p-n' => __( 'Normal', 'conversions' ),
-							'fixed-top'       => __( 'Fixed', 'conversions' ),
-						),
-						'priority'    => '10',
-					)
-			) );
 			$wp_customize->add_setting( 'conversions_header_colors', array(
 				'default'           => 'dark',
 				'type'              => 'theme_mod',
@@ -195,9 +175,9 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_header_colors', array(
-						'label'       => __( 'Header color scheme', 'conversions' ),
-						'description' => __( 'Choose a header color scheme', 'conversions' ),
-						'section'     => 'conversions_header',
+						'label'       => __( 'Navbar color scheme', 'conversions' ),
+						'description' => __( 'Choose a Navbar color scheme', 'conversions' ),
+						'section'     => 'conversions_nav',
 						'settings'    => 'conversions_header_colors',
 						'type'        => 'select',
 						'choices'     => array(
@@ -210,6 +190,29 @@ namespace conversions
 							'danger' => __( 'Danger', 'conversions' ),
 							'warning' => __( 'Warning', 'conversions' ),
 							'info' => __( 'Info', 'conversions' ),
+						),
+						'priority'    => '10',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_header_position', array(
+				'default'           => 'fixed-top',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_header_position', array(
+						'label'       => __( 'Navbar position', 'conversions' ),
+						'description' => __( 'Should the Navbar be fixed or normal?', 'conversions' ),
+						'section'     => 'conversions_nav',
+						'settings'    => 'conversions_header_position',
+						'type'        => 'select',
+						'choices'     => array(
+							'header-p-n' => __( 'Normal', 'conversions' ),
+							'fixed-top'       => __( 'Fixed', 'conversions' ),
 						),
 						'priority'    => '20',
 					)
@@ -225,9 +228,9 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_header_dropshadow', array(
-						'label'       => __( 'Header drop shadow', 'conversions' ),
-						'description' => __( 'Add a drop shadow to the header?', 'conversions' ),
-						'section'     => 'conversions_header',
+						'label'       => __( 'Navbar drop shadow', 'conversions' ),
+						'description' => __( 'Add a drop shadow to the Navbar?', 'conversions' ),
+						'section'     => 'conversions_nav',
 						'settings'    => 'conversions_header_dropshadow',
 						'type'        => 'checkbox',
 						'priority'    => '30',
@@ -241,9 +244,9 @@ namespace conversions
 				'sanitize_callback' => 'absint', //converts value to a non-negative integer
 			) );
 			$wp_customize->add_control( 'conversions_header_tpadding_control', array(
-				'label'      => __( 'Header top padding', 'conversions' ),
+				'label'      => __( 'Navbar top padding', 'conversions' ),
 				'description'=> __( 'Top padding in px', 'conversions' ),
-				'section'    => 'conversions_header',
+				'section'    => 'conversions_nav',
 				'settings'   => 'conversions_header_tpadding',
 				'priority'   => 40,
 				'type'       => 'number',
@@ -260,9 +263,9 @@ namespace conversions
 				'sanitize_callback' => 'absint', //converts value to a non-negative integer
 			) );
 			$wp_customize->add_control( 'conversions_header_bpadding_control', array(
-				'label'      => __( 'Header bottom padding', 'conversions' ),
+				'label'      => __( 'Navbar bottom padding', 'conversions' ),
 				'description'=> __( 'Bottom padding in px', 'conversions' ),
-				'section'    => 'conversions_header',
+				'section'    => 'conversions_nav',
 				'settings'   => 'conversions_header_bpadding',
 				'priority'   => 50,
 				'type'       => 'number',
@@ -271,39 +274,23 @@ namespace conversions
 					'max' => 1000,
 				),
 			) );
-
-			//-----------------------------------------------------
-			// Navigation section
-			//-----------------------------------------------------
-			$wp_customize->add_section( 'conversions_nav' , array(
-				'title'             => __('Navigation', 'conversions'),
-				'priority'          => 20,
-				'description'       => __('Select your navigation settings', 'conversions'),
-				'capability'        => 'edit_theme_options',
-				'panel'             => 'conversions_theme_options',
-			) );
-			// Create our settings
-			$wp_customize->add_setting( 'conversions_nav_mobile_type', array(
-				'default'           => 'offcanvas',
+			$wp_customize->add_setting( 'conversions_nav_search_icon', array(
+				'default'           => true,
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
 				'capability'        => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
 			$wp_customize->add_control(
 				new \WP_Customize_Control(
 					$wp_customize,
-					'conversions_nav_mobile_type', array(
-						'label'       => __( 'Mobile navigation type', 'conversions' ),
-						'description' => __( 'Offcanvas or slide down mobile nav?', 'conversions' ),
+					'conversions_nav_search_icon', array(
+						'label'       => __( 'Navbar search icon', 'conversions' ),
+						'description' => __( 'Add a search icon to the Navbar?', 'conversions' ),
 						'section'     => 'conversions_nav',
-						'settings'    => 'conversions_nav_mobile_type',
-						'type'        => 'select',
-						'choices'     => array(
-							'offcanvas' => __( 'Offcanvas', 'conversions' ),
-							'collapse'       => __( 'Slide down', 'conversions' ),
-						),
-						'priority'    => '30',
+						'settings'    => 'conversions_nav_search_icon',
+						'type'        => 'checkbox',
+						'priority'    => '60',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_nav_button', array(
@@ -317,13 +304,13 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_nav_button', array(
-						'label'       => __( 'Add button to navigation', 'conversions' ),
+						'label'       => __( 'Add button to Navbar?', 'conversions' ),
 						'description' => __( 'Choose the type of button.', 'conversions' ),
 						'section'     => 'conversions_nav',
 						'settings'    => 'conversions_nav_button',
 						'type'        => 'select',
 						'choices'     => $alt_button_choices,
-						'priority'    => '40',
+						'priority'    => '70',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_nav_button_text', array(
@@ -333,11 +320,11 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_nav_button_text_control', array(
-				'label'      => __( 'Navigation button text', 'conversions' ),
+				'label'      => __( 'Button text', 'conversions' ),
 				'description'=> __('Add text for button to display.', 'conversions'),
 				'section'    => 'conversions_nav',
 				'settings'   => 'conversions_nav_button_text',
-				'priority'   => 50,
+				'priority'   => 80,
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_nav_button_url', array(
@@ -347,30 +334,34 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_nav_button_url_control', array(
-				'label'      => __( 'Navigation button URL', 'conversions' ),
+				'label'      => __( 'Button URL', 'conversions' ),
 				'description'=> __('Where should the button link to?', 'conversions'),
 				'section'    => 'conversions_nav',
 				'settings'   => 'conversions_nav_button_url',
-				'priority'   => 60,
+				'priority'   => 90,
 				'type'       => 'text',
 			) );
-			$wp_customize->add_setting( 'conversions_nav_search_icon', array(
-				'default'           => true,
+			$wp_customize->add_setting( 'conversions_nav_mobile_type', array(
+				'default'           => 'offcanvas',
 				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_checkbox',
+				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
 				'transport'     => 'refresh',
 			) );
 			$wp_customize->add_control(
 				new \WP_Customize_Control(
 					$wp_customize,
-					'conversions_nav_search_icon', array(
-						'label'       => __( 'Show search icon?', 'conversions' ),
-						'description' => __( 'Show or hide a search icon in the nav.', 'conversions' ),
+					'conversions_nav_mobile_type', array(
+						'label'       => __( 'Mobile Navbar type', 'conversions' ),
+						'description' => __( 'Offcanvas or slide down mobile nav?', 'conversions' ),
 						'section'     => 'conversions_nav',
-						'settings'    => 'conversions_nav_search_icon',
-						'type'        => 'checkbox',
-						'priority'    => '70',
+						'settings'    => 'conversions_nav_mobile_type',
+						'type'        => 'select',
+						'choices'     => array(
+							'offcanvas' => __( 'Offcanvas', 'conversions' ),
+							'collapse'       => __( 'Slide down', 'conversions' ),
+						),
+						'priority'    => '100',
 					)
 			) );
 
@@ -1439,6 +1430,34 @@ namespace conversions
 				'type'       => 'text',
 			) );
 
+			//-----------------------------------------------------
+			// Homepage Clients section
+			//-----------------------------------------------------
+			$wp_customize->add_section( 'conversions_homepage_clients', array(
+				'title'             => __('Clients', 'conversions'),
+				'priority'          => 20,
+				'description'       => __('Settings for the homepage client section.', 'conversions'),
+				'capability'        => 'edit_theme_options',
+				'panel'             => 'conversions_homepage',
+			) );
+      		$wp_customize->add_setting( 'conversions_hc_logos', array(
+				'default'       => '',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+         		'sanitize_callback' => 'customizer_repeater_sanitize'
+      		) );
+      		$wp_customize->add_control( 
+      			new \Customizer_Repeater( 
+      				$wp_customize, 
+      				'conversions_hc_logos', array(
+						'label'   => __( 'Client logo', 'conversions' ),
+						'description'=> __('Add client logos.', 'conversions'),
+						'section' => 'conversions_homepage_clients',
+						'priority' => 10,
+						'customizer_repeater_image_control' => true,
+ 					) 
+      		) );
+
 		}
 		/**
 			@brief		Return a list of social media icons.
@@ -1785,11 +1804,7 @@ namespace conversions
 namespace
 {
 	/**
-	 * Select sanitization function
-	 *
-	 * @param string $input Slug to sanitize.
-	 * @param WP_Customize_Setting $setting Setting instance.
-	 * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
+	 * Select sanitization
 	 */
 	function conversions_sanitize_select( $input, $setting )
 	{
@@ -1801,7 +1816,7 @@ namespace
 	}
 
 	/**
-	 * Float sanitization function.
+	 * Float sanitization
 	 */
 	function conversions_sanitize_float( $input ) 
 	{
@@ -1810,10 +1825,28 @@ namespace
     }
 
     /**
-	 * Checkbox sanitization function.
+	 * Checkbox sanitization
 	 */
 	function conversions_sanitize_checkbox( $input ) 
 	{
 		return ( $input === true ) ? true : false;
 	}
+
+	/**
+	 * Repeater sanitization
+	 */
+	function customizer_repeater_sanitize($input)
+	{
+		$input_decoded = json_decode($input,true);
+		if(!empty($input_decoded)) {
+			foreach ($input_decoded as $boxk => $box ){
+				foreach ($box as $key => $value){
+					$input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
+				}
+			}
+			return json_encode($input_decoded);
+		}
+		return $input;
+	}
+
 }

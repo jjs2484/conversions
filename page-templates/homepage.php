@@ -78,7 +78,33 @@ get_header();
 
   				<!-- Client logos -->
 					<div class="c-clients__carousel text-center mb-0 py-4">
-  					<div class="c-clients__item py-6 px-3">
+  					
+          <?php
+            $chc_logos = get_theme_mod( 'conversions_hc_logos' );
+            /*This returns a json so we have to decode it*/
+            $chc_logos_decoded = json_decode( $chc_logos );
+      
+            if ( !empty( $chc_logos_decoded ) ) {
+              foreach( $chc_logos_decoded as $chc_logo ){
+                
+                // Get img id
+                $chc_url = $chc_logo->image_url;
+                $chc_logo_id = conversions()->template->conversions_id_by_url( $chc_url );
+                // Retrieve the correct img size
+                $chc_logo_med = wp_get_attachment_image_src( $chc_logo_id, 'medium' );
+                // Retrieve the alt text
+                $chc_logo_alt = get_post_meta( $chc_logo_id, '_wp_attachment_image_alt', true );
+
+                echo '<div class="c-clients__item py-6 px-3">
+                  <img class="client" src="'. esc_url( $chc_logo_med[0] ) .'" alt="'. esc_html( $chc_logo_alt ) .'">
+                </div>';
+              
+              }
+            }
+          ?>
+
+
+            <div class="c-clients__item py-6 px-3">
     					<img class="client" src="//i.imgur.com/NpmZS3w.png" alt="Image Description">
   					</div>
   					<div class="c-clients__item py-6 px-3">

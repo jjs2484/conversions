@@ -381,7 +381,7 @@ class Template
  	*
  	* @return array
  	*/
-	function conversions_sticky_classes( $classes ) {
+	public function conversions_sticky_classes( $classes ) {
 
     	// Bail if this is not a sticky post.
     	if ( ! is_sticky() ) {
@@ -396,6 +396,34 @@ class Template
     	}
 
     	return $classes;
+	}
+
+
+	/**
+		@brief		conversions_attachment_id_by_url
+		@since		2019-10-15 01:23:07
+		
+		- For the clients section images on page-templates/homepage.php
+		- Extends attachment_url_to_postid function.
+		- Removes crop size which can prevent the ID from being returned.
+	**/
+	public function conversions_id_by_url( $chc_url ) {
+    	$post_id = attachment_url_to_postid( $chc_url );
+
+    	if ( ! $post_id ){
+        	$dir = wp_upload_dir();
+        	$path = $chc_url;
+        	
+        	if ( 0 === strpos( $path, $dir['baseurl'] . '/' ) ) {
+            	$path = substr( $path, strlen( $dir['baseurl'] . '/' ) );
+        	}
+
+        	if ( preg_match( '/^(.*)(\-\d*x\d*)(\.\w{1,})/i', $path, $matches ) ){
+            	$chc_url = $dir['baseurl'] . '/' . $matches[1] . $matches[3];
+            	$post_id = attachment_url_to_postid( $chc_url );
+        	}
+    	}
+    	return (int) $post_id;
 	}
 
 }
