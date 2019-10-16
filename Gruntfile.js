@@ -2,25 +2,22 @@ module.exports = function(grunt) {
 
 	// Configuration
 	grunt.initConfig({
-		concat: {
-			js: {
-				src: [
-          'src/js/bootstrap4/bootstrap.bundle.js',
-          'src/js/skip-link-focus-fix.js', 
-          'src/js/slick/slick.js', 
-          'src/js/fancybox/jquery.fancybox.js', 
-          'js/theme.js'
-        ],
-				dest: 'build/theme.js'
-			}
-		},
+    concat: {
+      basic_and_extras: {
+        files: {
+          'build/theme.js': ['src/js/bootstrap4/bootstrap.bundle.js', 'src/js/skip-link-focus-fix.js', 'src/js/slick/slick.js', 'src/js/fancybox/jquery.fancybox.js', 'js/theme.js'],
+          'build/repeater.js': ['js/customizer_repeater.js', 'js/fontawesome-iconpicker.js'],
+        },
+      },
+    },
 		uglify: {
   		options: {
       	mangle: false,
    		},
    		my_target: {
     		files: {
-        	'build/theme.min.js': ['build/theme.js']
+        	'build/theme.min.js': ['build/theme.js'],
+          'build/repeater.min.js': ['build/repeater.js'],
     		}
     	}
   	},
@@ -36,7 +33,6 @@ module.exports = function(grunt) {
         	'build/gutenberg-editor-style.css': 'sass/gutenberg-editor-style.scss',
         	'build/classic-editor-style.css': 'sass/classic-editor-style.scss',
           'build/customizer-repeater.css': 'sass/customizer-repeater.scss',
-          'build/fontawesome-iconpicker.css': 'sass/fontawesome-iconpicker.scss',
       	}
     	}
 		},
@@ -55,8 +51,9 @@ module.exports = function(grunt) {
    			files: {
     			'build/main.min.css': ['build/main.css'],
           'build/font-awesome.min.css': ['build/font-awesome.css'],
+          'build/gutenberg-editor-style.min.css': ['build/gutenberg-editor-style.css'],
+          'build/classic-editor-style.min.css': ['build/classic-editor-style.css'],
           'build/customizer-repeater.min.css': ['build/customizer-repeater.css'],
-          'build/fontawesome-iconpicker.min.css': 'build/fontawesome-iconpicker.css',
     		}
   		}
 		},
@@ -77,7 +74,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Register Tasks
-	grunt.registerTask('concat-js', ['concat:js']);
+	grunt.registerTask('concat-js', ['concat']);
   grunt.registerTask('compile-sass', ['sass']);
   grunt.registerTask('prefix-css', ['postcss']);
 	grunt.registerTask('uglify-js', ['uglify']);

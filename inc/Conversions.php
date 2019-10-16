@@ -99,7 +99,7 @@ namespace conversions
 			add_theme_support( 'custom-logo' );
 
 			// Add classic editor styles
-			add_editor_style( 'build/classic-editor-style.css' );
+			add_editor_style( 'build/classic-editor-style.min.css' );
 
 			// Add support for responsive embedded content - gutenberg
 			add_theme_support( 'responsive-embeds' );

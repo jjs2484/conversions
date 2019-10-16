@@ -56,7 +56,7 @@ class Enqueue
 		wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/js/editor.js' ), true );
 
 		// Editor styles
-		wp_register_style( 'conversions-gutenberg', get_stylesheet_directory_uri() . '/build/gutenberg-editor-style.css' );
+		wp_register_style( 'conversions-gutenberg', get_stylesheet_directory_uri() . '/build/gutenberg-editor-style.min.css' );
 		wp_enqueue_style( 'conversions-gutenberg' );
 
 		// Are Google fonts enabled?

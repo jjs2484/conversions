@@ -95,9 +95,7 @@ class Customizer_Repeater extends \WP_Customize_Control {
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/build/font-awesome.min.css', array(), '5.10.2' );
 		wp_enqueue_style( 'customizer-repeater-css', get_template_directory_uri().'/build/customizer-repeater.min.css', array(), '1.0' );
 		wp_enqueue_style( 'wp-color-picker' );
-		wp_enqueue_script( 'customizer-repeater-js', get_template_directory_uri() . '/js/customizer_repeater.js', array('jquery', 'jquery-ui-draggable', 'wp-color-picker' ), '1.0', true  );
-		wp_enqueue_script( 'fontawesome-iconpicker-js', get_template_directory_uri() . '/js/fontawesome-iconpicker.js', array( 'jquery' ), '1.0', true );
-		wp_enqueue_style( 'fontawesome-iconpicker-css', get_template_directory_uri() . '/build/fontawesome-iconpicker.min.css', array(), '1.0' );
+		wp_enqueue_script( 'repeater-js', get_template_directory_uri() . '/build/repeater.min.js', array('jquery', 'jquery-ui-draggable', 'wp-color-picker' ), '1.0', true  );
 	}
 
 	public function render_content() {
