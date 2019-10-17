@@ -155,7 +155,7 @@ namespace conversions
 			) );
 
 			//-----------------------------------------------------
-			// Navigation section
+			// Navbar section
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_nav' , array(
 				'title'             => __('Navbar', 'conversions'),
@@ -1047,11 +1047,11 @@ namespace conversions
 			// WooCommerce Options
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_woocommerce', array(
-				'title' => __( 'WooCommerce', 'conversions' ),
+				'title' => __( 'Conversions', 'conversions' ),
 				'description'       => __('WooCommerce Options', 'conversions'),
 				'capability'        => 'edit_theme_options',
-				'panel'             => 'conversions_theme_options',
-				'priority' => 110,
+				'panel'             => 'woocommerce',
+				'priority' => 100,
 				'theme_supports' => array('woocommerce'),
 			));
 			// Create our settings
@@ -1066,8 +1066,8 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_wccart_nav', array(
-						'label'       => __( 'Cart icon in navigation', 'conversions' ),
-						'description' => __( 'Enable cart icon in the navigation.', 'conversions' ),
+						'label'       => __( 'Cart icon in navbar', 'conversions' ),
+						'description' => __( 'Enable cart icon in the navbar.', 'conversions' ),
 						'section'     => 'conversions_woocommerce',
 						'settings'    => 'conversions_wccart_nav',
 						'type'        => 'checkbox',
@@ -1085,8 +1085,8 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_wc_account', array(
-						'label'       => __( 'Account icon in navigation', 'conversions' ),
-						'description' => __( 'Enable Account icon in the navigation.', 'conversions' ),
+						'label'       => __( 'Account icon in navbar', 'conversions' ),
+						'description' => __( 'Enable Account icon in the navbar.', 'conversions' ),
 						'section'     => 'conversions_woocommerce',
 						'settings'    => 'conversions_wc_account',
 						'type'        => 'checkbox',
@@ -1161,7 +1161,7 @@ namespace conversions
 			// Homepage section
 			//-----------------------------------------------------
 			$wp_customize->add_panel( 'conversions_homepage', array(
-				'priority'          => 121,
+				'priority'          => 119,
 				'title'             => __('Homepage Design', 'conversions'),
 				'description'       => __('Settings for the Homepage template', 'conversions'),
 				'capability'        => 'edit_theme_options',
