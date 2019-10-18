@@ -1425,10 +1425,10 @@ namespace conversions
 				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
-         		'sanitize_callback' => 'customizer_repeater_sanitize'
+         		'sanitize_callback' => 'conversions_repeater_sanitize',
       		) );
       		$wp_customize->add_control( 
-      			new \Customizer_Repeater( 
+      			new \Conversions_Repeater( 
       				$wp_customize, 
       				'conversions_hc_logos', array(
 						'label'   => __( 'Client logo', 'conversions' ),
@@ -1436,6 +1436,39 @@ namespace conversions
 						'section' => 'conversions_homepage_clients',
 						'priority' => 10,
 						'customizer_repeater_image_control' => true,
+ 					) 
+      		) );
+
+
+      		//-----------------------------------------------------
+			// Homepage Features section
+			//-----------------------------------------------------
+			$wp_customize->add_section( 'conversions_homepage_features', array(
+				'title'             => __('Features', 'conversions'),
+				'priority'          => 30,
+				'description'       => __('Settings for the homepage features section.', 'conversions'),
+				'capability'        => 'edit_theme_options',
+				'panel'             => 'conversions_homepage',
+			) );
+
+			$wp_customize->add_setting( 'conversions_hf_icon_block', array(
+				'default'       => '',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+         		'sanitize_callback' => 'conversions_repeater_sanitize',
+      		) );
+      		$wp_customize->add_control( 
+      			new \Conversions_Repeater( 
+      				$wp_customize, 
+      				'conversions_hf_icon_block', array(
+						'label'   => __( 'Icon block', 'conversions' ),
+						'description'=> __('Add featured icon block.', 'conversions'),
+						'section' => 'conversions_homepage_features',
+						'priority' => 10,
+						'customizer_repeater_icon_control' => true,
+						'customizer_repeater_title_control' => true,
+						'customizer_repeater_text_control' => true,
+						'customizer_repeater_link_control' => true,
  					) 
       		) );
 
@@ -1815,7 +1848,7 @@ namespace
 	/**
 	 * Repeater sanitization
 	 */
-	function customizer_repeater_sanitize($input)
+	function conversions_repeater_sanitize($input)
 	{
 		$input_decoded = json_decode($input,true);
 		if(!empty($input_decoded)) {

@@ -85,8 +85,10 @@ get_header();
             $chc_logos_decoded = json_decode( $chc_logos );
       
             if ( !empty( $chc_logos_decoded ) ) {
+              
+              $count = 0;
+              
               foreach( $chc_logos_decoded as $chc_logo ){
-                
                 // Get img id
                 $chc_url = $chc_logo->image_url;
                 $chc_logo_id = conversions()->template->conversions_id_by_url( $chc_url );
@@ -95,10 +97,11 @@ get_header();
                 // Retrieve the alt text
                 $chc_logo_alt = get_post_meta( $chc_logo_id, '_wp_attachment_image_alt', true );
 
-                echo '<div class="c-clients__item py-6 px-3">
+                echo '<div class="c-clients__item py-6 px-3" id="c-clients__'.$count.'">
                   <img class="client" src="'. esc_url( $chc_logo_med[0] ) .'" alt="'. esc_html( $chc_logo_alt ) .'">
                 </div>';
-              
+                
+                ++$count;
               }
             }
           ?>
@@ -142,18 +145,33 @@ get_header();
 
       <!-- Features -->
   <div class="card-deck d-block d-lg-flex">
-    <div class="card border-0 mb-3 mb-lg-0 text-center">
+    
+
+    
+
+<?php
+    $conversions_hf_icon_block = get_theme_mod('conversions_hf_icon_block');
+      /*This returns a json so we have to decode it*/
+      $conversions_hf_icon_block_decoded = json_decode($conversions_hf_icon_block);
+      
+      if ( !empty( $conversions_hf_icon_block_decoded ) ) {
+      foreach($conversions_hf_icon_block_decoded as $hf_icon_block){ ?>
+          <div class="card border-0 mb-3 mb-lg-0 text-center">
       <!-- Icon Blocks -->
       <div class="card-body p-1">
         <span class="c-icon-block__icon">
-            <i class="fas fa-coffee text-success"></i>
+            <i class="<?php echo $hf_icon_block->icon_value; ?> text-success"></i>
           </span>
-        <h3 class="h5">Responsive</h3>
-        <p class="text-muted">Front is an incredibly beautiful, fully responsive, and mobile-first projects on the web.</p>
-        <a href="#">Explore now <span class="fas fa-angle-right align-middle ml-2"></span></a>
+        <h3 class="h5"><?php echo $hf_icon_block->title; ?></h3>
+        <p class="text-muted"><?php echo $hf_icon_block->text; ?></p>
+        <a href="<?php echo $hf_icon_block->link; ?>">Explore now <span class="fas fa-angle-right align-middle ml-2"></span></a>
       </div>
       <!-- End Icon Blocks -->
     </div>
+
+    <?php  }
+  }
+?>
 
     <div class="card border-0 mb-3 mb-lg-0 text-center">
       <!-- Icon Blocks -->

@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       basic_and_extras: {
         files: {
           'build/theme.js': ['src/js/bootstrap4/bootstrap.bundle.js', 'src/js/skip-link-focus-fix.js', 'src/js/slick/slick.js', 'src/js/fancybox/jquery.fancybox.js', 'js/theme.js'],
-          'build/repeater.js': ['js/customizer_repeater.js', 'js/fontawesome-iconpicker.js'],
+          'build/conversions-repeater.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js'],
         },
       },
     },
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
    		my_target: {
     		files: {
         	'build/theme.min.js': ['build/theme.js'],
-          'build/repeater.min.js': ['build/repeater.js'],
+          'build/conversions-repeater.min.js': ['build/conversions-repeater.js'],
     		}
     	}
   	},
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
           'build/font-awesome.css': 'sass/font-awesome.scss',
         	'build/gutenberg-editor-style.css': 'sass/gutenberg-editor-style.scss',
         	'build/classic-editor-style.css': 'sass/classic-editor-style.scss',
-          'build/customizer-repeater.css': 'sass/customizer-repeater.scss',
+          'build/conversions-repeater.css': 'sass/conversions-repeater.scss',
       	}
     	}
 		},
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
           'build/font-awesome.min.css': ['build/font-awesome.css'],
           'build/gutenberg-editor-style.min.css': ['build/gutenberg-editor-style.css'],
           'build/classic-editor-style.min.css': ['build/classic-editor-style.css'],
-          'build/customizer-repeater.min.css': ['build/customizer-repeater.css'],
+          'build/conversions-repeater.min.css': ['build/conversions-repeater.css'],
     		}
   		}
 		},

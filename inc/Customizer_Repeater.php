@@ -2,7 +2,7 @@
 if ( ! class_exists( 'WP_Customize_Control' ) ) {
 	return null;
 }
-class Customizer_Repeater extends \WP_Customize_Control {
+class Conversions_Repeater extends \WP_Customize_Control {
 	public $id;
 	private $boxtitle = array();
 	private $add_field_label = array();
@@ -75,8 +75,8 @@ class Customizer_Repeater extends \WP_Customize_Control {
 			$this->id = $id;
 		}
 		
-		if ( file_exists( get_template_directory() . '/inc/customizer-icons.php' ) ) {
-			$this->customizer_icon_container =  '/inc/customizer-icons';
+		if ( file_exists( get_template_directory() . '/inc/Customizer_Icons.php' ) ) {
+			$this->customizer_icon_container =  '/inc/Customizer_Icons';
 		}
 		
 		$allowed_array1 = wp_kses_allowed_html( 'post' );
@@ -93,9 +93,9 @@ class Customizer_Repeater extends \WP_Customize_Control {
 	/*Enqueue resources for the control*/
 	public function enqueue() {
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/build/font-awesome.min.css', array(), '5.10.2' );
-		wp_enqueue_style( 'customizer-repeater-css', get_template_directory_uri().'/build/customizer-repeater.min.css', array(), '1.0' );
+		wp_enqueue_style( 'conversions-repeater-css', get_template_directory_uri().'/build/conversions-repeater.min.css', array(), '1.0' );
 		wp_enqueue_style( 'wp-color-picker' );
-		wp_enqueue_script( 'repeater-js', get_template_directory_uri() . '/build/repeater.min.js', array('jquery', 'jquery-ui-draggable', 'wp-color-picker' ), '1.0', true  );
+		wp_enqueue_script( 'conversions-repeater-js', get_template_directory_uri() . '/build/conversions-repeater.min.js', array('jquery', 'jquery-ui-draggable', 'wp-color-picker' ), '1.0', true  );
 	}
 
 	public function render_content() {
@@ -207,7 +207,7 @@ class Customizer_Repeater extends \WP_Customize_Control {
 							$this->input_control(array(
 								'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Color','conversions' ), $this->id, 'customizer_repeater_color_control' ),
 								'class' => 'customizer-repeater-color-control',
-								'type'  => apply_filters('customizer_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color_control' ),
+								'type'  => apply_filters('conversions_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color_control' ),
 								'sanitize_callback' => 'sanitize_hex_color',
 								'choice' => $choice,
 							), $color);
@@ -216,7 +216,7 @@ class Customizer_Repeater extends \WP_Customize_Control {
 							$this->input_control(array(
 								'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Color','conversions' ), $this->id, 'customizer_repeater_color2_control' ),
 								'class' => 'customizer-repeater-color2-control',
-								'type'  => apply_filters('customizer_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color2_control' ),
+								'type'  => apply_filters('conversions_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color2_control' ),
 								'sanitize_callback' => 'sanitize_hex_color'
 							), $color2);
 						}
@@ -224,21 +224,21 @@ class Customizer_Repeater extends \WP_Customize_Control {
 							$this->input_control(array(
 								'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Title','conversions' ), $this->id, 'customizer_repeater_title_control' ),
 								'class' => 'customizer-repeater-title-control',
-								'type'  => apply_filters('customizer_repeater_input_types_filter', '', $this->id, 'customizer_repeater_title_control' ),
+								'type'  => apply_filters('conversions_repeater_input_types_filter', '', $this->id, 'customizer_repeater_title_control' ),
 							), $title);
 						}
 						if($this->customizer_repeater_subtitle_control==true){
 							$this->input_control(array(
 								'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Subtitle','conversions' ), $this->id, 'customizer_repeater_subtitle_control' ),
 								'class' => 'customizer-repeater-subtitle-control',
-								'type'  => apply_filters('customizer_repeater_input_types_filter', '', $this->id, 'customizer_repeater_subtitle_control' ),
+								'type'  => apply_filters('conversions_repeater_input_types_filter', '', $this->id, 'customizer_repeater_subtitle_control' ),
 							), $subtitle);
 						}
 						if($this->customizer_repeater_text_control==true){
 							$this->input_control(array(
 								'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Text','conversions' ), $this->id, 'customizer_repeater_text_control' ),
 								'class' => 'customizer-repeater-text-control',
-								'type'  => apply_filters('customizer_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text_control' ),
+								'type'  => apply_filters('conversions_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text_control' ),
 							), $text);
 						}
 						if($this->customizer_repeater_link_control){
@@ -246,14 +246,14 @@ class Customizer_Repeater extends \WP_Customize_Control {
 								'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Link','conversions' ), $this->id, 'customizer_repeater_link_control' ),
 								'class' => 'customizer-repeater-link-control',
 								'sanitize_callback' => 'esc_url_raw',
-								'type'  => apply_filters('customizer_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link_control' ),
+								'type'  => apply_filters('conversions_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link_control' ),
 							), $link);
 						}
 						if($this->customizer_repeater_text2_control==true){
 							$this->input_control(array(
 								'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Text','conversions' ), $this->id, 'customizer_repeater_text2_control' ),
 								'class' => 'customizer-repeater-text2-control',
-								'type'  => apply_filters('customizer_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text2_control' ),
+								'type'  => apply_filters('conversions_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text2_control' ),
 							), $text2);
 						}
 						if($this->customizer_repeater_link2_control){
@@ -261,14 +261,14 @@ class Customizer_Repeater extends \WP_Customize_Control {
 								'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Link','conversions' ), $this->id, 'customizer_repeater_link2_control' ),
 								'class' => 'customizer-repeater-link2-control',
 								'sanitize_callback' => 'esc_url_raw',
-								'type'  => apply_filters('customizer_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link2_control' ),
+								'type'  => apply_filters('conversions_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link2_control' ),
 							), $link2);
 						}
 						if($this->customizer_repeater_shortcode_control==true){
 							$this->input_control(array(
 								'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Shortcode','conversions' ), $this->id, 'customizer_repeater_shortcode_control' ),
 								'class' => 'customizer-repeater-shortcode-control',
-								'type'  => apply_filters('customizer_repeater_input_types_filter', '', $this->id, 'customizer_repeater_shortcode_control' ),
+								'type'  => apply_filters('conversions_repeater_input_types_filter', '', $this->id, 'customizer_repeater_shortcode_control' ),
 							), $shortcode);
 						}
 						if($this->customizer_repeater_repeater_control==true){
@@ -310,7 +310,7 @@ class Customizer_Repeater extends \WP_Customize_Control {
 						$this->input_control(array(
 							'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Color','conversions' ), $this->id, 'customizer_repeater_color_control' ),
 							'class' => 'customizer-repeater-color-control',
-							'type'  => apply_filters('customizer_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color_control' ),
+							'type'  => apply_filters('conversions_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color_control' ),
 							'sanitize_callback' => 'sanitize_hex_color'
 						) );
 					}
@@ -318,7 +318,7 @@ class Customizer_Repeater extends \WP_Customize_Control {
 						$this->input_control(array(
 							'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Color','conversions' ), $this->id, 'customizer_repeater_color2_control' ),
 							'class' => 'customizer-repeater-color2-control',
-							'type'  => apply_filters('customizer_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color2_control' ),
+							'type'  => apply_filters('conversions_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color2_control' ),
 							'sanitize_callback' => 'sanitize_hex_color'
 						) );
 					}
@@ -326,49 +326,49 @@ class Customizer_Repeater extends \WP_Customize_Control {
 						$this->input_control( array(
 							'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Title','conversions' ), $this->id, 'customizer_repeater_title_control' ),
 							'class' => 'customizer-repeater-title-control',
-							'type'  => apply_filters('customizer_repeater_input_types_filter', '', $this->id, 'customizer_repeater_title_control' ),
+							'type'  => apply_filters('conversions_repeater_input_types_filter', '', $this->id, 'customizer_repeater_title_control' ),
 						) );
 					}
 					if ( $this->customizer_repeater_subtitle_control == true ) {
 						$this->input_control( array(
 							'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Subtitle','conversions' ), $this->id, 'customizer_repeater_subtitle_control' ),
 							'class' => 'customizer-repeater-subtitle-control',
-							'type'  => apply_filters('customizer_repeater_input_types_filter', '', $this->id, 'customizer_repeater_subtitle_control' ),
+							'type'  => apply_filters('conversions_repeater_input_types_filter', '', $this->id, 'customizer_repeater_subtitle_control' ),
 						) );
 					}
 					if ( $this->customizer_repeater_text_control == true ) {
 						$this->input_control( array(
 							'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Text','conversions' ), $this->id, 'customizer_repeater_text_control' ),
 							'class' => 'customizer-repeater-text-control',
-							'type'  => apply_filters('customizer_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text_control' ),
+							'type'  => apply_filters('conversions_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text_control' ),
 						) );
 					}
 					if ( $this->customizer_repeater_link_control == true ) {
 						$this->input_control( array(
 							'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Link','conversions' ), $this->id, 'customizer_repeater_link_control' ),
 							'class' => 'customizer-repeater-link-control',
-							'type'  => apply_filters('customizer_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link_control' ),
+							'type'  => apply_filters('conversions_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link_control' ),
 						) );
 					}
 					if ( $this->customizer_repeater_text2_control == true ) {
 						$this->input_control( array(
 							'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Text','conversions' ), $this->id, 'customizer_repeater_text2_control' ),
 							'class' => 'customizer-repeater-text2-control',
-							'type'  => apply_filters('customizer_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text2_control' ),
+							'type'  => apply_filters('conversions_repeater_input_types_filter', 'textarea', $this->id, 'customizer_repeater_text2_control' ),
 						) );
 					}
 					if ( $this->customizer_repeater_link2_control == true ) {
 						$this->input_control( array(
 							'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Link','conversions' ), $this->id, 'customizer_repeater_link2_control' ),
 							'class' => 'customizer-repeater-link2-control',
-							'type'  => apply_filters('customizer_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link2_control' ),
+							'type'  => apply_filters('conversions_repeater_input_types_filter', '', $this->id, 'customizer_repeater_link2_control' ),
 						) );
 					}
 					if ( $this->customizer_repeater_shortcode_control == true ) {
 						$this->input_control( array(
 							'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Shortcode','conversions' ), $this->id, 'customizer_repeater_shortcode_control' ),
 							'class' => 'customizer-repeater-shortcode-control',
-							'type'  => apply_filters('customizer_repeater_input_types_filter', '', $this->id, 'customizer_repeater_shortcode_control' ),
+							'type'  => apply_filters('conversions_repeater_input_types_filter', '', $this->id, 'customizer_repeater_shortcode_control' ),
 						) );
 					}
 					if($this->customizer_repeater_repeater_control==true){
