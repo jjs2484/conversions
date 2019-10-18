@@ -1454,6 +1454,25 @@ namespace conversions
 					'max' => 1000,
 				),
 			) );
+			$wp_customize->add_setting( 'conversions_hc_max_slides', array(
+				'default'       => '5',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_hc_max_slides_control', array(
+				'label'      => __('Max slides to show', 'conversions'),
+				'description'=> __('Max number of slides to show at once.', 'conversions'),
+				'section'    => 'conversions_homepage_clients',
+				'settings'   => 'conversions_hc_max_slides',
+				'priority'   => 30,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 20,
+				),
+			) );
       		$wp_customize->add_setting( 'conversions_hc_logos', array(
 				'default'       => '',
 				'type'          => 'theme_mod',
@@ -1466,7 +1485,7 @@ namespace conversions
       				'conversions_hc_logos', array(
 						'label'   => __( 'Client logo', 'conversions' ),
 						'section' => 'conversions_homepage_clients',
-						'priority' => 30,
+						'priority' => 40,
 						'customizer_repeater_image_control' => true,
  					) 
       		) );

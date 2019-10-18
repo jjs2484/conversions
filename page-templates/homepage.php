@@ -77,7 +77,7 @@ get_header();
   			<div class="col-12">
 
   				<!-- Client logos -->
-					<div class='c-clients__carousel text-center mb-0 py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":5,"slidesToScroll":5,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":4,"slidesToScroll":4}},{"breakpoint":768,"settings":{"slidesToShow":3,"slidesToScroll":3}},{"breakpoint":554,"settings":{"slidesToShow":2,"slidesToScroll":2}}]}'>
+					<div class='c-clients__carousel text-center mb-0 py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"slidesToScroll":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":4,"slidesToScroll":4}},{"breakpoint":768,"settings":{"slidesToShow":3,"slidesToScroll":3}},{"breakpoint":554,"settings":{"slidesToShow":2,"slidesToScroll":2}}]}'>
   					
           <?php
             $chc_logos = get_theme_mod( 'conversions_hc_logos' );
@@ -551,7 +551,6 @@ get_header();
       </div>
 		</div>
 	</section>
-
 
 </div><!-- Wrapper end -->
 
