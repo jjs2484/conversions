@@ -71,13 +71,13 @@ get_header();
   </section>
 
 	<!-- Clients section -->
-	<section class="c-clients border-top border-bottom" style="background-color: #F3F3F3;">
+	<section class="c-clients border-top border-bottom">
 		<div class="container-fluid">
 			<div class="row">
   			<div class="col-12">
 
   				<!-- Client logos -->
-					<div class="c-clients__carousel text-center mb-0 py-4">
+					<div class='c-clients__carousel text-center mb-0 py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":5,"slidesToScroll":5,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":4,"slidesToScroll":4}},{"breakpoint":768,"settings":{"slidesToShow":3,"slidesToScroll":3}},{"breakpoint":554,"settings":{"slidesToShow":2,"slidesToScroll":2}}]}'>
   					
           <?php
             $chc_logos = get_theme_mod( 'conversions_hc_logos' );
@@ -100,7 +100,7 @@ get_header();
                 echo '<div class="c-clients__item py-6 px-3" id="c-clients__'.$count.'">
                   <img class="client" src="'. esc_url( $chc_logo_med[0] ) .'" alt="'. esc_html( $chc_logo_alt ) .'">
                 </div>';
-                
+
                 ++$count;
               }
             }

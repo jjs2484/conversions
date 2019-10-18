@@ -89,36 +89,7 @@ jQuery(function () {
  * Initialize Slick client section
 */
 jQuery(document).ready(function(){
-    jQuery('.c-clients__carousel').slick({
-        arrows: true,
-        dots: false,
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        responsive: [
-        {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4,
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-            }
-        },
-        {
-            breakpoint: 554,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-            }
-        }
-        ]
-    });
+    jQuery('.c-clients__carousel').slick();
 });
 
 /**

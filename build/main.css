@@ -11817,8 +11817,13 @@ section.c-hero {
       section.c-hero .c-hero__fb-video .c-hero__video-text:hover {
         text-decoration: none; }
 
+section.c-clients .c-clients__item {
+  min-height: 1px;
+  display: none; }
+section.c-clients .slick-initialized .c-clients__item {
+  display: inline-block; }
 section.c-clients img.client {
-  width: 6rem;
+  width: 100%;
   height: auto;
   margin-left: auto;
   margin-right: auto; }
@@ -11838,6 +11843,15 @@ section.c-clients .slick-slider .slick-next {
     color: #aaa;
     opacity: 1;
     font-weight: 700; }
+section.c-clients .slick-slider .slick-track {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 section.c-clients .slick-slider .slick-slide {
   text-align: center; }
   section.c-clients .slick-slider .slick-slide::before {

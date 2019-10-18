@@ -105,8 +105,15 @@ section.c-hero {
 
 // Clients section
 section.c-clients {
+  .c-clients__item {
+    min-height: 1px;
+    display: none;
+  }
+  .slick-initialized .c-clients__item {
+    display: inline-block;
+  }
   img.client {
-    width: 6rem;
+    width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -131,6 +138,10 @@ section.c-clients {
         opacity: 1;
         font-weight: 700;
       }
+    }
+    .slick-track {
+      display: flex;
+      align-items: center;
     }
     .slick-slide {
       text-align: center;

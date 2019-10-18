@@ -212,6 +212,8 @@ namespace conversions
 				'conversions_hh_vbutton' => 'no',
 				'conversions_hh_vbutton_text' => 'Play Intro',
 				'conversions_hh_vbutton_url' => 'https://www.youtube.com/watch?v=_sI_Ps7JSEk',
+				'conversions_hc_background_color' => '#F3F3F3',
+				'conversions_hc_logo_width' => '100',
 			);
 
 			foreach ($defaults as $c => $v) {

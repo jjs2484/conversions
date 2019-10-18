@@ -1417,9 +1417,42 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_homepage_clients', array(
 				'title'             => __('Clients', 'conversions'),
 				'priority'          => 20,
-				'description'       => __('Settings for the homepage client section.', 'conversions'),
+				'description'       => __('Settings for the client section.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
+			) );
+			$wp_customize->add_setting( 'conversions_hc_background_color', array(
+				'default'       => '#F3F3F3',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_hc_background_color_control', array(
+				'label'      => __('Background color', 'conversions'),
+				'description'=> __('Client section background color.', 'conversions'),
+				'section'    => 'conversions_homepage_clients',
+				'settings'   => 'conversions_hc_background_color',
+				'priority'   => 10,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_hc_logo_width', array(
+				'default'       => '100',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_hc_logo_width_control', array(
+				'label'      => __('Client logo width', 'conversions'),
+				'description'=> __('Max logo width in px', 'conversions'),
+				'section'    => 'conversions_homepage_clients',
+				'settings'   => 'conversions_hc_logo_width',
+				'priority'   => 20,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 1000,
+				),
 			) );
       		$wp_customize->add_setting( 'conversions_hc_logos', array(
 				'default'       => '',
@@ -1432,9 +1465,8 @@ namespace conversions
       				$wp_customize, 
       				'conversions_hc_logos', array(
 						'label'   => __( 'Client logo', 'conversions' ),
-						'description'=> __('Add client logos.', 'conversions'),
 						'section' => 'conversions_homepage_clients',
-						'priority' => 10,
+						'priority' => 30,
 						'customizer_repeater_image_control' => true,
  					) 
       		) );
@@ -1446,7 +1478,7 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_homepage_features', array(
 				'title'             => __('Features', 'conversions'),
 				'priority'          => 30,
-				'description'       => __('Settings for the homepage features section.', 'conversions'),
+				'description'       => __('Settings for the features section.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );
@@ -1462,7 +1494,6 @@ namespace conversions
       				$wp_customize, 
       				'conversions_hf_icon_block', array(
 						'label'   => __( 'Icon block', 'conversions' ),
-						'description'=> __('Add featured icon block.', 'conversions'),
 						'section' => 'conversions_homepage_features',
 						'priority' => 10,
 						'customizer_repeater_icon_control' => true,
@@ -1706,6 +1737,10 @@ namespace conversions
 						background-attachment: fixed;
 					<?php } ?>
 					min-height: <?php echo esc_html( get_theme_mod( 'conversions_hh_img_height', '80' ) ); ?>vh;
+				}
+				section.c-clients { background-color: <?php echo esc_html( get_theme_mod( 'conversions_hc_background_color', '#F3F3F3' ) ); ?>; }
+				section.c-clients img.client {
+					max-width: <?php echo esc_html( get_theme_mod( 'conversions_hc_logo_width', '100' ) ); ?>px;
 				}
 			</style>
 
