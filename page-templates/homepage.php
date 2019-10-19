@@ -76,35 +76,57 @@ get_header();
 			<div class="row">
   			<div class="col-12">
 
-  				<!-- Client logos -->
-					<div class='c-clients__carousel text-center mb-0 py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"slidesToScroll":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":4,"slidesToScroll":4}},{"breakpoint":768,"settings":{"slidesToShow":3,"slidesToScroll":3}},{"breakpoint":554,"settings":{"slidesToShow":2,"slidesToScroll":2}}]}'>
-  					
-          <?php
-            $chc_logos = get_theme_mod( 'conversions_hc_logos' );
-            /*This returns a json so we have to decode it*/
-            $chc_logos_decoded = json_decode( $chc_logos );
-      
-            if ( !empty( $chc_logos_decoded ) ) {
-              
-              $count = 0;
-              
-              foreach( $chc_logos_decoded as $chc_logo ){
-                // Get img id
-                $chc_url = $chc_logo->image_url;
-                $chc_logo_id = conversions()->template->conversions_id_by_url( $chc_url );
-                // Retrieve the correct img size
-                $chc_logo_med = wp_get_attachment_image_src( $chc_logo_id, 'medium' );
-                // Retrieve the alt text
-                $chc_logo_alt = get_post_meta( $chc_logo_id, '_wp_attachment_image_alt', true );
+          <?php 
+            $chc_max_slides = get_theme_mod( 'conversions_hc_max_slides', '5' );
+            $chc_logo_width = get_theme_mod( 'conversions_hc_logo_width', '100' ) + 60;
 
-                echo '<div class="c-clients__item py-6 px-3" id="c-clients__'.$count.'">
-                  <img class="client" src="'. esc_url( $chc_logo_med[0] ) .'" alt="'. esc_html( $chc_logo_alt ) .'">
-                </div>';
+            $chc_breakpoints = [
+              'chc_xlg' => '992',
+              'chc_lg' => '768',
+              'chc_md' => '576',
+              'chc_sm' => '375',
+            ];
 
-                ++$count;
+            foreach ($chc_breakpoints as $n => $s) {
+              $n = floor( $s / $chc_logo_width );
+              if ( $n > $chc_max_slides ) {
+                $n = $chc_max_slides;
               }
+              elseif ( $n < 1 ) {
+                $n = 1;
+              }
+              $chc_breakpoints[] = $n;
             }
           ?>
+          
+  				<!-- Client logos -->
+					<div class='c-clients__carousel text-center mb-0 py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"slidesToScroll":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"responsive":[{"breakpoint":1200,"settings":{"slidesToShow":<?php esc_attr_e( $chc_breakpoints[0] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_breakpoints[0] ); ?>}},{"breakpoint":992,"settings":{"slidesToShow":<?php esc_attr_e( $chc_breakpoints[1] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_breakpoints[1] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php esc_attr_e( $chc_breakpoints[2] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_breakpoints[2] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php esc_attr_e( $chc_breakpoints[3] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_breakpoints[3] ); ?>}}]}'>
+  					
+            <?php
+              $chc_logos = get_theme_mod( 'conversions_hc_logos' );
+              $chc_logos_decoded = json_decode( $chc_logos );
+      
+              if ( !empty( $chc_logos_decoded ) ) {
+              
+                $count = 0;
+              
+                foreach( $chc_logos_decoded as $chc_logo ){
+                  // Retrieve img id
+                  $chc_url = $chc_logo->image_url;
+                  $chc_logo_id = conversions()->template->conversions_id_by_url( $chc_url );
+                  // Retrieve the correct img size
+                  $chc_logo_med = wp_get_attachment_image_src( $chc_logo_id, 'medium' );
+                  // Retrieve the alt text
+                  $chc_logo_alt = get_post_meta( $chc_logo_id, '_wp_attachment_image_alt', true );
+
+                  echo '<div class="c-clients__item py-6 px-3" id="c-clients__'.$count.'">
+                    <img class="client" src="'. esc_url( $chc_logo_med[0] ) .'" alt="'. esc_html( $chc_logo_alt ) .'">
+                  </div>';
+
+                  ++$count;
+                }
+              }
+            ?>
 
 
             <div class="c-clients__item py-6 px-3">
