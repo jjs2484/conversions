@@ -145,23 +145,12 @@ namespace conversions
 			) );
 
 			//-----------------------------------------------------
-			// Create theme options panel
-			//-----------------------------------------------------
-			$wp_customize->add_panel( 'conversions_theme_options', array(
-				'priority'       => 36,
-				'title'          => __('Theme Options', 'conversions'),
-				'description'    => __('Change colors, fonts, and more.', 'conversions'),
-				'capability'        => 'edit_theme_options',
-			) );
-
-			//-----------------------------------------------------
 			// Navbar section
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_nav' , array(
 				'title'             => __('Navbar', 'conversions'),
-				'priority'          => 20,
+				'priority'          => 21,
 				'capability'        => 'edit_theme_options',
-				'panel'             => 'conversions_theme_options',
 			) );
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_header_colors', array(
@@ -353,8 +342,7 @@ namespace conversions
 				'title'       => __( 'Layout', 'conversions' ),
 				'capability'  => 'edit_theme_options',
 				'description' => __( 'Container width and sidebar defaults', 'conversions' ),
-				'priority'    => 40,
-				'panel'			=> 'conversions_theme_options',
+				'priority'    => 21,
 			) );
 			$wp_customize->add_setting( 'conversions_container_width', array(
 				'default'       => '1100',
@@ -428,10 +416,9 @@ namespace conversions
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_typography', array(
 				'title'             => __('Typography', 'conversions'),
-				'priority'          => 50,
+				'priority'          => 21,
 				'description'       => __('Select your typography settings', 'conversions'),
 				'capability'        => 'edit_theme_options',
-				'panel'             => 'conversions_theme_options',
 			) );
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_google_fonts', array(
@@ -555,10 +542,9 @@ namespace conversions
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_footer' , array(
 				'title'             => __('Footer', 'conversions'),
-				'priority'          => 60,
+				'priority'          => 21,
 				'description'       => __('Select your footer colors', 'conversions'),
 				'capability'        => 'edit_theme_options',
-				'panel'             => 'conversions_theme_options',
 			) );
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_footer_background_color', array(
@@ -638,10 +624,9 @@ namespace conversions
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_copyright', array(
 				'title'             => __('Copyright', 'conversions'),
-				'priority'          => 70,
+				'priority'          => 21,
 				'description'       => __('Change your copyright settings', 'conversions'),
 				'capability'        => 'edit_theme_options',
-				'panel'             => 'conversions_theme_options',
 			) );
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_copyright_text', array(
@@ -723,8 +708,7 @@ namespace conversions
 				'title' => __( 'Social Media Icons', 'conversions' ),
 				'description'       => __('Add social icons', 'conversions'),
 				'capability'        => 'edit_theme_options',
-				'panel'             => 'conversions_theme_options',
-				'priority' => 80,
+				'priority' => 21,
 			));
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_social_link_target', array(
@@ -817,10 +801,9 @@ namespace conversions
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_blog', array(
 				'title'             => __('Blog', 'conversions'),
-				'priority'          => 90,
+				'priority'          => 21,
 				'description'       => __('Change your blog settings', 'conversions'),
 				'capability'        => 'edit_theme_options',
-				'panel'             => 'conversions_theme_options',
 			) );
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_blog_sticky_posts', array(
@@ -939,10 +922,9 @@ namespace conversions
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_featured_img', array(
 				'title'             => __('Featured Image', 'conversions'),
-				'priority'          => 100,
+				'priority'          => 21,
 				'description'       => __('Settings for the featured image displayed on posts and pages.', 'conversions'),
 				'capability'        => 'edit_theme_options',
-				'panel'             => 'conversions_theme_options',
 			) );
 			$wp_customize->add_setting( 'conversions_featured_img_parallax', array(
 				'default'       => false,
