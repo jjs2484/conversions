@@ -136,23 +136,6 @@ get_header();
                 }
               }
             ?>
-
-
-            <div class="c-clients__item py-6 px-3">
-    					<img class="client" src="//i.imgur.com/NpmZS3w.png" alt="Image Description">
-  					</div>
-  					<div class="c-clients__item py-6 px-3">
-    					<img class="client" src="//i.imgur.com/ZjU7Zl4.png" alt="Image Description">
-  					</div>
-						<div class="c-clients__item py-6 px-3">
-    					<img class="client" src="//i.imgur.com/zRZLfx0.png" alt="Image Description">
-						</div>
-  					<div class="c-clients__item py-6 px-3">
-    					<img class="client" src="//i.imgur.com/HAyRaOh.png" alt="Image Description">
-  					</div>
-  					<div class="c-clients__item py-6 px-3">
-    					<img class="client" src="//i.imgur.com/HAyRaOh.png" alt="Image Description">
-  					</div>
 					</div>
 
 				</div>
