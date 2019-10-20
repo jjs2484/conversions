@@ -29,11 +29,12 @@ get_header();
            			
           <!-- Title -->
     			<h1 class="display-4"><?php echo esc_html( get_the_title() ); ?></h1>
-    				
-    			<!-- Description -->
-    			<p class="lead c-hero__description">
-    				<?php echo esc_html( get_theme_mod( 'conversions_hh_desc' ) ); ?>
-    			</p>
+    			
+          <?php
+            if ( !empty( get_theme_mod( 'conversions_hh_desc') ) ) {
+              echo '<p class="lead c-hero__description">'.esc_html( get_theme_mod( 'conversions_hh_desc' ) ).'</p>';
+            }
+          ?>
 
           <?php if ( ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) || ( get_theme_mod( 'conversions_hh_vbtn', 'no' ) != 'no' ) ) : ?>
     			
@@ -153,7 +154,7 @@ get_header();
 			<!-- Title -->
 			<div class="col-12">
 				<div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
-					<h3>Features section</h3>
+					<h2 class="h3">Features section</h2>
 					<p class="text-muted">
 						We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
 					</p>
@@ -243,7 +244,7 @@ get_header();
 				<!-- Title -->
 				<div class="col-12">
 					<div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
-						<h3>Pricing table section</h3>
+						<h2 class="h3">Pricing table section</h2>
 						<p class="text-muted">
 							We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
 						</p>
@@ -407,7 +408,7 @@ get_header();
         <!-- Title -->
         <div class="col-12">
           <div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
-            <h3>What people say about us</h3>
+            <h2 class="h3">What people say about us</h2>
             <p class="text-muted">
               We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
             </p>
@@ -482,7 +483,7 @@ get_header();
         <!-- Title -->
         <div class="col-12">
 				  <div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
-            <h3>Latest News</h3>
+            <h2 class="h3">Latest News</h2>
             <p class="text-muted">
 						  We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
             </p>
@@ -547,21 +548,34 @@ get_header();
 
 
 	<!-- Call-to-action section -->
-	<section id="c-cta">
-		<div class="container-fluid">
+	<section class="c-cta">
+		<div class="container-fluid py-5">
 			<div class="row">
   			<div class="col-12">
 
-          <div class="w-md-80 w-lg-60 text-center my-5 mx-auto">
+          <div class="w-md-80 w-lg-60 text-center mx-auto">
   					<!-- Call-to-action text -->
   					<div class="mb-4">
-    					<h2 class="h3">Get started today!</h2>
-    					<p class="text-muted">Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?</p>
+              <?php 
+                if ( !empty( get_theme_mod( 'conversions_hcta_title') ) ) {
+                  echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_hcta_title' ) ).'</h2>';
+                }
+                if ( !empty( get_theme_mod( 'conversions_hcta_desc') ) ) {
+                  echo '<p>'.esc_html( get_theme_mod( 'conversions_hcta_desc' ) ).'</p>';
+                } 
+              ?>
   					</div>
-  					<!-- Call-to-action button -->
-  					<a class="btn btn-primary btn-lg mb-2 mb-md-0 mr-md-2" href="#">
-    					Get Access
-  					</a>
+            
+            <?php
+              if ( get_theme_mod( 'conversions_hcta_btn', 'btn-primary' ) != 'no' ) {
+                // Call to action button
+                echo sprintf( '<a href="%s" class="btn %s btn-lg mb-2 mb-md-0 mr-md-2">%s</a>', 
+                  esc_url( get_theme_mod( 'conversions_cta_btn_url', 'https://wordpress.org' ) ), 
+                  esc_attr( get_theme_mod( 'conversions_hcta_btn', 'btn-primary' ) ),
+                  esc_html( get_theme_mod( 'conversions_hcta_btn_text', 'Click me' ) )
+                );
+              }
+            ?>
           </div>
 
 				</div>

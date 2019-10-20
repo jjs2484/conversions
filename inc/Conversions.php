@@ -219,6 +219,13 @@ namespace conversions
 				'conversions_hc_md' => '3',
 				'conversions_hc_lg' => '4',
 				'conversions_hc_max' => '5',
+				'conversions_hcta_title' => 'Get started today!',
+				'conversions_hcta_title_color' => '#222222',
+				'conversions_hcta_desc' => 'Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?',
+				'conversions_hcta_desc_color' => '#6c757d',
+				'conversions_hcta_btn' => 'btn-primary',
+				'conversions_hcta_btn_text' => 'Click me',
+				'conversions_cta_btn_url' => 'https://wordpress.org',
 			);
 
 			foreach ($defaults as $c => $v) {
