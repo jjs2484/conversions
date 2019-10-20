@@ -80,7 +80,8 @@ get_header();
             $chc_max_slides = get_theme_mod( 'conversions_hc_max_slides', '5' );
             $chc_logo_width = get_theme_mod( 'conversions_hc_logo_width', '100' ) + 60;
 
-            if ( esc_html( get_theme_mod( 'conversions_hc_respond', 'auto' ) == 'auto' ) ) {
+            if ( esc_html( get_theme_mod( 'conversions_hc_respond', 'auto' ) == 'auto' ) ) 
+            {
               
               $chc_breakpoints = [
                 '768',
@@ -99,7 +100,9 @@ get_header();
                 $chc_items_to_show[] = $n;
               }
 
-            } else {
+            } 
+            else 
+            {
               $chc_items_to_show = [
                 ''.esc_html( get_theme_mod( 'conversions_hc_lg', '4' ) ).'',
                 ''.esc_html( get_theme_mod( 'conversions_hc_md', '3' ) ).'',
@@ -128,7 +131,7 @@ get_header();
                   // Retrieve the alt text
                   $chc_logo_alt = get_post_meta( $chc_logo_id, '_wp_attachment_image_alt', true );
 
-                  echo '<div class="c-clients__item py-6 px-3" id="c-clients__'.$count.'">
+                  echo '<div class="c-clients__item px-3" id="c-clients__'.$count.'">
                     <img class="client" src="'. esc_url( $chc_logo_med[0] ) .'" alt="'. esc_html( $chc_logo_alt ) .'">
                   </div>';
 
