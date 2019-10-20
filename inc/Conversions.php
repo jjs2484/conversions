@@ -214,6 +214,10 @@ namespace conversions
 				'conversions_hh_vbutton_url' => 'https://www.youtube.com/watch?v=_sI_Ps7JSEk',
 				'conversions_hc_background_color' => '#F3F3F3',
 				'conversions_hc_logo_width' => '100',
+				'conversions_hc_respond' => 'auto',
+				'conversions_hc_sm' => '2',
+				'conversions_hc_md' => '3',
+				'conversions_hc_lg' => '4',
 				'conversions_hc_max_slides' => '5',
 			);
 

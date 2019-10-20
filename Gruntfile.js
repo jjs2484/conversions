@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       basic_and_extras: {
         files: {
           'build/theme.js': ['src/js/bootstrap4/bootstrap.bundle.js', 'src/js/skip-link-focus-fix.js', 'src/js/slick/slick.js', 'src/js/fancybox/jquery.fancybox.js', 'js/theme.js'],
-          'build/conversions-repeater.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js'],
+          'build/conversions-repeater.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js', 'js/customizer-conditionals.js'],
         },
       },
     },

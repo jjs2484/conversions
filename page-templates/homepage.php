@@ -80,27 +80,36 @@ get_header();
             $chc_max_slides = get_theme_mod( 'conversions_hc_max_slides', '5' );
             $chc_logo_width = get_theme_mod( 'conversions_hc_logo_width', '100' ) + 60;
 
-            $chc_breakpoints = [
-              'chc_xlg' => '992',
-              'chc_lg' => '768',
-              'chc_md' => '576',
-              'chc_sm' => '375',
-            ];
+            if ( esc_html( get_theme_mod( 'conversions_hc_respond', 'auto' ) == 'auto' ) ) {
+              
+              $chc_breakpoints = [
+                '768',
+                '576',
+                '375',
+              ];
 
-            foreach ($chc_breakpoints as $n => $s) {
-              $n = floor( $s / $chc_logo_width );
-              if ( $n > $chc_max_slides ) {
-                $n = $chc_max_slides;
+              foreach ($chc_breakpoints as $s) {
+                $n = floor( $s / $chc_logo_width );
+                if ( $n > $chc_max_slides ) {
+                  $n = $chc_max_slides;
+                }
+                elseif ( $n < 1 ) {
+                  $n = 1;
+                }
+                $chc_items_to_show[] = $n;
               }
-              elseif ( $n < 1 ) {
-                $n = 1;
-              }
-              $chc_breakpoints[] = $n;
+
+            } else {
+              $chc_items_to_show = [
+                ''.esc_html( get_theme_mod( 'conversions_hc_lg', '4' ) ).'',
+                ''.esc_html( get_theme_mod( 'conversions_hc_md', '3' ) ).'',
+                ''.esc_html( get_theme_mod( 'conversions_hc_sm', '2' ) ).'',
+              ];
             }
           ?>
           
   				<!-- Client logos -->
-					<div class='c-clients__carousel text-center mb-0 py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"slidesToScroll":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"responsive":[{"breakpoint":1200,"settings":{"slidesToShow":<?php esc_attr_e( $chc_breakpoints[0] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_breakpoints[0] ); ?>}},{"breakpoint":992,"settings":{"slidesToShow":<?php esc_attr_e( $chc_breakpoints[1] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_breakpoints[1] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php esc_attr_e( $chc_breakpoints[2] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_breakpoints[2] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php esc_attr_e( $chc_breakpoints[3] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_breakpoints[3] ); ?>}}]}'>
+					<div class='c-clients__carousel text-center mb-0 py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"slidesToScroll":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[0] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[0] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[1] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[1] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[2] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[2] ); ?>}}]}'>
   					
             <?php
               $chc_logos = get_theme_mod( 'conversions_hc_logos' );

@@ -1454,6 +1454,87 @@ namespace conversions
 					'max' => 1000,
 				),
 			) );
+
+			$wp_customize->add_setting( 'conversions_hc_respond', array(
+				'default'           => 'auto',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hc_respond', array(
+						'label'       => __( 'Responsive', 'conversions' ),
+						'description' => __( 'Choose automatic or manual item breakpoints.', 'conversions' ),
+						'section'     => 'conversions_homepage_clients',
+						'settings'    => 'conversions_hc_respond',
+						'type'        => 'select',
+						'choices'     => array(
+							'auto' => __( 'Auto', 'conversions' ),
+							'manual' => __( 'Manual', 'conversions' ),
+						),
+						'priority'    => '30',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_hc_sm', array(
+				'default'       => '2',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_hc_sm_control', array(
+				'label'      => __('# of items up to 576px', 'conversions'),
+				'description'=> __('Number of items to show up to 576px.', 'conversions'),
+				'section'    => 'conversions_homepage_clients',
+				'settings'   => 'conversions_hc_sm',
+				'priority'   => 40,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 50,
+				),
+			) );
+			$wp_customize->add_setting( 'conversions_hc_md', array(
+				'default'       => '3',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_hc_md_control', array(
+				'label'      => __('# of items up to 768px', 'conversions'),
+				'description'=> __('Number of items to show up to 768px.', 'conversions'),
+				'section'    => 'conversions_homepage_clients',
+				'settings'   => 'conversions_hc_md',
+				'priority'   => 50,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 50,
+				),
+			) );
+			$wp_customize->add_setting( 'conversions_hc_lg', array(
+				'default'       => '4',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_hc_lg_control', array(
+				'label'      => __('# of items up to 992px', 'conversions'),
+				'description'=> __('Number of items to show up to 992px.', 'conversions'),
+				'section'    => 'conversions_homepage_clients',
+				'settings'   => 'conversions_hc_lg',
+				'priority'   => 60,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 50,
+				),
+			) );
 			$wp_customize->add_setting( 'conversions_hc_max_slides', array(
 				'default'       => '5',
 				'type'          => 'theme_mod',
@@ -1462,15 +1543,15 @@ namespace conversions
 				'sanitize_callback' => 'absint',
 			) );
 			$wp_customize->add_control( 'conversions_hc_max_slides_control', array(
-				'label'      => __('Max slides to show', 'conversions'),
-				'description'=> __('Max number of slides to show at once.', 'conversions'),
+				'label'      => __('Max items to show', 'conversions'),
+				'description'=> __('Max number of items to show at once.', 'conversions'),
 				'section'    => 'conversions_homepage_clients',
 				'settings'   => 'conversions_hc_max_slides',
-				'priority'   => 30,
+				'priority'   => 70,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
-					'max' => 20,
+					'max' => 50,
 				),
 			) );
       		$wp_customize->add_setting( 'conversions_hc_logos', array(
@@ -1485,11 +1566,10 @@ namespace conversions
       				'conversions_hc_logos', array(
 						'label'   => __( 'Client logo', 'conversions' ),
 						'section' => 'conversions_homepage_clients',
-						'priority' => 40,
+						'priority' => 80,
 						'customizer_repeater_image_control' => true,
  					) 
       		) );
-
 
       		//-----------------------------------------------------
 			// Homepage Features section
