@@ -153,7 +153,7 @@ namespace conversions
 				'capability'        => 'edit_theme_options',
 			) );
 			// Create our settings
-			$wp_customize->add_setting( 'conversions_header_colors', array(
+			$wp_customize->add_setting( 'conversions_nav_colors', array(
 				'default'           => 'dark',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
@@ -163,11 +163,11 @@ namespace conversions
 			$wp_customize->add_control(
 				new \WP_Customize_Control(
 					$wp_customize,
-					'conversions_header_colors', array(
+					'conversions_nav_colors', array(
 						'label'       => __( 'Navbar color scheme', 'conversions' ),
 						'description' => __( 'Choose a Navbar color scheme', 'conversions' ),
 						'section'     => 'conversions_nav',
-						'settings'    => 'conversions_header_colors',
+						'settings'    => 'conversions_nav_colors',
 						'type'        => 'select',
 						'choices'     => array(
 							'dark' => __( 'Dark', 'conversions' ),
@@ -183,7 +183,7 @@ namespace conversions
 						'priority'    => '10',
 					)
 			) );
-			$wp_customize->add_setting( 'conversions_header_position', array(
+			$wp_customize->add_setting( 'conversions_nav_position', array(
 				'default'           => 'fixed-top',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
@@ -193,11 +193,11 @@ namespace conversions
 			$wp_customize->add_control(
 				new \WP_Customize_Control(
 					$wp_customize,
-					'conversions_header_position', array(
+					'conversions_nav_position', array(
 						'label'       => __( 'Navbar position', 'conversions' ),
 						'description' => __( 'Should the Navbar be fixed or normal?', 'conversions' ),
 						'section'     => 'conversions_nav',
-						'settings'    => 'conversions_header_position',
+						'settings'    => 'conversions_nav_position',
 						'type'        => 'select',
 						'choices'     => array(
 							'header-p-n' => __( 'Normal', 'conversions' ),
@@ -206,7 +206,7 @@ namespace conversions
 						'priority'    => '20',
 					)
 			) );
-			$wp_customize->add_setting( 'conversions_header_dropshadow', array(
+			$wp_customize->add_setting( 'conversions_nav_dropshadow', array(
 				'default'           => true,
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_checkbox',
@@ -216,27 +216,27 @@ namespace conversions
 			$wp_customize->add_control(
 				new \WP_Customize_Control(
 					$wp_customize,
-					'conversions_header_dropshadow', array(
+					'conversions_nav_dropshadow', array(
 						'label'       => __( 'Navbar drop shadow', 'conversions' ),
 						'description' => __( 'Add a drop shadow to the Navbar?', 'conversions' ),
 						'section'     => 'conversions_nav',
-						'settings'    => 'conversions_header_dropshadow',
+						'settings'    => 'conversions_nav_dropshadow',
 						'type'        => 'checkbox',
 						'priority'    => '30',
 					)
 			) );
-			$wp_customize->add_setting( 'conversions_header_tbpadding', array(
+			$wp_customize->add_setting( 'conversions_nav_tbpadding', array(
 				'default'       => '8',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'absint', //converts value to a non-negative integer
 			) );
-			$wp_customize->add_control( 'conversions_header_tbpadding_control', array(
+			$wp_customize->add_control( 'conversions_nav_tbpadding_control', array(
 				'label'      => __( 'Navbar padding', 'conversions' ),
 				'description'=> __( 'Padding in px', 'conversions' ),
 				'section'    => 'conversions_nav',
-				'settings'   => 'conversions_header_tbpadding',
+				'settings'   => 'conversions_nav_tbpadding',
 				'priority'   => 40,
 				'type'       => 'number',
 				'input_attrs'=> array(
@@ -389,7 +389,7 @@ namespace conversions
 					)
 				)
 			);
-			$wp_customize->add_setting( 'conversions_sidebar_mvisibility', array(
+			$wp_customize->add_setting( 'conversions_sidebar_mv', array(
 				'default'           => true,
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_checkbox',
@@ -399,12 +399,12 @@ namespace conversions
 			$wp_customize->add_control(
 				new \WP_Customize_Control(
 					$wp_customize,
-					'conversions_sidebar_mvisibility', array(
+					'conversions_sidebar_mv', array(
 						'label'       => __( 'Show sidebar on mobile?', 'conversions' ),
 						'description' => __( 'Show or hide the sidebar on mobile screens.',
 						'conversions' ),
 						'section'     => 'conversions_layout_options',
-						'settings'    => 'conversions_sidebar_mvisibility',
+						'settings'    => 'conversions_sidebar_mv',
 						'type'        => 'checkbox',
 						'priority'    => '30',
 					)
@@ -547,17 +547,17 @@ namespace conversions
 				'capability'        => 'edit_theme_options',
 			) );
 			// Create our settings
-			$wp_customize->add_setting( 'conversions_footer_background_color', array(
+			$wp_customize->add_setting( 'conversions_footer_bg_color', array(
 				'default'       => '#3c3d45',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
-			$wp_customize->add_control( 'conversions_footer_background_color_control', array(
+			$wp_customize->add_control( 'conversions_footer_bg_color_control', array(
 				'label'      => __('Background color', 'conversions'),
 				'description'=> __('Select a footer background color.', 'conversions'),
 				'section'    => 'conversions_footer',
-				'settings'   => 'conversions_footer_background_color',
+				'settings'   => 'conversions_footer_bg_color',
 				'priority'   => 10,
 				'type'       => 'color',
 			) );
@@ -643,17 +643,17 @@ namespace conversions
 				'priority'   => 10,
 				'type'       => 'text',
 			) );
-			$wp_customize->add_setting( 'conversions_copyright_background_color', array(
+			$wp_customize->add_setting( 'conversions_copyright_bg_color', array(
 				'default'       => '#ffffff',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
-			$wp_customize->add_control( 'conversions_copyright_background_color_control', array(
+			$wp_customize->add_control( 'conversions_copyright_bg_color_control', array(
 				'label'      => __('Copyright background color', 'conversions'),
 				'description'=> __('Select copyright background color.', 'conversions'),
 				'section'    => 'conversions_copyright',
-				'settings'   => 'conversions_copyright_background_color',
+				'settings'   => 'conversions_copyright_bg_color',
 				'priority'   => 20,
 				'type'       => 'color',
 			) );
@@ -1037,7 +1037,7 @@ namespace conversions
 				'theme_supports' => array('woocommerce'),
 			));
 			// Create our settings
-			$wp_customize->add_setting( 'conversions_wccart_nav', array(
+			$wp_customize->add_setting( 'conversions_wc_cart_nav', array(
 				'default'           => true,
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_checkbox',
@@ -1047,11 +1047,11 @@ namespace conversions
 			$wp_customize->add_control(
 				new \WP_Customize_Control(
 					$wp_customize,
-					'conversions_wccart_nav', array(
+					'conversions_wc_cart_nav', array(
 						'label'       => __( 'Cart icon in navbar', 'conversions' ),
 						'description' => __( 'Enable cart icon in the navbar.', 'conversions' ),
 						'section'     => 'conversions_woocommerce',
-						'settings'    => 'conversions_wccart_nav',
+						'settings'    => 'conversions_wc_cart_nav',
 						'type'        => 'checkbox',
 						'priority'    => '10',
 					)
@@ -1075,7 +1075,7 @@ namespace conversions
 						'priority'    => '20',
 					)
 			) );
-			$wp_customize->add_setting( 'conversions_wccheckout_columns', array(
+			$wp_customize->add_setting( 'conversions_wc_checkout_columns', array(
 				'default'           => 'two-column',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
@@ -1085,11 +1085,11 @@ namespace conversions
 			$wp_customize->add_control(
 				new \WP_Customize_Control(
 					$wp_customize,
-					'conversions_wccheckout_columns', array(
+					'conversions_wc_checkout_columns', array(
 						'label'       => __( 'Checkout columns', 'conversions' ),
 						'description' => __( 'How many columns should the checkout be?', 'conversions' ),
 						'section'     => 'conversions_woocommerce',
-						'settings'    => 'conversions_wccheckout_columns',
+						'settings'    => 'conversions_wc_checkout_columns',
 						'type'        => 'select',
 						'choices'     => array(
 							'two-column' => __( 'Two column', 'conversions' ),
@@ -1159,46 +1159,46 @@ namespace conversions
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );
-   			$wp_customize->add_setting( 'conversions_hh_titlec', array(
+   			$wp_customize->add_setting( 'conversions_hh_title_color', array(
 				'default'       => '#ffffff',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
-			$wp_customize->add_control( 'conversions_hh_titlec_control', array(
+			$wp_customize->add_control( 'conversions_hh_title_color_control', array(
 				'label'      => __('Title color', 'conversions'),
 				'description'=> __('Select a color for the title.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
-				'settings'   => 'conversions_hh_titlec',
+				'settings'   => 'conversions_hh_title_color',
 				'priority'   => 2,
 				'type'       => 'color',
 			) );
-			$wp_customize->add_setting( 'conversions_hh_description', array(
+			$wp_customize->add_setting( 'conversions_hh_desc', array(
       			'default' => 'This is a modified jumbotron that occupies the entire horizontal space of its parent.',
       			'type'          => 'theme_mod',
       			'transport' => 'refresh',
       			'sanitize_callback' => 'wp_filter_nohtml_kses'
    			) );
-			$wp_customize->add_control( 'conversions_hh_description', array(
+			$wp_customize->add_control( 'conversions_hh_desc', array(
       			'label'      => __('Description', 'conversions'),
 				'description'=> __('Add the hero description text.', 'conversions'),
       			'section' => 'conversions_homepage_hero',
-      			'settings'   => 'conversions_hh_description',
+      			'settings'   => 'conversions_hh_desc',
       			'priority' => 3,
       			'type' => 'textarea',
       			'capability' => 'edit_theme_options',
    			) );
-   			$wp_customize->add_setting( 'conversions_hh_descriptionc', array(
+   			$wp_customize->add_setting( 'conversions_hh_desc_color', array(
 				'default'       => '#ffffff',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
-			$wp_customize->add_control( 'conversions_hh_descriptionc_control', array(
+			$wp_customize->add_control( 'conversions_hh_desc_color_control', array(
 				'label'      => __('Description color', 'conversions'),
 				'description'=> __('Select a color for the description text.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
-				'settings'   => 'conversions_hh_descriptionc',
+				'settings'   => 'conversions_hh_desc_color',
 				'priority'   => 4,
 				'type'       => 'color',
 			) );
@@ -1334,7 +1334,7 @@ namespace conversions
 				'priority'   => 11,
 				'type'       => 'text',
 			) );
-			$wp_customize->add_setting( 'conversions_hh_vbutton', array(
+			$wp_customize->add_setting( 'conversions_hh_vbtn', array(
 				'default'           => 'no',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
@@ -1344,11 +1344,11 @@ namespace conversions
 			$wp_customize->add_control(
 				new \WP_Customize_Control(
 					$wp_customize,
-					'conversions_hh_vbutton', array(
+					'conversions_hh_vbtn', array(
 						'label'       => __( 'Video modal button', 'conversions' ),
 						'description' => __( 'Choose the type of button.', 'conversions' ),
 						'section'     => 'conversions_homepage_hero',
-						'settings'    => 'conversions_hh_vbutton',
+						'settings'    => 'conversions_hh_vbtn',
 						'type'        => 'select',
 						'choices'     => array(
 							'no' => __( 'None', 'conversions' ),
@@ -1364,31 +1364,31 @@ namespace conversions
 						'priority'    => '12',
 					)
 			) );
-			$wp_customize->add_setting( 'conversions_hh_vbutton_text', array(
+			$wp_customize->add_setting( 'conversions_hh_vbtn_text', array(
 				'default'       => 'Play Intro',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
-			$wp_customize->add_control( 'conversions_hh_vbutton_text_control', array(
+			$wp_customize->add_control( 'conversions_hh_vbtn_text_control', array(
 				'label'      => __( 'Video button text', 'conversions' ),
 				'description'=> __('Text to display next to the video button.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
-				'settings'   => 'conversions_hh_vbutton_text',
+				'settings'   => 'conversions_hh_vbtn_text',
 				'priority'   => 13,
 				'type'       => 'text',
 			) );
-			$wp_customize->add_setting( 'conversions_hh_vbutton_url', array(
+			$wp_customize->add_setting( 'conversions_hh_vbtn_url', array(
 				'default'       => 'https://www.youtube.com/watch?v=_sI_Ps7JSEk',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
-			$wp_customize->add_control( 'conversions_hh_vbutton_url_control', array(
+			$wp_customize->add_control( 'conversions_hh_vbtn_url_control', array(
 				'label'      => __( 'Video URL', 'conversions' ),
 				'description'=> __('Youtube or Vimeo video URL.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
-				'settings'   => 'conversions_hh_vbutton_url',
+				'settings'   => 'conversions_hh_vbtn_url',
 				'priority'   => 14,
 				'type'       => 'text',
 			) );
@@ -1403,17 +1403,17 @@ namespace conversions
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );
-			$wp_customize->add_setting( 'conversions_hc_background_color', array(
+			$wp_customize->add_setting( 'conversions_hc_bg_color', array(
 				'default'       => '#F3F3F3',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
-			$wp_customize->add_control( 'conversions_hc_background_color_control', array(
+			$wp_customize->add_control( 'conversions_hc_bg_color_control', array(
 				'label'      => __('Background color', 'conversions'),
 				'description'=> __('Client section background color.', 'conversions'),
 				'section'    => 'conversions_homepage_clients',
-				'settings'   => 'conversions_hc_background_color',
+				'settings'   => 'conversions_hc_bg_color',
 				'priority'   => 10,
 				'type'       => 'color',
 			) );
@@ -1517,18 +1517,18 @@ namespace conversions
 					'max' => 50,
 				),
 			) );
-			$wp_customize->add_setting( 'conversions_hc_max_slides', array(
+			$wp_customize->add_setting( 'conversions_hc_max', array(
 				'default'       => '5',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'absint',
 			) );
-			$wp_customize->add_control( 'conversions_hc_max_slides_control', array(
+			$wp_customize->add_control( 'conversions_hc_max_control', array(
 				'label'      => __('Max items to show', 'conversions'),
 				'description'=> __('Max number of items to show at once.', 'conversions'),
 				'section'    => 'conversions_homepage_clients',
-				'settings'   => 'conversions_hc_max_slides',
+				'settings'   => 'conversions_hc_max',
 				'priority'   => 70,
 				'type'       => 'number',
 				'input_attrs'=> array(
@@ -1583,6 +1583,31 @@ namespace conversions
 						'customizer_repeater_link_control' => true,
  					) 
       		) );
+
+			//-----------------------------------------------------
+			// Homepage Call to action section
+			//-----------------------------------------------------
+			$wp_customize->add_section( 'conversions_homepage_cta', array(
+				'title'             => __('Call to Action', 'conversions'),
+				'priority'          => 70,
+				'description'       => __('Settings for the call to action section.', 'conversions'),
+				'capability'        => 'edit_theme_options',
+				'panel'             => 'conversions_homepage',
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_background_color', array(
+				'default'       => '#F3F3F3',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_hcta_background_color_control', array(
+				'label'      => __('Background color', 'conversions'),
+				'description'=> __('Call to Action section background color.', 'conversions'),
+				'section'    => 'conversions_homepage_cta',
+				'settings'   => 'conversions_hcta_background_color',
+				'priority'   => 10,
+				'type'       => 'color',
+			) );      		
 
 		}
 		/**
@@ -1663,10 +1688,10 @@ namespace conversions
 			else {
 				$logo_height = 30;
 			}
-			$header_tbpadding = get_theme_mod( 'conversions_header_tbpadding', '8' );
+			$nav_tbpadding = get_theme_mod( 'conversions_nav_tbpadding', '8' );
 			$logo_padding = 10;
-			$total_header_height = $logo_height + $header_tbpadding + $header_tbpadding + $logo_padding - 1;
-			$header_offset = $total_header_height + 50;
+			$total_nav_height = $logo_height + $nav_tbpadding + $nav_tbpadding + $logo_padding - 1;
+			$nav_offset = $total_nav_height + 50;
 
 			// WC button option
 			$wc_primary_btn = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
@@ -1703,25 +1728,25 @@ namespace conversions
 					width: auto;
 				}
 				/* Header styles */
-				<?php if ( get_theme_mod( 'conversions_header_position', 'fixed-top' ) == 'fixed-top' ) { ?>
+				<?php if ( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) == 'fixed-top' ) { ?>
 					/* Fixed header height */
 					#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper { 
-						margin-top: <?php echo esc_html( $total_header_height ); ?>px; 
+						margin-top: <?php echo esc_html( $total_nav_height ); ?>px; 
 					}
 					.wrapper :target:before, .wrapper li[id].comment:before { 
 						display: block;
 						content: " ";
-						margin-top: -<?php echo esc_html( $header_offset ); ?>px;
-						height: <?php echo esc_html( $header_offset ); ?>px;
+						margin-top: -<?php echo esc_html( $nav_offset ); ?>px;
+						height: <?php echo esc_html( $nav_offset ); ?>px;
 						visibility: hidden;
 						pointer-events: none;
 					}
 				<?php } ?>
 				.navbar {
-					padding-top: <?php echo esc_html( get_theme_mod( 'conversions_header_tbpadding', '8' ) ); ?>px;
-					padding-bottom: <?php echo esc_html( get_theme_mod( 'conversions_header_tbpadding', '8' ) ); ?>px;
+					padding-top: <?php echo esc_html( get_theme_mod( 'conversions_nav_tbpadding', '8' ) ); ?>px;
+					padding-bottom: <?php echo esc_html( get_theme_mod( 'conversions_nav_tbpadding', '8' ) ); ?>px;
 				}
-				<?php if ( get_theme_mod( 'conversions_header_dropshadow', true ) == true ) { ?>
+				<?php if ( get_theme_mod( 'conversions_nav_dropshadow', true ) == true ) { ?>
 					/* Header drop shadow */
 					#wrapper-navbar nav.navbar {
 						box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
@@ -1735,7 +1760,7 @@ namespace conversions
 					min-height: <?php echo esc_html( get_theme_mod( 'conversions_featured_img_height', '65' ) ); ?>vh;
 				}
 				/* Footer styles */
-				#wrapper-footer-full { background-color: <?php echo esc_html( get_theme_mod( 'conversions_footer_background_color', '#3c3d45' ) ); ?>; }
+				#wrapper-footer-full { background-color: <?php echo esc_html( get_theme_mod( 'conversions_footer_bg_color', '#3c3d45' ) ); ?>; }
 				#footer-full-content .h1, #footer-full-content .h2, #footer-full-content .h3, #footer-full-content .h4, #footer-full-content .h5, #footer-full-content .h6, #footer-full-content h1, #footer-full-content h2, #footer-full-content h3, #footer-full-content h4, #footer-full-content h5, #footer-full-content h6 { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_heading_color', '#ffffff' ) ); ?>; }
 				#footer-full-content p, #footer-full-content table, #footer-full-content li, #footer-full-content caption { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_text_color', '#ffffff' ) ); ?>; }
 				#footer-full-content a { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_link_color', '#ccffff' ) ); ?>; }
@@ -1753,7 +1778,7 @@ namespace conversions
 				a:hover { color: <?php echo esc_html( get_theme_mod( 'conversions_link_hcolor', '#004086' ) ); ?>; }
 				.conversions-hero-cover .conversions-hero-cover__inner-container h1 { color: <?php echo esc_html( get_theme_mod( 'conversions_featured_title_color', '#ffffff' ) ); ?>; }
 				/* Copyright styles */
-				#wrapper-footer { background-color: <?php echo esc_html( get_theme_mod( 'conversions_copyright_background_color', '#eeeeee' ) ); ?>; }
+				#wrapper-footer { background-color: <?php echo esc_html( get_theme_mod( 'conversions_copyright_bg_color', '#eeeeee' ) ); ?>; }
 				#wrapper-footer .site-info .copyright { color: <?php echo esc_html( get_theme_mod( 'conversions_copyright_text_color', '#111111' ) ); ?>; }
 				#wrapper-footer .site-info .copyright a { color: <?php echo esc_html( get_theme_mod('conversions_copyright_link_color', '#0057b4' ) ); ?>; }
 				#wrapper-footer .site-info .copyright a:hover { color: <?php echo esc_html( get_theme_mod('conversions_copyright_link_hcolor', '#004086' ) ); ?>; }
@@ -1766,7 +1791,7 @@ namespace conversions
 					color: <?php echo esc_html( get_theme_mod( 'conversions_social_link_hcolor', '#004086' ) ); ?>;
 				}
 				<?php if ( class_exists( 'woocommerce' ) ) { ?>
-					<?php if ( esc_html( get_theme_mod( 'conversions_wccheckout_columns', 'two-column' ) == 'two-column' ) ) { ?>
+					<?php if ( esc_html( get_theme_mod( 'conversions_wc_checkout_columns', 'two-column' ) == 'two-column' ) ) { ?>
 						/* WooCommerce checkout columns*/
 						@media screen and (min-width:768px) {
 							body.woocommerce-checkout #customer_details { width: 48%; float: left; margin-right: 1.9%; }
@@ -1800,7 +1825,7 @@ namespace conversions
   						color: <?php echo esc_html( get_theme_mod('conversions_heading_color', '#222222' ) ); ?>;
 					}
 				<?php } ?>
-				<?php if ( get_theme_mod( 'conversions_sidebar_mvisibility', true ) == false ) { ?>
+				<?php if ( get_theme_mod( 'conversions_sidebar_mv', true ) == false ) { ?>
 					/* Sidebar */
 					@media (max-width: 767.98px) {
 						#sidebar-2, #sidebar-1 { display: none; }
@@ -1808,10 +1833,10 @@ namespace conversions
 				<?php } ?>
 				/* Homepage styles */
 				section.c-hero h1 {
-					color: <?php echo esc_html( get_theme_mod('conversions_hh_titlec', '#ffffff' ) ); ?>;
+					color: <?php echo esc_html( get_theme_mod('conversions_hh_title_color', '#ffffff' ) ); ?>;
 				}
 				section.c-hero .c-hero__description {
-					color: <?php echo esc_html( get_theme_mod('conversions_hh_descriptionc', '#ffffff' ) ); ?>;
+					color: <?php echo esc_html( get_theme_mod('conversions_hh_desc_color', '#ffffff' ) ); ?>;
 				}
 				section.c-hero {
 					<?php if ( get_theme_mod( 'conversions_hh_img_parallax', false ) == true ) { ?>
@@ -1819,7 +1844,7 @@ namespace conversions
 					<?php } ?>
 					min-height: <?php echo esc_html( get_theme_mod( 'conversions_hh_img_height', '80' ) ); ?>vh;
 				}
-				section.c-clients { background-color: <?php echo esc_html( get_theme_mod( 'conversions_hc_background_color', '#F3F3F3' ) ); ?>; }
+				section.c-clients { background-color: <?php echo esc_html( get_theme_mod( 'conversions_hc_bg_color', '#F3F3F3' ) ); ?>; }
 				section.c-clients img.client {
 					max-width: <?php echo esc_html( get_theme_mod( 'conversions_hc_logo_width', '100' ) ); ?>px;
 				}
@@ -1862,7 +1887,7 @@ namespace conversions
 				if ( class_exists( 'woocommerce' ) ) {
 					
 					// Append WooCommerce Cart icon?
-					if ( get_theme_mod( 'conversions_wccart_nav', true ) == true ) {
+					if ( get_theme_mod( 'conversions_wc_cart_nav', true ) == true ) {
 						// get WC cart totals and if = 0 only show icon with no text
 						$cart_totals = WC()->cart->get_cart_contents_count();
 						if( WC()->cart->get_cart_contents_count() > 0) {

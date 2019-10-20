@@ -9,38 +9,38 @@
 defined( 'ABSPATH' ) || exit;
 
 // header color scheme
-$header_color_scheme = get_theme_mod( 'conversions_header_colors', 'dark' );
-switch( $header_color_scheme )
+$nav_color_scheme = get_theme_mod( 'conversions_nav_colors', 'dark' );
+switch( $nav_color_scheme )
 {
 	case 'dark':
-		$header_color_scheme = 'navbar-dark bg-dark';
+		$nav_color_scheme = 'navbar-dark bg-dark';
 		break;
 	case 'light':
-		$header_color_scheme = 'navbar-light bg-light';
+		$nav_color_scheme = 'navbar-light bg-light';
 		break;
 	case 'white':
-		$header_color_scheme = 'navbar-light bg-white';
+		$nav_color_scheme = 'navbar-light bg-white';
 		break;
 	case 'primary':
-		$header_color_scheme = 'navbar-dark bg-primary';
+		$nav_color_scheme = 'navbar-dark bg-primary';
 		break;
 	case 'secondary':
-		$header_color_scheme = 'navbar-dark bg-secondary';
+		$nav_color_scheme = 'navbar-dark bg-secondary';
 		break;
 	case 'success':
-		$header_color_scheme = 'navbar-dark bg-success';
+		$nav_color_scheme = 'navbar-dark bg-success';
 		break;
 	case 'danger':
-		$header_color_scheme = 'navbar-dark bg-danger';
+		$nav_color_scheme = 'navbar-dark bg-danger';
 		break;
 	case 'warning':
-		$header_color_scheme = 'navbar-light bg-warning';
+		$nav_color_scheme = 'navbar-light bg-warning';
 		break;
 	case 'info':
-		$header_color_scheme = 'navbar-dark bg-info';
+		$nav_color_scheme = 'navbar-dark bg-info';
 		break;
 	default:
-		$header_color_scheme = 'navbar-dark bg-dark';
+		$nav_color_scheme = 'navbar-dark bg-dark';
 }
 
 // mobile navigation type
@@ -52,7 +52,7 @@ if ( $mobile_nav_type == 'collapse' ) {
 }
 ?>
 
-	<nav class="navbar navbar-expand-lg <?php echo $header_color_scheme; ?>">
+	<nav class="navbar navbar-expand-lg <?php echo $nav_color_scheme; ?>">
 
 		<div class="container-fluid">
 

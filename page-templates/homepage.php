@@ -32,10 +32,10 @@ get_header();
     				
     			<!-- Description -->
     			<p class="lead c-hero__description">
-    				<?php echo esc_html( get_theme_mod( 'conversions_hh_description' ) ); ?>
+    				<?php echo esc_html( get_theme_mod( 'conversions_hh_desc' ) ); ?>
     			</p>
 
-          <?php if ( ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) || ( get_theme_mod( 'conversions_hh_vbutton', 'no' ) != 'no' ) ) : ?>
+          <?php if ( ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) || ( get_theme_mod( 'conversions_hh_vbtn', 'no' ) != 'no' ) ) : ?>
     			
             <!-- Button links -->
             <p class="lead">
@@ -52,11 +52,11 @@ get_header();
                 }
 
                 // video modal
-                if ( get_theme_mod( 'conversions_hh_vbutton', 'no' ) != 'no' ) {
+                if ( get_theme_mod( 'conversions_hh_vbtn', 'no' ) != 'no' ) {
                   echo sprintf( '<a data-fancybox="c-hero__fb-video1" href="%1$s" class="c-hero__fb-video"><span class="c-hero__video-btn btn btn-%2$s btn--circle"><i class="fa fa-play"></i></span><span class="c-hero__video-text btn btn-link text-%2$s">%3$s</span></a>', 
-                    esc_url( get_theme_mod( 'conversions_hh_vbutton_url', 'https://www.youtube.com/watch?v=_sI_Ps7JSEk' ) ), 
-                    esc_attr( get_theme_mod( 'conversions_hh_vbutton', 'no' ) ),
-                    esc_html( get_theme_mod( 'conversions_hh_vbutton_text', 'Play Intro' ) )
+                    esc_url( get_theme_mod( 'conversions_hh_vbtn_url', 'https://www.youtube.com/watch?v=_sI_Ps7JSEk' ) ), 
+                    esc_attr( get_theme_mod( 'conversions_hh_vbtn', 'no' ) ),
+                    esc_html( get_theme_mod( 'conversions_hh_vbtn_text', 'Play Intro' ) )
                   );
                 }
               ?>
@@ -77,7 +77,7 @@ get_header();
   			<div class="col-12">
 
           <?php 
-            $chc_max_slides = get_theme_mod( 'conversions_hc_max_slides', '5' );
+            $chc_max_slides = get_theme_mod( 'conversions_hc_max', '5' );
             $chc_logo_width = get_theme_mod( 'conversions_hc_logo_width', '100' ) + 60;
 
             if ( esc_html( get_theme_mod( 'conversions_hc_respond', 'auto' ) == 'auto' ) ) 
@@ -112,7 +112,7 @@ get_header();
           ?>
           
   				<!-- Client logos -->
-					<div class='c-clients__carousel text-center mb-0 py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"slidesToScroll":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max_slides', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[0] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[0] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[1] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[1] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[2] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[2] ); ?>}}]}'>
+					<div class='c-clients__carousel text-center mb-0 py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"slidesToScroll":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[0] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[0] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[1] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[1] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[2] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[2] ); ?>}}]}'>
   					
             <?php
               $chc_logos = get_theme_mod( 'conversions_hc_logos' );
