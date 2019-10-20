@@ -1690,7 +1690,7 @@ namespace conversions
 			}
 			$nav_tbpadding = get_theme_mod( 'conversions_nav_tbpadding', '8' );
 			$logo_padding = 10;
-			$total_nav_height = $logo_height + $nav_tbpadding + $nav_tbpadding + $logo_padding - 1;
+			$total_nav_height = $logo_height + ( $nav_tbpadding * 2 ) + $logo_padding - 1;
 			$nav_offset = $total_nav_height + 50;
 
 			// WC button option
@@ -1727,9 +1727,9 @@ namespace conversions
 					height: 100%;
 					width: auto;
 				}
-				/* Header styles */
+				/* Navbar styles */
 				<?php if ( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) == 'fixed-top' ) { ?>
-					/* Fixed header height */
+					/* Fixed navbar height */
 					#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper { 
 						margin-top: <?php echo esc_html( $total_nav_height ); ?>px; 
 					}
@@ -1747,7 +1747,7 @@ namespace conversions
 					padding-bottom: <?php echo esc_html( get_theme_mod( 'conversions_nav_tbpadding', '8' ) ); ?>px;
 				}
 				<?php if ( get_theme_mod( 'conversions_nav_dropshadow', true ) == true ) { ?>
-					/* Header drop shadow */
+					/* Navbar drop shadow */
 					#wrapper-navbar nav.navbar {
 						box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 					}
