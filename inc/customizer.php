@@ -301,7 +301,7 @@ namespace conversions
 				'default'       => 'https://wordpress.org',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'wp_filter_nohtml_kses',
+				'sanitize_callback' => 'esc_url_raw',
 			) );
 			$wp_customize->add_control( 'conversions_nav_button_url_control', array(
 				'label'      => __( 'Button URL', 'conversions' ),
@@ -309,7 +309,7 @@ namespace conversions
 				'section'    => 'conversions_nav',
 				'settings'   => 'conversions_nav_button_url',
 				'priority'   => 90,
-				'type'       => 'text',
+				'type'       => 'url',
 			) );
 			$wp_customize->add_setting( 'conversions_nav_mobile_type', array(
 				'default'           => 'offcanvas',
@@ -791,7 +791,7 @@ namespace conversions
 				$wp_customize->add_control( $social_site, array(
 					'label' => __("$social_site URL:", 'conversions'),
 					'section' => 'conversions_social',
-					'type' => 'text',
+					'type' => 'url',
 					'priority' => 50,
 				));
 			}
@@ -1177,11 +1177,11 @@ namespace conversions
       			'default' => 'This is a modified jumbotron that occupies the entire horizontal space of its parent.',
       			'type'          => 'theme_mod',
       			'transport' => 'refresh',
-      			'sanitize_callback' => 'wp_filter_nohtml_kses'
+      			'sanitize_callback' => 'wp_kses_post'
    			) );
 			$wp_customize->add_control( 'conversions_hh_desc', array(
       			'label'      => __('Description', 'conversions'),
-				'description'=> __('Add the hero description text.', 'conversions'),
+				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
       			'section' => 'conversions_homepage_hero',
       			'settings'   => 'conversions_hh_desc',
       			'priority' => 3,
@@ -1324,7 +1324,7 @@ namespace conversions
 				'default'       => 'https://wordpress.org',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'wp_filter_nohtml_kses',
+				'sanitize_callback' => 'esc_url_raw',
 			) );
 			$wp_customize->add_control( 'conversions_hh_button_url_control', array(
 				'label'      => __( 'Callout button URL', 'conversions' ),
@@ -1332,7 +1332,7 @@ namespace conversions
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_button_url',
 				'priority'   => 11,
-				'type'       => 'text',
+				'type'       => 'url',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_vbtn', array(
 				'default'           => 'no',
@@ -1382,7 +1382,7 @@ namespace conversions
 				'default'       => 'https://www.youtube.com/watch?v=_sI_Ps7JSEk',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'wp_filter_nohtml_kses',
+				'sanitize_callback' => 'esc_url_raw',
 			) );
 			$wp_customize->add_control( 'conversions_hh_vbtn_url_control', array(
 				'label'      => __( 'Video URL', 'conversions' ),
@@ -1390,7 +1390,7 @@ namespace conversions
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_vbtn_url',
 				'priority'   => 14,
-				'type'       => 'text',
+				'type'       => 'url',
 			) );
 
 			//-----------------------------------------------------
@@ -1615,8 +1615,8 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_hcta_title_control', array(
-				'label'      => __('Copyright text', 'conversions'),
-				'description'=> __('Type your copyright text.', 'conversions'),
+				'label'      => __('Title text', 'conversions'),
+				'description'=> __('Add your title.', 'conversions'),
 				'section'    => 'conversions_homepage_cta',
 				'settings'   => 'conversions_hcta_title',
 				'priority'   => 20,
@@ -1644,7 +1644,7 @@ namespace conversions
    			) );
 			$wp_customize->add_control( 'conversions_hcta_desc', array(
       			'label'      => __('Description', 'conversions'),
-				'description'=> __('Add the call to action description text.', 'conversions'),
+				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
       			'section' => 'conversions_homepage_cta',
       			'settings'   => 'conversions_hcta_desc',
       			'priority' => 40,
@@ -1703,7 +1703,7 @@ namespace conversions
 				'default'       => 'https://wordpress.org',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'wp_filter_nohtml_kses',
+				'sanitize_callback' => 'esc_url_raw',
 			) );
 			$wp_customize->add_control( 'conversions_cta_btn_url_control', array(
 				'label'      => __( 'Callout button URL', 'conversions' ),
@@ -1711,7 +1711,7 @@ namespace conversions
 				'section'    => 'conversions_homepage_cta',
 				'settings'   => 'conversions_cta_btn_url',
 				'priority'   => 80,
-				'type'       => 'text',
+				'type'       => 'url',
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_shortcode', array(
 				'default'       => '',

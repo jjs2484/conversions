@@ -32,7 +32,7 @@ get_header();
     			
           <?php
             if ( !empty( get_theme_mod( 'conversions_hh_desc') ) ) {
-              echo '<p class="lead c-hero__description">'.esc_html( get_theme_mod( 'conversions_hh_desc' ) ).'</p>';
+              echo '<p class="lead c-hero__description">'.wp_kses_post( get_theme_mod( 'conversions_hh_desc' ) ).'</p>';
             }
           ?>
 
