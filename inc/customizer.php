@@ -165,7 +165,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_nav_colors', array(
 						'label'       => __( 'Navbar color scheme', 'conversions' ),
-						'description' => __( 'Choose a Navbar color scheme', 'conversions' ),
+						'description' => __( 'Select the Navbar color scheme.', 'conversions' ),
 						'section'     => 'conversions_nav',
 						'settings'    => 'conversions_nav_colors',
 						'type'        => 'select',
@@ -234,7 +234,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_nav_tbpadding_control', array(
 				'label'      => __( 'Navbar padding', 'conversions' ),
-				'description'=> __( 'Padding in px', 'conversions' ),
+				'description'=> __( 'Top and bottom padding in px.', 'conversions' ),
 				'section'    => 'conversions_nav',
 				'settings'   => 'conversions_nav_tbpadding',
 				'priority'   => 40,
@@ -322,8 +322,8 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_nav_mobile_type', array(
-						'label'       => __( 'Mobile Navbar type', 'conversions' ),
-						'description' => __( 'Offcanvas or slide down mobile nav?', 'conversions' ),
+						'label'       => __( 'Mobile menu type', 'conversions' ),
+						'description' => __( 'Offcanvas or slide down mobile menu?', 'conversions' ),
 						'section'     => 'conversions_nav',
 						'settings'    => 'conversions_nav_mobile_type',
 						'type'        => 'select',
@@ -341,7 +341,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_layout_options', array(
 				'title'       => __( 'Layout', 'conversions' ),
 				'capability'  => 'edit_theme_options',
-				'description' => __( 'Container width and sidebar defaults', 'conversions' ),
 				'priority'    => 21,
 			) );
 			$wp_customize->add_setting( 'conversions_container_width', array(
@@ -353,7 +352,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_container_width_control', array(
 				'label'      => __( 'Max container width', 'conversions' ),
-				'description'=> __( 'Specify the max container width in px', 'conversions' ),
+				'description'=> __( 'Specify the container max-width in px', 'conversions' ),
 				'section'    => 'conversions_layout_options',
 				'settings'   => 'conversions_container_width',
 				'priority'   => 10,
@@ -401,7 +400,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_sidebar_mv', array(
 						'label'       => __( 'Show sidebar on mobile?', 'conversions' ),
-						'description' => __( 'Show or hide the sidebar on mobile screens.',
+						'description' => __( 'Check to show the sidebar on mobile.',
 						'conversions' ),
 						'section'     => 'conversions_layout_options',
 						'settings'    => 'conversions_sidebar_mv',
@@ -433,7 +432,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_google_fonts', array(
 						'label'       => __( 'Google fonts', 'conversions' ),
-						'description' => __( 'Enable Google fonts? If disabled native fonts will be displayed.', 'conversions' ),
+						'description' => __( 'Enable Google fonts? If disabled native fonts will be displayed instead.', 'conversions' ),
 						'section'     => 'conversions_typography',
 						'settings'    => 'conversions_google_fonts',
 						'type'        => 'checkbox',
@@ -452,7 +451,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_headings_fonts', array(
 						'label'       => __( 'Heading font', 'conversions' ),
-						'description' => __( 'Select your Google font for headings.', 'conversions' ),
+						'description' => __( 'Select Google font for headings.', 'conversions' ),
 						'section'     => 'conversions_typography',
 						'settings'    => 'conversions_headings_fonts',
 						'type'        => 'select',
@@ -472,7 +471,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_body_fonts', array(
 						'label'       => __( 'Body font', 'conversions' ),
-						'description' => __( 'Select your Google font for the body.', 'conversions' ),
+						'description' => __( 'Select Google font for the body.', 'conversions' ),
 						'section'     => 'conversions_typography',
 						'settings'    => 'conversions_body_fonts',
 						'type'        => 'select',
@@ -530,7 +529,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_link_hcolor_control', array(
 				'label'      => __('Link hover color', 'conversions'),
-				'description'=> __('Select a hover color for links.', 'conversions'),
+				'description'=> __('Select a hover color for hyperlinks.', 'conversions'),
 				'section'    => 'conversions_typography',
 				'settings'   => 'conversions_link_hcolor',
 				'priority'   => 50,
@@ -543,7 +542,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_footer' , array(
 				'title'             => __('Footer', 'conversions'),
 				'priority'          => 21,
-				'description'       => __('Select your footer colors', 'conversions'),
 				'capability'        => 'edit_theme_options',
 			) );
 			// Create our settings
@@ -597,7 +595,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_link_color_control', array(
 				'label'      => __('Link color', 'conversions'),
-				'description'=> __('Select link color for footer.', 'conversions'),
+				'description'=> __('Select hyperlink color for footer.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_link_color',
 				'priority'   => 40,
@@ -612,7 +610,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_footer_link_hcolor_control', array(
 				'label'      => __('Link hover color', 'conversions'),
-				'description'=> __('Select link hover color for footer.', 'conversions'),
+				'description'=> __('Select hyperlink hover color for footer.', 'conversions'),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_footer_link_hcolor',
 				'priority'   => 50,
@@ -625,7 +623,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_copyright', array(
 				'title'             => __('Copyright', 'conversions'),
 				'priority'          => 21,
-				'description'       => __('Change your copyright settings', 'conversions'),
 				'capability'        => 'edit_theme_options',
 			) );
 			// Create our settings
@@ -637,7 +634,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_copyright_text_control', array(
 				'label'      => __('Copyright text', 'conversions'),
-				'description'=> __('Type your copyright text.', 'conversions'),
+				'description'=> __('Add your copyright text. If left blank the Site Title will be used instead.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_text',
 				'priority'   => 10,
@@ -650,7 +647,7 @@ namespace conversions
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
 			$wp_customize->add_control( 'conversions_copyright_bg_color_control', array(
-				'label'      => __('Copyright background color', 'conversions'),
+				'label'      => __('Background color', 'conversions'),
 				'description'=> __('Select copyright background color.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_bg_color',
@@ -679,7 +676,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_copyright_link_color_control', array(
 				'label'      => __('Link color', 'conversions'),
-				'description'=> __('Select copyright link color.', 'conversions'),
+				'description'=> __('Select copyright hyperlink color.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_link_color',
 				'priority'   => 40,
@@ -694,7 +691,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_copyright_link_hcolor_control', array(
 				'label'      => __('Link hover color', 'conversions'),
-				'description'=> __('Select copyright link hover color.', 'conversions'),
+				'description'=> __('Select copyright hyperlink hover color.', 'conversions'),
 				'section'    => 'conversions_copyright',
 				'settings'   => 'conversions_copyright_link_hcolor',
 				'priority'   => 50,
@@ -706,7 +703,6 @@ namespace conversions
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_social', array(
 				'title' => __( 'Social Media Icons', 'conversions' ),
-				'description'       => __('Add social icons', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'priority' => 21,
 			));
@@ -802,7 +798,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_blog', array(
 				'title'             => __('Blog', 'conversions'),
 				'priority'          => 21,
-				'description'       => __('Change your blog settings', 'conversions'),
 				'capability'        => 'edit_theme_options',
 			) );
 			// Create our settings
@@ -1030,7 +1025,7 @@ namespace conversions
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_woocommerce', array(
 				'title' => __( 'Conversions', 'conversions' ),
-				'description'       => __('WooCommerce Options', 'conversions'),
+				'description'       => __('WooCommerce options for Conversions theme.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'woocommerce',
 				'priority' => 100,
@@ -1110,7 +1105,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_wc_primary_btn', array(
 						'label'       => __( 'Primary button type', 'conversions' ),
-						'description' => __( 'Choose the primary button type. Applies to: add to cart, apply coupon, update cart, login, register, etc.', 'conversions' ),
+						'description' => __( 'Select the primary button type. Applies to: add to cart, apply coupon, update cart, login, register, etc.', 'conversions' ),
 						'section'     => 'conversions_woocommerce',
 						'settings'    => 'conversions_wc_primary_btn',
 						'type'        => 'select',
@@ -1130,7 +1125,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_wc_secondary_btn', array(
 						'label'       => __( 'Secondary button type', 'conversions' ),
-						'description' => __( 'Choose the secondary button type. Applies to: view cart, proceed to checkout, place order, etc.', 'conversions' ),
+						'description' => __( 'Select the secondary button type. Applies to: view cart, proceed to checkout, place order, etc.', 'conversions' ),
 						'section'     => 'conversions_woocommerce',
 						'settings'    => 'conversions_wc_secondary_btn',
 						'type'        => 'select',
@@ -1426,7 +1421,7 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_hc_logo_width_control', array(
 				'label'      => __('Client logo width', 'conversions'),
-				'description'=> __('Max logo width in px', 'conversions'),
+				'description'=> __('Logo max-width in px', 'conversions'),
 				'section'    => 'conversions_homepage_clients',
 				'settings'   => 'conversions_hc_logo_width',
 				'priority'   => 20,
@@ -1449,7 +1444,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_hc_respond', array(
 						'label'       => __( 'Responsive', 'conversions' ),
-						'description' => __( 'Choose automatic or manual item breakpoints.', 'conversions' ),
+						'description' => __( 'Select auto or manual item breakpoints.', 'conversions' ),
 						'section'     => 'conversions_homepage_clients',
 						'settings'    => 'conversions_hc_respond',
 						'type'        => 'select',
