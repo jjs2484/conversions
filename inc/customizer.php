@@ -284,7 +284,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_nav_button_text', array(
-				'default'       => 'Click me',
+				'default'       => __( 'Click me', 'conversions' ),
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -1169,7 +1169,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_desc', array(
-      			'default' => 'This is a modified jumbotron that occupies the entire horizontal space of its parent.',
+      			'default' => __( 'This is a modified jumbotron that occupies the entire horizontal space of its parent.', 'conversions' ),
       			'type'          => 'theme_mod',
       			'transport' => 'refresh',
       			'sanitize_callback' => 'wp_kses_post'
@@ -1302,7 +1302,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_button_text', array(
-				'default'       => 'Click me',
+				'default'       => __( 'Click me', 'conversions' ),
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -1360,7 +1360,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_vbtn_text', array(
-				'default'       => 'Play Intro',
+				'default'       => __( 'Play Intro', 'conversions' ),
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -1604,7 +1604,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_title', array(
-				'default'       => 'Get started today!',
+				'default'       => __( 'Get started today!', 'conversions' ),
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -1632,7 +1632,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_desc', array(
-      			'default' => 'Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?',
+      			'default' => __( 'Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?', 'conversions' ),
       			'type'          => 'theme_mod',
       			'transport' => 'refresh',
       			'sanitize_callback' => 'wp_kses_post'
@@ -1681,7 +1681,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_btn_text', array(
-				'default'       => 'Click me',
+				'default'       => __( 'Click me', 'conversions' ),
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
