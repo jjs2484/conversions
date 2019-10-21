@@ -113,7 +113,7 @@ get_header();
           ?>
           
   				<!-- Client logos -->
-					<div class='c-clients__carousel text-center mb-0 py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"slidesToScroll":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[0] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[0] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[1] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[1] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[2] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[2] ); ?>}}]}'>
+					<div class='c-clients__carousel py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"slidesToScroll":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[0] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[0] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[1] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[1] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[2] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[2] ); ?>}}]}'>
   					
             <?php
               $chc_logos = get_theme_mod( 'conversions_hc_logos' );
@@ -553,28 +553,36 @@ get_header();
 			<div class="row">
   			<div class="col-12">
 
-          <div class="w-md-80 w-lg-60 text-center mx-auto">
+          <div class="w-md-80 w-lg-60 mx-auto">
   					<!-- Call-to-action text -->
-  					<div class="mb-4">
+  					<div class="c-cta__items">
               <?php 
                 if ( !empty( get_theme_mod( 'conversions_hcta_title') ) ) {
+                  // Title
                   echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_hcta_title' ) ).'</h2>';
                 }
+
                 if ( !empty( get_theme_mod( 'conversions_hcta_desc') ) ) {
-                  echo '<p>'.esc_html( get_theme_mod( 'conversions_hcta_desc' ) ).'</p>';
-                } 
+                  // Description
+                  echo '<p>'.wp_kses_post( get_theme_mod( 'conversions_hcta_desc' ) ).'</p>';
+                }
+
+                if ( get_theme_mod( 'conversions_hcta_btn', 'btn-primary' ) != 'no' ) {
+                  // Button
+                  echo sprintf( '<a href="%s" class="btn %s btn-lg">%s</a>', 
+                    esc_url( get_theme_mod( 'conversions_cta_btn_url', 'https://wordpress.org' ) ), 
+                    esc_attr( get_theme_mod( 'conversions_hcta_btn', 'btn-primary' ) ),
+                    esc_html( get_theme_mod( 'conversions_hcta_btn_text', 'Click me' ) )
+                  );
+                }
               ?>
   					</div>
             
             <?php
-              if ( get_theme_mod( 'conversions_hcta_btn', 'btn-primary' ) != 'no' ) {
-                // Call to action button
-                echo sprintf( '<a href="%s" class="btn %s btn-lg mb-2 mb-md-0 mr-md-2">%s</a>', 
-                  esc_url( get_theme_mod( 'conversions_cta_btn_url', 'https://wordpress.org' ) ), 
-                  esc_attr( get_theme_mod( 'conversions_hcta_btn', 'btn-primary' ) ),
-                  esc_html( get_theme_mod( 'conversions_hcta_btn_text', 'Click me' ) )
-                );
-              }
+              if ( !empty( get_theme_mod( 'conversions_hcta_shortcode') ) ) {
+                // Shortcode
+                echo do_shortcode( wp_kses_post( get_theme_mod( 'conversions_hcta_shortcode' ) ) );
+              } 
             ?>
           </div>
 

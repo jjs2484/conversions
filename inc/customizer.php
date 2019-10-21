@@ -1640,7 +1640,7 @@ namespace conversions
       			'default' => 'Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?',
       			'type'          => 'theme_mod',
       			'transport' => 'refresh',
-      			'sanitize_callback' => 'wp_filter_nohtml_kses'
+      			'sanitize_callback' => 'wp_kses_post'
    			) );
 			$wp_customize->add_control( 'conversions_hcta_desc', array(
       			'label'      => __('Description', 'conversions'),
@@ -1712,8 +1712,22 @@ namespace conversions
 				'settings'   => 'conversions_cta_btn_url',
 				'priority'   => 80,
 				'type'       => 'text',
-			) );	
-
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_shortcode', array(
+				'default'       => '',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_kses_post',
+			) );
+			$wp_customize->add_control( 'conversions_hcta_shortcode_control', array(
+				'label'      => __('Shortcode', 'conversions'),
+				'description'=> __('Add your shortcode.', 'conversions'),
+				'section'    => 'conversions_homepage_cta',
+				'settings'   => 'conversions_hcta_shortcode',
+				'priority'   => 90,
+				'type'       => 'text',
+			) );
+			
 		}
 		/**
 			@brief		Return a list of social media icons.

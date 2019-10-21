@@ -111,6 +111,7 @@ section.c-clients {
   }
   .slick-initialized .c-clients__item {
     display: inline-block;
+    vertical-align: middle;
   }
   img.client {
     width: 100%;
@@ -142,18 +143,7 @@ section.c-clients {
     .slick-track {
       display: flex;
       align-items: center;
-    }
-    .slick-slide {
-      text-align: center;
-      &::before {
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-      }
-      img {
-        vertical-align: middle;
-        display: inline-block;
-      }   
+      justify-content: center;
     }
   } 
 }
@@ -224,6 +214,17 @@ section.c-testimonials {
         color: #77818B;
       }
     }
+  }
+}
+
+// Call to Action section
+section.c-cta {
+  .c-cta__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 }
 
