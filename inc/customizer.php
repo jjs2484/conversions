@@ -630,7 +630,7 @@ namespace conversions
 			) );
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_copyright_text', array(
-				'default'       => 'conversions',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -1727,7 +1727,7 @@ namespace conversions
 				'priority'   => 90,
 				'type'       => 'text',
 			) );
-			
+
 		}
 		/**
 			@brief		Return a list of social media icons.

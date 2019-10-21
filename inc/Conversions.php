@@ -178,7 +178,6 @@ namespace conversions
 				'conversions_footer_text_color' => '#ffffff',
 				'conversions_footer_link_color' => '#ccffff',
 				'conversions_footer_link_hcolor' => '#c9dede',
-				'conversions_copyright_text' => 'conversions',
 				'conversions_copyright_bg_color' => '#ffffff',
 				'conversions_copyright_text_color' => '#111111',
 				'conversions_copyright_link_color' => '#0057b4',

@@ -26,32 +26,27 @@ defined( 'ABSPATH' ) || exit;
 					<div class="site-info row">
 
 						<div class="copyright col-md">
-							
-							&copy; <?php echo date("Y"); ?>
-
-							<?php echo "&nbsp;|&nbsp;"; ?>
 
 							<?php 
-								$copyright_text = esc_html( get_theme_mod( 'conversions_copyright_text', 'conversions' ) );
-								$blog_info = get_bloginfo( 'name' );
+								if ( ! empty( get_theme_mod( 'conversions_copyright_text' ) ) ) {
+									$copyright_text = get_theme_mod( 'conversions_copyright_text' );
+								} else {
+									$copyright_text = get_bloginfo( 'name' );
+								}
+
+								echo sprintf( '&copy;'.date("Y").'&nbsp;|&nbsp;<a class="site-name" href="%s" rel="home">%s</a>', 
+                    				esc_url( home_url( '/' ) ),
+                    				esc_html( $copyright_text )
+                  				);
+								
+								if ( function_exists( 'the_privacy_policy_link' ) ) {
+									the_privacy_policy_link( '&nbsp;|&nbsp;', '<span role="separator" aria-hidden="true"></span>' );
+								} 
 							?>
-							<?php if ( ! empty( $copyright_text ) ) { ?>
-								<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( get_theme_mod( 'conversions_copyright_text' ) ); ?></a>
-							<?php } elseif ( ! empty( $blog_info ) ) { ?>
-								<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-							<?php } ?>
-
-							<?php echo "&nbsp;|&nbsp;"; ?>
-
-							<?php if ( function_exists( 'the_privacy_policy_link' ) ) {
-								the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-							} ?>
 
 						</div>
 						
-						<?php
-							do_action ( 'conversions_output_social' ); // inc/customizer-social.php 
-						?>
+						<?php do_action ( 'conversions_output_social' ); ?>
 
 					</div><!-- .site-info -->
 
