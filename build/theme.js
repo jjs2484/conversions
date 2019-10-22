@@ -15717,7 +15717,7 @@
     // 250 is the delay in milliseconds. Change as you see fit.
     $(window).resize(function() {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(resizeFunction, 250);
+        resizeTimer = setTimeout(resizeFunction, 150);
     });
 
 })(jQuery);
@@ -15770,7 +15770,7 @@ jQuery(function () {
     jQuery(window).resize(function() {
         if (jQuery('.offcanvas-collapse.open').length > 0) {
             clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(OffresizeFunction, 200);
+            resizeTimer = setTimeout(OffresizeFunction, 150);
         }
     });
    

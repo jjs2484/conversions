@@ -1579,6 +1579,88 @@ namespace conversions
  					) 
       		) );
 
+      		//-----------------------------------------------------
+			// Homepage News section
+			//-----------------------------------------------------
+			$wp_customize->add_section( 'conversions_homepage_news', array(
+				'title'             => __('News', 'conversions'),
+				'priority'          => 60,
+				'description'       => __('Settings for the news section.', 'conversions'),
+				'capability'        => 'edit_theme_options',
+				'panel'             => 'conversions_homepage',
+			) );
+			$wp_customize->add_setting( 'conversions_news_bg_color', array(
+				'default'       => '#F3F3F3',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_news_bg_color_control', array(
+				'label'      => __('Background color', 'conversions'),
+				'description'=> __('Call to Action section background color.', 'conversions'),
+				'section'    => 'conversions_homepage_news',
+				'settings'   => 'conversions_news_bg_color',
+				'priority'   => 10,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_news_title', array(
+				'default'       => __( 'Latest News', 'conversions' ),
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+			$wp_customize->add_control( 'conversions_news_title_control', array(
+				'label'      => __('Title text', 'conversions'),
+				'description'=> __('Add your title.', 'conversions'),
+				'section'    => 'conversions_homepage_news',
+				'settings'   => 'conversions_news_title',
+				'priority'   => 20,
+				'type'       => 'text',
+			) );
+			$wp_customize->add_setting( 'conversions_news_title_color', array(
+				'default'       => '#222222',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_news_title_color_control', array(
+				'label'      => __('Title color', 'conversions'),
+				'description'=> __('Select a color for the title.', 'conversions'),
+				'section'    => 'conversions_homepage_news',
+				'settings'   => 'conversions_news_title_color',
+				'priority'   => 30,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_news_desc', array(
+      			'default' => __( 'Read our latest news. We post regularly to keep you up to date on a variety of topics in our industry.', 'conversions' ),
+      			'type'          => 'theme_mod',
+      			'transport' => 'refresh',
+      			'sanitize_callback' => 'wp_kses_post'
+   			) );
+			$wp_customize->add_control( 'conversions_news_desc', array(
+      			'label'      => __('Description', 'conversions'),
+				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
+      			'section' => 'conversions_homepage_news',
+      			'settings'   => 'conversions_news_desc',
+      			'priority' => 40,
+      			'type' => 'textarea',
+      			'capability' => 'edit_theme_options',
+   			) );
+   			$wp_customize->add_setting( 'conversions_news_desc_color', array(
+				'default'       => '#6c757d',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_news_desc_color_control', array(
+				'label'      => __('Description color', 'conversions'),
+				'description'=> __('Select a color for the description text.', 'conversions'),
+				'section'    => 'conversions_homepage_news',
+				'settings'   => 'conversions_news_desc_color',
+				'priority'   => 50,
+				'type'       => 'color',
+			) );
+
 			//-----------------------------------------------------
 			// Homepage Call to action section
 			//-----------------------------------------------------
@@ -1968,8 +2050,15 @@ namespace conversions
 				section.c-cta h2 {
 					color: <?php echo esc_html( get_theme_mod('conversions_hcta_title_color', '#222222' ) ); ?>;
 				}
-				section.c-cta p {
+				section.c-cta p.subtitle {
 					color: <?php echo esc_html( get_theme_mod('conversions_hcta_desc_color', '#6c757d' ) ); ?>;
+				}
+				section.c-news { background-color: <?php echo esc_html( get_theme_mod( 'conversions_news_bg_color', '#F3F3F3' ) ); ?>; }
+				section.c-news h2 {
+					color: <?php echo esc_html( get_theme_mod('conversions_news_title_color', '#222222' ) ); ?>;
+				}
+				section.c-news p.subtitle {
+					color: <?php echo esc_html( get_theme_mod('conversions_news_desc_color', '#6c757d' ) ); ?>;
 				}
 			</style>
 

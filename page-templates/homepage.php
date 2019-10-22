@@ -476,17 +476,24 @@ get_header();
   </section>
 
 	<!-- News Section -->
-	<section class="c-news" style="background-color: #F3F3F3;">
+	<section class="c-news">
 		<div class="container-fluid py-5">
 			<div class="row justify-content-sm-center">
 
         <!-- Title -->
         <div class="col-12">
 				  <div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
-            <h2 class="h3">Latest News</h2>
-            <p class="text-muted">
-						  We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
-            </p>
+            <?php 
+              if ( !empty( get_theme_mod( 'conversions_news_title') ) ) {
+                // Title
+                echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_news_title' ) ).'</h2>';
+              }
+
+              if ( !empty( get_theme_mod( 'conversions_news_desc') ) ) {
+                // Description
+                echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_news_desc' ) ).'</p>';
+              }
+            ?>
 				  </div>
         </div>
 
@@ -564,7 +571,7 @@ get_header();
 
                 if ( !empty( get_theme_mod( 'conversions_hcta_desc') ) ) {
                   // Description
-                  echo '<p>'.wp_kses_post( get_theme_mod( 'conversions_hcta_desc' ) ).'</p>';
+                  echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_hcta_desc' ) ).'</p>';
                 }
 
                 if ( get_theme_mod( 'conversions_hcta_btn', 'btn-primary' ) != 'no' ) {
