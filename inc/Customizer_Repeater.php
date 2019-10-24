@@ -501,7 +501,7 @@ class Conversions_Repeater extends \WP_Customize_Control {
                     <div class="customizer-repeater-social-repeater-container">
                         <div class="customizer-repeater-rc input-group icp-container">
                             <input data-placement="bottomRight" class="icp icp-auto" value="<?php if( !empty($social_icon['icon']) ) { echo esc_attr( $social_icon['icon'] ); } ?>" type="text">
-                            <span class="input-group-addon"><i class="fa <?php echo esc_attr( $social_icon['icon'] ); ?>"></i></span>
+                            <span class="input-group-addon"><i class="<?php echo esc_attr( $social_icon['icon'] ); ?>"></i></span>
                         </div>
 						<?php get_template_part( $this->customizer_icon_container ); ?>
                         <input type="text" class="customizer-repeater-social-repeater-link"

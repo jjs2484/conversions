@@ -12108,9 +12108,9 @@ section.c-cta .c-cta__items {
   @media (min-width: 768px) {
     #wrapper-footer .copyright {
       -webkit-box-pack: start;
-      -webkit-justify-content: start;
+      -webkit-justify-content: flex-start;
           -ms-flex-pack: start;
-              justify-content: start;
+              justify-content: flex-start;
       -webkit-box-ordinal-group: 2;
       -webkit-order: 1;
           -ms-flex-order: 1;
@@ -12132,9 +12132,9 @@ section.c-cta .c-cta__items {
   @media (min-width: 768px) {
     #wrapper-footer .social-media-icons {
       -webkit-box-pack: end;
-      -webkit-justify-content: end;
+      -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
-              justify-content: end;
+              justify-content: flex-end;
       -webkit-box-ordinal-group: 3;
       -webkit-order: 2;
           -ms-flex-order: 2;
