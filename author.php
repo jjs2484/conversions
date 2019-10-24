@@ -13,7 +13,6 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-
 <div class="wrapper" id="author-wrapper">
 
 	<div class="container-fluid" id="content" tabindex="-1">

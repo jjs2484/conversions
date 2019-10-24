@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The default template for displaying single posts.
  *
  * @package conversions
  */
@@ -42,7 +42,7 @@ get_header();
 					<?php conversions()->template->related_posts(); ?>
 
 					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
+					// If comments are open or we have at least one comment, load comments.
 					if ( comments_open() || get_comments_number() ) :
 						comments_template();
 					endif;

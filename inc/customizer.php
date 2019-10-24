@@ -1884,7 +1884,9 @@ namespace conversions
 
 			<style>
 				/* Container width */
-				.container-fluid { max-width: <?php echo esc_html( get_theme_mod( 'conversions_container_width', '1100' ) ); ?>px; }
+				.container-fluid { 
+					max-width: <?php echo esc_html( get_theme_mod( 'conversions_container_width', '1100' ) ); ?>px; 
+				}
 				/* Logo size */
 				a.navbar-brand img {
 					max-height: <?php echo esc_html( get_theme_mod( 'conversions_logo_height', '60' ) ); ?>px;
@@ -1955,7 +1957,7 @@ namespace conversions
 					color: <?php echo esc_html( get_theme_mod( 'conversions_social_link_hcolor', '#004086' ) ); ?>;
 				}
 				<?php if ( class_exists( 'woocommerce' ) ) { ?>
-					<?php if ( esc_html( get_theme_mod( 'conversions_wc_checkout_columns', 'two-column' ) == 'two-column' ) ) { ?>
+					<?php if ( get_theme_mod( 'conversions_wc_checkout_columns', 'two-column' ) == 'two-column' ) { ?>
 						/* WooCommerce checkout columns*/
 						@media screen and (min-width:768px) {
 							body.woocommerce-checkout #customer_details { width: 48%; float: left; margin-right: 1.9%; }
@@ -2169,16 +2171,16 @@ namespace
 	/**
 	 * Repeater sanitization
 	 */
-	function conversions_repeater_sanitize($input)
+	function conversions_repeater_sanitize( $input )
 	{
-		$input_decoded = json_decode($input,true);
-		if(!empty($input_decoded)) {
-			foreach ($input_decoded as $boxk => $box ){
-				foreach ($box as $key => $value){
+		$input_decoded = json_decode( $input, true );
+		if( !empty( $input_decoded ) ) {
+			foreach ( $input_decoded as $boxk => $box ) {
+				foreach ( $box as $key => $value ) {
 					$input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
 				}
 			}
-			return json_encode($input_decoded);
+			return json_encode( $input_decoded );
 		}
 		return $input;
 	}
