@@ -27,6 +27,7 @@ namespace conversions
 		**/
 		public function conversions_output_social()
 		{
+			// get option values and decode
 			$conversions_si = get_theme_mod( 'conversions_social_icons' );
 			$conversions_si_decoded = json_decode( $conversions_si );
 			
@@ -34,9 +35,11 @@ namespace conversions
 				echo '<div class="social-media-icons col-md"><ul class="list-inline">';
       			foreach ( $conversions_si_decoded as $repeater_item ) {
 
+      				// remove prefixes for titles and screen reader text
       				$find = array('/\bfas \b/', '/\bfab \b/', '/\bfar \b/', '/\bfa-\b/');
 					$title = preg_replace($find, "", $repeater_item->icon_value);
 
+					// output the icon and link
 					echo sprintf( '<li class="list-inline-item"><a title="%1$s" href="%2$s" target="%3$s"><i aria-hidden="true" class="%4$s"></i><span class="sr-only">%1$s</span></a></li>',
 						esc_attr( $title ), 
 						esc_url( $repeater_item->link ),
