@@ -27,37 +27,26 @@ namespace conversions
 		**/
 		public function conversions_output_social()
 		{
-			// Any inputs that aren't empty are stored in $active_sites array
-			foreach( $this->get_social_sites() as $social_site ) {
-				if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
-					$active_sites[] = $social_site;
+			$conversions_si = get_theme_mod( 'conversions_social_icons' );
+			$conversions_si_decoded = json_decode( $conversions_si );
+			
+			if ( !empty( $conversions_si_decoded ) ) {
+				echo '<div class="social-media-icons col-md"><ul class="list-inline">';
+      			foreach ( $conversions_si_decoded as $repeater_item ) {
+
+      				$find = array('/\bfas \b/', '/\bfab \b/', '/\bfar \b/', '/\bfa-\b/');
+					$title = preg_replace($find, "", $repeater_item->icon_value);
+
+					echo sprintf( '<li class="list-inline-item"><a title="%1$s" href="%2$s" target="%3$s"><i aria-hidden="true" class="%4$s"></i><span class="sr-only">%1$s</span></a></li>',
+						esc_attr( $title ), 
+						esc_url( $repeater_item->link ),
+						esc_attr( get_theme_mod('conversions_social_link_target', '_self') ),
+						esc_attr( $repeater_item->icon_value )
+                	);
 				}
+				echo '</ul></div>';
 			}
-			// For each active social site, add it as a list item
-			if ( !empty( $active_sites ) ) {
-				echo "<div class='social-media-icons col-md'>";
-					echo "<ul class='list-inline'>";
-						foreach ( $active_sites as $active_site ) { ?>
 
-							<li class="list-inline-item">
-								<a title="<?php echo esc_html( $active_site ); ?>" href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>" target="<?php echo esc_html( get_theme_mod('conversions_social_link_target', '_self') ); ?>">
-									<?php if( $active_site == 'dribbble' ) { ?>
-										<i aria-hidden="true" class="fab fa-<?php echo esc_attr( $active_site ); ?>-square"></i>
-										<span class="sr-only"><?php echo esc_html( $active_site ); ?></span>
-									<?php } elseif( $active_site == 'google my business' ) { ?>
-										<i aria-hidden="true" class="fas fa-map-marker-alt"></i>
-										<span class="sr-only"><?php echo esc_html( $active_site ); ?></span>
-									<?php } else { ?>
-										<i aria-hidden="true" class="fab fa-<?php echo esc_attr( $active_site ); ?>"></i>
-											<span class="sr-only"><?php echo esc_html( $active_site ); ?></span>
-									<?php } ?>
-								</a>
-							</li>
-
-						<?php }
-					echo "</ul>";
-				echo "</div>";
-			}
 		}
 		/**
 			@brief		customize_register
@@ -771,26 +760,28 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_social_link_hcolor_control', array(
 				'label'      => __('Social icon hover color', 'conversions'),
-				'description'       => __('Select social icon hover color.', 'conversions'),
+				'description' => __('Select social icon hover color.', 'conversions'),
 				'section'    => 'conversions_social',
 				'settings'   => 'conversions_social_link_hcolor',
 				'priority'   => 40,
 				'type'       => 'color',
 			) );
-			$social_sites = $this->get_social_sites();
-			foreach( $social_sites as $social_site ) {
-				$wp_customize->add_setting( "$social_site", array(
-					'type' => 'theme_mod',
-					'capability' => 'edit_theme_options',
-					'sanitize_callback' => 'esc_url_raw',
-				));
-				$wp_customize->add_control( $social_site, array(
-					'label' => __("$social_site URL:", 'conversions'),
+			$wp_customize->add_setting( 'conversions_social_icons', array(
+				'type' => 'theme_mod',
+				'capability' => 'edit_theme_options',
+				'transport'     => 'refresh',
+         		'sanitize_callback' => 'conversions_repeater_sanitize'
+      		));
+      		$wp_customize->add_control( 
+      			new \Conversions_Repeater( 
+      			$wp_customize, 'conversions_social_icons', array(
+					'label'   => __('Icons','conversions'),
 					'section' => 'conversions_social',
-					'type' => 'url',
-					'priority' => 50,
-				));
-			}
+					'priority' => 60,
+					'customizer_repeater_icon_control' => true,
+					'customizer_repeater_link_control' => true,
+ 				) 
+      		) );
 
 			//-----------------------------------------------------
 			// Blog section
@@ -1806,33 +1797,7 @@ namespace conversions
 			) );
 
 		}
-		/**
-			@brief		Return a list of social media icons.
-			@since		2019-08-15 23:29:22
-		**/
-		public function get_social_sites()
-		{
-			return [
-				'amazon',
-				'discord',
-				'dribbble',
-				'facebook',
-				'flickr',
-				'github',
-				'google my business',
-				'instagram',
-				'linkedin',
-				'pinterest',
-				'reddit',
-				'slack',
-				'tumblr',
-				'twitter',
-				'vimeo',
-				'wordpress',
-				'yelp',
-				'youtube',
-			];
-		}
+
 		/**
 			@brief		wp_footer
 			@since		2019-08-15 23:16:11
