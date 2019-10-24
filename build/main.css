@@ -11770,7 +11770,8 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
     width: 59%; } }
 
 a.c-news__img-link {
-  background: #000000; }
+  background: #000;
+  border-radius: 4px; }
   a.c-news__img-link img {
     -webkit-transition: .3s;
     -o-transition: .3s;

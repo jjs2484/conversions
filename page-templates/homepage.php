@@ -153,7 +153,7 @@ get_header();
 			
 			<!-- Title -->
 			<div class="col-12">
-				<div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
+				<div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
 					<h2 class="h3">Features section</h2>
 					<p class="text-muted">
 						We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
@@ -243,7 +243,7 @@ get_header();
 
 				<!-- Title -->
 				<div class="col-12">
-					<div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
+					<div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
 						<h2 class="h3">Pricing table section</h2>
 						<p class="text-muted">
 							We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
@@ -407,7 +407,7 @@ get_header();
 
         <!-- Title -->
         <div class="col-12">
-          <div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
+          <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
             <h2 class="h3">What people say about us</h2>
             <p class="text-muted">
               We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
@@ -482,7 +482,7 @@ get_header();
 
         <!-- Title -->
         <div class="col-12">
-				  <div class="w-md-80 w-lg-60 text-center mt-4 mb-5 mx-auto">
+				  <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
             <?php 
               if ( !empty( get_theme_mod( 'conversions_news_title') ) ) {
                 // Title

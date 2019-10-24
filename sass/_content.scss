@@ -43,7 +43,8 @@ input[type="file"] {
 
 // News img hover
 a.c-news__img-link {
-  background: #000000;
+  background: #000;
+  border-radius: 4px;
   img {
     transition: .3s;
     &:hover {
