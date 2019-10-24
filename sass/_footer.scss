@@ -45,7 +45,15 @@
     ul.list-inline {
       margin-bottom: 0;
       li.list-inline-item:not(:last-child) {
-        margin-right: .2rem;
+        margin-right: .5rem;
+      }
+      li.list-inline-item {
+        a {
+          display: inline-block;
+        }
+        i {
+          vertical-align: middle;
+        }
       }
     }
 

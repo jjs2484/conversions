@@ -12143,7 +12143,11 @@ section.c-cta .c-cta__items {
   #wrapper-footer .social-media-icons ul.list-inline {
     margin-bottom: 0; }
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
-      margin-right: .2rem; }
+      margin-right: .5rem; }
+    #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item a {
+      display: inline-block; }
+    #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item i {
+      vertical-align: middle; }
 
 #full-width-page-wrapper .alignfull {
   width: 100vw;
