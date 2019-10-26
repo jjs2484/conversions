@@ -11767,7 +11767,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 
 @media (min-width: 992px) {
   .w-lg-60 {
-    width: 59%; } }
+    width: 60%; } }
 
 a.c-news__img-link {
   background: #000;
@@ -11868,8 +11868,9 @@ section.c-icon-block .c-icon-block__icon i {
     margin: 0 auto; } }
 
 @media (max-width: 991.98px) {
-  section.c-news div.col-sm-6.col-lg-4.mb-4.mb-lg-3:nth-of-type(3) {
-    display: none; } }
+  section.c-news .card {
+    max-width: 24rem;
+    margin: 0 auto; } }
 
 section.c-testimonials .c-testimonials__quote {
   padding: 20px;

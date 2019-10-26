@@ -1654,6 +1654,25 @@ namespace conversions
 				'priority'   => 50,
 				'type'       => 'color',
 			) );
+			$wp_customize->add_setting( 'conversions_news_mposts', array(
+				'default'       => '2',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_news_mposts_control', array(
+				'label'      => __('# of posts to show on mobile', 'conversions'),
+				'description'=> __('Number of posts to show from 992px and down.', 'conversions'),
+				'section'    => 'conversions_homepage_news',
+				'settings'   => 'conversions_news_mposts',
+				'priority'   => 60,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 3,
+				),
+			) );
 
 			//-----------------------------------------------------
 			// Homepage Call to action section
@@ -2030,10 +2049,25 @@ namespace conversions
 				section.c-news p.subtitle {
 					color: <?php echo esc_html( get_theme_mod('conversions_news_desc_color', '#6c757d' ) ); ?>;
 				}
+				<?php if ( get_theme_mod( 'conversions_news_mposts', '2' ) == 1 ) { ?>
+					@media (max-width: 991.98px) {
+						section.c-news .c-news__card-wrapper:nth-of-type(2),
+						section.c-news .c-news__card-wrapper:nth-of-type(3) {
+							display: none;
+						}
+					}
+				<?php } ?>
+				<?php if ( get_theme_mod( 'conversions_news_mposts', '2' ) == 2 ) { ?>
+					@media (max-width: 991.98px) {
+						section.c-news .c-news__card-wrapper:nth-of-type(3) {
+							display: none;
+						}
+					}
+				<?php } ?>
 			</style>
 
-			<?php
-		}
+		<?php }
+
 		/**
 			@brief		woocommerce_add_to_cart_fragments
 			@since		2019-08-15 23:17:37

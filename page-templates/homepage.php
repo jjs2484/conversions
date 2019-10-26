@@ -512,7 +512,7 @@ get_header();
         ?>
 
           <!-- Post item -->
-          <div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
+          <div class="col-sm-12 col-lg-4 mb-4 mb-lg-3 c-news__card-wrapper">
             <article class="card shadow h-100 mb-3">
             
               <!-- Post image -->

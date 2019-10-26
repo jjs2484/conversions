@@ -223,6 +223,7 @@ namespace conversions
 				'conversions_news_title_color' => '#222222',
 				'conversions_news_desc' => 'Read our latest news. We post regularly to keep you up to date on a variety of topics in our industry.',
 				'conversions_news_desc_color' => '#6c757d',
+				'conversions_news_mposts' => '2',
 				'conversions_hcta_title' => 'Get started today!',
 				'conversions_hcta_title_color' => '#222222',
 				'conversions_hcta_desc' => 'Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?',

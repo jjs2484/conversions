@@ -37,7 +37,7 @@ input[type="file"] {
 }
 .w-lg-60 {
   @media (min-width: 992px) {
-    width: 59%;
+    width: 60%;
   }
 }
 
@@ -170,9 +170,10 @@ section.c-icon-block {
 
 // News section
 section.c-news {
-  @include media-breakpoint-down(md) {
-    div.col-sm-6.col-lg-4.mb-4.mb-lg-3:nth-of-type(3) {
-      display: none;
+  .card {
+    @include media-breakpoint-down(md) {
+      max-width: 24rem;
+      margin: 0 auto;
     }
   }
 }
