@@ -1574,11 +1574,93 @@ namespace conversions
       		) );
 
       		//-----------------------------------------------------
+			// Homepage Testimonials section
+			//-----------------------------------------------------
+			$wp_customize->add_section( 'conversions_homepage_testimonials', array(
+				'title'             => __('Testimonials', 'conversions'),
+				'priority'          => 60,
+				'description'       => __('Settings for the testimonials section.', 'conversions'),
+				'capability'        => 'edit_theme_options',
+				'panel'             => 'conversions_homepage',
+			) );
+			$wp_customize->add_setting( 'conversions_testimonials_bg_color', array(
+				'default'       => '',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_testimonials_bg_color_control', array(
+				'label'      => __('Background color', 'conversions'),
+				'description'=> __('Testimonials section background color.', 'conversions'),
+				'section'    => 'conversions_homepage_testimonials',
+				'settings'   => 'conversions_testimonials_bg_color',
+				'priority'   => 10,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_testimonials_title', array(
+				'default'       => __( 'What customers say', 'conversions' ),
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+			$wp_customize->add_control( 'conversions_testimonials_title_control', array(
+				'label'      => __('Title text', 'conversions'),
+				'description'=> __('Add your title.', 'conversions'),
+				'section'    => 'conversions_homepage_testimonials',
+				'settings'   => 'conversions_testimonials_title',
+				'priority'   => 20,
+				'type'       => 'text',
+			) );
+			$wp_customize->add_setting( 'conversions_testimonials_title_color', array(
+				'default'       => '#222222',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_testimonials_title_color_control', array(
+				'label'      => __('Title color', 'conversions'),
+				'description'=> __('Select a color for the title.', 'conversions'),
+				'section'    => 'conversions_homepage_testimonials',
+				'settings'   => 'conversions_testimonials_title_color',
+				'priority'   => 30,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_testimonials_desc', array(
+      			'default' => __( 'We appreciate our customers feedback! Here is what some of our customers have to say about us.', 'conversions' ),
+      			'type' => 'theme_mod',
+      			'transport' => 'refresh',
+      			'sanitize_callback' => 'wp_kses_post'
+   			) );
+			$wp_customize->add_control( 'conversions_testimonials_desc', array(
+      			'label'      => __('Description', 'conversions'),
+				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
+      			'section' => 'conversions_homepage_testimonials',
+      			'settings'   => 'conversions_testimonials_desc',
+      			'priority' => 40,
+      			'type' => 'textarea',
+      			'capability' => 'edit_theme_options',
+   			) );
+   			$wp_customize->add_setting( 'conversions_testimonials_desc_color', array(
+				'default'       => '#6c757d',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_testimonials_desc_color_control', array(
+				'label'      => __('Description color', 'conversions'),
+				'description'=> __('Select a color for the description text.', 'conversions'),
+				'section'    => 'conversions_homepage_testimonials',
+				'settings'   => 'conversions_testimonials_desc_color',
+				'priority'   => 50,
+				'type'       => 'color',
+			) );
+
+      		//-----------------------------------------------------
 			// Homepage News section
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_homepage_news', array(
 				'title'             => __('News', 'conversions'),
-				'priority'          => 60,
+				'priority'          => 70,
 				'description'       => __('Settings for the news section.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
@@ -1679,7 +1761,7 @@ namespace conversions
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_homepage_cta', array(
 				'title'             => __('Call to Action', 'conversions'),
-				'priority'          => 70,
+				'priority'          => 80,
 				'description'       => __('Settings for the call to action section.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
@@ -1944,7 +2026,7 @@ namespace conversions
 					<?php } ?>
 					min-height: <?php echo esc_html( get_theme_mod( 'conversions_featured_img_height', '65' ) ); ?>vh;
 				}
-				/* Footer styles */
+				/* Footer */
 				#wrapper-footer-full { background-color: <?php echo esc_html( get_theme_mod( 'conversions_footer_bg_color', '#3c3d45' ) ); ?>; }
 				#footer-full-content .h1, #footer-full-content .h2, #footer-full-content .h3, #footer-full-content .h4, #footer-full-content .h5, #footer-full-content .h6, #footer-full-content h1, #footer-full-content h2, #footer-full-content h3, #footer-full-content h4, #footer-full-content h5, #footer-full-content h6 { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_heading_color', '#ffffff' ) ); ?>; }
 				#footer-full-content p, #footer-full-content table, #footer-full-content li, #footer-full-content caption { color: <?php echo esc_html( get_theme_mod( 'conversions_footer_text_color', '#ffffff' ) ); ?>; }
@@ -1962,7 +2044,7 @@ namespace conversions
 				a { color: <?php echo esc_html( get_theme_mod( 'conversions_link_color', '#0057b4' ) ); ?>; }
 				a:hover { color: <?php echo esc_html( get_theme_mod( 'conversions_link_hcolor', '#004086' ) ); ?>; }
 				.conversions-hero-cover .conversions-hero-cover__inner-container h1 { color: <?php echo esc_html( get_theme_mod( 'conversions_featured_title_color', '#ffffff' ) ); ?>; }
-				/* Copyright styles */
+				/* Copyright */
 				#wrapper-footer { background-color: <?php echo esc_html( get_theme_mod( 'conversions_copyright_bg_color', '#eeeeee' ) ); ?>; }
 				#wrapper-footer .site-info .copyright { color: <?php echo esc_html( get_theme_mod( 'conversions_copyright_text_color', '#111111' ) ); ?>; }
 				#wrapper-footer .site-info .copyright a { color: <?php echo esc_html( get_theme_mod('conversions_copyright_link_color', '#0057b4' ) ); ?>; }
@@ -2064,6 +2146,15 @@ namespace conversions
 						}
 					}
 				<?php } ?>
+				<?php if ( !empty( get_theme_mod( 'conversions_testimonials_bg_color') ) ) { ?>
+					section.c-testimonials { background-color: <?php echo esc_html( get_theme_mod( 'conversions_testimonials_bg_color') ); ?>; }
+				<?php } ?>
+				section.c-testimonials h2 {
+					color: <?php echo esc_html( get_theme_mod('conversions_testimonials_title_color', '#222222' ) ); ?>;
+				}
+				section.c-testimonials p.subtitle {
+					color: <?php echo esc_html( get_theme_mod('conversions_testimonials_desc_color', '#6c757d' ) ); ?>;
+				}
 			</style>
 
 		<?php }

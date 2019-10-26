@@ -252,7 +252,7 @@ get_header();
 				</div>
 
 				<!-- Pricing table #1 -->
-  				<div class="col-sm-12 col-lg-4 mb-3 mb-lg-0">
+  				<div class="col-sm-12 col-lg-4 mb-3">
     				<div class="card shadow">
       					<header class="card-header bg-white text-center p-4">
         					<h4 class="h5 text-primary mb-3">Company</h4>
@@ -292,7 +292,7 @@ get_header();
   				</div>
 
   				<!-- Pricing table #2 -->
-  				<div class="col-sm-12 col-lg-4 mb-3 mb-lg-0">
+  				<div class="col-sm-12 col-lg-4 mb-3">
     				<div class="card shadow">
       					<header class="card-header bg-white text-center p-4">
         					<h4 class="h5 text-success mb-3">Enterprise</h4>
@@ -340,7 +340,7 @@ get_header();
   				</div>
 
           <!-- Pricing table #3 -->
-          <div class="col-sm-12 col-lg-4 mb-3 mb-lg-0">
+          <div class="col-sm-12 col-lg-4 mb-3">
             <div class="card shadow">
                 <header class="card-header bg-white text-center p-4">
                   <h4 class="h5 text-danger mb-3">Enterprise</h4>
@@ -405,15 +405,24 @@ get_header();
     <div class="container-fluid py-5">
       <div class="row">
 
-        <!-- Title -->
-        <div class="col-12">
-          <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
-            <h2 class="h3">What people say about us</h2>
-            <p class="text-muted">
-              We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
-            </p>
+        <?php if ( !empty( get_theme_mod( 'conversions_testimonials_title') ) || !empty( get_theme_mod( 'conversions_testimonials_desc') ) ) { ?>
+          <!-- Title -->
+          <div class="col-12">
+            <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
+              <?php 
+                if ( !empty( get_theme_mod( 'conversions_testimonials_title') ) ) {
+                  // Title
+                  echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_testimonials_title' ) ).'</h2>';
+                }
+
+                if ( !empty( get_theme_mod( 'conversions_testimonials_desc') ) ) {
+                  // Description
+                  echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_testimonials_desc' ) ).'</p>';
+                }
+              ?>
+            </div>
           </div>
-        </div>
+        <?php } ?>
 
         <!-- Testimonials -->
         <div class="col-12">
@@ -423,7 +432,7 @@ get_header();
             
             <!-- Testimonial -->
             <div class="c-testimonials__item">
-              <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-4">
+              <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-3">
                 <p class="h5">
                   Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
                 </p>
