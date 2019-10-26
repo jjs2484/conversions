@@ -81,11 +81,7 @@ get_header();
             if ( esc_html( get_theme_mod( 'conversions_hc_respond', 'auto' ) == 'auto' ) ) 
             {
               
-              $chc_breakpoints = [
-                '768',
-                '576',
-                '375',
-              ];
+              $chc_breakpoints = ['768','576','375'];
 
               foreach ($chc_breakpoints as $s) {
                 $n = floor( $s / $chc_logo_width );
@@ -422,7 +418,6 @@ get_header();
 
         <!-- Testimonials -->
         <div class="col-12">
-         
           <!-- Slick Carousel -->
           <div class="c-testimonials__carousel">
 
@@ -487,75 +482,79 @@ get_header();
 		<div class="container-fluid py-5">
 			<div class="row justify-content-sm-center">
 
-        <!-- Title -->
-        <div class="col-12">
-				  <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
-            <?php 
-              if ( !empty( get_theme_mod( 'conversions_news_title') ) ) {
-                // Title
-                echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_news_title' ) ).'</h2>';
-              }
-              if ( !empty( get_theme_mod( 'conversions_news_desc') ) ) {
-                // Description
-                echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_news_desc' ) ).'</p>';
-              }
-            ?>
-				  </div>
-        </div>
-
-        <?php 
-        // Get latest posts
-        $args=array(
-          'post_type' => 'post',
-          'post_status' => 'publish',
-          'posts_per_page' => 3,
-          'orderby' => array( 'comment_count' => 'DESC'),
-          'ignore_sticky_posts' => 1,
-        );
-
-        $recent_posts = new WP_Query( $args );
-        while ($recent_posts -> have_posts()) : $recent_posts -> the_post(); 
-        ?>
-
-          <!-- Post item -->
-          <div class="col-sm-12 col-lg-4 mb-4 mb-lg-3 c-news__card-wrapper">
-            <article class="card shadow h-100 mb-3">
-            
-              <!-- Post image -->
-              <a class="c-news__img-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>">
-                <?php if ( has_post_thumbnail() ) : ?>
-                  <?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
-                <?php else : ?>
-                  <img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
-                <?php endif; ?>
-              </a>
-              <div class="card-body pb-1">
-                <h3 class="h5">
-                  <a href="<?php esc_url( the_permalink() ); ?>">
-                    <?php the_title(); ?>
-                  </a>
-                </h3>
-                <p class="text-muted">
-                  <?php
-                    $related_content = strip_shortcodes( get_the_content() );
-                    echo wp_trim_words( $related_content, 15, '...' ); 
-                  ?>
-                </p>
-              </div>
-              <div class="card-footer text-muted d-flex justify-content-between align-items-center small">
-                <?php conversions()->template->posted_on(); ?>
-                <?php conversions()->template->reading_time(); ?>
-              </div>
-            </article>
+        <?php if ( !empty( get_theme_mod( 'conversions_news_title') ) || !empty( get_theme_mod( 'conversions_news_desc') ) ) { ?>
+          
+          <!-- Title -->
+          <div class="col-12">
+				    <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
+              <?php 
+                if ( !empty( get_theme_mod( 'conversions_news_title') ) ) {
+                  // Title
+                  echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_news_title' ) ).'</h2>';
+                }
+                if ( !empty( get_theme_mod( 'conversions_news_desc') ) ) {
+                  // Description
+                  echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_news_desc' ) ).'</p>';
+                }
+              ?>
+				    </div>
           </div>
-          <!-- End Post Item -->
+
+        <?php } ?>
 
         <?php 
-        endwhile;
-        wp_reset_postdata();
+          // Get latest posts
+          $args=array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => 3,
+            'orderby' => array( 'comment_count' => 'DESC'),
+            'ignore_sticky_posts' => 1,
+          );
+
+          $recent_posts = new WP_Query( $args );
+          while ($recent_posts -> have_posts()) : $recent_posts -> the_post(); 
         ?>
 
-			</div>
+        <!-- Post item -->
+        <div class="col-sm-12 col-lg-4 mb-4 mb-lg-3 c-news__card-wrapper">
+          <article class="card shadow h-100 mb-3">
+            
+            <!-- Post image -->
+            <a class="c-news__img-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>">
+              <?php if ( has_post_thumbnail() ) : ?>
+                <?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
+              <?php else : ?>
+                <img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
+              <?php endif; ?>
+            </a>
+            <div class="card-body pb-1">
+              <h3 class="h5">
+                <a href="<?php esc_url( the_permalink() ); ?>">
+                  <?php the_title(); ?>
+                </a>
+              </h3>
+              <p class="text-muted">
+                <?php
+                  $related_content = strip_shortcodes( get_the_content() );
+                  echo wp_trim_words( $related_content, 15, '...' ); 
+                ?>
+              </p>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-between align-items-center small">
+              <?php conversions()->template->posted_on(); ?>
+              <?php conversions()->template->reading_time(); ?>
+            </div>
+          </article>
+        </div>
+        <!-- End Post Item -->
+
+        <?php 
+          endwhile;
+          wp_reset_postdata();
+        ?>
+
+      </div>
 		</div>
 	</section>
 
