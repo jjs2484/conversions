@@ -15,11 +15,9 @@ get_header();
 
 <div id="homepage-wrapper" class="wrapper">
 
-  <?php 
-    if ( has_post_thumbnail( get_the_ID() ) ) {
-      conversions()->template->fullscreen_featured_image();
-    } 
-  ?>
+  <?php if ( has_post_thumbnail( get_the_ID() ) ) {
+    conversions()->template->fullscreen_featured_image();
+  } ?>
 
   <!-- Hero Section -->
 	<section class="c-hero d-flex align-items-center">
@@ -42,7 +40,6 @@ get_header();
             <p class="lead">
 
               <?php
-
                 // callout button
                 if ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) {
                   echo sprintf( '<a href="%s" class="btn %s btn-lg c-hero__callout-btn">%s</a>', 
@@ -121,7 +118,7 @@ get_header();
       
               if ( !empty( $chc_logos_decoded ) ) {
               
-                $count = 0;
+                $chc_count = 0;
               
                 foreach( $chc_logos_decoded as $chc_logo ){
                   // Retrieve img id
@@ -132,11 +129,11 @@ get_header();
                   // Retrieve the alt text
                   $chc_logo_alt = get_post_meta( $chc_logo_id, '_wp_attachment_image_alt', true );
 
-                  echo '<div class="c-clients__item px-3" id="c-clients__'.$count.'">
+                  echo '<div class="c-clients__item px-3" id="c-clients__'.$chc_count.'">
                     <img class="client" src="'. esc_url( $chc_logo_med[0] ) .'" alt="'. esc_html( $chc_logo_alt ) .'">
                   </div>';
 
-                  ++$count;
+                  ++$chc_count;
                 }
               }
             ?>
@@ -414,7 +411,6 @@ get_header();
                   // Title
                   echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_testimonials_title' ) ).'</h2>';
                 }
-
                 if ( !empty( get_theme_mod( 'conversions_testimonials_desc') ) ) {
                   // Description
                   echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_testimonials_desc' ) ).'</p>';
@@ -429,55 +425,57 @@ get_header();
          
           <!-- Slick Carousel -->
           <div class="c-testimonials__carousel">
+
+            <?php
+              $conversions_testimonials = get_theme_mod( 'conversions_testimonials_repeater' );
+              $conversions_testimonials_decoded = json_decode( $conversions_testimonials );
+      
+              if ( !empty( $conversions_testimonials_decoded ) ) {
+              
+                $testimonials_count = 0;
+              
+                foreach( $conversions_testimonials_decoded as $conversions_testimonial ){ ?>
+
+                  <!-- Testimonial -->
+                  <div class="c-testimonials__item" id="c-testimonials__<?php echo $testimonials_count; ?>">
+                    <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-3">
+                      <p class="h5">
+                        <?php echo $conversions_testimonial->text; ?>
+                      </p>
+                      <div class="d-flex justify-content-between">
+                        <cite>
+
+                          <?php if ( !empty( $conversions_testimonial->title ) ) { ?>
+                            <span class="d-block">
+                              <?php echo $conversions_testimonial->title; ?>
+                            </span>
+                          <?php } ?>
+
+                          <?php if ( !empty( $conversions_testimonial->subtitle ) ) { ?>
+                            <span class="d-block">
+                              <?php echo $conversions_testimonial->subtitle; ?>
+                            </span>
+                          <?php } ?>
+
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </cite>
+                        <div class="c-testimonials__nav align-self-end">
+                          <i class="fas fa-chevron-left slick-arrow mr-2"></i>
+                          <i class="fas fa-chevron-right slick-arrow"></i>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+
+                  <?php ++$testimonials_count;
+                }
+              }
+            ?>
             
-            <!-- Testimonial -->
-            <div class="c-testimonials__item">
-              <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-3">
-                <p class="h5">
-                  Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
-                </p>
-                <div class="d-flex justify-content-between">
-                  <cite>
-                    <span class="d-block">Mark McManus</span>
-                    <span class="d-block">Associate Director of Spotify</span>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </cite>
-                  <div class="c-testimonials__nav align-self-end">
-                    <i class="fas fa-chevron-left slick-arrow mr-2"></i>
-                    <i class="fas fa-chevron-right slick-arrow"></i>
-                  </div>
-                </div>
-              </blockquote>
-            </div>
-
-            <!-- Testimonial -->
-            <div class="c-testimonials__item">
-              <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-4">
-                <p class="h5">
-                  Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. Conversions brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things and get results fast. 
-                </p>
-                <div class="d-flex justify-content-between">
-                  <cite>
-                    <span class="d-block">Mark McManus</span>
-                    <span class="d-block">Associate Director of Spotify</span>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </cite>
-                  <div class="c-testimonials__nav align-self-end">
-                    <i class="fas fa-chevron-left slick-arrow mr-2"></i>
-                    <i class="fas fa-chevron-right slick-arrow"></i>
-                  </div>
-                </div>
-              </blockquote>   
-            </div>
-
           </div> <!-- End Slick Carousel -->
         </div>
       </div>
@@ -497,7 +495,6 @@ get_header();
                 // Title
                 echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_news_title' ) ).'</h2>';
               }
-
               if ( !empty( get_theme_mod( 'conversions_news_desc') ) ) {
                 // Description
                 echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_news_desc' ) ).'</p>';

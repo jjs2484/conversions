@@ -1654,6 +1654,23 @@ namespace conversions
 				'priority'   => 50,
 				'type'       => 'color',
 			) );
+			$wp_customize->add_setting( 'conversions_testimonials_repeater', array(
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+         		'sanitize_callback' => 'conversions_repeater_sanitize',
+      		) );
+      		$wp_customize->add_control( 
+      			new \Conversions_Repeater( 
+      				$wp_customize, 
+      				'conversions_testimonials_repeater', array(
+						'label'   => __( 'Testimonials', 'conversions' ),
+						'section' => 'conversions_homepage_testimonials',
+						'priority' => 60,
+						'customizer_repeater_title_control' => true,
+						'customizer_repeater_subtitle_control' => true,
+						'customizer_repeater_text_control' => true,
+ 					) 
+      		) );
 
       		//-----------------------------------------------------
 			// Homepage News section
@@ -2310,4 +2327,22 @@ namespace
 		return $input;
 	}
 
+	/**
+	 * Filter to modify input label for repeater controls
+	 */
+	function conversions_repeater_labels( $string, $id, $control ) {
+     	if ( $id === 'conversions_testimonials_repeater' ) {
+     		if ( $control === 'customizer_repeater_text_control' ) {
+     			return esc_html__( 'Testimonial text','conversions' );
+     		}
+     		if ( $control === 'customizer_repeater_title_control' ) {
+     			return esc_html__( 'Full name','conversions' );
+     		}
+     		if ( $control === 'customizer_repeater_subtitle_control' ) {
+     			return esc_html__( 'Company name','conversions' );
+     		}
+        }
+        return $string;
+    }
+    add_filter( 'repeater_input_labels_filter','conversions_repeater_labels', 10 , 3 );
 }
