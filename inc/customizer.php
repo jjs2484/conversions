@@ -1574,6 +1574,108 @@ namespace conversions
       		) );
 
       		//-----------------------------------------------------
+			// Homepage Pricing section
+			//-----------------------------------------------------
+			$wp_customize->add_section( 'conversions_homepage_pricing', array(
+				'title'             => __('Pricing', 'conversions'),
+				'priority'          => 59,
+				'description'       => __('Settings for the pricing section.', 'conversions'),
+				'capability'        => 'edit_theme_options',
+				'panel'             => 'conversions_homepage',
+			) );
+			$wp_customize->add_setting( 'conversions_pricing_bg_color', array(
+				'default'       => '#F3F3F3',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_pricing_bg_color_control', array(
+				'label'      => __('Background color', 'conversions'),
+				'description'=> __('Pricing section background color.', 'conversions'),
+				'section'    => 'conversions_pricing_testimonials',
+				'settings'   => 'conversions_pricing_bg_color',
+				'priority'   => 10,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_pricing_title', array(
+				'default'       => __( 'Pricing table section', 'conversions' ),
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+			$wp_customize->add_control( 'conversions_pricing_title_control', array(
+				'label'      => __('Title text', 'conversions'),
+				'description'=> __('Add your title.', 'conversions'),
+				'section'    => 'conversions_homepage_pricing',
+				'settings'   => 'conversions_pricing_title',
+				'priority'   => 20,
+				'type'       => 'text',
+			) );
+			$wp_customize->add_setting( 'conversions_pricing_title_color', array(
+				'default'       => '#222222',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_pricing_title_color_control', array(
+				'label'      => __('Title color', 'conversions'),
+				'description'=> __('Select a color for the title.', 'conversions'),
+				'section'    => 'conversions_homepage_pricing',
+				'settings'   => 'conversions_pricing_title_color',
+				'priority'   => 30,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_pricing_desc', array(
+      			'default' => __( 'We offer custom services to our clients. Have a project that you would like to work together on? We would love to hear more about it.', 'conversions' ),
+      			'type' => 'theme_mod',
+      			'transport' => 'refresh',
+      			'sanitize_callback' => 'wp_kses_post'
+   			) );
+			$wp_customize->add_control( 'conversions_pricing_desc', array(
+      			'label'      => __('Description', 'conversions'),
+				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
+      			'section' => 'conversions_homepage_pricing',
+      			'settings'   => 'conversions_testimonials_desc',
+      			'priority' => 40,
+      			'type' => 'textarea',
+      			'capability' => 'edit_theme_options',
+   			) );
+   			$wp_customize->add_setting( 'conversions_pricing_desc_color', array(
+				'default'       => '#6c757d',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_pricing_desc_color_control', array(
+				'label'      => __('Description color', 'conversions'),
+				'description'=> __('Select a color for the description text.', 'conversions'),
+				'section'    => 'conversions_homepage_pricing',
+				'settings'   => 'conversions_pricing_desc_color',
+				'priority'   => 50,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_pricing_repeater', array(
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+         		'sanitize_callback' => 'conversions_repeater_sanitize',
+      		) );
+      		$wp_customize->add_control( 
+      			new \Conversions_Repeater( 
+      				$wp_customize, 
+      				'conversions_pricing_repeater', array(
+						'label'   => __( 'Pricing table', 'conversions' ),
+						'section' => 'conversions_homepage_pricing',
+						'priority' => 60,
+						'customizer_repeater_title_control' => true,
+						'customizer_repeater_subtitle_control' => true,
+						'customizer_repeater_text_control' => true,
+						'customizer_repeater_text2_control' => true,
+						'customizer_repeater_link_control' => true,
+						'customizer_repeater_repeater_control' => true
+ 					) 
+      		) );
+
+      		//-----------------------------------------------------
 			// Homepage Testimonials section
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_homepage_testimonials', array(
