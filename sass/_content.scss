@@ -35,9 +35,19 @@ input[type="file"] {
     width: 80%;
   }
 }
+.w-md-95 {
+  @media (min-width: 768px) {
+    width: 95%;
+  }
+}
 .w-lg-60 {
   @media (min-width: 992px) {
     width: 60%;
+  }
+}
+.w-lg-90 {
+  @media (min-width: 992px) {
+    width: 90%;
   }
 }
 
@@ -182,28 +192,38 @@ section.c-news {
 section.c-testimonials {
   .c-testimonials__quote {
     padding: 20px;
-    padding-left: 60px;
+    padding-left: 50px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
     min-height: 120px;
     border-radius: 10px;
+    border-top: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    @include media-breakpoint-up(sm) {
+      padding-left: 60px;
+    }
     &::before {
       font-family: "Font Awesome 5 Free";
       content: "\f10d";
       position: absolute;
       top: 5px;
       left: 12px;
-      font-size: 2.25em;
+      font-size: 1.75rem;
       color: #ddd;
       font-weight: 700;
+      @include media-breakpoint-up(sm) {
+        font-size: 2.25rem;
+      }
     }
     p {
-      line-height: 1.5;
+      @include media-breakpoint-up(sm) {
+        font-size: 1.1rem;
+      }
     }
     cite {
       font-size: 1rem;
-      margin-top: .75rem;
       .fa-star {
         color: orange;
       }

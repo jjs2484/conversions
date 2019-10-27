@@ -11765,9 +11765,17 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   .w-md-80 {
     width: 80%; } }
 
+@media (min-width: 768px) {
+  .w-md-95 {
+    width: 95%; } }
+
 @media (min-width: 992px) {
   .w-lg-60 {
     width: 60%; } }
+
+@media (min-width: 992px) {
+  .w-lg-90 {
+    width: 90%; } }
 
 a.c-news__img-link {
   background: #000;
@@ -11874,27 +11882,36 @@ section.c-icon-block .c-icon-block__icon i {
 
 section.c-testimonials .c-testimonials__quote {
   padding: 20px;
-  padding-left: 60px;
+  padding-left: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
   overflow: hidden;
   min-height: 120px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  border-top: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6; }
+  @media (min-width: 576px) {
+    section.c-testimonials .c-testimonials__quote {
+      padding-left: 60px; } }
   section.c-testimonials .c-testimonials__quote::before {
     font-family: "Font Awesome 5 Free";
     content: "\f10d";
     position: absolute;
     top: 5px;
     left: 12px;
-    font-size: 2.25em;
+    font-size: 1.75rem;
     color: #ddd;
     font-weight: 700; }
-  section.c-testimonials .c-testimonials__quote p {
-    line-height: 1.5; }
+    @media (min-width: 576px) {
+      section.c-testimonials .c-testimonials__quote::before {
+        font-size: 2.25rem; } }
+  @media (min-width: 576px) {
+    section.c-testimonials .c-testimonials__quote p {
+      font-size: 1.1rem; } }
   section.c-testimonials .c-testimonials__quote cite {
-    font-size: 1rem;
-    margin-top: .75rem; }
+    font-size: 1rem; }
     section.c-testimonials .c-testimonials__quote cite .fa-star {
       color: orange; }
   section.c-testimonials .c-testimonials__quote .c-testimonials__nav i {

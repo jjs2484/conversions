@@ -433,11 +433,11 @@ get_header();
 
                   <!-- Testimonial -->
                   <div class="c-testimonials__item" id="c-testimonials__<?php echo $testimonials_count; ?>">
-                    <blockquote class="c-testimonials__quote border-right border-bottom border-top shadow mx-5 mb-3">
-                      <p class="h5">
+                    <blockquote class="c-testimonials__quote shadow w-md-95 w-lg-90 mx-auto">
+                      <p>
                         <?php echo $conversions_testimonial->text; ?>
                       </p>
-                      <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-column flex-sm-row justify-content-sm-between">
                         <cite>
 
                           <?php if ( !empty( $conversions_testimonial->title ) ) { ?>
@@ -458,7 +458,7 @@ get_header();
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                         </cite>
-                        <div class="c-testimonials__nav align-self-end">
+                        <div class="c-testimonials__nav align-self-end ml-sm-auto">
                           <i class="fas fa-chevron-left slick-arrow mr-2"></i>
                           <i class="fas fa-chevron-right slick-arrow"></i>
                         </div>
