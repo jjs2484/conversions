@@ -114,7 +114,7 @@ button.customizer-repeater-new-field:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.customizer-repeater-box-content-hidden > div.customizer-repeater-social-repeater {
+.customizer-repeater-box-content-hidden > div.customizer-repeater-feature-repeater {
   margin-top: 0; }
 
 .customizer-repeater-general-control-repeater-container .customizer-repeater-icon-control {
@@ -139,7 +139,7 @@ button.customizer-repeater-new-field:before {
   padding: 0 10px 0 0;
   vertical-align: middle; }
 
-.social-repeater-remove-social-item {
+.feature-repeater-remove-feature-item {
   display: inline-block;
   vertical-align: top;
   color: #a00;
@@ -148,16 +148,16 @@ button.customizer-repeater-new-field:before {
   cursor: pointer;
   padding: 0; }
 
-.social-repeater-remove-social-item:hover {
+.feature-repeater-remove-feature-item:hover {
   color: red; }
 
-.customizer-repeater-social-repeater > .customizer-repeater-social-repeater-container:not(:first-child) {
+.customizer-repeater-feature-repeater > .customizer-repeater-feature-repeater-container:not(:first-child) {
   margin-top: 25px; }
 
 .icp-container {
   margin-bottom: 10px; }
 
-.button-secondary.social-repeater-add-social-item:before {
+.button-secondary.feature-repeater-add-feature-item:before {
   content: "\f132";
   display: inline-block;
   position: relative;
@@ -170,7 +170,7 @@ button.customizer-repeater-new-field:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.button-secondary.social-repeater-add-social-item {
+.button-secondary.feature-repeater-add-feature-item {
   vertical-align: text-top;
   float: right; }
 

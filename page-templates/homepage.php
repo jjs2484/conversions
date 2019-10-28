@@ -244,6 +244,30 @@ get_header();
 					</div>
 				</div>
 
+<?php
+
+$conversions_pr = get_theme_mod('conversions_pricing_repeater');
+$conversions_pr_decoded = json_decode($conversions_pr);
+            
+  foreach ( $conversions_pr_decoded as $repeater_item) { 
+   echo "<hr>";
+    var_dump($repeater_item);
+    echo "<hr>";
+       // $social_repeater = html_entity_decode($repeater_item->social_repeater);
+       // $social_repeater = json_decode($social_repeater);
+        $feature_repeater = json_decode(html_entity_decode($repeater_item->feature_repeater));
+
+    foreach($feature_repeater as $value){
+// var_dump($value);
+echo "<hr>";
+     echo esc_html( $value->feature );
+     echo "<hr>";
+    }
+  }
+
+?>
+
+
 				<!-- Pricing table #1 -->
   				<div class="col-sm-12 col-lg-4 mb-3">
     				<div class="card shadow">
@@ -251,8 +275,8 @@ get_header();
         					<h4 class="h5 text-primary mb-3">Company</h4>
         					<span class="d-block">
           						<span class="display-4">
-            						$69
-          						</span>
+            			   </span>
+                  			$69
           						<span class="d-block text-muted">
           							per month
           						</span>
