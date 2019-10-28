@@ -1668,8 +1668,8 @@ namespace conversions
 						'priority' => 60,
 						'customizer_repeater_title_control' => true,
 						'customizer_repeater_subtitle_control' => true,
-						'customizer_repeater_text_control' => true,
-						'customizer_repeater_text2_control' => true,
+						'customizer_repeater_subtitle2_control' => true,
+						'customizer_repeater_linktext_control' => true,
 						'customizer_repeater_link_control' => true,
 						'customizer_repeater_repeater_control' => true
  					) 
@@ -2433,17 +2433,30 @@ namespace
 	 * Filter to modify input label for repeater controls
 	 */
 	function conversions_repeater_labels( $string, $id, $control ) {
+     	
+     	// testimonial repeater labels
      	if ( $id === 'conversions_testimonials_repeater' ) {
-     		if ( $control === 'customizer_repeater_text_control' ) {
-     			return esc_html__( 'Testimonial text','conversions' );
-     		}
      		if ( $control === 'customizer_repeater_title_control' ) {
      			return esc_html__( 'Full name','conversions' );
      		}
      		if ( $control === 'customizer_repeater_subtitle_control' ) {
      			return esc_html__( 'Company name','conversions' );
      		}
+     		if ( $control === 'customizer_repeater_text_control' ) {
+     			return esc_html__( 'Testimonial text','conversions' );
+     		}
         }
+
+        // pricing table repeater labels
+        if ( $id === 'conversions_pricing_repeater' ) {
+     		if ( $control === 'customizer_repeater_subtitle_control' ) {
+     			return esc_html__( 'Price','conversions' );
+     		}
+     		if ( $control === 'customizer_repeater_subtitle2_control' ) {
+     			return esc_html__( 'Duration','conversions' );
+     		}
+        }
+
         return $string;
     }
     add_filter( 'repeater_input_labels_filter','conversions_repeater_labels', 10 , 3 );
