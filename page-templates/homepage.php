@@ -230,7 +230,7 @@ get_header();
 
 
 	<!-- Pricing section -->
-	<section class="c-pricing" style="background-color: #F3F3F3;">
+	<section class="c-pricing">
 		<div class="container-fluid py-5">
 			<div class="row justify-content-sm-center">
 
@@ -252,173 +252,56 @@ get_header();
           </div>
         <?php } ?>
 
-<?php
+        <?php
+          $conversions_pr = get_theme_mod('conversions_pricing_repeater');
+          $conversions_pr_decoded = json_decode($conversions_pr);
 
-$conversions_pr = get_theme_mod('conversions_pricing_repeater');
-$conversions_pr_decoded = json_decode($conversions_pr);
-            
-  foreach ( $conversions_pr_decoded as $repeater_item) { 
-   echo "<hr>";
-    var_dump($repeater_item);
-    echo "<hr>";
-       // $social_repeater = html_entity_decode($repeater_item->social_repeater);
-       // $social_repeater = json_decode($social_repeater);
-        $feature_repeater = json_decode(html_entity_decode($repeater_item->feature_repeater));
+          if ( !empty( $conversions_pr_decoded ) ) {
+            foreach ( $conversions_pr_decoded as $repeater_item) { ?>
 
-    foreach($feature_repeater as $value){
-// var_dump($value);
-echo "<hr>";
-     echo esc_html( $value->feature );
-     echo "<hr>";
-    }
-  }
-
-?>
-
-
-				<!-- Pricing table #1 -->
-  				<div class="col-sm-12 col-lg-4 mb-3">
-    				<div class="card shadow">
-      					<header class="card-header bg-white text-center p-4">
-        					<h4 class="h5 text-primary mb-3">Company</h4>
-        					<span class="d-block">
-          						<span class="display-4">
-            			   </span>
-                  			$69
-          						<span class="d-block text-muted">
-          							per month
-          						</span>
-        					</span>
-      					</header>
-      					<div class="card-body pt-4 pb-5 px-5">
-        					<ul class="list-unstyled mb-4">
-          						<li class="d-flex align-items-center py-2">
-          							<span class="fa fa-check mr-3"></span>
-          							Community support
-          						</li>
-          						<li class="d-flex align-items-center py-2">
-          							<span class="fa fa-check mr-3"></span>
-          							400+ pages
-          						</li>
-          						<li class="d-flex align-items-center py-2">
-          							<span class="fa fa-check mr-3"></span>
-          							100+ header variations
-          						</li>
-          						<li class="d-flex align-items-center py-2">
-          							<span class="fa fa-check mr-3"></span>
-          							20+ home page options
-          						</li>
-        					</ul>
-							<button type="button" class="btn btn-block btn-primary">
-								Start Free Trial
-							</button>
-      					</div>
-    				</div>
-  				</div>
-
-  				<!-- Pricing table #2 -->
-  				<div class="col-sm-12 col-lg-4 mb-3">
-    				<div class="card shadow">
-      					<header class="card-header bg-white text-center p-4">
-        					<h4 class="h5 text-success mb-3">Enterprise</h4>
-        					<span class="d-block">
-          						<span class="display-4">
-            						$69
-          						</span>
-          						<span class="d-block text-muted">
-          							per month
-          						</span>
-        					</span>
-      					</header>
-      					<div class="card-body pt-4 pb-5 px-5">
-        					<ul class="list-unstyled mb-4">
-          						<li class="d-flex align-items-center py-2">
-          							<span class="fa fa-check mr-3"></span>
-          							Community support
-          						</li>
-          						<li class="d-flex align-items-center py-2">
-          							<span class="fa fa-check mr-3"></span>
-          							400+ pages
-          						</li>
-          						<li class="d-flex align-items-center py-2">
-          							<span class="fa fa-check mr-3"></span>
-          							100+ header variations
-          						</li>
-          						<li class="d-flex align-items-center py-2">
-          							<span class="fa fa-check mr-3"></span>
-          							20+ home page options
-          						</li>
-          						<li class="d-flex align-items-center py-2">
-          							<span class="fa fa-check mr-3"></span>
-          							Priority Support
-          						</li>
-          						<li class="d-flex align-items-center py-2">
-          							<span class="fa fa-check mr-3"></span>
-          							More features
-          						</li>
-        					</ul>
-        					<button type="button" class="btn btn-block btn-success">
-        						Contact Us
-        					</button>
-      					</div>
-    				</div>
-  				</div>
-
-          <!-- Pricing table #3 -->
-          <div class="col-sm-12 col-lg-4 mb-3">
-            <div class="card shadow">
-                <header class="card-header bg-white text-center p-4">
-                  <h4 class="h5 text-danger mb-3">Enterprise</h4>
-                  <span class="d-block">
+              <!-- Pricing table -->
+              <div class="col-sm-12 col-lg-4 mb-3">
+                <div class="card shadow">
+                  <header class="card-header bg-white text-center p-4">
+                    <h4 class="h5 text-success mb-3">
+                      <?php echo esc_html( $repeater_item->title ); ?>
+                    </h4>
+                    <span class="d-block">
                       <span class="display-4">
-                        $69
+                        <?php echo esc_html( $repeater_item->subtitle ); ?>
                       </span>
                       <span class="d-block text-muted">
-                        per month
+                        <?php echo esc_html( $repeater_item->subtitle2 ); ?>
                       </span>
-                  </span>
-                </header>
-                <div class="card-body pt-4 pb-5 px-5">
-                  <ul class="list-unstyled mb-4">
-                      <li class="d-flex align-items-center py-2">
-                        <span class="fa fa-check mr-3"></span>
-                        Community support
-                      </li>
-                      <li class="d-flex align-items-center py-2">
-                        <span class="fa fa-check mr-3"></span>
-                        400+ pages
-                      </li>
-                      <li class="d-flex align-items-center py-2">
-                        <span class="fa fa-check mr-3"></span>
-                        100+ header variations
-                      </li>
-                      <li class="d-flex align-items-center py-2">
-                        <span class="fa fa-check mr-3"></span>
-                        20+ home page options
-                      </li>
-                      <li class="d-flex align-items-center py-2">
-                        <span class="fa fa-check mr-3"></span>
-                        Priority Support
-                      </li>
-                      <li class="d-flex align-items-center py-2">
-                        <span class="fa fa-check mr-3"></span>
-                        More features
-                      </li>
-                      <li class="d-flex align-items-center py-2">
-                        <span class="fa fa-check mr-3"></span>
-                        Priority Support
-                      </li>
-                      <li class="d-flex align-items-center py-2">
-                        <span class="fa fa-check mr-3"></span>
-                        More features
-                      </li>
-                  </ul>
-                  <button type="button" class="btn btn-block btn-danger">
-                    Contact Us
-                  </button>
+                    </span>
+                  </header>
+                  <div class="card-body pt-4 pb-5 px-5">
+                    <ul class="list-unstyled mb-4">
+
+                      <?php
+                        $feature_repeater = json_decode(html_entity_decode($repeater_item->feature_repeater));
+                        
+                        if ( !empty( $feature_repeater ) ) {
+                          foreach( $feature_repeater as $value ) { ?>
+
+                            <li class="d-flex align-items-center py-2">
+                              <span class="fa fa-check mr-3"></span>
+                              <?php echo esc_html( $value->feature ); ?>
+                            </li>
+
+                          <?php }
+                        } ?>
+
+                    </ul>
+                    <a href="<?php echo esc_url( $repeater_item->link ); ?>" class="btn btn-block btn-success">
+                      <?php echo esc_html( $repeater_item->linktext ); ?>
+                    </a>
+                  </div>
                 </div>
-            </div>
-          </div>
+              </div>
+
+            <?php }
+          } ?>
 
 			</div>
 		</div>
