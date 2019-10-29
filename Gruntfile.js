@@ -1,6 +1,9 @@
 module.exports = function(grunt) {
-
-	// Configuration
+  
+  // Force use of Unix newlines
+  grunt.util.linefeed = '\n';
+	
+  // Configuration
 	grunt.initConfig({
     concat: {
       basic_and_extras: {

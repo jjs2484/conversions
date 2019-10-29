@@ -1,5 +1,5 @@
 /**
- * Fontawesome iconpicker control in the repeater
+ * Fontawesome iconpicker control for the repeater
  *
  * @package conversions
  */

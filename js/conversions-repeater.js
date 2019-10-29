@@ -1,5 +1,4 @@
 /* global jQuery */
-/* global wp */
 function media_upload(button_class) {
     'use strict';
     jQuery('body').on('click', button_class, function () {

@@ -7044,7 +7044,6 @@
 		}, false );
 	}
 })();
-
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
@@ -10056,7 +10055,6 @@
     };
 
 }));
-
 // ==================================================
 // fancyBox v3.5.7
 //
@@ -15764,8 +15762,8 @@ jQuery(function () {
 
     }
 
-    var resizeTimer; // Set resizeTimer to empty so it resets on page load
-    // On resize, run the function and reset the timeout
+    var resizeTimer;
+    // On resize run the function and reset the timeout
     // 150 is the delay in milliseconds.
     jQuery(window).resize(function() {
         if (jQuery('.offcanvas-collapse.open').length > 0) {
