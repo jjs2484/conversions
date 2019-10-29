@@ -2274,6 +2274,15 @@ namespace conversions
 				section.c-testimonials p.subtitle {
 					color: <?php echo esc_html( get_theme_mod('conversions_testimonials_desc_color', '#6c757d' ) ); ?>;
 				}
+				<?php if ( !empty( get_theme_mod( 'conversions_pricing_bg_color') ) ) { ?>
+					section.c-pricing { background-color: <?php echo esc_html( get_theme_mod( 'conversions_pricing_bg_color') ); ?>; }
+				<?php } ?>
+				section.c-pricing h2 {
+					color: <?php echo esc_html( get_theme_mod('conversions_pricing_title_color', '#222222' ) ); ?>;
+				}
+				section.c-pricing p.subtitle {
+					color: <?php echo esc_html( get_theme_mod('conversions_pricing_desc_color', '#6c757d' ) ); ?>;
+				}
 			</style>
 
 		<?php }

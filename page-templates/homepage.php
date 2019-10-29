@@ -234,15 +234,23 @@ get_header();
 		<div class="container-fluid py-5">
 			<div class="row justify-content-sm-center">
 
-				<!-- Title -->
-				<div class="col-12">
-					<div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
-						<h2 class="h3">Pricing table section</h2>
-						<p class="text-muted">
-							We offer custom services to our clients. Got a project in mind that you'd like to work together on? We'd love to hear more about it.
-						</p>
-					</div>
-				</div>
+				<?php if ( !empty( get_theme_mod( 'conversions_pricing_title') ) || !empty( get_theme_mod( 'conversions_pricing_desc') ) ) { ?>
+          <!-- Title -->
+          <div class="col-12">
+            <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
+              <?php 
+                if ( !empty( get_theme_mod( 'conversions_pricing_title') ) ) {
+                  // Title
+                  echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_pricing_title' ) ).'</h2>';
+                }
+                if ( !empty( get_theme_mod( 'conversions_pricing_desc') ) ) {
+                  // Description
+                  echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_pricing_desc' ) ).'</p>';
+                }
+              ?>
+            </div>
+          </div>
+        <?php } ?>
 
 <?php
 
