@@ -234,16 +234,16 @@ get_header();
 		<div class="container-fluid py-5">
 			<div class="row justify-content-sm-center">
 
-				<?php if ( !empty( get_theme_mod( 'conversions_pricing_title') ) || !empty( get_theme_mod( 'conversions_pricing_desc') ) ) { ?>
+				<?php if ( !empty( get_theme_mod( 'conversions_pricing_title') ) || !empty( get_theme_mod( 'conversions_pricing_desc' ) ) ) { ?>
           <!-- Title -->
           <div class="col-12">
             <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
               <?php 
-                if ( !empty( get_theme_mod( 'conversions_pricing_title') ) ) {
+                if ( !empty( get_theme_mod( 'conversions_pricing_title' ) ) ) {
                   // Title
                   echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_pricing_title' ) ).'</h2>';
                 }
-                if ( !empty( get_theme_mod( 'conversions_pricing_desc') ) ) {
+                if ( !empty( get_theme_mod( 'conversions_pricing_desc' ) ) ) {
                   // Description
                   echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_pricing_desc' ) ).'</p>';
                 }
@@ -253,11 +253,11 @@ get_header();
         <?php } ?>
 
         <?php
-          $conversions_pr = get_theme_mod('conversions_pricing_repeater');
-          $conversions_pr_decoded = json_decode($conversions_pr);
+          $conversions_pr = get_theme_mod( 'conversions_pricing_repeater' );
+          $conversions_pr_decoded = json_decode( $conversions_pr );
 
           if ( !empty( $conversions_pr_decoded ) ) {
-            foreach ( $conversions_pr_decoded as $repeater_item) { ?>
+            foreach ( $conversions_pr_decoded as $repeater_item ) { ?>
 
               <!-- Pricing table -->
               <div class="col-sm-12 col-lg-4 mb-3">
@@ -279,7 +279,7 @@ get_header();
                     <ul class="list-unstyled mb-4">
 
                       <?php
-                        $feature_repeater = json_decode(html_entity_decode($repeater_item->feature_repeater));
+                        $feature_repeater = json_decode( html_entity_decode( $repeater_item->feature_repeater ) );
                         
                         if ( !empty( $feature_repeater ) ) {
                           foreach( $feature_repeater as $value ) { ?>
@@ -322,7 +322,7 @@ get_header();
                   // Title
                   echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_testimonials_title' ) ).'</h2>';
                 }
-                if ( !empty( get_theme_mod( 'conversions_testimonials_desc') ) ) {
+                if ( !empty( get_theme_mod( 'conversions_testimonials_desc' ) ) ) {
                   // Description
                   echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_testimonials_desc' ) ).'</p>';
                 }
@@ -350,20 +350,20 @@ get_header();
                   <div class="c-testimonials__item" id="c-testimonials__<?php echo $testimonials_count; ?>">
                     <blockquote class="c-testimonials__quote shadow w-md-95 w-lg-90 mx-auto">
                       <p>
-                        <?php echo $conversions_testimonial->text; ?>
+                        <?php echo esc_html( $conversions_testimonial->text ); ?>
                       </p>
                       <div class="d-flex flex-column flex-sm-row justify-content-sm-between">
                         <cite>
 
                           <?php if ( !empty( $conversions_testimonial->title ) ) { ?>
                             <span class="d-block">
-                              <?php echo $conversions_testimonial->title; ?>
+                              <?php echo esc_html( $conversions_testimonial->title ); ?>
                             </span>
                           <?php } ?>
 
                           <?php if ( !empty( $conversions_testimonial->subtitle ) ) { ?>
                             <span class="d-block">
-                              <?php echo $conversions_testimonial->subtitle; ?>
+                              <?php echo esc_html( $conversions_testimonial->subtitle ); ?>
                             </span>
                           <?php } ?>
 
@@ -397,17 +397,17 @@ get_header();
 		<div class="container-fluid py-5">
 			<div class="row justify-content-sm-center">
 
-        <?php if ( !empty( get_theme_mod( 'conversions_news_title') ) || !empty( get_theme_mod( 'conversions_news_desc') ) ) { ?>
+        <?php if ( !empty( get_theme_mod( 'conversions_news_title') ) || !empty( get_theme_mod( 'conversions_news_desc' ) ) ) { ?>
           
           <!-- Title -->
           <div class="col-12">
 				    <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
               <?php 
-                if ( !empty( get_theme_mod( 'conversions_news_title') ) ) {
+                if ( !empty( get_theme_mod( 'conversions_news_title' ) ) ) {
                   // Title
                   echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_news_title' ) ).'</h2>';
                 }
-                if ( !empty( get_theme_mod( 'conversions_news_desc') ) ) {
+                if ( !empty( get_theme_mod( 'conversions_news_desc' ) ) ) {
                   // Description
                   echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_news_desc' ) ).'</p>';
                 }
@@ -484,12 +484,12 @@ get_header();
   					<!-- Call-to-action text -->
   					<div class="c-cta__items">
               <?php 
-                if ( !empty( get_theme_mod( 'conversions_hcta_title') ) ) {
+                if ( !empty( get_theme_mod( 'conversions_hcta_title' ) ) ) {
                   // Title
                   echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_hcta_title' ) ).'</h2>';
                 }
 
-                if ( !empty( get_theme_mod( 'conversions_hcta_desc') ) ) {
+                if ( !empty( get_theme_mod( 'conversions_hcta_desc' ) ) ) {
                   // Description
                   echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_hcta_desc' ) ).'</p>';
                 }
@@ -506,7 +506,7 @@ get_header();
   					</div>
             
             <?php
-              if ( !empty( get_theme_mod( 'conversions_hcta_shortcode') ) ) {
+              if ( !empty( get_theme_mod( 'conversions_hcta_shortcode' ) ) ) {
                 // Shortcode
                 echo do_shortcode( wp_kses_post( get_theme_mod( 'conversions_hcta_shortcode' ) ) );
               } 
