@@ -15690,7 +15690,7 @@
   });
 })(document, jQuery);
 /**
- * If fixed header calculate the height add margin to content below 
+ * If fixed header calc height and add margin to content 
 */
 (function($) {
 
@@ -15714,7 +15714,7 @@
     };
 
     // On resize, run the function and reset the timeout
-    // 250 is the delay in milliseconds. Change as you see fit.
+    // 150 is the delay in milliseconds. Change as you see fit.
     $(window).resize(function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(resizeFunction, 150);
@@ -15766,7 +15766,7 @@ jQuery(function () {
 
     var resizeTimer; // Set resizeTimer to empty so it resets on page load
     // On resize, run the function and reset the timeout
-    // 200 is the delay in milliseconds.
+    // 150 is the delay in milliseconds.
     jQuery(window).resize(function() {
         if (jQuery('.offcanvas-collapse.open').length > 0) {
             clearTimeout(resizeTimer);
