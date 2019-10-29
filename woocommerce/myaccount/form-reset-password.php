@@ -41,7 +41,7 @@ do_action( 'woocommerce_before_reset_password_form' );
 
 	<p class="woocommerce-form-row form-row">
 		<input type="hidden" name="wc_reset_password" value="true" />
-		<button type="submit" class="btn <?php esc_attr_e( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" value="<?php esc_attr_e( 'Save', 'conversions' ); ?>"><?php esc_html_e( 'Save', 'conversions' ); ?></button>
+		<button type="submit" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" value="<?php esc_attr_e( 'Save', 'conversions' ); ?>"><?php esc_html_e( 'Save', 'conversions' ); ?></button>
 	</p>
 
 	<?php wp_nonce_field( 'reset_password', 'woocommerce-reset-password-nonce' ); ?>

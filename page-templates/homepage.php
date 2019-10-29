@@ -106,7 +106,7 @@ get_header();
           ?>
           
   				<!-- Client logos -->
-					<div class='c-clients__carousel py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"slidesToScroll":<?php esc_attr_e( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[0] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[0] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[1] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[1] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php esc_attr_e( $chc_items_to_show[2] ); ?>,"slidesToScroll":<?php esc_attr_e( $chc_items_to_show[2] ); ?>}}]}'>
+					<div class='c-clients__carousel py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php echo esc_attr( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"slidesToScroll":<?php echo esc_attr( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":<?php echo esc_attr( $chc_items_to_show[0] ); ?>,"slidesToScroll":<?php echo esc_attr( $chc_items_to_show[0] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php echo esc_attr( $chc_items_to_show[1] ); ?>,"slidesToScroll":<?php echo esc_attr( $chc_items_to_show[1] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php echo esc_attr( $chc_items_to_show[2] ); ?>,"slidesToScroll":<?php echo esc_attr( $chc_items_to_show[2] ); ?>}}]}'>
   					
             <?php
               $chc_logos = get_theme_mod( 'conversions_hc_logos' );

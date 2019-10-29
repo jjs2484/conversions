@@ -44,7 +44,7 @@ if ( is_user_logged_in() ) {
 	<p class="form-row">
 		<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 		<input type="hidden" name="redirect" value="<?php echo esc_url( $redirect ) ?>" />
-		<button type="submit" class="btn <?php esc_attr_e( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="login" value="<?php esc_attr_e( 'Login', 'conversions' ); ?>"><?php esc_html_e( 'Login', 'conversions' ); ?></button>
+		<button type="submit" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="login" value="<?php esc_attr_e( 'Login', 'conversions' ); ?>"><?php esc_html_e( 'Login', 'conversions' ); ?></button>
 		<label class="woocommerce-form__label woocommerce-form__label-for-checkbox ml-3">
 			<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'conversions' ); ?></span>
 		</label>

@@ -263,7 +263,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
         <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $class_str, $comment ); ?>>
             <div class="comment-body">
                 <div class="media-body">
-                    <?php _e( 'Pingback:' ); ?> <?php comment_author_link( $comment ); ?> <?php edit_comment_link( __( 'Edit', 'conversions' ), '<span class="edit-link">', '</span>' ); ?>
+                    <?php _e( 'Pingback:', 'conversions' ); ?> <?php comment_author_link( $comment ); ?> <?php edit_comment_link( __( 'Edit', 'conversions' ), '<span class="edit-link">', '</span>' ); ?>
                 </div><!-- /.media-body -->
             </div><!-- /.comment-body -->
 <?php
