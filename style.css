@@ -1,12 +1,14 @@
 /*
 Theme Name: Conversions
+Text Domain: conversions
+Version: 1.0
+Description: Combination of Automattic´s _s theme and Bootstrap 4.
+Tags: blog, one-column, two-columns, right-sidebar, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
 Author: jjs2484
 Author URI: https://ndstud.io
-Description: Combination of Automattic´s _s theme and Bootstrap 4.
-Version: 1.0
-License: GNU GPL version 2
+Theme URI: https://conversionswp.com
+License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: conversions
 
 Resource Licenses:
 - Bootstrap 4.3.1: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
@@ -15,7 +17,6 @@ Resource Licenses:
 - jQuery: https://jquery.org | (Code licensed under MIT)
 - Slick v1.8.1: https://github.com/kenwheeler/slick/blob/master/LICENSE | (Code licensed under MIT)
 - WP Bootstrap Navwalker: https://github.com/wp-bootstrap/wp-bootstrap-navwalker | GPL-3.0+
-
 
 This file is just used to identify the theme in WordPress.
 The compiled CSS output can be found in /build/main.css
