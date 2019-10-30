@@ -290,7 +290,7 @@ get_header();
                       ?>
                     </ul>
                     <?php
-                      echo sprintf( '<a href="%1$s" class="btn btn-block btn-success">%1$s</a>', 
+                      echo sprintf( '<a href="%1$s" class="btn btn-block btn-success">%2$s</a>', 
                         esc_url( $repeater_item->link ),
                         esc_html( $repeater_item->linktext )
                       );

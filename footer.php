@@ -40,6 +40,13 @@ defined( 'ABSPATH' ) || exit;
 								if ( function_exists( 'the_privacy_policy_link' ) ) {
 									the_privacy_policy_link( '&nbsp;|&nbsp;', '<span role="separator" aria-hidden="true"></span>' );
 								} 
+
+								echo sprintf( '&nbsp;|&nbsp;%s&nbsp;<a href="%s">%s</a>', 
+                    				esc_html__( 'Powered by', 'conversions' ),
+                    				esc_url( 'https://conversionswp.com' ),
+                    				esc_html__( 'Conversions', 'conversions' )
+                  				);
+								
 							?>
 
 						</div>
