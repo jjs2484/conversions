@@ -19,6 +19,8 @@ class Extras
 		add_filter( 'excerpt_more', [ $this, 'excerpt_more' ] );
 		add_filter( 'get_custom_logo', [ $this, 'get_custom_logo' ] );
 		add_filter( 'wp_trim_excerpt', [ $this, 'wp_trim_excerpt' ] );
+		add_action( 'after_setup_theme', [ $this, 'set_content_width' ] );
+		add_action( 'template_redirect', [ $this, 'adjust_content_width' ] );
 	}
 
 	/**
@@ -92,5 +94,31 @@ class Extras
 		}
 		return $post_excerpt;
 	}
+
+	/**
+		@brief Set the content_width based on the theme's design and stylesheet.
+		@since 2019-10-30 01:32:58
+	**/
+	public function set_content_width()
+	{
+		if ( ! isset( $content_width ) ) {
+			$c_width = esc_html( get_theme_mod( 'conversions_container_width', '1100' ) );
+			$content_width = $c_width * .75 - ( 15 * 2 );
+		}
+	}
+
+	/**
+		@brief Adjust content_width in certain contexts.
+		@since 2019-10-30 01:32:58
+	**/
+	public function adjust_content_width() 
+	{
+		if ( is_page_template( 'page-templates/fullwidthpage.php' ) || is_page_template( 'page-templates/homepage.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) || ! is_active_sidebar( 'sidebar-2' ) ) {
+				global $content_width;
+				$c_width = esc_html( get_theme_mod( 'conversions_container_width', '1100' ) );
+				$content_width = $c_width - ( 15 * 2 );
+		}
+	}
+
 }
 new Extras();

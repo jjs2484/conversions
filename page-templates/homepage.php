@@ -235,7 +235,7 @@ get_header();
 			<div class="row justify-content-sm-center">
 
 				<?php if ( !empty( get_theme_mod( 'conversions_pricing_title') ) || !empty( get_theme_mod( 'conversions_pricing_desc' ) ) ) { ?>
-          <!-- Title -->
+          
           <div class="col-12">
             <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
               <?php 
@@ -250,6 +250,7 @@ get_header();
               ?>
             </div>
           </div>
+        
         <?php } ?>
 
         <?php
@@ -277,31 +278,30 @@ get_header();
                   </header>
                   <div class="card-body pt-4 pb-5 px-5">
                     <ul class="list-unstyled mb-4">
-
                       <?php
                         $feature_repeater = json_decode( html_entity_decode( $repeater_item->feature_repeater ) );
-                        
                         if ( !empty( $feature_repeater ) ) {
-                          foreach( $feature_repeater as $value ) { ?>
-
-                            <li class="d-flex align-items-center py-2">
-                              <span class="fa fa-check mr-3"></span>
-                              <?php echo esc_html( $value->feature ); ?>
-                            </li>
-
-                          <?php }
-                        } ?>
-
+                          foreach( $feature_repeater as $value ) {
+                            echo sprintf( '<li class="d-flex align-items-center py-2"><span class="fas fa-check mr-3"></span>%1$s</li>', 
+                              esc_html( $value->feature )
+                            );
+                          }
+                        } 
+                      ?>
                     </ul>
-                    <a href="<?php echo esc_url( $repeater_item->link ); ?>" class="btn btn-block btn-success">
-                      <?php echo esc_html( $repeater_item->linktext ); ?>
-                    </a>
+                    <?php
+                      echo sprintf( '<a href="%1$s" class="btn btn-block btn-success">%1$s</a>', 
+                        esc_url( $repeater_item->link ),
+                        esc_html( $repeater_item->linktext )
+                      );
+                    ?>
                   </div>
                 </div>
               </div>
 
             <?php }
-          } ?>
+          }
+        ?>
 
 			</div>
 		</div>
