@@ -338,10 +338,14 @@ class Conversions_Repeater extends \WP_Customize_Control {
             </span>
             <span class="description customize-control-description">
                 <?php
-                echo sprintf(
-	                esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %1$s.', 'conversions' ),
-	                sprintf( '<a href="https://fontawesome.com/icons?d=gallery&m=free" rel="nofollow">%s</a>', esc_html__( 'https://fontawesome.com/icons?d=gallery&m=free', 'conversions' ) )
-                ); ?>
+                	echo sprintf(
+	                	esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %1$s.', 'conversions' ),
+	                	sprintf( '<a href="%s" rel="nofollow" target="_blank">%s</a>',
+	                		esc_url('https://fontawesome.com/icons?d=gallery&m=free'),
+	                		esc_html__( 'Fontawesome', 'conversions' ) 
+	                	)
+                	); 
+                ?>
             </span>
             <div class="input-group icp-container">
                 <input data-placement="bottomRight" class="icp icp-auto" value="<?php if( !empty( $value ) ) { echo esc_attr( $value ); } ?>" type="text">
