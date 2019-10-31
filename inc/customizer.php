@@ -1654,6 +1654,25 @@ namespace conversions
 				'priority'   => 50,
 				'type'       => 'color',
 			) );
+			$wp_customize->add_setting( 'conversions_pricing_row', array(
+				'default'       => '3',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_pricing_row_control', array(
+				'label'      => __('Pricing tables per row', 'conversions'),
+				'description'=> __('Max number of items to show per row on desktop. Choose 1 - 4.', 'conversions'),
+				'section'    => 'conversions_homepage_pricing',
+				'settings'   => 'conversions_pricing_row',
+				'priority'   => 55,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 4,
+				),
+			) );
 			$wp_customize->add_setting( 'conversions_pricing_repeater', array(
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',

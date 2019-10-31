@@ -254,34 +254,57 @@ get_header();
         <?php } ?>
 
         <?php
+          // Get all pricing tables
           $conversions_pr = get_theme_mod( 'conversions_pricing_repeater' );
           $conversions_pr_decoded = json_decode( $conversions_pr );
 
           if ( !empty( $conversions_pr_decoded ) ) {
-            foreach ( $conversions_pr_decoded as $repeater_item ) { ?>
+            foreach ( $conversions_pr_decoded as $repeater_item ) {
 
+              // How many to show per row
+              $conversions_pricing_row = get_theme_mod( 'conversions_pricing_row', '3' );
+
+              // # per row to bootstrap grid
+              $cpri = array(
+                '1' => '12', 
+                '2' => '6', 
+                '3' => '4', 
+                '4' => '3',
+              );
+        ?>
               <!-- Pricing table -->
-              <div class="col-sm-12 col-lg-4 mb-3">
+              <div class="col-sm-12 col-lg-<?php echo esc_attr( $cpri[$conversions_pricing_row] ); ?> mb-3">
                 <div class="card shadow">
                   <header class="card-header bg-white text-center p-4">
                     <h4 class="h5 text-success mb-3">
-                      <?php echo esc_html( $repeater_item->title ); ?>
+                      <?php 
+                        // Plan title
+                        echo esc_html( $repeater_item->title ); 
+                      ?>
                     </h4>
                     <span class="d-block">
                       <span class="display-4">
-                        <?php echo esc_html( $repeater_item->subtitle ); ?>
+                        <?php
+                          // Plan price 
+                          echo esc_html( $repeater_item->subtitle ); 
+                        ?>
                       </span>
                       <span class="d-block text-muted">
-                        <?php echo esc_html( $repeater_item->subtitle2 ); ?>
+                        <?php 
+                          // Plan duration
+                          echo esc_html( $repeater_item->subtitle2 ); 
+                        ?>
                       </span>
                     </span>
                   </header>
                   <div class="card-body pt-4 pb-5 px-5">
                     <ul class="list-unstyled mb-4">
                       <?php
+                        // Get all plan features
                         $feature_repeater = json_decode( html_entity_decode( $repeater_item->feature_repeater ) );
                         if ( !empty( $feature_repeater ) ) {
                           foreach( $feature_repeater as $value ) {
+                            // Output each feature
                             echo sprintf( '<li class="d-flex align-items-center py-2"><span class="fas fa-check mr-3"></span>%1$s</li>', 
                               esc_html( $value->feature )
                             );
@@ -290,6 +313,7 @@ get_header();
                       ?>
                     </ul>
                     <?php
+                      // Plan button and link
                       echo sprintf( '<a href="%1$s" class="btn btn-block btn-success">%2$s</a>', 
                         esc_url( $repeater_item->link ),
                         esc_html( $repeater_item->linktext )
