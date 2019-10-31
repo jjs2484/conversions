@@ -11867,7 +11867,7 @@ section.c-clients .slick-slider .slick-track {
       -ms-flex-pack: center;
           justify-content: center; }
 
-section.c-icon-block .c-icon-block__icon i {
+section.c-features .c-features__icon i {
   font-size: 3rem; }
 
 @media (max-width: 991.98px) {
