@@ -32,14 +32,12 @@ get_header();
             if ( !empty( get_theme_mod( 'conversions_hh_desc') ) ) {
               echo '<p class="lead c-hero__description">'.wp_kses_post( get_theme_mod( 'conversions_hh_desc' ) ).'</p>';
             }
-          ?>
 
-          <?php if ( ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) || ( get_theme_mod( 'conversions_hh_vbtn', 'no' ) != 'no' ) ) : ?>
+            if ( ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) || ( get_theme_mod( 'conversions_hh_vbtn', 'no' ) != 'no' ) ) :
     			
-            <!-- Button links -->
-            <p class="lead">
+              // Button links
+              echo '<p class="lead">';
 
-              <?php
                 // callout button
                 if ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) {
                   echo sprintf( '<a href="%s" class="btn %s btn-lg c-hero__callout-btn">%s</a>', 
@@ -57,11 +55,11 @@ get_header();
                     esc_html( get_theme_mod( 'conversions_hh_vbtn_text', 'Play Intro' ) )
                   );
                 }
-              ?>
 
-            </p>
+              echo '</p>';
 
-          <?php endif; ?>
+            endif; 
+          ?>
 
   			</div>
   		</div>
