@@ -188,15 +188,28 @@ get_header();
               <div class="col-sm-12 col-lg-<?php echo esc_attr( $cfri[$conversions_features_row] ); ?> mb-3">
                 <div class="card border-0 text-center">
                   <div class="card-body p-1">
-                    <span class="c-features__icon">
-                      <i class="<?php echo esc_attr( $repeater_item->icon_value ); ?> text-success"></i>
-                    </span>
-                    <h3 class="h5"><?php echo esc_html( $repeater_item->title ); ?></h3>
-                    <p class="text-muted"><?php echo esc_html( $repeater_item->text ); ?></p>
-                    <a href="<?php echo esc_url( $repeater_item->link ); ?>">
-                      <?php echo esc_html( $repeater_item->linktext ); ?>
-                      <span class="fas fa-angle-right align-middle ml-2"></span>
-                    </a>
+                    
+                    <?php 
+                      if ( !empty( $repeater_item->icon_value ) ) {
+                        echo '<span class="c-features__icon"><i class="'.esc_attr( $repeater_item->icon_value ).' text-success mb-3" aria-hidden="true"></i></span>';
+                      }
+
+                      if ( !empty( $repeater_item->title ) ) {
+                        echo '<h3 class="h5">.'esc_html( $repeater_item->title ).'</h3>';
+                      }
+
+                      if ( !empty( $repeater_item->text ) ) {
+                        echo '<p class="text-muted">'.esc_html( $repeater_item->text ).'</p>';
+                      }
+
+                      if ( !empty( $repeater_item->linktext ) ) {
+                        echo sprintf( '<a class="btn btn-outline-success" href="%s">%s</a>', 
+                          esc_url( $repeater_item->link ), 
+                          esc_html( $repeater_item->linktext )
+                        );
+                      } 
+                    ?>
+
                   </div>
                 </div>
               </div>
