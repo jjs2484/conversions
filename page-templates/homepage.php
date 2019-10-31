@@ -193,7 +193,7 @@ get_header();
                       }
 
                       if ( !empty( $repeater_item->title ) ) {
-                        echo '<h3 class="h5">.'esc_html( $repeater_item->title ).'</h3>';
+                        echo '<h3 class="h5">'.esc_html( $repeater_item->title ).'</h3>';
                       }
 
                       if ( !empty( $repeater_item->text ) ) {
