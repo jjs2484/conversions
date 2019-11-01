@@ -1144,7 +1144,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_homepage_hero', array(
 				'title'             => __('Hero', 'conversions'),
 				'priority'          => 10,
-				'description'       => __('Settings for the homepage hero.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );
@@ -1388,7 +1387,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_homepage_clients', array(
 				'title'             => __('Clients', 'conversions'),
 				'priority'          => 20,
-				'description'       => __('Settings for the client section.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );
@@ -1548,7 +1546,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_homepage_features', array(
 				'title'             => __('Features', 'conversions'),
 				'priority'          => 30,
-				'description'       => __('Settings for the features section.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );
@@ -1623,23 +1620,61 @@ namespace conversions
 				'priority'   => 50,
 				'type'       => 'color',
 			) );
-			$wp_customize->add_setting( 'conversions_features_row', array(
+			$wp_customize->add_setting( 'conversions_features_sm', array(
+				'default'       => '1',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_features_sm_control', array(
+				'label'      => __('# of items on small screens', 'conversions'),
+				'description'=> __('Items to show 576px to 767px. Choose 1-5.', 'conversions'),
+				'section'    => 'conversions_homepage_features',
+				'settings'   => 'conversions_features_sm',
+				'priority'   => 60,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 5,
+				),
+			) );
+			$wp_customize->add_setting( 'conversions_features_md', array(
+				'default'       => '2',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_features_md_control', array(
+				'label'      => __('# of items on medium screens', 'conversions'),
+				'description'=> __('Items to show 768px to 991px. Choose 1-5.', 'conversions'),
+				'section'    => 'conversions_homepage_features',
+				'settings'   => 'conversions_features_md',
+				'priority'   => 70,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 5,
+				),
+			) );
+			$wp_customize->add_setting( 'conversions_features_lg', array(
 				'default'       => '3',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'absint',
 			) );
-			$wp_customize->add_control( 'conversions_features_row_control', array(
-				'label'      => __('Features per row', 'conversions'),
-				'description'=> __('Max number of items to show per row on desktop. Choose 1 - 4.', 'conversions'),
+			$wp_customize->add_control( 'conversions_features_lg_control', array(
+				'label'      => __('# of items on large screens', 'conversions'),
+				'description'=> __('Items to show 992px up. Choose 1-5.', 'conversions'),
 				'section'    => 'conversions_homepage_features',
-				'settings'   => 'conversions_features_row',
-				'priority'   => 55,
+				'settings'   => 'conversions_features_lg',
+				'priority'   => 80,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
-					'max' => 4,
+					'max' => 5,
 				),
 			) );
 			$wp_customize->add_setting( 'conversions_features_icons', array(
@@ -1654,7 +1689,7 @@ namespace conversions
       				'conversions_features_icons', array(
 						'label'   => __( 'Icon block', 'conversions' ),
 						'section' => 'conversions_homepage_features',
-						'priority' => 60,
+						'priority' => 90,
 						'customizer_repeater_icon_control' => true,
 						'customizer_repeater_title_control' => true,
 						'customizer_repeater_text_control' => true,
@@ -1669,7 +1704,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_homepage_pricing', array(
 				'title'             => __('Pricing', 'conversions'),
 				'priority'          => 59,
-				'description'       => __('Settings for the pricing section.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );
@@ -1790,7 +1824,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_homepage_testimonials', array(
 				'title'             => __('Testimonials', 'conversions'),
 				'priority'          => 60,
-				'description'       => __('Settings for the testimonials section.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );
@@ -1889,7 +1922,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_homepage_news', array(
 				'title'             => __('News', 'conversions'),
 				'priority'          => 70,
-				'description'       => __('Settings for the news section.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );
@@ -1990,7 +2022,6 @@ namespace conversions
 			$wp_customize->add_section( 'conversions_homepage_cta', array(
 				'title'             => __('Call to Action', 'conversions'),
 				'priority'          => 80,
-				'description'       => __('Settings for the call to action section.', 'conversions'),
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );

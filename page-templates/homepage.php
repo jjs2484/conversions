@@ -171,7 +171,9 @@ get_header();
             foreach ( $conversions_fb_decoded as $repeater_item ) {
 
               // How many to show per row
-              $conversions_features_row = get_theme_mod( 'conversions_features_row', '3' );
+              $conversions_features_sm = get_theme_mod( 'conversions_features_sm', '1' );
+              $conversions_features_md = get_theme_mod( 'conversions_features_md', '2' );
+              $conversions_features_lg = get_theme_mod( 'conversions_features_lg', '3' );
 
               // # per row to bootstrap grid
               $cfri = array(
@@ -179,13 +181,14 @@ get_header();
                 '2' => '6', 
                 '3' => '4', 
                 '4' => '3',
+                '5' => '2',
               );
               ?>
 
               <!-- Feature block -->
-              <div class="col-sm-12 col-lg-<?php echo esc_attr( $cfri[$conversions_features_row] ); ?> mb-3">
-                <div class="card border-0 text-center">
-                  <div class="card-body p-1">
+              <div class="col-sm-<?php echo esc_attr( $cfri[$conversions_features_sm] ); ?> col-md-<?php echo esc_attr( $cfri[$conversions_features_md] ); ?> col-lg-<?php echo esc_attr( $cfri[$conversions_features_lg] ); ?>">
+                <div class="card border-0 h-100 mb-3 text-center">
+                  <div class="card-body p-2">
                     
                     <?php 
                       if ( !empty( $repeater_item->icon_value ) ) {
@@ -201,7 +204,7 @@ get_header();
                       }
 
                       if ( !empty( $repeater_item->linktext ) ) {
-                        echo sprintf( '<a class="btn btn-outline-success" href="%s">%s</a>', 
+                        echo sprintf( '<a class="btn btn-outline-primary" href="%s">%s</a>', 
                           esc_url( $repeater_item->link ), 
                           esc_html( $repeater_item->linktext )
                         );
