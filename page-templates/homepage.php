@@ -186,8 +186,8 @@ get_header();
               ?>
 
               <!-- Feature block -->
-              <div class="col-sm-<?php echo esc_attr( $cfri[$conversions_features_sm] ); ?> col-md-<?php echo esc_attr( $cfri[$conversions_features_md] ); ?> col-lg-<?php echo esc_attr( $cfri[$conversions_features_lg] ); ?>">
-                <div class="card border-0 h-100 mb-3 text-center">
+              <div class="col-sm-<?php echo esc_attr( $cfri[$conversions_features_sm] ); ?> col-md-<?php echo esc_attr( $cfri[$conversions_features_md] ); ?> col-lg-<?php echo esc_attr( $cfri[$conversions_features_lg] ); ?> mb-3">
+                <div class="card border-0 h-100 text-center">
                   <div class="card-body p-2">
                     
                     <?php 
@@ -204,7 +204,7 @@ get_header();
                       }
 
                       if ( !empty( $repeater_item->linktext ) ) {
-                        echo sprintf( '<a class="btn btn-outline-primary" href="%s">%s</a>', 
+                        echo sprintf( '<a class="btn btn-link" href="%s">%s</a>', 
                           esc_url( $repeater_item->link ), 
                           esc_html( $repeater_item->linktext )
                         );

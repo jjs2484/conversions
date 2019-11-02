@@ -2358,19 +2358,19 @@ namespace conversions
 					}
 				<?php } ?>
 				/* Homepage styles */
-				section.c-hero h1 {
+				.page-template-homepage section.c-hero h1 {
 					color: <?php echo esc_html( get_theme_mod('conversions_hh_title_color', '#ffffff' ) ); ?>;
 				}
-				section.c-hero .c-hero__description {
+				.page-template-homepage section.c-hero .c-hero__description {
 					color: <?php echo esc_html( get_theme_mod('conversions_hh_desc_color', '#ffffff' ) ); ?>;
 				}
-				section.c-hero {
+				.page-template-homepage section.c-hero {
 					<?php if ( get_theme_mod( 'conversions_hh_img_parallax', false ) == true ) { ?>
 						background-attachment: fixed;
 					<?php } ?>
 					min-height: <?php echo esc_html( get_theme_mod( 'conversions_hh_img_height', '80' ) ); ?>vh;
 				}
-				section.c-clients { background-color: <?php echo esc_html( get_theme_mod( 'conversions_hc_bg_color', '#F3F3F3' ) ); ?>; }
+				.page-template-homepage section.c-clients { background-color: <?php echo esc_html( get_theme_mod( 'conversions_hc_bg_color', '#F3F3F3' ) ); ?>; }
 				section.c-clients img.client {
 					max-width: <?php echo esc_html( get_theme_mod( 'conversions_hc_logo_width', '100' ) ); ?>px;
 				}
@@ -2383,11 +2383,11 @@ namespace conversions
 				section.c-cta p.subtitle {
 					color: <?php echo esc_html( get_theme_mod('conversions_hcta_desc_color', '#6c757d' ) ); ?>;
 				}
-				section.c-news { background-color: <?php echo esc_html( get_theme_mod( 'conversions_news_bg_color', '#F3F3F3' ) ); ?>; }
-				section.c-news h2 {
+				.page-template-homepage section.c-news { background-color: <?php echo esc_html( get_theme_mod( 'conversions_news_bg_color', '#F3F3F3' ) ); ?>; }
+				.page-template-homepage section.c-news h2 {
 					color: <?php echo esc_html( get_theme_mod('conversions_news_title_color', '#222222' ) ); ?>;
 				}
-				section.c-news p.subtitle {
+				.page-template-homepage section.c-news p.subtitle {
 					color: <?php echo esc_html( get_theme_mod('conversions_news_desc_color', '#6c757d' ) ); ?>;
 				}
 				<?php if ( get_theme_mod( 'conversions_news_mposts', '2' ) == 1 ) { ?>
@@ -2406,30 +2406,30 @@ namespace conversions
 					}
 				<?php } ?>
 				<?php if ( !empty( get_theme_mod( 'conversions_testimonials_bg_color') ) ) { ?>
-					section.c-testimonials { background-color: <?php echo esc_html( get_theme_mod( 'conversions_testimonials_bg_color') ); ?>; }
+					.page-template-homepage section.c-testimonials { background-color: <?php echo esc_html( get_theme_mod( 'conversions_testimonials_bg_color') ); ?>; }
 				<?php } ?>
-				section.c-testimonials h2 {
+				.page-template-homepage section.c-testimonials h2 {
 					color: <?php echo esc_html( get_theme_mod('conversions_testimonials_title_color', '#222222' ) ); ?>;
 				}
-				section.c-testimonials p.subtitle {
+				.page-template-homepage section.c-testimonials p.subtitle {
 					color: <?php echo esc_html( get_theme_mod('conversions_testimonials_desc_color', '#6c757d' ) ); ?>;
 				}
 				<?php if ( !empty( get_theme_mod( 'conversions_pricing_bg_color') ) ) { ?>
-					section.c-pricing { background-color: <?php echo esc_html( get_theme_mod( 'conversions_pricing_bg_color') ); ?>; }
+					.page-template-homepage section.c-pricing { background-color: <?php echo esc_html( get_theme_mod( 'conversions_pricing_bg_color') ); ?>; }
 				<?php } ?>
-				section.c-pricing h2 {
+				.page-template-homepage section.c-pricing h2 {
 					color: <?php echo esc_html( get_theme_mod('conversions_pricing_title_color', '#222222' ) ); ?>;
 				}
-				section.c-pricing p.subtitle {
+				.page-template-homepage section.c-pricing p.subtitle {
 					color: <?php echo esc_html( get_theme_mod('conversions_pricing_desc_color', '#6c757d' ) ); ?>;
 				}
 				<?php if ( !empty( get_theme_mod( 'conversions_features_bg_color') ) ) { ?>
-					section.c-features { background-color: <?php echo esc_html( get_theme_mod( 'conversions_features_bg_color') ); ?>; }
+					.page-template-homepage section.c-features { background-color: <?php echo esc_html( get_theme_mod( 'conversions_features_bg_color') ); ?>; }
 				<?php } ?>
-				section.c-features h2 {
+				.page-template-homepage section.c-features h2 {
 					color: <?php echo esc_html( get_theme_mod('conversions_features_title_color', '#222222' ) ); ?>;
 				}
-				section.c-features p.subtitle {
+				.page-template-homepage section.c-features p.subtitle {
 					color: <?php echo esc_html( get_theme_mod('conversions_features_desc_color', '#6c757d' ) ); ?>;
 				}
 			</style>
