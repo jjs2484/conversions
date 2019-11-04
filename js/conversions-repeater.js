@@ -169,12 +169,11 @@ jQuery(document).ready(function () {
     var theme_conrols = jQuery('#customize-theme-controls');
     theme_conrols.on('click', '.customizer-repeater-customize-control-title', function () {
         jQuery(this).next().slideToggle('medium', function () {
-            if (jQuery(this).is(':hidden')){
-                jQuery(this).prev().removeClass('repeater-expanded');
-                jQuery(this).css('display', 'none');
-            } else {
+            if (jQuery(this).is(':visible')){
                 jQuery(this).prev().addClass('repeater-expanded');
                 jQuery(this).css('display', 'block');
+            } else {
+                jQuery(this).prev().removeClass('repeater-expanded');
             }
         });
     });

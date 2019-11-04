@@ -132,7 +132,7 @@ class Conversions_Repeater extends \WP_Customize_Control {
 		if( !empty( $array ) ) {
 			foreach( $array as $icon ) { ?>
                 <div class="customizer-repeater-general-control-repeater-container customizer-repeater-draggable">
-                    <div class="customizer-repeater-customize-control-title repeater-expanded">
+                    <div class="customizer-repeater-customize-control-title">
 						<?php echo esc_html( $this->boxtitle ) ?>
                     </div>
                     <div class="customizer-repeater-box-content-hidden" style="display: block;">
@@ -244,7 +244,7 @@ class Conversions_Repeater extends \WP_Customize_Control {
 			}
 		} else { ?>
             <div class="customizer-repeater-general-control-repeater-container">
-                <div class="customizer-repeater-customize-control-title repeater-expanded">
+                <div class="customizer-repeater-customize-control-title">
 					<?php echo esc_html( $this->boxtitle ) ?>
                 </div>
                 <div class="customizer-repeater-box-content-hidden" style="display: block;">
