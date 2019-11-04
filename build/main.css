@@ -11870,8 +11870,10 @@ section.c-clients .slick-slider .slick-track {
       -ms-flex-pack: center;
           justify-content: center; }
 
-section.c-features .c-features__icon i {
-  font-size: 3rem; }
+section.c-features .card {
+  background-color: transparent; }
+  section.c-features .card .c-features__icon i {
+    font-size: 3rem; }
 
 @media (max-width: 991.98px) {
   .c-pricing .card {

@@ -161,9 +161,12 @@ section.c-clients {
 
 // Icon block section
 section.c-features {
-  .c-features__icon {
-    i {
-      font-size: 3rem;
+  .card {
+    background-color: transparent;
+    .c-features__icon {
+      i {
+        font-size: 3rem;
+      }
     }
   }
 }
