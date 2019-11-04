@@ -453,7 +453,7 @@ get_header();
 
         <!-- Post item -->
         <div class="col-sm-12 col-lg-4 mb-3 c-news__card-wrapper">
-          <article class="card shadow h-100 mb-3">
+          <article class="card shadow h-100">
             
             <!-- Post image -->
             <a class="c-news__img-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>">

@@ -1,6 +1,11 @@
 // Navbar styles
 .navbar {
 
+  a.navbar-brand img {
+    height: 100%;
+    width: auto;
+  }
+
   h1 { 
     font-weight: $font-weight-normal;
   }

@@ -11641,6 +11641,9 @@ a.skip-link {
   top: 0px;
   right: 0px; }
 
+.navbar a.navbar-brand img {
+  height: 100%;
+  width: auto; }
 .navbar h1 {
   font-weight: 400; }
 @media (min-width: 992px) {
