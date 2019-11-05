@@ -129,6 +129,7 @@ function customizer_repeater_refresh_general_control_values() {
             var text = jQuery(this).find('.customizer-repeater-text-control').val();
             var linktext = jQuery(this).find('.customizer-repeater-linktext-control').val();
             var link = jQuery(this).find('.customizer-repeater-link-control').val();
+            var color = jQuery(this).find('input.customizer-repeater-color-control').val();
             var image_url = jQuery(this).find('.custom-media-url').val();
             var choice = jQuery(this).find('.customizer-repeater-image-choice').val();
             var title = jQuery(this).find('.customizer-repeater-title-control').val();
@@ -141,9 +142,10 @@ function customizer_repeater_refresh_general_control_values() {
             }
             var feature_repeater = jQuery(this).find('.feature-repeater-features-repeater-collector').val();
 
-            if (text !== '' || image_url !== '' || title !== '' || subtitle !== '' || subtitle2 !== '' || icon_value !== '' || linktext !== '' || link !== '' || choice !== '' || feature_repeater !== '') {
+            if (text !== '' || image_url !== '' || title !== '' || subtitle !== '' || subtitle2 !== '' || icon_value !== '' || linktext !== '' || link !== '' || choice !== '' || feature_repeater !== '' || color !== '') {
                 values.push({
                     'icon_value': (choice === 'customizer_repeater_none' ? '' : icon_value),
+                    'color': color,
                     'text': escapeHtml(text),
                     'linktext': escapeHtml(linktext),
                     'link': link,
@@ -206,6 +208,12 @@ jQuery(document).ready(function () {
         return false;
     });
 
+    var color_options = {
+        change: function(event, ui){
+            customizer_repeater_refresh_general_control_values();
+        }
+    };
+
     /**
      * This adds a new box to repeater
      *
@@ -233,7 +241,7 @@ jQuery(document).ready(function () {
                 field.find('.social-repeater-general-control-remove-field').show();
 
                 /* Empty control for icon */
-                field.find('.input-group-addon').find('.fa').attr('class', 'fa');
+                field.find('.input-group-addon').find('.cr__icon').attr('class', 'fa');
 
 
                 /*Remove all repeater fields except first one*/
@@ -262,6 +270,10 @@ jQuery(document).ready(function () {
 
                 /*Remove value from title field*/
                 field.find('.customizer-repeater-title-control').val('');
+
+                /*Remove value from color field*/
+                field.find('div.customizer-repeater-color-control .wp-picker-container').replaceWith('<input type="text" class="customizer-repeater-color-control ' + id + '">');
+                field.find('input.customizer-repeater-color-control').wpColorPicker(color_options);
 
                 /*Remove value from subtitle field*/
                 field.find('.customizer-repeater-subtitle-control').val('');
@@ -296,6 +308,8 @@ jQuery(document).ready(function () {
     theme_conrols.on('keyup', '.customizer-repeater-title-control', function () {
         customizer_repeater_refresh_general_control_values();
     });
+
+    jQuery('input.customizer-repeater-color-control').wpColorPicker(color_options);
 
     theme_conrols.on('keyup', '.customizer-repeater-subtitle-control', function () {
         customizer_repeater_refresh_general_control_values();

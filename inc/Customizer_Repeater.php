@@ -10,6 +10,7 @@ class Conversions_Repeater extends \WP_Customize_Control {
 	private $allowed_html = array();
 	public $customizer_repeater_image_control = false;
 	public $customizer_repeater_icon_control = false;
+	public $customizer_repeater_color_control = false;
 	public $customizer_repeater_title_control = false;
 	public $customizer_repeater_subtitle_control = false;
 	public $customizer_repeater_subtitle2_control = false;
@@ -37,6 +38,9 @@ class Conversions_Repeater extends \WP_Customize_Control {
 		}
 		if ( ! empty( $args['customizer_repeater_icon_control'] ) ) {
 			$this->customizer_repeater_icon_control = $args['customizer_repeater_icon_control'];
+		}
+		if ( ! empty( $args['customizer_repeater_color_control'] ) ) {
+			$this->customizer_repeater_color_control = $args['customizer_repeater_color_control'];
 		}
 		if ( ! empty( $args['customizer_repeater_title_control'] ) ) {
 			$this->customizer_repeater_title_control = $args['customizer_repeater_title_control'];
@@ -137,7 +141,7 @@ class Conversions_Repeater extends \WP_Customize_Control {
                     </div>
                     <div class="customizer-repeater-box-content-hidden">
 						<?php
-						$choice = $image_url = $icon_value = $title = $subtitle = $subtitle2 = $text = $linktext = $link = $repeater = '';
+						$choice = $image_url = $icon_value = $title = $subtitle = $subtitle2 = $text = $linktext = $link = $repeater = $color = '';
 						if( !empty( $icon->id ) ) {
 							$id = $icon->id;
 						}
@@ -149,6 +153,9 @@ class Conversions_Repeater extends \WP_Customize_Control {
 						}
 						if( !empty( $icon->icon_value ) ) {
 							$icon_value = $icon->icon_value;
+						}
+						if( !empty( $icon->color ) ) {
+							$color = $icon->color;
 						}
 						if( !empty( $icon->title ) ) {
 							$title = $icon->title;
@@ -179,6 +186,15 @@ class Conversions_Repeater extends \WP_Customize_Control {
 						}
 						if( $this->customizer_repeater_icon_control == true ) {
 							$this->icon_picker_control( $icon_value, $choice );
+						}
+						if( $this->customizer_repeater_color_control == true ){
+							$this->input_control( array(
+								'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Color','conversions' ), $this->id, 'customizer_repeater_color_control' ),
+								'class' => 'customizer-repeater-color-control',
+								'type'  => apply_filters('conversions_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color_control' ),
+								'sanitize_callback' => 'sanitize_hex_color',
+								'choice' => $choice,
+							), $color );
 						}
 						if( $this->customizer_repeater_title_control == true ) {
 							$this->input_control(array(
@@ -258,6 +274,14 @@ class Conversions_Repeater extends \WP_Customize_Control {
 					if ( $this->customizer_repeater_icon_control == true ) {
 						$this->icon_picker_control();
 					}
+					if( $this->customizer_repeater_color_control==true ){
+						$this->input_control( array(
+							'label' => apply_filters( 'repeater_input_labels_filter', esc_html__( 'Color','conversions' ), $this->id, 'customizer_repeater_color_control' ),
+							'class' => 'customizer-repeater-color-control',
+							'type'  => apply_filters('conversions_repeater_input_types_filter', 'color', $this->id, 'customizer_repeater_color_control' ),
+							'sanitize_callback' => 'sanitize_hex_color'
+						) );
+					}
 					if ( $this->customizer_repeater_title_control == true ) {
 						$this->input_control( array(
 							'label' => apply_filters('repeater_input_labels_filter', esc_html__( 'Title','conversions' ), $this->id, 'customizer_repeater_title_control' ),
@@ -316,11 +340,18 @@ class Conversions_Repeater extends \WP_Customize_Control {
 	private function input_control( $options, $value='' ) { ?>
 
 		<?php
-		if( !empty($options['type']) ){
-			switch ($options['type']) {
+		if( !empty( $options['type'] ) ){
+			switch ( $options['type'] ) {
 				case 'textarea':?>
                     <span class="customize-control-title"><?php echo esc_html( $options['label'] ); ?></span>
                     <textarea class="<?php echo esc_attr( $options['class'] ); ?>" placeholder="<?php echo esc_attr( $options['label'] ); ?>"><?php echo ( !empty($options['sanitize_callback']) ?  call_user_func_array( $options['sanitize_callback'], array( $value ) ) : esc_attr($value) ); ?></textarea>
+				<?php
+				break;
+				case 'color': ?>
+                    <span class="customize-control-title"><?php echo esc_html( $options['label'] ); ?></span>
+                    <div class="<?php echo esc_attr($options['class']); ?>">
+                        <input type="text" value="<?php echo ( !empty($options['sanitize_callback']) ?  call_user_func_array( $options['sanitize_callback'], array( $value ) ) : esc_attr($value) ); ?>" class="<?php echo esc_attr($options['class']); ?>" />
+                    </div>
 				<?php
 				break;
 			}
@@ -350,7 +381,7 @@ class Conversions_Repeater extends \WP_Customize_Control {
             <div class="input-group icp-container">
                 <input data-placement="bottomRight" class="icp icp-auto" value="<?php if( !empty( $value ) ) { echo esc_attr( $value ); } ?>" type="text">
                 <span class="input-group-addon">
-                    <i class="<?php echo esc_attr( $value ); ?>"></i>
+                    <i class="cr__icon <?php echo esc_attr( $value ); ?>"></i>
                 </span>
             </div>
 			<?php get_template_part( $this->customizer_icon_container ); ?>

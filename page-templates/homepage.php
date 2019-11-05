@@ -192,7 +192,12 @@ get_header();
                     
                     <?php 
                       if ( !empty( $repeater_item->icon_value ) ) {
-                        echo '<span class="c-features__icon"><i class="'.esc_attr( $repeater_item->icon_value ).' text-success mb-3" aria-hidden="true"></i></span>';
+                        if ( !empty( $repeater_item->color ) ) {
+                          echo '<span class="c-features__icon"><i class="'.esc_attr( $repeater_item->icon_value ).' mb-3" aria-hidden="true" style="color:'.esc_attr( $repeater_item->color ).';"></i></span>';
+                        }
+                        else {
+                          echo '<span class="c-features__icon"><i class="'.esc_attr( $repeater_item->icon_value ).' mb-3" aria-hidden="true"></i></span>';
+                        }
                       }
 
                       if ( !empty( $repeater_item->title ) ) {

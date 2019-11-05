@@ -1691,6 +1691,7 @@ namespace conversions
 						'section' => 'conversions_homepage_features',
 						'priority' => 90,
 						'customizer_repeater_icon_control' => true,
+						'customizer_repeater_color_control' => true,
 						'customizer_repeater_title_control' => true,
 						'customizer_repeater_text_control' => true,
 						'customizer_repeater_linktext_control' => true,
