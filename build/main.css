@@ -11780,6 +11780,9 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   .w-lg-90 {
     width: 90%; } }
 
+section p.subtitle, .c-features__description {
+  color: #6c757d; }
+
 a.c-news__img-link {
   background: #000;
   border-radius: 4px; }

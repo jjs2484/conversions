@@ -200,7 +200,7 @@ get_header();
                       }
 
                       if ( !empty( $repeater_item->text ) ) {
-                        echo '<p class="text-muted">'.esc_html( $repeater_item->text ).'</p>';
+                        echo '<p class="c-features__description">'.esc_html( $repeater_item->text ).'</p>';
                       }
 
                       if ( !empty( $repeater_item->linktext ) ) {
@@ -272,7 +272,7 @@ get_header();
               <div class="col-sm-12 col-lg-<?php echo esc_attr( $cpri[$conversions_pricing_row] ); ?> mb-3">
                 <div class="card shadow">
                   <header class="card-header bg-white text-center p-4">
-                    <h4 class="h5 text-success mb-3">
+                    <h4 class="h5 text-secondary mb-3">
                       <?php 
                         // Plan title
                         echo esc_html( $repeater_item->title ); 
@@ -285,7 +285,7 @@ get_header();
                           echo esc_html( $repeater_item->subtitle ); 
                         ?>
                       </span>
-                      <span class="d-block text-muted">
+                      <span class="d-block text-secondary">
                         <?php 
                           // Plan duration
                           echo esc_html( $repeater_item->subtitle2 ); 
@@ -310,7 +310,7 @@ get_header();
                     </ul>
                     <?php
                       // Plan button and link
-                      echo sprintf( '<a href="%1$s" class="btn btn-block btn-success">%2$s</a>', 
+                      echo sprintf( '<a href="%1$s" class="btn btn-block btn-primary">%2$s</a>', 
                         esc_url( $repeater_item->link ),
                         esc_html( $repeater_item->linktext )
                       );

@@ -220,7 +220,7 @@ namespace conversions
 				'conversions_hc_max' => '5',
 				'conversions_features_title' => 'Features section',
 				'conversions_features_desc' => 'We offer custom services to our clients. Have a project that you would like to work together on? We would love to hear more about it.',
-				'conversions_features_sm' => '1',
+				'conversions_features_sm' => '2',
 				'conversions_features_md' => '2',
 				'conversions_features_lg' => '3',
 				'conversions_pricing_bg_color' => '#F3F3F3',

@@ -51,6 +51,11 @@ input[type="file"] {
   }
 }
 
+// subtitle and description .text-muted
+section p.subtitle, .c-features__description {
+  color: #6c757d;
+}
+
 // News img hover
 a.c-news__img-link {
   background: #000;

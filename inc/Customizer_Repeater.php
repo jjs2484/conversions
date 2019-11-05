@@ -135,7 +135,7 @@ class Conversions_Repeater extends \WP_Customize_Control {
                     <div class="customizer-repeater-customize-control-title">
 						<?php echo esc_html( $this->boxtitle ) ?>
                     </div>
-                    <div class="customizer-repeater-box-content-hidden" style="display: block;">
+                    <div class="customizer-repeater-box-content-hidden">
 						<?php
 						$choice = $image_url = $icon_value = $title = $subtitle = $subtitle2 = $text = $linktext = $link = $repeater = '';
 						if( !empty( $icon->id ) ) {
@@ -247,7 +247,7 @@ class Conversions_Repeater extends \WP_Customize_Control {
                 <div class="customizer-repeater-customize-control-title">
 					<?php echo esc_html( $this->boxtitle ) ?>
                 </div>
-                <div class="customizer-repeater-box-content-hidden" style="display: block;">
+                <div class="customizer-repeater-box-content-hidden">
 					<?php
 					if ( $this->customizer_repeater_image_control == true && $this->customizer_repeater_icon_control == true ) {
 						$this->icon_type_choice();

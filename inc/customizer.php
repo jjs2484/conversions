@@ -1570,7 +1570,7 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_features_title_control', array(
-				'label'      => __('Title text', 'conversions'),
+				'label'      => __('Title', 'conversions'),
 				'description'=> __('Add your title.', 'conversions'),
 				'section'    => 'conversions_homepage_features',
 				'settings'   => 'conversions_features_title',
@@ -1621,7 +1621,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_features_sm', array(
-				'default'       => '1',
+				'default'       => '2',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
@@ -1728,7 +1728,7 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_pricing_title_control', array(
-				'label'      => __('Title text', 'conversions'),
+				'label'      => __('Title', 'conversions'),
 				'description'=> __('Add your title.', 'conversions'),
 				'section'    => 'conversions_homepage_pricing',
 				'settings'   => 'conversions_pricing_title',
@@ -1848,7 +1848,7 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_testimonials_title_control', array(
-				'label'      => __('Title text', 'conversions'),
+				'label'      => __('Title', 'conversions'),
 				'description'=> __('Add your title.', 'conversions'),
 				'section'    => 'conversions_homepage_testimonials',
 				'settings'   => 'conversions_testimonials_title',
@@ -1946,7 +1946,7 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_news_title_control', array(
-				'label'      => __('Title text', 'conversions'),
+				'label'      => __('Title', 'conversions'),
 				'description'=> __('Add your title.', 'conversions'),
 				'section'    => 'conversions_homepage_news',
 				'settings'   => 'conversions_news_title',
@@ -2046,7 +2046,7 @@ namespace conversions
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 			$wp_customize->add_control( 'conversions_hcta_title_control', array(
-				'label'      => __('Title text', 'conversions'),
+				'label'      => __('Title', 'conversions'),
 				'description'=> __('Add your title.', 'conversions'),
 				'section'    => 'conversions_homepage_cta',
 				'settings'   => 'conversions_hcta_title',
@@ -2276,8 +2276,8 @@ namespace conversions
 				array(".page-template-homepage section.c-pricing h2", "color", get_theme_mod( 'conversions_pricing_title_color' )),
 				array(".page-template-homepage section.c-pricing p.subtitle", "color", get_theme_mod( 'conversions_pricing_desc_color' )),
 				array(".page-template-homepage section.c-features", "background-color", get_theme_mod( 'conversions_features_bg_color' )),
-				array(".page-template-homepage section.c-features h2", "color", get_theme_mod( 'conversions_features_title_color' )),
-				array(".page-template-homepage section.c-features p.subtitle", "color", get_theme_mod( 'conversions_features_desc_color' )),
+				array(".page-template-homepage section.c-features h2, section.c-features .card h3", "color", get_theme_mod( 'conversions_features_title_color' )),
+				array(".page-template-homepage section.c-features p.subtitle, section.c-features .card .c-features__description", "color", get_theme_mod( 'conversions_features_desc_color' )),
 				array(".conversions-hero-cover", "min-height", get_theme_mod( 'conversions_featured_img_height'), "vh"),
 				array(".h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6", "color", get_theme_mod( 'conversions_heading_color')),
 				array(".h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6", "font-family", $headings_font),
