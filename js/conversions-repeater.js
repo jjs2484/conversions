@@ -241,7 +241,7 @@ jQuery(document).ready(function () {
                 field.find('.social-repeater-general-control-remove-field').show();
 
                 /* Empty control for icon */
-                field.find('.input-group-addon').find('.cr__icon').attr('class', 'fa');
+                field.find('.input-group-addon').find('.cr__icon').attr('class', 'cr__icon');
 
 
                 /*Remove all repeater fields except first one*/

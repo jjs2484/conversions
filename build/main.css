@@ -11760,6 +11760,12 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   color: #e9ecef;
   font-size: 30px; }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #222222; }
+
+body, input, select, textarea {
+  color: #222222; }
+
 .wrapper {
   padding: 30px 0 3em;
   overflow: hidden; }
@@ -12530,6 +12536,9 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
     border: 0; }
   .woocommerce #reviews #comments ol.commentlist li .comment-text {
     margin: 0 0 0 56px; }
+
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
+  color: #222222; }
 
 /*
 * Use existing Bootstrap 4 classes for CF7 styles

@@ -117,7 +117,7 @@ namespace conversions
 			// Add logo height to site identity panel
 			//-----------------------------------------------------
 			$wp_customize->add_setting( 'conversions_logo_height', array(
-				'default'       => '60',
+				'default'       => '40',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
@@ -336,7 +336,7 @@ namespace conversions
 				'priority'    => 21,
 			) );
 			$wp_customize->add_setting( 'conversions_container_width', array(
-				'default'       => '1100',
+				'default'       => '1140',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
@@ -471,36 +471,8 @@ namespace conversions
 						'priority'    => '3',
 					)
 			) );
-			$wp_customize->add_setting( 'conversions_heading_color', array(
-				'default'       => '#222222',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_heading_color_control', array(
-				'label'      => __('Heading color', 'conversions'),
-				'description'=> __('Select a color for headings.', 'conversions'),
-				'section'    => 'conversions_typography',
-				'settings'   => 'conversions_heading_color',
-				'priority'   => 20,
-				'type'       => 'color',
-			) );
-			$wp_customize->add_setting( 'conversions_text_color', array(
-				'default'       => '#111111',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_text_color_control', array(
-				'label'      => __('Body color', 'conversions'),
-				'description'=> __('Select a color for body text.', 'conversions'),
-				'section'    => 'conversions_typography',
-				'settings'   => 'conversions_text_color',
-				'priority'   => 30,
-				'type'       => 'color',
-			) );
 			$wp_customize->add_setting( 'conversions_link_color', array(
-				'default'       => '#0057b4',
+				'default'       => '#0068d7',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -514,7 +486,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_link_hcolor', array(
-				'default'       => '#004086',
+				'default'       => '#00698c',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -661,7 +633,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_copyright_link_color', array(
-				'default'       => '#0057b4',
+				'default'       => '#0068d7',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -676,7 +648,7 @@ namespace conversions
 			) );
 
 			$wp_customize->add_setting( 'conversions_copyright_link_hcolor', array(
-				'default'       => '#004086',
+				'default'       => '#00698c',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -742,7 +714,7 @@ namespace conversions
 				),
 			) );
 			$wp_customize->add_setting( 'conversions_social_link_color', array(
-				'default'       => '#0057b4',
+				'default'       => '#0068d7',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -756,7 +728,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_social_link_hcolor', array(
-				'default'       => '#004086',
+				'default'       => '#00698c',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -2208,7 +2180,7 @@ namespace conversions
 			}
 			// fixed header height calc variables
 			if ( has_custom_logo() ) {
-				$logo_height = get_theme_mod( 'conversions_logo_height', '60' );
+				$logo_height = get_theme_mod( 'conversions_logo_height', '40' );
 			}
 			else {
 				$logo_height = 30;
@@ -2280,9 +2252,7 @@ namespace conversions
 				array(".page-template-homepage section.c-features h2, section.c-features .card h3", "color", get_theme_mod( 'conversions_features_title_color' )),
 				array(".page-template-homepage section.c-features p.subtitle, section.c-features .card .c-features__description", "color", get_theme_mod( 'conversions_features_desc_color' )),
 				array(".conversions-hero-cover", "min-height", get_theme_mod( 'conversions_featured_img_height'), "vh"),
-				array(".h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6", "color", get_theme_mod( 'conversions_heading_color')),
 				array(".h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6", "font-family", $headings_font),
-				array("body, input, select, textarea", "color", get_theme_mod( 'conversions_text_color' )),
 				array("body, input, select, textarea", "font-family", $body_font),
 				array("#wrapper-footer .social-media-icons ul li.list-inline-item i", "font-size", get_theme_mod( 'conversions_social_size' ), "px"),
 				array("#wrapper-footer .social-media-icons ul li.list-inline-item i", "color", get_theme_mod( 'conversions_social_link_color' )),
@@ -2363,9 +2333,6 @@ namespace conversions
 						color: '.esc_html( $wc_btns[$wc_secondary_btn]["btn_color_hover"] ).';
 						background-color: '.esc_html( $wc_btns[$wc_secondary_btn]["btn_bg_hover"] ).';
 						border-color: '.esc_html( $wc_btns[$wc_secondary_btn]["btn_border_hover"] ).';
-					}';
-					echo '.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
-  						color: '.esc_html( get_theme_mod( 'conversions_heading_color' ) ).';
 					}';
 				}
 				// sidebar

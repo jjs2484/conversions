@@ -15,6 +15,19 @@
   font-weight: 500;
 }
 
+.editor-styles-wrapper .editor-writing-flow .editor-post-title__block .editor-post-title__input,
+.editor-styles-wrapper .editor-writing-flow .wp-block-heading h1,
+.editor-styles-wrapper .editor-writing-flow .wp-block-heading h2,
+.editor-styles-wrapper .editor-writing-flow .wp-block-heading h3,
+.editor-styles-wrapper .editor-writing-flow .wp-block-heading h4,
+.editor-styles-wrapper .editor-writing-flow .wp-block-heading h5 {
+  color: #222222;
+}
+
+.editor-styles-wrapper .editor-writing-flow {
+  color: #222222;
+}
+
 // Separators
 .wp-block-separator {
   border-bottom: 2px solid rgba(0,0,0,.2);
@@ -208,7 +221,6 @@ $colors: (
   }
 }
 
-// WooCommerce
 .wc-block-grid .wc-block-grid__products .wc-block-grid__product {
   padding: 0 28px 0 0;
   
@@ -217,6 +229,7 @@ $colors: (
     margin-bottom: 0;
     font-size: 1em;
     font-weight: 500;
+    color: #222222;
   }
   .wc-block-grid__product-price.price {
     margin-bottom: .5em;

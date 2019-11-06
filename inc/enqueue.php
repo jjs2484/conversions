@@ -88,10 +88,8 @@ class Enqueue
 			$body_font = "Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont";
 		}
 
-		$headings_color = get_theme_mod( 'conversions_heading_color', '#222222' );
-		$body_color = get_theme_mod( 'conversions_text_color', '#111111' );
-		$links_color = get_theme_mod( 'conversions_link_color', '#0057b4' );
-		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#004086' );
+		$links_color = get_theme_mod( 'conversions_link_color', '#0068d7' );
+		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#00698c' );
 		$container_width = get_theme_mod( 'conversions_container_width', '1140' );
 
 		// WC button option
@@ -124,11 +122,9 @@ class Enqueue
 			.editor-styles-wrapper .editor-writing-flow .wp-block-heading h3,
 			.editor-styles-wrapper .editor-writing-flow .wp-block-heading h4,
 			.editor-styles-wrapper .editor-writing-flow .wp-block-heading h5 {
-				color: '.esc_html($headings_color).';
 				font-family: '.esc_html($headings_font).';
 			}
 			.editor-styles-wrapper .editor-writing-flow {
-				color: '.esc_html($body_color).';
 				font-family: '.esc_html($body_font).';
 			}
 			.editor-styles-wrapper a,
@@ -155,9 +151,6 @@ class Enqueue
 				color: '.esc_html( $wc_btns[$wc_primary_btn]["btn_color_hover"] ).' !important;
 				background-color: '.esc_html( $wc_btns[$wc_primary_btn]["btn_bg_hover"] ).';
 				border-color: '.esc_html( $wc_btns[$wc_primary_btn]["btn_border_hover"] ).';
-			}
-			.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
-  				color: '.esc_html($headings_color).';
 			}
 		';
 		wp_add_inline_style( 'conversions-gutenberg', $custom_gb_css );
@@ -187,13 +180,11 @@ class Enqueue
 			$body_font = "Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont";
 		}
 
-		$headings_color = get_theme_mod( 'conversions_heading_color', '#222222' );
-		$body_color = get_theme_mod( 'conversions_text_color', '#111111' );
-		$links_color = get_theme_mod( 'conversions_link_color', '#0057b4' );
-		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#004086' );
+		$links_color = get_theme_mod( 'conversions_link_color', '#0068d7' );
+		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#00698c' );
 
 		// Add them to the classic editor
-		$styles = 'body.mce-content-body { color:'.esc_html($body_color).';font-family:'.esc_html($body_font).'; } body.mce-content-body h1, body.mce-content-body h2, body.mce-content-body h3, body.mce-content-body h4, body.mce-content-body h5, body.mce-content-body h6 { color:'.esc_html($headings_color).';font-family:'.esc_html($headings_font).'; } body.mce-content-body a { color:'.esc_html($links_color).'; } body.mce-content-body a:hover { color:'.esc_html($links_hcolor).'; }';
+		$styles = 'body.mce-content-body { font-family:'.esc_html($body_font).'; } body.mce-content-body h1, body.mce-content-body h2, body.mce-content-body h3, body.mce-content-body h4, body.mce-content-body h5, body.mce-content-body h6 { font-family:'.esc_html($headings_font).'; } body.mce-content-body a { color:'.esc_html($links_color).'; } body.mce-content-body a:hover { color:'.esc_html($links_hcolor).'; }';
 		if ( isset( $mceInit['content_style'] ) ) {
 			$mceInit['content_style'] .= ' ' . $styles . ' ';
 		} else {

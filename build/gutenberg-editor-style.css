@@ -395,6 +395,17 @@ input[type="button"].btn-block,
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-weight: 500; }
 
+.editor-styles-wrapper .editor-writing-flow .editor-post-title__block .editor-post-title__input,
+.editor-styles-wrapper .editor-writing-flow .wp-block-heading h1,
+.editor-styles-wrapper .editor-writing-flow .wp-block-heading h2,
+.editor-styles-wrapper .editor-writing-flow .wp-block-heading h3,
+.editor-styles-wrapper .editor-writing-flow .wp-block-heading h4,
+.editor-styles-wrapper .editor-writing-flow .wp-block-heading h5 {
+  color: #222222; }
+
+.editor-styles-wrapper .editor-writing-flow {
+  color: #222222; }
+
 .wp-block-separator {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
   .wp-block-separator.is-style-wide {
@@ -535,7 +546,8 @@ blockquote.wp-block-quote {
     padding: .5em 0;
     margin-bottom: 0;
     font-size: 1em;
-    font-weight: 500; }
+    font-weight: 500;
+    color: #222222; }
   .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-price.price {
     margin-bottom: .5em;
     color: #555;

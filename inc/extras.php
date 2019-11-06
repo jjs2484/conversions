@@ -102,7 +102,7 @@ class Extras
 	public function set_content_width()
 	{
 		if ( ! isset( $content_width ) ) {
-			$c_width = esc_html( get_theme_mod( 'conversions_container_width', '1100' ) );
+			$c_width = esc_html( get_theme_mod( 'conversions_container_width', '1140' ) );
 			$content_width = $c_width * .75 - ( 15 * 2 );
 		}
 	}
@@ -115,7 +115,7 @@ class Extras
 	{
 		if ( is_page_template( 'page-templates/fullwidthpage.php' ) || is_page_template( 'page-templates/homepage.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) || ! is_active_sidebar( 'sidebar-2' ) ) {
 			global $content_width;
-			$c_width = esc_html( get_theme_mod( 'conversions_container_width', '1100' ) );
+			$c_width = esc_html( get_theme_mod( 'conversions_container_width', '1140' ) );
 			$content_width = $c_width - ( 15 * 2 );
 		}
 	}

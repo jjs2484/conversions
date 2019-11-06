@@ -3,6 +3,19 @@
   font-weight: 500;
 }
 
+body.mce-content-body h1, 
+body.mce-content-body h2, 
+body.mce-content-body h3, 
+body.mce-content-body h4, 
+body.mce-content-body h5, 
+body.mce-content-body h6 { 
+  color:#222222;
+}
+
+body.mce-content-body { 
+  color: #222222; 
+}
+
 // Paragraphs
 p {
   margin-top: 0;
