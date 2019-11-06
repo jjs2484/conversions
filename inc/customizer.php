@@ -146,7 +146,7 @@ namespace conversions
 			) );
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_nav_colors', array(
-				'default'           => 'dark',
+				'default'           => 'white',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -276,7 +276,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_nav_button_text', array(
-				'default'       => __( 'Click me', 'conversions' ),
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -290,7 +290,7 @@ namespace conversions
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_nav_button_url', array(
-				'default'       => 'https://wordpress.org',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'esc_url_raw',
@@ -2453,10 +2453,20 @@ namespace conversions
 
 				// Append Navigation Button?
 				if ( get_theme_mod( 'conversions_nav_button', 'no' ) != 'no' ) {
+
+					$nav_btn_text = get_theme_mod( 'conversions_nav_button_text' );
+					if ( empty( $nav_btn_text ) ) { 
+						$nav_btn_text = "";
+					}
+					$nav_btn_url = get_theme_mod( 'conversions_nav_button_url' );
+					if ( empty( $nav_btn_url ) ) { 
+						$nav_btn_url = "";
+					}
+
 					$nav_button = sprintf( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-callout-button menu-item nav-item"><a title="%1$s" href="%2$s" class="btn %3$s">%1$s</a></li>',
-						esc_html( get_theme_mod( 'conversions_nav_button_text', 'Click me' ) ),
-						esc_url( get_theme_mod( 'conversions_nav_button_url', 'https://wordpress.org' ) ),
-						esc_attr( get_theme_mod( 'conversions_nav_button', 'no' ) )
+						esc_html( $nav_btn_text ),
+						esc_url( $nav_btn_url ),
+						esc_attr( get_theme_mod( 'conversions_nav_button' ) )
 					);
 
 					// Add the nav button to the end of the menu.
