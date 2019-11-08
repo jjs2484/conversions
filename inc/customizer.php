@@ -580,7 +580,13 @@ namespace conversions
 							'wiretap' => __( 'Wiretap', 'conversions' ),
 							'magic' => __( 'Magic', 'conversions' ),
 							'mellow' => __( 'Mellow', 'conversions' ),
-							'crystal-clear' => __( 'Crystal Clear ', 'conversions' ),
+							'crystal-clear' => __( 'Crystal Clear', 'conversions' ),
+							'summer' => __( 'Summer', 'conversions' ),
+							'burning-orange' => __( 'Burning Orange', 'conversions' ),
+							'instagram' => __( 'Instagram', 'conversions' ),
+							'dracula' => __( 'Dracula', 'conversions' ),
+							'titanium' => __( 'Titanium', 'conversions' ),
+							'moss' => __( 'Moss', 'conversions' ),
 						),
 						'priority'    => '3',
 					)
@@ -2493,7 +2499,7 @@ namespace
      			return esc_html__( 'Duration','conversions' );
      		}
         }
-        
+
         return $string;
     }
     add_filter( 'repeater_input_labels_filter','conversions_repeater_labels', 10 , 3 );

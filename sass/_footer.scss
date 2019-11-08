@@ -133,4 +133,34 @@
     background: -webkit-linear-gradient(to right, #155799, #159957);
     background: linear-gradient(to right, #155799, #159957);
   }
+  &.summer {
+    background: #22c1c3;
+    background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);
+    background: linear-gradient(to right, #fdbb2d, #22c1c3);
+  }
+  &.burning-orange {
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+  }
+  &.instagram {
+    background: #833ab4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  }
+  &.dracula {
+    background: #DC2424;
+    background: -webkit-linear-gradient(to right, #4A569D, #DC2424);
+    background: linear-gradient(to right, #4A569D, #DC2424);
+  }
+  &.titanium {
+    background: #283048;
+    background: -webkit-linear-gradient(to right, #859398, #283048);
+    background: linear-gradient(to right, #859398, #283048);
+  }
+  &.moss {
+    background: #134E5E;
+    background: -webkit-linear-gradient(to right, #71B280, #134E5E);
+    background: linear-gradient(to right, #71B280, #134E5E);
+  }
 }
