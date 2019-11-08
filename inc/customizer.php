@@ -40,10 +40,9 @@ namespace conversions
 					$title = preg_replace($find, "", $repeater_item->icon_value);
 
 					// output the icon and link
-					echo sprintf( '<li class="list-inline-item"><a title="%1$s" href="%2$s" target="%3$s"><i aria-hidden="true" class="%4$s"></i><span class="sr-only">%1$s</span></a></li>',
+					echo sprintf( '<li class="list-inline-item"><a title="%1$s" href="%2$s" target="_blank"><i aria-hidden="true" class="%3$s"></i><span class="sr-only">%1$s</span></a></li>',
 						esc_attr( $title ), 
 						esc_url( $repeater_item->link ),
-						esc_attr( get_theme_mod('conversions_social_link_target', '_self') ),
 						esc_attr( $repeater_item->icon_value )
                 	);
 				}
@@ -760,7 +759,7 @@ namespace conversions
 			) );
 			// Create our settings
 			$wp_customize->add_setting( 'conversions_footer_bg_color', array(
-				'default'       => '#3c3d45',
+				'default'       => '#ffffff',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -773,22 +772,8 @@ namespace conversions
 				'priority'   => 10,
 				'type'       => 'color',
 			) );
-			$wp_customize->add_setting( 'conversions_footer_heading_color', array(
-				'default'       => '#ffffff',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_footer_heading_color_control', array(
-				'label'      => __('Heading color', 'conversions'),
-				'description'=> __('Select heading color for footer.', 'conversions'),
-				'section'    => 'conversions_footer',
-				'settings'   => 'conversions_footer_heading_color',
-				'priority'   => 20,
-				'type'       => 'color',
-			) );
 			$wp_customize->add_setting( 'conversions_footer_text_color', array(
-				'default'       => '#ffffff',
+				'default'       => '#222222',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -802,7 +787,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_footer_link_color', array(
-				'default'       => '#ccffff',
+				'default'       => '#0068d7',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -817,7 +802,7 @@ namespace conversions
 			) );
 
 			$wp_customize->add_setting( 'conversions_footer_link_hcolor', array(
-				'default'       => '#c9dede',
+				'default'       => '#00698c',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -830,16 +815,6 @@ namespace conversions
 				'priority'   => 50,
 				'type'       => 'color',
 			) );
-
-			//-----------------------------------------------------
-			// Copyright section
-			//-----------------------------------------------------
-			$wp_customize->add_section( 'conversions_copyright', array(
-				'title'             => __('Copyright', 'conversions'),
-				'priority'          => 21,
-				'capability'        => 'edit_theme_options',
-			) );
-			// Create our settings
 			$wp_customize->add_setting( 'conversions_copyright_text', array(
 				'default'       => '',
 				'type'          => 'theme_mod',
@@ -849,147 +824,29 @@ namespace conversions
 			$wp_customize->add_control( 'conversions_copyright_text_control', array(
 				'label'      => __('Copyright text', 'conversions'),
 				'description'=> __('Add your copyright text. If left blank the Site Title will be used instead.', 'conversions'),
-				'section'    => 'conversions_copyright',
+				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_copyright_text',
-				'priority'   => 10,
+				'priority'   => 60,
 				'type'       => 'text',
 			) );
-			$wp_customize->add_setting( 'conversions_copyright_bg_color', array(
-				'default'       => '#ffffff',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_copyright_bg_color_control', array(
-				'label'      => __('Background color', 'conversions'),
-				'description'=> __('Select copyright background color.', 'conversions'),
-				'section'    => 'conversions_copyright',
-				'settings'   => 'conversions_copyright_bg_color',
-				'priority'   => 20,
-				'type'       => 'color',
-			) );
-			$wp_customize->add_setting( 'conversions_copyright_text_color', array(
-				'default'       => '#111111',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_copyright_text_color_control', array(
-				'label'      => __('Text color', 'conversions'),
-				'description'=> __('Select copyright text color.', 'conversions'),
-				'section'    => 'conversions_copyright',
-				'settings'   => 'conversions_copyright_text_color',
-				'priority'   => 30,
-				'type'       => 'color',
-			) );
-			$wp_customize->add_setting( 'conversions_copyright_link_color', array(
-				'default'       => '#0068d7',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_copyright_link_color_control', array(
-				'label'      => __('Link color', 'conversions'),
-				'description'=> __('Select copyright hyperlink color.', 'conversions'),
-				'section'    => 'conversions_copyright',
-				'settings'   => 'conversions_copyright_link_color',
-				'priority'   => 40,
-				'type'       => 'color',
-			) );
-
-			$wp_customize->add_setting( 'conversions_copyright_link_hcolor', array(
-				'default'       => '#00698c',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_copyright_link_hcolor_control', array(
-				'label'      => __('Link hover color', 'conversions'),
-				'description'=> __('Select copyright hyperlink hover color.', 'conversions'),
-				'section'    => 'conversions_copyright',
-				'settings'   => 'conversions_copyright_link_hcolor',
-				'priority'   => 50,
-				'type'       => 'color',
-			) );
-
-			//-----------------------------------------------------
-			// Social media icons
-			//-----------------------------------------------------
-			$wp_customize->add_section( 'conversions_social', array(
-				'title' => __( 'Social Media Icons', 'conversions' ),
-				'capability'        => 'edit_theme_options',
-				'priority' => 21,
-			));
-			// Create our settings
-			$wp_customize->add_setting( 'conversions_social_link_target', array(
-				'default'           => '_self',
-				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
-				'capability'        => 'edit_theme_options',
-				'transport'     => 'refresh',
-			) );
-			$wp_customize->add_control(
-				new \WP_Customize_Control(
-					$wp_customize,
-					'conversions_social_link_target', array(
-						'label'       => __( 'Link open behavior', 'conversions' ),
-						'description' => __( 'Open links in same window or new window?', 'conversions' ),
-						'section'     => 'conversions_social',
-						'settings'    => 'conversions_social_link_target',
-						'type'        => 'select',
-						'choices'     => array(
-							'_self' => __( 'Same widow', 'conversions' ),
-							'_blank'       => __( 'New window', 'conversions' ),
-						),
-						'priority'    => '10',
-					)
-			) );
 			$wp_customize->add_setting( 'conversions_social_size', array(
-				'default'       => '22',
+				'default'       => '20',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'absint', //converts value to a non-negative integer
+				'sanitize_callback' => 'absint',
 			) );
 			$wp_customize->add_control( 'conversions_social_size_control', array(
 				'label'      => __( 'Social icon size', 'conversions' ),
 				'description'=> __( 'Icon size in px', 'conversions' ),
-				'section'    => 'conversions_social',
+				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_social_size',
-				'priority'   => 20,
+				'priority'   => 70,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
 					'max' => 1000,
 				),
-			) );
-			$wp_customize->add_setting( 'conversions_social_link_color', array(
-				'default'       => '#0068d7',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_social_link_color_control', array(
-				'label'      => __('Social icon color', 'conversions'),
-				'description'       => __('Select social icon color.', 'conversions'),
-				'section'    => 'conversions_social',
-				'settings'   => 'conversions_social_link_color',
-				'priority'   => 30,
-				'type'       => 'color',
-			) );
-			$wp_customize->add_setting( 'conversions_social_link_hcolor', array(
-				'default'       => '#00698c',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_social_link_hcolor_control', array(
-				'label'      => __('Social icon hover color', 'conversions'),
-				'description' => __('Select social icon hover color.', 'conversions'),
-				'section'    => 'conversions_social',
-				'settings'   => 'conversions_social_link_hcolor',
-				'priority'   => 40,
-				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_social_icons', array(
 				'type' => 'theme_mod',
@@ -1001,8 +858,8 @@ namespace conversions
       			new \Conversions_Repeater( 
       			$wp_customize, 'conversions_social_icons', array(
 					'label'   => __('Icons','conversions'),
-					'section' => 'conversions_social',
-					'priority' => 60,
+					'section' => 'conversions_footer',
+					'priority' => 80,
 					'customizer_repeater_icon_control' => true,
 					'customizer_repeater_link_control' => true,
  				) 
@@ -2325,19 +2182,13 @@ namespace conversions
 				array("a.navbar-brand img", "max-height", get_theme_mod( 'conversions_logo_height' ), "px"),
 				array(".navbar", "padding-top", get_theme_mod( 'conversions_nav_tbpadding' ), "px"),
 				array(".navbar", "padding-bottom", get_theme_mod( 'conversions_nav_tbpadding' ), "px"),
-				array("#wrapper-footer-full", "background-color", get_theme_mod( 'conversions_footer_bg_color' )),
-				array("#footer-full-content .h1, #footer-full-content .h2, #footer-full-content .h3, #footer-full-content .h4, #footer-full-content .h5, #footer-full-content .h6, #footer-full-content h1, #footer-full-content h2, #footer-full-content h3, #footer-full-content h4, #footer-full-content h5, #footer-full-content h6", "color", get_theme_mod( 'conversions_footer_heading_color' )),
-				array("#footer-full-content p, #footer-full-content table, #footer-full-content li, #footer-full-content caption", "color", get_theme_mod( 'conversions_footer_text_color' )),
-				array("#footer-full-content a", "color", get_theme_mod( 'conversions_footer_link_color' )),
-				array("#footer-full-content a:hover", "color", get_theme_mod( 'conversions_footer_link_hcolor' )),
+				array("#wrapper-footer-full, #wrapper-footer", "background-color", get_theme_mod( 'conversions_footer_bg_color' )),
+				array("#footer-full-content .h1, #footer-full-content .h2, #footer-full-content .h3, #footer-full-content .h4, #footer-full-content .h5, #footer-full-content .h6, #footer-full-content h1, #footer-full-content h2, #footer-full-content h3, #footer-full-content h4, #footer-full-content h5, #footer-full-content h6, #footer-full-content p, #footer-full-content table, #footer-full-content li, #footer-full-content caption, #wrapper-footer .site-info .copyright", "color", get_theme_mod( 'conversions_footer_text_color' )),
+				array("#footer-full-content a, #wrapper-footer .site-info .copyright a, #wrapper-footer .social-media-icons ul li.list-inline-item i", "color", get_theme_mod( 'conversions_footer_link_color' )),
+				array("#footer-full-content a:hover, #wrapper-footer .site-info .copyright a:hover, #wrapper-footer .social-media-icons ul li.list-inline-item i:hover", "color", get_theme_mod( 'conversions_footer_link_hcolor' )),
 				array("a", "color", get_theme_mod( 'conversions_link_color' )),
 				array("a:hover", "color", get_theme_mod( 'conversions_link_hcolor')),
 				array(".conversions-hero-cover .conversions-hero-cover__inner-container h1", "color", get_theme_mod( 'conversions_featured_title_color' )),
-				array("#wrapper-footer", "background-color", get_theme_mod( 'conversions_copyright_bg_color' )),
-				array("#wrapper-footer .site-info .copyright", "color", get_theme_mod( 'conversions_copyright_text_color' )),
-				array("#wrapper-footer .site-info .copyright a", "color", get_theme_mod( 'conversions_copyright_link_color' )),
-				array("#wrapper-footer .site-info .copyright a:hover", "color", get_theme_mod( 'conversions_copyright_link_hcolor' )),
-				array("#wrapper-footer .social-media-icons ul li.list-inline-item i:hover", "color", get_theme_mod( 'conversions_social_link_hcolor' )),
 				array(".page-template-homepage section.c-hero h1", "color", get_theme_mod( 'conversions_hh_title_color' )),
 				array(".page-template-homepage section.c-hero .c-hero__description", "color", get_theme_mod( 'conversions_hh_desc_color' )),
 				array(".page-template-homepage section.c-clients", "background-color", get_theme_mod( 'conversions_hc_bg_color' )),
@@ -2360,7 +2211,6 @@ namespace conversions
 				array(".h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6", "font-family", $headings_font),
 				array("body, input, select, textarea", "font-family", $body_font),
 				array("#wrapper-footer .social-media-icons ul li.list-inline-item i", "font-size", get_theme_mod( 'conversions_social_size' ), "px"),
-				array("#wrapper-footer .social-media-icons ul li.list-inline-item i", "color", get_theme_mod( 'conversions_social_link_color' )),
 				array(".page-template-homepage section.c-hero", "min-height", get_theme_mod( 'conversions_hh_img_height' ), "vh"),
 			);
 			?>
