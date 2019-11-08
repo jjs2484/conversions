@@ -1395,7 +1395,6 @@ namespace conversions
 					'max' => 1000,
 				),
 			) );
-
 			$wp_customize->add_setting( 'conversions_hc_respond', array(
 				'default'           => 'auto',
 				'type'              => 'theme_mod',
@@ -1998,6 +1997,95 @@ namespace conversions
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			) );
+			$wp_customize->add_setting( 'conversions_hcta_bg_choice', array(
+				'default'           => 'gradient',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hcta_bg_choice', array(
+						'label'       => __( 'Background type', 'conversions' ),
+						'description' => __( 'Select gradient, bootstrap colors, or custom.', 'conversions' ),
+						'section'     => 'conversions_homepage_cta',
+						'settings'    => 'conversions_hcta_bg_choice',
+						'type'        => 'select',
+						'choices'     => array(
+							'gradient' => __( 'Gradient colors', 'conversions' ),
+							'bootstrap' => __( 'Bootstrap colors', 'conversions' ),
+							'custom' => __( 'Custom colors', 'conversions' ),
+						),
+						'priority'    => '1',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_bg_gradient', array(
+				'default'           => 'crystal-clear',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hcta_bg_gradient', array(
+						'label'       => __( 'Background type', 'conversions' ),
+						'description' => __( 'Select gradient, bootstrap colors, or custom.', 'conversions' ),
+						'section'     => 'conversions_homepage_cta',
+						'settings'    => 'conversions_hcta_bg_gradient',
+						'type'        => 'select',
+						'choices' => array(
+							'grade-grey' => __( 'Grade Grey', 'conversions' ),
+							'cool-blues' => __( 'Cool Blues', 'conversions' ),
+							'moonlit-asteroid' => __( 'Moonlit Asteroid', 'conversions' ),
+							'evening-sunshine' => __( 'Evening Sunshine', 'conversions' ),
+							'dark-ocean' => __( 'Dark Ocean', 'conversions' ),
+							'cool-sky' => __( 'Cool Sky', 'conversions' ),
+							'yoda' => __( 'Yoda', 'conversions' ),
+							'memariani' => __( 'Memariani', 'conversions' ),
+							'harvey' => __( 'Harvey', 'conversions' ),
+							'witching-hour' => __( 'Witching Hour', 'conversions' ),
+							'wiretap' => __( 'Wiretap', 'conversions' ),
+							'magic' => __( 'Magic', 'conversions' ),
+							'mellow' => __( 'Mellow', 'conversions' ),
+							'crystal-clear' => __( 'Crystal Clear ', 'conversions' ),
+						),
+						'priority'    => '2',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_bg_bootstrap', array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hcta_bg_bootstrap', array(
+						'label'       => __( 'Background type', 'conversions' ),
+						'description' => __( 'Select gradient, bootstrap colors, or custom.', 'conversions' ),
+						'section'     => 'conversions_homepage_cta',
+						'settings'    => 'conversions_hcta_bg_bootstrap',
+						'type'        => 'select',
+						'choices' => array(
+							'bg-primary' => __( 'Primary', 'conversions' ),
+							'bg-secondary' => __( 'Secondary', 'conversions' ),
+							'bg-success' => __( 'Success', 'conversions' ),
+							'bg-danger' => __( 'Danger', 'conversions' ),
+							'bg-warning' => __( 'Warning', 'conversions' ),
+							'bg-info' => __( 'Info', 'conversions' ),
+							'bg-light' => __( 'Light', 'conversions' ),
+							'bg-dark' => __( 'Dark', 'conversions' ),
+							'bg-white' => __( 'White', 'conversions' ),
+						),
+						'priority'    => '3',
+					)
+			) );
 			$wp_customize->add_setting( 'conversions_hcta_bg_color', array(
 				'default'       => '',
 				'type'          => 'theme_mod',
@@ -2027,7 +2115,7 @@ namespace conversions
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_title_color', array(
-				'default'       => '#222222',
+				'default'       => '#ffffff',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -2056,7 +2144,7 @@ namespace conversions
       			'capability' => 'edit_theme_options',
    			) );
    			$wp_customize->add_setting( 'conversions_hcta_desc_color', array(
-				'default'       => '#6c757d',
+				'default'       => '#ffffff',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -2070,7 +2158,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_btn', array(
-				'default'           => 'btn-primary',
+				'default'           => 'btn-light',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -2236,7 +2324,6 @@ namespace conversions
 				array(".page-template-homepage section.c-hero .c-hero__description", "color", get_theme_mod( 'conversions_hh_desc_color' )),
 				array(".page-template-homepage section.c-clients", "background-color", get_theme_mod( 'conversions_hc_bg_color' )),
 				array("section.c-clients img.client", "max-width", get_theme_mod( 'conversions_hc_logo_width' ), "px"),
-				array("section.c-cta", "background-color", get_theme_mod( 'conversions_hcta_bg_color' )),
 				array("section.c-cta h2", "color", get_theme_mod( 'conversions_hcta_title_color' )),
 				array("section.c-cta p.subtitle", "color", get_theme_mod( 'conversions_hcta_desc_color' )),
 				array(".page-template-homepage section.c-news", "background-color", get_theme_mod( 'conversions_news_bg_color' )),

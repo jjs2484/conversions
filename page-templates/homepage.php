@@ -500,7 +500,22 @@ get_header();
 
 
 	<!-- Call-to-action section -->
-	<section class="c-cta">
+  <?php 
+    if ( get_theme_mod( 'conversions_hcta_bg_choice' ) == 'gradient' ) {
+      $cta_bg = get_theme_mod( 'conversions_hcta_bg_gradient' ); 
+    }
+    if ( get_theme_mod( 'conversions_hcta_bg_choice' ) == 'bootstrap' ) {
+      $cta_bg = get_theme_mod( 'conversions_hcta_bg_bootstrap' ); 
+    }
+    if ( get_theme_mod( 'conversions_hcta_bg_choice' ) == 'custom' ) {
+      $cta_bg = get_theme_mod( 'conversions_hcta_bg_color' );
+      $cta_bg = 'style="background-color: '.$cta_bg.'";';
+    }
+  ?>
+
+
+
+	<section class="c-cta <?php if ( !empty( $cta_bg ) ) { echo esc_attr( $cta_bg ); } ?>">
 		<div class="container-fluid py-5">
 			<div class="row">
   			<div class="col-12">
