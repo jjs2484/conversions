@@ -16,15 +16,15 @@
   },
   "homepage": "https://github.com/jjs2484/conversions#readme",
   "devDependencies": {
-    "@lodder/grunt-postcss": "^1.0.9",
-    "autoprefixer": "^9.6.5",
+    "@lodder/grunt-postcss": "^1.0.10",
+    "autoprefixer": "^9.7.1",
     "grunt": "^1.0.4",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.0"
   },
   "dependencies": {},
   "description": ""
