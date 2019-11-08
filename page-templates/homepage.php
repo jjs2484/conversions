@@ -501,21 +501,17 @@ get_header();
 
 	<!-- Call-to-action section -->
   <?php 
-    if ( get_theme_mod( 'conversions_hcta_bg_choice' ) == 'gradient' ) {
-      $cta_bg = get_theme_mod( 'conversions_hcta_bg_gradient' ); 
-    }
-    if ( get_theme_mod( 'conversions_hcta_bg_choice' ) == 'bootstrap' ) {
-      $cta_bg = get_theme_mod( 'conversions_hcta_bg_bootstrap' ); 
-    }
-    if ( get_theme_mod( 'conversions_hcta_bg_choice' ) == 'custom' ) {
-      $cta_bg = get_theme_mod( 'conversions_hcta_bg_color' );
-      $cta_bg = 'style="background-color: '.$cta_bg.'";';
-    }
+    if ( get_theme_mod( 'conversions_hcta_bg_choice' ) == 'gradient' ) { ?>
+      <section class="c-cta <?php if ( !empty( get_theme_mod( 'conversions_hcta_bg_gradient' ) ) ) { echo esc_attr( get_theme_mod( 'conversions_hcta_bg_gradient' ) ); } ?>">
+    <?php }
+    elseif ( get_theme_mod( 'conversions_hcta_bg_choice' ) == 'bootstrap' ) { ?>
+      <section class="c-cta <?php if ( !empty( get_theme_mod( 'conversions_hcta_bg_bootstrap' ) ) ) { echo esc_attr( get_theme_mod( 'conversions_hcta_bg_bootstrap' ) ); } ?>">
+    <?php }
+    elseif ( get_theme_mod( 'conversions_hcta_bg_choice' ) == 'custom' ) { ?>
+      <section class="c-cta" style="background-color: <?php if ( !empty( get_theme_mod( 'conversions_hcta_bg_color' ) ) ) { echo esc_attr( get_theme_mod( 'conversions_hcta_bg_color' ) ); } ?>;">
+    <?php }
   ?>
 
-
-
-	<section class="c-cta <?php if ( !empty( $cta_bg ) ) { echo esc_attr( $cta_bg ); } ?>">
 		<div class="container-fluid py-5">
 			<div class="row">
   			<div class="col-12">

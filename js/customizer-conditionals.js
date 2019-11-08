@@ -26,6 +26,51 @@ jQuery(document).ready(function ($) {
     });
 });
 
+/* CTA background options */
+jQuery(document).ready(function ($) {
+
+    /* background option selectors */
+    var cta_bg_gradient = $( '#customize-control-conversions_hcta_bg_gradient' );
+    var cta_bg_bootstrap = $( '#customize-control-conversions_hcta_bg_bootstrap' );
+    var cta_bg_custom = $( '#customize-control-conversions_hcta_bg_color_control' );
+
+    /* on page load hide or show options */
+    if( $( '#customize-control-conversions_hcta_bg_choice select' ).val() == 'gradient' ){
+        cta_bg_gradient.show();
+        cta_bg_bootstrap.hide();
+        cta_bg_custom.hide();
+    }
+    else if ( $( '#customize-control-conversions_hcta_bg_choice select' ).val() == 'bootstrap' ){
+        cta_bg_gradient.hide();
+        cta_bg_bootstrap.show();
+        cta_bg_custom.hide();
+    }
+    else if ( $( '#customize-control-conversions_hcta_bg_choice select' ).val() == 'custom' ){
+        cta_bg_gradient.hide();
+        cta_bg_bootstrap.hide();
+        cta_bg_custom.show();
+    }
+
+    /* on change hide or show options */
+    $( '#customize-control-conversions_hcta_bg_choice select' ).change(function(){
+        if($(this).val() == 'gradient') {
+            cta_bg_gradient.show();
+            cta_bg_bootstrap.hide();
+            cta_bg_custom.hide();
+        } 
+        else if ($(this).val() == 'bootstrap') {
+            cta_bg_gradient.hide();
+            cta_bg_bootstrap.show();
+            cta_bg_custom.hide();
+        }
+        else if ($(this).val() == 'custom') {
+            cta_bg_gradient.hide();
+            cta_bg_bootstrap.hide();
+            cta_bg_custom.show();
+        }
+    });
+});
+
 /* Clients section responsive breakpoints */
 jQuery(document).ready(function ($) {
 

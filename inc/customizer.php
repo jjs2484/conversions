@@ -2032,8 +2032,8 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_hcta_bg_gradient', array(
-						'label'       => __( 'Background type', 'conversions' ),
-						'description' => __( 'Select gradient, bootstrap colors, or custom.', 'conversions' ),
+						'label'       => __( 'Gradient colors', 'conversions' ),
+						'description' => __( 'Call to Action section background color.', 'conversions' ),
 						'section'     => 'conversions_homepage_cta',
 						'settings'    => 'conversions_hcta_bg_gradient',
 						'type'        => 'select',
@@ -2067,8 +2067,8 @@ namespace conversions
 				new \WP_Customize_Control(
 					$wp_customize,
 					'conversions_hcta_bg_bootstrap', array(
-						'label'       => __( 'Background type', 'conversions' ),
-						'description' => __( 'Select gradient, bootstrap colors, or custom.', 'conversions' ),
+						'label'       => __( 'Bootstrap colors', 'conversions' ),
+						'description' => __( 'Call to Action section background color.', 'conversions' ),
 						'section'     => 'conversions_homepage_cta',
 						'settings'    => 'conversions_hcta_bg_bootstrap',
 						'type'        => 'select',
@@ -2093,7 +2093,7 @@ namespace conversions
 				'sanitize_callback' => 'sanitize_hex_color',
 			) );
 			$wp_customize->add_control( 'conversions_hcta_bg_color_control', array(
-				'label'      => __('Background color', 'conversions'),
+				'label'      => __('Custom color', 'conversions'),
 				'description'=> __('Call to Action section background color.', 'conversions'),
 				'section'    => 'conversions_homepage_cta',
 				'settings'   => 'conversions_hcta_bg_color',
