@@ -7,14 +7,13 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-?>
 
-<?php
-// Call to action partial
+// Call to action
 if ( get_theme_mod( 'conversions_hcta_state', true ) == true ) {	
 	get_template_part( 'partials/footer', 'cta' );
 }
-// Footer widgets partial
+
+// Footer widgets
 get_template_part( 'partials/sidebar', 'footerfull' ); 
 ?>
 
