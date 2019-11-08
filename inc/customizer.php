@@ -501,6 +501,237 @@ namespace conversions
 			) );
 
 			//-----------------------------------------------------
+			// Call to action section
+			//-----------------------------------------------------
+			$wp_customize->add_section( 'conversions_cta', array(
+				'title'             => __('Call to Action', 'conversions'),
+				'priority'          => 21,
+				'capability'        => 'edit_theme_options',
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_bg_choice', array(
+				'default'           => 'gradient',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hcta_bg_choice', array(
+						'label'       => __( 'Background type', 'conversions' ),
+						'description' => __( 'Select gradient, bootstrap colors, or custom.', 'conversions' ),
+						'section'     => 'conversions_cta',
+						'settings'    => 'conversions_hcta_bg_choice',
+						'type'        => 'select',
+						'choices'     => array(
+							'gradient' => __( 'Gradient colors', 'conversions' ),
+							'bootstrap' => __( 'Bootstrap colors', 'conversions' ),
+							'custom' => __( 'Custom colors', 'conversions' ),
+						),
+						'priority'    => '1',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_bg_gradient', array(
+				'default'           => 'crystal-clear',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hcta_bg_gradient', array(
+						'label'       => __( 'Gradient colors', 'conversions' ),
+						'description' => __( 'Call to Action section background color.', 'conversions' ),
+						'section'     => 'conversions_cta',
+						'settings'    => 'conversions_hcta_bg_gradient',
+						'type'        => 'select',
+						'choices' => array(
+							'grade-grey' => __( 'Grade Grey', 'conversions' ),
+							'cool-blues' => __( 'Cool Blues', 'conversions' ),
+							'moonlit-asteroid' => __( 'Moonlit Asteroid', 'conversions' ),
+							'evening-sunshine' => __( 'Evening Sunshine', 'conversions' ),
+							'dark-ocean' => __( 'Dark Ocean', 'conversions' ),
+							'cool-sky' => __( 'Cool Sky', 'conversions' ),
+							'yoda' => __( 'Yoda', 'conversions' ),
+							'memariani' => __( 'Memariani', 'conversions' ),
+							'harvey' => __( 'Harvey', 'conversions' ),
+							'witching-hour' => __( 'Witching Hour', 'conversions' ),
+							'wiretap' => __( 'Wiretap', 'conversions' ),
+							'magic' => __( 'Magic', 'conversions' ),
+							'mellow' => __( 'Mellow', 'conversions' ),
+							'crystal-clear' => __( 'Crystal Clear ', 'conversions' ),
+						),
+						'priority'    => '2',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_bg_bootstrap', array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hcta_bg_bootstrap', array(
+						'label'       => __( 'Bootstrap colors', 'conversions' ),
+						'description' => __( 'Call to Action section background color.', 'conversions' ),
+						'section'     => 'conversions_cta',
+						'settings'    => 'conversions_hcta_bg_bootstrap',
+						'type'        => 'select',
+						'choices' => array(
+							'bg-primary' => __( 'Primary', 'conversions' ),
+							'bg-secondary' => __( 'Secondary', 'conversions' ),
+							'bg-success' => __( 'Success', 'conversions' ),
+							'bg-danger' => __( 'Danger', 'conversions' ),
+							'bg-warning' => __( 'Warning', 'conversions' ),
+							'bg-info' => __( 'Info', 'conversions' ),
+							'bg-light' => __( 'Light', 'conversions' ),
+							'bg-dark' => __( 'Dark', 'conversions' ),
+							'bg-white' => __( 'White', 'conversions' ),
+						),
+						'priority'    => '3',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_bg_color', array(
+				'default'       => '',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_hcta_bg_color_control', array(
+				'label'      => __('Custom color', 'conversions'),
+				'description'=> __('Call to Action section background color.', 'conversions'),
+				'section'    => 'conversions_cta',
+				'settings'   => 'conversions_hcta_bg_color',
+				'priority'   => 10,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_title', array(
+				'default'       => __( 'Get started today!', 'conversions' ),
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+			$wp_customize->add_control( 'conversions_hcta_title_control', array(
+				'label'      => __('Title', 'conversions'),
+				'description'=> __('Add your title.', 'conversions'),
+				'section'    => 'conversions_cta',
+				'settings'   => 'conversions_hcta_title',
+				'priority'   => 20,
+				'type'       => 'text',
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_title_color', array(
+				'default'       => '#ffffff',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_hcta_title_color_control', array(
+				'label'      => __('Title color', 'conversions'),
+				'description'=> __('Select a color for the title.', 'conversions'),
+				'section'    => 'conversions_cta',
+				'settings'   => 'conversions_hcta_title_color',
+				'priority'   => 30,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_desc', array(
+      			'default' => __( 'Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?', 'conversions' ),
+      			'type'          => 'theme_mod',
+      			'transport' => 'refresh',
+      			'sanitize_callback' => 'wp_kses_post'
+   			) );
+			$wp_customize->add_control( 'conversions_hcta_desc', array(
+      			'label'      => __('Description', 'conversions'),
+				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
+      			'section' => 'conversions_cta',
+      			'settings'   => 'conversions_hcta_desc',
+      			'priority' => 40,
+      			'type' => 'textarea',
+      			'capability' => 'edit_theme_options',
+   			) );
+   			$wp_customize->add_setting( 'conversions_hcta_desc_color', array(
+				'default'       => '#ffffff',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'sanitize_hex_color',
+			) );
+			$wp_customize->add_control( 'conversions_hcta_desc_color_control', array(
+				'label'      => __('Description color', 'conversions'),
+				'description'=> __('Select a color for the description text.', 'conversions'),
+				'section'    => 'conversions_cta',
+				'settings'   => 'conversions_hcta_desc_color',
+				'priority'   => 50,
+				'type'       => 'color',
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_btn', array(
+				'default'           => 'btn-light',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hcta_btn', array(
+						'label'       => __( 'Callout button', 'conversions' ),
+						'description' => __( 'Choose the type of button.', 'conversions' ),
+						'section'     => 'conversions_cta',
+						'settings'    => 'conversions_hcta_btn',
+						'type'        => 'select',
+						'choices'     => $alt_button_choices,
+						'priority'    => '60',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_btn_text', array(
+				'default'       => __( 'Click me', 'conversions' ),
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+			$wp_customize->add_control( 'conversions_hcta_btn_text_control', array(
+				'label'      => __( 'Callout button text', 'conversions' ),
+				'description'=> __('Add text for button to display.', 'conversions'),
+				'section'    => 'conversions_cta',
+				'settings'   => 'conversions_hcta_btn_text',
+				'priority'   => 70,
+				'type'       => 'text',
+			) );
+			$wp_customize->add_setting( 'conversions_cta_btn_url', array(
+				'default'       => 'https://wordpress.org',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'esc_url_raw',
+			) );
+			$wp_customize->add_control( 'conversions_cta_btn_url_control', array(
+				'label'      => __( 'Callout button URL', 'conversions' ),
+				'description'=> __('Where should the button link to?', 'conversions'),
+				'section'    => 'conversions_cta',
+				'settings'   => 'conversions_cta_btn_url',
+				'priority'   => 80,
+				'type'       => 'url',
+			) );
+			$wp_customize->add_setting( 'conversions_hcta_shortcode', array(
+				'default'       => '',
+				'type'          => 'theme_mod',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'wp_kses_post',
+			) );
+			$wp_customize->add_control( 'conversions_hcta_shortcode_control', array(
+				'label'      => __('Shortcode', 'conversions'),
+				'description'=> __('Add your shortcode.', 'conversions'),
+				'section'    => 'conversions_cta',
+				'settings'   => 'conversions_hcta_shortcode',
+				'priority'   => 90,
+				'type'       => 'text',
+			) );
+
+			//-----------------------------------------------------
 			// Footer colors
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_footer' , array(
@@ -1986,238 +2217,6 @@ namespace conversions
 					'min' => 1,
 					'max' => 3,
 				),
-			) );
-
-			//-----------------------------------------------------
-			// Homepage Call to action section
-			//-----------------------------------------------------
-			$wp_customize->add_section( 'conversions_homepage_cta', array(
-				'title'             => __('Call to Action', 'conversions'),
-				'priority'          => 80,
-				'capability'        => 'edit_theme_options',
-				'panel'             => 'conversions_homepage',
-			) );
-			$wp_customize->add_setting( 'conversions_hcta_bg_choice', array(
-				'default'           => 'gradient',
-				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
-				'capability'        => 'edit_theme_options',
-				'transport'     => 'refresh',
-			) );
-			$wp_customize->add_control(
-				new \WP_Customize_Control(
-					$wp_customize,
-					'conversions_hcta_bg_choice', array(
-						'label'       => __( 'Background type', 'conversions' ),
-						'description' => __( 'Select gradient, bootstrap colors, or custom.', 'conversions' ),
-						'section'     => 'conversions_homepage_cta',
-						'settings'    => 'conversions_hcta_bg_choice',
-						'type'        => 'select',
-						'choices'     => array(
-							'gradient' => __( 'Gradient colors', 'conversions' ),
-							'bootstrap' => __( 'Bootstrap colors', 'conversions' ),
-							'custom' => __( 'Custom colors', 'conversions' ),
-						),
-						'priority'    => '1',
-					)
-			) );
-			$wp_customize->add_setting( 'conversions_hcta_bg_gradient', array(
-				'default'           => 'crystal-clear',
-				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
-				'capability'        => 'edit_theme_options',
-				'transport'     => 'refresh',
-			) );
-			$wp_customize->add_control(
-				new \WP_Customize_Control(
-					$wp_customize,
-					'conversions_hcta_bg_gradient', array(
-						'label'       => __( 'Gradient colors', 'conversions' ),
-						'description' => __( 'Call to Action section background color.', 'conversions' ),
-						'section'     => 'conversions_homepage_cta',
-						'settings'    => 'conversions_hcta_bg_gradient',
-						'type'        => 'select',
-						'choices' => array(
-							'grade-grey' => __( 'Grade Grey', 'conversions' ),
-							'cool-blues' => __( 'Cool Blues', 'conversions' ),
-							'moonlit-asteroid' => __( 'Moonlit Asteroid', 'conversions' ),
-							'evening-sunshine' => __( 'Evening Sunshine', 'conversions' ),
-							'dark-ocean' => __( 'Dark Ocean', 'conversions' ),
-							'cool-sky' => __( 'Cool Sky', 'conversions' ),
-							'yoda' => __( 'Yoda', 'conversions' ),
-							'memariani' => __( 'Memariani', 'conversions' ),
-							'harvey' => __( 'Harvey', 'conversions' ),
-							'witching-hour' => __( 'Witching Hour', 'conversions' ),
-							'wiretap' => __( 'Wiretap', 'conversions' ),
-							'magic' => __( 'Magic', 'conversions' ),
-							'mellow' => __( 'Mellow', 'conversions' ),
-							'crystal-clear' => __( 'Crystal Clear ', 'conversions' ),
-						),
-						'priority'    => '2',
-					)
-			) );
-			$wp_customize->add_setting( 'conversions_hcta_bg_bootstrap', array(
-				'default'           => '',
-				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
-				'capability'        => 'edit_theme_options',
-				'transport'     => 'refresh',
-			) );
-			$wp_customize->add_control(
-				new \WP_Customize_Control(
-					$wp_customize,
-					'conversions_hcta_bg_bootstrap', array(
-						'label'       => __( 'Bootstrap colors', 'conversions' ),
-						'description' => __( 'Call to Action section background color.', 'conversions' ),
-						'section'     => 'conversions_homepage_cta',
-						'settings'    => 'conversions_hcta_bg_bootstrap',
-						'type'        => 'select',
-						'choices' => array(
-							'bg-primary' => __( 'Primary', 'conversions' ),
-							'bg-secondary' => __( 'Secondary', 'conversions' ),
-							'bg-success' => __( 'Success', 'conversions' ),
-							'bg-danger' => __( 'Danger', 'conversions' ),
-							'bg-warning' => __( 'Warning', 'conversions' ),
-							'bg-info' => __( 'Info', 'conversions' ),
-							'bg-light' => __( 'Light', 'conversions' ),
-							'bg-dark' => __( 'Dark', 'conversions' ),
-							'bg-white' => __( 'White', 'conversions' ),
-						),
-						'priority'    => '3',
-					)
-			) );
-			$wp_customize->add_setting( 'conversions_hcta_bg_color', array(
-				'default'       => '',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_hcta_bg_color_control', array(
-				'label'      => __('Custom color', 'conversions'),
-				'description'=> __('Call to Action section background color.', 'conversions'),
-				'section'    => 'conversions_homepage_cta',
-				'settings'   => 'conversions_hcta_bg_color',
-				'priority'   => 10,
-				'type'       => 'color',
-			) );
-			$wp_customize->add_setting( 'conversions_hcta_title', array(
-				'default'       => __( 'Get started today!', 'conversions' ),
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			) );
-			$wp_customize->add_control( 'conversions_hcta_title_control', array(
-				'label'      => __('Title', 'conversions'),
-				'description'=> __('Add your title.', 'conversions'),
-				'section'    => 'conversions_homepage_cta',
-				'settings'   => 'conversions_hcta_title',
-				'priority'   => 20,
-				'type'       => 'text',
-			) );
-			$wp_customize->add_setting( 'conversions_hcta_title_color', array(
-				'default'       => '#ffffff',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_hcta_title_color_control', array(
-				'label'      => __('Title color', 'conversions'),
-				'description'=> __('Select a color for the title.', 'conversions'),
-				'section'    => 'conversions_homepage_cta',
-				'settings'   => 'conversions_hcta_title_color',
-				'priority'   => 30,
-				'type'       => 'color',
-			) );
-			$wp_customize->add_setting( 'conversions_hcta_desc', array(
-      			'default' => __( 'Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?', 'conversions' ),
-      			'type'          => 'theme_mod',
-      			'transport' => 'refresh',
-      			'sanitize_callback' => 'wp_kses_post'
-   			) );
-			$wp_customize->add_control( 'conversions_hcta_desc', array(
-      			'label'      => __('Description', 'conversions'),
-				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
-      			'section' => 'conversions_homepage_cta',
-      			'settings'   => 'conversions_hcta_desc',
-      			'priority' => 40,
-      			'type' => 'textarea',
-      			'capability' => 'edit_theme_options',
-   			) );
-   			$wp_customize->add_setting( 'conversions_hcta_desc_color', array(
-				'default'       => '#ffffff',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'sanitize_hex_color',
-			) );
-			$wp_customize->add_control( 'conversions_hcta_desc_color_control', array(
-				'label'      => __('Description color', 'conversions'),
-				'description'=> __('Select a color for the description text.', 'conversions'),
-				'section'    => 'conversions_homepage_cta',
-				'settings'   => 'conversions_hcta_desc_color',
-				'priority'   => 50,
-				'type'       => 'color',
-			) );
-			$wp_customize->add_setting( 'conversions_hcta_btn', array(
-				'default'           => 'btn-light',
-				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_select',
-				'capability'        => 'edit_theme_options',
-				'transport'     => 'refresh',
-			) );
-			$wp_customize->add_control(
-				new \WP_Customize_Control(
-					$wp_customize,
-					'conversions_hcta_btn', array(
-						'label'       => __( 'Callout button', 'conversions' ),
-						'description' => __( 'Choose the type of button.', 'conversions' ),
-						'section'     => 'conversions_homepage_cta',
-						'settings'    => 'conversions_hcta_btn',
-						'type'        => 'select',
-						'choices'     => $alt_button_choices,
-						'priority'    => '60',
-					)
-			) );
-			$wp_customize->add_setting( 'conversions_hcta_btn_text', array(
-				'default'       => __( 'Click me', 'conversions' ),
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'wp_filter_nohtml_kses',
-			) );
-			$wp_customize->add_control( 'conversions_hcta_btn_text_control', array(
-				'label'      => __( 'Callout button text', 'conversions' ),
-				'description'=> __('Add text for button to display.', 'conversions'),
-				'section'    => 'conversions_homepage_cta',
-				'settings'   => 'conversions_hcta_btn_text',
-				'priority'   => 70,
-				'type'       => 'text',
-			) );
-			$wp_customize->add_setting( 'conversions_cta_btn_url', array(
-				'default'       => 'https://wordpress.org',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'esc_url_raw',
-			) );
-			$wp_customize->add_control( 'conversions_cta_btn_url_control', array(
-				'label'      => __( 'Callout button URL', 'conversions' ),
-				'description'=> __('Where should the button link to?', 'conversions'),
-				'section'    => 'conversions_homepage_cta',
-				'settings'   => 'conversions_cta_btn_url',
-				'priority'   => 80,
-				'type'       => 'url',
-			) );
-			$wp_customize->add_setting( 'conversions_hcta_shortcode', array(
-				'default'       => '',
-				'type'          => 'theme_mod',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'wp_kses_post',
-			) );
-			$wp_customize->add_control( 'conversions_hcta_shortcode_control', array(
-				'label'      => __('Shortcode', 'conversions'),
-				'description'=> __('Add your shortcode.', 'conversions'),
-				'section'    => 'conversions_homepage_cta',
-				'settings'   => 'conversions_hcta_shortcode',
-				'priority'   => 90,
-				'type'       => 'text',
 			) );
 
 		}

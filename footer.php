@@ -9,7 +9,10 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php get_template_part( 'partials/sidebar', 'footerfull' ); ?>
+<?php 
+	get_template_part( 'partials/footer', 'cta' );
+	get_template_part( 'partials/sidebar', 'footerfull' ); 
+?>
 
 <div class="wrapper" id="wrapper-footer">
 
