@@ -9,9 +9,13 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php 
+<?php
+// Call to action partial
+if ( get_theme_mod( 'conversions_hcta_state', true ) == true ) {	
 	get_template_part( 'partials/footer', 'cta' );
-	get_template_part( 'partials/sidebar', 'footerfull' ); 
+}
+// Footer widgets partial
+get_template_part( 'partials/sidebar', 'footerfull' ); 
 ?>
 
 <div class="wrapper" id="wrapper-footer">

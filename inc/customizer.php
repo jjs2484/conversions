@@ -508,6 +508,25 @@ namespace conversions
 				'priority'          => 21,
 				'capability'        => 'edit_theme_options',
 			) );
+			$wp_customize->add_setting( 'conversions_hcta_state', array(
+				'default'       => true,
+				'type'          => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hcta_state', array(
+						'label'       => __( 'Call to Action section', 'conversions' ),
+						'description' => __( 'Enable Call to Action section?', 'conversions' ),
+						'section'     => 'conversions_cta',
+						'settings'    => 'conversions_hcta_state',
+						'type'        => 'checkbox',
+						'priority'    => '1',
+					)
+			) );
 			$wp_customize->add_setting( 'conversions_hcta_bg_choice', array(
 				'default'           => 'gradient',
 				'type'              => 'theme_mod',
@@ -529,7 +548,7 @@ namespace conversions
 							'bootstrap' => __( 'Bootstrap colors', 'conversions' ),
 							'custom' => __( 'Custom colors', 'conversions' ),
 						),
-						'priority'    => '1',
+						'priority'    => '2',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_bg_gradient', array(
@@ -564,7 +583,7 @@ namespace conversions
 							'mellow' => __( 'Mellow', 'conversions' ),
 							'crystal-clear' => __( 'Crystal Clear ', 'conversions' ),
 						),
-						'priority'    => '2',
+						'priority'    => '3',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_bg_bootstrap', array(
@@ -594,7 +613,7 @@ namespace conversions
 							'bg-dark' => __( 'Dark', 'conversions' ),
 							'bg-white' => __( 'White', 'conversions' ),
 						),
-						'priority'    => '3',
+						'priority'    => '4',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_bg_color', array(
