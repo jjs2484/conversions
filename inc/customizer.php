@@ -2434,11 +2434,10 @@ namespace conversions
 	}
 	conversions()->customizer = new Customizer();
 }
+
 namespace
 {
-	/**
-	 * Select sanitization
-	 */
+	// Select sanitization
 	function conversions_sanitize_select( $input, $setting )
 	{
 		$control = $setting->manager->get_control( $setting->id );
@@ -2448,17 +2447,13 @@ namespace
 		return ( array_key_exists( $input, $valid ) ? $input : $setting->default );
 	}
 
-    /**
-	 * Checkbox sanitization
-	 */
+    // Checkbox sanitization
 	function conversions_sanitize_checkbox( $input ) 
 	{
 		return ( $input === true ) ? true : false;
 	}
 
-	/**
-	 * Repeater sanitization
-	 */
+	// Repeater sanitization
 	function conversions_repeater_sanitize( $input )
 	{
 		$input_decoded = json_decode( $input, true );
@@ -2473,9 +2468,7 @@ namespace
 		return $input;
 	}
 
-	/**
-	 * Filter to modify input label for repeater controls
-	 */
+	// Filter to modify input label for repeater controls
 	function conversions_repeater_labels( $string, $id, $control ) {
      	
      	// testimonial repeater labels
@@ -2500,7 +2493,7 @@ namespace
      			return esc_html__( 'Duration','conversions' );
      		}
         }
-
+        
         return $string;
     }
     add_filter( 'repeater_input_labels_filter','conversions_repeater_labels', 10 , 3 );
