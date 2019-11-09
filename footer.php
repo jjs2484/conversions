@@ -38,16 +38,16 @@ get_template_part( 'partials/sidebar', 'footerfull' );
 									$copyright_text = get_bloginfo( 'name' );
 								}
 
-								echo sprintf( '&copy;'.date("Y").'&nbsp;|&nbsp;<a class="site-name" href="%s" rel="home">%s</a>', 
+								echo sprintf( '&copy;'.date("Y").'&nbsp;&bull;&nbsp;<a class="site-name" href="%s" rel="home">%s</a>', 
                     				esc_url( home_url( '/' ) ),
                     				esc_html( $copyright_text )
                   				);
 								
 								if ( function_exists( 'the_privacy_policy_link' ) ) {
-									the_privacy_policy_link( '&nbsp;|&nbsp;', '<span role="separator" aria-hidden="true"></span>' );
+									the_privacy_policy_link( '&nbsp;&bull;&nbsp;', '<span role="separator" aria-hidden="true"></span>' );
 								} 
 
-								echo sprintf( '&nbsp;|&nbsp;%s&nbsp;<a href="%s">%s</a>', 
+								echo sprintf( '&nbsp;&bull;&nbsp;%s&nbsp;<a href="%s">%s</a>', 
                     				esc_html__( 'Powered by', 'conversions' ),
                     				esc_url( 'https://conversionswp.com' ),
                     				esc_html__( 'Conversions', 'conversions' )
