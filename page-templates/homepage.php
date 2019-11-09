@@ -140,7 +140,7 @@ get_header();
 
 	<!-- Features section -->
   <section class="c-features">
-    <div class="container-fluid py-5">
+    <div class="container-fluid">
       <div class="row justify-content-sm-center">
 
         <?php if ( !empty( get_theme_mod( 'conversions_features_title') ) || !empty( get_theme_mod( 'conversions_features_desc' ) ) ) { ?>
@@ -231,7 +231,7 @@ get_header();
 
 	<!-- Pricing section -->
 	<section class="c-pricing">
-		<div class="container-fluid py-5">
+		<div class="container-fluid">
 			<div class="row justify-content-sm-center">
 
 				<?php if ( !empty( get_theme_mod( 'conversions_pricing_title') ) || !empty( get_theme_mod( 'conversions_pricing_desc' ) ) ) { ?>
@@ -335,7 +335,7 @@ get_header();
 
   <!-- Testimonial Section -->
   <section class="c-testimonials">
-    <div class="container-fluid py-5">
+    <div class="container-fluid">
       <div class="row">
 
         <?php if ( !empty( get_theme_mod( 'conversions_testimonials_title') ) || !empty( get_theme_mod( 'conversions_testimonials_desc') ) ) { ?>
@@ -419,7 +419,7 @@ get_header();
 
 	<!-- News Section -->
 	<section class="c-news">
-		<div class="container-fluid py-5">
+		<div class="container-fluid">
 			<div class="row justify-content-sm-center">
 
         <?php if ( !empty( get_theme_mod( 'conversions_news_title') ) || !empty( get_theme_mod( 'conversions_news_desc' ) ) ) { ?>

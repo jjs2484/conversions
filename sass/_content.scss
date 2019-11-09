@@ -82,6 +82,28 @@ a.c-news__img-link {
   padding: 0;
 }
 
+// Sections padding
+section.c-pricing .container-fluid,
+section.c-testimonials .container-fluid,
+section.c-news .container-fluid {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @media (min-width: 992px) { 
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+// features padding
+section.c-features .container-fluid {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  @media (min-width: 992px) { 
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+}
+
 // Hero section
 section.c-hero {
   background-position: center;
@@ -252,17 +274,6 @@ section.c-testimonials {
         color: #77818B;
       }
     }
-  }
-}
-
-// Call to Action section
-section.c-cta {
-  .c-cta__items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 1.5rem;
   }
 }
 

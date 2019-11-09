@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 		<section class="c-cta" style="background-color: <?php if ( !empty( get_theme_mod( 'conversions_hcta_bg_color' ) ) ) { echo esc_attr( get_theme_mod( 'conversions_hcta_bg_color' ) ); } ?>;">
   <?php } ?>
 
-		<div class="container-fluid py-5">
+		<div class="container-fluid">
 			<div class="row">
   				<div class="col-12">
 

@@ -11,21 +11,19 @@ defined( 'ABSPATH' ) || exit;
 // Call to action
 if ( get_theme_mod( 'conversions_hcta_state', true ) == true ) {	
 	get_template_part( 'partials/footer', 'cta' );
-}
+} ?>
 
-// Footer widgets
-get_template_part( 'partials/sidebar', 'footerfull' ); 
-?>
+<footer class="site-footer" id="colophon">
 
-<div class="wrapper" id="wrapper-footer">
+	<?php get_template_part( 'partials/sidebar', 'footerfull' ); ?>
 
-	<div class="container-fluid">
+	<div class="wrapper" id="wrapper-footer">
 
-		<div class="row">
+		<div class="container-fluid">
 
-			<div class="col-md-12">
+			<div class="row">
 
-				<footer class="site-footer" id="colophon">
+				<div class="col-md-12">
 
 					<div class="site-info row">
 
@@ -61,15 +59,15 @@ get_template_part( 'partials/sidebar', 'footerfull' );
 
 					</div><!-- .site-info -->
 
-				</footer><!-- #colophon -->
+				</div><!--col end -->
 
-			</div><!--col end -->
+			</div><!-- row end -->
 
-		</div><!-- row end -->
+		</div><!-- container end -->
 
-	</div><!-- container end -->
+	</div><!-- wrapper end -->
 
-</div><!-- wrapper end -->
+</footer><!-- #colophon -->
 
 </div><!-- #page end -->
 
