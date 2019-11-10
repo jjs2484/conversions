@@ -29,6 +29,7 @@
   .copyright {
     display: flex;
     justify-content: center;
+    font-size: 95%;
     @include media-breakpoint-up(md) {
       justify-content: flex-start;
     }
@@ -36,7 +37,7 @@
   .social-media-icons {
     display: flex;
     justify-content: center;
-    margin-bottom: .5rem;
+    margin: .5rem 0;
     @include media-breakpoint-up(md) {
       justify-content: flex-end;
       margin-bottom: 0;

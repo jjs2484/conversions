@@ -71,6 +71,30 @@ jQuery(document).ready(function ($) {
     });
 });
 
+/* CTA button options */
+jQuery(document).ready(function ($) {
+
+    /* button option selectors */
+    var cta_btn_options = $( '#customize-control-conversions_hcta_btn_text_control, #customize-control-conversions_cta_btn_url_control' );
+
+    /* on page load hide or show options */
+    if( $( '#customize-control-conversions_hcta_btn select' ).val() == 'no' ){
+        cta_btn_options.hide();
+    }
+    else {
+        cta_btn_options.show();
+    }
+
+    /* on change hide or show options */
+    $( '#customize-control-conversions_hcta_btn select' ).change(function(){
+        if($(this).val() == 'no') {
+            cta_btn_options.hide();
+        } else {
+            cta_btn_options.show();
+        }
+    });
+});
+
 /* Clients section responsive breakpoints */
 jQuery(document).ready(function ($) {
 

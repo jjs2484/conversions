@@ -567,9 +567,9 @@ namespace conversions
 						'settings'    => 'conversions_hcta_bg_choice',
 						'type'        => 'select',
 						'choices'     => array(
-							'gradient' => __( 'Gradient colors', 'conversions' ),
 							'bootstrap' => __( 'Bootstrap colors', 'conversions' ),
 							'custom' => __( 'Custom colors', 'conversions' ),
+							'gradient' => __( 'Gradient colors', 'conversions' ),
 						),
 						'priority'    => '2',
 					)
@@ -1056,7 +1056,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_featured_img_overlay', array(
-				'default'           => '.5',
+				'default'           => '.4',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -1250,7 +1250,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_desc', array(
-      			'default' => __( 'This is a modified jumbotron that occupies the entire horizontal space of its parent.', 'conversions' ),
+      			'default' => __( 'Built to convert your website visitors into customers, clients, and subscribers!​', 'conversions' ),
       			'type'          => 'theme_mod',
       			'transport' => 'refresh',
       			'sanitize_callback' => 'wp_kses_post'
@@ -1298,7 +1298,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_img_height', array(
-				'default'       => '80',
+				'default'       => '72',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
@@ -1331,7 +1331,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_img_overlay', array(
-				'default'           => '.5',
+				'default'           => '.4',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
