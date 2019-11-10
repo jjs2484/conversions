@@ -158,7 +158,7 @@ namespace conversions
 				'conversions_nav_colors' => 'white',
 				'conversions_nav_dropshadow' => true,
 				'conversions_nav_tbpadding' => '8',
-				'conversions_nav_mobile_type' => 'offcanvas',
+				'conversions_nav_mobile_type' => 'collapse',
 				'conversions_nav_button' => 'no',
 				'conversions_nav_search_icon' => false,
 				'conversions_container_width' => '1140',

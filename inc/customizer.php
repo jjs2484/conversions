@@ -106,6 +106,30 @@ namespace conversions
 			// alt button choices
 			$alt_button_choices = array_merge( $extra_button_choices , $button_choices );
 
+			// gradient choices
+			$gradient_choices = array(
+				'grade-grey' => __( 'Grade Grey', 'conversions' ),
+				'cool-blues' => __( 'Cool Blues', 'conversions' ),
+				'moonlit-asteroid' => __( 'Moonlit Asteroid', 'conversions' ),
+				'evening-sunshine' => __( 'Evening Sunshine', 'conversions' ),
+				'dark-ocean' => __( 'Dark Ocean', 'conversions' ),
+				'cool-sky' => __( 'Cool Sky', 'conversions' ),
+				'yoda' => __( 'Yoda', 'conversions' ),
+				'memariani' => __( 'Memariani', 'conversions' ),
+				'harvey' => __( 'Harvey', 'conversions' ),
+				'witching-hour' => __( 'Witching Hour', 'conversions' ),
+				'wiretap' => __( 'Wiretap', 'conversions' ),
+				'magic' => __( 'Magic', 'conversions' ),
+				'mellow' => __( 'Mellow', 'conversions' ),
+				'crystal-clear' => __( 'Crystal Clear', 'conversions' ),
+				'summer' => __( 'Summer', 'conversions' ),
+				'burning-orange' => __( 'Burning Orange', 'conversions' ),
+				'instagram' => __( 'Instagram', 'conversions' ),
+				'dracula' => __( 'Dracula', 'conversions' ),
+				'titanium' => __( 'Titanium', 'conversions' ),
+				'moss' => __( 'Moss', 'conversions' ),
+			);
+
 			//-----------------------------------------------------
 			// Remove some default sections
 			//-----------------------------------------------------
@@ -303,7 +327,7 @@ namespace conversions
 				'type'       => 'url',
 			) );
 			$wp_customize->add_setting( 'conversions_nav_mobile_type', array(
-				'default'           => 'offcanvas',
+				'default'           => 'collapse',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -566,28 +590,7 @@ namespace conversions
 						'section'     => 'conversions_cta',
 						'settings'    => 'conversions_hcta_bg_gradient',
 						'type'        => 'select',
-						'choices' => array(
-							'grade-grey' => __( 'Grade Grey', 'conversions' ),
-							'cool-blues' => __( 'Cool Blues', 'conversions' ),
-							'moonlit-asteroid' => __( 'Moonlit Asteroid', 'conversions' ),
-							'evening-sunshine' => __( 'Evening Sunshine', 'conversions' ),
-							'dark-ocean' => __( 'Dark Ocean', 'conversions' ),
-							'cool-sky' => __( 'Cool Sky', 'conversions' ),
-							'yoda' => __( 'Yoda', 'conversions' ),
-							'memariani' => __( 'Memariani', 'conversions' ),
-							'harvey' => __( 'Harvey', 'conversions' ),
-							'witching-hour' => __( 'Witching Hour', 'conversions' ),
-							'wiretap' => __( 'Wiretap', 'conversions' ),
-							'magic' => __( 'Magic', 'conversions' ),
-							'mellow' => __( 'Mellow', 'conversions' ),
-							'crystal-clear' => __( 'Crystal Clear', 'conversions' ),
-							'summer' => __( 'Summer', 'conversions' ),
-							'burning-orange' => __( 'Burning Orange', 'conversions' ),
-							'instagram' => __( 'Instagram', 'conversions' ),
-							'dracula' => __( 'Dracula', 'conversions' ),
-							'titanium' => __( 'Titanium', 'conversions' ),
-							'moss' => __( 'Moss', 'conversions' ),
-						),
+						'choices'     => $gradient_choices,
 						'priority'    => '3',
 					)
 			) );
