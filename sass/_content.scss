@@ -18,22 +18,21 @@ select,
 textarea {
   @extend .form-control;
 }
-
 input[type="file"] {
   @extend .form-control-file;
 }
 
+// Fonts color
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { 
   color: #222222;
 }
-
 body, input, select, textarea { 
   color: #222222; 
 }
 
 // Basic wrapper
 .wrapper {
-  padding: 30px 0 3em; 
+  padding: 2rem 0 3rem; 
   overflow: hidden;
 }
 
@@ -59,12 +58,12 @@ body, input, select, textarea {
   }
 }
 
-// subtitle and description .text-muted
+// Subtitle and description .text-muted
 section p.subtitle, .c-features__description {
   color: #6c757d;
 }
 
-// News img hover
+// News img
 a.c-news__img-link {
   background: #000;
   border-radius: 4px;
@@ -73,6 +72,20 @@ a.c-news__img-link {
     &:hover {
       transition: .3s;
       opacity: .8;
+    }
+  }
+}
+
+// Blog article cards margin
+.archive, .blog {
+  article.card.post {
+    margin-bottom: 3rem;
+    
+    &:first-of-type {
+      margin-top: 1rem;
+    }
+    &:last-of-type {
+      margin-bottom: 2rem;
     }
   }
 }

@@ -7,9 +7,6 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
-// header position
-$nav_position = get_theme_mod( 'conversions_nav_position', 'fixed-top' );
 ?>
 
 <!DOCTYPE html>
@@ -27,8 +24,8 @@ $nav_position = get_theme_mod( 'conversions_nav_position', 'fixed-top' );
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
-	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="<?php echo esc_attr( $nav_position ); ?>" itemscope itemtype="http://schema.org/WebSite">
+	<!-- The Navbar -->
+	<div id="wrapper-navbar" class="<?php echo esc_attr( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) ); ?>" itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'conversions' ); ?></a>
 

@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class('card shadow-sm mb-5'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('card shadow-sm'); ?> id="post-<?php the_ID(); ?>">
 
 	<!-- Post image -->
 	<?php if ( has_post_thumbnail() ) : ?>

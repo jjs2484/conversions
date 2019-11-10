@@ -26,7 +26,7 @@ get_header();
         <div class="col-lg-6">
            			
           <!-- Title -->
-    			<h1 class="display-4"><?php echo esc_html( get_the_title() ); ?></h1>
+    			<h1><?php echo esc_html( get_the_title() ); ?></h1>
     			
           <?php
             if ( !empty( get_theme_mod( 'conversions_hh_desc') ) ) {

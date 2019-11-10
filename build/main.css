@@ -11757,7 +11757,7 @@ body, input, select, textarea {
   color: #222222; }
 
 .wrapper {
-  padding: 30px 0 3em;
+  padding: 2rem 0 3rem;
   overflow: hidden; }
 
 @media (min-width: 768px) {
@@ -11791,6 +11791,13 @@ a.c-news__img-link {
       -o-transition: .3s;
       transition: .3s;
       opacity: .8; }
+
+.archive article.card.post, .blog article.card.post {
+  margin-bottom: 3rem; }
+  .archive article.card.post:first-of-type, .blog article.card.post:first-of-type {
+    margin-top: 1rem; }
+  .archive article.card.post:last-of-type, .blog article.card.post:last-of-type {
+    margin-bottom: 2rem; }
 
 #homepage-wrapper.wrapper {
   padding: 0; }
@@ -12087,7 +12094,7 @@ section.c-testimonials .c-testimonials__quote {
 
 #wrapper-footer-full.wrapper {
   padding-top: 3rem;
-  padding-bottom: 30px; }
+  padding-bottom: 1rem; }
   @media (min-width: 992px) {
     #wrapper-footer-full.wrapper {
       padding-top: 4rem; } }

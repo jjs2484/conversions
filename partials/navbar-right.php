@@ -40,7 +40,7 @@ switch( $nav_color_scheme )
 		$nav_color_scheme = 'navbar-dark bg-info';
 		break;
 	default:
-		$nav_color_scheme = 'navbar-dark bg-dark';
+		$nav_color_scheme = 'navbar-light bg-white';
 }
 
 // mobile navigation type
