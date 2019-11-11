@@ -1236,7 +1236,7 @@ namespace conversions
 				'panel'             => 'conversions_homepage',
 			) );
    			$wp_customize->add_setting( 'conversions_hh_title_color', array(
-				'default'       => '#ffffff',
+				'default'       => '#222222',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -1265,7 +1265,7 @@ namespace conversions
       			'capability' => 'edit_theme_options',
    			) );
    			$wp_customize->add_setting( 'conversions_hh_desc_color', array(
-				'default'       => '#ffffff',
+				'default'       => '#222222',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -1363,7 +1363,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_button', array(
-				'default'           => 'no',
+				'default'           => 'btn-primary',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -1411,7 +1411,7 @@ namespace conversions
 				'type'       => 'url',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_vbtn', array(
-				'default'           => 'no',
+				'default'           => 'secondary',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
