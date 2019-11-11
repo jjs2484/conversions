@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       basic_and_extras: {
         files: {
           'build/theme.js': ['src/js/bootstrap4/bootstrap.bundle.js', 'src/js/skip-link-focus-fix.js', 'src/js/slick/slick.js', 'src/js/fancybox/jquery.fancybox.js', 'js/theme.js'],
-          'build/conversions-repeater.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js', 'js/customizer-conditionals.js'],
+          'build/conversions-customizer.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js', 'js/customizer-conditionals.js'],
         },
       },
     },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
    		my_target: {
     		files: {
         	'build/theme.min.js': ['build/theme.js'],
-          'build/conversions-repeater.min.js': ['build/conversions-repeater.js'],
+          'build/conversions-customizer.min.js': ['build/conversions-customizer.js'],
     		}
     	}
   	},
