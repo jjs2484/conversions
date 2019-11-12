@@ -1250,7 +1250,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_desc', array(
-      			'default' => __( 'Built to convert your website visitors into customers and subscribers!​', 'conversions' ),
+      			'default' => '',
       			'type'          => 'theme_mod',
       			'transport' => 'refresh',
       			'sanitize_callback' => 'wp_kses_post'
@@ -1279,7 +1279,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_content_position', array(
-				'default'           => 'left',
+				'default'           => 'col-lg-10 d-flex flex-column text-center mx-auto',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -1386,7 +1386,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_button', array(
-				'default'           => 'btn-primary',
+				'default'           => 'no',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -1406,7 +1406,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_button_text', array(
-				'default'       => __( 'Click me', 'conversions' ),
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -1420,7 +1420,7 @@ namespace conversions
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_button_url', array(
-				'default'       => 'https://wordpress.org',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'esc_url_raw',
@@ -1434,7 +1434,7 @@ namespace conversions
 				'type'       => 'url',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_vbtn', array(
-				'default'           => 'secondary',
+				'default'           => 'no',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -1464,7 +1464,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_vbtn_text', array(
-				'default'       => __( 'Play Intro', 'conversions' ),
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -1478,7 +1478,7 @@ namespace conversions
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_vbtn_url', array(
-				'default'       => 'https://www.youtube.com/watch?v=_sI_Ps7JSEk',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'esc_url_raw',

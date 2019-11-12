@@ -55,7 +55,7 @@ if ( get_theme_mod( 'conversions_hcta_state', true ) == true ) {
 
 						</div>
 						
-						<?php do_action ( 'conversions_output_social' ); ?>
+						<?php do_action( 'conversions_output_social' ); ?>
 
 					</div><!-- .site-info -->
 

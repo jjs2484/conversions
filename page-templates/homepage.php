@@ -41,18 +41,18 @@ get_header();
                 // callout button
                 if ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) {
                   echo sprintf( '<a href="%s" class="btn %s btn-lg c-hero__callout-btn">%s</a>', 
-                    esc_url( get_theme_mod( 'conversions_hh_button_url', 'https://wordpress.org' ) ), 
-                    esc_attr( get_theme_mod( 'conversions_hh_button', 'no' ) ),
-                    esc_html( get_theme_mod( 'conversions_hh_button_text', 'Click me' ) )
+                    esc_url( get_theme_mod( 'conversions_hh_button_url' ) ), 
+                    esc_attr( get_theme_mod( 'conversions_hh_button' ) ),
+                    esc_html( get_theme_mod( 'conversions_hh_button_text' ) )
                   );
                 }
 
                 // video modal
                 if ( get_theme_mod( 'conversions_hh_vbtn', 'no' ) != 'no' ) {
                   echo sprintf( '<a data-fancybox="c-hero__fb-video1" href="%1$s" class="c-hero__fb-video"><span class="c-hero__video-btn btn btn-%2$s btn--circle"><i class="fa fa-play"></i></span><span class="c-hero__video-text btn btn-link text-%2$s">%3$s</span></a>', 
-                    esc_url( get_theme_mod( 'conversions_hh_vbtn_url', 'https://www.youtube.com/watch?v=_sI_Ps7JSEk' ) ), 
-                    esc_attr( get_theme_mod( 'conversions_hh_vbtn', 'no' ) ),
-                    esc_html( get_theme_mod( 'conversions_hh_vbtn_text', 'Play Intro' ) )
+                    esc_url( get_theme_mod( 'conversions_hh_vbtn_url' ) ), 
+                    esc_attr( get_theme_mod( 'conversions_hh_vbtn' ) ),
+                    esc_html( get_theme_mod( 'conversions_hh_vbtn_text' ) )
                   );
                 }
 
