@@ -40,7 +40,7 @@
     margin: .5rem 0;
     @include media-breakpoint-up(md) {
       justify-content: flex-end;
-      margin-bottom: 0;
+      margin: 0;
     }
     
     ul.list-inline {

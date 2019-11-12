@@ -12163,7 +12163,7 @@ section.c-testimonials .c-testimonials__quote {
       -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
               justify-content: flex-end;
-      margin-bottom: 0; } }
+      margin: 0; } }
   #wrapper-footer .social-media-icons ul.list-inline {
     margin-bottom: 0; }
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
