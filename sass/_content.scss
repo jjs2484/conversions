@@ -126,9 +126,12 @@ section.c-hero {
   h1 {
     word-wrap: break-word;
   }
+  p.lead.c-hero__description {
+    margin-bottom: 1.5rem;
+  }
   .c-hero__callout-btn {
     @media (min-width: 576px) {
-      margin-right: 1rem;
+      margin-right: 1.5rem;
     }
   }
   .c-hero__fb-video {

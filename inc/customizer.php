@@ -1250,7 +1250,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_desc', array(
-      			'default' => __( 'Built to convert your website visitors into customers, clients, and subscribers!​', 'conversions' ),
+      			'default' => __( 'Built to convert your website visitors into customers and subscribers!​', 'conversions' ),
       			'type'          => 'theme_mod',
       			'transport' => 'refresh',
       			'sanitize_callback' => 'wp_kses_post'
@@ -1278,6 +1278,29 @@ namespace conversions
 				'priority'   => 4,
 				'type'       => 'color',
 			) );
+			$wp_customize->add_setting( 'conversions_hh_content_position', array(
+				'default'           => 'left',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_hh_content_position', array(
+						'label'       => __( 'Content position', 'conversions' ),
+						'description' => __( 'Select the content display position.', 'conversions' ),
+						'section'     => 'conversions_homepage_hero',
+						'settings'    => 'conversions_hh_content_position',
+						'type'        => 'select',
+						'choices'     => array(
+							'col-lg-6' => __( 'Left', 'conversions' ),
+							'col-lg-10 d-flex flex-column text-center mx-auto' => __( 'Center', 'conversions' ),
+						),
+						'priority'    => '5',
+					)
+			) );
 			$wp_customize->add_setting( 'conversions_hh_img_parallax', array(
 				'default'       => false,
 				'type'          => 'theme_mod',
@@ -1294,7 +1317,7 @@ namespace conversions
 						'section'     => 'conversions_homepage_hero',
 						'settings'    => 'conversions_hh_img_parallax',
 						'type'        => 'checkbox',
-						'priority'    => '5',
+						'priority'    => '6',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_img_height', array(
@@ -1309,7 +1332,7 @@ namespace conversions
 				'description'=> __('Height in vh units. 10vh is relative to 10% of the current viewport height.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_img_height',
-				'priority'   => 6,
+				'priority'   => 7,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
@@ -1327,7 +1350,7 @@ namespace conversions
 				'description'=> __('Select a color for the image overlay.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_img_color',
-				'priority'   => 7,
+				'priority'   => 8,
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_img_overlay', array(
@@ -1359,7 +1382,7 @@ namespace conversions
 							'.9' => __( '90%', 'conversions' ),
 							'1' => __( '100%', 'conversions' ),
 						),
-						'priority'    => '8',
+						'priority'    => '9',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_button', array(
@@ -1379,7 +1402,7 @@ namespace conversions
 						'settings'    => 'conversions_hh_button',
 						'type'        => 'select',
 						'choices'     => $alt_button_choices,
-						'priority'    => '9',
+						'priority'    => '10',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_button_text', array(
@@ -1393,7 +1416,7 @@ namespace conversions
 				'description'=> __('Add text for button to display.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_button_text',
-				'priority'   => 10,
+				'priority'   => 11,
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_button_url', array(
@@ -1407,7 +1430,7 @@ namespace conversions
 				'description'=> __('Where should the button link to?', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_button_url',
-				'priority'   => 11,
+				'priority'   => 12,
 				'type'       => 'url',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_vbtn', array(
@@ -1437,7 +1460,7 @@ namespace conversions
 							'light' => __( 'Light', 'conversions' ),
 							'dark' => __( 'Dark', 'conversions' ),
 						),
-						'priority'    => '12',
+						'priority'    => '13',
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hh_vbtn_text', array(
@@ -1451,7 +1474,7 @@ namespace conversions
 				'description'=> __('Text to display next to the video button.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_vbtn_text',
-				'priority'   => 13,
+				'priority'   => 14,
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_vbtn_url', array(
@@ -1465,7 +1488,7 @@ namespace conversions
 				'description'=> __('Youtube or Vimeo video URL.', 'conversions'),
 				'section'    => 'conversions_homepage_hero',
 				'settings'   => 'conversions_hh_vbtn_url',
-				'priority'   => 14,
+				'priority'   => 15,
 				'type'       => 'url',
 			) );
 

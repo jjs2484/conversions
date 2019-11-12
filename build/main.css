@@ -11829,9 +11829,11 @@ section.c-hero {
   padding: 2rem 0; }
   section.c-hero h1 {
     word-wrap: break-word; }
+  section.c-hero p.lead.c-hero__description {
+    margin-bottom: 1.5rem; }
   @media (min-width: 576px) {
     section.c-hero .c-hero__callout-btn {
-      margin-right: 1rem; } }
+      margin-right: 1.5rem; } }
   section.c-hero .c-hero__fb-video {
     display: block;
     margin-top: 1rem; }

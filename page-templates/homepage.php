@@ -23,7 +23,7 @@ get_header();
 	<section class="c-hero d-flex align-items-center">
   	<div class="container-fluid">
   		<div class="row">
-        <div class="col-lg-6">
+        <div class="<?php echo esc_attr( get_theme_mod( 'conversions_hh_content_position') ); ?>">
            			
           <!-- Title -->
     			<h1><?php echo esc_html( get_the_title() ); ?></h1>
