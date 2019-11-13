@@ -1236,7 +1236,7 @@ namespace conversions
 				'panel'             => 'conversions_homepage',
 			) );
    			$wp_customize->add_setting( 'conversions_hh_title_color', array(
-				'default'       => '#222222',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -1265,7 +1265,7 @@ namespace conversions
       			'capability' => 'edit_theme_options',
    			) );
    			$wp_customize->add_setting( 'conversions_hh_desc_color', array(
-				'default'       => '#222222',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -1674,7 +1674,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_features_title', array(
-				'default'       => __( 'Features section', 'conversions' ),
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -1688,7 +1688,7 @@ namespace conversions
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_features_title_color', array(
-				'default'       => '#222222',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -1702,7 +1702,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_features_desc', array(
-      			'default' => __( 'We offer custom services to our clients. Have a project that you would like to work together on? We would love to hear more about it.', 'conversions' ),
+      			'default' => '',
       			'type' => 'theme_mod',
       			'transport' => 'refresh',
       			'sanitize_callback' => 'wp_kses_post'
@@ -1717,7 +1717,7 @@ namespace conversions
       			'capability' => 'edit_theme_options',
    			) );
    			$wp_customize->add_setting( 'conversions_features_desc_color', array(
-				'default'       => '#6c757d',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
