@@ -207,8 +207,6 @@ namespace conversions
 				'conversions_features_md' => '2',
 				'conversions_features_lg' => '3',
 				'conversions_pricing_bg_color' => '#F3F3F3',
-				'conversions_pricing_title' => 'Pricing section',
-				'conversions_pricing_desc' => 'We offer custom services to our clients. Have a project that you would like to work together on? We would love to hear more about it.',
 				'conversions_pricing_row' => '3',
 				'conversions_news_bg_color' => '#F3F3F3',
 				'conversions_news_title' => 'Latest News',
