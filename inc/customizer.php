@@ -2238,7 +2238,7 @@ namespace conversions
 				array(".page-template-homepage section.c-pricing p.subtitle", "color", get_theme_mod( 'conversions_pricing_desc_color' )),
 				array(".page-template-homepage section.c-features", "background-color", get_theme_mod( 'conversions_features_bg_color' )),
 				array(".page-template-homepage section.c-features h2, section.c-features .card h3", "color", get_theme_mod( 'conversions_features_title_color' )),
-				array(".page-template-homepage section.c-features p.subtitle, section.c-features .card .c-features__description", "color", get_theme_mod( 'conversions_features_desc_color' )),
+				array(".page-template-homepage section.c-features p.subtitle, section.c-features .card .c-features__block-desc", "color", get_theme_mod( 'conversions_features_desc_color' )),
 				array(".conversions-hero-cover", "min-height", get_theme_mod( 'conversions_featured_img_height'), "vh"),
 				array(".h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6", "font-family", $headings_font),
 				array("body, input, select, textarea", "font-family", $body_font),

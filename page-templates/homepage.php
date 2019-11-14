@@ -123,7 +123,7 @@ get_header();
                   // Retrieve the alt text
                   $chc_logo_alt = get_post_meta( $chc_logo_id, '_wp_attachment_image_alt', true );
 
-                  echo '<div class="c-clients__item px-3" id="c-clients__'.$chc_count.'">
+                  echo '<div class="c-clients__item px-3" id="c-clients__'. esc_attr( $chc_count ) .'">
                     <img class="client" src="'. esc_url( $chc_logo_med[0] ) .'" alt="'. esc_html( $chc_logo_alt ) .'">
                   </div>';
 
@@ -141,7 +141,7 @@ get_header();
 	<!-- Features section -->
   <section class="c-features">
     <div class="container-fluid">
-      <div class="row justify-content-sm-center">
+      <div class="row">
 
         <?php if ( !empty( get_theme_mod( 'conversions_features_title') ) || !empty( get_theme_mod( 'conversions_features_desc' ) ) ) { ?>
           
@@ -168,6 +168,9 @@ get_header();
           $conversions_fb_decoded = json_decode( $conversions_fb );
 
           if ( !empty( $conversions_fb_decoded ) ) {
+
+            $cfb_count = 0;
+
             foreach ( $conversions_fb_decoded as $repeater_item ) {
 
               // How many to show per row
@@ -183,44 +186,43 @@ get_header();
                 '4' => '3',
                 '5' => '2',
               );
-              ?>
 
-              <!-- Feature block -->
-              <div class="col-sm-<?php echo esc_attr( $cfri[$conversions_features_sm] ); ?> col-md-<?php echo esc_attr( $cfri[$conversions_features_md] ); ?> col-lg-<?php echo esc_attr( $cfri[$conversions_features_lg] ); ?> mb-3">
-                <div class="card border-0 h-100 text-center">
-                  <div class="card-body p-2">
+              // Feature block
+              echo '<div id="c-features__block-'.esc_attr( $cfb_count ).'" class="c-features__block col-sm-'.esc_attr( $cfri[$conversions_features_sm] ).' col-md-'.esc_attr( $cfri[$conversions_features_md] ).' col-lg-'.esc_attr( $cfri[$conversions_features_lg] ).' mb-3">';
+                
+                echo '<div class="card border-0 h-100">
+                  <div class="card-body p-2">';
                     
-                    <?php 
-                      if ( !empty( $repeater_item->icon_value ) ) {
-                        if ( !empty( $repeater_item->color ) ) {
-                          echo '<span class="c-features__icon"><i class="'.esc_attr( $repeater_item->icon_value ).' mb-3" aria-hidden="true" style="color:'.esc_attr( $repeater_item->color ).';"></i></span>';
-                        }
-                        else {
-                          echo '<span class="c-features__icon"><i class="'.esc_attr( $repeater_item->icon_value ).' mb-3" aria-hidden="true"></i></span>';
-                        }
+                    if ( !empty( $repeater_item->icon_value ) ) {
+                      if ( !empty( $repeater_item->color ) ) {
+                        echo '<span class="c-features__block-icon"><i class="'.esc_attr( $repeater_item->icon_value ).' mb-3" aria-hidden="true" style="color:'.esc_attr( $repeater_item->color ).';"></i></span>';
                       }
-
-                      if ( !empty( $repeater_item->title ) ) {
-                        echo '<h3 class="h5">'.esc_html( $repeater_item->title ).'</h3>';
+                      else {
+                        echo '<span class="c-features__block-icon"><i class="'.esc_attr( $repeater_item->icon_value ).' mb-3" aria-hidden="true"></i></span>';
                       }
+                    }
 
-                      if ( !empty( $repeater_item->text ) ) {
-                        echo '<p class="c-features__description">'.esc_html( $repeater_item->text ).'</p>';
-                      }
+                    if ( !empty( $repeater_item->title ) ) {
+                      echo '<h3 class="h5">'.esc_html( $repeater_item->title ).'</h3>';
+                    }
 
-                      if ( !empty( $repeater_item->linktext ) ) {
-                        echo sprintf( '<a class="btn btn-link" href="%s">%s</a>', 
-                          esc_url( $repeater_item->link ), 
-                          esc_html( $repeater_item->linktext )
-                        );
-                      } 
-                    ?>
+                    if ( !empty( $repeater_item->text ) ) {
+                      echo '<p class="c-features__block-desc">'.esc_html( $repeater_item->text ).'</p>';
+                    }
 
-                  </div>
+                    if ( !empty( $repeater_item->linktext ) ) {
+                      echo sprintf( '<a class="btn btn-link" href="%s">%s</a>', 
+                        esc_url( $repeater_item->link ), 
+                        esc_html( $repeater_item->linktext )
+                      );
+                    }
+
+                  echo '</div>
                 </div>
-              </div>
+              </div>';
 
-            <?php }
+            ++$cfb_count;
+            }
           }
         ?>
 

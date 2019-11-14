@@ -59,7 +59,7 @@ body, input, select, textarea {
 }
 
 // Subtitle and description .text-muted
-section p.subtitle, .c-features__description {
+section p.subtitle, .c-features__block-desc {
   color: #6c757d;
 }
 
@@ -212,11 +212,19 @@ section.c-clients {
 
 // Icon block section
 section.c-features {
-  .card {
-    background-color: transparent;
-    .c-features__icon {
-      i {
-        font-size: 3rem;
+  .row:first-of-type {
+    @include media-breakpoint-up(sm) {
+      justify-content: center;
+    }
+    .c-features__block {
+      .card {
+        text-align: center;
+        background-color: transparent;
+        .c-features__block-icon {
+          i {
+            font-size: 3rem;
+          }
+        }
       }
     }
   }
