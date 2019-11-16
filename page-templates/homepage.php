@@ -76,7 +76,7 @@ get_header();
             $chc_max_slides = get_theme_mod( 'conversions_hc_max', '5' );
             $chc_logo_width = get_theme_mod( 'conversions_hc_logo_width', '100' ) + 60;
 
-            if ( esc_html( get_theme_mod( 'conversions_hc_respond', 'auto' ) == 'auto' ) ) 
+            if ( get_theme_mod( 'conversions_hc_respond', 'auto' ) == 'auto' ) 
             {
               
               $chc_breakpoints = ['768','576','375'];
@@ -174,7 +174,7 @@ get_header();
             foreach ( $conversions_fb_decoded as $repeater_item ) {
 
               // How many to show per row
-              $conversions_features_sm = get_theme_mod( 'conversions_features_sm', '1' );
+              $conversions_features_sm = get_theme_mod( 'conversions_features_sm', '2' );
               $conversions_features_md = get_theme_mod( 'conversions_features_md', '2' );
               $conversions_features_lg = get_theme_mod( 'conversions_features_lg', '3' );
 
@@ -260,11 +260,30 @@ get_header();
           $conversions_pr = get_theme_mod( 'conversions_pricing_repeater' );
           $conversions_pr_decoded = json_decode( $conversions_pr );
 
-          // Count total items in loop
-          $cpt_total_count = count($conversions_pr_decoded);
-
-          // Calc columns
-          $cpt_col_number = conversions()->template->auto_col_calc( $cpt_total_count );
+          if ( get_theme_mod( 'conversions_pricing_respond', 'auto' ) == 'auto' )
+          {
+            // Count pricing tables in loop
+            $cpt_total_count = count($conversions_pr_decoded);
+            // Auto calc columns
+            $conversions_pricing_sm = 12;
+            $conversions_pricing_md = 12;
+            $conversions_pricing_lg = conversions()->template->auto_col_calc( $cpt_total_count );
+          } 
+          else 
+          {
+            // # per row to bootstrap grid
+            $cpri = array(
+              '1' => '12', 
+              '2' => '5', 
+              '3' => '4', 
+              '4' => '3',
+              '5' => '2',
+            );
+            // manual options per row
+            $conversions_pricing_sm = $cpri[get_theme_mod( 'conversions_pricing_sm', '1' )];
+            $conversions_pricing_md = $cpri[get_theme_mod( 'conversions_pricing_md', '1' )];
+            $conversions_pricing_lg = $cpri[get_theme_mod( 'conversions_pricing_lg', '3' )];
+          }
 
           if ( !empty( $conversions_pr_decoded ) ) {
 
@@ -272,21 +291,11 @@ get_header();
 
             foreach ( $conversions_pr_decoded as $repeater_item ) {
 
-              // How many to show per row
-              $conversions_pricing_row = get_theme_mod( 'conversions_pricing_row', '3' );
-
-              // # per row to bootstrap grid
-              $cpri = array(
-                '1' => '12', 
-                '2' => '6', 
-                '3' => '4', 
-                '4' => '3',
-              );
+              // Pricing table
+              echo '<div id="c-pricing__table-'.esc_attr( $cpt_count ).'" class="c-pricing__table col-sm-'.esc_attr( $conversions_pricing_sm ).' col-md-'.esc_attr( $conversions_pricing_md ).' col-lg-'. esc_attr( $conversions_pricing_lg ).' mb-3">'; 
               ?>
 
-              <!-- Pricing table -->
-              <div id="c-pricing__table-<?php echo esc_attr( $cpt_count ); ?>" class="c-pricing__table col-sm-12 col-lg-<?php echo esc_attr( $cpri[$conversions_pricing_row] ); ?> mb-3">
-                <div class="card shadow">
+                <div class="card shadow h-100">
                   <header class="card-header bg-white text-center p-4">
                     <h4 class="h5 text-secondary mb-3">
                       <?php 

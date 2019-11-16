@@ -11916,14 +11916,13 @@ section.c-features .row:first-of-type .c-features__block .card {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; } }
-@media (max-width: 991.98px) {
-  .c-pricing .row:first-of-type .c-pricing__table .card {
-    max-width: 24rem;
-    margin: 0 auto; } }
-.c-pricing .row:first-of-type .c-pricing__table .card li {
-  padding: .5rem 0; }
-  .c-pricing .row:first-of-type .c-pricing__table .card li i {
-    color: #6c757d; }
+.c-pricing .row:first-of-type .c-pricing__table .card {
+  max-width: 28rem;
+  margin: 0 auto; }
+  .c-pricing .row:first-of-type .c-pricing__table .card li {
+    padding: .5rem 0; }
+    .c-pricing .row:first-of-type .c-pricing__table .card li i {
+      color: #6c757d; }
 
 @media (max-width: 991.98px) {
   section.c-news .card {

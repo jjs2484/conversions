@@ -238,10 +238,8 @@ section.c-features {
     }
     .c-pricing__table {
       .card {
-        @include media-breakpoint-down(md) {
-          max-width: 24rem;
-          margin: 0 auto;
-        }
+        max-width: 28rem;
+        margin: 0 auto;
         li {
           padding: .5rem 0;
           i {

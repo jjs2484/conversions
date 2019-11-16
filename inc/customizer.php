@@ -1889,23 +1889,84 @@ namespace conversions
 				'priority'   => 50,
 				'type'       => 'color',
 			) );
-			$wp_customize->add_setting( 'conversions_pricing_row', array(
+			$wp_customize->add_setting( 'conversions_pricing_respond', array(
+				'default'           => 'auto',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_select',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_pricing_respond', array(
+						'label'       => __( 'Responsive', 'conversions' ),
+						'description' => __( 'Select auto or manual item breakpoints.', 'conversions' ),
+						'section'     => 'conversions_homepage_pricing',
+						'settings'    => 'conversions_pricing_respond',
+						'type'        => 'select',
+						'choices'     => array(
+							'auto' => __( 'Auto', 'conversions' ),
+							'manual' => __( 'Manual', 'conversions' ),
+						),
+						'priority'    => '55',
+					)
+			) );
+			$wp_customize->add_setting( 'conversions_pricing_sm', array(
+				'default'       => '1',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_pricing_sm_control', array(
+				'label'      => __('# of items on small screens', 'conversions'),
+				'description'=> __('Items to show 576px to 767px. Choose 1-5.', 'conversions'),
+				'section'    => 'conversions_homepage_pricing',
+				'settings'   => 'conversions_pricing_sm',
+				'priority'   => 60,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 5,
+				),
+			) );
+			$wp_customize->add_setting( 'conversions_pricing_md', array(
+				'default'       => '1',
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'absint',
+			) );
+			$wp_customize->add_control( 'conversions_pricing_md_control', array(
+				'label'      => __('# of items on medium screens', 'conversions'),
+				'description'=> __('Items to show 768px to 991px. Choose 1-5.', 'conversions'),
+				'section'    => 'conversions_homepage_pricing',
+				'settings'   => 'conversions_pricing_md',
+				'priority'   => 70,
+				'type'       => 'number',
+				'input_attrs'=> array(
+					'min' => 1,
+					'max' => 5,
+				),
+			) );
+			$wp_customize->add_setting( 'conversions_pricing_lg', array(
 				'default'       => '3',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'absint',
 			) );
-			$wp_customize->add_control( 'conversions_pricing_row_control', array(
-				'label'      => __('Pricing tables per row', 'conversions'),
-				'description'=> __('Max number of items to show per row on desktop. Choose 1 - 4.', 'conversions'),
+			$wp_customize->add_control( 'conversions_pricing_lg_control', array(
+				'label'      => __('# of items on large screens', 'conversions'),
+				'description'=> __('Items to show 992px up. Choose 1-5.', 'conversions'),
 				'section'    => 'conversions_homepage_pricing',
-				'settings'   => 'conversions_pricing_row',
-				'priority'   => 55,
+				'settings'   => 'conversions_pricing_lg',
+				'priority'   => 80,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
-					'max' => 4,
+					'max' => 5,
 				),
 			) );
 			$wp_customize->add_setting( 'conversions_pricing_repeater', array(
@@ -1919,7 +1980,7 @@ namespace conversions
       				'conversions_pricing_repeater', array(
 						'label'   => __( 'Pricing table', 'conversions' ),
 						'section' => 'conversions_homepage_pricing',
-						'priority' => 60,
+						'priority' => 90,
 						'customizer_repeater_title_control' => true,
 						'customizer_repeater_subtitle_control' => true,
 						'customizer_repeater_subtitle2_control' => true,
