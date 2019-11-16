@@ -234,7 +234,7 @@ get_header();
 	<!-- Pricing section -->
 	<section class="c-pricing">
 		<div class="container-fluid">
-			<div class="row justify-content-sm-center">
+			<div class="row">
 
 				<?php if ( !empty( get_theme_mod( 'conversions_pricing_title') ) || !empty( get_theme_mod( 'conversions_pricing_desc' ) ) ) { ?>
           
@@ -260,7 +260,16 @@ get_header();
           $conversions_pr = get_theme_mod( 'conversions_pricing_repeater' );
           $conversions_pr_decoded = json_decode( $conversions_pr );
 
+          // Count total items in loop
+          $cpt_total_count = count($conversions_pr_decoded);
+
+          // Calc columns
+          $cpt_col_number = conversions()->template->auto_col_calc( $cpt_total_count );
+
           if ( !empty( $conversions_pr_decoded ) ) {
+
+            $cpt_count = 0;
+
             foreach ( $conversions_pr_decoded as $repeater_item ) {
 
               // How many to show per row
@@ -276,7 +285,7 @@ get_header();
               ?>
 
               <!-- Pricing table -->
-              <div class="col-sm-12 col-lg-<?php echo esc_attr( $cpri[$conversions_pricing_row] ); ?> mb-3">
+              <div id="c-pricing__table-<?php echo esc_attr( $cpt_count ); ?>" class="c-pricing__table col-sm-12 col-lg-<?php echo esc_attr( $cpri[$conversions_pricing_row] ); ?> mb-3">
                 <div class="card shadow">
                   <header class="card-header bg-white text-center p-4">
                     <h4 class="h5 text-secondary mb-3">
@@ -300,7 +309,7 @@ get_header();
                       </span>
                     </span>
                   </header>
-                  <div class="card-body pt-4 pb-5 px-5">
+                  <div class="card-body h-100 pt-4 pb-5 px-5">
                     <ul class="list-unstyled mb-4">
                       <?php
                         // Get all plan features
@@ -308,7 +317,7 @@ get_header();
                         if ( !empty( $feature_repeater ) ) {
                           foreach( $feature_repeater as $value ) {
                             // Output each feature
-                            echo sprintf( '<li class="d-flex align-items-center py-2"><span class="fas fa-check mr-3"></span>%1$s</li>', 
+                            echo sprintf( '<li><i class="fas fa-check mr-3" aria-hidden="true"></i>%1$s</li>', 
                               esc_html( $value->feature )
                             );
                           }
@@ -317,7 +326,7 @@ get_header();
                     </ul>
                     <?php
                       // Plan button and link
-                      echo sprintf( '<a href="%1$s" class="btn btn-block btn-primary">%2$s</a>', 
+                      echo sprintf( '<a href="%1$s" class="btn btn-block btn-lg btn-primary">%2$s</a>', 
                         esc_url( $repeater_item->link ),
                         esc_html( $repeater_item->linktext )
                       );
@@ -326,7 +335,8 @@ get_header();
                 </div>
               </div>
 
-            <?php }
+            <?php ++$cpt_count;
+            }
           }
         ?>
 

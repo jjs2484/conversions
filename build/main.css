@@ -11910,10 +11910,20 @@ section.c-features .row:first-of-type .c-features__block .card {
   section.c-features .row:first-of-type .c-features__block .card .c-features__block-icon i {
     font-size: 3rem; }
 
+@media (min-width: 576px) {
+  .c-pricing .row:first-of-type {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
 @media (max-width: 991.98px) {
-  .c-pricing .card {
+  .c-pricing .row:first-of-type .c-pricing__table .card {
     max-width: 24rem;
     margin: 0 auto; } }
+.c-pricing .row:first-of-type .c-pricing__table .card li {
+  padding: .5rem 0; }
+  .c-pricing .row:first-of-type .c-pricing__table .card li i {
+    color: #6c757d; }
 
 @media (max-width: 991.98px) {
   section.c-news .card {

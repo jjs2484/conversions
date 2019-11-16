@@ -232,10 +232,23 @@ section.c-features {
 
 // Pricing section
 .c-pricing {
-  .card {
-    @include media-breakpoint-down(md) {
-      max-width: 24rem;
-      margin: 0 auto;
+  .row:first-of-type {
+    @include media-breakpoint-up(sm) {
+      justify-content: center;
+    }
+    .c-pricing__table {
+      .card {
+        @include media-breakpoint-down(md) {
+          max-width: 24rem;
+          margin: 0 auto;
+        }
+        li {
+          padding: .5rem 0;
+          i {
+            color: #6c757d;
+          }
+        }
+      }
     }
   }
 }
