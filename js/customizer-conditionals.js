@@ -57,6 +57,7 @@ jQuery(document).ready(function ($) {
         [ "#customize-control-conversions_hcta_btn_text_control, #customize-control-conversions_cta_btn_url_control", "#customize-control-conversions_hcta_btn", "no"],
         [ "#customize-control-conversions_nav_button_text_control, #customize-control-conversions_nav_button_url_control", "#customize-control-conversions_nav_button", "no"],
         [ "#customize-control-conversions_hc_sm_control, #customize-control-conversions_hc_md_control, #customize-control-conversions_hc_lg_control", "#customize-control-conversions_hc_respond", "auto"],
+        [ "#customize-control-conversions_pricing_sm_control, #customize-control-conversions_pricing_md_control, #customize-control-conversions_pricing_lg_control", "#customize-control-conversions_pricing_respond", "auto"],
     ];
     
     conditionalOptions.forEach( function( conditionalOptionsArray )
