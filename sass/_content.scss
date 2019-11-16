@@ -36,6 +36,11 @@ body, input, select, textarea {
   overflow: hidden;
 }
 
+// Container width
+.container-fluid {
+  max-width: 1140px;
+}
+
 // Width utilities
 .w-md-80 {
   @media (min-width: 768px) {

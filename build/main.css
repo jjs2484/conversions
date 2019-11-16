@@ -11760,6 +11760,9 @@ body, input, select, textarea {
   padding: 2rem 0 3rem;
   overflow: hidden; }
 
+.container-fluid {
+  max-width: 1140px; }
+
 @media (min-width: 768px) {
   .w-md-80 {
     width: 80%; } }

@@ -358,25 +358,6 @@ namespace conversions
 				'capability'  => 'edit_theme_options',
 				'priority'    => 21,
 			) );
-			$wp_customize->add_setting( 'conversions_container_width', array(
-				'default'       => '1140',
-				'type'          => 'theme_mod',
-				'capability'    => 'edit_theme_options',
-				'transport'     => 'refresh',
-				'sanitize_callback' => 'absint',
-			) );
-			$wp_customize->add_control( 'conversions_container_width_control', array(
-				'label'      => __( 'Max container width', 'conversions' ),
-				'description'=> __( 'Specify the container max-width in px', 'conversions' ),
-				'section'    => 'conversions_layout_options',
-				'settings'   => 'conversions_container_width',
-				'priority'   => 10,
-				'type'       => 'number',
-				'input_attrs'=> array(
-					'min' => 1,
-					'max' => 9999,
-				),
-			) );
 			$wp_customize->add_setting( 'conversions_sidebar_position', array(
 				'default'           => 'right',
 				'type'              => 'theme_mod',
@@ -2271,7 +2252,6 @@ namespace conversions
 			);
 
 			$mods = array(
-				array(".container-fluid", "max-width", get_theme_mod( "conversions_container_width" ), "px"),
 				array("a.navbar-brand img", "max-height", get_theme_mod( 'conversions_logo_height' ), "px"),
 				array(".navbar", "padding-top", get_theme_mod( 'conversions_nav_tbpadding' ), "px"),
 				array(".navbar", "padding-bottom", get_theme_mod( 'conversions_nav_tbpadding' ), "px"),

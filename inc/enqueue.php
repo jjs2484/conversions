@@ -90,7 +90,6 @@ class Enqueue
 
 		$links_color = get_theme_mod( 'conversions_link_color', '#0068d7' );
 		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#00698c' );
-		$container_width = get_theme_mod( 'conversions_container_width', '1140' );
 
 		// WC button option
 		$wc_primary_btn = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
@@ -135,12 +134,6 @@ class Enqueue
 			.editor-styles-wrapper a:hover,
 			.wp-block-freeform.block-library-rich-text__tinymce a:hover {
 				color: '.esc_html($links_hcolor).';
-			}
-			.wp-block {
-				max-width: '.esc_html($container_width).'px;
-			}
-			.wp-block[data-align="wide"] {
-				max-width: '.esc_html($container_width).'px;
 			}
 			.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
 				background: '.esc_html( $wc_btns[$wc_primary_btn]["btn_bg"] ).';

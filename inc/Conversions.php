@@ -161,7 +161,6 @@ namespace conversions
 				'conversions_nav_mobile_type' => 'collapse',
 				'conversions_nav_button' => 'no',
 				'conversions_nav_search_icon' => false,
-				'conversions_container_width' => '1140',
 				'conversions_sidebar_position' => 'right',
 				'conversions_sidebar_mv' => true,
 				'conversions_google_fonts' => true,
