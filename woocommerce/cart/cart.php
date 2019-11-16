@@ -12,7 +12,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 3.7.0
+ * @version 3.8.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -30,7 +30,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<th class="product-name"><?php esc_html_e( 'Product', 'conversions' ); ?></th>
 				<th class="product-price"><?php esc_html_e( 'Price', 'conversions' ); ?></th>
 				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'conversions' ); ?></th>
-				<th class="product-subtotal"><?php esc_html_e( 'Total', 'conversions' ); ?></th>
+				<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'conversions' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -122,7 +122,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 						</td>
 
-						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'conversions' ); ?>">
+						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Subtotal', 'conversions' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 							?>
