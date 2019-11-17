@@ -112,7 +112,7 @@ get_header();
       
               if ( !empty( $chc_logos_decoded ) ) {
               
-                $chc_count = 0;
+                $cclient_logo_count = 0;
               
                 foreach( $chc_logos_decoded as $chc_logo ){
                   // Retrieve img id
@@ -123,11 +123,11 @@ get_header();
                   // Retrieve the alt text
                   $chc_logo_alt = get_post_meta( $chc_logo_id, '_wp_attachment_image_alt', true );
 
-                  echo '<div class="c-clients__item px-3" id="c-clients__'. esc_attr( $chc_count ) .'">
+                  echo '<div class="c-clients__item px-3" id="c-clients__'. esc_attr( $cclient_logo_count ) .'">
                     <img class="client" src="'. esc_url( $chc_logo_med[0] ) .'" alt="'. esc_html( $chc_logo_alt ) .'">
                   </div>';
 
-                  ++$chc_count;
+                  ++$cclient_logo_count;
                 }
               }
             ?>
@@ -169,7 +169,7 @@ get_header();
 
           if ( !empty( $conversions_fb_decoded ) ) {
 
-            $cfb_count = 0;
+            $cfeature_block_count = 0;
 
             foreach ( $conversions_fb_decoded as $repeater_item ) {
 
@@ -188,7 +188,7 @@ get_header();
               );
 
               // Feature block
-              echo '<div id="c-features__block-'.esc_attr( $cfb_count ).'" class="c-features__block col-sm-'.esc_attr( $cfri[$conversions_features_sm] ).' col-md-'.esc_attr( $cfri[$conversions_features_md] ).' col-lg-'.esc_attr( $cfri[$conversions_features_lg] ).' mb-3">';
+              echo '<div id="c-features__block-'.esc_attr( $cfeature_block_count ).'" class="c-features__block col-sm-'.esc_attr( $cfri[$conversions_features_sm] ).' col-md-'.esc_attr( $cfri[$conversions_features_md] ).' col-lg-'.esc_attr( $cfri[$conversions_features_lg] ).' mb-3">';
                 
                 echo '<div class="card border-0 h-100">
                   <div class="card-body p-2">';
@@ -221,7 +221,7 @@ get_header();
                 </div>
               </div>';
 
-            ++$cfb_count;
+            ++$cfeature_block_count;
             }
           }
         ?>
@@ -287,16 +287,16 @@ get_header();
 
           if ( !empty( $conversions_pr_decoded ) ) {
 
-            $cpt_count = 0;
+            $cpricing_table_count = 0;
 
             foreach ( $conversions_pr_decoded as $repeater_item ) {
 
               // Pricing table
-              echo '<div id="c-pricing__table-'.esc_attr( $cpt_count ).'" class="c-pricing__table col-sm-'.esc_attr( $conversions_pricing_sm ).' col-md-'.esc_attr( $conversions_pricing_md ).' col-lg-'. esc_attr( $conversions_pricing_lg ).' mb-3">'; 
+              echo '<div id="c-pricing__table-'.esc_attr( $cpricing_table_count ).'" class="c-pricing__table col-sm-'.esc_attr( $conversions_pricing_sm ).' col-md-'.esc_attr( $conversions_pricing_md ).' col-lg-'. esc_attr( $conversions_pricing_lg ).' mb-3">'; 
               ?>
 
                 <div class="card shadow h-100">
-                  <header class="card-header bg-white text-center p-4">
+                  <header class="card-header">
                     <h4 class="h5 text-secondary mb-3">
                       <?php 
                         // Plan title
@@ -318,24 +318,27 @@ get_header();
                       </span>
                     </span>
                   </header>
-                  <div class="card-body h-100 pt-4 pb-5 px-5">
+                  <div class="card-body">
                     <ul class="list-unstyled mb-4">
                       <?php
                         // Get all plan features
                         $feature_repeater = json_decode( html_entity_decode( $repeater_item->feature_repeater ) );
                         if ( !empty( $feature_repeater ) ) {
+                          $cpricing_feature_count = 0;
                           foreach( $feature_repeater as $value ) {
                             // Output each feature
-                            echo sprintf( '<li><i class="fas fa-check mr-3" aria-hidden="true"></i>%1$s</li>', 
+                            echo sprintf( '<li id="c-pricing__feature-%1$s">%2$s</li>', 
+                              esc_attr( $cpricing_feature_count ),
                               esc_html( $value->feature )
                             );
+                            ++$cpricing_feature_count;
                           }
                         } 
                       ?>
                     </ul>
                     <?php
                       // Plan button and link
-                      echo sprintf( '<a href="%1$s" class="btn btn-block btn-lg btn-primary">%2$s</a>', 
+                      echo sprintf( '<a href="%1$s" class="btn btn-block btn-primary">%2$s</a>', 
                         esc_url( $repeater_item->link ),
                         esc_html( $repeater_item->linktext )
                       );
@@ -344,7 +347,7 @@ get_header();
                 </div>
               </div>
 
-            <?php ++$cpt_count;
+            <?php ++$cpricing_table_count;
             }
           }
         ?>

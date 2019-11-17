@@ -11922,10 +11922,23 @@ section.c-features .row:first-of-type .c-features__block .card {
 .c-pricing .row:first-of-type .c-pricing__table .card {
   max-width: 28rem;
   margin: 0 auto; }
+  .c-pricing .row:first-of-type .c-pricing__table .card .card-header {
+    background-color: #fff;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+    border: 0; }
+  .c-pricing .row:first-of-type .c-pricing__table .card .card-body {
+    text-align: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1.5rem; }
   .c-pricing .row:first-of-type .c-pricing__table .card li {
-    padding: .5rem 0; }
-    .c-pricing .row:first-of-type .c-pricing__table .card li i {
-      color: #6c757d; }
+    font-size: .94rem;
+    padding: .5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+    .c-pricing .row:first-of-type .c-pricing__table .card li:last-of-type {
+      border-bottom: 0; }
 
 @media (max-width: 991.98px) {
   section.c-news .card {

@@ -245,10 +245,25 @@ section.c-features {
       .card {
         max-width: 28rem;
         margin: 0 auto;
+        .card-header {
+          background-color: #fff;
+          text-align: center;
+          padding-top: 1.5rem;
+          padding-bottom: 0;
+          border: 0;
+        }
+        .card-body {
+          text-align: center;
+          padding-left: 3rem;
+          padding-right: 3rem;
+          padding-bottom: 1.5rem;
+        }
         li {
+          font-size: .94rem;
           padding: .5rem 0;
-          i {
-            color: #6c757d;
+          border-bottom: 1px solid rgba(0,0,0,.125);
+          &:last-of-type {
+            border-bottom: 0;
           }
         }
       }
