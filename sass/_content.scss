@@ -273,9 +273,12 @@ section.c-features {
 
 // News section
 section.c-news {
-  .card {
-    @include media-breakpoint-down(md) {
-      max-width: 24rem;
+  .row:first-of-type {
+    @include media-breakpoint-up(sm) {
+      justify-content: center;
+    }
+    .c-news__card-wrapper .card {
+      max-width: 28rem;
       margin: 0 auto;
     }
   }

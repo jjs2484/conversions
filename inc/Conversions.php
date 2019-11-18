@@ -211,8 +211,6 @@ namespace conversions
 				'conversions_pricing_md' => '1',
 				'conversions_pricing_lg' => '3',
 				'conversions_news_bg_color' => '#F3F3F3',
-				'conversions_news_title' => 'Latest News',
-				'conversions_news_desc' => 'Read our latest news. We post regularly to keep you up to date on a variety of topics in our industry.',
 				'conversions_news_mposts' => '2',
 				'conversions_hcta_state' => true,		
 				'conversions_hcta_bg_choice' => 'gradient',

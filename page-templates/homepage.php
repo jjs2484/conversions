@@ -445,7 +445,7 @@ get_header();
 	<!-- News Section -->
 	<section class="c-news">
 		<div class="container-fluid">
-			<div class="row justify-content-sm-center">
+			<div class="row">
 
         <?php if ( !empty( get_theme_mod( 'conversions_news_title') ) || !empty( get_theme_mod( 'conversions_news_desc' ) ) ) { ?>
           
@@ -473,7 +473,8 @@ get_header();
             'post_type' => 'post',
             'post_status' => 'publish',
             'posts_per_page' => 3,
-            'orderby' => array( 'comment_count' => 'DESC'),
+            'orderby' => 'date',
+            'order'   => 'DESC',
             'ignore_sticky_posts' => 1,
           );
 
@@ -487,12 +488,16 @@ get_header();
             
             <!-- Post image -->
             <a class="c-news__img-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>">
-              <?php if ( has_post_thumbnail() ) : ?>
-                <?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
-              <?php else : ?>
-                <img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
-              <?php endif; ?>
+              <?php 
+                if ( has_post_thumbnail() ) :
+                  the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) );
+                else :
+                  echo '<img class="card-img-top" alt="'.the_title().'" src="'. get_template_directory_uri().'/placeholder.png" />';
+                endif; 
+              ?>
             </a>
+
+            <!-- Post content -->
             <div class="card-body pb-1">
               <h3 class="h5">
                 <a href="<?php esc_url( the_permalink() ); ?>">
@@ -506,16 +511,20 @@ get_header();
                 ?>
               </p>
             </div>
+
+            <!-- Post meta -->
             <div class="card-footer text-muted d-flex justify-content-between align-items-center small">
-              <?php conversions()->template->posted_on(); ?>
-              <?php conversions()->template->reading_time(); ?>
+              <?php 
+                conversions()->template->posted_on();
+                conversions()->template->reading_time(); 
+              ?>
             </div>
           </article>
         </div>
         <!-- End Post Item -->
 
         <?php 
-          endwhile;
+          endwhile; 
           wp_reset_postdata();
         ?>
 

@@ -11940,10 +11940,15 @@ section.c-features .row:first-of-type .c-features__block .card {
     .c-pricing .row:first-of-type .c-pricing__table .card li:last-of-type {
       border-bottom: 0; }
 
-@media (max-width: 991.98px) {
-  section.c-news .card {
-    max-width: 24rem;
-    margin: 0 auto; } }
+@media (min-width: 576px) {
+  section.c-news .row:first-of-type {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+section.c-news .row:first-of-type .c-news__card-wrapper .card {
+  max-width: 28rem;
+  margin: 0 auto; }
 
 section.c-testimonials .c-testimonials__quote {
   padding: 20px;

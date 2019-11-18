@@ -2093,7 +2093,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_news_title', array(
-				'default'       => __( 'Latest News', 'conversions' ),
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -2107,7 +2107,7 @@ namespace conversions
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_news_title_color', array(
-				'default'       => '#222222',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -2121,7 +2121,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_news_desc', array(
-      			'default' => __( 'Read our latest news. We post regularly to keep you up to date on a variety of topics in our industry.', 'conversions' ),
+      			'default' => '',
       			'type'          => 'theme_mod',
       			'transport' => 'refresh',
       			'sanitize_callback' => 'wp_kses_post'
@@ -2136,7 +2136,7 @@ namespace conversions
       			'capability' => 'edit_theme_options',
    			) );
    			$wp_customize->add_setting( 'conversions_news_desc_color', array(
-				'default'       => '#6c757d',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
