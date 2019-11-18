@@ -1995,7 +1995,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_testimonials_title', array(
-				'default'       => __( 'What customers say', 'conversions' ),
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -2009,7 +2009,7 @@ namespace conversions
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_testimonials_title_color', array(
-				'default'       => '#222222',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -2023,7 +2023,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_testimonials_desc', array(
-      			'default' => __( 'We appreciate our customers feedback! Here is what some of our customers have to say about us.', 'conversions' ),
+      			'default' => '',
       			'type' => 'theme_mod',
       			'transport' => 'refresh',
       			'sanitize_callback' => 'wp_kses_post'
@@ -2038,7 +2038,7 @@ namespace conversions
       			'capability' => 'edit_theme_options',
    			) );
    			$wp_customize->add_setting( 'conversions_testimonials_desc_color', array(
-				'default'       => '#6c757d',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',

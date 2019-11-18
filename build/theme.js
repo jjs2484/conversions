@@ -15792,7 +15792,7 @@ jQuery(document).ready(function(){
         infinite: true,
         fade: true,
         adaptiveHeight: true,
-        touchThreshold: 12
+        touchThreshold: 14
     });
 });
 
