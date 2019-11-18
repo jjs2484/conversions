@@ -386,53 +386,54 @@ get_header();
           <div class="c-testimonials__carousel">
 
             <?php
-              $conversions_testimonials = get_theme_mod( 'conversions_testimonials_repeater' );
-              $conversions_testimonials_decoded = json_decode( $conversions_testimonials );
+            $conversions_testimonials = get_theme_mod( 'conversions_testimonials_repeater' );
+            $conversions_testimonials_decoded = json_decode( $conversions_testimonials );
       
-              if ( !empty( $conversions_testimonials_decoded ) ) {
+            if ( !empty( $conversions_testimonials_decoded ) ) {
               
-                $testimonials_count = 0;
+              $testimonials_count = 0;
               
-                foreach( $conversions_testimonials_decoded as $conversions_testimonial ){ ?>
+              foreach( $conversions_testimonials_decoded as $conversions_testimonial ){ ?>
 
-                  <!-- Testimonial -->
-                  <div class="c-testimonials__item" id="c-testimonials__<?php echo $testimonials_count; ?>">
-                    <blockquote class="c-testimonials__quote shadow w-md-95 w-lg-90 mx-auto">
-                      <p>
-                        <?php echo esc_html( $conversions_testimonial->text ); ?>
-                      </p>
-                      <div class="d-flex flex-column flex-sm-row justify-content-sm-between">
-                        <cite>
+                <!-- Testimonial -->
+                <div class="c-testimonials__item" id="c-testimonials__<?php echo esc_attr( $testimonials_count ); ?>">
+                  <blockquote class="c-testimonials__quote shadow w-md-95 w-lg-90 mx-auto">
+                      
+                    <?php 
+                      if ( !empty( $conversions_testimonial->text ) ) {
+                        echo '<p>'.esc_html( $conversions_testimonial->text ).'</p>';
+                      } 
+                    ?>
 
-                          <?php if ( !empty( $conversions_testimonial->title ) ) { ?>
-                            <span class="d-block">
-                              <?php echo esc_html( $conversions_testimonial->title ); ?>
-                            </span>
-                          <?php } ?>
+                    <div class="d-flex flex-column flex-sm-row justify-content-sm-between">
+                      <cite>
 
-                          <?php if ( !empty( $conversions_testimonial->subtitle ) ) { ?>
-                            <span class="d-block">
-                              <?php echo esc_html( $conversions_testimonial->subtitle ); ?>
-                            </span>
-                          <?php } ?>
+                        <?php
+                          if ( !empty( $conversions_testimonial->title ) ) {
+                            echo '<span class="d-block">'.esc_html( $conversions_testimonial->title ).'</span>';
+                          }
 
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                        </cite>
-                        <div class="c-testimonials__nav align-self-end ml-sm-auto">
-                          <i class="fas fa-chevron-left slick-arrow mr-2"></i>
-                          <i class="fas fa-chevron-right slick-arrow"></i>
-                        </div>
+                          if ( !empty( $conversions_testimonial->subtitle ) ) {
+                            echo '<span class="d-block">'.esc_html( $conversions_testimonial->subtitle ).'</span>';
+                          } 
+                          
+                          for ( $i = 0; $i < 5; $i++ ) {
+                            echo '<i class="fas fa-star" aria-hidden="true"></i>';
+                          }
+                        ?>
+
+                      </cite>
+                      <div class="c-testimonials__nav align-self-end ml-sm-auto">
+                        <i class="fas fa-chevron-left slick-arrow mr-2" aria-hidden="true" title="<?php _e( 'Previous', 'conversions' ); ?>"></i>
+                        <i class="fas fa-chevron-right slick-arrow" aria-hidden="true" title="<?php _e( 'Next', 'conversions' ); ?>"></i>
                       </div>
-                    </blockquote>
-                  </div>
+                    </div>
+                  </blockquote>
+                </div>
 
-                  <?php ++$testimonials_count;
-                }
+                <?php ++$testimonials_count;
               }
+            }
             ?>
             
           </div> <!-- End Slick Carousel -->
