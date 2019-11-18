@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
                   	echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_hcta_desc' ) ).'</p>';
                 	}
 
-                	if ( get_theme_mod( 'conversions_hcta_btn', 'btn-light' ) != 'no' )
+                	if ( get_theme_mod( 'conversions_hcta_btn', 'no' ) != 'no' )
                 	{
                   	// Button
                     $cta_btn_text = get_theme_mod( 'conversions_hcta_btn_text' );

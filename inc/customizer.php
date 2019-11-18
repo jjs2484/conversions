@@ -620,7 +620,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_title', array(
-				'default'       => __( 'Get started today!', 'conversions' ),
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -648,7 +648,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_desc', array(
-      			'default' => __( 'Conversions is an HTML5 template, and its mission to improve the future of web. Are you ready to join us?', 'conversions' ),
+      			'default' => '',
       			'type'          => 'theme_mod',
       			'transport' => 'refresh',
       			'sanitize_callback' => 'wp_kses_post'
@@ -677,7 +677,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_btn', array(
-				'default'           => 'btn-light',
+				'default'           => 'no',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -697,7 +697,7 @@ namespace conversions
 					)
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_btn_text', array(
-				'default'       => __( 'Click me', 'conversions' ),
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
@@ -711,7 +711,7 @@ namespace conversions
 				'type'       => 'text',
 			) );
 			$wp_customize->add_setting( 'conversions_cta_btn_url', array(
-				'default'       => 'https://wordpress.org',
+				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
 				'sanitize_callback' => 'esc_url_raw',
