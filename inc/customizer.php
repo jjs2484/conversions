@@ -1720,14 +1720,14 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_features_sm_control', array(
 				'label'      => __('# of items on small screens', 'conversions'),
-				'description'=> __('Items to show 576px to 767px. Choose 1-5.', 'conversions'),
+				'description'=> __('Items to show 576px to 767px. Choose 1-4.', 'conversions'),
 				'section'    => 'conversions_homepage_features',
 				'settings'   => 'conversions_features_sm',
 				'priority'   => 60,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
-					'max' => 5,
+					'max' => 4,
 				),
 			) );
 			$wp_customize->add_setting( 'conversions_features_md', array(
@@ -1739,14 +1739,14 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_features_md_control', array(
 				'label'      => __('# of items on medium screens', 'conversions'),
-				'description'=> __('Items to show 768px to 991px. Choose 1-5.', 'conversions'),
+				'description'=> __('Items to show 768px to 991px. Choose 1-4.', 'conversions'),
 				'section'    => 'conversions_homepage_features',
 				'settings'   => 'conversions_features_md',
 				'priority'   => 70,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
-					'max' => 5,
+					'max' => 4,
 				),
 			) );
 			$wp_customize->add_setting( 'conversions_features_lg', array(
@@ -1758,14 +1758,14 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_features_lg_control', array(
 				'label'      => __('# of items on large screens', 'conversions'),
-				'description'=> __('Items to show 992px up. Choose 1-5.', 'conversions'),
+				'description'=> __('Items to show 992px up. Choose 1-4.', 'conversions'),
 				'section'    => 'conversions_homepage_features',
 				'settings'   => 'conversions_features_lg',
 				'priority'   => 80,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
-					'max' => 5,
+					'max' => 4,
 				),
 			) );
 			$wp_customize->add_setting( 'conversions_features_icons', array(
@@ -1902,14 +1902,14 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_pricing_sm_control', array(
 				'label'      => __('# of items on small screens', 'conversions'),
-				'description'=> __('Items to show 576px to 767px. Choose 1-5.', 'conversions'),
+				'description'=> __('Items to show 576px to 767px. Choose 1-4.', 'conversions'),
 				'section'    => 'conversions_homepage_pricing',
 				'settings'   => 'conversions_pricing_sm',
 				'priority'   => 60,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
-					'max' => 5,
+					'max' => 4,
 				),
 			) );
 			$wp_customize->add_setting( 'conversions_pricing_md', array(
@@ -1921,14 +1921,14 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_pricing_md_control', array(
 				'label'      => __('# of items on medium screens', 'conversions'),
-				'description'=> __('Items to show 768px to 991px. Choose 1-5.', 'conversions'),
+				'description'=> __('Items to show 768px to 991px. Choose 1-4.', 'conversions'),
 				'section'    => 'conversions_homepage_pricing',
 				'settings'   => 'conversions_pricing_md',
 				'priority'   => 70,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
-					'max' => 5,
+					'max' => 4,
 				),
 			) );
 			$wp_customize->add_setting( 'conversions_pricing_lg', array(
@@ -1940,14 +1940,14 @@ namespace conversions
 			) );
 			$wp_customize->add_control( 'conversions_pricing_lg_control', array(
 				'label'      => __('# of items on large screens', 'conversions'),
-				'description'=> __('Items to show 992px up. Choose 1-5.', 'conversions'),
+				'description'=> __('Items to show 992px up. Choose 1-4.', 'conversions'),
 				'section'    => 'conversions_homepage_pricing',
 				'settings'   => 'conversions_pricing_lg',
 				'priority'   => 80,
 				'type'       => 'number',
 				'input_attrs'=> array(
 					'min' => 1,
-					'max' => 5,
+					'max' => 4,
 				),
 			) );
 			$wp_customize->add_setting( 'conversions_pricing_repeater', array(

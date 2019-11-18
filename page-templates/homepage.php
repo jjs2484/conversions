@@ -184,7 +184,6 @@ get_header();
                 '2' => '6', 
                 '3' => '4', 
                 '4' => '3',
-                '5' => '2',
               );
 
               // Feature block
@@ -277,7 +276,6 @@ get_header();
               '2' => '5', 
               '3' => '4', 
               '4' => '3',
-              '5' => '2',
             );
             // manual options per row
             $conversions_pricing_sm = $cpri[get_theme_mod( 'conversions_pricing_sm', '1' )];
