@@ -479,11 +479,12 @@ get_header();
           );
 
           $recent_posts = new WP_Query( $args );
+          $news_count = 0;
           while ($recent_posts -> have_posts()) : $recent_posts -> the_post(); 
         ?>
 
         <!-- Post item -->
-        <div class="col-sm-12 col-lg-4 mb-3 c-news__card-wrapper">
+        <div class="col-sm-12 col-lg-4 mb-3 c-news__card-wrapper" id="c-news__<?php echo esc_attr( $news_count ); ?>">
           <article class="card shadow h-100">
             
             <!-- Post image -->
@@ -524,6 +525,7 @@ get_header();
         <!-- End Post Item -->
 
         <?php 
+          ++$news_count;
           endwhile; 
           wp_reset_postdata();
         ?>

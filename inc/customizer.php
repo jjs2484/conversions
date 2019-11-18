@@ -2376,15 +2376,15 @@ namespace conversions
 				// Homepage news
 				if ( get_theme_mod( 'conversions_news_mposts', '2' ) == 1 ) {
 					echo '@media (max-width: 991.98px) {
-						section.c-news .c-news__card-wrapper:nth-of-type(2),
-						section.c-news .c-news__card-wrapper:nth-of-type(3) {
+						section.c-news #c-news__1,
+						section.c-news #c-news__2 {
 							display: none;
 						}
 					}';
 				}
 				if ( get_theme_mod( 'conversions_news_mposts', '2' ) == 2 ) {
 					echo '@media (max-width: 991.98px) {
-						section.c-news .c-news__card-wrapper:nth-of-type(3) {
+						section.c-news #c-news__2 {
 							display: none;
 						}
 					}';
