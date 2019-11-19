@@ -32,7 +32,9 @@ namespace conversions
 			$conversions_si_decoded = json_decode( $conversions_si );
 			
 			if ( !empty( $conversions_si_decoded ) ) {
+				
 				echo '<div class="social-media-icons col-md"><ul class="list-inline">';
+      			
       			foreach ( $conversions_si_decoded as $repeater_item ) {
 
       				// remove prefixes for titles and screen reader text
@@ -46,7 +48,9 @@ namespace conversions
 						esc_attr( $repeater_item->icon_value )
                 	);
 				}
+				
 				echo '</ul></div>';
+			
 			}
 
 		}
