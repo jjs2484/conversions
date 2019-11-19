@@ -222,6 +222,7 @@ section.c-features {
       justify-content: center;
     }
     .c-features__block {
+      margin-bottom: 1.5rem;
       .card {
         text-align: center;
         background-color: transparent;
@@ -242,6 +243,10 @@ section.c-features {
       justify-content: center;
     }
     .c-pricing__table {
+      margin-bottom: 1.5rem;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 1rem;
+      }
       .card {
         max-width: 28rem;
         margin: 0 auto;
@@ -277,9 +282,15 @@ section.c-news {
     @include media-breakpoint-up(sm) {
       justify-content: center;
     }
-    .c-news__card-wrapper .card {
-      max-width: 28rem;
-      margin: 0 auto;
+    .c-news__card-wrapper {
+      margin-bottom: 1.5rem;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 1rem;
+      }
+      .card {
+        max-width: 28rem;
+        margin: 0 auto;
+      }
     }
   }
 }

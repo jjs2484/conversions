@@ -187,7 +187,7 @@ get_header();
               );
 
               // Feature block
-              echo '<div id="c-features__block-'.esc_attr( $cfeature_block_count ).'" class="c-features__block col-sm-'.esc_attr( $cfri[$conversions_features_sm] ).' col-md-'.esc_attr( $cfri[$conversions_features_md] ).' col-lg-'.esc_attr( $cfri[$conversions_features_lg] ).' mb-3">';
+              echo '<div id="c-features__block-'.esc_attr( $cfeature_block_count ).'" class="c-features__block col-sm-'.esc_attr( $cfri[$conversions_features_sm] ).' col-md-'.esc_attr( $cfri[$conversions_features_md] ).' col-lg-'.esc_attr( $cfri[$conversions_features_lg] ).'">';
                 
                 echo '<div class="card border-0 h-100">
                   <div class="card-body p-2">';
@@ -290,7 +290,7 @@ get_header();
             foreach ( $conversions_pr_decoded as $repeater_item ) {
 
               // Pricing table
-              echo '<div id="c-pricing__table-'.esc_attr( $cpricing_table_count ).'" class="c-pricing__table col-sm-'.esc_attr( $conversions_pricing_sm ).' col-md-'.esc_attr( $conversions_pricing_md ).' col-lg-'. esc_attr( $conversions_pricing_lg ).' mb-3">'; 
+              echo '<div id="c-pricing__table-'.esc_attr( $cpricing_table_count ).'" class="c-pricing__table col-sm-'.esc_attr( $conversions_pricing_sm ).' col-md-'.esc_attr( $conversions_pricing_md ).' col-lg-'. esc_attr( $conversions_pricing_lg ).'">'; 
               ?>
 
                 <div class="card shadow h-100">
@@ -482,7 +482,7 @@ get_header();
         ?>
 
         <!-- Post item -->
-        <div class="col-sm-12 col-lg-4 mb-3 c-news__card-wrapper" id="c-news__<?php echo esc_attr( $news_count ); ?>">
+        <div class="col-sm-12 col-lg-4 c-news__card-wrapper" id="c-news__<?php echo esc_attr( $news_count ); ?>">
           <article class="card shadow h-100">
             
             <!-- Post image -->

@@ -11907,11 +11907,13 @@ section.c-clients .slick-slider .slick-track {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; } }
-section.c-features .row:first-of-type .c-features__block .card {
-  text-align: center;
-  background-color: transparent; }
-  section.c-features .row:first-of-type .c-features__block .card .c-features__block-icon i {
-    font-size: 3rem; }
+section.c-features .row:first-of-type .c-features__block {
+  margin-bottom: 1.5rem; }
+  section.c-features .row:first-of-type .c-features__block .card {
+    text-align: center;
+    background-color: transparent; }
+    section.c-features .row:first-of-type .c-features__block .card .c-features__block-icon i {
+      font-size: 3rem; }
 
 @media (min-width: 576px) {
   .c-pricing .row:first-of-type {
@@ -11919,26 +11921,31 @@ section.c-features .row:first-of-type .c-features__block .card {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; } }
-.c-pricing .row:first-of-type .c-pricing__table .card {
-  max-width: 28rem;
-  margin: 0 auto; }
-  .c-pricing .row:first-of-type .c-pricing__table .card .card-header {
-    background-color: #fff;
-    text-align: center;
-    padding-top: 1.5rem;
-    padding-bottom: 0;
-    border: 0; }
-  .c-pricing .row:first-of-type .c-pricing__table .card .card-body {
-    text-align: center;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 1.5rem; }
-  .c-pricing .row:first-of-type .c-pricing__table .card li {
-    font-size: .94rem;
-    padding: .5rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-    .c-pricing .row:first-of-type .c-pricing__table .card li:last-of-type {
-      border-bottom: 0; }
+.c-pricing .row:first-of-type .c-pricing__table {
+  margin-bottom: 1.5rem; }
+  @media (min-width: 992px) {
+    .c-pricing .row:first-of-type .c-pricing__table {
+      margin-bottom: 1rem; } }
+  .c-pricing .row:first-of-type .c-pricing__table .card {
+    max-width: 28rem;
+    margin: 0 auto; }
+    .c-pricing .row:first-of-type .c-pricing__table .card .card-header {
+      background-color: #fff;
+      text-align: center;
+      padding-top: 1.5rem;
+      padding-bottom: 0;
+      border: 0; }
+    .c-pricing .row:first-of-type .c-pricing__table .card .card-body {
+      text-align: center;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-bottom: 1.5rem; }
+    .c-pricing .row:first-of-type .c-pricing__table .card li {
+      font-size: .94rem;
+      padding: .5rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+      .c-pricing .row:first-of-type .c-pricing__table .card li:last-of-type {
+        border-bottom: 0; }
 
 @media (min-width: 576px) {
   section.c-news .row:first-of-type {
@@ -11946,9 +11953,14 @@ section.c-features .row:first-of-type .c-features__block .card {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; } }
-section.c-news .row:first-of-type .c-news__card-wrapper .card {
-  max-width: 28rem;
-  margin: 0 auto; }
+section.c-news .row:first-of-type .c-news__card-wrapper {
+  margin-bottom: 1.5rem; }
+  @media (min-width: 992px) {
+    section.c-news .row:first-of-type .c-news__card-wrapper {
+      margin-bottom: 1rem; } }
+  section.c-news .row:first-of-type .c-news__card-wrapper .card {
+    max-width: 28rem;
+    margin: 0 auto; }
 
 section.c-testimonials .c-testimonials__quote {
   padding: 20px;
