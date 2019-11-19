@@ -67,7 +67,7 @@ get_header();
   </section>
 
 	<!-- Clients section -->
-	<section class="c-clients border-top border-bottom">
+	<section class="c-clients">
 		<div class="container-fluid">
 			<div class="row">
   			<div class="col-12">

@@ -37,7 +37,7 @@
   .social-media-icons {
     display: flex;
     justify-content: center;
-    margin: .5rem 0;
+    margin: .75rem 0 0 0;
     @include media-breakpoint-up(md) {
       justify-content: flex-end;
       margin: 0;
