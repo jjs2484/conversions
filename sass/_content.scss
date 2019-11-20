@@ -41,6 +41,15 @@ body, input, select, textarea {
   max-width: 1140px;
 }
 
+// Entry content clearfix
+.entry-content {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
 // Width utilities
 .w-md-80 {
   @media (min-width: 768px) {

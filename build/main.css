@@ -11763,6 +11763,11 @@ body, input, select, textarea {
 .container-fluid {
   max-width: 1140px; }
 
+.entry-content::after {
+  display: block;
+  clear: both;
+  content: ""; }
+
 @media (min-width: 768px) {
   .w-md-80 {
     width: 80%; } }
