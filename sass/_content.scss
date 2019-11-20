@@ -42,7 +42,7 @@ body, input, select, textarea {
 }
 
 // Entry content clearfix
-.entry-content {
+article .entry-content {
   &::after {
     display: block;
     clear: both;
