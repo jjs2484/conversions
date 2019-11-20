@@ -212,7 +212,7 @@ namespace conversions
 				'conversions_pricing_lg' => '3',
 				'conversions_news_bg_color' => '#F3F3F3',
 				'conversions_news_mposts' => '2',
-				'conversions_hcta_state' => true,		
+				'conversions_hcta_state' => false,		
 				'conversions_hcta_bg_choice' => 'gradient',
 				'conversions_hcta_bg_gradient' => 'crystal-clear',
 				'conversions_hcta_title_color' => '#ffffff',

@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Call to action
-if ( get_theme_mod( 'conversions_hcta_state', true ) == true ) {	
+if ( get_theme_mod( 'conversions_hcta_state', false ) == true ) {	
 	get_template_part( 'partials/footer', 'cta' );
 } ?>
 

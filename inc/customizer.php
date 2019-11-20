@@ -517,7 +517,7 @@ namespace conversions
 				'capability'        => 'edit_theme_options',
 			) );
 			$wp_customize->add_setting( 'conversions_hcta_state', array(
-				'default'       => true,
+				'default'       => false,
 				'type'          => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_checkbox',
 				'capability'    => 'edit_theme_options',
