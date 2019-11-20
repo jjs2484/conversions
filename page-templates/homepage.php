@@ -491,7 +491,7 @@ get_header();
                 if ( has_post_thumbnail() ) :
                   the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) );
                 else :
-                  echo '<img class="card-img-top" alt="'.the_title().'" src="'. get_template_directory_uri().'/placeholder.png" />';
+                  echo '<img class="card-img-top" alt="'.get_the_title().'" src="'. get_template_directory_uri().'/placeholder.png" />';
                 endif; 
               ?>
             </a>
