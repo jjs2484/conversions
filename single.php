@@ -37,15 +37,23 @@ get_header();
 
 					<?php get_template_part( 'partials/content', 'single' ); ?>
 
-					<?php conversions()->template->post_nav(); ?>
-
-					<?php conversions()->template->related_posts(); ?>
+					<?php
+						if ( get_theme_mod( 'conversions_blog_postnav', true ) == true ) {
+							conversions()->template->post_nav();
+						}
+					?>
 
 					<?php
-					// If comments are open or we have at least one comment, load comments.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+						if ( get_theme_mod( 'conversions_blog_related', true ) == true ) {
+							conversions()->template->related_posts();
+						}
+					?>
+
+					<?php
+						// If comments are open or we have at least one comment, load comments.
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
 					?>
 
 				<?php endwhile; // end of the loop. ?>

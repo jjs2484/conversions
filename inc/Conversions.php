@@ -188,6 +188,7 @@ namespace conversions
 				'conversions_comment_btn' => 'btn-secondary',
 				'conversions_blog_related' => true,
 				'conversions_blog_taxonomy' => 'categories',
+				'conversions_blog_postnav' => true,
 				'conversions_hh_content_position' => 'col-lg-10 d-flex flex-column text-center mx-auto',
 				'conversions_hh_img_parallax' => false,
 				'conversions_hh_img_height' => '72',

@@ -229,99 +229,95 @@ class Template
 		@since		2019-09-11 20:35:17
 	**/
 	public function related_posts() {
-
-		// Are related posts enabled?
-		if ( get_theme_mod( 'conversions_blog_related', true ) == true ) {
 	
-			global $post;
+		global $post;
 			
-			$related_posts_tax = get_theme_mod( 'conversions_blog_taxonomy', 'categories' );
-			if( $related_posts_tax == 'tags' ) 
-			{
+		$related_posts_tax = get_theme_mod( 'conversions_blog_taxonomy', 'categories' );
+		if( $related_posts_tax == 'tags' ) 
+		{
 				
-				// tags
-				$tags = wp_get_post_tags($post->ID); //retrieve a list of tags for current post  
-				$tag_ids = array();
-				foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id; //loop through list of tags and store term_id of each
+			// tags
+			$tags = wp_get_post_tags($post->ID); //retrieve a list of tags for current post  
+			$tag_ids = array();
+			foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id; //loop through list of tags and store term_id of each
 
-				$args=array(
-					'tag__in' => $tag_ids, //use tag ids that are within $tag_ids array
-					'post__not_in' => array($post->ID), //don’t retrieve current post
-					'post_type' => 'post', //specify post type to retrieve
-					'post_status' => 'publish', //retrieve only published posts
-					'posts_per_page' => 3, //specify number of related posts to show
-					'orderby' => array( 'comment_count' => 'DESC'), //how you want to order your posts
-					'no_found_rows' => true, //use for better query performance
-					'cache_results' => false, //use for better query performance
-					'ignore_sticky_posts' => 1, //ignore sticky posts
-				);
+			$args=array(
+				'tag__in' => $tag_ids, //use tag ids that are within $tag_ids array
+				'post__not_in' => array($post->ID), //don’t retrieve current post
+				'post_type' => 'post', //specify post type to retrieve
+				'post_status' => 'publish', //retrieve only published posts
+				'posts_per_page' => 3, //specify number of related posts to show
+				'orderby' => array( 'comment_count' => 'DESC'), //how you want to order your posts
+				'no_found_rows' => true, //use for better query performance
+				'cache_results' => false, //use for better query performance
+				'ignore_sticky_posts' => 1, //ignore sticky posts
+			);
 
-			} else {
+		} else {
 	
-				// categories
-				$cats = get_the_category($post->ID);
+			// categories
+			$cats = get_the_category($post->ID);
 	
-				$args=array(
-					'category__in' => $cats[0],
-					'post__not_in' => array($post->ID),
-					'post_type' => 'post',
-					'post_status' => 'publish',
-					'posts_per_page' => 3,
-					'orderby' => array('comment_count' => 'DESC'),
-					'no_found_rows' => true,
-					'cache_results' => false,
-					'ignore_sticky_posts' => 1,
-				);
+			$args=array(
+				'category__in' => $cats[0],
+				'post__not_in' => array($post->ID),
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'posts_per_page' => 3,
+				'orderby' => array('comment_count' => 'DESC'),
+				'no_found_rows' => true,
+				'cache_results' => false,
+				'ignore_sticky_posts' => 1,
+			);
 			
-			}
-
-			$query_related_posts = new \WP_query( $args );
-
-			if( $query_related_posts->have_posts() ) { ?>
-		
-				<div class="c-related-posts row">
-					<div class="col-12">
-						<h3 class="pb-2 border-bottom"><?php esc_html_e( 'Related Posts', 'conversions' ); ?></h3>
-					</div>
-
-					<?php while( $query_related_posts->have_posts() ) {
-						$query_related_posts->the_post(); ?>
-
-						<!-- Post item -->
-  						<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
-    						<article class="card shadow-sm h-100 mb-3">
-      			
-            					<!-- Post image -->
-      							<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
-      								<?php if ( has_post_thumbnail() ) : ?>
-        								<?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
-    								<?php else : ?>
-        								<img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
-    								<?php endif; ?>
-      							</a>
-      							<div class="card-body pb-1">
-        							<h4 class="h6">
-          		  						<a href="<?php echo esc_url( get_permalink() ); ?>">
-                  							<?php the_title(); ?>
-          		  						</a>
-        							</h4>
-        							<p class="text-muted">
-          								<?php
-          									$related_content = strip_shortcodes( get_the_content() );
-          									echo wp_trim_words( $related_content, 15, '...' ); 
-          								?>
-          							</p>
-      							</div>
-      			
-    						</article>
-  						</div>
-  						<!-- End Post Item -->
-	
-					<?php }
-				echo '</div>';
-			}
-			wp_reset_postdata();
 		}
+
+		$query_related_posts = new \WP_query( $args );
+
+		if( $query_related_posts->have_posts() ) { ?>
+		
+			<div class="c-related-posts row">
+				<div class="col-12">
+					<h3 class="pb-2 border-bottom"><?php esc_html_e( 'Related Posts', 'conversions' ); ?></h3>
+				</div>
+
+				<?php while( $query_related_posts->have_posts() ) {
+					$query_related_posts->the_post(); ?>
+
+					<!-- Post item -->
+  					<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
+    					<article class="card shadow-sm h-100 mb-3">
+      			
+            				<!-- Post image -->
+      						<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
+      							<?php if ( has_post_thumbnail() ) : ?>
+        							<?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
+    							<?php else : ?>
+        							<img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
+    							<?php endif; ?>
+      						</a>
+      						<div class="card-body pb-1">
+        						<h4 class="h6">
+          		  					<a href="<?php echo esc_url( get_permalink() ); ?>">
+                  						<?php the_title(); ?>
+          		  					</a>
+        						</h4>
+        						<p class="text-muted">
+          							<?php
+          								$related_content = strip_shortcodes( get_the_content() );
+          								echo wp_trim_words( $related_content, 15, '...' ); 
+          							?>
+          						</p>
+      						</div>
+      			
+    					</article>
+  					</div>
+  					<!-- End Post Item -->
+	
+				<?php }
+			echo '</div>';
+		}
+		wp_reset_postdata();
 	}
 
 	/**

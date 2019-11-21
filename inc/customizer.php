@@ -978,6 +978,25 @@ namespace conversions
 						'priority'    => '6',
 					)
 			) );
+			$wp_customize->add_setting( 'conversions_blog_postnav', array(
+				'default'       => true,
+				'type'          => 'theme_mod',
+				'capability'    => 'edit_theme_options',
+				'transport'     => 'refresh',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
+			) );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_blog_postnav', array(
+						'label'       => __( 'Show post navigation', 'conversions' ),
+						'description' => __( 'Enable post navigation on single posts.', 'conversions' ),
+						'section'     => 'conversions_blog',
+						'settings'    => 'conversions_blog_postnav',
+						'type'        => 'checkbox',
+						'priority'    => '7',
+					)
+			) );
 
 			//-----------------------------------------------------
 			// Featured image section
