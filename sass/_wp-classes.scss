@@ -54,18 +54,28 @@ blockquote {
 cite {
   color: #555;
 }
+pre {
+  background-color: rgba(0,0,0,.05);
+  padding: 1em;
+  max-width: 100%;
+  overflow: auto;
+  color: #444;
+  code {
+    padding: 0;
+    background: transparent;
+    color: #444;
+  }
+}
 code {
   background-color: rgba(0,0,0,.05);
   padding: .202em .5407911001em;
   color: #444;
 }
-pre {
-  color: #444;
-  background-color: rgba(0,0,0,.05);
-  padding: 1em;
-  max-width: 100%;
-  overflow: auto;
+// demo bootstrap kitchen sink
+pre.conversions__bsks {
+  margin-top: 1rem;
 }
+
 table#wp-calendar {
   caption {
     text-align: center;

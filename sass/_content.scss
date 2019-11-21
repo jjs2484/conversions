@@ -23,7 +23,8 @@ input[type="file"] {
 }
 
 // Fonts color
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { 
+.h1, .h2, .h3, .h4, .h5, .h6, 
+h1, h2, h3, h4, h5, h6 { 
   color: #222222;
 }
 body, input, select, textarea { 
@@ -34,6 +35,7 @@ body, input, select, textarea {
 .wrapper {
   padding: 2rem 0 3rem; 
   overflow: hidden;
+  word-wrap: break-word;
 }
 
 // Container width
@@ -41,12 +43,15 @@ body, input, select, textarea {
   max-width: 1140px;
 }
 
-// Entry content clearfix
-article .entry-content {
-  &::after {
-    display: block;
-    clear: both;
-    content: "";
+// Content
+article {
+  // content clearfix
+  .entry-content {
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
   }
 }
 
@@ -137,9 +142,6 @@ section.c-hero {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 2rem 0;
-  h1 {
-    word-wrap: break-word;
-  }
   p.lead.c-hero__description {
     margin-bottom: 1.5rem;
   }
@@ -457,4 +459,21 @@ section.c-testimonials {
   p {
     font-size: .9rem;
   }
+}
+
+// card title
+.card-title {
+  color: inherit;
+}
+
+// list group
+.list-group-item.active {
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { 
+    color: inherit;
+  }
+}
+
+// Progress demo
+.progress.bd-example + .progress.bd-example {
+  margin-top: 1rem
 }
