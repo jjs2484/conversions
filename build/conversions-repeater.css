@@ -298,7 +298,7 @@ button.customizer-repeater-new-field:before {
   color: #008ec2;
   box-shadow: none; }
 
-.icp {
+input.icp {
   padding-left: 30px; }
 
 .icp-container .input-group-addon {
