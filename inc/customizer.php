@@ -1874,7 +1874,7 @@ namespace conversions
       			'label'      => __('Description', 'conversions'),
 				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
       			'section' => 'conversions_homepage_pricing',
-      			'settings'   => 'conversions_testimonials_desc',
+      			'settings'   => 'conversions_pricing_desc',
       			'priority' => 40,
       			'type' => 'textarea',
       			'capability' => 'edit_theme_options',
