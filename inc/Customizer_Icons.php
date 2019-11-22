@@ -67,7 +67,7 @@
 				<i data-type="iconpicker-item" title=".fa-plane" class="fas fa-plane"></i>
 				<i data-type="iconpicker-item" title=".fa-rocket" class="fas fa-rocket"></i>
 				<i data-type="iconpicker-item" title=".fa-puzzle-piece" class="fas fa-puzzle-piece"></i>
-				<i data-type="iconpicker-item" title=".fa-search" class="fas fa-search">
+				<i data-type="iconpicker-item" title=".fa-search" class="fas fa-search"></i>
 				<i data-type="iconpicker-item" title=".fa-shield-alt" class="fas fa-shield-alt"></i>
 				<i data-type="iconpicker-item" title=".fa-shopping-cart" class="fas fa-shopping-cart"></i>
 				<i data-type="iconpicker-item" title=".fa-tag" class="fas fa-tag"></i>
