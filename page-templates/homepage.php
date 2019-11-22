@@ -210,7 +210,7 @@ get_header();
                     }
 
                     if ( !empty( $repeater_item->linktext ) ) {
-                      echo sprintf( '<a class="btn btn-link" href="%s">%s</a>', 
+                      echo sprintf( '<a class="c-features__block-link" href="%s">%s</a>', 
                         esc_url( $repeater_item->link ), 
                         esc_html( $repeater_item->linktext )
                       );
