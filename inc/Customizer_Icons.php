@@ -14,6 +14,7 @@
 		<div class="iconpicker">
 			<div class="iconpicker-items">
 
+				<i data-type="iconpicker-item" title=".fa-amazon" class="fab fa-amazon"></i>
 				<i data-type="iconpicker-item" title=".fa-ambulance" class="fas fa-ambulance"></i>
 				<i data-type="iconpicker-item" title=".fa-american-sign-language-interpreting" class="fas fa-american-sign-language-interpreting"></i>
 				<i data-type="iconpicker-item" title=".fa-android" class="fab fa-android"></i>
@@ -21,16 +22,15 @@
 				<i data-type="iconpicker-item" title=".fa-archive" class="fas fa-archive"></i>
 				<i data-type="iconpicker-item" title=".fa-behance" class="fab fa-behance" data-icon=""></i>
 				<i data-type="iconpicker-item" title=".fa-behance-square" class="fab fa-behance-square"></i>
+				<i data-type="iconpicker-item" title=".fa-bitbucket" class="fab fa-bitbucket"></i>
 				<i data-type="iconpicker-item" title=".fa-chart-area" class="fas fa-chart-area"></i>
-				<i data-type="iconpicker-item" title=".fa-asterisk" class="fas fa-asterisk"></i>
 				<i data-type="iconpicker-item" title=".fa-car" class="fas fa-car"></i>
 				<i data-type="iconpicker-item" title=".fa-balance-scale" class="fas fa-balance-scale"></i>
 				<i data-type="iconpicker-item" title=".fa-ban" class="fas fa-ban"></i>
 				<i data-type="iconpicker-item" title=".fa-university" class="fas fa-university"></i>
 				<i data-type="iconpicker-item" title=".fa-bicycle" class="fas fa-bicycle"></i>
 				<i data-type="iconpicker-item" title=".fa-birthday-cake" class="fas fa-birthday-cake"></i>
-				<i data-type="iconpicker-item" title=".fa-btc" class="fab fa-btc"></i>
-				<i data-type="iconpicker-item" title=".fa-black-tie" class="fab fa-black-tie"></i>
+				<i data-type="iconpicker-item" title=".fa-bitcoin" class="fab fa-bitcoin"></i>
 				<i data-type="iconpicker-item" title=".fa-bookmark" class="fas fa-bookmark"></i>
 				<i data-type="iconpicker-item" title=".fa-briefcase" class="fas fa-briefcase"></i>
 				<i data-type="iconpicker-item" title=".fa-bus" class="fas fa-bus"></i>
@@ -48,20 +48,20 @@
 				<i data-type="iconpicker-item" title=".fa-facebook-square" class="fab fa-facebook-square"></i>
 				<i data-type="iconpicker-item" title=".fa-female" class="fas fa-female"></i>
 				<i data-type="iconpicker-item" title=".fa-fire-extinguisher" class="fas fa-fire-extinguisher"></i>
-				<i data-type="iconpicker-item" title=".fa-glass-martini" class="fas fa-glass-martini"></i>
+				<i data-type="iconpicker-item" title=".fa-github" class="fab fa-github"></i>
+				<i data-type="iconpicker-item" title=".fa-github-alt" class="fab fa-github-alt"></i>
 				<i data-type="iconpicker-item" title=".fa-globe" class="fas fa-globe"></i>
-				<i data-type="iconpicker-item" title=".fa-google-plus-g" class="fab fa-google-plus-g"></i>
-				<i data-type="iconpicker-item" title=".fa-google-plus-square" class="fab fa-google-plus-square"></i>
 				<i data-type="iconpicker-item" title=".fa-graduation-cap" class="fas fa-graduation-cap"></i>
 				<i data-type="iconpicker-item" title=".fa-heartbeat" class="fas fa-heartbeat"></i>
 				<i data-type="iconpicker-item" title=".fa-heart" class="fas fa-heart"></i>
-				<i data-type="iconpicker-item" title=".fa-bed" class="fas fa-bed"></i>
 				<i data-type="iconpicker-item" title=".fa-hourglass" class="fas fa-hourglass"></i>
 				<i data-type="iconpicker-item" title=".fa-home" class="fas fa-home"></i>
+				<i data-type="iconpicker-item" title=".fa-instagram" class="fab fa-instagram"></i>
 				<i data-type="iconpicker-item" title=".fa-gavel" class="fas fa-gavel"></i>
 				<i data-type="iconpicker-item" title=".fa-linkedin-in" class="fab fa-linkedin-in"></i>
 				<i data-type="iconpicker-item" title=".fa-linkedin" class="fab fa-linkedin"></i>
 				<i data-type="iconpicker-item" title=".fa-lock" class="fas fa-lock"></i>
+				<i data-type="iconpicker-item" title=".fa-medium" class="fab fa-medium"></i>
 				<i data-type="iconpicker-item" title=".fa-mobile-alt" class="fas fa-mobile-alt"></i>
 				<i data-type="iconpicker-item" title=".fa-paint-brush" class="fas fa-paint-brush"></i>
 				<i data-type="iconpicker-item" title=".fa-plane" class="fas fa-plane"></i>
