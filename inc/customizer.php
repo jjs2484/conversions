@@ -1060,7 +1060,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_featured_img_overlay', array(
-				'default'           => '.4',
+				'default'           => '.5',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -1283,7 +1283,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_content_position', array(
-				'default'           => 'col-lg-10 d-flex flex-column text-center mx-auto',
+				'default'           => 'col-lg-6',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
@@ -1358,7 +1358,7 @@ namespace conversions
 				'type'       => 'color',
 			) );
 			$wp_customize->add_setting( 'conversions_hh_img_overlay', array(
-				'default'           => '.4',
+				'default'           => '.5',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_select',
 				'capability'        => 'edit_theme_options',
