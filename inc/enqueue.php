@@ -16,6 +16,8 @@ class Enqueue
 	{
 		add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_block_editor_assets' ] );
+add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_block_editor_inline' ], 99 );
+
 		add_action( 'tiny_mce_before_init', [ $this, 'tiny_mce_before_init' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ] );
 	}
@@ -76,6 +78,26 @@ class Enqueue
 				wp_register_style( 'conversions-gutenberg-body-font', '//fonts.googleapis.com/css?family='. esc_html($body_font) );
 				wp_enqueue_style( 'conversions-gutenberg-body-font' );
 			}
+		}
+
+	}
+
+	/**
+		@brief		enqueue_block_editor_inline
+		@since		2019-11-24 04:48:17
+		- hooks inline CSS styles on the GB editor stylesheet id: conversions-gutenberg
+	**/
+	public function enqueue_block_editor_inline()
+	{
+
+		// Are Google fonts enabled?
+		if ( get_theme_mod( 'conversions_google_fonts', true ) == true ) {
+
+			// Enqueue headings font
+			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
+
+			// Enqueue body font
+			$body_font = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
 
 			// create variables for inline styles
 			$headings_font_pieces = explode(":", $headings_font);
@@ -147,6 +169,7 @@ class Enqueue
 			}
 		';
 		wp_add_inline_style( 'conversions-gutenberg', $custom_gb_css );
+
 	}
 
 	/**
