@@ -12207,7 +12207,10 @@ section.c-testimonials .c-testimonials__quote {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 95%; }
+  font-size: 95%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
   @media (min-width: 768px) {
     #wrapper-footer .copyright {
       -webkit-box-pack: start;
@@ -12223,7 +12226,13 @@ section.c-testimonials .c-testimonials__quote {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: .75rem 0 0 0; }
+  margin: .75rem 0 0 0;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  @media (max-width: 767.98px) {
+    #wrapper-footer .social-media-icons {
+      text-align: center; } }
   @media (min-width: 768px) {
     #wrapper-footer .social-media-icons {
       -webkit-box-pack: end;

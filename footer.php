@@ -30,7 +30,8 @@ if ( get_theme_mod( 'conversions_hcta_state', false ) == true ) {
 						<div class="copyright col-md">
 
 							<?php 
-								if ( ! empty( get_theme_mod( 'conversions_copyright_text' ) ) ) {
+								if ( ! empty( get_theme_mod( 'conversions_copyright_text' ) ) ) 
+								{
 									$copyright_text = get_theme_mod( 'conversions_copyright_text' );
 								} else {
 									$copyright_text = get_bloginfo( 'name' );
@@ -42,10 +43,10 @@ if ( get_theme_mod( 'conversions_hcta_state', false ) == true ) {
                   				);
 								
 								if ( function_exists( 'the_privacy_policy_link' ) ) {
-									the_privacy_policy_link( '&nbsp;&bull;&nbsp;', '<span role="separator" aria-hidden="true"></span>' );
+									the_privacy_policy_link( '&nbsp;&bull;&nbsp;' );
 								} 
 
-								echo sprintf( '&nbsp;&bull;&nbsp;%s&nbsp;<a href="%s">%s</a>', 
+								echo sprintf( '&nbsp;&bull;&nbsp;<span class="conversions-powered">%s&nbsp;<a href="%s">%s</a></span>', 
                     				esc_html__( 'Powered by', 'conversions' ),
                     				esc_url( 'https://conversionswp.com' ),
                     				esc_html__( 'Conversions', 'conversions' )
