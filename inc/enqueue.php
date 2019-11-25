@@ -16,7 +16,7 @@ class Enqueue
 	{
 		add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_block_editor_assets' ] );
-add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_block_editor_inline' ], 99 );
+		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_block_editor_inline' ], 99 );
 
 		add_action( 'tiny_mce_before_init', [ $this, 'tiny_mce_before_init' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ] );
@@ -54,8 +54,6 @@ add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_block_editor_inline
 	**/
 	public function enqueue_block_editor_assets()
 	{
-		// Editor scripts
-		wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/js/editor.js' ), true );
 
 		// Editor styles
 		wp_register_style( 'conversions-gutenberg', get_stylesheet_directory_uri() . '/build/gutenberg-editor-style.min.css' );

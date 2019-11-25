@@ -174,60 +174,111 @@ $colors: (
   }
 }
 
+$block-btns: (
+  (primary, #fff, #007bff, #007bff, #fff, #0069d9, #0069d9),
+  (secondary, #fff, #6c757d, #6c757d, #fff, #5a6268, #5a6268),
+  (success, #fff, #019875, #019875, #fff, #017258, #017258),
+  (danger, #fff, #dc3545, #dc3545, #fff, #c82333, #c82333),
+  (warning, #212529, #ffc107, #ffc107, #212529, #e0a800, #e0a800),
+  (info, #fff, #17a2b8, #17a2b8, #fff, #138496, #138496),
+  (light, #212529, #f8f9fa, #f8f9fa, #212529, #e2e6ea, #e2e6ea),
+  (dark, #fff, #151b26, #151b26, #fff, #07090d, #07090d)
+);
+
 // Button block
 .wp-block-button {
 
   // universal button styles
   .wp-block-button__link {
-    border-radius: .25rem;
     &:hover {
       text-decoration: none;
     }
     @extend .btn;
   }
   
-  // button styles if none defined
+  // button styles if no button type
   .wp-block-button__link {
     &:not(.has-background) {
-      @extend .btn-primary;
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+      &:hover {
+        color: #fff !important;
+        background-color: #0069d9 !important;
+        border-color: #0069d9 !important;
+      }
     }
-    // Get user defined colors
-    @each $name, $color in $colors {
-      &.has-#{$name}-background-color {
-        @extend .btn-#{$name};
-      }   
+    // User defined colors with no button type
+    @each $label, $color, $bg, $border, $hover-color, $hover-bg, $hover-border in $block-btns {
+      &.has-#{$label}-background-color {
+        color: $color;
+        background-color: $bg;
+        border-color: $border;
+      }
+      &.has-#{$label}-background-color:hover {
+        color: $hover-color !important;
+        background-color: $hover-bg !important;
+        border-color: $hover-border !important;
+      }
     }
   }
 
-  &.is-style-c-default {
+  &.is-style-fill {
     .wp-block-button__link {
       &:not(.has-background) {
-        @extend .btn-primary;
+        color: #fff !important;
+        background-color: #007bff !important;
+        border-color: #007bff !important;
+        &:hover {
+          color: #fff !important;
+          background-color: #0069d9 !important;
+          border-color: #0069d9 !important;
+        }
       }
       // Get user defined colors
-      @each $name, $color in $colors {
-        &.has-#{$name}-background-color {
-          @extend .btn-#{$name};
-        }   
-      }
-    }
-  }
-
-  &.is-style-c-full-width {
-  	display: block;
-    .wp-block-button__link {
-      @extend .btn-block;
-      &:not(.has-background) {
-        @extend .btn-primary;
-      }
-      // Get user defined colors
-      @each $name, $color in $colors {
-        &.has-#{$name}-background-color {
-          @extend .btn-#{$name};
+      @each $label, $color, $bg, $border, $hover-color, $hover-bg, $hover-border in $block-btns {
+        &.has-#{$label}-background-color {
+          color: $color !important;
+          background-color: $bg !important;
+          border-color: $border !important;
+        }
+        &.has-#{$label}-background-color:hover {
+          color: $hover-color !important;
+          background-color: $hover-bg !important;
+          border-color: $hover-border !important;
         }
       }
     }
   }
+
+  &.is-style-outline {
+    .wp-block-button__link {
+      &:not(.has-background) {
+        color: #007bff !important;
+        background-color: transparent !important;
+        border-color: #007bff !important;
+        &:hover {
+          color: #fff !important;
+          background-color: #007bff !important;
+          border-color: #007bff !important;
+        }
+      }
+      // Get user defined colors
+      @each $label, $color, $bg, $border, $hover-color, $hover-bg, $hover-border in $block-btns {
+        &.has-#{$label}-background-color {
+          color: $bg;
+          background-color: transparent !important;
+          border-color: $border;
+        }
+        &.has-#{$label}-background-color:hover {
+          color: $color !important;
+          background-color: $bg !important;
+          border-color: $border !important;
+        }
+      }
+    }
+  }
+
 }
 
 .wc-block-grid .wc-block-grid__products .wc-block-grid__product {
