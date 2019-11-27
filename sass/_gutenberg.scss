@@ -24,6 +24,31 @@
   }
 }
 
+// Block quote
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+  padding: 10px 20px;
+  p {
+    font-style: normal;
+  }
+  cite {
+    font-size: 80%;
+    text-align: left;
+    font-style: normal;
+  }
+}
+
+// figcaption
+.wp-block-audio figcaption,
+.wp-block-image figcaption, 
+.wp-block-embed figcaption {
+  margin-top: .5em;
+  margin-bottom: 1em;
+  color: #555d66;
+  font-size: 13px;
+  text-align: center;
+}
+
 // Block cover inner text width
 .wp-block-cover-image .wp-block-cover-image-text, 
 .wp-block-cover-image .wp-block-cover-text, 
@@ -48,8 +73,13 @@
 }
 
 // Pull quote cite color
-.wp-block-pullquote cite {
-  color: #555;
+.wp-block-pullquote {
+  &.alignfull blockquote {
+    border-left: 0;
+  }
+  cite {
+    color: #555;
+  }
 }
 
 // Gutenberg color options
@@ -89,6 +119,11 @@ $block-btns: (
 
 // Button block
 .wp-block-button {
+
+  // align center
+  &.aligncenter {
+    margin-bottom: 1rem;
+  }
 
   // universal button styles
   .wp-block-button__link {

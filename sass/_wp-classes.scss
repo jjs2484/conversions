@@ -46,9 +46,10 @@ blockquote {
   cite {
     display: block;
     font-size: 80%;
-    line-height: 1.42857143;
+    line-height: 1.4;
     color: #555;
     margin-top: .5rem;
+    font-style: normal;
   }
 }
 cite {
@@ -59,17 +60,17 @@ pre {
   padding: 1em;
   max-width: 100%;
   overflow: auto;
-  color: #444;
+  color: #222;
   code {
     padding: 0;
     background: transparent;
-    color: #444;
+    color: #222;
   }
 }
 code {
   background-color: rgba(0,0,0,.05);
   padding: .202em .5407911001em;
-  color: #444;
+  color: #222;
 }
 // demo bootstrap kitchen sink
 pre.conversions__bsks {
