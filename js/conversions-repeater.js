@@ -168,8 +168,8 @@ function customizer_repeater_refresh_general_control_values() {
 
 jQuery(document).ready(function () {
     'use strict';
-    var theme_conrols = jQuery('#customize-theme-controls');
-    theme_conrols.on('click', '.customizer-repeater-customize-control-title', function () {
+    var theme_controls = jQuery('#customize-theme-controls');
+    theme_controls.on('click', '.customizer-repeater-customize-control-title', function () {
         jQuery(this).next().slideToggle('medium', function () {
             if (jQuery(this).is(':visible')){
                 jQuery(this).prev().addClass('repeater-expanded');
@@ -180,12 +180,12 @@ jQuery(document).ready(function () {
         });
     });
 
-    theme_conrols.on('change', '.icp',function(){
+    theme_controls.on('change', '.icp',function(){
         customizer_repeater_refresh_general_control_values();
         return false;
     });
 
-    theme_conrols.on('change', '.customizer-repeater-image-choice', function () {
+    theme_controls.on('change', '.customizer-repeater-image-choice', function () {
         if (jQuery(this).val() === 'customizer_repeater_image') {
             jQuery(this).parent().parent().find('.social-repeater-general-control-icon').hide();
             jQuery(this).parent().parent().find('.customizer-repeater-image-control').show();
@@ -218,7 +218,7 @@ jQuery(document).ready(function () {
      * This adds a new box to repeater
      *
      */
-    theme_conrols.on('click', '.customizer-repeater-new-field', function () {
+    theme_controls.on('click', '.customizer-repeater-new-field', function () {
         var th = jQuery(this).parent();
         var id = 'customizer-repeater-' + customizer_repeater_uniqid();
         if (typeof th !== 'undefined') {
@@ -293,7 +293,7 @@ jQuery(document).ready(function () {
     });
 
 
-    theme_conrols.on('click', '.social-repeater-general-control-remove-field', function () {
+    theme_controls.on('click', '.social-repeater-general-control-remove-field', function () {
         if (typeof    jQuery(this).parent() !== 'undefined') {
             jQuery(this).parent().hide(500, function(){
                 jQuery(this).parent().remove();
@@ -305,29 +305,29 @@ jQuery(document).ready(function () {
     });
 
 
-    theme_conrols.on('keyup', '.customizer-repeater-title-control', function () {
+    theme_controls.on('keyup input paste', '.customizer-repeater-title-control', function () {
         customizer_repeater_refresh_general_control_values();
     });
 
     jQuery('input.customizer-repeater-color-control').wpColorPicker(color_options);
 
-    theme_conrols.on('keyup', '.customizer-repeater-subtitle-control', function () {
+    theme_controls.on('keyup input paste', '.customizer-repeater-subtitle-control', function () {
         customizer_repeater_refresh_general_control_values();
     });
 
-    theme_conrols.on('keyup', '.customizer-repeater-subtitle2-control', function () {
+    theme_controls.on('keyup input paste', '.customizer-repeater-subtitle2-control', function () {
         customizer_repeater_refresh_general_control_values();
     });
 
-    theme_conrols.on('keyup', '.customizer-repeater-text-control', function () {
+    theme_controls.on('keyup input paste', '.customizer-repeater-text-control', function () {
         customizer_repeater_refresh_general_control_values();
     });
 
-    theme_conrols.on('keyup', '.customizer-repeater-linktext-control', function () {
+    theme_controls.on('keyup input paste', '.customizer-repeater-linktext-control', function () {
         customizer_repeater_refresh_general_control_values();
     });
 
-    theme_conrols.on('keyup', '.customizer-repeater-link-control', function () {
+    theme_controls.on('keyup input paste', '.customizer-repeater-link-control', function () {
         customizer_repeater_refresh_general_control_values();
     });
 
@@ -342,7 +342,7 @@ jQuery(document).ready(function () {
 
 
     /*----------------- Feature Repeater ---------------------*/
-    theme_conrols.on('click', '.feature-repeater-add-feature-item', function (event) {
+    theme_controls.on('click', '.feature-repeater-add-feature-item', function (event) {
         event.preventDefault();
         var th = jQuery(this).parent();
         var id = 'customizer-repeater-feature-repeater-' + customizer_repeater_uniqid();
@@ -358,7 +358,7 @@ jQuery(document).ready(function () {
         return false;
     });
 
-    theme_conrols.on('click', '.feature-repeater-remove-feature-item', function (event) {
+    theme_controls.on('click', '.feature-repeater-remove-feature-item', function (event) {
         event.preventDefault();
         var th = jQuery(this).parent();
         var repeater = jQuery(this).parent().parent();
@@ -367,7 +367,7 @@ jQuery(document).ready(function () {
         return false;
     });
 
-    theme_conrols.on('keyup', '.customizer-repeater-feature-repeater-text', function (event) {
+    theme_controls.on('keyup input paste', '.customizer-repeater-feature-repeater-text', function (event) {
         event.preventDefault();
         var repeater = jQuery(this).parent().parent();
         customizer_repeater_refresh_features(repeater);
