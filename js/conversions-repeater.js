@@ -367,7 +367,7 @@ jQuery(document).ready(function () {
         return false;
     });
 
-    theme_controls.on('keyup input paste', '.customizer-repeater-feature-repeater-text', function (event) {
+    theme_controls.on('keyup', '.customizer-repeater-feature-repeater-text', function (event) {
         event.preventDefault();
         var repeater = jQuery(this).parent().parent();
         customizer_repeater_refresh_features(repeater);
