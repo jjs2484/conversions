@@ -180,9 +180,15 @@ jQuery(document).ready(function () {
         });
     });
 
-    theme_controls.on('change', '.icp',function(){
-        customizer_repeater_refresh_general_control_values();
-        return false;
+    theme_controls.on('change paste', '.icp', function() {
+        var $icp = jQuery( this );
+        setTimeout( function()
+        {
+            var value = $icp.val();
+            var $icon_container = $icp.closest( '.social-repeater-general-control-icon' );
+            jQuery( '.input-group-addon .cr__icon', $icon_container ).attr( 'class', value );
+            customizer_repeater_refresh_general_control_values();
+        } );
     });
 
     theme_controls.on('change', '.customizer-repeater-image-choice', function () {
@@ -308,8 +314,18 @@ jQuery(document).ready(function () {
     theme_controls.on('keyup input paste', '.customizer-repeater-title-control', function () {
         customizer_repeater_refresh_general_control_values();
     });
-
-    jQuery('input.customizer-repeater-color-control').wpColorPicker(color_options);
+    
+    jQuery('input.customizer-repeater-color-control').on( 'paste', function()
+    {
+        var $the_color_picker = jQuery( this );
+        setTimeout( function()
+        {
+            // Get the value
+            var value = $the_color_picker.val();
+            // And tell the wpcolorpicker control to set it to the control.
+            $the_color_picker.wpColorPicker('color', value);
+        }, 500 );
+    } ).wpColorPicker(color_options);
 
     theme_controls.on('keyup input paste', '.customizer-repeater-subtitle-control', function () {
         customizer_repeater_refresh_general_control_values();
@@ -372,6 +388,14 @@ jQuery(document).ready(function () {
         var repeater = jQuery(this).parent().parent();
         customizer_repeater_refresh_features(repeater);
         return false;
+    });
+
+    theme_controls.on('paste', '.customizer-repeater-feature-repeater-text', function () {
+        var repeater = jQuery(this).parent().parent();
+        setTimeout( function()
+        {
+            customizer_repeater_refresh_features(repeater);
+        } );
     });
 
 });

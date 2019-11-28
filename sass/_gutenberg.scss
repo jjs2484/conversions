@@ -49,7 +49,7 @@
   text-align: center;
 }
 
-// Block cover inner text width
+// Block cover
 .wp-block-cover-image .wp-block-cover-image-text, 
 .wp-block-cover-image .wp-block-cover-text, 
 .wp-block-cover-image h2, 
@@ -65,6 +65,25 @@
 .wp-block-cover h5,
 .wp-block-cover h6 {
   max-width: 100%;
+}
+
+.wp-block-cover-image .wp-block-subhead:not(.has-text-color), 
+.wp-block-cover-image h1:not(.has-text-color), 
+.wp-block-cover-image h2:not(.has-text-color), 
+.wp-block-cover-image h3:not(.has-text-color), 
+.wp-block-cover-image h4:not(.has-text-color), 
+.wp-block-cover-image h5:not(.has-text-color), 
+.wp-block-cover-image h6:not(.has-text-color), 
+.wp-block-cover-image p:not(.has-text-color), 
+.wp-block-cover .wp-block-subhead:not(.has-text-color), 
+.wp-block-cover h1:not(.has-text-color), 
+.wp-block-cover h2:not(.has-text-color), 
+.wp-block-cover h3:not(.has-text-color), 
+.wp-block-cover h4:not(.has-text-color), 
+.wp-block-cover h5:not(.has-text-color), 
+.wp-block-cover h6:not(.has-text-color), 
+.wp-block-cover p:not(.has-text-color) {
+  color: #f8f9f9;
 }
 
 // Calender widget
