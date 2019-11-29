@@ -16,6 +16,16 @@
     max-width: none;
 }
 
+// Alignments
+.editor-styles-wrapper {
+  .alignleft {
+    margin-right: 1.5em;
+  }
+  .alignright {
+    margin-left: 1.5em;
+  }
+}
+
 // Titles
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
@@ -92,23 +102,31 @@ code {
 }
 
 // Blockquotes block
-blockquote.wp-block-quote,
-blockquote.wp-block-quote.is-large, 
-blockquote.wp-block-quote.is-style-large {
-  padding: 10px 20px;
-  border-left: 5px solid #aaa;
-  font-style: normal;
-  .wp-block-quote__citation {
-    color: #555;
-    font-size: 80%;
-    margin-top: .5em;
-    line-height: 1.4;
+blockquote {
+  &.wp-block-quote,
+  &.wp-block-quote.is-large, 
+  &.wp-block-quote.is-style-large {
+    padding: 16px 24px;
+    border-left: 5px solid #aaa;
+    font-style: normal;
+    
+    .wp-block-quote__citation {
+      color: #555;
+      font-size: 80%;
+      margin-top: .5em;
+      line-height: 1.4;
+      font-style: normal;
+    }
+    p {
+      font-style: normal;
+    }
+  }
+  &.wp-block-quote.has-text-align-right {
+    border-left: none;
+    border-right: 5px solid #aaa;
+    padding: 16px 24px;
     font-style: normal;
   }
-}
-.wp-block-quote.is-large p, 
-.wp-block-quote.is-style-large p {
-  font-style: normal;
 }
 
 // Pullquote
@@ -117,7 +135,7 @@ blockquote.wp-block-quote.is-style-large {
   border-top: 0;
   border-bottom: 0;
   blockquote {
-    padding: 10px 20px;
+    padding: 16px 24px;
     border-left: 5px solid #aaa;
     p {
       margin-bottom: 1rem;
@@ -127,10 +145,12 @@ blockquote.wp-block-quote.is-style-large {
     color: #555;
     text-transform: none;
   }
+  &.is-style-solid-color blockquote {
+    border: 0;
+  }
 }
-// Pullquote full
 .wp-block[data-type="core/pullquote"][data-align="full"] blockquote {
-  border-left: 0;
+  border: 0;
   margin: 1em 0;
 }
 
@@ -148,7 +168,7 @@ blockquote.wp-block-quote.is-style-large {
   // Blockquote
   blockquote {
     border-left: 5px solid #aaa;
-    padding: 10px 20px;
+    padding: 16px 24px;
     margin-left: 0;
   }
   // Definitions

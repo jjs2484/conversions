@@ -396,6 +396,11 @@ input[type="button"].btn-block {
 .wp-block[data-align="full"] {
   max-width: none; }
 
+.editor-styles-wrapper .alignleft {
+  margin-right: 1.5em; }
+.editor-styles-wrapper .alignright {
+  margin-left: 1.5em; }
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-weight: 500; }
 
@@ -464,23 +469,22 @@ code {
 .wp-block-cover h6 {
   max-width: 100%; }
 
-blockquote.wp-block-quote,
-blockquote.wp-block-quote.is-large,
-blockquote.wp-block-quote.is-style-large {
-  padding: 10px 20px;
+blockquote.wp-block-quote, blockquote.wp-block-quote.is-large, blockquote.wp-block-quote.is-style-large {
+  padding: 16px 24px;
   border-left: 5px solid #aaa;
   font-style: normal; }
-  blockquote.wp-block-quote .wp-block-quote__citation,
-  blockquote.wp-block-quote.is-large .wp-block-quote__citation,
-  blockquote.wp-block-quote.is-style-large .wp-block-quote__citation {
+  blockquote.wp-block-quote .wp-block-quote__citation, blockquote.wp-block-quote.is-large .wp-block-quote__citation, blockquote.wp-block-quote.is-style-large .wp-block-quote__citation {
     color: #555;
     font-size: 80%;
     margin-top: .5em;
     line-height: 1.4;
     font-style: normal; }
-
-.wp-block-quote.is-large p,
-.wp-block-quote.is-style-large p {
+  blockquote.wp-block-quote p, blockquote.wp-block-quote.is-large p, blockquote.wp-block-quote.is-style-large p {
+    font-style: normal; }
+blockquote.wp-block-quote.has-text-align-right {
+  border-left: none;
+  border-right: 5px solid #aaa;
+  padding: 16px 24px;
   font-style: normal; }
 
 .wp-block-pullquote {
@@ -488,16 +492,18 @@ blockquote.wp-block-quote.is-style-large {
   border-top: 0;
   border-bottom: 0; }
   .wp-block-pullquote blockquote {
-    padding: 10px 20px;
+    padding: 16px 24px;
     border-left: 5px solid #aaa; }
     .wp-block-pullquote blockquote p {
       margin-bottom: 1rem; }
   .wp-block-pullquote .wp-block-pullquote__citation, .wp-block-pullquote .wp-block-pullquote cite, .wp-block-pullquote .wp-block-pullquote footer {
     color: #555;
     text-transform: none; }
+  .wp-block-pullquote.is-style-solid-color blockquote {
+    border: 0; }
 
 .wp-block[data-type="core/pullquote"][data-align="full"] blockquote {
-  border-left: 0;
+  border: 0;
   margin: 1em 0; }
 
 .wp-block-freeform.block-library-rich-text__tinymce .h1, .wp-block-freeform.block-library-rich-text__tinymce .h2, .wp-block-freeform.block-library-rich-text__tinymce .h3, .wp-block-freeform.block-library-rich-text__tinymce .h4, .wp-block-freeform.block-library-rich-text__tinymce .h5, .wp-block-freeform.block-library-rich-text__tinymce .h6, .wp-block-freeform.block-library-rich-text__tinymce h1, .wp-block-freeform.block-library-rich-text__tinymce h2, .wp-block-freeform.block-library-rich-text__tinymce h3, .wp-block-freeform.block-library-rich-text__tinymce h4, .wp-block-freeform.block-library-rich-text__tinymce h5, .wp-block-freeform.block-library-rich-text__tinymce h6 {
@@ -507,7 +513,7 @@ blockquote.wp-block-quote.is-style-large {
   margin-bottom: 1rem; }
 .wp-block-freeform.block-library-rich-text__tinymce blockquote {
   border-left: 5px solid #aaa;
-  padding: 10px 20px;
+  padding: 16px 24px;
   margin-left: 0; }
 .wp-block-freeform.block-library-rich-text__tinymce dt {
   font-weight: 700; }

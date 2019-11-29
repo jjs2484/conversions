@@ -1,6 +1,7 @@
 // Gutenberg styles
-// Images
-#full-width-page-wrapper {
+// Full width
+#full-width-page-wrapper, 
+#primary.col-md-12.content-area {
   .alignfull {
     width: 100vw;
     max-width: 100vw;
@@ -24,17 +25,42 @@
   }
 }
 
-// Block quote
-.wp-block-quote.is-large,
-.wp-block-quote.is-style-large {
-  padding: 10px 20px;
-  p {
+// Blockquotes block
+blockquote {
+  &.wp-block-quote,
+  &.wp-block-quote.is-large, 
+  &.wp-block-quote.is-style-large {
+    padding: 16px 24px;
+    p {
+      font-style: normal;
+    }
+    cite {
+      font-size: 80%;
+      text-align: inherit;
+      font-style: normal;
+    }
+  }
+  &.wp-block-quote.has-text-align-right,
+  &[style*="text-align:right"] {
+    border-left: none;
+    border-right: 5px solid #aaa;
+    padding: 16px 24px;
     font-style: normal;
   }
+}
+
+// Pull quote cite color
+.wp-block-pullquote {
+  &.alignfull blockquote {
+    border-left: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   cite {
-    font-size: 80%;
-    text-align: left;
-    font-style: normal;
+    color: #555;
+  }
+  &.is-style-solid-color blockquote {
+    border: 0;
   }
 }
 
@@ -50,6 +76,10 @@
 }
 
 // Block cover
+.wp-block-cover {
+  margin-bottom: 1rem;
+}
+
 .wp-block-cover-image .wp-block-cover-image-text, 
 .wp-block-cover-image .wp-block-cover-text, 
 .wp-block-cover-image h2, 
@@ -91,14 +121,10 @@
   padding: 8px;
 }
 
-// Pull quote cite color
-.wp-block-pullquote {
-  &.alignfull blockquote {
-    border-left: 0;
-  }
-  cite {
-    color: #555;
-  }
+// Columns
+.wp-block-columns.alignfull, .alignfull:not(.has-background) .wp-block-columns {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 // Gutenberg color options
@@ -138,10 +164,16 @@ $block-btns: (
 
 // Button block
 .wp-block-button {
-
+  
+  // no alignment
+  margin-bottom: 1rem;
   // align center
   &.aligncenter {
     margin-bottom: 1rem;
+  }
+  // align left / right
+  &.alignleft, &.alignright {
+    margin-bottom: 0;
   }
 
   // universal button styles
