@@ -65,14 +65,19 @@ blockquote {
 }
 
 // figcaption
-.wp-block-audio figcaption,
-.wp-block-image figcaption, 
-.wp-block-embed figcaption {
-  margin-top: .5em;
-  margin-bottom: 1em;
-  color: #555d66;
-  font-size: 13px;
-  text-align: center;
+.wp-block-audio, .wp-block-image, .wp-block-embed, .wp-block-video {
+  figcaption {
+    margin-top: .5em;
+    margin-bottom: 1em;
+    color: #555d66;
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+// Embeds
+.wp-block-embed {
+  margin-bottom: 1rem;
 }
 
 // Block cover
@@ -116,9 +121,16 @@ blockquote {
   color: #f8f9f9;
 }
 
-// Calender widget
+// Calender
 .wp-block-calendar tbody td, .wp-block-calendar th {
   padding: 8px;
+}
+
+// Archive dropdown
+.wp-block-archives.wp-block-archives-dropdown select {
+  max-width: 20em;
+  font-size: 14px;
+  margin-bottom: 1rem;
 }
 
 // Columns

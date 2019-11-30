@@ -506,6 +506,9 @@ blockquote.wp-block-quote.has-text-align-right {
   border: 0;
   margin: 1em 0; }
 
+.wp-block-archives.wp-block-archives-dropdown select {
+  font-size: 14px; }
+
 .wp-block-freeform.block-library-rich-text__tinymce .h1, .wp-block-freeform.block-library-rich-text__tinymce .h2, .wp-block-freeform.block-library-rich-text__tinymce .h3, .wp-block-freeform.block-library-rich-text__tinymce .h4, .wp-block-freeform.block-library-rich-text__tinymce .h5, .wp-block-freeform.block-library-rich-text__tinymce .h6, .wp-block-freeform.block-library-rich-text__tinymce h1, .wp-block-freeform.block-library-rich-text__tinymce h2, .wp-block-freeform.block-library-rich-text__tinymce h3, .wp-block-freeform.block-library-rich-text__tinymce h4, .wp-block-freeform.block-library-rich-text__tinymce h5, .wp-block-freeform.block-library-rich-text__tinymce h6 {
   font-weight: 500; }
 .wp-block-freeform.block-library-rich-text__tinymce p {

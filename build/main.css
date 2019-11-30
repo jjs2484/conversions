@@ -12432,14 +12432,15 @@ blockquote.wp-block-quote.has-text-align-right, blockquote[style*="text-align:ri
 .wp-block-pullquote.is-style-solid-color blockquote {
   border: 0; }
 
-.wp-block-audio figcaption,
-.wp-block-image figcaption,
-.wp-block-embed figcaption {
+.wp-block-audio figcaption, .wp-block-image figcaption, .wp-block-embed figcaption, .wp-block-video figcaption {
   margin-top: .5em;
   margin-bottom: 1em;
   color: #555d66;
   font-size: 13px;
   text-align: center; }
+
+.wp-block-embed {
+  margin-bottom: 1rem; }
 
 .wp-block-cover {
   margin-bottom: 1rem; }
@@ -12480,6 +12481,11 @@ blockquote.wp-block-quote.has-text-align-right, blockquote[style*="text-align:ri
 
 .wp-block-calendar tbody td, .wp-block-calendar th {
   padding: 8px; }
+
+.wp-block-archives.wp-block-archives-dropdown select {
+  max-width: 20em;
+  font-size: 14px;
+  margin-bottom: 1rem; }
 
 .wp-block-columns.alignfull, .alignfull:not(.has-background) .wp-block-columns {
   padding-left: 2rem;

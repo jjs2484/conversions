@@ -154,6 +154,11 @@ blockquote {
   margin: 1em 0;
 }
 
+// archive dropdown
+.wp-block-archives.wp-block-archives-dropdown select {
+  font-size: 14px;
+}
+
 // Classic editor block
 .wp-block-freeform.block-library-rich-text__tinymce {
   // Titles
