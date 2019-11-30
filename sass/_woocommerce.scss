@@ -181,7 +181,13 @@ p.no-comments {
 			}
 		}
 	}
-	.woocommerce-breadcrumb a, .product_meta a {
+	.woocommerce-breadcrumb {
+		margin: 0 0 1.75em;
+		a {
+			color: $text-muted;
+		}
+	}
+	.product_meta a {
 		color: $text-muted;
 	}
 	.star-rating {
@@ -200,6 +206,22 @@ p.no-comments {
 		}
 	}
 }
+
+// Full width single product pages
+.single-product #primary.col-md-12.content-area div.product {
+	.woocommerce-product-gallery {
+		@media (min-width: 769px) {
+			width: 39%;
+			margin-right: 4%;
+		}
+	}
+	.summary.entry-summary {
+		@media (min-width: 769px) {
+			width: 56%;
+		}
+	}
+}
+
 
 // Cart page
 body.woocommerce-cart {
