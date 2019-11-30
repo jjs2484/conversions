@@ -326,7 +326,7 @@ get_header();
                           $cpricing_feature_count = 0;
                           foreach( $feature_repeater as $value ) {
                             // Output each feature
-                            echo sprintf( '<li id="c-pricing__feature-%1$s-%2$s">%3$s</li>', 
+                            echo sprintf( '<li id="c-pricing__t%1$s-f%2$s">%3$s</li>', 
                               esc_attr( $cpricing_table_count ),
                               esc_attr( $cpricing_feature_count ),
                               esc_html( $value->feature )
