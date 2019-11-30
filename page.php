@@ -8,6 +8,11 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+// Featured image styles
+if ( has_post_thumbnail( get_the_ID() ) ) {
+    conversions()->template->get_featured_image();
+}
+
 get_header();
 ?>
 
@@ -19,9 +24,6 @@ get_header();
 
 			<?php 
 				if ( has_post_thumbnail( get_the_ID() ) ) {
-					
-					// Inline featured image styles
-					conversions()->template->fullscreen_featured_image();
 					
 					// HTML for background image and title
     				echo '<div class="col-sm-12"><div class="conversions-hero-cover"><div class="conversions-hero-cover__inner-container"><h1 class="entry-title text-center">'.esc_html( get_the_title() ).'</h1></div></div></div>';

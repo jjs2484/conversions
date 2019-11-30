@@ -10,14 +10,15 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+// Featured image styles
+if ( has_post_thumbnail( get_the_ID() ) ) {
+    conversions()->template->get_featured_image();
+}
+
 get_header();
 ?>
 
 <div id="homepage-wrapper" class="wrapper">
-
-  <?php if ( has_post_thumbnail( get_the_ID() ) ) {
-    conversions()->template->fullscreen_featured_image();
-  } ?>
 
   <!-- Hero Section -->
 	<section class="c-hero d-flex align-items-center">

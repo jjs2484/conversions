@@ -321,6 +321,14 @@ class Template
 	}
 
 	/**
+		@brief		Get featured image
+		@since		2019-11-29 11:43:27
+	**/
+	public function get_featured_image() {
+		add_action( 'wp_head', [ $this, 'fullscreen_featured_image' ] );
+	}
+
+	/**
 		@brief		Fullscreen featured image
 		@since		2019-09-12 11:17:04
 	**/
@@ -339,7 +347,7 @@ class Template
 				$img_overlay_color = get_theme_mod('conversions_hh_img_color', '#000000');
 				$img_overlay = get_theme_mod('conversions_hh_img_overlay', '.5');
 				$css_selector = 'section.c-hero';
-			else: // regular posts and pages
+			else: // posts and pages
 				// Get the customizer setting
 				$img_overlay_color = get_theme_mod('conversions_featured_img_color', '#000000');
 				$img_overlay = get_theme_mod('conversions_featured_img_overlay', '.5');
