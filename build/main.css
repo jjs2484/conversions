@@ -11547,7 +11547,10 @@ body.compensate-for-scrollbar {
   font-size: inherit; }
 
 .wp-caption-text {
-  font-size: inherit; }
+  font-size: 13px;
+  color: #555d66;
+  margin-top: .5rem;
+  margin-bottom: 1rem; }
 
 .alignleft {
   float: left;
@@ -11559,6 +11562,9 @@ body.compensate-for-scrollbar {
 
 .aligncenter {
   text-align: center; }
+
+img.aligncenter {
+  display: block; }
 
 table {
   border-spacing: 0; }
@@ -12491,6 +12497,9 @@ blockquote.wp-block-quote.has-text-align-right, blockquote[style*="text-align:ri
   padding-left: 2rem;
   padding-right: 2rem; }
 
+.wp-block-media-text {
+  margin-bottom: 1rem; }
+
 .has-primary-color {
   color: #007BFF; }
 
@@ -12805,6 +12814,12 @@ blockquote.wp-block-quote.has-text-align-right, blockquote[style*="text-align:ri
     .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus {
       -webkit-box-shadow: none;
               box-shadow: none; }
+
+.wp-block-woocommerce-product-search {
+  margin-bottom: 1rem; }
+
+.wc-block-grid.alignfull {
+  padding-left: 28px; }
 
 .woocommerce-input-wrapper {
   width: 100%; }

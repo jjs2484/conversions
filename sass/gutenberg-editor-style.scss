@@ -159,6 +159,11 @@ blockquote {
   font-size: 14px;
 }
 
+// Media text block
+.wp-block-media-text {
+  margin-bottom: 1rem;
+}
+
 // Classic editor block
 .wp-block-freeform.block-library-rich-text__tinymce {
   // Titles
@@ -342,8 +347,10 @@ $block-btns: (
 
 }
 
-.wc-block-grid .wc-block-grid__products .wc-block-grid__product {
+// WooCommerce
+.editor-styles-wrapper .wc-block-grid .wc-block-grid__products .wc-block-grid__product {
   padding: 0 28px 0 0;
+  margin: 0 0 24px;
   
   .wc-block-grid__product-title {
     padding: .5em 0;
@@ -372,4 +379,9 @@ $block-btns: (
     }
   }
 
+}
+
+// WooCommerce product grid alignfull
+.wc-block-grid.alignfull {
+  padding-left: 15px;
 }

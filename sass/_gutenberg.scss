@@ -139,6 +139,11 @@ blockquote {
   padding-right: 2rem;
 }
 
+// Media text block
+.wp-block-media-text {
+  margin-bottom: 1rem;
+}
+
 // Gutenberg color options
 // -- see editor-color-palette in inc/Conversions.php
 $colors: (
@@ -338,4 +343,14 @@ $block-btns: (
     }
   }
 
+}
+
+// WooCommerce search block
+.wp-block-woocommerce-product-search {
+  margin-bottom: 1rem;
+}
+
+// WooCommerce product grid alignfull
+.wc-block-grid.alignfull {
+  padding-left: 28px;
 }

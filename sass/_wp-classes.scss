@@ -12,8 +12,11 @@
 .wp-caption { 
   font-size: inherit; 
 }
-.wp-caption-text { 
-  font-size: inherit; 
+.wp-caption-text {
+  font-size: 13px;
+  color: #555d66;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
 }
 .screen-reader-text { 
   @extend .sr-only; 
@@ -29,6 +32,9 @@
 .aligncenter { 
   @extend .mx-auto;
   text-align: center;
+}
+img.aligncenter {
+  display: block;
 }
 table { 
   @extend .table;
