@@ -31,9 +31,18 @@
     color: theme-color("danger");
   }
 
-  // validation errors ourput bottom of form
-  .wpcf7-validation-errors {
+  // response messages
+  div.wpcf7-response-output {
     @extend .alert;
-    @extend .alert-danger;
+    @extend .alert-primary;
+
+    &.wpcf7-mail-sent-ok {
+      @extend .alert-success;
+    }
+
+    &.wpcf7-validation-errors {
+      @extend .alert-danger;
+    }
   }
+  
 }

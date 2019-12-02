@@ -5909,7 +5909,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
   padding-left: 0;
   border-radius: 0; }
 
-.alert, .wpcf7 .wpcf7-validation-errors {
+.alert, .wpcf7 div.wpcf7-response-output {
   position: relative;
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
@@ -5931,13 +5931,13 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
     padding: 0.75rem 1.25rem;
     color: inherit; }
 
-.alert-primary {
+.alert-primary, .wpcf7 div.wpcf7-response-output {
   color: #004085;
   background-color: #cce5ff;
   border-color: #b8daff; }
-  .alert-primary hr {
+  .alert-primary hr, .wpcf7 div.wpcf7-response-output hr {
     border-top-color: #9fcdff; }
-  .alert-primary .alert-link {
+  .alert-primary .alert-link, .wpcf7 div.wpcf7-response-output .alert-link {
     color: #002752; }
 
 .alert-secondary {
@@ -5949,13 +5949,13 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
   .alert-secondary .alert-link {
     color: #202326; }
 
-.alert-success {
+.alert-success, .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok {
   color: #014f3d;
   background-color: #cceae3;
   border-color: #b8e2d8; }
-  .alert-success hr {
+  .alert-success hr, .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok hr {
     border-top-color: #a6dbce; }
-  .alert-success .alert-link {
+  .alert-success .alert-link, .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok .alert-link {
     color: #001d16; }
 
 .alert-info {
@@ -5976,13 +5976,13 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
   .alert-warning .alert-link {
     color: #533f03; }
 
-.alert-danger, .wpcf7 .wpcf7-validation-errors {
+.alert-danger, .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors {
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb; }
-  .alert-danger hr, .wpcf7 .wpcf7-validation-errors hr {
+  .alert-danger hr, .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors hr {
     border-top-color: #f1b0b7; }
-  .alert-danger .alert-link, .wpcf7 .wpcf7-validation-errors .alert-link {
+  .alert-danger .alert-link, .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors .alert-link {
     color: #491217; }
 
 .alert-light {
