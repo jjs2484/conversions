@@ -56,7 +56,7 @@ if ( $mobile_nav_type == 'collapse' ) {
 
 		<div class="container-fluid">
 
-			<!-- Your site title as branding in the menu -->
+			<!-- Branding in the menu -->
 			<?php if ( ! has_custom_logo() ) { ?>
 
 				<?php if ( is_front_page() && is_home() ) : ?>
@@ -77,7 +77,7 @@ if ( $mobile_nav_type == 'collapse' ) {
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<!-- The WordPress Menu goes here -->
+			<!-- The WordPress Menu -->
 			<?php
 
 				wp_nav_menu(
