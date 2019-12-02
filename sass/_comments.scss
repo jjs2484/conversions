@@ -4,6 +4,27 @@
     #respond.comment-respond {
       margin-top: 1em;
     }
+    h3.comments-title {
+      margin-bottom: 1.5rem;
+    }
+
+    // pingbacks and trackbacks
+    li.pingback, li.trackback {
+      margin-bottom: 1.5rem;
+      
+      .comment-body {
+        width: 100% !important;
+        background: #f7f7f7;
+        border: 1px solid #e3e3e3;
+        padding: 1.5rem;
+        border-radius: 5px;
+
+        .edit-link {
+          margin-left: 1rem;
+        }
+      }
+    }
+
     .comment .media {
 
       // stack on smaller screens

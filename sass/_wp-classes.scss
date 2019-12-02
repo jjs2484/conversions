@@ -17,6 +17,7 @@
   color: #555d66;
   margin-top: .5rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 .screen-reader-text { 
   @extend .sr-only; 
@@ -32,9 +33,8 @@
 .aligncenter { 
   @extend .mx-auto;
   text-align: center;
-}
-img.aligncenter {
   display: block;
+  clear: both;
 }
 table { 
   @extend .table;
@@ -126,4 +126,9 @@ a.skip-link {
   z-index: 1000;
   top: 0px;
   right: 0px;
+}
+// Password protected post button
+form.post-password-form input[type="submit"] {
+  @extend .btn;
+  @extend .btn-primary;
 }
