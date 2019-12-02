@@ -133,7 +133,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 		 */
 		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
 		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-		$output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
+		$output .= $indent . '<li role="none" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
 		// initialize array for holding the $atts for the link item.
 		$atts = array();
 		// Set title from item to the $atts array - if title is empty then
@@ -195,7 +195,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 			$item_output .= self::linkmod_element_open( $linkmod_type, $attributes );
 		} else {
 			// With no link mod type set this must be a standard <a> tag.
-			$item_output .= '<a' . $attributes . '>';
+			$item_output .= '<a role="menuitem"' . $attributes . '>';
 		}
 		/**
 		 * Initiate empty icon var, then if we have a string containing any
