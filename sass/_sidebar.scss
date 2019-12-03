@@ -5,9 +5,12 @@
     margin-top: .5rem;
   }
   .widget {
-    padding-bottom: .9rem;
-    .widget-title {
-      border-bottom: 1px solid $border-color;
+    margin-bottom: 2rem;
+    h3 {
+      font-size: 1.5rem;
+      &.widget-title {
+        border-bottom: 1px solid $border-color;
+      }
     }
   }
 }

@@ -18,7 +18,7 @@ $sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' );
 
 <?php 
 	if ( 'right' === $sidebar_pos ) { ?>
-		<div class="col-md-4 col-xl-3 widget-area" id="sidebar-1" role="complementary">
+		<div class="col-md-4 col-lg-3 widget-area pl-md-4 pl-lg-3" id="sidebar-1" role="complementary">
 	<?php } 
 ?>
 <?php dynamic_sidebar( 'sidebar-1' ); ?>

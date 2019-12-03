@@ -284,3 +284,13 @@ body.woocommerce-cart {
 .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
 	color: #222222;
 }
+
+// sidebar/footer cart and product widgets
+.widget-area, #footer-full-content {
+	.woocommerce ul.cart_list li img, 
+	.woocommerce ul.product_list_widget li img {
+		float: left;
+		margin-right: 10px;
+		margin-top: 5px;
+	}
+}

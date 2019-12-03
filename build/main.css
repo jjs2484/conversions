@@ -12261,9 +12261,11 @@ section.c-testimonials .c-testimonials__quote {
     #sidebar-2, #sidebar-1 {
       margin-top: .5rem; } }
   #sidebar-2 .widget, #sidebar-1 .widget {
-    padding-bottom: .9rem; }
-    #sidebar-2 .widget .widget-title, #sidebar-1 .widget .widget-title {
-      border-bottom: 1px solid #dee2e6; }
+    margin-bottom: 2rem; }
+    #sidebar-2 .widget h3, #sidebar-1 .widget h3 {
+      font-size: 1.5rem; }
+      #sidebar-2 .widget h3.widget-title, #sidebar-1 .widget h3.widget-title {
+        border-bottom: 1px solid #dee2e6; }
 
 #wrapper-footer-full.wrapper {
   padding-top: 3rem;
@@ -12347,7 +12349,7 @@ section.c-testimonials .c-testimonials__quote {
   #wrapper-footer .social-media-icons ul.list-inline {
     margin-bottom: 0; }
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item:not(:last-child) {
-      margin-right: .5rem; }
+      margin-right: .65rem; }
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item a {
       display: inline-block; }
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item i {
@@ -13156,6 +13158,13 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
 
 .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
   color: #222222; }
+
+.widget-area .woocommerce ul.cart_list li img,
+.widget-area .woocommerce ul.product_list_widget li img, #footer-full-content .woocommerce ul.cart_list li img,
+#footer-full-content .woocommerce ul.product_list_widget li img {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px; }
 
 /*
 * Use existing Bootstrap 4 classes for CF7 styles
