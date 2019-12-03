@@ -12924,6 +12924,9 @@ blockquote.wp-block-quote.has-text-align-right, blockquote[style*="text-align:ri
 .wc-block-grid.alignfull {
   padding-left: 28px; }
 
+.wc-block-grid__product-onsale {
+  background-color: #333; }
+
 .woocommerce-input-wrapper {
   width: 100%; }
 
@@ -13165,6 +13168,21 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
   float: left;
   margin-right: 10px;
   margin-top: 5px; }
+
+.woocommerce ul.products li.product .onsale {
+  top: 0;
+  right: auto;
+  left: 0;
+  margin: 0; }
+
+.woocommerce span.onsale {
+  min-height: 2.236em;
+  line-height: 2.236;
+  top: 0;
+  left: 0;
+  margin: 0;
+  border-radius: 0;
+  background-color: #333; }
 
 /*
 * Use existing Bootstrap 4 classes for CF7 styles

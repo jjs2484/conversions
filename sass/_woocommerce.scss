@@ -294,3 +294,20 @@ body.woocommerce-cart {
 		margin-top: 5px;
 	}
 }
+
+// Sale tag
+.woocommerce ul.products li.product .onsale {
+	top: 0;
+	right: auto;
+	left: 0;
+	margin: 0;
+}
+.woocommerce span.onsale {
+	min-height: 2.236em;
+	line-height: 2.236;
+	top: 0;
+	left: 0;
+	margin: 0;
+	border-radius: 0;
+	background-color: #333;
+}
