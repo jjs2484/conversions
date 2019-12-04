@@ -21,21 +21,21 @@ get_header();
 <div id="homepage-wrapper" class="wrapper">
 
   <!-- Hero Section -->
-	<section class="c-hero d-flex align-items-center">
-  	<div class="container-fluid">
-  		<div class="row">
+  <section class="c-hero d-flex align-items-center">
+    <div class="container-fluid">
+      <div class="row">
         <div class="<?php echo esc_attr( get_theme_mod( 'conversions_hh_content_position') ); ?>">
-           			
+                
           <!-- Title -->
-    			<h1><?php echo esc_html( get_the_title() ); ?></h1>
-    			
+          <h1><?php echo esc_html( get_the_title() ); ?></h1>
+          
           <?php
             if ( !empty( get_theme_mod( 'conversions_hh_desc') ) ) {
               echo '<p class="lead c-hero__description">'.wp_kses_post( get_theme_mod( 'conversions_hh_desc' ) ).'</p>';
             }
 
             if ( ( get_theme_mod( 'conversions_hh_button', 'no' ) != 'no' ) || ( get_theme_mod( 'conversions_hh_vbtn', 'no' ) != 'no' ) ) :
-    			
+          
               // Button links
               echo '<p class="lead">';
 
@@ -62,16 +62,22 @@ get_header();
             endif; 
           ?>
 
-  			</div>
-  		</div>
-		</div>
+        </div>
+      </div>
+    </div>
   </section>
 
-	<!-- Clients section -->
-	<section class="c-clients">
-		<div class="container-fluid">
-			<div class="row">
-  			<div class="col-12">
+<?php
+  $chc_logos = get_theme_mod( 'conversions_hc_logos' );
+  $chc_logos_decoded = json_decode( $chc_logos );
+  $has_logos = ( $chc_logos_decoded[ 0 ]->image_url != '' );
+  if ( $has_logos ):
+?>
+  <!-- Clients section -->
+  <section class="c-clients">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
 
           <?php 
             $chc_max_slides = get_theme_mod( 'conversions_hc_max', '5' );
@@ -104,14 +110,10 @@ get_header();
             }
           ?>
           
-  				<!-- Client logos -->
-					<div class='c-clients__carousel py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php echo esc_attr( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"slidesToScroll":<?php echo esc_attr( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":<?php echo esc_attr( $chc_items_to_show[0] ); ?>,"slidesToScroll":<?php echo esc_attr( $chc_items_to_show[0] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php echo esc_attr( $chc_items_to_show[1] ); ?>,"slidesToScroll":<?php echo esc_attr( $chc_items_to_show[1] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php echo esc_attr( $chc_items_to_show[2] ); ?>,"slidesToScroll":<?php echo esc_attr( $chc_items_to_show[2] ); ?>}}]}'>
-  					
+          <!-- Client logos -->
+          <div class='c-clients__carousel py-4' data-slick='{"arrows":true,"dots":false,"infinite":true,"slidesToShow":<?php echo esc_attr( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"slidesToScroll":<?php echo esc_attr( get_theme_mod( 'conversions_hc_max', '5' ) ); ?>,"responsive":[{"breakpoint":992,"settings":{"slidesToShow":<?php echo esc_attr( $chc_items_to_show[0] ); ?>,"slidesToScroll":<?php echo esc_attr( $chc_items_to_show[0] ); ?>}},{"breakpoint":768,"settings":{"slidesToShow":<?php echo esc_attr( $chc_items_to_show[1] ); ?>,"slidesToScroll":<?php echo esc_attr( $chc_items_to_show[1] ); ?>}},{"breakpoint":576,"settings":{"slidesToShow":<?php echo esc_attr( $chc_items_to_show[2] ); ?>,"slidesToScroll":<?php echo esc_attr( $chc_items_to_show[2] ); ?>}}]}'>
+            
             <?php
-              $chc_logos = get_theme_mod( 'conversions_hc_logos' );
-              $chc_logos_decoded = json_decode( $chc_logos );
-      
-              if ( !empty( $chc_logos_decoded ) ) {
               
                 $cclient_logo_count = 0;
               
@@ -130,16 +132,24 @@ get_header();
 
                   ++$cclient_logo_count;
                 }
-              }
             ?>
-					</div>
+          </div>
 
-				</div>
-			</div>
-		</div>
-	</section>
+        </div>
+      </div>
+    </div>
+  </section>
+<?php
 
-	<!-- Features section -->
+endif;
+
+  // Get all feature blocks
+  $conversions_fb = get_theme_mod( 'conversions_features_icons' );
+  $conversions_fb_decoded = json_decode( $conversions_fb );
+  $has_features = ( $conversions_fb_decoded[ 0 ]->text != '' );
+  if ( $has_features ):
+?>
+<!-- Features section -->
   <section class="c-features">
     <div class="container-fluid">
       <div class="row">
@@ -164,11 +174,6 @@ get_header();
         <?php } ?>
 
         <?php
-          // Get all feature blocks
-          $conversions_fb = get_theme_mod( 'conversions_features_icons' );
-          $conversions_fb_decoded = json_decode( $conversions_fb );
-
-          if ( !empty( $conversions_fb_decoded ) ) {
 
             $cfeature_block_count = 0;
 
@@ -223,20 +228,28 @@ get_header();
 
             ++$cfeature_block_count;
             }
-          }
         ?>
 
       </div>
     </div>
   </section>
+<?php
+endif;
 
+// Get all pricing tables
+$conversions_pr = get_theme_mod( 'conversions_pricing_repeater' );
+$conversions_pr_decoded = json_decode( $conversions_pr );
 
-	<!-- Pricing section -->
-	<section class="c-pricing">
-		<div class="container-fluid">
-			<div class="row">
+$has_pricing = ( $conversions_pr_decoded[ 0 ]->title != '');
 
-				<?php if ( !empty( get_theme_mod( 'conversions_pricing_title') ) || !empty( get_theme_mod( 'conversions_pricing_desc' ) ) ) { ?>
+if ( $has_pricing ):
+?>
+  <!-- Pricing section -->
+  <section class="c-pricing">
+    <div class="container-fluid">
+      <div class="row">
+
+        <?php if ( !empty( get_theme_mod( 'conversions_pricing_title') ) || !empty( get_theme_mod( 'conversions_pricing_desc' ) ) ) { ?>
           
           <div class="col-12">
             <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
@@ -256,9 +269,6 @@ get_header();
         <?php } ?>
 
         <?php
-          // Get all pricing tables
-          $conversions_pr = get_theme_mod( 'conversions_pricing_repeater' );
-          $conversions_pr_decoded = json_decode( $conversions_pr );
 
           if ( get_theme_mod( 'conversions_pricing_respond', 'auto' ) == 'auto' )
           {
@@ -283,8 +293,6 @@ get_header();
             $conversions_pricing_md = $cpri[get_theme_mod( 'conversions_pricing_md', '1' )];
             $conversions_pricing_lg = $cpri[get_theme_mod( 'conversions_pricing_lg', '3' )];
           }
-
-          if ( !empty( $conversions_pr_decoded ) ) {
 
             $cpricing_table_count = 0;
 
@@ -349,14 +357,20 @@ get_header();
 
             <?php ++$cpricing_table_count;
             }
-          }
         ?>
 
-			</div>
-		</div>
-	</section>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
 
-
+  <?php
+  $conversions_testimonials = get_theme_mod( 'conversions_testimonials_repeater' );
+  $conversions_testimonials_decoded = json_decode( $conversions_testimonials );
+  $has_testimonials = ( $conversions_testimonials_decoded[ 0 ]->text != '' );
+  
+  if ( $has_testimonials ) :
+  ?>
   <!-- Testimonial Section -->
   <section class="c-testimonials">
     <div class="container-fluid">
@@ -386,10 +400,6 @@ get_header();
           <div class="c-testimonials__carousel">
 
             <?php
-            $conversions_testimonials = get_theme_mod( 'conversions_testimonials_repeater' );
-            $conversions_testimonials_decoded = json_decode( $conversions_testimonials );
-      
-            if ( !empty( $conversions_testimonials_decoded ) ) {
               
               $testimonials_count = 0;
               
@@ -433,7 +443,6 @@ get_header();
 
                 <?php ++$testimonials_count;
               }
-            }
             ?>
             
           </div> <!-- End Slick Carousel -->
@@ -441,17 +450,33 @@ get_header();
       </div>
     </div>
   </section>
+  <?php endif; ?>
 
-	<!-- News Section -->
-	<section class="c-news">
-		<div class="container-fluid">
-			<div class="row">
+
+  <?php
+  // Get latest posts
+  $args=array(
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'posts_per_page' => 3,
+    'orderby' => 'date',
+    'order'   => 'DESC',
+    'ignore_sticky_posts' => 1,
+  );
+
+  $recent_posts = new WP_Query( $args );
+  if ( $recent_posts->have_posts() ) :
+  ?>
+  <!-- News Section -->
+  <section class="c-news">
+    <div class="container-fluid">
+      <div class="row">
 
         <?php if ( !empty( get_theme_mod( 'conversions_news_title') ) || !empty( get_theme_mod( 'conversions_news_desc' ) ) ) { ?>
           
           <!-- Title -->
           <div class="col-12">
-				    <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
+            <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
               <?php 
                 if ( !empty( get_theme_mod( 'conversions_news_title' ) ) ) {
                   // Title
@@ -462,23 +487,12 @@ get_header();
                   echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_news_desc' ) ).'</p>';
                 }
               ?>
-				    </div>
+            </div>
           </div>
 
         <?php } ?>
 
-        <?php 
-          // Get latest posts
-          $args=array(
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'posts_per_page' => 3,
-            'orderby' => 'date',
-            'order'   => 'DESC',
-            'ignore_sticky_posts' => 1,
-          );
-
-          $recent_posts = new WP_Query( $args );
+        <?php
           $news_count = 0;
           while ($recent_posts -> have_posts()) : $recent_posts -> the_post(); 
         ?>
@@ -531,8 +545,9 @@ get_header();
         ?>
 
       </div>
-		</div>
-	</section>
+    </div>
+  </section>
+  <?php endif; ?>
 
 </div><!-- Wrapper end -->
 
