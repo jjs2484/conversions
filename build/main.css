@@ -12103,15 +12103,10 @@ section.c-testimonials .c-testimonials__quote {
       color: #77818B; }
 
 .conversions-hero-cover {
-  width: 100vw;
-  max-width: 100vw;
-  position: relative;
-  left: 50%;
-  margin: -30px -50vw 2em;
-  padding: 1em 0;
-  background-color: #000;
+  margin: -30px 0 2em;
+  padding: 2em 0;
   background-size: cover;
-  background-position: 50%;
+  background-position: center;
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -webkit-flex;
@@ -12124,21 +12119,7 @@ section.c-testimonials .c-testimonials__quote {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden; }
-  .conversions-hero-cover::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: inherit;
-    opacity: .5;
-    z-index: 1; }
-  .conversions-hero-cover .conversions-hero-cover__inner-container {
-    width: calc(100% - 70px);
-    z-index: 1; }
+          align-items: center; }
 
 .entry-footer {
   color: #6c757d; }

@@ -2284,7 +2284,7 @@ namespace conversions
 				array("footer.site-footer a:hover, footer.site-footer .site-info .copyright a:hover, footer.site-footer .social-media-icons ul li.list-inline-item i:hover", "color", get_theme_mod( 'conversions_footer_link_hcolor' )),
 				array("a", "color", get_theme_mod( 'conversions_link_color' )),
 				array("a:hover", "color", get_theme_mod( 'conversions_link_hcolor')),
-				array(".conversions-hero-cover .conversions-hero-cover__inner-container h1", "color", get_theme_mod( 'conversions_featured_title_color' )),
+				array(".conversions-hero-cover .conversions-hero-cover__inner h1", "color", get_theme_mod( 'conversions_featured_title_color' )),
 				array(".page-template-homepage section.c-hero h1", "color", get_theme_mod( 'conversions_hh_title_color' )),
 				array(".page-template-homepage section.c-hero .c-hero__description", "color", get_theme_mod( 'conversions_hh_desc_color' )),
 				array(".page-template-homepage section.c-clients", "background-color", get_theme_mod( 'conversions_hc_bg_color' )),

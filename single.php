@@ -18,17 +18,26 @@ get_header();
 
 <div class="wrapper" id="single-wrapper">
 
+	<?php 
+	if ( has_post_thumbnail( get_the_ID() ) ) {			
+		// HTML for background image and title
+    	echo '<div class="conversions-hero-cover">
+    		<div class="container-fluid" id="content" tabindex="-1">
+    			<div class="row">
+					<div class="col-sm-12">
+    					<div class="conversions-hero-cover__inner">
+    						<h1 class="entry-title text-center">'.esc_html( get_the_title() ).'</h1>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>';
+	} 
+	?>
+
 	<div class="container-fluid" id="content" tabindex="-1">
 
 		<div class="row">
-
-			<?php 
-				if ( has_post_thumbnail( get_the_ID() ) ) {
-					
-					// HTML for background image and title
-    				echo '<div class="col-sm-12"><div class="conversions-hero-cover"><div class="conversions-hero-cover__inner-container"><h1 class="entry-title text-center">'.esc_html( get_the_title() ).'</h1></div></div></div>';
-				} 
-			?>
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'partials/left-sidebar-check' ); ?>
