@@ -64,6 +64,12 @@ blockquote {
   }
 }
 
+// Figure
+figure.wp-block-table > table,
+figure.wp-block-pullquote > blockquote {
+  margin-bottom: 0;
+}
+
 // figcaption
 .wp-block-audio, .wp-block-image, .wp-block-embed, .wp-block-video {
   figcaption {
@@ -75,16 +81,20 @@ blockquote {
   }
 }
 
-// Embeds
-.wp-block-embed {
-  margin-bottom: 1rem;
+// Images, embeds, cover spacing
+.wp-block-audio, .wp-block-image, .wp-block-embed, .wp-block-video, .wp-block-cover {
+  margin-bottom: 1.5rem;
+  > figure > figcaption {
+    margin-bottom: 0;
+  }
+}
+
+// Gallery
+.wp-block-gallery {
+  margin-bottom: .5rem;
 }
 
 // Block cover
-.wp-block-cover {
-  margin-bottom: 1rem;
-}
-
 .wp-block-cover-image .wp-block-cover-image-text, 
 .wp-block-cover-image .wp-block-cover-text, 
 .wp-block-cover-image h2, 
@@ -130,7 +140,7 @@ blockquote {
 .wp-block-archives.wp-block-archives-dropdown select {
   max-width: 20em;
   font-size: 14px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 // Columns
@@ -141,7 +151,7 @@ blockquote {
 
 // Media text block
 .wp-block-media-text {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 // Gutenberg color options
@@ -183,10 +193,10 @@ $block-btns: (
 .wp-block-button {
   
   // no alignment
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   // align center
   &.aligncenter {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   // align left / right
   &.alignleft, &.alignright {
@@ -347,7 +357,7 @@ $block-btns: (
 
 // WooCommerce search block
 .wp-block-woocommerce-product-search {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 // WooCommerce product grid alignfull

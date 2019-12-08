@@ -1,10 +1,14 @@
 // Use this file to overwrite and add your own variables
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 
-// Bootstrap
+// Bootstrap colors
 $success: #019875;
 $dark: #151B26;
-$headings-margin-bottom: 1rem; // Headings margin-bottom
+
+// Bootstrap Spacing
+$paragraph-margin-bottom: 1.5rem;
+$headings-margin-bottom: 1rem;
+$alert-margin-bottom: 1.5rem;
 
 // Font awesome
 $fa-font-path: "../fonts";

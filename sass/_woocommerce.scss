@@ -152,6 +152,14 @@ p.no-comments {
 // single product pages
 .single-product.woocommerce {
 	div.product {
+		.woocommerce-product-gallery { 
+			.flex-viewport {
+				margin-bottom: .75rem;
+			}
+			.flex-control-thumbs li {
+				padding: .5rem;
+			}
+		}
 		.product_meta {
 			font-size: .875em;
 			padding-top: 1em;
