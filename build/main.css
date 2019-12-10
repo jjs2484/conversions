@@ -2817,26 +2817,26 @@ fieldset:disabled #footer-full-content .woocommerce.widget_shopping_cart .woocom
 #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons fieldset:disabled a.button {
   pointer-events: none; }
 
-.btn-primary, form.post-password-form input[type="submit"], .wpcf7 input[type=submit] {
+.btn-primary, form.post-password-form input[type="submit"], #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button, .wpcf7 input[type=submit] {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff; }
-  .btn-primary:hover, form.post-password-form input[type="submit"]:hover, .wpcf7 input[type=submit]:hover {
+  .btn-primary:hover, form.post-password-form input[type="submit"]:hover, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:hover, .wpcf7 input[type=submit]:hover {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc; }
-  .btn-primary:focus, form.post-password-form input[type="submit"]:focus, .wpcf7 input[type=submit]:focus, .btn-primary.focus, form.post-password-form input.focus[type="submit"], .wpcf7 input.focus[type=submit] {
+  .btn-primary:focus, form.post-password-form input[type="submit"]:focus, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:focus, .wpcf7 input[type=submit]:focus, .btn-primary.focus, form.post-password-form input.focus[type="submit"], #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.focus.button, .wpcf7 input.focus[type=submit] {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
             box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
-  .btn-primary.disabled, form.post-password-form input.disabled[type="submit"], .wpcf7 input.disabled[type=submit], .btn-primary:disabled, form.post-password-form input[type="submit"]:disabled, .wpcf7 input[type=submit]:disabled {
+  .btn-primary.disabled, form.post-password-form input.disabled[type="submit"], #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.disabled.button, .wpcf7 input.disabled[type=submit], .btn-primary:disabled, form.post-password-form input[type="submit"]:disabled, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:disabled, .wpcf7 input[type=submit]:disabled {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff; }
-  .btn-primary:not(:disabled):not(.disabled):active, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled):active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, form.post-password-form .show > input.dropdown-toggle[type="submit"], .wpcf7 .show > input.dropdown-toggle[type=submit] {
+  .btn-primary:not(:disabled):not(.disabled):active, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled):active, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:not(:disabled):not(.disabled):active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:not(:disabled):not(.disabled).active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, form.post-password-form .show > input.dropdown-toggle[type="submit"], #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons .show > a.dropdown-toggle.button, .wpcf7 .show > input.dropdown-toggle[type=submit] {
     color: #fff;
     background-color: #0062cc;
     border-color: #005cbf; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled):active:focus, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active:focus, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, form.post-password-form .show > input.dropdown-toggle[type="submit"]:focus, .wpcf7 .show > input.dropdown-toggle[type=submit]:focus {
+    .btn-primary:not(:disabled):not(.disabled):active:focus, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled):active:focus, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:not(:disabled):not(.disabled):active:focus, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active:focus, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:not(:disabled):not(.disabled).active:focus, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, form.post-password-form .show > input.dropdown-toggle[type="submit"]:focus, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons .show > a.dropdown-toggle.button:focus, .wpcf7 .show > input.dropdown-toggle[type=submit]:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
               box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
 
@@ -2886,26 +2886,26 @@ fieldset:disabled #footer-full-content .woocommerce.widget_shopping_cart .woocom
       -webkit-box-shadow: 0 0 0 0.2rem rgba(39, 167, 138, 0.5);
               box-shadow: 0 0 0 0.2rem rgba(39, 167, 138, 0.5); }
 
-.btn-info, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button {
+.btn-info {
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8; }
-  .btn-info:hover, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:hover {
+  .btn-info:hover {
     color: #fff;
     background-color: #138496;
     border-color: #117a8b; }
-  .btn-info:focus, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:focus, .btn-info.focus, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.focus.button {
+  .btn-info:focus, .btn-info.focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
             box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5); }
-  .btn-info.disabled, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.disabled.button, .btn-info:disabled, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:disabled {
+  .btn-info.disabled, .btn-info:disabled {
     color: #fff;
     background-color: #17a2b8;
     border-color: #17a2b8; }
-  .btn-info:not(:disabled):not(.disabled):active, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:not(:disabled):not(.disabled).active, .show > .btn-info.dropdown-toggle, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons .show > a.dropdown-toggle.button {
+  .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active, .show > .btn-info.dropdown-toggle {
     color: #fff;
     background-color: #117a8b;
     border-color: #10707f; }
-    .btn-info:not(:disabled):not(.disabled):active:focus, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons a.button:not(:disabled):not(.disabled).active:focus, .show > .btn-info.dropdown-toggle:focus, #footer-full-content .woocommerce.widget_shopping_cart .woocommerce-mini-cart__buttons.buttons .show > a.dropdown-toggle.button:focus {
+    .btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus, .show > .btn-info.dropdown-toggle:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
               box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5); }
 
@@ -11699,17 +11699,15 @@ table#wp-calendar th {
   background: #edeff0; }
 
 .widget.widget_calendar table#wp-calendar,
-.footer-widget.widget_calendar table#wp-calendar {
-  table-layout: fixed;
-  max-width: 250px;
-  width: 100%; }
+.footer-widget-area .widget_calendar table#wp-calendar {
+  table-layout: fixed; }
   .widget.widget_calendar table#wp-calendar td, .widget.widget_calendar table#wp-calendar th,
-  .footer-widget.widget_calendar table#wp-calendar td,
-  .footer-widget.widget_calendar table#wp-calendar th {
-    padding: .25em;
+  .footer-widget-area .widget_calendar table#wp-calendar td,
+  .footer-widget-area .widget_calendar table#wp-calendar th {
+    padding: .35em;
     text-align: center; }
 
-.footer-widget.widget_calendar table#wp-calendar th {
+.footer-widget-area .widget_calendar table#wp-calendar th {
   background: none; }
 
 .entry-footer span {
@@ -12259,6 +12257,30 @@ section.c-testimonials .c-testimonials__quote {
       #sidebar-2 .widget h3.widget-title, #sidebar-1 .widget h3.widget-title {
         border-bottom: 1px solid #dee2e6; }
 
+section.c-cta .container-fluid {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+  @media (min-width: 992px) {
+    section.c-cta .container-fluid {
+      padding-top: 4rem;
+      padding-bottom: 4rem; } }
+section.c-cta .c-cta__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: .5rem; }
+
 #wrapper-footer-full.wrapper {
   padding-top: 3rem;
   padding-bottom: 1rem; }
@@ -12270,26 +12292,11 @@ section.c-testimonials .c-testimonials__quote {
   padding-bottom: 30px; }
 
 #wrapper-footer-full .footer-widget {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  @media (max-width: 575.98px) {
-    #wrapper-footer-full .footer-widget {
-      margin-bottom: 0.75rem; } }
+  display: block;
+  margin: 0 auto 1.5rem;
+  text-align: center; }
+  #wrapper-footer-full .footer-widget ul {
+    padding-left: 0; }
 
 #wrapper-footer .site-info {
   -webkit-box-align: center;
@@ -12346,30 +12353,6 @@ section.c-testimonials .c-testimonials__quote {
       display: inline-block; }
     #wrapper-footer .social-media-icons ul.list-inline li.list-inline-item i {
       vertical-align: middle; }
-
-section.c-cta .container-fluid {
-  padding-top: 3rem;
-  padding-bottom: 3rem; }
-  @media (min-width: 992px) {
-    section.c-cta .container-fluid {
-      padding-top: 4rem;
-      padding-bottom: 4rem; } }
-section.c-cta .c-cta__items {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  margin-bottom: .5rem; }
 
 .grade-grey {
   background: #bdc3c7;

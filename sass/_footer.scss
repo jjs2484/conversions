@@ -1,4 +1,23 @@
-// Footer and copyright bottom padding
+// Call to action section
+section.c-cta {
+  .container-fluid {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    @media (min-width: 992px) { 
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+  .c-cta__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: .5rem;
+  }
+}
+
+// Footer and copyright padding
 #wrapper-footer-full.wrapper {
   padding-top: 3rem;
   padding-bottom: 1rem;
@@ -6,22 +25,26 @@
     padding-top: 4rem;
   }
 }
+
 #wrapper-footer.wrapper {
   padding-bottom: 30px;
 }
-// footer full widget area
+
+// Footer widget area
 #wrapper-footer-full {
+  
   .footer-widget {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    @include media-breakpoint-down(xs) {
-      margin-bottom: 0.75rem;
+    display: block;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+    
+    ul {
+      padding-left: 0;
     }
   }
 }
-// copyright and social icons layout
+
+// Copyright and social icons
 #wrapper-footer {
   .site-info {
     align-items: center;
@@ -63,25 +86,5 @@
       }
     }
 
-  }
-}
-
-// call to action section
-section.c-cta {
-  // padding
-  .container-fluid {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    @media (min-width: 992px) { 
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
-  }
-  .c-cta__items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: .5rem;
   }
 }

@@ -96,18 +96,16 @@ table#wp-calendar {
   }
 }
 .widget.widget_calendar, 
-.footer-widget.widget_calendar {
+.footer-widget-area .widget_calendar {
   table#wp-calendar {
     table-layout: fixed;
-    max-width: 250px;
-    width: 100%;
     td, th {
-      padding: .25em;
+      padding: .35em;
       text-align: center;
     }
   }
 }
-.footer-widget.widget_calendar {
+.footer-widget-area .widget_calendar {
   table#wp-calendar th {
     background: none;
   }

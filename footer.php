@@ -15,7 +15,7 @@ if ( get_theme_mod( 'conversions_hcta_state', false ) == true ) {
 
 <footer class="site-footer" id="colophon">
 
-	<?php get_template_part( 'partials/sidebar', 'footerfull' ); ?>
+	<?php get_template_part( 'partials/sidebar', 'footer' ); ?>
 
 	<div class="wrapper" id="wrapper-footer">
 
