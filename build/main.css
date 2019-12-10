@@ -12283,7 +12283,10 @@ section.c-cta .c-cta__items {
 
 #wrapper-footer-full.wrapper {
   padding-top: 3rem;
-  padding-bottom: 1rem; }
+  padding-bottom: 0; }
+  @media (min-width: 768px) {
+    #wrapper-footer-full.wrapper {
+      padding-bottom: 1rem; } }
   @media (min-width: 992px) {
     #wrapper-footer-full.wrapper {
       padding-top: 4rem; } }
@@ -12293,8 +12296,7 @@ section.c-cta .c-cta__items {
 
 #wrapper-footer-full .footer-widget {
   display: block;
-  margin: 0 auto 1.5rem;
-  text-align: center; }
+  margin: 0 auto 1.5rem; }
   #wrapper-footer-full .footer-widget ul {
     padding-left: 0; }
 
