@@ -5,25 +5,6 @@ module.exports = function(grunt) {
 	
   // Configuration
 	grunt.initConfig({
-    concat: {
-      basic_and_extras: {
-        files: {
-          'build/theme.js': ['src/js/bootstrap4/bootstrap.bundle.js', 'src/js/skip-link-focus-fix.js', 'src/js/slick/slick.js', 'src/js/fancybox/jquery.fancybox.js', 'js/theme.js'],
-          'build/conversions-customizer.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js', 'js/customizer-conditionals.js'],
-        },
-      },
-    },
-		uglify: {
-  		options: {
-      	mangle: false,
-   		},
-   		my_target: {
-    		files: {
-        	'build/theme.min.js': ['build/theme.js'],
-          'build/conversions-customizer.min.js': ['build/conversions-customizer.js'],
-    		}
-    	}
-  	},
 		sass: {
     	dist: {
      		options: {
@@ -39,6 +20,15 @@ module.exports = function(grunt) {
       	}
     	}
 		},
+    concat: {
+      basic_and_extras: {
+        files: {
+          'build/theme.js': ['node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'js/skip-link-focus-fix.js', 'node_modules/slick-carousel/slick/slick.js', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js', 'js/theme.js'],
+          'build/conversions-customizer.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js', 'js/customizer-conditionals.js'],
+          'build/main.css': ['build/main.css', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'],
+        },
+      },
+    },
     postcss: {
   		options: {
     		processors: [
@@ -60,12 +50,44 @@ module.exports = function(grunt) {
     		}
   		}
 		},
+    uglify: {
+      options: {
+        mangle: false,
+      },
+      my_target: {
+        files: {
+          'build/theme.min.js': ['build/theme.js'],
+          'build/conversions-customizer.min.js': ['build/conversions-customizer.js'],
+        }
+      }
+    },
 		watch: {
   		scripts: {
 			 files: ['sass/*.scss'],
 			 tasks: ['sass', 'postcss', 'cssmin'],
   		},
 		},
+    copy: {
+      main: {
+        files: [
+          // includes files within path
+          { 
+            expand: true,
+            flatten: true,
+            src: ['node_modules/@fortawesome/fontawesome-free/webfonts/*'], 
+            dest: 'fonts/',
+            filter: 'isFile'
+          },
+          { 
+            expand: true,
+            flatten: true,
+            src: ['node_modules/slick-carousel/slick/fonts/*'], 
+            dest: 'fonts/',
+            filter: 'isFile'
+          },
+        ],
+      },
+    },
 	});
 
 	// Load plugins
@@ -75,6 +97,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
 	// Register Tasks
 	grunt.registerTask('concat-js', ['concat']);
@@ -82,8 +105,9 @@ module.exports = function(grunt) {
   grunt.registerTask('prefix-css', ['postcss']);
 	grunt.registerTask('uglify-js', ['uglify']);
 	grunt.registerTask('min-css', ['cssmin']);
+  grunt.registerTask('copy-files', ['copy']);
 	
 	// Run All Tasks
-	grunt.registerTask('all', ['concat-js', 'uglify-js', 'compile-sass', 'prefix-css', 'min-css']);
+	grunt.registerTask('all', ['compile-sass', 'concat-js','prefix-css', 'min-css', 'uglify-js']);
 
 };

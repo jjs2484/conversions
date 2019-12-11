@@ -16,16 +16,22 @@
   },
   "homepage": "https://github.com/jjs2484/conversions#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
     "@lodder/grunt-postcss": "^1.0.10",
     "autoprefixer": "^9.7.1",
     "grunt": "^1.0.4",
     "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "node-sass": "^4.13.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "bootstrap": "^4.4.1",
+    "slick-carousel": "^1.8.1"
+  },
   "description": ""
 }

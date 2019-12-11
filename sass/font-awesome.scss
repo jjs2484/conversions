@@ -2,7 +2,7 @@
 @import "variables";
 
 // Loads Font Awesome
-@import '../src/sass/fontawesome/fontawesome.scss';
-@import '../src/sass/fontawesome/solid';
-@import '../src/sass/fontawesome/regular';
-@import '../src/sass/fontawesome/brands';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/brands';

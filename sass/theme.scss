@@ -2,14 +2,11 @@
 @import "variables";
 
 // Loads Bootstrap
-@import "../src/sass/bootstrap4/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 // Loads Slick slider
-@import '../src/sass/slick/slick';
-@import '../src/sass/slick/slick-theme';
-
-// Loads Fancybox
-@import '../src/sass/fancybox/jquery.fancybox';
+@import '../node_modules/slick-carousel/slick/slick';
+@import '../node_modules/slick-carousel/slick/slick-theme';
 
 // Loads Underscores media styles
 @import "galleries";
