@@ -62,9 +62,13 @@ module.exports = function(grunt) {
       }
     },
 		watch: {
+      sass: {
+        files: ['sass/*.scss'],
+        tasks: ['all'],
+      },
   		scripts: {
-			 files: ['sass/*.scss'],
-			 tasks: ['sass', 'postcss', 'cssmin'],
+			 files: ['js/*.js'],
+			 tasks: ['all'],
   		},
 		},
     copy: {
@@ -91,23 +95,15 @@ module.exports = function(grunt) {
 	});
 
 	// Load plugins
-	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('@lodder/grunt-postcss');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
-
-	// Register Tasks
-	grunt.registerTask('concat-js', ['concat']);
-  grunt.registerTask('compile-sass', ['sass']);
-  grunt.registerTask('prefix-css', ['postcss']);
-	grunt.registerTask('uglify-js', ['uglify']);
-	grunt.registerTask('min-css', ['cssmin']);
-  grunt.registerTask('copy-files', ['copy']);
 	
 	// Run All Tasks
-	grunt.registerTask('all', ['compile-sass', 'concat-js','prefix-css', 'min-css', 'uglify-js']);
+	grunt.registerTask('all', ['sass', 'concat','postcss', 'cssmin', 'uglify']);
 
 };
