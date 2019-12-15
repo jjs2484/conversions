@@ -36,6 +36,10 @@ body, input, select, textarea {
   padding: 2rem 0 3rem; 
   overflow: hidden;
   word-wrap: break-word;
+  
+  :target:focus {
+    outline: none;
+  }
 }
 
 // Container width

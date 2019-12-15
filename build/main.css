@@ -11184,6 +11184,8 @@ body, input, select, textarea {
   padding: 2rem 0 3rem;
   overflow: hidden;
   word-wrap: break-word; }
+  .wrapper :target:focus {
+    outline: none; }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
   max-width: 1140px; }
