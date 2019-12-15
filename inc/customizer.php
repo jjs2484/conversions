@@ -61,7 +61,7 @@ namespace conversions
 		public function customize_register( $wp_customize )
 		{
 			// require customizer repeater
-			require get_template_directory() . '/inc/Customizer_Repeater.php';
+			require get_template_directory() . '/inc/customizer_repeater.php';
 			
 			// font choices
 			$font_choices = array(

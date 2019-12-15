@@ -66,8 +66,8 @@ class Conversions_Repeater extends \WP_Customize_Control {
 		if ( ! empty( $id ) ) {
 			$this->id = $id;
 		}
-		if ( file_exists( get_template_directory() . '/inc/Customizer_Icons.php' ) ) {
-			$this->customizer_icon_container =  '/inc/Customizer_Icons';
+		if ( file_exists( get_template_directory() . '/inc/customizer_icons.php' ) ) {
+			$this->customizer_icon_container =  '/inc/customizer_icons';
 		}
 		$allowed_array1 = wp_kses_allowed_html( 'post' );
 		$allowed_array2 = array(

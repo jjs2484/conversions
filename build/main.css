@@ -11643,7 +11643,7 @@ section.c-cta .c-cta__items {
   display: block;
   margin: 0 auto 1.5rem; }
   #wrapper-footer-full .footer-widget ul {
-    padding-left: 0; }
+    padding-left: 1.5rem; }
 
 #wrapper-footer .site-info {
   -webkit-box-align: center;

@@ -28,15 +28,15 @@ namespace conversions
 		**/
 		public function load()
 		{
-			require_once( __DIR__ . '/Comments.php' );
-			require_once( __DIR__ . '/Customizer.php' );
-			require_once( __DIR__ . '/Enqueue.php' );
-			require_once( __DIR__ . '/Extras.php' );
-			require_once( __DIR__ . '/Template.php' );
-			require_once( __DIR__ . '/Widgets.php' );
-			require_once( __DIR__ . '/WooCommerce.php' );
-			require_once( __DIR__ . '/WP_Bootstrap_Comment-Walker.php' );
-			require_once( __DIR__ . '/WP_Bootstrap_Navwalker.php' );
+			require_once( __DIR__ . '/comments.php' );
+			require_once( __DIR__ . '/customizer.php' );
+			require_once( __DIR__ . '/enqueue.php' );
+			require_once( __DIR__ . '/extras.php' );
+			require_once( __DIR__ . '/template.php' );
+			require_once( __DIR__ . '/widgets.php' );
+			require_once( __DIR__ . '/woocommerce.php' );
+			require_once( __DIR__ . '/wp_bootstrap_comment_walker.php' );
+			require_once( __DIR__ . '/wp_bootstrap_navwalker.php' );
 
 			$this->setup();
 		}
