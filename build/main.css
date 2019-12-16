@@ -11275,6 +11275,14 @@ section.c-news .container-xl {
       padding-top: 4rem;
       padding-bottom: 4rem; } }
 
+section.c-woo .container-fluid, section.c-woo .container-sm, section.c-woo .container-md, section.c-woo .container-lg, section.c-woo .container-xl {
+  padding-top: 3rem;
+  padding-bottom: 0; }
+  @media (min-width: 992px) {
+    section.c-woo .container-fluid, section.c-woo .container-sm, section.c-woo .container-md, section.c-woo .container-lg, section.c-woo .container-xl {
+      padding-top: 4rem;
+      padding-bottom: 1rem; } }
+
 section.c-features .container-fluid, section.c-features .container-sm, section.c-features .container-md, section.c-features .container-lg, section.c-features .container-xl {
   padding-top: 3rem;
   padding-bottom: 2rem; }

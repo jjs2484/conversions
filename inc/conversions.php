@@ -216,6 +216,10 @@ namespace conversions
 				'conversions_hcta_title_color' => '#ffffff',
 				'conversions_hcta_desc_color' => '#ffffff',
 				'conversions_hcta_btn' => 'no',
+				'conversions_woo_products' => 'no',
+				'conversions_woo_product_limit' => '8',
+				'conversions_woo_product_columns' => '4',
+				'conversions_woo_products_order' => 'popularity',
 			);
 
 			foreach ($defaults as $c => $v) {

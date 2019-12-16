@@ -139,6 +139,15 @@ section.c-news .container-fluid {
     padding-bottom: 4rem;
   }
 }
+ 
+section.c-woo .container-fluid {
+  padding-top: 3rem;
+  padding-bottom: 0;
+  @media (min-width: 992px) { 
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+}
 
 // features padding
 section.c-features .container-fluid {

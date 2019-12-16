@@ -236,6 +236,57 @@ endif;
 <?php
 endif;
 
+
+// Check whether to show Woo section
+if ( class_exists( 'woocommerce' ) && get_theme_mod( 'conversions_woo_products' ) != 'no' ):
+?>
+  <!-- WooCommerce section -->
+  <section class="c-woo">
+    <div class="container-fluid">
+      <div class="row">
+
+        <?php if ( !empty( get_theme_mod( 'conversions_woo_title') ) || !empty( get_theme_mod( 'conversions_woo_desc' ) ) ) { ?>
+          
+          <div class="col-12">
+            <div class="w-md-80 w-lg-60 text-center mb-5 mx-auto">
+              <?php 
+                if ( !empty( get_theme_mod( 'conversions_woo_title' ) ) ) {
+                  // Title
+                  echo '<h2 class="h3">'.esc_html( get_theme_mod( 'conversions_woo_title' ) ).'</h2>';
+                }
+                if ( !empty( get_theme_mod( 'conversions_woo_desc' ) ) ) {
+                  // Description
+                  echo '<p class="subtitle">'.wp_kses_post( get_theme_mod( 'conversions_woo_desc' ) ).'</p>';
+                }
+              ?>
+            </div>
+          </div>
+        
+        <?php } ?>
+
+        <div class="col-12">
+          <?php
+            $c_product_type = get_theme_mod( 'conversions_woo_products' );
+            if ( $c_product_type == "all" ) {
+              $c_product_type = "";
+            } else {
+              $c_product_type = $c_product_type . '="true"';
+            }
+            $c_product_limit = get_theme_mod( 'conversions_woo_product_limit' );
+            $c_product_columns = get_theme_mod( 'conversions_woo_product_columns' );
+            $c_product_order = get_theme_mod( 'conversions_woo_products_order' );
+
+            echo do_shortcode( '[products limit="'.$c_product_limit.'" columns="'.$c_product_columns.'" orderby="'.$c_product_order.'" '.$c_product_type.' ]' );
+          ?>
+        </div>
+        
+
+      </div>
+    </div>
+  </section>
+<?php endif;
+
+
 // Get all pricing tables
 $conversions_pr = get_theme_mod( 'conversions_pricing_repeater' );
 $conversions_pr_decoded = json_decode( $conversions_pr );
