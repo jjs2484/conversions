@@ -11243,7 +11243,8 @@ a.c-news__img-link {
   .archive article.card.post:last-of-type, .blog article.card.post:last-of-type {
     margin-bottom: 2rem; }
 
-#homepage-wrapper.wrapper {
+#homepage-wrapper.wrapper,
+#builder-wrapper.wrapper {
   padding: 0; }
 
 section.c-pricing .container-fluid, section.c-pricing .container-sm, section.c-pricing .container-md, section.c-pricing .container-lg, section.c-pricing .container-xl,

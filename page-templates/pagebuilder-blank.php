@@ -1,8 +1,10 @@
 <?php
 /**
- * Template Name: Blank Page Template
+ * Template Name: Page Builder Blank
  *
- * Template for displaying a blank page.
+ * The template for the page builder blank.
+ *
+ * It contains no header, no footer, and 100% content width.
  *
  * @package conversions
  */
