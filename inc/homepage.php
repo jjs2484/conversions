@@ -50,6 +50,10 @@ class Homepage
 			],
 		];
 
+    if ( ! class_exists( 'woocommerce' ) ) {
+      unset( static::$sections[ 'woocommerce' ] );
+    }
+
 		$this->add_sections();
 		add_action( 'get_header', [ $this, 'add_sections' ] );
 		add_filter( 'customize_register', [ $this, 'customize_register' ] );
