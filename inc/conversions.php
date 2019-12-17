@@ -13,6 +13,7 @@ namespace conversions
 			@since		2019-08-18 19:52:29
 		**/
 		public static $instance;
+
 		/**
 			@brief		Constructor.
 			@since		2019-08-06 21:07:52
@@ -32,6 +33,7 @@ namespace conversions
 			require_once( __DIR__ . '/customizer.php' );
 			require_once( __DIR__ . '/enqueue.php' );
 			require_once( __DIR__ . '/extras.php' );
+			require_once( __DIR__ . '/homepage.php' );
 			require_once( __DIR__ . '/template.php' );
 			require_once( __DIR__ . '/widgets.php' );
 			require_once( __DIR__ . '/woocommerce.php' );
@@ -59,21 +61,21 @@ namespace conversions
 			add_theme_support( 'title-tag' );
 
 			// This theme uses wp_nav_menu() in one location.
-			register_nav_menus( array(
+			register_nav_menus( [
 				'primary' => __( 'Primary Menu', 'conversions' ),
-			) );
+			] );
 
 			/*
 			 * Switch default core markup for search form, comment form, and comments
 			 * to output valid HTML5.
 			 */
-			add_theme_support( 'html5', array(
+			add_theme_support( 'html5', [
 				'search-form',
 				'comment-form',
 				'comment-list',
 				'gallery',
 				'caption',
-			) );
+			] );
 
 			/*
 			 * Adding Thumbnail basic support
@@ -82,7 +84,7 @@ namespace conversions
 
 			// Add fullscreen thumbnail size
 			add_image_size( 'fullscreen', 1920, 9999 );
-			
+
 			// Add news image size
 			add_image_size( 'news-image', 550, 320, true );
 
@@ -90,10 +92,10 @@ namespace conversions
 			add_image_size( 'blog-index', 1200, 480, true );
 
 			// Set up the WordPress core custom background feature.
-			add_theme_support( 'custom-background', apply_filters( 'conversions_custom_background_args', array(
+			add_theme_support( 'custom-background', apply_filters( 'conversions_custom_background_args', [
 				'default-color' => 'ffffff',
 				'default-image' => '',
-			) ) );
+			] ) );
 
 			// Set up the WordPress Theme logo feature.
 			add_theme_support( 'custom-logo' );
@@ -108,51 +110,51 @@ namespace conversions
 			add_theme_support( 'align-wide' );
 
 			// Register the color palette options - gutenberg
-			add_theme_support( 'editor-color-palette', array(
-				array(
+			add_theme_support( 'editor-color-palette', [
+				[
 					'name'  => __( 'Primary', 'conversions' ),
 					'slug'  => 'primary',
 					'color'	=> '#007BFF',
-				),
-				array(
+				],
+				[
 					'name'  => __( 'Secondary', 'conversions' ),
 					'slug'  => 'secondary',
 					'color' => '#6c757d',
-				),
-				array(
+				],
+				[
 					'name'  => __( 'Success', 'conversions' ),
 					'slug'  => 'success',
 					'color' => '#019875',
-				),
-				array(
+				],
+				[
 					'name'	=> __( 'Danger', 'conversions' ),
 					'slug'	=> 'danger',
 					'color'	=> '#dc3545',
-				),
-				array(
+				],
+				[
 					'name'	=> __( 'Warning', 'conversions' ),
 					'slug'	=> 'warning',
 					'color'	=> '#ffc107',
-				),
-				array(
+				],
+				[
 					'name'	=> __( 'Info', 'conversions' ),
 					'slug'	=> 'info',
 					'color'	=> '#17a2b8',
-				),
-				array(
+				],
+				[
 					'name'	=> __( 'Light', 'conversions' ),
 					'slug'	=> 'light',
 					'color'	=> '#f8f9fa',
-				),
-				array(
+				],
+				[
 					'name'	=> __( 'Dark', 'conversions' ),
 					'slug'	=> 'dark',
 					'color'	=> '#151B26',
-				),
-			) );
+				],
+			] );
 
 			// Check if settings are set, if not set defaults.
-			$defaults = array(
+			$defaults = [
 				'conversions_logo_height' => '40',
 				'conversions_nav_position' => 'fixed-top',
 				'conversions_nav_colors' => 'white',
@@ -210,7 +212,7 @@ namespace conversions
 				'conversions_pricing_md' => '1',
 				'conversions_pricing_lg' => '3',
 				'conversions_news_mposts' => '2',
-				'conversions_hcta_state' => false,		
+				'conversions_hcta_state' => false,
 				'conversions_hcta_bg_choice' => 'gradient',
 				'conversions_hcta_bg_gradient' => 'crystal-clear',
 				'conversions_hcta_title_color' => '#ffffff',
@@ -220,7 +222,7 @@ namespace conversions
 				'conversions_woo_product_limit' => '8',
 				'conversions_woo_product_columns' => '4',
 				'conversions_woo_products_order' => 'popularity',
-			);
+			];
 
 			foreach ($defaults as $c => $v) {
 				if ( '' == get_theme_mod( $c ) ) {

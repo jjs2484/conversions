@@ -24,6 +24,8 @@ class WooCommerce
 		add_action( 'woocommerce_before_main_content',	[ $this, 'woocommerce_before_main_content' ] );
 		add_action( 'woocommerce_after_main_content',	[ $this, 'woocommerce_after_main_content' ] );
 
+		add_filter( 'woocommerce_add_to_cart_fragments', [ $this, 'woocommerce_add_to_cart_fragments' ] );
+
 		$this->review_ratings();
 	}
 
@@ -86,6 +88,31 @@ class WooCommerce
 		{
 			return wc_reviews_enabled() && 'yes' === get_option( 'woocommerce_enable_review_rating' );
 		}
+	}
+
+
+	/**
+		@brief		woocommerce_add_to_cart_fragments
+		@since		2019-08-15 23:17:37
+	**/
+	public function woocommerce_add_to_cart_fragments( $fragments )
+	{
+		global $woocommerce;
+		ob_start();
+		$cart_totals = WC()->cart->get_cart_contents_count();
+		if ( WC()->cart->get_cart_contents_count() > 0)
+		{
+			$cart_totals = sprintf( '%s<span class="sr-only">' . __( ' items in your shopping cart', 'conversions' ) . '</span>',
+				WC()->cart->get_cart_contents_count()
+			);
+		} else {
+			$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
+		}
+		?>
+		<a class="cart-customlocation nav-link" title="<?php _e( 'View your shopping cart', 'conversions' ); ?>" href="<?php echo esc_url( wc_get_cart_url() ); ?>"><i aria-hidden="true" class="fas fa-shopping-bag"></i><?php echo $cart_totals; ?></a>
+		<?php
+		$fragments['a.cart-customlocation.nav-link'] = ob_get_clean();
+		return $fragments;
 	}
 
 	/**
