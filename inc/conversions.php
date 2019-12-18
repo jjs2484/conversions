@@ -155,11 +155,11 @@ namespace conversions
 
 			// Check if settings are set, if not set defaults.
 			$defaults = [
-				'conversions_logo_height' => '40',
+				'conversions_logo_height' => '2.5',
 				'conversions_nav_position' => 'fixed-top',
 				'conversions_nav_colors' => 'white',
 				'conversions_nav_dropshadow' => true,
-				'conversions_nav_tbpadding' => '8',
+				'conversions_nav_tbpadding' => '.5',
 				'conversions_nav_mobile_type' => 'collapse',
 				'conversions_nav_button' => 'no',
 				'conversions_nav_search_icon' => false,
@@ -174,7 +174,7 @@ namespace conversions
 				'conversions_footer_text_color' => '#222222',
 				'conversions_footer_link_color' => '#0068d7',
 				'conversions_footer_link_hcolor' => '#00698c',
-				'conversions_social_size' => '20',
+				'conversions_social_size' => '1.5',
 				'conversions_wc_cart_nav' => true,
 				'conversions_wc_account' => false,
 				'conversions_wc_checkout_columns' => 'two-column',
@@ -198,7 +198,7 @@ namespace conversions
 				'conversions_hh_img_overlay' => '.5',
 				'conversions_hh_button' => 'no',
 				'conversions_hh_vbtn' => 'no',
-				'conversions_hc_logo_width' => '100',
+				'conversions_hc_logo_width' => '6.2',
 				'conversions_hc_respond' => 'auto',
 				'conversions_hc_sm' => '2',
 				'conversions_hc_md' => '3',

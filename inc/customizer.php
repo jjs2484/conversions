@@ -143,22 +143,23 @@ namespace conversions
 			// Add logo height to site identity panel
 			//-----------------------------------------------------
 			$wp_customize->add_setting( 'conversions_logo_height', [
-				'default'       => '40',
+				'default'       => '2.5',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'absint',
+				'sanitize_callback' => 'conversions_sanitize_float',
 			] );
 			$wp_customize->add_control( 'conversions_logo_height_control', [
 				'label'      => __('Logo height', 'conversions'),
-				'description'=> __('Max logo height in px', 'conversions'),
+				'description'=> __('Max logo height in rem', 'conversions'),
 				'section'    => 'title_tagline',
 				'settings'   => 'conversions_logo_height',
 				'priority'   => 8,
 				'type'       => 'number',
 				'input_attrs'=> [
-					'min' => 1,
-					'max' => 1000,
+					'min' => 0,
+					'max' => 100,
+					'step' => 0.1,
 				],
 			] );
 
@@ -247,22 +248,23 @@ namespace conversions
 				)
 			);
 			$wp_customize->add_setting( 'conversions_nav_tbpadding', [
-				'default'       => '8',
+				'default'       => '.5',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'absint', //converts value to a non-negative integer
+				'sanitize_callback' => 'conversions_sanitize_float',
 			] );
 			$wp_customize->add_control( 'conversions_nav_tbpadding_control', [
 				'label'      => __( 'Navbar padding', 'conversions' ),
-				'description'=> __( 'Top and bottom padding in px.', 'conversions' ),
+				'description'=> __( 'Top and bottom padding in rem.', 'conversions' ),
 				'section'    => 'conversions_nav',
 				'settings'   => 'conversions_nav_tbpadding',
 				'priority'   => 40,
 				'type'       => 'number',
 				'input_attrs'=> [
-					'min' => 1,
-					'max' => 1000,
+					'min' => 0,
+					'max' => 100,
+					'step' => 0.1,
 				],
 			] );
 			$wp_customize->add_setting( 'conversions_nav_search_icon', [
@@ -837,22 +839,23 @@ namespace conversions
 				'type'       => 'text',
 			] );
 			$wp_customize->add_setting( 'conversions_social_size', [
-				'default'       => '20',
+				'default'       => '1.5',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'absint',
+				'sanitize_callback' => 'conversions_sanitize_float',
 			] );
 			$wp_customize->add_control( 'conversions_social_size_control', [
 				'label'      => __( 'Social icon size', 'conversions' ),
-				'description'=> __( 'Icon size in px', 'conversions' ),
+				'description'=> __( 'Icon size in rem', 'conversions' ),
 				'section'    => 'conversions_footer',
 				'settings'   => 'conversions_social_size',
 				'priority'   => 70,
 				'type'       => 'number',
 				'input_attrs'=> [
-					'min' => 1,
-					'max' => 1000,
+					'min' => 0,
+					'max' => 100,
+					'step' => 0.1,
 				],
 			] );
 			$wp_customize->add_setting( 'conversions_social_icons', [
@@ -1551,22 +1554,23 @@ namespace conversions
 				'type'       => 'color',
 			] );
 			$wp_customize->add_setting( 'conversions_hc_logo_width', [
-				'default'       => '100',
+				'default'       => '6.2',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
-				'sanitize_callback' => 'absint',
+				'sanitize_callback' => 'conversions_sanitize_float',
 			] );
 			$wp_customize->add_control( 'conversions_hc_logo_width_control', [
 				'label'      => __('Client logo width', 'conversions'),
-				'description'=> __('Logo max-width in px', 'conversions'),
+				'description'=> __('Logo max-width in rem', 'conversions'),
 				'section'    => 'conversions_homepage_clients',
 				'settings'   => 'conversions_hc_logo_width',
 				'priority'   => 20,
 				'type'       => 'number',
 				'input_attrs'=> [
-					'min' => 1,
-					'max' => 1000,
+					'min' => 0,
+					'max' => 100,
+					'step' => 0.1,
 				],
 			] );
 			$wp_customize->add_setting( 'conversions_hc_respond', [
@@ -2450,15 +2454,15 @@ namespace conversions
 			}
 			// fixed header height calc variables
 			if ( has_custom_logo() ) {
-				$logo_height = get_theme_mod( 'conversions_logo_height', '40' );
+				$logo_height = get_theme_mod( 'conversions_logo_height', '2.5' );
 			}
 			else {
-				$logo_height = 30;
+				$logo_height = 1.875;
 			}
-			$nav_tbpadding = get_theme_mod( 'conversions_nav_tbpadding', '8' );
-			$logo_padding = 10;
-			$total_nav_height = $logo_height + ( $nav_tbpadding * 2 ) + $logo_padding - 1;
-			$nav_offset = $total_nav_height + 50;
+			$nav_tbpadding = get_theme_mod( 'conversions_nav_tbpadding', '.5' );
+			$logo_padding = .625;
+			$total_nav_height = $logo_height + ( $nav_tbpadding * 2 ) + $logo_padding - .0625;
+			$nav_offset = $total_nav_height + 3.125;
 
 			// WC button option
 			$wc_primary_btn = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
@@ -2485,9 +2489,9 @@ namespace conversions
 			];
 
 			$mods = [
-				[ "a.navbar-brand img", "max-height", get_theme_mod( 'conversions_logo_height' ), "px" ],
-				[ ".navbar", "padding-top", get_theme_mod( 'conversions_nav_tbpadding' ), "px" ],
-				[ ".navbar", "padding-bottom", get_theme_mod( 'conversions_nav_tbpadding' ), "px" ],
+				[ "a.navbar-brand img", "max-height", get_theme_mod( 'conversions_logo_height' ), "rem" ],
+				[ ".navbar", "padding-top", get_theme_mod( 'conversions_nav_tbpadding' ), "rem" ],
+				[ ".navbar", "padding-bottom", get_theme_mod( 'conversions_nav_tbpadding' ), "rem" ],
 				[ "footer.site-footer", "background-color", get_theme_mod( 'conversions_footer_bg_color' ) ],
 				[ "footer.site-footer .h1, footer.site-footer .h2, footer.site-footer .h3, footer.site-footer .h4, footer.site-footer .h5, footer.site-footer .h6, footer.site-footer h1, footer.site-footer h2, footer.site-footer h3, footer.site-footer h4, footer.site-footer h5, footer.site-footer h6, footer.site-footer p, footer.site-footer table, footer.site-footer li, footer.site-footer caption, footer.site-footer .site-info .copyright", "color", get_theme_mod( 'conversions_footer_text_color' ) ],
 				[ "footer.site-footer a, footer.site-footer .site-info .copyright a, footer.site-footer .social-media-icons ul li.list-inline-item i", "color", get_theme_mod( 'conversions_footer_link_color' ) ],
@@ -2498,7 +2502,7 @@ namespace conversions
 				[ ".page-template-homepage section.c-hero h1", "color", get_theme_mod( 'conversions_hh_title_color' ) ],
 				[ ".page-template-homepage section.c-hero .c-hero__description", "color", get_theme_mod( 'conversions_hh_desc_color' ) ],
 				[ ".page-template-homepage section.c-clients", "background-color", get_theme_mod( 'conversions_hc_bg_color' ) ],
-				[ "section.c-clients img.client", "max-width", get_theme_mod( 'conversions_hc_logo_width' ), "px" ],
+				[ "section.c-clients img.client", "max-width", get_theme_mod( 'conversions_hc_logo_width' ), "rem" ],
 				[ "section.c-cta h2", "color", get_theme_mod( 'conversions_hcta_title_color' ) ],
 				[ "section.c-cta p.subtitle", "color", get_theme_mod( 'conversions_hcta_desc_color' ) ],
 				[ ".page-template-homepage section.c-news", "background-color", get_theme_mod( 'conversions_news_bg_color' ) ],
@@ -2516,7 +2520,7 @@ namespace conversions
 				[ ".conversions-hero-cover", "min-height", get_theme_mod( 'conversions_featured_img_height' ), "vh" ],
 				[ ".h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6", "font-family", $headings_font ],
 				[ "body, input, select, textarea", "font-family", $body_font ],
-				[ "#wrapper-footer .social-media-icons ul li.list-inline-item i", "font-size", get_theme_mod( 'conversions_social_size' ), "px" ],
+				[ "#wrapper-footer .social-media-icons ul li.list-inline-item i", "font-size", get_theme_mod( 'conversions_social_size' ), "rem" ],
 				[ ".page-template-homepage section.c-hero", "min-height", get_theme_mod( 'conversions_hh_img_height' ), "vh" ],
 				[ ".page-template-homepage section.c-woo", "background-color", get_theme_mod( 'conversions_woo_bg_color' ) ],
 				[ ".page-template-homepage section.c-woo h2", "color", get_theme_mod( 'conversions_woo_title_color' ) ],
@@ -2543,13 +2547,13 @@ namespace conversions
 				// Fixed navbar height
 				if ( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) == 'fixed-top' ) {
 					echo '#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper {
-							margin-top: '.esc_html( $total_nav_height ).'px;
+							margin-top: '.esc_html( $total_nav_height ).'rem;
 					}';
 					echo '.wrapper :target:before, .wrapper li[id].comment:before {
 						display: block;
 						content: " ";
-						margin-top: -'.esc_html( $nav_offset ).'px;
-						height: '.esc_html( $nav_offset ).'px;
+						margin-top: -'.esc_html( $nav_offset ).'rem;
+						height: '.esc_html( $nav_offset ).'rem;
 						visibility: hidden;
 						pointer-events: none;
 					}';
@@ -2738,6 +2742,13 @@ namespace
 	{
 		return ( $input === true ) ? true : false;
 	}
+
+	// Float sanitization
+	function conversions_sanitize_float( $input ) 
+	{
+    	$input = filter_var( $input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
+    	return $input;
+    }
 
 	// Repeater sanitization
 	function conversions_repeater_sanitize( $input )
