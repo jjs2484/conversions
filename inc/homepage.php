@@ -220,7 +220,7 @@ class Homepage
 		<div class="container-fluid">
 			<div class="row">
 
-				<?php do_action( 'conversions__homepage_before_client_logos' ); ?>
+				<?php do_action( 'conversions_homepage_before_client_logos' ); ?>
 
 				<div class="col-12">
 
