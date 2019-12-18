@@ -13,7 +13,7 @@ namespace conversions
 		**/
 		public function __construct()
 		{
-			add_action( 'conversions_footer_social', [ $this, 'conversions_footer_social' ] );
+			add_action( 'conversions_footer_info', [ $this, 'conversions_footer_social' ], 20 );
 			add_action( 'customize_register', [ $this, 'customize_register' ] );
 			add_action( 'wp_footer', [ $this, 'wp_footer' ], 100 );
 			add_action( 'wp_head', [ $this, 'wp_head' ], 99 );

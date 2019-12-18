@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Right Sidebar Layout
+ * Template Name: Right Sidebar
  *
  * This template can be used to override the default template and sidebar setup
  *
@@ -10,18 +10,38 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+// Featured image styles
+if ( has_post_thumbnail( get_the_ID() ) ) {
+    conversions()->template->get_featured_image();
+}
+
 get_header();
 ?>
 
 <div class="wrapper" id="page-wrapper">
 
+	<?php 
+	if ( has_post_thumbnail( get_the_ID() ) ) {			
+		// HTML for background image and title
+    	echo '<div class="conversions-hero-cover">
+    		<div class="container-fluid" id="content" tabindex="-1">
+    			<div class="row">
+					<div class="col-sm-12">
+    					<div class="conversions-hero-cover__inner">
+    						<h1 class="entry-title text-center">'.esc_html( get_the_title() ).'</h1>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>';
+	} 
+	?>
+
 	<div class="container-fluid" id="content">
 
 		<div class="row">
 
-			<div
-				class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
-				id="primary">
+			<div class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8 col-lg-9 pr-lg-5<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 

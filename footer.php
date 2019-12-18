@@ -29,9 +29,15 @@ if ( get_theme_mod( 'conversions_hcta_state', false ) == true ) {
 
 					<div class="site-info row">
 
-						<?php do_action( 'conversions_footer_credits' ); ?>
-						
-						<?php do_action( 'conversions_footer_social' ); ?>
+						<?php
+						/**
+			 			 * Functions hooked in to conversions_footer_info action
+			 			 *
+			 			 * @hooked conversions_footer_credits - 10
+			 			 * @hooked conversions_footer_social - 20
+			 			*/
+						do_action( 'conversions_footer_info' );
+						?>
 
 					</div><!-- .site-info -->
 

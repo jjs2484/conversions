@@ -17,7 +17,7 @@ class Template
 		add_action( 'edit_category', [ $this, 'category_transient_flusher' ] );
 		add_action( 'save_post', [ $this, 'category_transient_flusher' ] );
 		add_filter( 'post_class', [ $this, 'conversions_sticky_classes' ] );
-		add_action( 'conversions_footer_credits', [ $this, 'conversions_footer_credits' ] );
+		add_action( 'conversions_footer_info', [ $this, 'conversions_footer_credits' ], 10 );
 	}
 
 	/**
