@@ -29,36 +29,9 @@ if ( get_theme_mod( 'conversions_hcta_state', false ) == true ) {
 
 					<div class="site-info row">
 
-						<div class="copyright col-md">
-
-							<?php 
-								if ( ! empty( get_theme_mod( 'conversions_copyright_text' ) ) ) 
-								{
-									$copyright_text = get_theme_mod( 'conversions_copyright_text' );
-								} else {
-									$copyright_text = get_bloginfo( 'name' );
-								}
-
-								echo sprintf( '&copy;'.date("Y").'&nbsp;&bull;&nbsp;<a class="site-name" href="%s" rel="home">%s</a>', 
-									esc_url( home_url( '/' ) ),
-									esc_html( $copyright_text )
-								);
-								
-								if ( function_exists( 'the_privacy_policy_link' ) ) {
-									the_privacy_policy_link( '&nbsp;&bull;&nbsp;' );
-								} 
-
-								echo sprintf( '&nbsp;&bull;&nbsp;<span class="conversions-powered">%s&nbsp;<a href="%s">%s</a></span>', 
-									esc_html__( 'Powered by', 'conversions' ),
-									esc_url( 'https://conversionswp.com' ),
-									esc_html__( 'Conversions', 'conversions' )
-								);
-								
-							?>
-
-						</div>
+						<?php do_action( 'conversions_footer_credits' ); ?>
 						
-						<?php do_action( 'conversions_output_social' ); ?>
+						<?php do_action( 'conversions_footer_social' ); ?>
 
 					</div><!-- .site-info -->
 

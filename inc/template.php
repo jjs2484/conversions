@@ -16,7 +16,8 @@ class Template
 	{
 		add_action( 'edit_category', [ $this, 'category_transient_flusher' ] );
 		add_action( 'save_post', [ $this, 'category_transient_flusher' ] );
-		add_filter( 'post_class', [ $this, 'conversions_sticky_classes' ] ); 
+		add_filter( 'post_class', [ $this, 'conversions_sticky_classes' ] );
+		add_action( 'conversions_footer_credits', [ $this, 'conversions_footer_credits' ] );
 	}
 
 	/**
@@ -93,7 +94,7 @@ class Template
 	**/
 	public function pagination( $args = array(), $class = 'pagination' )
 	{
-        if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
+		if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
 
 		$args = wp_parse_args( $args, array(
 			'mid_size'           => 2,
@@ -105,22 +106,22 @@ class Template
 			'current'            => max( 1, get_query_var('paged') ),
 		) );
 
-        $links = paginate_links($args);
+		$links = paginate_links($args);
 
-        ?>
+		?>
 
-        <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
-            <ul class="pagination">
-                <?php
-                    foreach ( $links as $key => $link ) { ?>
-                        <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : '' ?>">
-                            <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
-                        </li>
-                <?php } ?>
-            </ul>
-        </nav>
+		<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+			<ul class="pagination">
+				<?php
+					foreach ( $links as $key => $link ) { ?>
+						<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : '' ?>">
+							<?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+						</li>
+				<?php } ?>
+			</ul>
+		</nav>
 
-        <?php
+		<?php
 	}
 
 	/**
@@ -196,10 +197,10 @@ class Template
 		@since		2019-09-05 16:55:18
 	**/
 	public function reading_time() {
-    	$content = get_the_content();
-    	$word_count = str_word_count( strip_tags( $content ) );
-    	$readingtime = ceil($word_count / 200);
-      	$time_unit = esc_html_x( 'min read', 'time unit', 'conversions' );
+		$content = get_the_content();
+		$word_count = str_word_count( strip_tags( $content ) );
+		$readingtime = ceil($word_count / 200);
+		$time_unit = esc_html_x( 'min read', 'time unit', 'conversions' );
 		$totalreadingtime = sprintf("<span class='c-reading-time'>%d %s</span>", esc_html( $readingtime ), $time_unit );
 		
 		echo $totalreadingtime;	
@@ -285,34 +286,34 @@ class Template
 					$query_related_posts->the_post(); ?>
 
 					<!-- Post item -->
-  					<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
-    					<article class="card shadow-sm h-100 mb-3">
-      			
-            				<!-- Post image -->
-      						<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
-      							<?php if ( has_post_thumbnail() ) : ?>
-        							<?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
-    							<?php else : ?>
-        							<img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
-    							<?php endif; ?>
-      						</a>
-      						<div class="card-body pb-1">
-        						<h4 class="h6">
-          		  					<a href="<?php echo esc_url( get_permalink() ); ?>">
-                  						<?php the_title(); ?>
-          		  					</a>
-        						</h4>
-        						<p class="text-muted">
-          							<?php
-          								$related_content = strip_shortcodes( get_the_content() );
-          								echo wp_trim_words( $related_content, 15, '...' ); 
-          							?>
-          						</p>
-      						</div>
-      			
-    					</article>
-  					</div>
-  					<!-- End Post Item -->
+					<div class="col-sm-6 col-lg-4 mb-4 mb-lg-3">
+						<article class="card shadow-sm h-100 mb-3">
+				
+							<!-- Post image -->
+							<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
+								<?php if ( has_post_thumbnail() ) : ?>
+									<?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
+								<?php else : ?>
+									<img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo get_template_directory_uri(); ?>/placeholder.png" />
+								<?php endif; ?>
+							</a>
+							<div class="card-body pb-1">
+								<h4 class="h6">
+									<a href="<?php echo esc_url( get_permalink() ); ?>">
+										<?php the_title(); ?>
+									</a>
+								</h4>
+								<p class="text-muted">
+									<?php
+										$related_content = strip_shortcodes( get_the_content() );
+										echo wp_trim_words( $related_content, 15, '...' ); 
+									?>
+								</p>
+							</div>
+				
+						</article>
+					</div>
+					<!-- End Post Item -->
 	
 				<?php }
 			echo '</div>';
@@ -357,49 +358,49 @@ class Template
 			//convert color from hex to rgb
 			$hex = str_replace('#','', $img_overlay_color);
 			if(strlen($hex) == 3):
-   				$rgbArray['r'] = hexdec(substr($hex,0,1).substr($hex,0,1));
-   				$rgbArray['g'] = hexdec(substr($hex,1,1).substr($hex,1,1));
-   				$rgbArray['b'] = hexdec(substr($hex,2,1).substr($hex,2,1));
+				$rgbArray['r'] = hexdec(substr($hex,0,1).substr($hex,0,1));
+				$rgbArray['g'] = hexdec(substr($hex,1,1).substr($hex,1,1));
+				$rgbArray['b'] = hexdec(substr($hex,2,1).substr($hex,2,1));
 			else:
-   				$rgbArray['r'] = hexdec(substr($hex,0,2));
-   				$rgbArray['g'] = hexdec(substr($hex,2,2));
-   				$rgbArray['b'] = hexdec(substr($hex,4,2));
+				$rgbArray['r'] = hexdec(substr($hex,0,2));
+				$rgbArray['g'] = hexdec(substr($hex,2,2));
+				$rgbArray['b'] = hexdec(substr($hex,4,2));
 			endif;
 
 			// Inline styles for background image
-    		echo '<style>
-	    		'.$css_selector.' {background-image: url('. esc_url($medium[0]) .');}
-	    		@media (min-width: 300px) { '.$css_selector.' { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .')), url('.  esc_url($medium_large[0]) .');} }
-	    		@media (min-width: 768px) { '.$css_selector.' { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .')), url('. esc_url($large[0]) .');} }
-	    		@media (min-width: 1024px) { '.$css_selector.' { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .')), url('. esc_url($fullscreen[0]) .');} }
-    		</style>';
+			echo '<style>
+				'.$css_selector.' {background-image: url('. esc_url($medium[0]) .');}
+				@media (min-width: 300px) { '.$css_selector.' { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .')), url('.  esc_url($medium_large[0]) .');} }
+				@media (min-width: 768px) { '.$css_selector.' { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .')), url('. esc_url($large[0]) .');} }
+				@media (min-width: 1024px) { '.$css_selector.' { background-image: linear-gradient(rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .'), rgba('. esc_attr($rgbArray['r']) .', '. esc_attr($rgbArray['g']) .', '. esc_attr($rgbArray['b']) .', '. esc_attr($img_overlay) .')), url('. esc_url($fullscreen[0]) .');} }
+			</style>';
 
 	}
 
 	/**
- 	* Adds .border-{color} class names to sticky posts.
- 	*
- 	* @param array $classes An array of post classes.
- 	* @param array $class   An array of additional classes added to the post.
- 	* @param int   $post_id The post ID.
- 	*
- 	* @return array
- 	*/
+	* Adds .border-{color} class names to sticky posts.
+	*
+	* @param array $classes An array of post classes.
+	* @param array $class   An array of additional classes added to the post.
+	* @param int   $post_id The post ID.
+	*
+	* @return array
+	*/
 	public function conversions_sticky_classes( $classes ) {
 
-    	// Bail if this is not a sticky post.
-    	if ( ! is_sticky() ) {
-        	return $classes;
+		// Bail if this is not a sticky post.
+		if ( ! is_sticky() ) {
+			return $classes;
 		}
 
 		$sticky_posts_highlight = get_theme_mod( 'conversions_blog_sticky_posts', 'primary' );
 		$body_classes = get_body_class();
 
 		if( $sticky_posts_highlight != 'no' && in_array('blog', $body_classes) ) {
-    		$classes[] = 'border-' . $sticky_posts_highlight;
-    	}
+			$classes[] = 'border-' . $sticky_posts_highlight;
+		}
 
-    	return $classes;
+		return $classes;
 	}
 
 	/**
@@ -411,22 +412,22 @@ class Template
 		- Removes crop size which can prevent the ID from being returned.
 	**/
 	public function conversions_id_by_url( $chc_url ) {
-    	$post_id = attachment_url_to_postid( $chc_url );
+		$post_id = attachment_url_to_postid( $chc_url );
 
-    	if ( ! $post_id ){
-        	$dir = wp_upload_dir();
-        	$path = $chc_url;
-        	
-        	if ( 0 === strpos( $path, $dir['baseurl'] . '/' ) ) {
-            	$path = substr( $path, strlen( $dir['baseurl'] . '/' ) );
-        	}
+		if ( ! $post_id ){
+			$dir = wp_upload_dir();
+			$path = $chc_url;
+			
+			if ( 0 === strpos( $path, $dir['baseurl'] . '/' ) ) {
+				$path = substr( $path, strlen( $dir['baseurl'] . '/' ) );
+			}
 
-        	if ( preg_match( '/^(.*)(\-\d*x\d*)(\.\w{1,})/i', $path, $matches ) ){
-            	$chc_url = $dir['baseurl'] . '/' . $matches[1] . $matches[3];
-            	$post_id = attachment_url_to_postid( $chc_url );
-        	}
-    	}
-    	return (int) $post_id;
+			if ( preg_match( '/^(.*)(\-\d*x\d*)(\.\w{1,})/i', $path, $matches ) ){
+				$chc_url = $dir['baseurl'] . '/' . $matches[1] . $matches[3];
+				$post_id = attachment_url_to_postid( $chc_url );
+			}
+		}
+		return (int) $post_id;
 	}
 
 	/**
@@ -437,14 +438,14 @@ class Template
 	**/
 	public function auto_col_calc( $cpt_total_count ) {
 		if ( $cpt_total_count == 1  ) {
-    		return 5;
-    	}
+			return 5;
+		}
 		elseif ( is_int( $cpt_total_count / 3 ) ) {
-    		return 4;
-    	}
+			return 4;
+		}
 		elseif ( is_int( $cpt_total_count / 2 ) ) {
-    		return 5;
-    	}
+			return 5;
+		}
 		else {
 			// prime numbers test divided by three
 			$get_float = $cpt_total_count / 3;
@@ -459,7 +460,40 @@ class Template
 				return 5;
 			}
 		}
-	} 
+	}
+
+	/**
+		@brief	conversions_footer_credits
+		@since	2019-12-17 22:16:12
+	**/
+	public function conversions_footer_credits() 
+	{
+		echo '<div class="copyright col-md">';
+ 
+			if ( ! empty( get_theme_mod( 'conversions_copyright_text' ) ) ) 
+			{
+				$copyright_text = get_theme_mod( 'conversions_copyright_text' );
+			} else {
+				$copyright_text = get_bloginfo( 'name' );
+			}
+
+			echo sprintf( '&copy;'.date("Y").'&nbsp;&bull;&nbsp;<a class="site-name" href="%s" rel="home">%s</a>', 
+				esc_url( home_url( '/' ) ),
+				esc_html( $copyright_text )
+			);
+								
+			if ( function_exists( 'the_privacy_policy_link' ) ) {
+				the_privacy_policy_link( '&nbsp;&bull;&nbsp;' );
+			} 
+
+			echo sprintf( '&nbsp;&bull;&nbsp;<span class="conversions-powered">%s&nbsp;<a href="%s">%s</a></span>', 
+				esc_html__( 'Powered by', 'conversions' ),
+				esc_url( 'https://conversionswp.com' ),
+				esc_html__( 'Conversions', 'conversions' )
+			);
+
+		echo '</div>';
+	}
 
 }
 conversions()->template = new Template();

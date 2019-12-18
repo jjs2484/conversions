@@ -13,7 +13,7 @@ namespace conversions
 		**/
 		public function __construct()
 		{
-			add_action( 'conversions_output_social', [ $this, 'conversions_output_social' ] );
+			add_action( 'conversions_footer_social', [ $this, 'conversions_footer_social' ] );
 			add_action( 'customize_register', [ $this, 'customize_register' ] );
 			add_action( 'wp_footer', [ $this, 'wp_footer' ], 100 );
 			add_action( 'wp_head', [ $this, 'wp_head' ], 99 );
@@ -21,10 +21,10 @@ namespace conversions
 		}
 
 		/**
-			@brief		conversions_output_social
+			@brief		conversions_footer_social
 			@since		2019-08-15 23:29:01
 		**/
-		public function conversions_output_social()
+		public function conversions_footer_social()
 		{
 			// get option values and decode
 			$conversions_si = get_theme_mod( 'conversions_social_icons' );
@@ -34,10 +34,10 @@ namespace conversions
 
 				echo '<div class="social-media-icons col-md"><ul class="list-inline">';
 
-      			foreach ( $conversions_si_decoded as $repeater_item ) {
+				foreach ( $conversions_si_decoded as $repeater_item ) {
 
-      				// remove prefixes for titles and screen reader text
-      				$find = [ '/\bfas \b/', '/\bfab \b/', '/\bfar \b/', '/\bfa-\b/' ];
+					// remove prefixes for titles and screen reader text
+					$find = [ '/\bfas \b/', '/\bfab \b/', '/\bfar \b/', '/\bfa-\b/' ];
 					$title = preg_replace($find, "", $repeater_item->icon_value);
 
 					// output the icon and link
@@ -45,7 +45,7 @@ namespace conversions
 						esc_attr( $title ),
 						esc_url( $repeater_item->link ),
 						esc_attr( $repeater_item->icon_value )
-                	);
+					);
 				}
 
 				echo '</ul></div>';
@@ -664,21 +664,21 @@ namespace conversions
 				'type'       => 'color',
 			] );
 			$wp_customize->add_setting( 'conversions_hcta_desc', [
-      			'default' => '',
-      			'type'          => 'theme_mod',
-      			'transport' => 'refresh',
-      			'sanitize_callback' => 'wp_kses_post'
-   			] );
+				'default' => '',
+				'type'          => 'theme_mod',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_kses_post'
+			] );
 			$wp_customize->add_control( 'conversions_hcta_desc', [
-      			'label'      => __('Description', 'conversions'),
+				'label'      => __('Description', 'conversions'),
 				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
-      			'section' => 'conversions_cta',
-      			'settings'   => 'conversions_hcta_desc',
-      			'priority' => 40,
-      			'type' => 'textarea',
-      			'capability' => 'edit_theme_options',
-   			] );
-   			$wp_customize->add_setting( 'conversions_hcta_desc_color', [
+				'section' => 'conversions_cta',
+				'settings'   => 'conversions_hcta_desc',
+				'priority' => 40,
+				'type' => 'textarea',
+				'capability' => 'edit_theme_options',
+			] );
+			$wp_customize->add_setting( 'conversions_hcta_desc_color', [
 				'default'       => '#ffffff',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
@@ -859,18 +859,18 @@ namespace conversions
 				'type' => 'theme_mod',
 				'capability' => 'edit_theme_options',
 				'transport'     => 'refresh',
-         		'sanitize_callback' => 'conversions_repeater_sanitize'
-      		] );
-      		$wp_customize->add_control(
-      			new \Conversions_Repeater(
-      			$wp_customize, 'conversions_social_icons', [
+				'sanitize_callback' => 'conversions_repeater_sanitize'
+			] );
+			$wp_customize->add_control(
+				new \Conversions_Repeater(
+				$wp_customize, 'conversions_social_icons', [
 					'label'   => __('Icons','conversions'),
 					'section' => 'conversions_footer',
 					'priority' => 80,
 					'customizer_repeater_icon_control' => true,
 					'customizer_repeater_link_control' => true,
- 				]
-      		) );
+				]
+			) );
 
 			//-----------------------------------------------------
 			// Blog section
@@ -1265,7 +1265,7 @@ namespace conversions
 				'capability'        => 'edit_theme_options',
 				'panel'             => 'conversions_homepage',
 			] );
-   			$wp_customize->add_setting( 'conversions_hh_title_color', [
+			$wp_customize->add_setting( 'conversions_hh_title_color', [
 				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
@@ -1280,21 +1280,21 @@ namespace conversions
 				'type'       => 'color',
 			] );
 			$wp_customize->add_setting( 'conversions_hh_desc', [
-      			'default' => '',
-      			'type'          => 'theme_mod',
-      			'transport' => 'refresh',
-      			'sanitize_callback' => 'wp_kses_post'
-   			] );
+				'default' => '',
+				'type'          => 'theme_mod',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_kses_post'
+			] );
 			$wp_customize->add_control( 'conversions_hh_desc', [
-      			'label'      => __('Description', 'conversions'),
+				'label'      => __('Description', 'conversions'),
 				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
-      			'section' => 'conversions_homepage_hero',
-      			'settings'   => 'conversions_hh_desc',
-      			'priority' => 3,
-      			'type' => 'textarea',
-      			'capability' => 'edit_theme_options',
-   			] );
-   			$wp_customize->add_setting( 'conversions_hh_desc_color', [
+				'section' => 'conversions_homepage_hero',
+				'settings'   => 'conversions_hh_desc',
+				'priority' => 3,
+				'type' => 'textarea',
+				'capability' => 'edit_theme_options',
+			] );
+			$wp_customize->add_setting( 'conversions_hh_desc_color', [
 				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
@@ -1669,25 +1669,25 @@ namespace conversions
 					'max' => 50,
 				],
 			] );
-      		$wp_customize->add_setting( 'conversions_hc_logos', [
+			$wp_customize->add_setting( 'conversions_hc_logos', [
 				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
-         		'sanitize_callback' => 'conversions_repeater_sanitize',
-      		] );
-      		$wp_customize->add_control(
-      			new \Conversions_Repeater(
-      				$wp_customize,
-      				'conversions_hc_logos', [
+				'sanitize_callback' => 'conversions_repeater_sanitize',
+			] );
+			$wp_customize->add_control(
+				new \Conversions_Repeater(
+					$wp_customize,
+					'conversions_hc_logos', [
 						'label'   => __( 'Client logo', 'conversions' ),
 						'section' => 'conversions_homepage_clients',
 						'priority' => 80,
 						'customizer_repeater_image_control' => true,
- 					]
- 				)
-      		);
+					]
+				)
+			);
 
-      		//-----------------------------------------------------
+			//-----------------------------------------------------
 			// Homepage Features section
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_homepage_features', [
@@ -1739,21 +1739,21 @@ namespace conversions
 				'type'       => 'color',
 			] );
 			$wp_customize->add_setting( 'conversions_features_desc', [
-      			'default' => '',
-      			'type' => 'theme_mod',
-      			'transport' => 'refresh',
-      			'sanitize_callback' => 'wp_kses_post'
-   			] );
+				'default' => '',
+				'type' => 'theme_mod',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_kses_post'
+			] );
 			$wp_customize->add_control( 'conversions_features_desc', [
-      			'label'      => __('Description', 'conversions'),
+				'label'      => __('Description', 'conversions'),
 				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
-      			'section' => 'conversions_homepage_features',
-      			'settings'   => 'conversions_features_desc',
-      			'priority' => 40,
-      			'type' => 'textarea',
-      			'capability' => 'edit_theme_options',
-   			] );
-   			$wp_customize->add_setting( 'conversions_features_desc_color', [
+				'section' => 'conversions_homepage_features',
+				'settings'   => 'conversions_features_desc',
+				'priority' => 40,
+				'type' => 'textarea',
+				'capability' => 'edit_theme_options',
+			] );
+			$wp_customize->add_setting( 'conversions_features_desc_color', [
 				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
@@ -1828,12 +1828,12 @@ namespace conversions
 				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
-         		'sanitize_callback' => 'conversions_repeater_sanitize',
-      		] );
-      		$wp_customize->add_control(
-      			new \Conversions_Repeater(
-      				$wp_customize,
-      				'conversions_features_icons', [
+				'sanitize_callback' => 'conversions_repeater_sanitize',
+			] );
+			$wp_customize->add_control(
+				new \Conversions_Repeater(
+					$wp_customize,
+					'conversions_features_icons', [
 						'label'   => __( 'Icon block', 'conversions' ),
 						'section' => 'conversions_homepage_features',
 						'priority' => 90,
@@ -1843,11 +1843,11 @@ namespace conversions
 						'customizer_repeater_text_control' => true,
 						'customizer_repeater_linktext_control' => true,
 						'customizer_repeater_link_control' => true,
- 					]
- 				)
-      		);
+					]
+				)
+			);
 
-      		//-----------------------------------------------------
+			//-----------------------------------------------------
 			// Homepage Pricing section
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_homepage_pricing', [
@@ -1899,21 +1899,21 @@ namespace conversions
 				'type'       => 'color',
 			] );
 			$wp_customize->add_setting( 'conversions_pricing_desc', [
-      			'default' => '',
-      			'type' => 'theme_mod',
-      			'transport' => 'refresh',
-      			'sanitize_callback' => 'wp_kses_post'
-   			] );
+				'default' => '',
+				'type' => 'theme_mod',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_kses_post'
+			] );
 			$wp_customize->add_control( 'conversions_pricing_desc', [
-      			'label'      => __('Description', 'conversions'),
+				'label'      => __('Description', 'conversions'),
 				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
-      			'section' => 'conversions_homepage_pricing',
-      			'settings'   => 'conversions_pricing_desc',
-      			'priority' => 40,
-      			'type' => 'textarea',
-      			'capability' => 'edit_theme_options',
-   			] );
-   			$wp_customize->add_setting( 'conversions_pricing_desc_color', [
+				'section' => 'conversions_homepage_pricing',
+				'settings'   => 'conversions_pricing_desc',
+				'priority' => 40,
+				'type' => 'textarea',
+				'capability' => 'edit_theme_options',
+			] );
+			$wp_customize->add_setting( 'conversions_pricing_desc_color', [
 				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
@@ -2011,12 +2011,12 @@ namespace conversions
 			$wp_customize->add_setting( 'conversions_pricing_repeater', [
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
-         		'sanitize_callback' => 'conversions_repeater_sanitize',
-      		] );
-      		$wp_customize->add_control(
-      			new \Conversions_Repeater(
-      				$wp_customize,
-      				'conversions_pricing_repeater', [
+				'sanitize_callback' => 'conversions_repeater_sanitize',
+			] );
+			$wp_customize->add_control(
+				new \Conversions_Repeater(
+					$wp_customize,
+					'conversions_pricing_repeater', [
 						'label'   => __( 'Pricing table', 'conversions' ),
 						'section' => 'conversions_homepage_pricing',
 						'priority' => 90,
@@ -2026,11 +2026,11 @@ namespace conversions
 						'customizer_repeater_linktext_control' => true,
 						'customizer_repeater_link_control' => true,
 						'customizer_repeater_repeater_control' => true
- 					]
- 				)
-      		);
+					]
+				)
+			);
 
-      		//-----------------------------------------------------
+			//-----------------------------------------------------
 			// Homepage Testimonials section
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_homepage_testimonials', [
@@ -2082,21 +2082,21 @@ namespace conversions
 				'type'       => 'color',
 			] );
 			$wp_customize->add_setting( 'conversions_testimonials_desc', [
-      			'default' => '',
-      			'type' => 'theme_mod',
-      			'transport' => 'refresh',
-      			'sanitize_callback' => 'wp_kses_post'
-   			] );
+				'default' => '',
+				'type' => 'theme_mod',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_kses_post'
+			] );
 			$wp_customize->add_control( 'conversions_testimonials_desc', [
-      			'label'      => __('Description', 'conversions'),
+				'label'      => __('Description', 'conversions'),
 				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
-      			'section' => 'conversions_homepage_testimonials',
-      			'settings'   => 'conversions_testimonials_desc',
-      			'priority' => 40,
-      			'type' => 'textarea',
-      			'capability' => 'edit_theme_options',
-   			] );
-   			$wp_customize->add_setting( 'conversions_testimonials_desc_color', [
+				'section' => 'conversions_homepage_testimonials',
+				'settings'   => 'conversions_testimonials_desc',
+				'priority' => 40,
+				'type' => 'textarea',
+				'capability' => 'edit_theme_options',
+			] );
+			$wp_customize->add_setting( 'conversions_testimonials_desc_color', [
 				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
@@ -2113,22 +2113,22 @@ namespace conversions
 			$wp_customize->add_setting( 'conversions_testimonials_repeater', [
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
-         		'sanitize_callback' => 'conversions_repeater_sanitize',
-      		] );
-      		$wp_customize->add_control(
-      			new \Conversions_Repeater(
-      				$wp_customize,
-      				'conversions_testimonials_repeater', [
+				'sanitize_callback' => 'conversions_repeater_sanitize',
+			] );
+			$wp_customize->add_control(
+				new \Conversions_Repeater(
+					$wp_customize,
+					'conversions_testimonials_repeater', [
 						'label'   => __( 'Testimonials', 'conversions' ),
 						'section' => 'conversions_homepage_testimonials',
 						'priority' => 60,
 						'customizer_repeater_title_control' => true,
 						'customizer_repeater_subtitle_control' => true,
 						'customizer_repeater_text_control' => true,
- 					]
-      		) );
+					]
+			) );
 
-      		//-----------------------------------------------------
+			//-----------------------------------------------------
 			// Homepage News section
 			//-----------------------------------------------------
 			$wp_customize->add_section( 'conversions_homepage_news', [
@@ -2180,21 +2180,21 @@ namespace conversions
 				'type'       => 'color',
 			] );
 			$wp_customize->add_setting( 'conversions_news_desc', [
-      			'default' => '',
-      			'type'          => 'theme_mod',
-      			'transport' => 'refresh',
-      			'sanitize_callback' => 'wp_kses_post'
-   			] );
+				'default' => '',
+				'type'          => 'theme_mod',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_kses_post'
+			] );
 			$wp_customize->add_control( 'conversions_news_desc', [
-      			'label'      => __('Description', 'conversions'),
+				'label'      => __('Description', 'conversions'),
 				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
-      			'section' => 'conversions_homepage_news',
-      			'settings'   => 'conversions_news_desc',
-      			'priority' => 40,
-      			'type' => 'textarea',
-      			'capability' => 'edit_theme_options',
-   			] );
-   			$wp_customize->add_setting( 'conversions_news_desc_color', [
+				'section' => 'conversions_homepage_news',
+				'settings'   => 'conversions_news_desc',
+				'priority' => 40,
+				'type' => 'textarea',
+				'capability' => 'edit_theme_options',
+			] );
+			$wp_customize->add_setting( 'conversions_news_desc_color', [
 				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
@@ -2281,21 +2281,21 @@ namespace conversions
 				'type'       => 'color',
 			] );
 			$wp_customize->add_setting( 'conversions_woo_desc', [
-      			'default' => '',
-      			'type'          => 'theme_mod',
-      			'transport' => 'refresh',
-      			'sanitize_callback' => 'wp_kses_post'
-   			] );
+				'default' => '',
+				'type'          => 'theme_mod',
+				'transport' => 'refresh',
+				'sanitize_callback' => 'wp_kses_post'
+			] );
 			$wp_customize->add_control( 'conversions_woo_desc', [
-      			'label'      => __('Description', 'conversions'),
+				'label'      => __('Description', 'conversions'),
 				'description'=> __('Add some description text. HTML is allowed.', 'conversions'),
-      			'section' => 'conversions_homepage_woo',
-      			'settings'   => 'conversions_woo_desc',
-      			'priority' => 40,
-      			'type' => 'textarea',
-      			'capability' => 'edit_theme_options',
-   			] );
-   			$wp_customize->add_setting( 'conversions_woo_desc_color', [
+				'section' => 'conversions_homepage_woo',
+				'settings'   => 'conversions_woo_desc',
+				'priority' => 40,
+				'type' => 'textarea',
+				'capability' => 'edit_theme_options',
+			] );
+			$wp_customize->add_setting( 'conversions_woo_desc_color', [
 				'default'       => '',
 				'type'          => 'theme_mod',
 				'transport'     => 'refresh',
@@ -2666,10 +2666,10 @@ namespace conversions
 					if ( get_theme_mod( 'conversions_wc_account', false ) == true ) {
 
 						if ( is_user_logged_in() ) {
- 							$wc_al = __('My Account','conversions');
- 						} else {
- 							$wc_al = __( 'Login / Register', 'conversions' );
- 						}
+							$wc_al = __('My Account','conversions');
+						} else {
+							$wc_al = __( 'Login / Register', 'conversions' );
+						}
 						// output the account icon if active.
 						$wc_account_link = sprintf( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
 							esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ),
@@ -2733,7 +2733,7 @@ namespace
 		return ( array_key_exists( $input, $valid ) ? $input : $setting->default );
 	}
 
-    // Checkbox sanitization
+	// Checkbox sanitization
 	function conversions_sanitize_checkbox( $input )
 	{
 		return ( $input === true ) ? true : false;
@@ -2757,30 +2757,30 @@ namespace
 	// Filter to modify input label for repeater controls
 	function conversions_repeater_labels( $string, $id, $control ) {
 
-     	// testimonial repeater labels
-     	if ( $id === 'conversions_testimonials_repeater' ) {
-     		if ( $control === 'customizer_repeater_title_control' ) {
-     			return esc_html__( 'Full name','conversions' );
-     		}
-     		if ( $control === 'customizer_repeater_subtitle_control' ) {
-     			return esc_html__( 'Company name','conversions' );
-     		}
-     		if ( $control === 'customizer_repeater_text_control' ) {
-     			return esc_html__( 'Testimonial text','conversions' );
-     		}
-        }
+		// testimonial repeater labels
+		if ( $id === 'conversions_testimonials_repeater' ) {
+			if ( $control === 'customizer_repeater_title_control' ) {
+				return esc_html__( 'Full name','conversions' );
+			}
+			if ( $control === 'customizer_repeater_subtitle_control' ) {
+				return esc_html__( 'Company name','conversions' );
+			}
+			if ( $control === 'customizer_repeater_text_control' ) {
+				return esc_html__( 'Testimonial text','conversions' );
+			}
+		}
 
-        // pricing table repeater labels
-        if ( $id === 'conversions_pricing_repeater' ) {
-     		if ( $control === 'customizer_repeater_subtitle_control' ) {
-     			return esc_html__( 'Price','conversions' );
-     		}
-     		if ( $control === 'customizer_repeater_subtitle2_control' ) {
-     			return esc_html__( 'Duration','conversions' );
-     		}
-        }
+		// pricing table repeater labels
+		if ( $id === 'conversions_pricing_repeater' ) {
+			if ( $control === 'customizer_repeater_subtitle_control' ) {
+				return esc_html__( 'Price','conversions' );
+			}
+			if ( $control === 'customizer_repeater_subtitle2_control' ) {
+				return esc_html__( 'Duration','conversions' );
+			}
+		}
 
-        return $string;
-    }
-    add_filter( 'repeater_input_labels_filter','conversions_repeater_labels', 10 , 3 );
+		return $string;
+	}
+	add_filter( 'repeater_input_labels_filter','conversions_repeater_labels', 10 , 3 );
 }
