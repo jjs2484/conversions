@@ -21,7 +21,13 @@ defined( 'ABSPATH' ) || exit;
 </head>
 
 <body <?php body_class(); ?>>
-<?php do_action( 'wp_body_open' ); ?>
+
+<?php if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+} else {
+	do_action( 'wp_body_open' );
+} ?>
+
 <div class="site" id="page">
 
 	<!-- The Navbar -->
@@ -30,8 +36,8 @@ defined( 'ABSPATH' ) || exit;
 		<?php if ( is_page_template( 'page-templates/homepage.php' ) ) { ?>
 			<a class="skip-link sr-only sr-only-focusable" href="#homepage-wrapper"><?php esc_html_e( 'Skip to content', 'conversions' ); ?></a>
 		<?php } else { ?>
-    		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'conversions' ); ?></a>
-    	<?php } ?>
+			<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'conversions' ); ?></a>
+		<?php } ?>
 
 		<?php get_template_part( 'partials/navbar', 'right' ); ?>
 

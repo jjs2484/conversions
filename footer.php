@@ -13,6 +13,8 @@ if ( get_theme_mod( 'conversions_hcta_state', false ) == true ) {
 	get_template_part( 'partials/footer', 'cta' );
 } ?>
 
+<?php do_action( 'conversions_before_footer' ); ?>
+
 <footer class="site-footer" id="colophon">
 
 	<?php get_template_part( 'partials/sidebar', 'footer' ); ?>
@@ -38,19 +40,19 @@ if ( get_theme_mod( 'conversions_hcta_state', false ) == true ) {
 								}
 
 								echo sprintf( '&copy;'.date("Y").'&nbsp;&bull;&nbsp;<a class="site-name" href="%s" rel="home">%s</a>', 
-                    				esc_url( home_url( '/' ) ),
-                    				esc_html( $copyright_text )
-                  				);
+									esc_url( home_url( '/' ) ),
+									esc_html( $copyright_text )
+								);
 								
 								if ( function_exists( 'the_privacy_policy_link' ) ) {
 									the_privacy_policy_link( '&nbsp;&bull;&nbsp;' );
 								} 
 
 								echo sprintf( '&nbsp;&bull;&nbsp;<span class="conversions-powered">%s&nbsp;<a href="%s">%s</a></span>', 
-                    				esc_html__( 'Powered by', 'conversions' ),
-                    				esc_url( 'https://conversionswp.com' ),
-                    				esc_html__( 'Conversions', 'conversions' )
-                  				);
+									esc_html__( 'Powered by', 'conversions' ),
+									esc_url( 'https://conversionswp.com' ),
+									esc_html__( 'Conversions', 'conversions' )
+								);
 								
 							?>
 
@@ -69,6 +71,8 @@ if ( get_theme_mod( 'conversions_hcta_state', false ) == true ) {
 	</div><!-- wrapper end -->
 
 </footer><!-- #colophon -->
+
+<?php do_action( 'conversions_after_footer' ); ?>
 
 </div><!-- #page end -->
 
