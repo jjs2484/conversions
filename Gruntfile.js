@@ -67,8 +67,8 @@ module.exports = function(grunt) {
 				tasks: ['all'],
 			},
 			scripts: {
-			 files: ['js/*.js'],
-			 tasks: ['all'],
+				files: ['js/*.js'],
+				tasks: ['all'],
 			},
 		},
 		copy: {
@@ -104,6 +104,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	
 	// Run All Tasks
-	grunt.registerTask('all', ['sass', 'concat','postcss', 'cssmin', 'uglify']);
+	grunt.registerTask('all', ['sass', 'concat','postcss', 'cssmin', 'uglify', 'copy']);
 
 };
