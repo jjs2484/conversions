@@ -221,6 +221,11 @@ class Enqueue
 		$css_version = $theme_version . '.' . filemtime(get_template_directory() . '/build/main.min.css');
 		wp_enqueue_style( 'conversions-styles', get_template_directory_uri() . '/build/main.min.css', array(), $css_version );
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/build/font-awesome.min.css', array(), '5.10.2' );
+		// RTL
+		if ( is_rtl() ) {
+  			wp_enqueue_style( 'conversions-styles-rtl', get_template_directory_uri() . '/build/main.rtl.min.css', array(), $css_version );
+  			wp_dequeue_style( 'conversions-styles' );
+		}
 
 		// jQuery
 		wp_enqueue_script( 'jquery');

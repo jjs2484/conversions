@@ -39,10 +39,23 @@ module.exports = function(grunt) {
 				src: 'build/main.css'
 			}
 		},
+		rtlcss: {
+			myTask:{
+				options: {
+					opts: {
+						clean:false
+					},
+				},
+				expand : true,
+				src    : ['build/main.css'],
+				ext    : '.rtl.css'
+			}
+		},
 		cssmin: {
 			target: {
 				files: {
 					'build/main.min.css': ['build/main.css'],
+					'build/main.rtl.min.css': ['build/main.rtl.css'],
 					'build/font-awesome.min.css': ['build/font-awesome.css'],
 					'build/gutenberg-editor-style.min.css': ['build/gutenberg-editor-style.css'],
 					'build/classic-editor-style.min.css': ['build/classic-editor-style.css'],
@@ -102,8 +115,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-rtlcss');
 	
 	// Run All Tasks
-	grunt.registerTask('all', ['sass', 'concat','postcss', 'cssmin', 'uglify', 'copy']);
+	grunt.registerTask('all', ['sass', 'concat','postcss', 'rtlcss', 'cssmin', 'uglify', 'copy']);
 
 };
