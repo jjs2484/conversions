@@ -11182,7 +11182,7 @@ body, input, select, textarea {
 
 .wrapper {
   padding: 2rem 0 3rem;
-  overflow: hidden;
+  overflow-x: hidden;
   word-wrap: break-word; }
   .wrapper :focus {
     outline: none; }

@@ -34,7 +34,7 @@ body, input, select, textarea {
 // Basic wrapper
 .wrapper {
   padding: 2rem 0 3rem; 
-  overflow: hidden;
+  overflow-x: hidden;
   word-wrap: break-word;
   :focus {
     outline: none;
