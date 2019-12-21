@@ -2658,7 +2658,7 @@ namespace conversions
 							$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
 						}
 						// output the cart icon with item count
-						$cart_link = sprintf( '<li class="cart menu-item nav-item" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-bag"></i>%s</a></li>',
+						$cart_link = sprintf( '<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-bag"></i>%s</a></li>',
 							wc_get_cart_url(),
 							$cart_totals
 						);
@@ -2675,7 +2675,7 @@ namespace conversions
 							$wc_al = __( 'Login / Register', 'conversions' );
 						}
 						// output the account icon if active.
-						$wc_account_link = sprintf( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
+						$wc_account_link = sprintf( '<li class="search-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
 							esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ),
 							$wc_al
 						);
@@ -2688,7 +2688,7 @@ namespace conversions
 
 				// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 				if ( get_theme_mod( 'conversions_nav_search_icon', false ) == true ) {
-					$nav_search = sprintf( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="search-icon menu-item nav-item"><a href="#csearchModal" data-toggle="modal" class="nav-link" title="%1$s"><i aria-hidden="true" class="fas fa-search"></i><span class="sr-only">%1$s</span></a></li>',
+					$nav_search = sprintf( '<li class="search-icon menu-item nav-item"><a href="#csearchModal" data-toggle="modal" class="nav-link" title="%1$s"><i aria-hidden="true" class="fas fa-search"></i><span class="sr-only">%1$s</span></a></li>',
 						__( 'Search', 'conversions' )
 						);
 
@@ -2708,7 +2708,7 @@ namespace conversions
 						$nav_btn_url = "";
 					}
 
-					$nav_button = sprintf( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="nav-callout-button menu-item nav-item"><a title="%1$s" href="%2$s" class="btn %3$s">%1$s</a></li>',
+					$nav_button = sprintf( '<li class="nav-callout-button menu-item nav-item"><a title="%1$s" href="%2$s" class="btn %3$s">%1$s</a></li>',
 						esc_html( $nav_btn_text ),
 						esc_url( $nav_btn_url ),
 						esc_attr( get_theme_mod( 'conversions_nav_button' ) )

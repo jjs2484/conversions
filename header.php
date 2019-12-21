@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
 <div class="site" id="page">
 
 	<!-- The Navbar -->
-	<div id="wrapper-navbar" class="<?php echo esc_attr( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) ); ?>" itemscope itemtype="http://schema.org/WebSite">
+	<div id="wrapper-navbar" class="<?php echo esc_attr( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) ); ?>">
 
 		<?php if ( is_page_template( 'page-templates/homepage.php' ) ) { ?>
 			<a class="skip-link sr-only sr-only-focusable" href="#homepage-wrapper"><?php esc_html_e( 'Skip to content', 'conversions' ); ?></a>
