@@ -9,6 +9,16 @@
   h1 { 
     font-weight: $font-weight-normal;
   }
+
+  ul.dropdown-menu li.menu-item {
+    display: block;
+    &:first-of-type {
+      margin-top: .5rem;
+      @include media-breakpoint-up(lg) {
+        margin-top: 0;
+      }
+    }
+  }
   
   // Large devices (desktops, 992px and up)
   @include media-breakpoint-up(lg) {
@@ -24,10 +34,6 @@
         margin-left: .5rem;
       }
     }
-  }
-
-  ul.dropdown-menu li.menu-item {
-    display: block;
   }
 
   // Offcanvas on mobile devices 
@@ -61,6 +67,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   overflow-x: hidden;
 }
 
+// Navbar link colors
 #wrapper-navbar nav {
   &.navbar-dark {
     a.nav-link { 

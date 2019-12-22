@@ -11059,6 +11059,13 @@ a.skip-link {
   width: auto; }
 #wrapper-navbar .navbar h1 {
   font-weight: 400; }
+#wrapper-navbar .navbar ul.dropdown-menu li.menu-item {
+  display: block; }
+  #wrapper-navbar .navbar ul.dropdown-menu li.menu-item:first-of-type {
+    margin-top: .5rem; }
+    @media (min-width: 992px) {
+      #wrapper-navbar .navbar ul.dropdown-menu li.menu-item:first-of-type {
+        margin-top: 0; } }
 @media (min-width: 992px) {
   #wrapper-navbar .navbar ul.navbar-nav {
     display: inline-block; }
@@ -11068,8 +11075,6 @@ a.skip-link {
         white-space: nowrap; }
     #wrapper-navbar .navbar ul.navbar-nav li.nav-callout-button.menu-item {
       margin-left: .5rem; } }
-#wrapper-navbar .navbar ul.dropdown-menu li.menu-item {
-  display: block; }
 @media (max-width: 991.98px) {
   #wrapper-navbar .navbar .offcanvas-collapse {
     position: fixed;
