@@ -48,22 +48,22 @@ body, input, select, textarea {
 
 // Width utilities
 .w-md-80 {
-  @media (min-width: 768px) {
+  @include media-breakpoint-up(md) {
     width: 80%;
   }
 }
 .w-md-95 {
-  @media (min-width: 768px) {
+  @include media-breakpoint-up(md) {
     width: 95%;
   }
 }
 .w-lg-60 {
-  @media (min-width: 992px) {
+  @include media-breakpoint-up(lg) {
     width: 60%;
   }
 }
 .w-lg-90 {
-  @media (min-width: 992px) {
+  @include media-breakpoint-up(lg) {
     width: 90%;
   }
 }
@@ -86,12 +86,6 @@ article {
       content: "";
     }
   }
-}
-
-// Subtitle and description .text-muted
-section p.subtitle, .c-features__block-desc {
-  color: #6c757d;
-  margin-bottom: 1rem;
 }
 
 // News img
@@ -148,7 +142,6 @@ section.c-woo .container-fluid {
   }
 }
 
-// features padding
 section.c-features .container-fluid {
   padding-top: 3rem;
   padding-bottom: 2rem;
@@ -156,6 +149,21 @@ section.c-features .container-fluid {
     padding-top: 4rem;
     padding-bottom: 3rem;
   }
+}
+
+// Homepage sections intro
+section .c-intro .c-intro__inner {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 3rem;
+  }
+}
+section p.subtitle {
+  color: #6c757d;
+  margin-bottom: 1rem;
 }
 
 // Hero section
@@ -268,6 +276,10 @@ section.c-features {
         }
       }
     }
+  }
+  .c-features__block-desc {
+    color: #6c757d;
+    margin-bottom: 1rem;
   }
 }
 

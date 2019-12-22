@@ -490,8 +490,8 @@ class Homepage
 				{
 				?>
 
-					<div class="col-12">
-						<div class="w-md-80 w-lg-60 text-center mb-4 mb-md-5 mx-auto">
+					<div class="col-12 c-intro">
+						<div class="w-md-80 w-lg-60 c-intro__inner">
 							<?php
 								if ( !empty( get_theme_mod( 'conversions_features_title' ) ) ) {
 									// Title
@@ -539,8 +539,8 @@ class Homepage
 
 				<?php if ( !empty( get_theme_mod( 'conversions_woo_title') ) || !empty( get_theme_mod( 'conversions_woo_desc' ) ) ) { ?>
 
-					<div class="col-12">
-						<div class="w-md-80 w-lg-60 text-center mb-4 mb-md-5 mx-auto">
+					<div class="col-12 c-intro">
+						<div class="w-md-80 w-lg-60 c-intro__inner">
 							<?php
 								if ( !empty( get_theme_mod( 'conversions_woo_title' ) ) ) {
 									// Title
@@ -702,8 +702,8 @@ class Homepage
 
 				<?php if ( !empty( get_theme_mod( 'conversions_pricing_title') ) || !empty( get_theme_mod( 'conversions_pricing_desc' ) ) ) { ?>
 
-					<div class="col-12">
-						<div class="w-md-80 w-lg-60 text-center mb-4 mb-md-5 mx-auto">
+					<div class="col-12 c-intro">
+						<div class="w-md-80 w-lg-60 c-intro__inner">
 							<?php
 								if ( !empty( get_theme_mod( 'conversions_pricing_title' ) ) ) {
 									// Title
@@ -815,8 +815,8 @@ class Homepage
 
 				<?php if ( !empty( get_theme_mod( 'conversions_testimonials_title') ) || !empty( get_theme_mod( 'conversions_testimonials_desc') ) ) { ?>
 					<!-- Title -->
-					<div class="col-12">
-						<div class="w-md-80 w-lg-60 text-center mb-4 mb-md-5 mx-auto">
+					<div class="col-12 c-intro">
+						<div class="w-md-80 w-lg-60 c-intro__inner">
 							<?php
 								if ( !empty( get_theme_mod( 'conversions_testimonials_title') ) ) {
 									// Title
@@ -922,8 +922,8 @@ class Homepage
 				<?php if ( !empty( get_theme_mod( 'conversions_news_title') ) || !empty( get_theme_mod( 'conversions_news_desc' ) ) ) { ?>
 
 					<!-- Title -->
-					<div class="col-12">
-						<div class="w-md-80 w-lg-60 text-center mb-4 mb-md-5 mx-auto">
+					<div class="col-12 c-intro">
+						<div class="w-md-80 w-lg-60 c-intro__inner">
 							<?php
 								if ( !empty( get_theme_mod( 'conversions_news_title' ) ) ) {
 									// Title

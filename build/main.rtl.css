@@ -11219,10 +11219,6 @@ article .entry-content::after {
   clear: both;
   content: ""; }
 
-section p.subtitle, .c-features__block-desc {
-  color: #6c757d;
-  margin-bottom: 1rem; }
-
 a.c-news__img-link {
   background: #000;
   border-radius: 4px; }
@@ -11290,6 +11286,19 @@ section.c-features .container-fluid, section.c-features .container-sm, section.c
     section.c-features .container-fluid, section.c-features .container-sm, section.c-features .container-md, section.c-features .container-lg, section.c-features .container-xl {
       padding-top: 4rem;
       padding-bottom: 3rem; } }
+
+section .c-intro .c-intro__inner {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem; }
+  @media (min-width: 768px) {
+    section .c-intro .c-intro__inner {
+      margin-bottom: 3rem; } }
+
+section p.subtitle {
+  color: #6c757d;
+  margin-bottom: 1rem; }
 
 section.c-hero {
   background-position: center;
@@ -11381,6 +11390,9 @@ section.c-features .row:first-of-type .c-features__block {
     background-color: transparent; }
     section.c-features .row:first-of-type .c-features__block .card .c-features__block-icon i {
       font-size: 3rem; }
+section.c-features .c-features__block-desc {
+  color: #6c757d;
+  margin-bottom: 1rem; }
 
 @media (min-width: 576px) {
   .c-pricing .row:first-of-type {
