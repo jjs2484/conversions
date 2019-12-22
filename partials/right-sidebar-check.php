@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-</div><!-- #closing the primary container from /partials/left-sidebar-check.php -->
+</div><!-- #closing primary container from /partials/left-sidebar-check.php -->
 
 <?php $sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' ); ?>
 

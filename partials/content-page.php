@@ -13,13 +13,9 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 
-		<?php
-
-			if ( ! has_post_thumbnail() ) // check if featured image is set
-			{
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			}
-		?>
+		<?php if ( ! has_post_thumbnail() ) {
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		} ?>
 
 	</header><!-- .entry-header -->
 
@@ -27,12 +23,10 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php the_content(); ?>
 
-		<?php
-		wp_link_pages( array(
+		<?php wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'conversions' ),
 			'after'  => '</div>',
-		) );
-		?>
+		) ); ?>
 
 	</div><!-- .entry-content -->
 
