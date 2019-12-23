@@ -187,16 +187,35 @@ p.no-comments {
 					color: $gray-700;
 				}
 			}
+			table.variations, 
+			table.woocommerce-grouped-product-list {
+				width: auto;
+				max-width: 100%;
+			}
 		}
 	}
 	.woocommerce-breadcrumb {
 		margin: 0 0 1.75em;
 		a {
 			color: $text-muted;
+			&:hover {
+				color: #5a6268;
+			}
 		}
 	}
-	.product_meta a {
+	.product_meta {
 		color: $text-muted;
+		a {
+			color: $text-muted;
+			text-decoration: underline;
+			&:hover {
+				color: #5a6268;
+			}
+		}
+		.sku_wrapper, 
+		.posted_in {
+			margin-right: .5rem;
+		}
 	}
 	.star-rating {
 		color: #F7DE00;

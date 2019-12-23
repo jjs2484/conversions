@@ -55,6 +55,9 @@
         a {
           color: $text-muted;
           text-decoration: underline;
+          &:hover {
+            color: #5a6268;
+          }
         }
       }
       // time
