@@ -10,14 +10,17 @@
     font-weight: $font-weight-normal;
   }
 
+  // mobile menu padding
+  ul#main-menu {
+    padding-top: .5rem;
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+    }
+  }
+  
+  // Dropdown li's
   ul.dropdown-menu li.menu-item {
     display: block;
-    &:first-of-type {
-      margin-top: .5rem;
-      @include media-breakpoint-up(lg) {
-        margin-top: 0;
-      }
-    }
   }
   
   // Large devices (desktops, 992px and up)

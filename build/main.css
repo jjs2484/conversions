@@ -11059,13 +11059,13 @@ a.skip-link {
   width: auto; }
 #wrapper-navbar .navbar h1 {
   font-weight: 400; }
+#wrapper-navbar .navbar ul#main-menu {
+  padding-top: .5rem; }
+  @media (min-width: 992px) {
+    #wrapper-navbar .navbar ul#main-menu {
+      padding-top: 0; } }
 #wrapper-navbar .navbar ul.dropdown-menu li.menu-item {
   display: block; }
-  #wrapper-navbar .navbar ul.dropdown-menu li.menu-item:first-of-type {
-    margin-top: .5rem; }
-    @media (min-width: 992px) {
-      #wrapper-navbar .navbar ul.dropdown-menu li.menu-item:first-of-type {
-        margin-top: 0; } }
 @media (min-width: 992px) {
   #wrapper-navbar .navbar ul.navbar-nav {
     display: inline-block; }
