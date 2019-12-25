@@ -17,9 +17,9 @@ class Enqueue
 		add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_block_editor_assets' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_block_editor_inline' ], 99 );
-
 		add_action( 'tiny_mce_before_init', [ $this, 'tiny_mce_before_init' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ] );
+		add_action( 'customize_controls_enqueue_scripts', [ $this, 'customize_controls_enqueue_scripts' ] );
 	}
 
 	/**
@@ -56,7 +56,7 @@ class Enqueue
 	{
 
 		// Editor styles
-		wp_register_style( 'conversions-gutenberg', get_stylesheet_directory_uri() . '/build/gutenberg-editor-style.min.css' );
+		wp_register_style( 'conversions-gutenberg', get_template_directory_uri() . '/build/gutenberg-editor-style.min.css' );
 		wp_enqueue_style( 'conversions-gutenberg' );
 
 		// Are Google fonts enabled?
@@ -252,6 +252,22 @@ class Enqueue
 				wp_enqueue_style( 'conversions-body-gfont', '//fonts.googleapis.com/css?family='. esc_html( $body_font ) );
 			}
 		}
+	}
+
+	/**
+		@brief		Customizer enqueue scripts.
+		@since		2019-12-25 04:29:47
+	**/
+	function customize_controls_enqueue_scripts() {
+		// styles
+		wp_enqueue_style( 'wp-color-picker' );
+		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/build/font-awesome.min.css', array(), '5.10.2' );
+		wp_enqueue_style( 'conversions-customizer-css', get_template_directory_uri().'/build/conversions-customizer.min.css', array(), '1.0' );
+		
+		// scripts
+		wp_enqueue_script( 'jquery-ui-core' );
+		wp_enqueue_script( 'jquery-ui-sortable' );
+		wp_enqueue_script( 'conversions-customizer-js', get_template_directory_uri() . '/build/conversions-customizer.min.js', array('jquery', 'jquery-ui-draggable', 'wp-color-picker' ), '1.0', true  );
 	}
 }
 new Enqueue();

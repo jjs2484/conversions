@@ -92,6 +92,7 @@ class Homepage
 			'capability'		=> 'edit_theme_options',
 			'default'			=> get_theme_mod( static::$theme_mod_key ),
 			'type'				=> 'theme_mod',
+			'sanitize_callback' => 'wp_filter_nohtml_kses',
 		] );
 
 		require_once( __DIR__ . '/homepage_sorting_customizer_control.php' );
@@ -101,7 +102,6 @@ class Homepage
 		$wp_customize->add_control( new Homepage_Sorting_Customizer_Control( $wp_customize, static::$theme_mod_key,
 		[
 			'priority'          => 10,
-			'sanitize_callback' => 'wp_filter_nohtml_kses',
 			'section'           => static::$theme_mod_key,
 			'settings'          => static::$theme_mod_key,
 			'type'				=> 'hidden',

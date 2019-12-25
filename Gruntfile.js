@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 					'build/font-awesome.css': 'sass/font-awesome.scss',
 					'build/gutenberg-editor-style.css': 'sass/gutenberg-editor-style.scss',
 					'build/classic-editor-style.css': 'sass/classic-editor-style.scss',
-					'build/conversions-repeater.css': 'sass/conversions-repeater.scss',
+					'build/conversions-customizer.css': 'sass/customizer.scss',
 				}
 			}
 		},
@@ -24,22 +24,22 @@ module.exports = function(grunt) {
 			basic_and_extras: {
 				files: {
 					'build/theme.js': ['node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'js/skip-link-focus-fix.js', 'node_modules/slick-carousel/slick/slick.js', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js', 'js/theme.js'],
-					'build/conversions-customizer.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js', 'js/customizer-conditionals.js'],
+					'build/conversions-customizer.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js', 'js/customizer-conditionals.js', 'js/homepage_sorting.js'],
 					'build/main.css': ['build/main.css', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'],
 				},
 			},
 		},
 		lineending: {
-    		dist: {
-      			options: {
-        			eol: 'lf'
-      			},
-      			files: {
-        			'build/main.css': ['build/main.css'],
-      				'build/theme.js': ['build/theme.js'],
-      			}
-    		}
-  		},
+			dist: {
+				options: {
+					eol: 'lf'
+				},
+				files: {
+					'build/main.css': ['build/main.css'],
+					'build/theme.js': ['build/theme.js'],
+				}
+			}
+		},
 		postcss: {
 			options: {
 				processors: [
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
 					'build/font-awesome.min.css': ['build/font-awesome.css'],
 					'build/gutenberg-editor-style.min.css': ['build/gutenberg-editor-style.css'],
 					'build/classic-editor-style.min.css': ['build/classic-editor-style.css'],
-					'build/conversions-repeater.min.css': ['build/conversions-repeater.css'],
+					'build/conversions-customizer.min.css': ['build/conversions-customizer.css'],
 				}
 			}
 		},
