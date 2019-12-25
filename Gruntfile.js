@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 					precision: 5,
 				},
 				files: {
-					'build/main.css': 'sass/theme.scss',
+					'build/theme.css': 'sass/theme.scss',
 					'build/font-awesome.css': 'sass/font-awesome.scss',
 					'build/gutenberg-editor-style.css': 'sass/gutenberg-editor-style.scss',
 					'build/classic-editor-style.css': 'sass/classic-editor-style.scss',
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 				files: {
 					'build/theme.js': ['node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'js/skip-link-focus-fix.js', 'node_modules/slick-carousel/slick/slick.js', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js', 'js/theme.js'],
 					'build/conversions-customizer.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js', 'js/customizer-conditionals.js', 'js/homepage_sorting.js'],
-					'build/main.css': ['build/main.css', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'],
+					'build/theme.css': ['build/theme.css', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'],
 				},
 			},
 		},
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 					eol: 'lf'
 				},
 				files: {
-					'build/main.css': ['build/main.css'],
+					'build/theme.css': ['build/theme.css'],
 					'build/theme.js': ['build/theme.js'],
 				}
 			}
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 				]
 			},
 			dist: {
-				src: 'build/main.css'
+				src: 'build/theme.css'
 			}
 		},
 		rtlcss: {
@@ -58,15 +58,15 @@ module.exports = function(grunt) {
 					},
 				},
 				expand : true,
-				src    : ['build/main.css'],
+				src    : ['build/theme.css'],
 				ext    : '.rtl.css'
 			}
 		},
 		cssmin: {
 			target: {
 				files: {
-					'build/main.min.css': ['build/main.css'],
-					'build/main.rtl.min.css': ['build/main.rtl.css'],
+					'build/theme.min.css': ['build/theme.css'],
+					'build/theme.rtl.min.css': ['build/theme.rtl.css'],
 					'build/font-awesome.min.css': ['build/font-awesome.css'],
 					'build/gutenberg-editor-style.min.css': ['build/gutenberg-editor-style.css'],
 					'build/classic-editor-style.min.css': ['build/classic-editor-style.css'],
