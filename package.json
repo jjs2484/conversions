@@ -26,6 +26,7 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
+    "grunt-lineending": "^1.0.0",
     "grunt-rtlcss": "^2.0.2",
     "node-sass": "^4.13.0"
   },

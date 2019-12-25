@@ -2325,7 +2325,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_woo_products', [
 						'label'       => __( 'Product type', 'conversions' ),
-						'description' => __( 'Select the type of WooCommerce products to show.' ),
+						'description' => __( 'Select the type of WooCommerce products to show.', 'conversions' ),
 						'section'     => 'conversions_homepage_woo',
 						'settings'    => 'conversions_woo_products',
 						'type'        => 'select',
@@ -2390,7 +2390,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_woo_products_order', [
 						'label'       => __( 'Products orderby', 'conversions' ),
-						'description' => __( 'Sorts the products displayed by the entered option.' ),
+						'description' => __( 'Sorts the products displayed by the entered option.', 'conversions' ),
 						'section'     => 'conversions_homepage_woo',
 						'settings'    => 'conversions_woo_products_order',
 						'type'        => 'select',

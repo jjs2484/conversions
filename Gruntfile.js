@@ -29,6 +29,17 @@ module.exports = function(grunt) {
 				},
 			},
 		},
+		lineending: {
+    		dist: {
+      			options: {
+        			eol: 'lf'
+      			},
+      			files: {
+        			'build/main.css': ['build/main.css'],
+      				'build/theme.js': ['build/theme.js'],
+      			}
+    		}
+  		},
 		postcss: {
 			options: {
 				processors: [
@@ -116,8 +127,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-rtlcss');
+	grunt.loadNpmTasks('grunt-lineending');
 	
 	// Run All Tasks
-	grunt.registerTask('all', ['sass', 'concat','postcss', 'rtlcss', 'cssmin', 'uglify', 'copy']);
+	grunt.registerTask('all', ['sass', 'concat', 'lineending', 'postcss', 'rtlcss', 'cssmin', 'uglify', 'copy']);
 
 };
