@@ -1,3 +1,9 @@
-node_modules
+# Sass
 .sass-cache
-conversions.zip
+
+# Grunt
+/node_modules/
+npm-debug.log
+
+# macOS
+.DS_Store
