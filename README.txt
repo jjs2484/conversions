@@ -1,5 +1,5 @@
 === Conversions ===
-Contributors: jjs2484
+Contributors: uniquelylost
 Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, footer-widgets, full-width-template, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 Requires at least: 4.7
 Tested up to: WordPress 5.3.2
