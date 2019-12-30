@@ -162,7 +162,6 @@ namespace conversions
 				'conversions_nav_tbpadding' => '.5',
 				'conversions_nav_mobile_type' => 'collapse',
 				'conversions_nav_button' => 'no',
-				'conversions_nav_search_icon' => false,
 				'conversions_sidebar_position' => 'right',
 				'conversions_sidebar_mv' => true,
 				'conversions_google_fonts' => true,
@@ -176,11 +175,9 @@ namespace conversions
 				'conversions_footer_link_hcolor' => '#00698c',
 				'conversions_social_size' => '1.5',
 				'conversions_wc_cart_nav' => true,
-				'conversions_wc_account' => false,
 				'conversions_wc_checkout_columns' => 'two-column',
 				'conversions_wc_primary_btn' => 'btn-outline-primary',
 				'conversions_wc_secondary_btn' => 'btn-primary',
-				'conversions_featured_img_parallax' => false,
 				'conversions_featured_img_height' => '60',
 				'conversions_featured_img_color' => '#000000',
 				'conversions_featured_img_overlay' => '.5',
@@ -192,7 +189,6 @@ namespace conversions
 				'conversions_blog_taxonomy' => 'categories',
 				'conversions_blog_postnav' => true,
 				'conversions_hh_content_position' => 'col-lg-6',
-				'conversions_hh_img_parallax' => false,
 				'conversions_hh_img_height' => '72',
 				'conversions_hh_img_color' => '#000000',
 				'conversions_hh_img_overlay' => '.5',
@@ -212,7 +208,6 @@ namespace conversions
 				'conversions_pricing_md' => '1',
 				'conversions_pricing_lg' => '3',
 				'conversions_news_mposts' => '2',
-				'conversions_hcta_state' => false,
 				'conversions_hcta_bg_choice' => 'gradient',
 				'conversions_hcta_bg_gradient' => 'crystal-clear',
 				'conversions_hcta_title_color' => '#ffffff',
@@ -225,7 +220,7 @@ namespace conversions
 			];
 
 			foreach ($defaults as $c => $v) {
-				if ( '' == get_theme_mod( $c ) ) {
+				if ( 'unset' == get_theme_mod( $c, 'unset' ) ) {
 					set_theme_mod($c, $v);
 				}
 			}
