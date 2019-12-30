@@ -21,6 +21,13 @@ Full documentation available at -  https://conversionswp.com/documentation/
 = 1.0 =
 * Initial release
 
+= 1.1 =
+* New: add additional action hook.
+* Update: screenshot.
+* Update: default styles.
+* Fix: customizer checkbox options returning to defaults.
+* Fix: code compatibility with PHP 5.6.
+
 == Resources ==
 
 * Bootstrap 4.4.1 | MIT License
