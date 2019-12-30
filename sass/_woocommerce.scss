@@ -8,10 +8,13 @@ figure.woocommerce-product-gallery__wrapper {
   max-width: inherit !important; 
 }
 
-// Cart icon size and space
+// Nav icons
 #main-menu a.cart-customlocation i.fas.fa-shopping-bag {
-	font-size: 20px;
-	margin-right: 5px;
+	font-size: 1.15rem;
+	margin-right: .25rem;
+}
+#main-menu .search-icon.menu-item a i.fas.fa-user {
+	font-size: 1.05rem;
 }
 
 // Cart and checkout table

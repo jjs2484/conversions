@@ -11248,57 +11248,57 @@ a.c-news__img-link {
 #builder-wrapper.wrapper {
   padding: 0; }
 
-section.c-pricing .container-fluid, section.c-pricing .container-sm, section.c-pricing .container-md, section.c-pricing .container-lg, section.c-pricing .container-xl,
-section.c-testimonials .container-fluid,
-section.c-testimonials .container-sm,
-section.c-testimonials .container-md,
-section.c-testimonials .container-lg,
-section.c-testimonials .container-xl,
-section.c-news .container-fluid,
-section.c-news .container-sm,
-section.c-news .container-md,
-section.c-news .container-lg,
-section.c-news .container-xl {
+.page-template-homepage section.c-pricing .container-fluid, .page-template-homepage section.c-pricing .container-sm, .page-template-homepage section.c-pricing .container-md, .page-template-homepage section.c-pricing .container-lg, .page-template-homepage section.c-pricing .container-xl,
+.page-template-homepage section.c-testimonials .container-fluid,
+.page-template-homepage section.c-testimonials .container-sm,
+.page-template-homepage section.c-testimonials .container-md,
+.page-template-homepage section.c-testimonials .container-lg,
+.page-template-homepage section.c-testimonials .container-xl,
+.page-template-homepage section.c-news .container-fluid,
+.page-template-homepage section.c-news .container-sm,
+.page-template-homepage section.c-news .container-md,
+.page-template-homepage section.c-news .container-lg,
+.page-template-homepage section.c-news .container-xl {
   padding-top: 3rem;
   padding-bottom: 3rem; }
   @media (min-width: 992px) {
-    section.c-pricing .container-fluid, section.c-pricing .container-sm, section.c-pricing .container-md, section.c-pricing .container-lg, section.c-pricing .container-xl,
-    section.c-testimonials .container-fluid,
-    section.c-testimonials .container-sm,
-    section.c-testimonials .container-md,
-    section.c-testimonials .container-lg,
-    section.c-testimonials .container-xl,
-    section.c-news .container-fluid,
-    section.c-news .container-sm,
-    section.c-news .container-md,
-    section.c-news .container-lg,
-    section.c-news .container-xl {
+    .page-template-homepage section.c-pricing .container-fluid, .page-template-homepage section.c-pricing .container-sm, .page-template-homepage section.c-pricing .container-md, .page-template-homepage section.c-pricing .container-lg, .page-template-homepage section.c-pricing .container-xl,
+    .page-template-homepage section.c-testimonials .container-fluid,
+    .page-template-homepage section.c-testimonials .container-sm,
+    .page-template-homepage section.c-testimonials .container-md,
+    .page-template-homepage section.c-testimonials .container-lg,
+    .page-template-homepage section.c-testimonials .container-xl,
+    .page-template-homepage section.c-news .container-fluid,
+    .page-template-homepage section.c-news .container-sm,
+    .page-template-homepage section.c-news .container-md,
+    .page-template-homepage section.c-news .container-lg,
+    .page-template-homepage section.c-news .container-xl {
       padding-top: 4rem;
       padding-bottom: 4rem; } }
 
-section.c-woo .container-fluid, section.c-woo .container-sm, section.c-woo .container-md, section.c-woo .container-lg, section.c-woo .container-xl {
+.page-template-homepage section.c-woo .container-fluid, .page-template-homepage section.c-woo .container-sm, .page-template-homepage section.c-woo .container-md, .page-template-homepage section.c-woo .container-lg, .page-template-homepage section.c-woo .container-xl {
   padding-top: 3rem;
   padding-bottom: 0; }
   @media (min-width: 992px) {
-    section.c-woo .container-fluid, section.c-woo .container-sm, section.c-woo .container-md, section.c-woo .container-lg, section.c-woo .container-xl {
+    .page-template-homepage section.c-woo .container-fluid, .page-template-homepage section.c-woo .container-sm, .page-template-homepage section.c-woo .container-md, .page-template-homepage section.c-woo .container-lg, .page-template-homepage section.c-woo .container-xl {
       padding-top: 4rem;
       padding-bottom: 1rem; } }
 
-section.c-features .container-fluid, section.c-features .container-sm, section.c-features .container-md, section.c-features .container-lg, section.c-features .container-xl {
+.page-template-homepage section.c-features .container-fluid, .page-template-homepage section.c-features .container-sm, .page-template-homepage section.c-features .container-md, .page-template-homepage section.c-features .container-lg, .page-template-homepage section.c-features .container-xl {
   padding-top: 3rem;
   padding-bottom: 2rem; }
   @media (min-width: 992px) {
-    section.c-features .container-fluid, section.c-features .container-sm, section.c-features .container-md, section.c-features .container-lg, section.c-features .container-xl {
+    .page-template-homepage section.c-features .container-fluid, .page-template-homepage section.c-features .container-sm, .page-template-homepage section.c-features .container-md, .page-template-homepage section.c-features .container-lg, .page-template-homepage section.c-features .container-xl {
       padding-top: 4rem;
       padding-bottom: 3rem; } }
 
-section .c-intro .c-intro__inner {
+.page-template-homepage section .c-intro .c-intro__inner {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 2rem; }
   @media (min-width: 768px) {
-    section .c-intro .c-intro__inner {
+    .page-template-homepage section .c-intro .c-intro__inner {
       margin-bottom: 3rem; } }
 
 section p.subtitle {
@@ -12294,8 +12294,11 @@ figure.woocommerce-product-gallery__wrapper {
   max-width: inherit !important; }
 
 #main-menu a.cart-customlocation i.fas.fa-shopping-bag {
-  font-size: 20px;
-  margin-left: 5px; }
+  font-size: 1.15rem;
+  margin-left: .25rem; }
+
+#main-menu .search-icon.menu-item a i.fas.fa-user {
+  font-size: 1.05rem; }
 
 .woocommerce table.shop_table {
   border-collapse: collapse; }

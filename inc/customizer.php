@@ -1050,7 +1050,7 @@ namespace conversions
 				)
 			);
 			$wp_customize->add_setting( 'conversions_featured_img_height', [
-				'default'       => '65',
+				'default'       => '60',
 				'type'          => 'theme_mod',
 				'capability'    => 'edit_theme_options',
 				'transport'     => 'refresh',
