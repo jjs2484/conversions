@@ -246,7 +246,7 @@ class Homepage
 		@brief		Hero section.
 		@since		2019-12-16 09:20:52
 	**/
-	public static function hero()
+	public function hero()
 	{
 		?>
 	<!-- Hero Section -->
@@ -376,7 +376,7 @@ class Homepage
 		@brief		Section.
 		@since		2019-12-16 09:23:29
 	**/
-	public static function clients()
+	public function clients()
 	{
 		$client_logos = $this->get_client_logos();
 		if ( ! $client_logos )
@@ -473,7 +473,7 @@ class Homepage
 		@brief		Section.
 		@since		2019-12-16 09:23:29
 	**/
-	public static function features()
+	public function features()
 	{
 		$features = $this->get_features();
 		if ( ! $features )
@@ -524,7 +524,7 @@ class Homepage
 		@brief		Section.
 		@since		2019-12-16 09:23:29
 	**/
-	public static function woocommerce()
+	public function woocommerce()
 	{
 		// Check whether to show Woo section
 		if ( ! class_exists( 'woocommerce' ) )
@@ -689,7 +689,7 @@ class Homepage
 		@brief		Section.
 		@since		2019-12-16 09:23:29
 	**/
-	public static function pricing()
+	public function pricing()
 	{
 		$pricing = $this->get_pricing();
 		if ( ! $pricing )
@@ -802,7 +802,7 @@ class Homepage
 		@brief		Section.
 		@since		2019-12-16 09:23:29
 	**/
-	public static function testimonials()
+	public function testimonials()
 	{
 		$testimonials = $this->get_testimonials();
 		if ( ! $testimonials )
@@ -908,7 +908,7 @@ class Homepage
 		@brief		Section.
 		@since		2019-12-16 09:23:29
 	**/
-	public static function news()
+	public function news()
 	{
 		$news = $this->get_news();
 		if ( ! $news )
