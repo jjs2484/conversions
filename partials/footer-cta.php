@@ -25,6 +25,9 @@ defined( 'ABSPATH' ) || exit;
 					<div class="col-12">
 
 						<div class="w-md-80 w-lg-60 mx-auto">
+
+							<?php do_action( 'conversions_before_cta_content' ); ?>
+
 							<!-- Call-to-action text -->
 							<div class="c-cta__items">
 								<?php 
