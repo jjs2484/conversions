@@ -369,7 +369,9 @@ class Homepage
 
 				</div>
 		<?php
-		return ob_get_clean();
+		$content = ob_get_contents();
+		ob_clean();
+		return $content;
 	}
 
 	/**
@@ -466,7 +468,9 @@ class Homepage
 			++$cfeature_block_count;
 		}
 
-		return ob_get_clean();
+		$content = ob_get_contents();
+		ob_clean();
+		return $content;
 	}
 
 	/**
@@ -682,7 +686,9 @@ class Homepage
 			<?php
 			++$cpricing_table_count;
 		}
-		return ob_get_clean();
+		$content = ob_get_contents();
+		ob_clean();
+		return $content;
 	}
 
 	/**
@@ -795,7 +801,9 @@ class Homepage
 			</div> <!-- End Slick Carousel -->
 		</div>
 		<?php
-		return ob_get_clean();
+		$content = ob_get_contents();
+		ob_clean();
+		return $content;
 	}
 
 	/**
@@ -901,7 +909,9 @@ class Homepage
 		++$news_count;
 		endwhile;
 		wp_reset_postdata();
-		return ob_get_clean();
+		$content = ob_get_contents();
+		ob_clean();
+		return $content;
 	}
 
 	/**
