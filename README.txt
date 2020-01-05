@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.3.2
 Requires PHP: 5.6.20
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,10 @@ Full documentation available at -  https://conversionswp.com/documentation/
 * Update: default styles.
 * Fix: customizer checkbox options returning to defaults.
 * Fix: code compatibility with PHP 5.6.
+
+= 1.2 =
+* Fix: ob_get_clean() conflict with WP Super Cache.
+* Fix: navbar accessibility and styles.
 
 == Resources ==
 
