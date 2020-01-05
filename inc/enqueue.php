@@ -33,7 +33,7 @@ class Enqueue
 
 			// Enqueue headings font
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			$headings_font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family='. esc_html($headings_font) );
+			$headings_font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family='. esc_html( $headings_font ).'&display=swap' );
     		add_editor_style( $headings_font_url );
 
 			// Enqueue body font
@@ -42,7 +42,7 @@ class Enqueue
 				return;
 			}
 			else {
-				$body_font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family='. esc_html($body_font) );
+				$body_font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family='. esc_html( $body_font ).'&display=swap' );
     			add_editor_style( $body_font_url );
 			}
 		}
@@ -64,7 +64,7 @@ class Enqueue
 
 			// Enqueue headings font
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			wp_register_style( 'conversions-gutenberg-heading-font', '//fonts.googleapis.com/css?family='. esc_html($headings_font) );
+			wp_register_style( 'conversions-gutenberg-heading-font', '//fonts.googleapis.com/css?family='. esc_html( $headings_font ).'&display=swap' );
 			wp_enqueue_style( 'conversions-gutenberg-heading-font' );
 
 			// Enqueue body font
@@ -73,7 +73,7 @@ class Enqueue
 				return;
 			}
 			else {
-				wp_register_style( 'conversions-gutenberg-body-font', '//fonts.googleapis.com/css?family='. esc_html($body_font) );
+				wp_register_style( 'conversions-gutenberg-body-font', '//fonts.googleapis.com/css?family='. esc_html( $body_font ).'&display=swap' );
 				wp_enqueue_style( 'conversions-gutenberg-body-font' );
 			}
 		}

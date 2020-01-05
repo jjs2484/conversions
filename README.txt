@@ -14,7 +14,7 @@ Conversions is conversion-focused WordPress theme. It’s based on Bootstrap 4 a
 
 Conversions is conversion-focused WordPress theme. It’s based on Bootstrap 4 and Automattic’s starter theme called _s, or underscores. Conversions enables you to create almost any type of website such as: blog, business, startup, agency, e-commerce shop, portfolio, or non-profit. It is fully compatible with Gutenberg and the most popular page builders (Elementor, Beaver Builder, Visual Composer, etc.). Some of the theme features include: ✓ Mobile First Design ✓ Customizer Options ✓ Search Engine Optimized ✓ Google Fonts ✓ Font Awesome ✓ Translation Ready ✓ RTL Support ✓ Highly Extendable. Conversions supports most popular WordPress plugins like: WooCommerce, Contact Form 7, Google Analytics, and much more. 
 
-Full documentation available at -  https://conversionswp.com/documentation/
+Full documentation available at - https://conversionswp.com/documentation/
 
 == Changelog ==
 
@@ -29,6 +29,7 @@ Full documentation available at -  https://conversionswp.com/documentation/
 * Fix: code compatibility with PHP 5.6.
 
 = 1.2 =
+* Update: Add display=swap parameter to Google Fonts.
 * Fix: ob_get_clean() conflict with WP Super Cache.
 * Fix: navbar accessibility and styles.
 
