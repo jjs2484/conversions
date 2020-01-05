@@ -241,7 +241,7 @@ class Enqueue
 		if ( get_theme_mod( 'conversions_google_fonts', true ) == true ) {
 			// headings font
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			wp_enqueue_style( 'conversions-heading-gfont', '//fonts.googleapis.com/css?family='. esc_html( $headings_font ) );
+			wp_enqueue_style( 'conversions-heading-gfont', '//fonts.googleapis.com/css?family='. esc_html( $headings_font ).'&display=swap' );
 
 			// body font
 			$body_font = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
@@ -249,7 +249,7 @@ class Enqueue
 				return;
 			}
 			else {
-				wp_enqueue_style( 'conversions-body-gfont', '//fonts.googleapis.com/css?family='. esc_html( $body_font ) );
+				wp_enqueue_style( 'conversions-body-gfont', '//fonts.googleapis.com/css?family='. esc_html( $body_font ).'&display=swap' );
 			}
 		}
 	}
