@@ -79,7 +79,6 @@ if ( $mobile_nav_type == 'collapse' ) {
 
 			<!-- The WordPress Menu -->
 			<?php
-
 				wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
@@ -88,6 +87,7 @@ if ( $mobile_nav_type == 'collapse' ) {
 						'menu_class'      => 'navbar-nav ml-auto',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
+						'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menu">%3$s</ul>',
 						'depth'           => 2,
 						'walker'          => new conversions\WP_Bootstrap_Navwalker(),
 					)

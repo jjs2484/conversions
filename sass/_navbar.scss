@@ -18,11 +18,6 @@
     }
   }
   
-  // Dropdown li's
-  ul.dropdown-menu li.menu-item {
-    display: block;
-  }
-  
   // Large devices (desktops, 992px and up)
   @include media-breakpoint-up(lg) {
     ul.navbar-nav {
@@ -31,6 +26,9 @@
         display: inline-block;
         a.nav-link {
           white-space: nowrap;
+        }
+        .dropdown-menu li.menu-item {
+          display: block;
         }
       }
       li.nav-callout-button.menu-item {

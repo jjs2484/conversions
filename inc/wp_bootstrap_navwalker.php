@@ -133,7 +133,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 		 */
 		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
 		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-		$output .= $indent . '<li role="none" ' . $id . $class_names . '>';
+		$output .= $indent . '<li role="none presentation" ' . $id . $class_names . '>';
 		// initialize array for holding the $atts for the link item.
 		$atts = array();
 		// Set title from item to the $atts array - if title is empty then

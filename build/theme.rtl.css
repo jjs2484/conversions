@@ -11064,8 +11064,6 @@ a.skip-link {
   @media (min-width: 992px) {
     #wrapper-navbar .navbar ul#main-menu {
       padding-top: 0; } }
-#wrapper-navbar .navbar ul.dropdown-menu li.menu-item {
-  display: block; }
 @media (min-width: 992px) {
   #wrapper-navbar .navbar ul.navbar-nav {
     display: inline-block; }
@@ -11073,6 +11071,8 @@ a.skip-link {
       display: inline-block; }
       #wrapper-navbar .navbar ul.navbar-nav li.menu-item a.nav-link {
         white-space: nowrap; }
+      #wrapper-navbar .navbar ul.navbar-nav li.menu-item .dropdown-menu li.menu-item {
+        display: block; }
     #wrapper-navbar .navbar ul.navbar-nav li.nav-callout-button.menu-item {
       margin-right: .5rem; } }
 @media (max-width: 991.98px) {
