@@ -30,6 +30,7 @@ Full documentation available at - https://conversionswp.com/documentation/
 
 = 1.2 =
 * Update: Add display=swap parameter to Google Fonts.
+* Update: default styles.
 * Fix: ob_get_clean() conflict with WP Super Cache.
 * Fix: navbar accessibility and styles.
 

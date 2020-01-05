@@ -494,7 +494,8 @@ section.c-testimonials {
   }
 }
 
-// Progress demo
-.progress.bd-example + .progress.bd-example {
-  margin-top: 1rem
+// 404 spacing
+#error-404-wrapper #main form#searchform, 
+#error-404-wrapper #main div.widget {
+  margin-bottom: 1.5rem;
 }
