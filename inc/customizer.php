@@ -2461,7 +2461,7 @@ namespace conversions
 			}
 			$nav_tbpadding = get_theme_mod( 'conversions_nav_tbpadding', '.5' );
 			$logo_padding = .625;
-			$total_nav_height = $logo_height + ( $nav_tbpadding * 2 ) + $logo_padding - .0625;
+			$total_nav_height = $logo_height + ( $nav_tbpadding * 2 ) + $logo_padding - .1250;
 			$nav_offset = $total_nav_height + 3.125;
 
 			// WC button option

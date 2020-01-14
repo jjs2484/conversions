@@ -15826,7 +15826,7 @@ jQuery(function () {
     
             // get height of header and adminbar
             var fixedHeight = jQuery('#wrapper-navbar.fixed-top').innerHeight();
-            var adjustedFixedHeight = fixedHeight - 1;
+            var adjustedFixedHeight = fixedHeight - 2;
     
             // apply height to page as margin-top
             jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #builder-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper').css({'margin-top' : adjustedFixedHeight + 'px'});
