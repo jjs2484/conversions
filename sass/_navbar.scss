@@ -77,7 +77,7 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
 #wrapper-navbar nav {
   &.navbar-dark {
     a.nav-link { 
-      color: rgb(255, 255, 255);
+      color: rgba(255,255,255,1);
       &:hover {
         color: rgba(255,255,255,.8);
       }
@@ -85,9 +85,9 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   }
   &.navbar-light {
     a.nav-link {
-      color: rgba(0,0,0,.9);
+      color: rgba(0,0,0,1);
       &:hover {
-        color: rgba(0,0,0,.7);
+        color: rgba(0,0,0,.8);
       }
     }
   }

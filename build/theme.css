@@ -9982,9 +9982,9 @@ html.offcanvas-overflowx, body.offcanvas-overflowx {
   #wrapper-navbar nav.navbar-dark a.nav-link:hover {
     color: rgba(255, 255, 255, 0.8); }
 #wrapper-navbar nav.navbar-light a.nav-link {
-  color: rgba(0, 0, 0, 0.9); }
+  color: black; }
   #wrapper-navbar nav.navbar-light a.nav-link:hover {
-    color: rgba(0, 0, 0, 0.7); }
+    color: rgba(0, 0, 0, 0.8); }
 #wrapper-navbar nav.navbar-dark.bg-dark .offcanvas-collapse {
   background-color: #151B26; }
 #wrapper-navbar nav.navbar-light.bg-light .offcanvas-collapse {
