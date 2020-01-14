@@ -62,6 +62,11 @@
 
 }
 
+// IE edge prefix for fixed header -- prevents element jitter
+.fixed-top#wrapper-navbar {
+  position: -ms-device-fixed;
+}
+
 // Offcanvas when open add class to body prevent horizontal scrolling.
 // See js/theme.js -- Toggle offcanvas mobile menu -- function for more details.
 html.offcanvas-overflowx, body.offcanvas-overflowx {
