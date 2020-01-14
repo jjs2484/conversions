@@ -22,6 +22,8 @@ get_header();
 
 			<main class="site-main" id="main">
 
+				<?php do_action( 'conversions_loop_before' ); ?>
+
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">

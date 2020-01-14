@@ -28,6 +28,8 @@ get_header();
 
 			<main class="site-main" id="main">
 
+				<?php do_action( 'conversions_loop_before' ); ?>
+
 				<?php if ( have_posts() ) : ?>
 
 					<?php while ( have_posts() ) : the_post(); ?>

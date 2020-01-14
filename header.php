@@ -42,3 +42,5 @@ defined( 'ABSPATH' ) || exit;
 		<?php get_template_part( 'partials/navbar', 'right' ); ?>
 
 	</div><!-- #wrapper-navbar end -->
+
+	<?php do_action( 'conversions_before_content' ); ?>

@@ -11,6 +11,8 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
+	<?php do_action( 'conversions_post_before_content' ); ?>
+
 	<header class="entry-header">
 
 		<?php if ( ! has_post_thumbnail() ) {
@@ -44,5 +46,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php conversions()->template->entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
+
+	<?php do_action( 'conversions_post_after_content' ); ?>
 
 </article><!-- #post-## -->
