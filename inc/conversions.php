@@ -39,6 +39,7 @@ namespace conversions
 			require_once( __DIR__ . '/woocommerce.php' );
 			require_once( __DIR__ . '/wp_bootstrap_comment_walker.php' );
 			require_once( __DIR__ . '/wp_bootstrap_navwalker.php' );
+			require_once( __DIR__ . '/easy_digital_downloads.php' );
 
 			$this->setup();
 		}

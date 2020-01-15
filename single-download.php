@@ -17,6 +17,19 @@ get_header();
 
         <div class="row">
 
+            <div class="col-12">
+
+                <header class="entry-header text-center">
+                    <h1 class="entry-title edd-title">
+                        <?php echo get_the_title( get_the_ID() ); ?>
+                    </h1>
+                    <p class="h4 text-muted">
+                        <?php echo get_the_excerpt(); ?>
+                    </p>
+                </header><!-- .entry-header -->
+
+            </div>
+
             <div class="col-md-8 col-lg-9 pr-lg-5 content-area" id="primary">
 
                 <main class="site-main" id="main">
@@ -24,11 +37,6 @@ get_header();
                     <?php while ( have_posts() ) : the_post(); ?>
 
                         <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-                            <header class="entry-header">
-                                <?php the_title( '<h1 class="entry-title edd-title">', '</h1>' ); ?>
-                                <?php the_excerpt( '<p class="h3 text-muted">', '</p>' ); ?>
-                            </header><!-- .entry-header -->
 
                             <div class="post-thumbnail">
                                 <?php the_post_thumbnail(); ?>
@@ -59,6 +67,11 @@ get_header();
 
             <!-- right sidebar -->
             <div class="col-md-4 col-lg-3 widget-area pl-md-4 pl-lg-3" id="sidebar-1" role="complementary">
+
+                <?php
+                    // The price, purchase button, and download details.
+                    do_action( 'conversions_edd_download_info');
+                ?>
 
             </div><!-- #end sidebar -->
 

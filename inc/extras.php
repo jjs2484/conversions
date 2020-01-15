@@ -88,7 +88,8 @@ class Extras
 	**/
 	public function wp_trim_excerpt( $post_excerpt )
 	{
-		if ( ! is_admin() ) {
+		global $post;
+		if ( ! is_admin() && $post->post_type != 'download') {
 			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn '. esc_attr( get_theme_mod( 'conversions_blog_more_btn', 'btn-secondary' ) ) .' conversions-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
 			'conversions' ) . '</a></p>';
 		}
