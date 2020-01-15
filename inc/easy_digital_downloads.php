@@ -61,7 +61,7 @@ class Easy_Digital_Downloads
 	}
 
 	/**
-		@brief		EDD purchase link for singular product.
+		@brief		EDD download details for singular product.
 		@since		2020-01-15 02:34:44
 	**/
 	public function conversions_edd_download_details()
