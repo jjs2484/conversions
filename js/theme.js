@@ -18,7 +18,7 @@ jQuery(function () {
             var adjustedFixedHeight = fixedHeight - 2;
     
             // apply height to page as margin-top
-            jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #builder-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper').css({'margin-top' : adjustedFixedHeight + 'px'});
+            jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #builder-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper, #edd-wrapper').css({'margin-top' : adjustedFixedHeight + 'px'});
         }
     };
 
@@ -63,11 +63,11 @@ jQuery(function () {
         // If so lets toggle fixed while offcanvas is open
         if (offcanvasRHeader.contains("header-p-n")) {
             offcanvasRHeader.toggle("fixed-top");
-            if (jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #builder-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper')[0].hasAttribute('style')) {
-                jQuery("#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #builder-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper").removeAttr("style");
+            if (jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #builder-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper, #edd-wrapper')[0].hasAttribute('style')) {
+                jQuery("#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #builder-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper, #edd-wrapper").removeAttr("style");
             }
             else {
-                jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #builder-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper').css({'margin-top' : offcanvasHeight + 'px'});
+                jQuery('#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #builder-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper, #edd-wrapper').css({'margin-top' : offcanvasHeight + 'px'});
             }
         }
 
