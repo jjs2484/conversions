@@ -1,0 +1,51 @@
+// Easy Digital Download styles
+
+// Single product pages
+.single-download {
+	#edd-wrapper {
+		
+		// Title and exerpt section
+		.entry-header {
+			text-align: center;
+			margin-bottom: 2.5rem;
+		}
+		
+		// Featured image
+		.post-thumbnail {
+			background: #f9fbf9;
+			margin-bottom: 2rem;
+		}
+
+		// Price, purchase button, and download details
+		.widget-area {
+			.edd-price {
+				color: $gray-700;
+			}
+			.edd_download_purchase_form {
+				margin-bottom: 2rem;
+			}
+			.edd-details {
+				.edd-details__title {
+					font-size: 1.25rem;
+				}
+				ul {
+					list-style: none;
+					padding-left: 0;
+					color: $text-muted;
+					li {
+						display: flex; 
+						margin-bottom: .25rem;
+
+						.name {
+							width: 38%;
+						}
+						.value {
+							width: 62%;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

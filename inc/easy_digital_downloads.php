@@ -33,11 +33,11 @@ class Easy_Digital_Downloads
 
 		// Get the prices
 		if ( edd_is_free_download( $download_id ) ) {
-			$price = '<span id="edd-price-' . $download_id . '" class="edd-price">' . __( 'Free', 'conversions' ) . '</span>';
+			$price = '<h3 id="edd-price-' . $download_id . '" class="edd-price">' . __( 'Free', 'conversions' ) . '</h3>';
  		} elseif ( edd_has_variable_prices( $download_id ) ) {
-			$price = '<span id="edd-price-' . $download_id . '" class="edd-price">' . __( 'From', 'conversions' ) . '&nbsp;' . edd_currency_filter( edd_format_amount( edd_get_lowest_price_option( $download_id ) ) ) . '</span>';
+			$price = '<h3 id="edd-price-' . $download_id . '" class="edd-price">' . __( 'From', 'conversions' ) . '&nbsp;' . edd_currency_filter( edd_format_amount( edd_get_lowest_price_option( $download_id ) ) ) . '</h3>';
 		} else {
-			$price = edd_price( $download_id, false );
+			$price = '<h3 id="edd-price-' . $download_id . '" class="edd-price">' . edd_price( $download_id, false ) . '</h3>';
 		}
 
 		echo $price;
@@ -52,12 +52,11 @@ class Easy_Digital_Downloads
 		// Get the download ID
 		$download_id = get_the_ID();
 
-		// Get the purchase button
 		if ( get_post_meta( $download_id, '_edd_hide_purchase_link', true ) ) {
 			return; // Do not show if auto output is disabled
 		}
 
-		echo edd_get_purchase_link();
+		echo edd_get_purchase_link( array( 'class' => 'btn btn-lg btn-block btn-primary', 'price' => false ) );
 	}
 
 	/**
@@ -72,14 +71,14 @@ class Easy_Digital_Downloads
 		echo '<section class="edd-details">';
 
 			// Title 
-			echo '<span class="edd-details__title">' . __( 'Details', 'conversions' ) . '</span>';
+			echo '<h3 class="edd-details__title">' . __( 'Details', 'conversions' ) . '</h3>';
 
 			echo '<ul>';
 
 				// Date published.
 				echo '<li class="edd-details__published">
-					<span class="edd-details__published-name">' . __( 'Published:', 'conversions' ) . '</span>
-					<span class="edd-details__published-value">' . get_the_time( 'F j, Y', $download_id ) . '</span>
+					<span class="name">' . __( 'Published:', 'conversions' ) . '</span>
+					<span class="value">' . get_the_time( 'F j, Y', $download_id ) . '</span>
 				</li>';
 
 				// Sale count.
@@ -87,8 +86,8 @@ class Easy_Digital_Downloads
 
 				if ($sales > 0 ) : 
 					echo '<li class="edd-details__sales">
-						<span class="edd-details__sales-name">' . __( 'Sales:', 'themedd' ) . '</span>
-						<span class="edd-details__sales-value">' . $sales . '</span>
+						<span class="name">' . __( 'Sales:', 'themedd' ) . '</span>
+						<span class="value">' . $sales . '</span>
 					</li>';
 				endif;
 
@@ -99,8 +98,8 @@ class Easy_Digital_Downloads
 
 					if ( $version ) :
 						echo '<li class="edd-details__version">
-							<span class="edd-details__version-name">' . __( 'Version:', 'conversions' ) . '</span>
-							<span class="edd-details__version-value">' . $version . '</span>
+							<span class="name">' . __( 'Version:', 'conversions' ) . '</span>
+							<span class="value">' . $version . '</span>
 						</li>';
 					endif;
 				endif;
@@ -109,8 +108,8 @@ class Easy_Digital_Downloads
 				$categories = get_the_term_list( $download_id, 'download_category', '', ', ' );
 				if ( $categories ) :
 					echo '<li class="edd-details__categories">
-						<span class="edd-details__categories-name">' . __( 'Categories:', 'conversions' ) . '</span>
-						<span class="edd-details__categories-value">' . $categories . '</span>
+						<span class="name">' . __( 'Categories:', 'conversions' ) . '</span>
+						<span class="value">' . $categories . '</span>
 					</li>';
 				endif;
 
@@ -118,8 +117,8 @@ class Easy_Digital_Downloads
 				$tags = get_the_term_list( $download_id, 'download_tag', '', ', ' );
 				if ( $tags ) :
 					echo '<li class="edd-details__tags">
-						<span class="edd-details__tags-name">' . __( 'Tags:', 'conversions' ) . '</span>
-						<span class="edd-details__tags-value">' . $tags . '</span>
+						<span class="name">' . __( 'Tags:', 'conversions' ) . '</span>
+						<span class="value">' . $tags . '</span>
 					</li>';
 				endif;
 

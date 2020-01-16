@@ -19,11 +19,11 @@ get_header();
 
             <div class="col-12">
 
-                <header class="entry-header text-center">
+                <header class="entry-header">
                     <h1 class="entry-title edd-title">
                         <?php echo get_the_title( get_the_ID() ); ?>
                     </h1>
-                    <p class="h4 text-muted">
+                    <p class="h5 text-muted">
                         <?php echo get_the_excerpt(); ?>
                     </p>
                 </header><!-- .entry-header -->
@@ -39,7 +39,7 @@ get_header();
                         <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
                             <div class="post-thumbnail">
-                                <?php the_post_thumbnail(); ?>
+                                <?php the_post_thumbnail( 'large' ); ?>
                             </div>
 
                             <div class="entry-content">
@@ -69,7 +69,7 @@ get_header();
             <div class="col-md-4 col-lg-3 widget-area pl-md-4 pl-lg-3" id="sidebar-1" role="complementary">
 
                 <?php
-                    // The price, purchase button, and download details.
+                    // Price, purchase button, and download details
                     do_action( 'conversions_edd_download_info');
                 ?>
 

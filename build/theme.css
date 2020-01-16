@@ -11358,6 +11358,31 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
   .wpcf7 .wpcf7-not-valid-tip {
     color: #dc3545; }
 
+.single-download #edd-wrapper .entry-header {
+  text-align: center;
+  margin-bottom: 2.5rem; }
+.single-download #edd-wrapper .post-thumbnail {
+  background: #f9fbf9;
+  margin-bottom: 2rem; }
+.single-download #edd-wrapper .widget-area .edd-price {
+  color: #495057; }
+.single-download #edd-wrapper .widget-area .edd_download_purchase_form {
+  margin-bottom: 2rem; }
+.single-download #edd-wrapper .widget-area .edd-details .edd-details__title {
+  font-size: 1.25rem; }
+.single-download #edd-wrapper .widget-area .edd-details ul {
+  list-style: none;
+  padding-left: 0;
+  color: #6c757d; }
+  .single-download #edd-wrapper .widget-area .edd-details ul li {
+    display: -webkit-box;
+    display: flex;
+    margin-bottom: .25rem; }
+    .single-download #edd-wrapper .widget-area .edd-details ul li .name {
+      width: 38%; }
+    .single-download #edd-wrapper .widget-area .edd-details ul li .value {
+      width: 62%; }
+
 body.compensate-for-scrollbar {
     overflow: hidden;
 }
