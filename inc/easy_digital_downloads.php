@@ -20,6 +20,7 @@ class Easy_Digital_Downloads
 		add_action( 'conversions_edd_download_info', [ $this, 'conversions_edd_price' ], 10 );
 		add_action( 'conversions_edd_download_info', [ $this, 'conversions_edd_purchase_link' ], 20 );
 		add_action( 'conversions_edd_download_info', [ $this, 'conversions_edd_download_details' ], 30 );
+		add_filter( 'shortcode_atts_downloads', [ $this, 'conversions_edd_shortcode_atts_downloads' ], 10, 4 );
 	}
 
 	/**
@@ -188,6 +189,50 @@ class Easy_Digital_Downloads
 		// Return the options.
 		return apply_filters( 'conversions_edd_grid_options', $options );
 
+	}
+
+	/**
+		@brief		Filter the [downloads] shortcode's default attributes.
+		@since		2020-01-16 08:21:57
+		
+		@param array  $out       The output array of shortcode attributes.
+		@param array  $pairs     The supported attributes and their defaults.
+		@param array  $atts      The user defined shortcode attributes.
+		@param string $shortcode The shortcode name.
+
+		@return array $out       The output array of shortcode attributes.
+	**/
+	public function conversions_edd_shortcode_atts_downloads( $out, $pairs, $atts, $shortcode ) 
+	{
+	
+		// Get the download grid options.
+		$download_grid_options = $this->conversions_edd_grid_options( $out );
+
+		//Filter the pagination.
+		if ( false === $download_grid_options['pagination'] ) {
+			$out['pagination'] = 'false';
+		} else if ( true === $download_grid_options['pagination'] ) {
+			$out['pagination'] = 'true';
+		}
+
+		// Sets the number of download columns shown.
+		$out['columns'] = $download_grid_options['columns'];
+
+		// Sets the number of downloads shown.
+		$out['number'] = $download_grid_options['number'];
+
+		// Sets the "order".
+		$out['order'] = $download_grid_options['order'];
+
+		// Sets the "orderby"
+		$out['orderby'] = $download_grid_options['orderby'];
+
+		// Sets the price attribute to "yes" automatically if not set on the [downloads] shortcode.
+		if ( ! isset( $atts['price'] ) && false !== $download_grid_options['price'] ) {
+			$out['price'] = 'yes';
+		}
+	
+		return $out;
 	}
 
 }
