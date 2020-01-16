@@ -23,6 +23,12 @@
 			}
 			.edd_download_purchase_form {
 				margin-bottom: 2rem;
+				.edd-cart-ajax-alert {
+					display: none !important;
+				}
+				.btn-block + .btn-block {
+					margin-top: 0;
+				}
 			}
 			.edd-details {
 				.edd-details__title {
@@ -46,6 +52,5 @@
 				}
 			}
 		}
-
 	}
 }

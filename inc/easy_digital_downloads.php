@@ -126,5 +126,69 @@ class Easy_Digital_Downloads
 		echo '</section>';
 	}
 
+	/**
+		@brief		Download grid options. Used by all download grids:
+					via the [downloads] shortcode
+					archive-download.php
+					taxonomy-download_category.php
+					taxonomy-download_tag.php
+		@since		2020-01-16 03:57:44
+	**/
+	public function conversions_edd_grid_options( $atts = array() ) {
+
+		// Converts the various "yes", "no, "true" etc into a format that the $options array uses.
+		if ( ! empty( $atts ) ) {
+		
+			// Buy button.
+			if ( isset( $atts['buy_button'] ) && 'yes' === $atts['buy_button'] ) {
+				$atts['buy_button'] = true;
+			}
+
+			// Price.
+			if ( isset( $atts['price'] ) && 'yes' === $atts['price'] ) {
+				$atts['price'] = true;
+			}
+
+			// Excerpt.
+			if ( isset( $atts['excerpt'] ) && 'yes' === $atts['excerpt'] ) {
+				$atts['excerpt'] = true;
+			}
+
+			// Full content.
+			if ( isset( $atts['full_content'] ) && 'yes' === $atts['full_content'] ) {
+				$atts['full_content'] = true;
+			}
+
+			// Thumbnails.
+			if ( isset( $atts['thumbnails'] ) ) {
+				if ( 'true' === $atts['thumbnails'] || 'yes' === $atts['thumbnails'] ) {
+					$atts['thumbnails'] = true;
+				}
+			}
+
+		}
+
+		// Options.
+		$options = array(
+			'excerpt'      => true,
+			'full_content' => false,
+			'price'        => true,
+			'buy_button'   => true,
+			'columns'      => 3,
+			'thumbnails'   => true,
+			'pagination'   => true,
+			'number'       => 9,
+			'order'        => 'DESC',
+			'orderby'      => 'post_date'
+		);
+
+		// Merge the arrays.
+		$options = wp_parse_args( $atts, $options );
+
+		// Return the options.
+		return apply_filters( 'conversions_edd_grid_options', $options );
+
+	}
+
 }
 new Easy_Digital_Downloads();
