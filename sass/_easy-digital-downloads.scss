@@ -54,3 +54,53 @@
 		}
 	}
 }
+
+// Store page
+.edd_downloads_list {
+	display: flex;
+	flex-wrap: wrap;
+	
+	.edd_download {
+		display: flex;
+		
+		.edd_download_inner {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding: 1.5rem;
+			margin-bottom: 0;
+			
+			// Featured image
+			.edd_download_image {
+				margin: 0 0 1rem 0;
+				background: #f9fbf9;
+			}
+			
+			// Title
+			.edd_download_title a {
+				font-size: 1.25rem;
+				color: #222;
+				display: block;
+				&:hover {
+					color: #222;
+					text-decoration: none;
+				}
+			}
+
+			// Description
+			.edd_download_excerpt p {
+				color: $text-muted;
+				margin-bottom: 1rem;
+			}
+
+			// Footer
+			.edd-downloads-footer {
+				margin: auto 0 0 0;
+				.edd_price {
+					margin-bottom: .75rem;
+					color: #555;
+				}
+			}
+		}
+	}
+}
