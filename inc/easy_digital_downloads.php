@@ -17,17 +17,18 @@ class Easy_Digital_Downloads
 		// Remove the purchase link at the bottom of the single download page.
 		remove_action( 'edd_after_download_content', 'edd_append_purchase_link' );
 
-		add_action( 'conversions_edd_download_info', [ $this, 'conversions_edd_price' ], 10 );
-		add_action( 'conversions_edd_download_info', [ $this, 'conversions_edd_purchase_link' ], 20 );
-		add_action( 'conversions_edd_download_info', [ $this, 'conversions_edd_download_details' ], 30 );
-		add_filter( 'shortcode_atts_downloads', [ $this, 'conversions_edd_shortcode_atts_downloads' ], 10, 4 );
+		add_action( 'conversions_edd_download_info', [ $this, 'singular_edd_price' ], 10 );
+		add_action( 'conversions_edd_download_info', [ $this, 'singular_edd_purchase_link' ], 20 );
+		add_action( 'conversions_edd_download_info', [ $this, 'singular_edd_download_details' ], 30 );
+		add_filter( 'shortcode_atts_downloads', [ $this, 'shortcode_atts_downloads' ], 10, 4 );
+		add_filter( 'edd_add_schema_microdata', [ $this, 'edd_add_schema_microdata' ], 10, 1 );
 	}
 
 	/**
 		@brief		EDD price for singular product.
 		@since		2020-01-15 01:41:02
 	**/
-	public function conversions_edd_price()
+	public function singular_edd_price()
 	{
 		// Get the download ID
 		$download_id = get_the_ID();
@@ -48,7 +49,7 @@ class Easy_Digital_Downloads
 		@brief		EDD purchase link for singular product.
 		@since		2020-01-15 01:44:14
 	**/
-	public function conversions_edd_purchase_link()
+	public function singular_edd_purchase_link()
 	{
 		// Get the download ID
 		$download_id = get_the_ID();
@@ -64,7 +65,7 @@ class Easy_Digital_Downloads
 		@brief		EDD download details for singular product.
 		@since		2020-01-15 02:34:44
 	**/
-	public function conversions_edd_download_details()
+	public function singular_edd_download_details()
 	{
 		// Get the download ID
 		$download_id = get_the_ID();
@@ -202,7 +203,7 @@ class Easy_Digital_Downloads
 
 		@return array $out       The output array of shortcode attributes.
 	**/
-	public function conversions_edd_shortcode_atts_downloads( $out, $pairs, $atts, $shortcode ) 
+	public function shortcode_atts_downloads( $out, $pairs, $atts, $shortcode ) 
 	{
 	
 		// Get the download grid options.
@@ -233,6 +234,14 @@ class Easy_Digital_Downloads
 		}
 	
 		return $out;
+	}
+
+	/**
+		@brief		Disable legacy EDD schema.org microdata.		
+		@since		2020-01-16 19:54:02
+	**/
+	public function edd_add_schema_microdata( $ret ) {
+		return false;
 	}
 
 }
