@@ -11428,6 +11428,11 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + .btn-block {
           margin-top: 0; }
 
+.edd-checkout .col-md-12.content-area {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto; }
+
 #edd_checkout_wrap table#edd_checkout_cart {
   margin-bottom: 2rem; }
   #edd_checkout_wrap table#edd_checkout_cart .edd_cart_header_row th {

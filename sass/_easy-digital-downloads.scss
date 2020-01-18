@@ -115,6 +115,14 @@
 	}
 }
 
+// Checkout - if no active sidebar limit width.
+// Do not want a form spanning whole page
+.edd-checkout .col-md-12.content-area {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 // Checkout
 #edd_checkout_wrap {
 	
