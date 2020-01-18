@@ -38,9 +38,11 @@ get_header();
 
                         <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-                            <div class="post-thumbnail">
-                                <?php the_post_thumbnail( 'large' ); ?>
-                            </div>
+                            <?php if ( has_post_thumbnail( get_the_ID() ) ) : ?>
+                                <div class="post-thumbnail">
+                                    <?php the_post_thumbnail( 'large' ); ?>
+                                </div>
+                            <?php endif; ?>
 
                             <div class="entry-content">
                                 <?php the_content(); ?>

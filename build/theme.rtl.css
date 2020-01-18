@@ -11406,6 +11406,8 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
       .edd_downloads_list .edd_download .edd_download_inner .edd_download_image {
         margin: 0 0 1rem 0;
         background: #f9fbf9; }
+        .edd_downloads_list .edd_download .edd_download_inner .edd_download_image a {
+          display: block; }
       .edd_downloads_list .edd_download .edd_download_inner .edd_download_title a {
         font-size: 1.25rem;
         color: #222;

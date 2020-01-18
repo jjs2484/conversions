@@ -237,6 +237,41 @@ class Easy_Digital_Downloads
 	}
 
 	/**
+		@brief		Downloads list wrapper classes for archives.
+		@since		2020-01-17 07:42:57
+	**/
+	public function conversions_edd_archive_list_classes() {
+
+		// Get the download grid options.
+		$options = $this->conversions_edd_grid_options();
+
+		// Set up array.
+		$classes = [];
+
+		if ( empty( $atts ) ) {
+			/**
+				If empty download grid is being output by an archive:
+				- archive-download.php
+				- taxonomy-download_category.php
+				- taxonomy-download_tag.php
+			**/
+
+			// Add downloads list wrapper classes.
+			$classes[] = 'edd_downloads_list';
+			$classes[] = 'edd_download_columns_' . $options['columns'];
+		}
+
+		// Add optional filter and check for its usage.
+		if ( has_filter( 'conversions_edd_archive_classes' ) ) {
+			$classes = apply_filters( 'conversions_edd_archive_classes', $classes );
+		}
+
+		$classes = implode( ' ', array_filter( $classes ) );
+
+		return $classes;
+	}
+
+	/**
 		@brief		Disable legacy EDD schema.org microdata.		
 		@since		2020-01-16 19:54:02
 	**/
