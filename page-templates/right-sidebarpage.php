@@ -18,7 +18,7 @@ if ( has_post_thumbnail( get_the_ID() ) ) {
 get_header();
 ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper content-wrapper" id="page-wrapper">
 
 	<?php 
 	if ( has_post_thumbnail( get_the_ID() ) ) {			

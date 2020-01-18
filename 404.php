@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<div class="wrapper" id="error-404-wrapper">
+<div class="wrapper content-wrapper" id="error-404-wrapper">
 
 	<div class="container-fluid" id="content" tabindex="-1">
 

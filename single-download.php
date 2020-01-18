@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<div class="wrapper" id="edd-wrapper">
+<div class="wrapper content-wrapper" id="edd-single-wrapper">
 
     <div class="container-fluid" id="content" tabindex="-1">
 

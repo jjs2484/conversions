@@ -2546,7 +2546,7 @@ namespace conversions
 
 				// Fixed navbar height
 				if ( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) == 'fixed-top' ) {
-					echo '#page-wrapper, #single-wrapper, #woocommerce-wrapper, #full-width-page-wrapper, #homepage-wrapper, #search-wrapper, #index-wrapper, #error-404-wrapper, #archive-wrapper, #author-wrapper, #edd-wrapper {
+					echo '.content-wrapper {
 							margin-top: '.esc_html( $total_nav_height ).'rem;
 					}';
 					echo '.wrapper :target:before, .wrapper li[id].comment:before {

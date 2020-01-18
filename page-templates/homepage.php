@@ -18,7 +18,7 @@ if ( has_post_thumbnail( get_the_ID() ) ) {
 get_header();
 ?>
 
-<div id="homepage-wrapper" class="wrapper">
+<div id="homepage-wrapper" class="wrapper content-wrapper">
 
 <?php do_action( 'homepage' ); ?>
 

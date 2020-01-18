@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<div id="builder-wrapper" class="wrapper">
+<div id="builder-wrapper" class="wrapper content-wrapper">
 
 	<?php 
 		while ( have_posts() ) : the_post();
