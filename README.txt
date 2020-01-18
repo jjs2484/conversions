@@ -34,6 +34,12 @@ Full documentation available at - https://conversionswp.com/documentation/
 * Fix: ob_get_clean() conflict with WP Super Cache.
 * Fix: navbar accessibility and styles.
 
+= 1.3 =
+* New: add new action hooks.
+* New: add content-wrapper class for generalized targeting.
+* Update: optimized browser prefix support.
+* Fix: adjust fixed navbar margin calcs.
+
 == Resources ==
 
 * Bootstrap 4.4.1 | MIT License
