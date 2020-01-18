@@ -41,7 +41,6 @@
 					li {
 						display: flex; 
 						margin-bottom: .25rem;
-
 						.name {
 							width: 38%;
 						}
@@ -74,7 +73,6 @@
 			.edd_download_image {
 				margin: 0 0 1rem 0;
 				background: #f9fbf9;
-
 				a {
 					display: block;
 				}
@@ -104,7 +102,120 @@
 					margin-bottom: .75rem;
 					color: #555;
 				}
+				.edd_download_purchase_form {
+					.edd-cart-ajax-alert {
+						display: none;
+					}
+					.btn-block + .btn-block {
+						margin-top: 0;
+					}
+				}
 			}
+		}
+	}
+}
+
+// Checkout
+#edd_checkout_wrap {
+	
+	// cart table
+	table#edd_checkout_cart {
+		margin-bottom: 2rem;
+
+		.edd_cart_header_row th {
+			background: #F8F9FA;
+		}
+		td, th {
+			border: 1px solid #dee2e6;
+			color: #222;
+		}
+	}
+
+	// forms
+	#edd_checkout_form_wrap {
+ 
+		#edd-login-account-wrap,
+		#edd-new-account-wrap, 
+		#edd_show_discount, 
+		.edd-cart-adjustment {
+			background: #F8F9FA;
+			color: #222;
+		}
+
+		input.edd-input, 
+		textarea.edd-input {
+			width: 99%;
+		}
+
+		#edd_discount_code {
+			border: 0;
+			background: transparent;
+
+			#edd_show_discount {
+				margin-bottom: 0;
+			}
+			#edd-discount-code-wrap input#edd-discount {
+				margin-bottom: 1rem;
+			}
+		}
+		
+		.edd-payment-icons {
+			margin-bottom: 1rem;
+		}
+
+		fieldset {
+			margin-bottom: 2rem;
+			border: 1px solid #dee2e6;
+			background: #F8F9FA;
+
+			legend {
+				width: auto;
+				padding: 0 .5rem;
+				margin-bottom: .75rem;
+			}
+		}
+
+		fieldset#edd_purchase_submit { 
+			background: transparent;
+			border: 0;
+
+			fieldset#edd-privacy-policy-agreement {
+				background: transparent;
+				border: 0;
+				margin-bottom: 1rem;
+
+				#edd-privacy-policy {
+					height: 15rem;
+					overflow-y: scroll;
+					padding: 1.5rem;
+					border: 1px solid #dee2e6;
+					background: #fff;
+					margin-bottom: 1rem;
+				}
+
+				#edd-show-privacy-policy {
+					margin-bottom: .5rem;
+				}
+			}
+		}
+
+		#edd_payment_mode_select {
+			margin-bottom: 2rem;
+			#edd-payment-mode-wrap label {
+				display: block;
+				margin: 0 0 .75rem;
+			}
+		}
+
+		#edd_final_total_wrap {
+			border: 1px solid #dee2e6;
+			background: #F8F9FA;
+			color: #222;
+		}
+
+		#edd_register_account_fields, 
+		fieldset fieldset {
+			border: 0;
 		}
 	}
 }
