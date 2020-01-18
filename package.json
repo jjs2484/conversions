@@ -28,7 +28,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-lineending": "^1.0.0",
     "grunt-rtlcss": "^2.0.2",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
