@@ -36,23 +36,7 @@ get_header();
 
                     <?php while ( have_posts() ) : the_post(); ?>
 
-                        <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-                            <?php if ( has_post_thumbnail( get_the_ID() ) ) : ?>
-                                <div class="post-thumbnail">
-                                    <?php the_post_thumbnail( 'large' ); ?>
-                                </div>
-                            <?php endif; ?>
-
-                            <div class="entry-content">
-                                <?php the_content(); ?>
-                            </div><!-- .entry-content -->
-
-                            <footer class="entry-footer">
-                                <?php edit_post_link( __( 'Edit', 'conversions' ), '<span class="edit-link">', '</span>' ); ?>
-                            </footer><!-- .entry-footer -->
-
-                        </article><!-- #post-## -->
+                        <?php get_template_part( 'partials/download', 'single' ); ?>
 
                         <?php
                             // If comments are open or we have at least one comment, load comments.
