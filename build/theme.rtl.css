@@ -11372,6 +11372,8 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
     display: none !important; }
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .btn-block + .btn-block {
     margin-top: 0; }
+  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd_download_quantity_wrapper {
+    margin: 0 0 .75rem; }
 .single-download #edd-single-wrapper .widget-area .edd-details .edd-details__title {
   font-size: 1.25rem; }
 .single-download #edd-single-wrapper .widget-area .edd-details ul {
@@ -11421,12 +11423,14 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
       .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer {
         margin: auto 0 0 0; }
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_price {
-          margin-bottom: .75rem;
+          margin-bottom: .5rem;
           color: #555; }
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-cart-ajax-alert {
           display: none; }
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + .btn-block {
           margin-top: 0; }
+        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd_download_quantity_wrapper {
+          margin: 0 0 .75rem; }
 
 .col-md-12.content-area .edd_downloads_list.edd_download_columns_2 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_3 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_4 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_5 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
   width: 100%; }
@@ -11464,12 +11468,10 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
   .col-md-8.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
     width: 16.6%; } }
 
-.edd-checkout .col-md-12.content-area {
+.edd-checkout .col-md-12.content-area, .edd-success .col-md-12.content-area, .edd-purchase-history .col-md-12.content-area {
   max-width: 800px;
   margin-right: auto;
   margin-left: auto; }
-  .edd-checkout .col-md-12.content-area h1.entry-title {
-    text-align: center; }
 
 #edd_checkout_wrap table#edd_checkout_cart {
   margin-bottom: 2rem; }
@@ -11477,7 +11479,16 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
     background: #F8F9FA; }
   #edd_checkout_wrap table#edd_checkout_cart td, #edd_checkout_wrap table#edd_checkout_cart th {
     border: 1px solid #dee2e6;
-    color: #222; }
+    color: #222;
+    padding: .75rem; }
+  #edd_checkout_wrap table#edd_checkout_cart td.edd_cart_actions {
+    white-space: nowrap;
+    width: 1px; }
+    #edd_checkout_wrap table#edd_checkout_cart td.edd_cart_actions input.edd-item-quantity {
+      width: 75px;
+      padding: .375rem .75rem;
+      display: inline-block;
+      margin-left: .4rem; }
 #edd_checkout_wrap #edd_checkout_form_wrap #edd-login-account-wrap,
 #edd_checkout_wrap #edd_checkout_form_wrap #edd-new-account-wrap,
 #edd_checkout_wrap #edd_checkout_form_wrap #edd_show_discount,
@@ -11532,6 +11543,22 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
 #edd_checkout_wrap #edd_checkout_form_wrap #edd_register_account_fields,
 #edd_checkout_wrap #edd_checkout_form_wrap fieldset fieldset {
   border: 0; }
+
+.edd-success #edd_purchase_receipt_products th {
+  background: #F8F9FA; }
+
+table#edd_user_history {
+  border-top: 1px solid #dee2e6; }
+  table#edd_user_history th {
+    background: #F8F9FA; }
+  table#edd_user_history td, table#edd_user_history th {
+    border-bottom: 1px solid #dee2e6;
+    padding: .75rem; }
+
+#edd_profile_editor_form legend {
+  margin-top: .75rem; }
+#edd_profile_editor_form legend#edd_profile_name_label {
+  margin-top: 0; }
 
 body.compensate-for-scrollbar {
     overflow: hidden;

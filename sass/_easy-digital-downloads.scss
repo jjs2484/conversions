@@ -29,6 +29,9 @@
 				.btn-block + .btn-block {
 					margin-top: 0;
 				}
+				.edd_download_quantity_wrapper {
+					margin: 0 0 .75rem;
+				}
 			}
 			.edd-details {
 				.edd-details__title {
@@ -99,7 +102,7 @@
 			.edd-downloads-footer {
 				margin: auto 0 0 0;
 				.edd_price {
-					margin-bottom: .75rem;
+					margin-bottom: .5rem;
 					color: #555;
 				}
 				.edd_download_purchase_form {
@@ -108,6 +111,9 @@
 					}
 					.btn-block + .btn-block {
 						margin-top: 0;
+					}
+					.edd_download_quantity_wrapper {
+						margin: 0 0 .75rem;
 					}
 				}
 			}
@@ -231,14 +237,13 @@
 	}
 }
 
-// Checkout - if no active sidebar limit width.
+// Checkout, confirmation, purchase history - no sidebar limit width.
 // Do not want a form spanning whole page
-.edd-checkout .col-md-12.content-area {
-	max-width: 800px;
-	margin-left: auto;
-	margin-right: auto;
-	h1.entry-title {
-		text-align: center;
+.edd-checkout, .edd-success, .edd-purchase-history {
+	.col-md-12.content-area {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -255,6 +260,19 @@
 		td, th {
 			border: 1px solid #dee2e6;
 			color: #222;
+			padding: .75rem;
+		}
+
+		// If quantity can be adjusted prevent stacking in that cell 
+		td.edd_cart_actions {
+			white-space: nowrap;
+			width: 1px;
+			input.edd-item-quantity {
+				width: 75px;
+				padding: .375rem .75rem;
+				display: inline-block;
+				margin-right: .4rem;
+			}
 		}
 	}
 
@@ -344,5 +362,36 @@
 		fieldset fieldset {
 			border: 0;
 		}
+	}
+}
+
+// Confirmation page
+.edd-success {
+	#edd_purchase_receipt_products {
+		th {
+			background: #F8F9FA;
+		}
+	}
+}
+
+// Purchase history
+table#edd_user_history {
+	border-top: 1px solid #dee2e6;
+	th {
+		background: #F8F9FA;
+	}
+	td, th {
+		border-bottom: 1px solid #dee2e6;
+		padding: .75rem;
+	}
+}
+
+// Profile edit form
+#edd_profile_editor_form {
+	legend {
+		margin-top: .75rem;
+	}
+	legend#edd_profile_name_label {
+		margin-top: 0;
 	}
 }
