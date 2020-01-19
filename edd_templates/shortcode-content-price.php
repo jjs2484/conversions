@@ -1,14 +1,15 @@
-<?php if ( ! edd_has_variable_prices( get_the_ID() ) ) : ?>
-	<div>
-		<div itemprop="price" class="edd_price">
-			<?php
-				if ( edd_is_free_download( get_the_ID() ) ) {
-					$price = 'Free';
-				} else {
-					$price = edd_price( get_the_ID() );
-				}
-				echo $price;
-			?>
-		</div>
-	</div>
-<?php endif; ?>
+<?php
+	// Get the download ID
+	$download_id = get_the_ID();
+
+	// Get the prices
+	if ( edd_is_free_download( $download_id ) ) {
+		$price = '<div class="edd_price">' . __( 'Free', 'conversions' ) . '</div>';
+ 	} elseif ( edd_has_variable_prices( $download_id ) ) {
+		$price = '<div class="edd_price">' . edd_price_range( $download_id ) . '</div>';
+	} else {
+		$price = '<div class="edd_price">' . edd_price( $download_id ) . '</div>';
+	}
+
+	echo $price;
+?>

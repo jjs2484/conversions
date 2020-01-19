@@ -11432,6 +11432,8 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
   max-width: 800px;
   margin-right: auto;
   margin-left: auto; }
+  .edd-checkout .col-md-12.content-area h1.entry-title {
+    text-align: center; }
 
 #edd_checkout_wrap table#edd_checkout_cart {
   margin-bottom: 2rem; }

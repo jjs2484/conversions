@@ -59,7 +59,7 @@ $download_grid_options = $edd->conversions_edd_grid_options( $edd_download_short
 				endif;
 
 				if ( true === $download_grid_options['buy_button'] ) :
-					// Show the download by button
+					// Show the download by button section
 					edd_get_template_part( 'shortcode', 'content-cart-button' );
 				endif;
 

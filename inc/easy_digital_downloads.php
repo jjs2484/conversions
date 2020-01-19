@@ -37,7 +37,7 @@ class Easy_Digital_Downloads
 		if ( edd_is_free_download( $download_id ) ) {
 			$price = '<h3 id="edd-price-' . $download_id . '" class="edd-price">' . __( 'Free', 'conversions' ) . '</h3>';
  		} elseif ( edd_has_variable_prices( $download_id ) ) {
-			$price = '<h3 id="edd-price-' . $download_id . '" class="edd-price">' . __( 'From', 'conversions' ) . '&nbsp;' . edd_currency_filter( edd_format_amount( edd_get_lowest_price_option( $download_id ) ) ) . '</h3>';
+			$price = '<h3 id="edd-price-' . $download_id . '" class="edd-price">' . edd_price_range( $download_id ) . '</h3>';
 		} else {
 			$price = '<h3 id="edd-price-' . $download_id . '" class="edd-price">' . edd_price( $download_id, false ) . '</h3>';
 		}
