@@ -54,7 +54,7 @@
 	}
 }
 
-// Store page
+// Store pages
 .edd_downloads_list {
 	display: flex;
 	flex-wrap: wrap;
@@ -109,6 +109,122 @@
 					.btn-block + .btn-block {
 						margin-top: 0;
 					}
+				}
+			}
+		}
+	}
+}
+
+// Store pages grid - responsive - with no sidebar
+.col-md-12.content-area {
+	.edd_downloads_list {
+		
+		// breakpoints for up to 2 columns
+		&.edd_download_columns_2,
+		&.edd_download_columns_3,
+		&.edd_download_columns_4,
+		&.edd_download_columns_5,
+		&.edd_download_columns_6 {
+			.edd_download {
+				@include media-breakpoint-up(xs) {
+					width: 100%;
+				}
+				@include media-breakpoint-up(sm) {
+					width: 50%;
+				}
+			}
+		}
+		// breakpoint for 3 columns
+		&.edd_download_columns_3,
+		&.edd_download_columns_4,
+		&.edd_download_columns_5,
+		&.edd_download_columns_6 {
+			.edd_download {
+				@include media-breakpoint-up(md) {
+					width: 33%;
+				}
+			}
+		}
+		// breakpoint for 4 columns
+		&.edd_download_columns_4,
+		&.edd_download_columns_5,
+		&.edd_download_columns_6 {
+			.edd_download {
+				@include media-breakpoint-up(lg) {
+					width: 25%;
+				}
+			}
+		}
+		// breakpoint for 5 columns
+		&.edd_download_columns_5 {
+			.edd_download {
+				@include media-breakpoint-up(xl) {
+					width: 20%;
+				}
+			}
+		}
+		// breakpoint for 6 columns
+		&.edd_download_columns_6 {
+			.edd_download {
+				@include media-breakpoint-up(xl) {
+					width: 16.6%;
+				}
+			}
+		}
+	}
+}
+
+// Store pages grid - responsive - with active sidebar
+.col-md-8.content-area {
+	.edd_downloads_list {
+		
+		// breakpoints for up to 2 columns
+		&.edd_download_columns_2,
+		&.edd_download_columns_3,
+		&.edd_download_columns_4,
+		&.edd_download_columns_5,
+		&.edd_download_columns_6 {
+			.edd_download {
+				@include media-breakpoint-up(xs) {
+					width: 100%;
+				}
+				@include media-breakpoint-up(sm) {
+					width: 50%;
+				}
+			}
+		}
+		// breakpoint for 3 columns
+		&.edd_download_columns_3,
+		&.edd_download_columns_4,
+		&.edd_download_columns_5,
+		&.edd_download_columns_6 {
+			.edd_download {
+				@include media-breakpoint-up(lg) {
+					width: 33%;
+				}
+			}
+		}
+		// breakpoint for 4 columns
+		&.edd_download_columns_4 {
+			.edd_download {
+				@include media-breakpoint-up(xl) {
+					width: 25%;
+				}
+			}
+		}
+		// breakpoint for 5 columns
+		&.edd_download_columns_5 {
+			.edd_download {
+				@include media-breakpoint-up(xl) {
+					width: 20%;
+				}
+			}
+		}
+		// breakpoint for 6 columns
+		&.edd_download_columns_6 {
+			.edd_download {
+				@include media-breakpoint-up(xl) {
+					width: 16.6%;
 				}
 			}
 		}
