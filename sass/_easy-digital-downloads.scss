@@ -1,5 +1,14 @@
 // Easy Digital Download styles
 
+// Buttons
+#edd-purchase-button, 
+.edd-submit, 
+[type="submit"].edd-submit {
+	@extend .btn;
+	@extend .btn-lg;
+	@extend .btn-block;
+}
+
 // Single product pages
 .single-download {
 	#edd-single-wrapper {

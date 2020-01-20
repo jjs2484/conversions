@@ -22,6 +22,7 @@ class Easy_Digital_Downloads
 		add_action( 'conversions_edd_download_info', [ $this, 'singular_edd_download_details' ], 30 );
 		add_filter( 'shortcode_atts_downloads', [ $this, 'shortcode_atts_downloads' ], 10, 4 );
 		add_filter( 'edd_add_schema_microdata', [ $this, 'edd_add_schema_microdata' ], 10, 1 );
+		add_filter( 'edd_get_cart_quantity', [ $this, 'set_cart_quantity' ], 10, 2 );
 	}
 
 	/**
@@ -54,11 +55,14 @@ class Easy_Digital_Downloads
 		// Get the download ID
 		$download_id = get_the_ID();
 
+		// Get the customizer button option
+		$edd_primary_btn = get_theme_mod( 'conversions_edd_primary_btn', 'btn-primary' );
+
 		if ( get_post_meta( $download_id, '_edd_hide_purchase_link', true ) ) {
 			return; // Do not show if auto output is disabled
 		}
 
-		echo edd_get_purchase_link( array( 'class' => 'btn btn-lg btn-block btn-primary', 'price' => false ) );
+		echo edd_get_purchase_link( array( 'class' => 'btn btn-lg btn-block '. $edd_primary_btn .'', 'price' => false ) );
 	}
 
 	/**
@@ -277,6 +281,18 @@ class Easy_Digital_Downloads
 	**/
 	public function edd_add_schema_microdata( $ret ) {
 		return false;
+	}
+
+	/**
+		@brief		Make cart quantity blank when no items in the cart.		
+		@since		2020-01-16 19:54:02
+	**/
+	public function set_cart_quantity( $total_quantity, $cart ) {
+
+		if ( ! $cart ) {
+			$total_quantity = '';
+		}
+		return $total_quantity;
 	}
 
 }

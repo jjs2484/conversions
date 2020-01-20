@@ -17,6 +17,23 @@
       padding-top: 0;
     }
   }
+
+  // Nav icons
+  #main-menu { 
+    // cart
+    a.cart-customlocation i.fas.fa-shopping-bag {
+      font-size: 1.15rem;
+      margin-right: .25rem;
+    }
+    // account
+    .account-icon.menu-item a i.fas.fa-user {
+      font-size: 1.05rem;
+    }
+    // search
+    .search-icon.menu-item a i.fas.fa-search {
+      font-size: 1.05rem;
+    }
+  }
   
   // Large devices (desktops, 992px and up)
   @include media-breakpoint-up(lg) {

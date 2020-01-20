@@ -218,6 +218,8 @@ namespace conversions
 				'conversions_woo_product_limit' => '8',
 				'conversions_woo_product_columns' => '4',
 				'conversions_woo_products_order' => 'popularity',
+				'conversions_edd_nav_cart' => true,
+				'conversions_edd_primary_btn' => 'btn-primary',
 			];
 
 			foreach ($defaults as $c => $v) {

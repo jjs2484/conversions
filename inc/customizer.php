@@ -2406,6 +2406,82 @@ namespace conversions
 				)
 			);
 
+			//-----------------------------------------------------
+			// Easy Digital Downloads
+			//-----------------------------------------------------
+			if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+			
+				$wp_customize->add_section( 'conversions_edd', [
+					'title'             => __('Easy Digital Downloads', 'conversions'),
+					'description'       => __('Settings for Easy Digital Downloads.', 'conversions'),
+					'priority'          => 121,
+					'capability'        => 'edit_theme_options',
+				] );
+				// Create our settings
+				$wp_customize->add_setting( 'conversions_edd_nav_cart', [
+					'default'           => true,
+					'type'              => 'theme_mod',
+					'sanitize_callback' => 'conversions_sanitize_checkbox',
+					'capability'        => 'edit_theme_options',
+					'transport'     => 'refresh',
+				] );
+				$wp_customize->add_control(
+					new \WP_Customize_Control(
+						$wp_customize,
+						'conversions_edd_nav_cart', [
+							'label'       => __( 'Cart icon in navbar', 'conversions' ),
+							'description' => __( 'Enable cart icon in the navbar.', 'conversions' ),
+							'section'     => 'conversions_edd',
+							'settings'    => 'conversions_edd_nav_cart',
+							'type'        => 'checkbox',
+							'priority'    => '10',
+						]
+					)
+				);
+				$wp_customize->add_setting( 'conversions_edd_nav_account', [
+					'default'           => false,
+					'type'              => 'theme_mod',
+					'sanitize_callback' => 'conversions_sanitize_checkbox',
+					'capability'        => 'edit_theme_options',
+					'transport'     => 'refresh',
+				] );
+				$wp_customize->add_control(
+					new \WP_Customize_Control(
+						$wp_customize,
+						'conversions_edd_nav_account', [
+							'label'       => __( 'Account icon in navbar', 'conversions' ),
+							'description' => __( 'Enable Account icon in the navbar.', 'conversions' ),
+							'section'     => 'conversions_edd',
+							'settings'    => 'conversions_edd_nav_account',
+							'type'        => 'checkbox',
+							'priority'    => '20',
+						]
+					)
+				);
+				$wp_customize->add_setting( 'conversions_edd_primary_btn', [
+					'default'           => 'btn-primary',
+					'type'              => 'theme_mod',
+					'sanitize_callback' => 'conversions_sanitize_select',
+					'capability'        => 'edit_theme_options',
+					'transport'     => 'refresh',
+				] );
+				$wp_customize->add_control(
+					new \WP_Customize_Control(
+						$wp_customize,
+						'conversions_edd_primary_btn', [
+							'label'       => __( 'Primary button type', 'conversions' ),
+							'description' => __( 'Select the primary button type. Applies to: add to cart, checkout, etc.', 'conversions' ),
+							'section'     => 'conversions_edd',
+							'settings'    => 'conversions_edd_primary_btn',
+							'type'        => 'select',
+							'choices' => $button_choices,
+							'priority'    => '30',
+						]
+					)
+				);
+
+			}
+
 		}
 
 		/**
@@ -2468,7 +2544,10 @@ namespace conversions
 			$wc_primary_btn = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
 			$wc_secondary_btn = get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' );
 
-			// WC button multidimensional array
+			// EDD button option
+			$edd_primary_btn = get_theme_mod( 'conversions_edd_primary_btn', 'btn-primary' );
+
+			// button multidimensional array
 			$wc_btns = [
 				"btn-primary" => [ "btn_bg" => "#007bff", "btn_color" => "#fff", "btn_border" => "#007bff", "btn_bg_hover" => "#0069d9", "btn_color_hover" => "#fff", "btn_border_hover" => "#0069d9" ],
 				"btn-secondary" => [ "btn_bg" => "#6c757d", "btn_color" => "#fff", "btn_border" => "#6c757d", "btn_bg_hover" => "#5a6268", "btn_color_hover" => "#fff", "btn_border_hover" => "#5a6268" ],
@@ -2603,6 +2682,20 @@ namespace conversions
 						border-color: '.esc_html( $wc_btns[$wc_secondary_btn]["btn_border_hover"] ).';
 					}';
 				}
+				// Easy Digital Downloads
+				if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+					// primary buttons
+					echo '#edd-purchase-button, .edd-submit, [type="submit"].edd-submit {
+						background: '.esc_html( $wc_btns[$edd_primary_btn]["btn_bg"] ).';
+						color: '.esc_html( $wc_btns[$edd_primary_btn]["btn_color"] ).';
+						border: 1px solid '.esc_html( $wc_btns[$edd_primary_btn]["btn_border"] ).';
+					}';
+					echo '#edd-purchase-button:hover, .edd-submit:hover, [type="submit"].edd-submit:hover {
+						color: '.esc_html( $wc_btns[$edd_primary_btn]["btn_color_hover"] ).';
+						background-color: '.esc_html( $wc_btns[$edd_primary_btn]["btn_bg_hover"] ).';
+						border-color: '.esc_html( $wc_btns[$edd_primary_btn]["btn_border_hover"] ).';
+					}';
+				}
 				// sidebar
 				if ( get_theme_mod( 'conversions_sidebar_mv', true ) == false ) {
 					echo '@media (max-width: 767.98px) { #sidebar-2, #sidebar-1 { display: none; } }';
@@ -2675,13 +2768,53 @@ namespace conversions
 							$wc_al = __( 'Login / Register', 'conversions' );
 						}
 						// output the account icon if active.
-						$wc_account_link = sprintf( '<li class="search-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
+						$wc_account_link = sprintf( '<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
 							esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ),
 							$wc_al
 						);
 
 						// Add the account to the end of the menu.
 						$items = $items . $wc_account_link;
+					}
+
+				}
+
+				// Is Easy Digital Downloads active?
+				if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+
+					// Append Easy Digital Downloads Cart icon?
+					if ( get_theme_mod( 'conversions_edd_nav_cart', true ) == true ) {
+
+						$edd_cart_totals = sprintf( '<span class="header-cart edd-cart-quantity">%s</span><span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>',
+							edd_get_cart_quantity()
+						);
+
+						// output the cart icon with item count
+						$edd_cart_link = sprintf( '<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-bag"></i>%s</a></li>',
+							esc_url( edd_get_checkout_uri() ),
+							$edd_cart_totals
+						);
+
+						// Add the cart icon to the end of the menu.
+						$items = $items . $edd_cart_link;
+					}
+
+					// Append Easy Digital Downloads Account icon?
+					if ( get_theme_mod( 'conversions_edd_nav_account', false ) == true ) {
+
+						if ( is_user_logged_in() ) {
+							$edd_al = __('My Account','conversions');
+						} else {
+							$edd_al = __( 'Login / Register', 'conversions' );
+						}
+						// output the account icon if active.
+						$edd_account_link = sprintf( '<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
+							esc_url( edd_get_user_verification_page() ),
+							$edd_al
+						);
+
+						// Add the account to the end of the menu.
+						$items = $items . $edd_account_link;
 					}
 
 				}
