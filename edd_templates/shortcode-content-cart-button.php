@@ -10,6 +10,6 @@ $edd_primary_btn = get_theme_mod( 'conversions_edd_primary_btn', 'btn-primary' )
 			</a>
 		</div>
 	<?php } else {
-		echo edd_get_purchase_link( array( 'class' => 'btn btn-lg btn-block '. $edd_primary_btn .'', 'price' => false, 'download_id' => get_the_ID() ) );
+		echo edd_get_purchase_link( array( 'class' => 'btn btn-lg btn-block '. $edd_primary_btn .'', 'download_id' => get_the_ID() ) );
 	} ?>
 </div>

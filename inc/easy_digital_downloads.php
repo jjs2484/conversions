@@ -17,12 +17,30 @@ class Easy_Digital_Downloads
 		// Remove the purchase link at the bottom of the single download page.
 		remove_action( 'edd_after_download_content', 'edd_append_purchase_link' );
 
+		add_filter( 'edd_purchase_link_defaults', [ $this, 'conversions_purchase_link_filter' ] );
 		add_action( 'conversions_edd_download_info', [ $this, 'singular_edd_price' ], 10 );
 		add_action( 'conversions_edd_download_info', [ $this, 'singular_edd_purchase_link' ], 20 );
 		add_action( 'conversions_edd_download_info', [ $this, 'singular_edd_download_details' ], 30 );
 		add_filter( 'shortcode_atts_downloads', [ $this, 'shortcode_atts_downloads' ], 10, 4 );
 		add_filter( 'edd_add_schema_microdata', [ $this, 'edd_add_schema_microdata' ], 10, 1 );
-		add_filter( 'edd_get_cart_quantity', [ $this, 'set_cart_quantity' ], 10, 2 );
+		add_filter( 'edd_get_cart_quantity', [ $this, 'set_cart_quantity' ], 10, 2 );	
+		add_action( 'wp_enqueue_scripts', [ $this, 'edd_blocks_dequeue_styles' ], 501 );
+	}
+
+	/**
+		Filter the purchase link to remove some defaults.
+		@since		2020-01-21 15:20:02
+	**/
+	function conversions_purchase_link_filter( $defaults ) {
+
+		// Remove button class
+		$defaults['color'] = '';
+
+		// Remove button price
+		$defaults['price'] = (bool) false;
+
+		return $defaults;
+
 	}
 
 	/**
@@ -62,7 +80,7 @@ class Easy_Digital_Downloads
 			return; // Do not show if auto output is disabled
 		}
 
-		echo edd_get_purchase_link( array( 'class' => 'btn btn-lg btn-block '. $edd_primary_btn .'', 'price' => false ) );
+		echo edd_get_purchase_link( array( 'class' => 'btn btn-lg btn-block '. $edd_primary_btn .'' ) );
 	}
 
 	/**
@@ -286,6 +304,15 @@ class Easy_Digital_Downloads
 			$total_quantity = '';
 		}
 		return $total_quantity;
+	}
+
+	/**
+		@brief		Dequeue block styles on the frontend, they are unneccesary.
+					Note: they use display:grid which clashes with display:flex
+		@since		2020-01-21 12:59:48
+	**/
+	public function edd_blocks_dequeue_styles() {
+		wp_dequeue_style( 'edd-blocks' );
 	}
 
 }
