@@ -220,6 +220,11 @@ namespace conversions
 				'conversions_woo_products_order' => 'popularity',
 				'conversions_edd_nav_cart' => true,
 				'conversions_edd_primary_btn' => 'btn-primary',
+				'conversions_edd_download_details' => true,
+				'conversions_edd_products'	=> 'no',
+				'conversions_edd_product_limit'	=> '6',
+				'conversions_edd_product_columns'	=> '3',
+				'conversions_edd_products_order'	=> 'post_date',
 			];
 
 			foreach ($defaults as $c => $v) {

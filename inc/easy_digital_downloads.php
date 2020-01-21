@@ -71,65 +71,58 @@ class Easy_Digital_Downloads
 	**/
 	public function singular_edd_download_details()
 	{
-		// Get the download ID
-		$download_id = get_the_ID();
+		if ( get_theme_mod( 'conversions_edd_download_details', true ) == true ) :
 		
-		echo '<section class="edd-details">';
+			// Get the download ID
+			$download_id = get_the_ID();
+		
+			echo '<section class="edd-details">';
 
-			// Title 
-			echo '<h3 class="edd-details__title">' . __( 'Details', 'conversions' ) . '</h3>';
+				// Title 
+				echo '<h3 class="edd-details__title">' . __( 'Details', 'conversions' ) . '</h3>';
 
-			echo '<ul>';
+				echo '<ul>';
 
-				// Date published.
-				echo '<li class="edd-details__published">
-					<span class="name">' . __( 'Published:', 'conversions' ) . '</span>
-					<span class="value">' . get_the_time( 'F j, Y', $download_id ) . '</span>
-				</li>';
-
-				// Sale count.
-				$sales = edd_get_download_sales_stats( $download_id );
-
-				if ($sales > 0 ) : 
-					echo '<li class="edd-details__sales">
-						<span class="name">' . __( 'Sales:', 'themedd' ) . '</span>
-						<span class="value">' . $sales . '</span>
+					// Date published.
+					echo '<li class="edd-details__published">
+						<span class="name">' . __( 'Published:', 'conversions' ) . '</span>
+						<span class="value">' . get_the_time( 'F j, Y', $download_id ) . '</span>
 					</li>';
-				endif;
 
-				// Version.
-				if ( class_exists( 'EDD_Software_Licensing' ) ) :
-					// Get version number from EDD Software Licensing.
-					$version = get_post_meta( $download_id, '_edd_sl_version', true );
+					// Version.
+					if ( class_exists( 'EDD_Software_Licensing' ) ) :
+						// Get version number from EDD Software Licensing.
+						$version = get_post_meta( $download_id, '_edd_sl_version', true );
 
-					if ( $version ) :
-						echo '<li class="edd-details__version">
-							<span class="name">' . __( 'Version:', 'conversions' ) . '</span>
-							<span class="value">' . $version . '</span>
+						if ( $version ) :
+							echo '<li class="edd-details__version">
+								<span class="name">' . __( 'Version:', 'conversions' ) . '</span>
+								<span class="value">' . $version . '</span>
+							</li>';
+						endif;
+					endif;
+
+					// Download categories.
+					$categories = get_the_term_list( $download_id, 'download_category', '', ', ' );
+					if ( $categories ) :
+						echo '<li class="edd-details__categories">
+							<span class="name">' . __( 'Categories:', 'conversions' ) . '</span>
+							<span class="value">' . $categories . '</span>
 						</li>';
 					endif;
-				endif;
 
-				// Download categories.
-				$categories = get_the_term_list( $download_id, 'download_category', '', ', ' );
-				if ( $categories ) :
-					echo '<li class="edd-details__categories">
-						<span class="name">' . __( 'Categories:', 'conversions' ) . '</span>
-						<span class="value">' . $categories . '</span>
-					</li>';
-				endif;
+					// Download tags.
+					$tags = get_the_term_list( $download_id, 'download_tag', '', ', ' );
+					if ( $tags ) :
+						echo '<li class="edd-details__tags">
+							<span class="name">' . __( 'Tags:', 'conversions' ) . '</span>
+							<span class="value">' . $tags . '</span>
+						</li>';
+					endif;
 
-				// Download tags.
-				$tags = get_the_term_list( $download_id, 'download_tag', '', ', ' );
-				if ( $tags ) :
-					echo '<li class="edd-details__tags">
-						<span class="name">' . __( 'Tags:', 'conversions' ) . '</span>
-						<span class="value">' . $tags . '</span>
-					</li>';
-				endif;
-
-			echo '</ul>';
-		echo '</section>';
+				echo '</ul>';
+			echo '</section>';
+		endif;
 	}
 
 	/**

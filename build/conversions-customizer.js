@@ -597,6 +597,29 @@ jQuery(document).ready(function ($) {
     
 });
 
+/* EDD product options */
+jQuery(document).ready(function ($) {
+
+    /* option selectors */
+    var $eddProductTypeTax = $( '#customize-control-conversions_edd_product_tax_control' );
+    var $eddProductTypeChoice = $( '#customize-control-conversions_edd_products select' );
+
+    /* on page load hide or show options */
+    if( $( $eddProductTypeChoice ).val() == 'no' || $( $eddProductTypeChoice ).val() == 'all' ){
+        $($eddProductTypeTax).hide();
+    }
+
+    /* on change hide or show options */
+    $( $eddProductTypeChoice ).change(function(){
+        if($(this).val() == 'category' || $(this).val() == 'tags') {
+            $($eddProductTypeTax).show();
+        } 
+        else if ($(this).val() == 'no' || $(this).val() == 'all') {
+            $($eddProductTypeTax).hide();
+        }
+    });
+});
+
 jQuery(document).ready(function($) {
 	$( '.conversions_homepage_sorting' ).sortable();
 	$( '.conversions_homepage_sorting' ).disableSelection();
