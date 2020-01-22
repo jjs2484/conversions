@@ -1,9 +1,6 @@
 <?php
 /**
- * The template for displaying comments.
- *
- * The area of the page that contains both current comments
- * and the comment form.
+ * The template for displaying comments and comment form
  *
  * @package conversions
  */

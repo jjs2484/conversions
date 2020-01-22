@@ -1,6 +1,6 @@
 <?php
 /**
- * Easy Digital Downloads tag custom taxonomy.
+ * Easy Digital Downloads tag custom taxonomy
  *
  * @package conversions
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying search forms.
+ * The template for displaying search forms
  *
  * @package conversions
  */

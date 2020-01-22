@@ -1,6 +1,6 @@
 <?php
 /**
- * The default template for displaying pages.
+ * The default template for displaying pages
  *
  * @package conversions
  */

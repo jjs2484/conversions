@@ -1,6 +1,6 @@
 <?php
 /**
- * The default template for displaying single posts.
+ * The default template for displaying single posts
  *
  * @package conversions
  */

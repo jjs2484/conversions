@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying easy digital downloads single products.
+ * The template for displaying single downloads
  *
  * @package conversions
  */

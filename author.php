@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying author pages.
+ * The template for displaying author pages
  *
  * Learn more: https://codex.wordpress.org/Author_Templates
  *

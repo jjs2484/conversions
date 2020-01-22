@@ -1,6 +1,6 @@
 <?php
 /**
- * conversions functions and definitions
+ * Conversions functions
  *
  * @package conversions
  */

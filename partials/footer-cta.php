@@ -1,6 +1,6 @@
 <?php
 /**
- * Call to action section for footer.
+ * Call to action partial for footer
  *
  * @package conversions
  */

@@ -1,4 +1,13 @@
 <?php
+/**
+ * Easy Digital Downloads partial template for archives
+ *
+ * @package conversions
+ */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 $edd = new conversions\easy_digital_downloads();
 $download_grid_options = $edd->conversions_edd_grid_options();
 ?>

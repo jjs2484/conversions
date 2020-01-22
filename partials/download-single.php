@@ -1,6 +1,6 @@
 <?php
 /**
- * Easy Digital Downloads single partial template.
+ * Easy Digital Downloads single partial template
  *
  * @package conversions
  */

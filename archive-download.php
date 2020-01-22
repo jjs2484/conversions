@@ -1,7 +1,8 @@
 <?php
 /**
- * Easy Digital Downloads archive page.
- * This is used by default unless EDD_DISABLE_ARCHIVE is set to true.
+ * Easy Digital Downloads archive page
+ *
+ * This is used by default unless EDD_DISABLE_ARCHIVE is set to true
  *
  * @package conversions
  */

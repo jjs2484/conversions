@@ -1,6 +1,6 @@
 <?php
 /**
- * The sidebar containing the main widget area.
+ * The left sidebar containing widget area
  *
  * @package conversions
  */

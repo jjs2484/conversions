@@ -1,13 +1,7 @@
 <?php
 /**
- * A single download inside of the [downloads] shortcode.
+ * A single download inside of the [downloads] shortcode
  *
- * @since 2.8.0
- *
- * @package EDD
- * @category Template
- * @author Easy Digital Downloads
- * @version 1.0.0
  */
 
 global $edd_download_shortcode_item_atts, $edd_download_shortcode_item_i;
