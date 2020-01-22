@@ -114,6 +114,9 @@ class Enqueue
 		// WC button option
 		$wc_primary_btn = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
 
+		// EDD button option
+		$edd_primary_btn = get_theme_mod( 'conversions_edd_primary_btn', 'btn-primary' );
+
 		// WC button multidimensional array
 		$wc_btns = array(
 			"btn-primary" => array( "btn_bg" => "#007bff", "btn_color" => "#fff", "btn_border" => "#007bff", "btn_bg_hover" => "#0069d9", "btn_color_hover" => "#fff", "btn_border_hover" => "#0069d9" ),
@@ -164,6 +167,16 @@ class Enqueue
 				color: '.esc_html( $wc_btns[$wc_primary_btn]["btn_color_hover"] ).' !important;
 				background-color: '.esc_html( $wc_btns[$wc_primary_btn]["btn_bg_hover"] ).';
 				border-color: '.esc_html( $wc_btns[$wc_primary_btn]["btn_border_hover"] ).';
+			}
+			.editor-styles-wrapper .edd_downloads_list .edd_download .edd_download_buy_button .edd_download_purchase_form a.edd-add-to-cart {
+				background: '.esc_html( $wc_btns[$edd_primary_btn]["btn_bg"] ).';
+				color: '.esc_html( $wc_btns[$edd_primary_btn]["btn_color"] ).' !important;
+				border: 1px solid '.esc_html( $wc_btns[$edd_primary_btn]["btn_border"] ).';
+			}
+			.editor-styles-wrapper .edd_downloads_list .edd_download .edd_download_buy_button .edd_download_purchase_form a.edd-add-to-cart:hover {
+				color: '.esc_html( $wc_btns[$edd_primary_btn]["btn_color_hover"] ).' !important;
+				background-color: '.esc_html( $wc_btns[$edd_primary_btn]["btn_bg_hover"] ).';
+				border-color: '.esc_html( $wc_btns[$edd_primary_btn]["btn_border_hover"] ).';
 			}
 		';
 		wp_add_inline_style( 'conversions-gutenberg', $custom_gb_css );

@@ -141,9 +141,7 @@
 		&.edd_download_columns_5,
 		&.edd_download_columns_6 {
 			.edd_download {
-				@include media-breakpoint-up(xs) {
-					width: 100%;
-				}
+				width: 100%;
 				@include media-breakpoint-up(sm) {
 					width: 50%;
 				}
@@ -200,9 +198,7 @@
 		&.edd_download_columns_5,
 		&.edd_download_columns_6 {
 			.edd_download {
-				@include media-breakpoint-up(xs) {
-					width: 100%;
-				}
+				width: 100%;
 				@include media-breakpoint-up(sm) {
 					width: 50%;
 				}
