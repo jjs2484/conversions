@@ -54,11 +54,11 @@ class Easy_Digital_Downloads
 
 		// Get the prices
 		if ( edd_is_free_download( $download_id ) ) {
-			$price = '<h3 id="edd-price-' . $download_id . '" class="edd-price">' . __( 'Free', 'conversions' ) . '</h3>';
+			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . __( 'Free', 'conversions' ) . '</h3>';
  		} elseif ( edd_has_variable_prices( $download_id ) ) {
-			$price = '<h3 id="edd-price-' . $download_id . '" class="edd-price">' . edd_price_range( $download_id ) . '</h3>';
+			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . edd_price_range( $download_id ) . '</h3>';
 		} else {
-			$price = '<h3 id="edd-price-' . $download_id . '" class="edd-price">' . edd_price( $download_id, false ) . '</h3>';
+			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . edd_price( $download_id, false ) . '</h3>';
 		}
 
 		echo $price;
@@ -80,7 +80,7 @@ class Easy_Digital_Downloads
 			return; // Do not show if auto output is disabled
 		}
 
-		echo edd_get_purchase_link( array( 'class' => 'btn btn-lg btn-block '. $edd_primary_btn .'' ) );
+		echo edd_get_purchase_link( array( 'class' => 'btn btn-lg btn-block '. esc_attr( $edd_primary_btn ) .'' ) );
 	}
 
 	/**
@@ -104,7 +104,7 @@ class Easy_Digital_Downloads
 					// Date published.
 					echo '<li class="edd-details__published">
 						<span class="name">' . __( 'Published:', 'conversions' ) . '</span>
-						<span class="value">' . get_the_time( 'F j, Y', $download_id ) . '</span>
+						<span class="value">' . esc_html( get_the_time( 'F j, Y', $download_id ) ) . '</span>
 					</li>';
 
 					// Version.
@@ -115,7 +115,7 @@ class Easy_Digital_Downloads
 						if ( $version ) :
 							echo '<li class="edd-details__version">
 								<span class="name">' . __( 'Version:', 'conversions' ) . '</span>
-								<span class="value">' . $version . '</span>
+								<span class="value">' . esc_html( $version ) . '</span>
 							</li>';
 						endif;
 					endif;

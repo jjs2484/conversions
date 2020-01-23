@@ -397,7 +397,7 @@ class Template
 		$body_classes = get_body_class();
 
 		if( $sticky_posts_highlight != 'no' && in_array('blog', $body_classes) ) {
-			$classes[] = 'border-' . $sticky_posts_highlight;
+			$classes[] = 'border-' . esc_attr( $sticky_posts_highlight );
 		}
 
 		return $classes;

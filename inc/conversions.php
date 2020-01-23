@@ -224,7 +224,8 @@ namespace conversions
 				'conversions_edd_products'	=> 'no',
 				'conversions_edd_product_limit'	=> '6',
 				'conversions_edd_product_columns'	=> '3',
-				'conversions_edd_products_order'	=> 'post_date',
+				'conversions_edd_products_orderby'	=> 'post_date',
+				'conversions_edd_products_order'	=> 'DESC',
 			];
 
 			foreach ($defaults as $c => $v) {

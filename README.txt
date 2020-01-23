@@ -12,9 +12,9 @@ Conversions is conversion-focused WordPress theme. It’s based on Bootstrap 4 a
 
 == Description ==
 
-Conversions is conversion-focused WordPress theme. It’s based on Bootstrap 4 and Automattic’s starter theme called _s, or underscores. Conversions enables you to create almost any type of website such as: blog, business, startup, agency, e-commerce shop, portfolio, or non-profit. It is fully compatible with Gutenberg and the most popular page builders (Elementor, Beaver Builder, Visual Composer, etc.). Some of the theme features include: ✓ Mobile First Design ✓ Customizer Options ✓ Search Engine Optimized ✓ Google Fonts ✓ Font Awesome ✓ Translation Ready ✓ RTL Support ✓ Highly Extendable. Conversions supports most popular WordPress plugins like: WooCommerce, Contact Form 7, Google Analytics, and much more. 
+Conversions is conversion-focused WordPress theme. It’s based on Bootstrap 4 and Automattic’s starter theme called _s, or underscores. Conversions enables you to create almost any type of website such as: business, startup, agency, e-commerce shop, portfolio, non-profit, or blog. It is fully compatible with Gutenberg and most popular page builders (Elementor, Visual Composer, etc.). Some of the theme features include: ✓ Mobile First Design ✓ Customizer Options ✓ Search Engine Optimized ✓ Google Fonts ✓ Font Awesome ✓ Translation Ready ✓ RTL Support ✓ Highly Extendable. Conversions supports many popular WordPress plugins like: WooCommerce, Easy Digital Downloads, Contact Form 7, Google Analytics, and much more. 
 
-Full documentation available at - https://conversionswp.com/documentation/
+Full documentation: https://conversionswp.com/documentation/
 
 == Changelog ==
 
@@ -35,9 +35,9 @@ Full documentation available at - https://conversionswp.com/documentation/
 * Fix: navbar accessibility and styles.
 
 = 1.3 =
+* New: Easy Digital Downloads integration.
 * New: add new action hooks.
 * New: add content-wrapper class for generalized targeting.
-* New: Easy Digital Downloads integration.
 * Update: optimized browser prefix support.
 * Fix: adjust fixed navbar margin calcs.
 

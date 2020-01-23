@@ -58,7 +58,7 @@ class Homepage
 		}
 
 		if ( ! class_exists( 'Easy_Digital_Downloads' ) ) {
-			unset( static::$sections[ 'woocommerce' ] );
+			unset( static::$sections[ 'edd' ] );
 		}
 
 		$this->add_sections();
@@ -575,13 +575,13 @@ class Homepage
 						if ( $c_product_type == "all" ) {
 							$c_product_type = "";
 						} else {
-							$c_product_type = $c_product_type . '="true"';
+							$c_product_type = esc_attr( $c_product_type ) . '="true"';
 						}
 						$c_product_limit = get_theme_mod( 'conversions_woo_product_limit' );
 						$c_product_columns = get_theme_mod( 'conversions_woo_product_columns' );
 						$c_product_order = get_theme_mod( 'conversions_woo_products_order' );
 
-						echo do_shortcode( '[products limit="'.$c_product_limit.'" columns="'.$c_product_columns.'" orderby="'.$c_product_order.'" '.$c_product_type.' ]' );
+						echo do_shortcode( '[products limit="'. esc_attr( $c_product_limit ) .'" columns="'. esc_attr( $c_product_columns ) .'" orderby="'. esc_attr( $c_product_order ) .'" '.$c_product_type.' ]' );
 					?>
 				</div>
 
@@ -637,15 +637,16 @@ class Homepage
 						if ( $edd_product_type == "all" ) {
 							$edd_product_type = "";
 						} elseif ( $edd_product_type == "category" ) {
-							$edd_product_type = 'category="'.get_theme_mod( 'conversions_edd_product_tax' ).'"';
+							$edd_product_type = 'category="'. esc_attr( get_theme_mod( 'conversions_edd_product_tax' ) ) .'"';
 						} elseif ( $edd_product_type == "tags" ) {
-							$edd_product_type = 'tags="'.get_theme_mod( 'conversions_edd_product_tax' ).'"';
+							$edd_product_type = 'tags="'. esc_attr( get_theme_mod( 'conversions_edd_product_tax' ) ) .'"';
 						}
 						$edd_product_limit = get_theme_mod( 'conversions_edd_product_limit' );
 						$edd_product_columns = get_theme_mod( 'conversions_edd_product_columns' );
+						$edd_product_orderby = get_theme_mod( 'conversions_edd_products_orderby' );
 						$edd_product_order = get_theme_mod( 'conversions_edd_products_order' );
 
-						echo do_shortcode( '[downloads pagination="false" order="ASC" number="'.$edd_product_limit.'" columns="'.$edd_product_columns.'" orderby="'.$edd_product_order.'" '.$edd_product_type.' ]' );
+						echo do_shortcode( '[downloads pagination="false" number="'. esc_attr( $edd_product_limit ) .'" columns="'. esc_attr( $edd_product_columns ) .'" orderby="'. esc_attr( $edd_product_orderby ) .'" order="'. esc_attr( $edd_product_order ) .'" '.$edd_product_type.' ]' );
 					?>
 				</div>
 

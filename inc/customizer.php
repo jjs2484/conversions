@@ -2332,9 +2332,7 @@ namespace conversions
 						'choices'     => [
 							'no' => __( 'None', 'conversions' ),
 							'all' => __( 'All', 'conversions' ),
-							'best_selling' => __( 'Best selling', 'conversions' ),
 							'on_sale' => __( 'On sale', 'conversions' ),
-							'top_rated' => __( 'Top rated', 'conversions' ),
 						],
 						'priority'    => '60',
 					]
@@ -2566,7 +2564,7 @@ namespace conversions
 						'max' => 4,
 					],
 				] );
-				$wp_customize->add_setting( 'conversions_edd_products_order', [
+				$wp_customize->add_setting( 'conversions_edd_products_orderby', [
 					'default'           => 'post_date',
 					'type'              => 'theme_mod',
 					'sanitize_callback' => 'conversions_sanitize_select',
@@ -2576,11 +2574,11 @@ namespace conversions
 				$wp_customize->add_control(
 					new \WP_Customize_Control(
 						$wp_customize,
-						'conversions_edd_products_order', [
+						'conversions_edd_products_orderby', [
 							'label'       => __( 'Products orderby', 'conversions' ),
-							'description' => __( 'Sorts the products displayed by the entered option.', 'conversions' ),
+							'description' => __( 'Sorts the products displayed by the entered category.', 'conversions' ),
 							'section'     => 'conversions_homepage_edd',
-							'settings'    => 'conversions_edd_products_order',
+							'settings'    => 'conversions_edd_products_orderby',
 							'type'        => 'select',
 							'choices'     => [
 								'post_date' => __( 'Date', 'conversions' ),
@@ -2589,6 +2587,30 @@ namespace conversions
 								'title' => __( 'Title', 'conversions' ),
 							],
 							'priority'    => '90',
+						]
+					)
+				);
+				$wp_customize->add_setting( 'conversions_edd_products_order', [
+					'default'           => 'DESC',
+					'type'              => 'theme_mod',
+					'sanitize_callback' => 'conversions_sanitize_select',
+					'capability'        => 'edit_theme_options',
+					'transport'     => 'refresh',
+				] );
+				$wp_customize->add_control(
+					new \WP_Customize_Control(
+						$wp_customize,
+						'conversions_edd_products_order', [
+							'label'       => __( 'Products order', 'conversions' ),
+							'description' => __( 'Select ascending (small to large) or Descending (large to small) order.', 'conversions' ),
+							'section'     => 'conversions_homepage_edd',
+							'settings'    => 'conversions_edd_products_order',
+							'type'        => 'select',
+							'choices'     => [
+								'ASC' => __( 'Ascending', 'conversions' ),
+								'DESC' => __( 'Descending', 'conversions' ),
+							],
+							'priority'    => '100',
 						]
 					)
 				);
