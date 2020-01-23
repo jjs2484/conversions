@@ -66,10 +66,15 @@
 	}
 }
 
+// Homepage store section
+.page-template-homepage .edd_downloads_list {
+	margin: 0;
+}
 // Store pages
 .edd_downloads_list {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 1rem 0;
 	
 	.edd_download {
 		display: flex;
@@ -126,6 +131,22 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+// Pagination
+#edd_download_pagination {
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	@extend .pagination;
+
+	.page-numbers {
+		@extend .page-link;
+		&.current {
+			color: #fff;
+			background-color: $primary;
+			border-color: $primary;
 		}
 	}
 }
