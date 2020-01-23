@@ -33,12 +33,17 @@ body, input, select, textarea {
 
 // Basic wrapper
 .wrapper {
-  padding: 2rem 0 3rem; 
-  overflow-x: hidden;
+  padding: 2rem 0 3rem;
   word-wrap: break-word;
   :focus {
     outline: none;
   }
+}
+
+// Content wrapper - if fullwidth page add overflow hidden
+// Prevents horizonal scrollbar w/ Gutenberg alignfull
+.no-sidebar .content-wrapper {
+  overflow-x: hidden;
 }
 
 // Container width

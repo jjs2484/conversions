@@ -10346,10 +10346,12 @@ body, input, select, textarea {
 
 .wrapper {
   padding: 2rem 0 3rem;
-  overflow-x: hidden;
   word-wrap: break-word; }
   .wrapper :focus {
     outline: none; }
+
+.no-sidebar .content-wrapper {
+  overflow-x: hidden; }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
   max-width: 1140px; }
@@ -11746,6 +11748,10 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
   -webkit-box-pack: center;
           justify-content: center;
   margin-bottom: 1.5rem; }
+  #edd_download_pagination > :first-child {
+    border-radius: 0 .25rem .25rem 0; }
+  #edd_download_pagination > :last-child {
+    border-radius: .25rem 0 0 .25rem; }
   #edd_download_pagination .page-numbers.current {
     color: #fff;
     background-color: #007bff;

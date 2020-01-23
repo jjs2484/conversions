@@ -43,6 +43,10 @@ class Extras
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
 		}
+		// Adds a class of no-sidebar if sidebar is inactive.
+		if ( ! is_active_sidebar( 'sidebar-1' ) && ! is_active_sidebar( 'sidebar-2' ) ) {
+			$classes[] = 'no-sidebar';
+		}
 
 		return $classes;
 	}

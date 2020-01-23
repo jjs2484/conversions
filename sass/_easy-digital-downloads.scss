@@ -141,6 +141,13 @@
 	margin-bottom: 1.5rem;
 	@extend .pagination;
 
+	> :first-child {
+		border-radius: .25rem 0 0 .25rem;
+	}
+	> :last-child {
+		border-radius: 0 .25rem .25rem 0;
+	}
+
 	.page-numbers {
 		@extend .page-link;
 		&.current {
