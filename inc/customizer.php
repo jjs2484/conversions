@@ -227,8 +227,28 @@ namespace conversions
 					]
 				)
 			);
+			$wp_customize->add_setting( 'conversions_nav_border', [
+				'default'			=> true,
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'conversions_sanitize_checkbox',
+				'capability'        => 'edit_theme_options',
+				'transport'     => 'refresh',
+			] );
+			$wp_customize->add_control(
+				new \WP_Customize_Control(
+					$wp_customize,
+					'conversions_nav_border', [
+						'label'       => __( 'Navbar border', 'conversions' ),
+						'description' => __( 'Add border to the Navbar?', 'conversions' ),
+						'section'     => 'conversions_nav',
+						'settings'    => 'conversions_nav_border',
+						'type'        => 'checkbox',
+						'priority'    => '25',
+					]
+				)
+			);
 			$wp_customize->add_setting( 'conversions_nav_dropshadow', [
-				'default'           => true,
+				'default'			=> false,
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'conversions_sanitize_checkbox',
 				'capability'        => 'edit_theme_options',
@@ -239,7 +259,7 @@ namespace conversions
 					$wp_customize,
 					'conversions_nav_dropshadow', [
 						'label'       => __( 'Navbar drop shadow', 'conversions' ),
-						'description' => __( 'Add a drop shadow to the Navbar?', 'conversions' ),
+						'description' => __( 'Add drop shadow to the Navbar? Note: drop shadow combined with fixed Navbar may slightly degrade scroll performance.', 'conversions' ),
 						'section'     => 'conversions_nav',
 						'settings'    => 'conversions_nav_dropshadow',
 						'type'        => 'checkbox',
@@ -2870,9 +2890,15 @@ namespace conversions
 						pointer-events: none;
 					}';
 				}
+				// Navbar border
+				if ( get_theme_mod( 'conversions_nav_border', true ) == true ) {
+					echo '#wrapper-navbar {
+						border-bottom: 1px solid #dee2e6;
+					}';
+				}
 				// Navbar drop shadow
-				if ( get_theme_mod( 'conversions_nav_dropshadow', true ) == true ) {
-					echo '#wrapper-navbar nav.navbar {
+				if ( get_theme_mod( 'conversions_nav_dropshadow', false ) == true ) {
+					echo '#wrapper-navbar {
 						box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 					}';
 				}

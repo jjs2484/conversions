@@ -159,7 +159,7 @@ namespace conversions
 				'conversions_logo_height' => '2.5',
 				'conversions_nav_position' => 'fixed-top',
 				'conversions_nav_colors' => 'white',
-				'conversions_nav_dropshadow' => true,
+				'conversions_nav_border' => true,
 				'conversions_nav_tbpadding' => '.5',
 				'conversions_nav_mobile_type' => 'collapse',
 				'conversions_nav_button' => 'no',
