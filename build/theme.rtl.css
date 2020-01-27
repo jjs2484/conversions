@@ -11646,6 +11646,47 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
   border-radius: 0;
   background-color: #333; }
 
+p.woocommerce-store-notice.demo_store {
+  position: fixed;
+  bottom: 0;
+  top: unset;
+  padding: 1em 1.41575em;
+  background-color: #3d9cd2;
+  color: #fff;
+  text-align: right; }
+  p.woocommerce-store-notice.demo_store::before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    line-height: inherit;
+    vertical-align: baseline;
+    content: "\f05a";
+    margin-left: .5rem; }
+  p.woocommerce-store-notice.demo_store .woocommerce-store-notice__dismiss-link {
+    float: left;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1em 1.41575em;
+    margin: -1em 0 -1em -1.41575em;
+    display: inline-block; }
+    p.woocommerce-store-notice.demo_store .woocommerce-store-notice__dismiss-link::before {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      line-height: 1;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      line-height: inherit;
+      vertical-align: baseline;
+      content: "\f057";
+      margin-left: .35rem; }
+
 /*
 * Use existing Bootstrap 4 classes for CF7 styles
 */

@@ -332,3 +332,52 @@ body.woocommerce-cart {
 	border-radius: 0;
 	background-color: #333;
 }
+
+// Store demo notice
+p.woocommerce-store-notice.demo_store {
+	position: fixed;
+	bottom: 0;
+	top: unset;
+	padding: 1em 1.41575em;
+	background-color: #3d9cd2;
+	color: #fff;
+	text-align: left;
+	
+	&::before {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		display: inline-block;
+		font-style: normal;
+		font-variant: normal;
+		line-height: 1;
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		line-height: inherit;
+		vertical-align: baseline;
+		content: "\f05a";
+		margin-right: .5rem;
+	}
+	
+	.woocommerce-store-notice__dismiss-link {
+		float: right;
+		background: rgba(0,0,0,.1);
+		padding: 1em 1.41575em;
+		margin: -1em -1.41575em -1em 0;
+		display: inline-block;
+		
+		&::before {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			line-height: 1;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			line-height: inherit;
+			vertical-align: baseline;
+			content: "\f057";
+			margin-right: .35rem;
+		}
+	}
+}
