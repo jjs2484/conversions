@@ -73,26 +73,30 @@ if ( $mobile_nav_type == 'collapse' ) {
 				the_custom_logo();
 			} ?><!-- end custom logo -->
 
-			<button class="navbar-toggler" type="button" data-toggle="<?php echo $mobile_nav_type; ?>" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'conversions' ); ?>">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+			<?php if ( has_nav_menu( 'primary' ) ) : ?>
+				
+				<button class="navbar-toggler" type="button" data-toggle="<?php echo esc_attr( $mobile_nav_type ); ?>" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'conversions' ); ?>">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-			<!-- The WordPress Menu -->
-			<?php
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => $mobile_nav_container,
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav ml-auto',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menu">%3$s</ul>',
-						'depth'           => 2,
-						'walker'          => new conversions\WP_Bootstrap_Navwalker(),
-					)
-				);
-			?>
+				<!-- The WordPress Menu -->
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'container_class' => $mobile_nav_container,
+							'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'navbar-nav ml-auto',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu',
+							'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menu">%3$s</ul>',
+							'depth'           => 2,
+							'walker'          => new conversions\WP_Bootstrap_Navwalker(),
+						)
+					);
+				?>
+
+			<?php endif; ?>
 
 		</div><!-- .container -->
 
