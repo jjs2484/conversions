@@ -34,6 +34,7 @@ namespace conversions
 			require_once( __DIR__ . '/enqueue.php' );
 			require_once( __DIR__ . '/extras.php' );
 			require_once( __DIR__ . '/homepage.php' );
+			require_once( __DIR__ . '/navbar.php' );
 			require_once( __DIR__ . '/template.php' );
 			require_once( __DIR__ . '/widgets.php' );
 			require_once( __DIR__ . '/woocommerce.php' );
@@ -159,7 +160,6 @@ namespace conversions
 				'conversions_logo_height' => '2.5',
 				'conversions_nav_position' => 'fixed-top',
 				'conversions_nav_colors' => 'white',
-				'conversions_nav_border' => true,
 				'conversions_nav_tbpadding' => '.5',
 				'conversions_nav_mobile_type' => 'collapse',
 				'conversions_nav_button' => 'no',

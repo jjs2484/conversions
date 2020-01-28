@@ -42,8 +42,10 @@ Full documentation: https://conversionswp.com/documentation/
 * Fix: adjust fixed navbar margin calcs.
 
 = 1.4 =
-* New: add navbar border option
-* Update: add WooCommerce store notice styles
+* New: add conversions_navbar action hook.
+* New: add navbar border on light colors.
+* Update: refactor navbar.
+* Update: add WooCommerce store notice styles.
 * Fix: add has_menu check before displaying mobile menu toggle.
 
 == Resources ==

@@ -227,26 +227,6 @@ namespace conversions
 					]
 				)
 			);
-			$wp_customize->add_setting( 'conversions_nav_border', [
-				'default'			=> true,
-				'type'              => 'theme_mod',
-				'sanitize_callback' => 'conversions_sanitize_checkbox',
-				'capability'        => 'edit_theme_options',
-				'transport'     => 'refresh',
-			] );
-			$wp_customize->add_control(
-				new \WP_Customize_Control(
-					$wp_customize,
-					'conversions_nav_border', [
-						'label'       => __( 'Navbar border', 'conversions' ),
-						'description' => __( 'Add border to the Navbar?', 'conversions' ),
-						'section'     => 'conversions_nav',
-						'settings'    => 'conversions_nav_border',
-						'type'        => 'checkbox',
-						'priority'    => '25',
-					]
-				)
-			);
 			$wp_customize->add_setting( 'conversions_nav_dropshadow', [
 				'default'			=> false,
 				'type'              => 'theme_mod',
@@ -2888,12 +2868,6 @@ namespace conversions
 						height: '.esc_html( $nav_offset ).'rem;
 						visibility: hidden;
 						pointer-events: none;
-					}';
-				}
-				// Navbar border
-				if ( get_theme_mod( 'conversions_nav_border', true ) == true ) {
-					echo '#wrapper-navbar {
-						border-bottom: 1px solid #dee2e6;
 					}';
 				}
 				// Navbar drop shadow
