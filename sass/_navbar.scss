@@ -79,7 +79,12 @@
 
 }
 
-// IE edge prefix for fixed header -- prevents element jitter
+// If white navbar add bottom border
+#wrapper-navbar.is-white-color {
+  border-bottom: 1px solid #dee2e6;
+} 
+
+// IE edge prefix for fixed navbar -- prevents element jitter
 .fixed-top#wrapper-navbar {
   position: -ms-device-fixed;
 }

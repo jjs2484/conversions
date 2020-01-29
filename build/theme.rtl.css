@@ -10262,6 +10262,9 @@ a.skip-link {
       -webkit-transform: translateX(100%);
       transform: translateX(100%); } }
 
+#wrapper-navbar.is-white-color {
+  border-bottom: 1px solid #dee2e6; }
+
 .fixed-top#wrapper-navbar {
   position: -ms-device-fixed; }
 
