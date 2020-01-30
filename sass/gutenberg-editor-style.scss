@@ -6,6 +6,12 @@
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/buttons";
 
+// Add margin to wrapper to avoid overflow
+.editor-styles-wrapper {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 // Block width
 .wp-block {
   max-width: 1140px;
@@ -145,7 +151,9 @@ blockquote {
       margin-bottom: 1.5rem;
     }
   }
-  .wp-block-pullquote__citation, .wp-block-pullquote cite, .wp-block-pullquote footer {
+  .wp-block-pullquote__citation, 
+  .wp-block-pullquote cite, 
+  .wp-block-pullquote footer {
     color: #555;
     text-transform: none;
   }
@@ -352,7 +360,7 @@ $block-btns: (
 }
 
 // WooCommerce
-.editor-styles-wrapper .wc-block-grid .wc-block-grid__products .wc-block-grid__product {
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product {
   padding: 0 28px 0 0;
   margin: 0 0 24px;
   
@@ -383,6 +391,11 @@ $block-btns: (
     }
   }
 
+}
+
+// WooCommerce product grid font size
+.wc-block-grid.has-4-columns:not(.alignwide):not(.alignfull) .wc-block-grid__product {
+  font-size: 1rem;
 }
 
 // WooCommerce product grid alignfull

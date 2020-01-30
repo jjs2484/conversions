@@ -47,6 +47,10 @@ class Extras
 		if ( ! is_active_sidebar( 'sidebar-1' ) && ! is_active_sidebar( 'sidebar-2' ) ) {
 			$classes[] = 'no-sidebar';
 		}
+		// Adds a class of no-sidebar if is full width page template
+		if ( is_page_template( 'page-templates/fullwidthpage.php' ) || is_page_template( 'page-templates/pagebuilder-fullwidth.php' ) ) {
+			$classes[] = 'no-sidebar';
+		}
 
 		return $classes;
 	}

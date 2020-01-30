@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.3.2
 Requires PHP: 5.6.20
-Stable tag: 1.4
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,11 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: refactor navbar.
 * Update: add WooCommerce store notice styles.
 * Fix: add has_menu check before displaying mobile menu toggle.
+
+= 1.4.1 =
+* Fix: add no-sidebar class to full width page wrappers.
+* Fix: WooCommerce blocks onsale tag style.
+* Fix: Add margin to Gutenberg editor wrapper to prevent overflow.
 
 == Resources ==
 

@@ -82,7 +82,11 @@ figure.wp-block-pullquote > blockquote {
 }
 
 // Images, embeds, cover spacing
-.wp-block-audio, .wp-block-image, .wp-block-embed, .wp-block-video, .wp-block-cover {
+.wp-block-audio, 
+.wp-block-image, 
+.wp-block-embed, 
+.wp-block-video, 
+.wp-block-cover {
   margin-bottom: 1.5rem;
   > figure > figcaption {
     margin-bottom: 0;
@@ -297,7 +301,7 @@ $block-btns: (
 }
 
 // WooCommerce
-.wc-block-grid .wc-block-grid__products .wc-block-grid__product {
+.wc-block-grid__products .wc-block-grid__product {
   padding: 0 28px 0 0;
 
   .wc-block-grid__product-link:hover {
@@ -309,7 +313,7 @@ $block-btns: (
     font-size: 1em;
     font-weight: 500;
   }
-  .wc-block-grid__product-price.price {
+  .wc-block-grid__product-price {
     margin-bottom: .5em;
     color: #555;
     font-size: .9em;
@@ -355,6 +359,11 @@ $block-btns: (
 
 }
 
+// WooCommerce product grid font size
+.wc-block-grid.has-4-columns:not(.alignwide):not(.alignfull) .wc-block-grid__product {
+  font-size: 1rem;
+}
+
 // WooCommerce search block
 .wp-block-woocommerce-product-search {
   margin-bottom: 1.5rem;
@@ -363,9 +372,4 @@ $block-btns: (
 // WooCommerce product grid alignfull
 .wc-block-grid.alignfull {
   padding-left: 28px;
-}
-
-// Sale tag
-.wc-block-grid__product-onsale {
-  background-color: #333;
 }
