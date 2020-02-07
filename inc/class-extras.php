@@ -51,11 +51,11 @@ class Extras {
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
 		}
-		// Adds a class of no-sidebar if sidebar is inactive.
-		if ( ! is_active_sidebar( 'sidebar-1' ) && ! is_active_sidebar( 'sidebar-2' ) ) {
+		// Adds class of no-sidebar if no active sidebar and not singular download post.
+		if ( ! is_active_sidebar( 'sidebar-1' ) && ! is_active_sidebar( 'sidebar-2' ) && ! is_singular( 'download' ) ) {
 			$classes[] = 'no-sidebar';
 		}
-		// Adds a class of no-sidebar if is full width page template.
+		// Adds class of no-sidebar if is full width page template.
 		if ( is_page_template( 'page-templates/fullwidthpage.php' ) || is_page_template( 'page-templates/pagebuilder-fullwidth.php' ) ) {
 			$classes[] = 'no-sidebar';
 		}
