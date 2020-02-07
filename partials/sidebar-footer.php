@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php if ( is_active_sidebar( 'sidebar-3'  ) || is_active_sidebar( 'sidebar-4' ) || is_active_sidebar( 'sidebar-5'  ) || is_active_sidebar( 'sidebar-6' ) ) : ?>
+<?php if ( is_active_sidebar( 'sidebar-3' ) || is_active_sidebar( 'sidebar-4' ) || is_active_sidebar( 'sidebar-5' ) || is_active_sidebar( 'sidebar-6' ) ) : ?>
 
 	<!-- Footer widget area -->
 
@@ -19,27 +19,27 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="row">
 
-				<?php 
-					if ( is_active_sidebar( 'sidebar-3'  ) ) {
-						echo '<div class="footer-widget-area col-md">';
-						dynamic_sidebar( 'sidebar-3' );
-						echo '</div>';
-					}
-					if ( is_active_sidebar( 'sidebar-4'  ) ) {
-						echo '<div class="footer-widget-area col-md">';
-						dynamic_sidebar( 'sidebar-4' );
-						echo '</div>';
-					}
-					if ( is_active_sidebar( 'sidebar-5'  ) ) {
-						echo '<div class="footer-widget-area col-md">';
-						dynamic_sidebar( 'sidebar-5' );
-						echo '</div>';
-					}
-					if ( is_active_sidebar( 'sidebar-6'  ) ) {
-						echo '<div class="footer-widget-area col-md">';
-						dynamic_sidebar( 'sidebar-6' );
-						echo '</div>';
-					}
+				<?php
+				if ( is_active_sidebar( 'sidebar-3' ) ) {
+					echo '<div class="footer-widget-area col-md">';
+					dynamic_sidebar( 'sidebar-3' );
+					echo '</div>';
+				}
+				if ( is_active_sidebar( 'sidebar-4' ) ) {
+					echo '<div class="footer-widget-area col-md">';
+					dynamic_sidebar( 'sidebar-4' );
+					echo '</div>';
+				}
+				if ( is_active_sidebar( 'sidebar-5' ) ) {
+					echo '<div class="footer-widget-area col-md">';
+					dynamic_sidebar( 'sidebar-5' );
+					echo '</div>';
+				}
+				if ( is_active_sidebar( 'sidebar-6' ) ) {
+					echo '<div class="footer-widget-area col-md">';
+					dynamic_sidebar( 'sidebar-6' );
+					echo '</div>';
+				}
 				?>
 
 			</div>
@@ -48,4 +48,5 @@ defined( 'ABSPATH' ) || exit;
 
 	</div><!-- end #wrapper-footer-full -->
 
-<?php endif;
+	<?php
+endif;

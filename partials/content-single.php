@@ -15,9 +15,11 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 
-		<?php if ( ! has_post_thumbnail() ) {
+		<?php
+		if ( ! has_post_thumbnail() ) {
 			echo the_title( '<h1 class="entry-title">', '</h1>' );
-		} ?>
+		}
+		?>
 
 		<div class="entry-meta">
 			<ul class="byline list-inline">
@@ -26,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
 				<li class="list-inline-item crt"><?php conversions()->template->reading_time(); ?></li>
 				<li class="list-inline-item csc"><?php conversions()->template->single_comments(); ?></li>
 			</ul>
-    	</div>
+		</div>
 
 	</header><!-- .entry-header -->
 
@@ -34,10 +36,14 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php the_content(); ?>
 
-		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'conversions' ),
-			'after'  => '</div>',
-		) ); ?>
+		<?php
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'conversions' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
 
 	</div><!-- .entry-content -->
 

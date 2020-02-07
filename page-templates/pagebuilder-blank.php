@@ -28,11 +28,14 @@ defined( 'ABSPATH' ) || exit;
 	<?php wp_head(); ?>
 </head>
 <body>
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
 
-	<?php the_content(); ?>
+	the_post();
+	the_content();
 
-<?php endwhile; // end of the loop. ?>
+endwhile;
+?>
 <?php wp_footer(); ?>
 </body>
 </html>

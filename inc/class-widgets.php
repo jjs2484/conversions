@@ -1,28 +1,33 @@
 <?php
+/**
+ * Widget functions
+ *
+ * @package conversions
+ */
 
 namespace conversions;
 
 /**
-	@brief		Widget functions.
-	@since		2019-08-15 23:01:47
-**/
-class Widgets
-{
+ * Class Widgets.
+ *
+ * @since 2019-08-15
+ */
+class Widgets {
 	/**
-		@brief		Constructor.
-		@since		2019-08-15 23:01:47
-	**/
-	public function __construct()
-	{
+	 * Class constructor.
+	 *
+	 * @since 2019-08-15
+	 */
+	public function __construct() {
 		add_action( 'widgets_init', [ $this, 'widgets_init' ] );
 	}
 
 	/**
-		@brief		widgets_init
-		@since		2019-08-18 20:09:38
-	**/
-	public function widgets_init()
-	{
+	 * Register sidebars.
+	 *
+	 * @since 2019-08-18
+	 */
+	public function widgets_init() {
 		register_sidebar(
 			array(
 				'name'          => __( 'Right Sidebar', 'conversions' ),

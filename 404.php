@@ -25,15 +25,21 @@ get_header();
 
 						<header class="page-header">
 
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.',
-							'conversions' ); ?></h1>
+							<h1 class="page-title">
+								<?php
+								esc_html_e( 'Oops! That page can&rsquo;t be found.', 'conversions' );
+								?>
+							</h1>
 
 						</header><!-- .page-header -->
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-							'conversions' ); ?></p>
+							<p>
+								<?php
+								esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'conversions' );
+								?>
+							</p>
 
 							<?php get_search_form(); ?>
 
@@ -47,13 +53,15 @@ get_header();
 
 									<ul>
 										<?php
-										wp_list_categories( array(
-											'orderby'    => 'count',
-											'order'      => 'DESC',
-											'show_count' => 1,
-											'title_li'   => '',
-											'number'     => 10,
-										) );
+										wp_list_categories(
+											array(
+												'orderby'  => 'count',
+												'order'    => 'DESC',
+												'show_count' => 1,
+												'title_li' => '',
+												'number'   => 10,
+											)
+										);
 										?>
 									</ul>
 
@@ -84,4 +92,5 @@ get_header();
 
 </div><!-- Wrapper end -->
 
-<?php get_footer();
+<?php
+get_footer();

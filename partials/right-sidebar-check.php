@@ -15,6 +15,6 @@ defined( 'ABSPATH' ) || exit;
 
 <?php if ( 'right' === $sidebar_pos ) : ?>
 
-  <?php get_template_part( 'partials/sidebar', 'right' ); ?>
+	<?php get_template_part( 'partials/sidebar', 'right' ); ?>
 
-<?php endif;
+<?php endif; ?>

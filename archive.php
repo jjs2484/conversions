@@ -33,9 +33,10 @@ get_header();
 						?>
 					</header><!-- .page-header -->
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					while ( have_posts() ) :
 
-						<?php
+						the_post();
 
 						/*
 						 * Include the Post-Format-specific template for the content.
@@ -43,9 +44,9 @@ get_header();
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
 						get_template_part( 'partials/content' );
-						?>
 
-					<?php endwhile; ?>
+					endwhile;
+					?>
 
 				<?php else : ?>
 
@@ -67,4 +68,5 @@ get_header();
 
 </div><!-- Wrapper end -->
 
-<?php get_footer();
+<?php
+get_footer();

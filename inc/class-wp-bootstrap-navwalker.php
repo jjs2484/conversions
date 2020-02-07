@@ -1,4 +1,9 @@
 <?php
+/**
+ * Bootstrap nav walker for WordPress
+ *
+ * @package conversions
+ */
 
 namespace conversions;
 
@@ -80,7 +85,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 			$t = "\t";
 			$n = "\n";
 		}
-		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
+		$indent  = ( $depth ) ? str_repeat( $t, $depth ) : '';
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 		// Initialize some holder variables to store specially handled item
 		// wrappers and icons.
@@ -131,8 +136,8 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 		 * @param stdClass $args    An object of wp_nav_menu() arguments.
 		 * @param int      $depth   Depth of menu item. Used for padding.
 		 */
-		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
-		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+		$id      = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
+		$id      = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 		$output .= $indent . '<li role="none presentation" ' . $id . $class_names . '>';
 		// initialize array for holding the $atts for the link item.
 		$atts = array();
@@ -144,7 +149,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 			$atts['title'] = $item->attr_title;
 		}
 		$atts['target'] = ! empty( $item->target ) ? $item->target : '';
-		if ( '_blank' === $item->target && empty( $item->xfn ) ) { // Thanks to LukaszJaro, see https://github.com/conversions/conversions/issues/973
+		if ( '_blank' === $item->target && empty( $item->xfn ) ) { // Thanks to LukaszJaro, see https://github.com/conversions/conversions/issues/973.
 			$atts['rel'] = 'noopener noreferrer';
 		} else {
 			$atts['rel'] = $item->xfn;
@@ -322,7 +327,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 			}
 			// if $args has 'echo' key and it's true echo, otherwise return.
 			if ( array_key_exists( 'echo', $args ) && $args['echo'] ) {
-				echo $fallback_output; // WPCS: XSS OK.
+				echo $fallback_output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			} else {
 				return $fallback_output;
 			}

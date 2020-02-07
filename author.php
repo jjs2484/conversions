@@ -27,8 +27,7 @@ get_header();
 				<header class="page-header author-header">
 
 					<?php
-					$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',
-						$author_name ) : get_userdata( intval( $author ) );
+					$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) );
 					?>
 
 					<h1><?php esc_html_e( 'About:', 'conversions' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
@@ -60,10 +59,12 @@ get_header();
 
 					<!-- The Loop -->
 					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
+						<?php
+						while ( have_posts() ) :
+							the_post();
+							?>
 							<li>
-								<a rel="bookmark" href="<?php the_permalink() ?>"
-								   title="<?php esc_html_e( 'Permanent Link:', 'conversions' ); ?> <?php the_title(); ?>">
+								<a rel="bookmark" href="<?php the_permalink(); ?>" title="<?php esc_html_e( 'Permanent Link:', 'conversions' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?>
 								</a>
 								<?php esc_html_e( 'posted on', 'conversions' ); ?>
@@ -95,4 +96,5 @@ get_header();
 
 </div><!-- Wrapper end -->
 
-<?php get_footer();
+<?php
+get_footer();

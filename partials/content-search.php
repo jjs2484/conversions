@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class('card shadow-sm mb-5'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class( 'card shadow-sm mb-5' ); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="card-body pb-1">
 
@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
 						<li class="list-inline-item crt"><?php conversions()->template->reading_time(); ?></li>
 						<li class="list-inline-item csc"><?php conversions()->template->single_comments(); ?></li>
 					</ul>
-    			</div>
+				</div>
 
 			<?php endif; ?>
 
@@ -41,9 +41,9 @@ defined( 'ABSPATH' ) || exit;
 	</div>
 
 	<div class="card-footer text-muted small">
-		
+
 		<footer class="entry-footer">
-          	<?php conversions()->template->entry_footer(); ?>
+			<?php conversions()->template->entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 
 	</div>

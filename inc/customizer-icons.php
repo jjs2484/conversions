@@ -1,9 +1,10 @@
 <?php
 /**
- * The list of icons
+ * List of icons for customizer
  *
  * @package conversions
  */
+
 ?>
 <div class="iconpicker-popover popover bottomLeft">
 	<div class="arrow"></div>

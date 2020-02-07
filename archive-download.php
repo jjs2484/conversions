@@ -11,6 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+$edd = new conversions\easy_digital_downloads();
 ?>
 
 <div class="wrapper content-wrapper" id="edd-archive-wrapper">
@@ -35,16 +36,18 @@ get_header();
 						?>
 					</header><!-- .page-header -->
 
-					<div class="<?php echo (new conversions\easy_digital_downloads)->conversions_edd_archive_list_classes(); ?>">
+					<div class="<?php echo esc_attr( $edd->conversions_edd_archive_list_classes() ); ?>">
 
-						<?php while ( have_posts() ) : the_post(); ?>
+						<?php
+						while ( have_posts() ) :
 
-							<?php
-							//Include the download-grid template for the content.
+							the_post();
+
+							// Include the download-grid template for the content.
 							get_template_part( 'partials/download', 'grid' );
-							?>
 
-						<?php endwhile; ?>
+						endwhile;
+						?>
 
 					</div>
 
@@ -68,4 +71,5 @@ get_header();
 
 </div><!-- Wrapper end -->
 
-<?php get_footer();
+<?php
+get_footer();

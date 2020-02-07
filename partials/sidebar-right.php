@@ -16,11 +16,14 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 $sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' );
 ?>
 
-<?php 
-	if ( 'right' === $sidebar_pos ) { ?>
-		<div class="col-md-4 col-lg-3 widget-area pl-md-4 pl-lg-3" id="sidebar-1" role="complementary">
-	<?php } 
+<?php
+if ( 'right' === $sidebar_pos ) {
+	?>
+	<div class="col-md-4 col-lg-3 widget-area pl-md-4 pl-lg-3" id="sidebar-1" role="complementary">
+	<?php
+}
+
+dynamic_sidebar( 'sidebar-1' );
 ?>
-<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
 </div><!-- #sidebar-1 -->

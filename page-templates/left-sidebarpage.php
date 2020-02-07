@@ -10,9 +10,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-// Featured image styles
+// Featured image styles.
 if ( has_post_thumbnail( get_the_ID() ) ) {
-    conversions()->template->get_featured_image();
+	conversions()->template->get_featured_image();
 }
 
 get_header();
@@ -20,21 +20,21 @@ get_header();
 
 <div class="wrapper content-wrapper" id="page-wrapper">
 
-	<?php 
-	if ( has_post_thumbnail( get_the_ID() ) ) {			
-		// HTML for background image and title
-    	echo '<div class="conversions-hero-cover">
+	<?php
+	if ( has_post_thumbnail( get_the_ID() ) ) {
+		// HTML for background image and title.
+		echo '<div class="conversions-hero-cover">
     		<div class="container-fluid" id="content" tabindex="-1">
     			<div class="row">
 					<div class="col-sm-12">
     					<div class="conversions-hero-cover__inner">
-    						<h1 class="entry-title text-center">'.esc_html( get_the_title() ).'</h1>
+    						<h1 class="entry-title text-center">' . esc_html( get_the_title() ) . '</h1>
     					</div>
     				</div>
     			</div>
     		</div>
     	</div>';
-	} 
+	}
 	?>
 
 	<div class="container-fluid" id="content">
@@ -47,18 +47,20 @@ get_header();
 
 				<main class="site-main" id="main" role="main">
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					while ( have_posts() ) :
 
-						<?php get_template_part( 'partials/content', 'page' ); ?>
+						the_post();
 
-						<?php
+						get_template_part( 'partials/content', 'page' );
+
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) :
 							comments_template();
 						endif;
-						?>
 
-					<?php endwhile; // end of the loop. ?>
+					endwhile;
+					?>
 
 				</main><!-- #main -->
 
@@ -70,4 +72,5 @@ get_header();
 
 </div><!-- Wrapper end -->
 
-<?php get_footer();
+<?php
+get_footer();

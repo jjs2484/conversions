@@ -17,12 +17,14 @@ get_header();
 
 <div id="builder-wrapper" class="wrapper content-wrapper">
 
-	<?php 
-		while ( have_posts() ) : the_post();
-			the_content();
-		endwhile;
+	<?php
+	while ( have_posts() ) :
+		the_post();
+		the_content();
+	endwhile;
 	?>
 
 </div><!-- Wrapper end -->
 
-<?php get_footer();
+<?php
+get_footer();

@@ -23,20 +23,22 @@ get_header();
 
 				<main class="site-main" id="main" role="main">
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					while ( have_posts() ) :
 
-						<?php get_template_part( 'partials/content', 'page' ); ?>
+						the_post();
 
-						<?php
+						get_template_part( 'partials/content', 'page' );
+
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) :
 
 							comments_template();
 
 						endif;
-						?>
 
-					<?php endwhile; // end of the loop. ?>
+					endwhile;
+					?>
 
 				</main><!-- #main -->
 
@@ -48,4 +50,5 @@ get_header();
 
 </div><!-- Wrapper end -->
 
-<?php get_footer();
+<?php
+get_footer();

@@ -27,7 +27,7 @@ $download_grid_options = $edd->conversions_edd_grid_options();
 
 		do_action( 'edd_download_before_title' );
 
-		// Show the download title
+		// Show the download title.
 		edd_get_template_part( 'shortcode', 'content-title' );
 
 		do_action( 'edd_download_after_title' );
@@ -40,20 +40,20 @@ $download_grid_options = $edd->conversions_edd_grid_options();
 			do_action( 'edd_download_after_content' );
 		}
 
-		// Check if price or button are active
+		// Check if price or button are active.
 		if ( true === $download_grid_options['price'] || true === $download_grid_options['buy_button'] ) :
-				
-			// Add a wrapper to the price and buy button
+
+			// Add a wrapper to the price and buy button.
 			echo '<div class="edd-downloads-footer">';
-			
+
 			if ( true === $download_grid_options['price'] ) :
-				// Show the download price
+				// Show the download price.
 				edd_get_template_part( 'shortcode', 'content-price' );
 				do_action( 'edd_download_after_price' );
 			endif;
 
 			if ( true === $download_grid_options['buy_button'] ) :
-				// Show the download by button
+				// Show the download by button.
 				edd_get_template_part( 'shortcode', 'content-cart-button' );
 			endif;
 

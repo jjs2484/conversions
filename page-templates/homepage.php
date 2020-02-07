@@ -10,9 +10,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-// Featured image styles
+// Featured image styles.
 if ( has_post_thumbnail( get_the_ID() ) ) {
-    conversions()->template->get_featured_image();
+	conversions()->template->get_featured_image();
 }
 
 get_header();
@@ -24,4 +24,5 @@ get_header();
 
 </div><!-- Wrapper end -->
 
-<?php get_footer();
+<?php
+get_footer();

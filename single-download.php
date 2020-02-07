@@ -13,58 +13,61 @@ get_header();
 
 <div class="wrapper content-wrapper" id="edd-single-wrapper">
 
-    <div class="container-fluid" id="content" tabindex="-1">
+	<div class="container-fluid" id="content" tabindex="-1">
 
-        <div class="row">
+		<div class="row">
 
-            <div class="col-12">
+			<div class="col-12">
 
-                <header class="entry-header">
-                    <h1 class="entry-title edd-title">
-                        <?php echo get_the_title( get_the_ID() ); ?>
-                    </h1>
-                    <p class="h5 text-muted">
-                        <?php echo get_the_excerpt(); ?>
-                    </p>
-                </header><!-- .entry-header -->
+				<header class="entry-header">
+					<h1 class="entry-title edd-title">
+						<?php echo esc_html( get_the_title( get_the_ID() ) ); ?>
+					</h1>
+					<p class="h5 text-muted">
+						<?php echo esc_html( get_the_excerpt() ); ?>
+					</p>
+				</header><!-- .entry-header -->
 
-            </div>
+			</div>
 
-            <div class="col-md-8 col-lg-9 pr-lg-5 content-area" id="primary">
+			<div class="col-md-8 col-lg-9 pr-lg-5 content-area" id="primary">
 
-                <main class="site-main" id="main">
+				<main class="site-main" id="main">
 
-                    <?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					while ( have_posts() ) :
 
-                        <?php get_template_part( 'partials/download', 'single' ); ?>
+						the_post();
 
-                        <?php
-                            // If comments are open or we have at least one comment, load comments.
-                            if ( comments_open() || get_comments_number() ) :
-                                comments_template();
-                            endif;
-                        ?>
+						get_template_part( 'partials/download', 'single' );
 
-                    <?php endwhile; // end of the loop. ?>
+						// If comments are open or we have at least one comment, load comments.
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
 
-                </main><!-- #main -->
+					endwhile;
+					?>
 
-            </div>
+				</main><!-- #main -->
 
-            <!-- right sidebar -->
-            <div class="col-md-4 col-lg-3 widget-area pl-md-4 pl-lg-3" id="sidebar-1" role="complementary">
+			</div>
 
-                <?php
-                    // Price, purchase button, and download details
-                    do_action( 'conversions_edd_download_info');
-                ?>
+			<!-- right sidebar -->
+			<div class="col-md-4 col-lg-3 widget-area pl-md-4 pl-lg-3" id="sidebar-1" role="complementary">
 
-            </div><!-- #end sidebar -->
+				<?php
+				// Price, purchase button, and download details.
+				do_action( 'conversions_edd_download_info' );
+				?>
 
-        </div><!-- .row -->
+			</div><!-- #end sidebar -->
 
-    </div><!-- Container end -->
+		</div><!-- .row -->
+
+	</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
-<?php get_footer();
+<?php
+get_footer();
