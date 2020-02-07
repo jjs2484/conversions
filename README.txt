@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.3.2
 Requires PHP: 5.6.20
-Stable tag: 1.4.1
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,10 +53,18 @@ Full documentation: https://conversionswp.com/documentation/
 * Fix: WooCommerce blocks onsale tag style.
 * Fix: Add margin to Gutenberg editor wrapper to prevent overflow.
 
+= 1.5 =
+* New: add composer.json
+* New: add phpcs.xml
+* New: add .editorconfig
+* Update: stricter WPCS compliance.
+* Update: Font Awesome to v5.12.1
+* Update: versioning on enqueued CSS and JavaScript files.
+
 == Resources ==
 
 * Bootstrap 4.4.1 | MIT License
 * Fancybox v3.5.7 | GPLv3 license | Extended Commercial license
-* Font Awesome v5.12.0 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
+* Font Awesome v5.12.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * Slick v1.8.1 | MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
