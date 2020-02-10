@@ -62,7 +62,7 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: prefix class file names with "class-"
 * Update: Font Awesome to v5.12.1
 * Update: better versioning on enqueued CSS and JavaScript files.
-* Update: general JavaScript formatting.
+* Update: JavaScript formatting.
 * Fix: remove no-sidebar class from wrapper of singular download posts.
 
 == Resources ==
