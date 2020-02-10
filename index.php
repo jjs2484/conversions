@@ -3,7 +3,7 @@
  * The main template file
  *
  * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css)
+ * and one of the two required files for a theme.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package conversions
@@ -25,6 +25,12 @@ get_header();
 			<?php get_template_part( 'partials/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
+
+				<?php if ( is_home() && ! is_front_page() ) : ?>
+					<header class="page-header">
+						<h1 class="page-title"><?php echo single_post_title(); ?></h1>
+					</header>
+				<?php endif; ?>
 
 				<?php do_action( 'conversions_loop_before' ); ?>
 
