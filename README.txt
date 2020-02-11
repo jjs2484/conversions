@@ -64,6 +64,7 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: better versioning on enqueued CSS and JavaScript files.
 * Update: JavaScript formatting.
 * Update: Sass formatting.
+* Update: segment customizer sections into files in /inc/customizer/*
 * Fix: remove no-sidebar class from wrapper of singular download posts.
 * Fix: add page title to blog index if not front page.
 
