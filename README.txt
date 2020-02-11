@@ -63,6 +63,7 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: Font Awesome to v5.12.1
 * Update: better versioning on enqueued CSS and JavaScript files.
 * Update: JavaScript formatting.
+* Update: Sass formatting.
 * Fix: remove no-sidebar class from wrapper of singular download posts.
 * Fix: add page title to blog index if not front page.
 
