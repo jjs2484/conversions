@@ -1,96 +1,95 @@
 // Comments section
 #comments {
-  &.comments-area {
-    #respond.comment-respond {
-      margin-top: 1em;
-    }
-    h3.comments-title {
-      margin-bottom: 1.5rem;
-    }
+	&.comments-area {
+		#respond.comment-respond {
+			margin-top: 1em;
+		}
+		h3.comments-title {
+			margin-bottom: 1.5rem;
+		}
 
-    // pingbacks and trackbacks
-    li.pingback, li.trackback {
-      margin-bottom: 1.5rem;
-      
-      .comment-body {
-        width: 100% !important;
-        background: #f7f7f7;
-        border: 1px solid #e3e3e3;
-        padding: 1.5rem;
-        border-radius: 5px;
+		// pingbacks and trackbacks
+		li.pingback,
+		li.trackback {
+			margin-bottom: 1.5rem;
 
-        .edit-link {
-          margin-left: 1rem;
-        }
-      }
-    }
+			.comment-body {
+				width: 100% !important;
+				background: #f7f7f7;
+				border: 1px solid #e3e3e3;
+				padding: 1.5rem;
+				border-radius: 5px;
 
-    .comment .media {
+				.edit-link {
+					margin-left: 1rem;
+				}
+			}
+		}
 
-      // stack on smaller screens
-      flex-direction: column;
+		.comment .media {
+			// stack on smaller screens
+			flex-direction: column;
 
-      // Children styles
-      ul.children {
-        padding-left: .75em;
-        list-style: none;
-      }
+			// Children styles
+			ul.children {
+				padding-left: 0.75em;
+				list-style: none;
+			}
 
-      // Avatar
-      .avatar {
-        border-radius: 50%;
-        height: 100%;
-        align-self: flex-start;
-      }
+			// Avatar
+			.avatar {
+				border-radius: 50%;
+				height: 100%;
+				align-self: flex-start;
+			}
 
-      // Icons
-      // user
-      .media-heading {
-        &::before {
-          font-family: "Font Awesome 5 Free";
-          content: "\f007";
-          color: $text-muted;
-          margin-right: 5px;
-        }
-        a {
-          color: $text-muted;
-          text-decoration: underline;
-          &:hover {
-            color: #5a6268;
-          }
-        }
-      }
-      // time
-      .comment-metadata time {
-        &::before {
-          font-family: "Font Awesome 5 Free";
-          content: "\f017";
-          color: $text-muted;
-          margin-right: 1px;
-        }
-      }
-      // permalink
-      span.comm-perm {
-        &::before {
-          font-family: "Font Awesome 5 Free";
-          content: "\f02e";
-          color: $text-muted;
-          margin-right: 2px;
-        }
-        a {
-          color: $text-muted;
-          text-decoration: underline;
-        }
-      }
+			// Icons
+			// user
+			.media-heading {
+				&::before {
+					font-family: "Font Awesome 5 Free";
+					content: "\f007";
+					color: $text-muted;
+					margin-right: 5px;
+				}
+				a {
+					color: $text-muted;
+					text-decoration: underline;
+					&:hover {
+						color: #5a6268;
+					}
+				}
+			}
+			// time
+			.comment-metadata time {
+				&::before {
+					font-family: "Font Awesome 5 Free";
+					content: "\f017";
+					color: $text-muted;
+					margin-right: 1px;
+				}
+			}
+			// permalink
+			span.comm-perm {
+				&::before {
+					font-family: "Font Awesome 5 Free";
+					content: "\f02e";
+					color: $text-muted;
+					margin-right: 2px;
+				}
+				a {
+					color: $text-muted;
+					text-decoration: underline;
+				}
+			}
 
-      // content
-      .comment-content {
-        background: #f7f7f7;
-        border: 1px solid #e3e3e3;
-        padding: 1.5rem 1.5rem .2rem;
-        border-radius: 5px;
-      }
-
-    }
-  }
+			// content
+			.comment-content {
+				background: #f7f7f7;
+				border: 1px solid #e3e3e3;
+				padding: 1.5rem 1.5rem 0.2rem;
+				border-radius: 5px;
+			}
+		}
+	}
 }

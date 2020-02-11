@@ -8,509 +8,560 @@
 
 // Add margin to wrapper to avoid overflow
 .editor-styles-wrapper {
-  margin-left: 30px;
-  margin-right: 30px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 // Block width
 .wp-block {
-  max-width: 1140px;
+	max-width: 1140px;
 }
 .wp-block[data-align="wide"] {
-  max-width: 1140px;
+	max-width: 1140px;
 }
 .wp-block[data-align="full"] {
-    max-width: none;
+	max-width: none;
 }
 
 // Alignments
 .editor-styles-wrapper {
-  .alignleft {
-    margin-right: 1.5em;
-  }
-  .alignright {
-    margin-left: 1.5em;
-  }
+	.alignleft {
+		margin-right: 1.5em;
+	}
+	.alignright {
+		margin-left: 1.5em;
+	}
 }
-.editor-block-list__block[data-align="center"] { 
-  clear: both; 
+.editor-block-list__block[data-align="center"] {
+	clear: both;
 }
 
 // Titles
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
 }
-.editor-styles-wrapper .wp-block-heading { 
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.75rem; }
-  h4 { font-size: 1.5rem; }
-  h5 { font-size: 1.25rem; }
-  h6 { font-size: 1rem; }
+.editor-styles-wrapper .wp-block-heading {
+	h1 {
+		font-size: 2.5rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.75rem;
+	}
+	h4 {
+		font-size: 1.5rem;
+	}
+	h5 {
+		font-size: 1.25rem;
+	}
+	h6 {
+		font-size: 1rem;
+	}
 }
 
 // Text color
 .editor-styles-wrapper .editor-writing-flow {
-  color: #222222;
-  .editor-post-title__block .editor-post-title__input {
-    color: #222222;
-  }
-  .wp-block-heading {
-    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-      color: #222222;
-    }
-  }
+	color: #222222;
+	.editor-post-title__block .editor-post-title__input {
+		color: #222222;
+	}
+	.wp-block-heading {
+		.h1,
+		.h2,
+		.h3,
+		.h4,
+		.h5,
+		.h6,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: #222222;
+		}
+	}
 }
 
 // Separators
 .wp-block-separator {
-  border-bottom: 2px solid rgba(0,0,0,.2);
-  &.is-style-wide {
-    border-bottom-width: 1px;
-  }
+	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+	&.is-style-wide {
+		border-bottom-width: 1px;
+	}
 }
 
 // Pre and code
 .wp-block-preformatted pre,
-.wp-block-verse pre, 
+.wp-block-verse pre,
 pre.wp-block-verse {
-  background-color: rgba(0,0,0,.05);
-  padding: 1em;
-  max-width: 100%;
-  overflow: auto;
-  color: #222;
-  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  font-size: 87.5%;
-  code {
-    padding: 0;
-    background: transparent;
-    color: #222;
-  }
+	background-color: rgba(0, 0, 0, 0.05);
+	padding: 1em;
+	max-width: 100%;
+	overflow: auto;
+	color: #222;
+	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+		"Courier New", monospace;
+	font-size: 87.5%;
+	code {
+		padding: 0;
+		background: transparent;
+		color: #222;
+	}
 }
 code {
-  background-color: rgba(0,0,0,.05);
-  padding: .202em .5407911001em;
-  color: #222;
+	background-color: rgba(0, 0, 0, 0.05);
+	padding: 0.202em 0.5407911001em;
+	color: #222;
 }
 
 // Table
-.wp-block-table td, .wp-block-table th {
-  border: 1px solid #dee2e6;
+.wp-block-table td,
+.wp-block-table th {
+	border: 1px solid #dee2e6;
 }
 
 // Cover block text width
-.wp-block-cover-image, .wp-block-cover {
-  .wp-block-cover-image-text, 
-  .wp-block-cover-text, 
-  h2, 
-  h3,
-  h4,
-  h5,
-  h6 {
-    max-width: 100%;
-  }
+.wp-block-cover-image,
+.wp-block-cover {
+	.wp-block-cover-image-text,
+	.wp-block-cover-text,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		max-width: 100%;
+	}
 }
 
 // Blockquotes block
 blockquote {
-  &.wp-block-quote,
-  &.wp-block-quote.is-large, 
-  &.wp-block-quote.is-style-large {
-    padding: 16px 24px;
-    border-left: 5px solid #aaa;
-    font-style: normal;
-    
-    .wp-block-quote__citation {
-      color: #555;
-      font-size: 80%;
-      margin-top: .5em;
-      line-height: 1.4;
-      font-style: normal;
-    }
-    p {
-      font-style: normal;
-    }
-  }
-  &.wp-block-quote.has-text-align-right {
-    border-left: none;
-    border-right: 5px solid #aaa;
-    padding: 16px 24px;
-    font-style: normal;
-  }
+	&.wp-block-quote,
+	&.wp-block-quote.is-large,
+	&.wp-block-quote.is-style-large {
+		padding: 16px 24px;
+		border-left: 5px solid #aaa;
+		font-style: normal;
+
+		.wp-block-quote__citation {
+			color: #555;
+			font-size: 80%;
+			margin-top: 0.5em;
+			line-height: 1.4;
+			font-style: normal;
+		}
+		p {
+			font-style: normal;
+		}
+	}
+	&.wp-block-quote.has-text-align-right {
+		border-left: none;
+		border-right: 5px solid #aaa;
+		padding: 16px 24px;
+		font-style: normal;
+	}
 }
 
 // Pullquote
 .wp-block-pullquote {
-  color: #222;
-  border-top: 0;
-  border-bottom: 0;
-  blockquote {
-    padding: 16px 24px;
-    border-left: 5px solid #aaa;
-    p {
-      margin-bottom: 1.5rem;
-    }
-  }
-  .wp-block-pullquote__citation, 
-  .wp-block-pullquote cite, 
-  .wp-block-pullquote footer {
-    color: #555;
-    text-transform: none;
-  }
-  &.is-style-solid-color blockquote {
-    border: 0;
-  }
+	color: #222;
+	border-top: 0;
+	border-bottom: 0;
+	blockquote {
+		padding: 16px 24px;
+		border-left: 5px solid #aaa;
+		p {
+			margin-bottom: 1.5rem;
+		}
+	}
+	.wp-block-pullquote__citation,
+	.wp-block-pullquote cite,
+	.wp-block-pullquote footer {
+		color: #555;
+		text-transform: none;
+	}
+	&.is-style-solid-color blockquote {
+		border: 0;
+	}
 }
 .wp-block[data-type="core/pullquote"][data-align="full"] blockquote {
-  border: 0;
-  margin: 1em 0;
+	border: 0;
+	margin: 1em 0;
 }
 
 // archive dropdown
 .wp-block-archives.wp-block-archives-dropdown select {
-  font-size: 14px;
+	font-size: 14px;
 }
 
 // Media text block
 .wp-block-media-text {
-  margin-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 // Classic editor block
 .wp-block-freeform.block-library-rich-text__tinymce {
-  // Titles
-  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
-  }
-  // Paragraphs
-  p {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-  }
-  // Blockquote
-  blockquote {
-    border-left: 5px solid #aaa;
-    padding: 16px 24px;
-    margin-left: 0;
-  }
-  // Definitions
-  dt {
-    font-weight: 700;
-  }
-  dd {
-    margin-left: 0;
-    margin-bottom: .5rem;
-  }
-  // Code
-  code {
-    padding: .202em .5407911001em;
-    margin: 0;
-    border-radius: 0;
-    color: #222;
-    background: rgba(0,0,0,.05);
-    font-size: 87.5%;
-  }
-  pre {
-    color: #222;
-    background: rgba(0,0,0,.05);
-    padding: 1em;
-    max-width: 100%;
-    overflow: auto;
-    white-space: pre;
-  }
-  // keyboard text
-  kbd {
-    padding: .2rem .4rem;
-    font-size: 87.5%;
-    color: $white;
-    background-color: #212529;
-    border-radius: .2rem;
-  }
+	// Titles
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 500;
+	}
+	// Paragraphs
+	p {
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+	}
+	// Blockquote
+	blockquote {
+		border-left: 5px solid #aaa;
+		padding: 16px 24px;
+		margin-left: 0;
+	}
+	// Definitions
+	dt {
+		font-weight: 700;
+	}
+	dd {
+		margin-left: 0;
+		margin-bottom: 0.5rem;
+	}
+	// Code
+	code {
+		padding: 0.202em 0.5407911001em;
+		margin: 0;
+		border-radius: 0;
+		color: #222;
+		background: rgba(0, 0, 0, 0.05);
+		font-size: 87.5%;
+	}
+	pre {
+		color: #222;
+		background: rgba(0, 0, 0, 0.05);
+		padding: 1em;
+		max-width: 100%;
+		overflow: auto;
+		white-space: pre;
+	}
+	// keyboard text
+	kbd {
+		padding: 0.2rem 0.4rem;
+		font-size: 87.5%;
+		color: $white;
+		background-color: #212529;
+		border-radius: 0.2rem;
+	}
 }
 
 // Gutenberg color options
 // -- see editor-color-palette in functions.php
 $colors: (
-  'primary' : #007BFF,
-  'secondary' : #6c757d,
-  'success' : #019875,
-  'danger' : #dc3545,
-  'warning' : #ffc107,
-  'info' : #17a2b8,
-  'light' : #f8f9fa,
-  'dark' : #151B26,
+	"primary": #007bff,
+	"secondary": #6c757d,
+	"success": #019875,
+	"danger": #dc3545,
+	"warning": #ffc107,
+	"info": #17a2b8,
+	"light": #f8f9fa,
+	"dark": #151b26
 );
 
 @each $name, $color in $colors {
+	.has-#{$name}-color {
+		color: $color;
+	}
 
-  .has-#{$name}-color {
-    color: $color;
-  }
-
-  .has-#{$name}-background-color {
-    background-color: $color;
-  }
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
 }
 
 $block-btns: (
-  (primary, #fff, #007bff, #007bff, #fff, #0069d9, #0069d9),
-  (secondary, #fff, #6c757d, #6c757d, #fff, #5a6268, #5a6268),
-  (success, #fff, #019875, #019875, #fff, #017258, #017258),
-  (danger, #fff, #dc3545, #dc3545, #fff, #c82333, #c82333),
-  (warning, #212529, #ffc107, #ffc107, #212529, #e0a800, #e0a800),
-  (info, #fff, #17a2b8, #17a2b8, #fff, #138496, #138496),
-  (light, #212529, #f8f9fa, #f8f9fa, #212529, #e2e6ea, #e2e6ea),
-  (dark, #fff, #151b26, #151b26, #fff, #07090d, #07090d)
+	(primary, #fff, #007bff, #007bff, #fff, #0069d9, #0069d9),
+	(secondary, #fff, #6c757d, #6c757d, #fff, #5a6268, #5a6268),
+	(success, #fff, #019875, #019875, #fff, #017258, #017258),
+	(danger, #fff, #dc3545, #dc3545, #fff, #c82333, #c82333),
+	(warning, #212529, #ffc107, #ffc107, #212529, #e0a800, #e0a800),
+	(info, #fff, #17a2b8, #17a2b8, #fff, #138496, #138496),
+	(light, #212529, #f8f9fa, #f8f9fa, #212529, #e2e6ea, #e2e6ea),
+	(dark, #fff, #151b26, #151b26, #fff, #07090d, #07090d)
 );
 
 // Button block
 .wp-block-button {
+	// universal button styles
+	.wp-block-button__link {
+		&:hover {
+			text-decoration: none;
+		}
+		@extend .btn;
+	}
 
-  // universal button styles
-  .wp-block-button__link {
-    &:hover {
-      text-decoration: none;
-    }
-    @extend .btn;
-  }
-  
-  // button styles if no button type
-  .wp-block-button__link {
-    &:not(.has-background) {
-      color: #fff;
-      background-color: #007bff;
-      border-color: #007bff;
-      &:hover {
-        color: #fff !important;
-        background-color: #0069d9 !important;
-        border-color: #0069d9 !important;
-      }
-    }
-    // User defined colors with no button type
-    @each $label, $color, $bg, $border, $hover-color, $hover-bg, $hover-border in $block-btns {
-      &.has-#{$label}-background-color {
-        color: $color;
-        background-color: $bg;
-        border-color: $border;
-      }
-      &.has-#{$label}-background-color:hover {
-        color: $hover-color !important;
-        background-color: $hover-bg !important;
-        border-color: $hover-border !important;
-      }
-    }
-  }
+	// button styles if no button type
+	.wp-block-button__link {
+		&:not(.has-background) {
+			color: #fff;
+			background-color: #007bff;
+			border-color: #007bff;
+			&:hover {
+				color: #fff !important;
+				background-color: #0069d9 !important;
+				border-color: #0069d9 !important;
+			}
+		}
+		// User defined colors with no button type
+		@each $label, $color, $bg, $border, $hover-color, $hover-bg,
+			$hover-border in $block-btns
+		{
+			&.has-#{$label}-background-color {
+				color: $color;
+				background-color: $bg;
+				border-color: $border;
+			}
+			&.has-#{$label}-background-color:hover {
+				color: $hover-color !important;
+				background-color: $hover-bg !important;
+				border-color: $hover-border !important;
+			}
+		}
+	}
 
-  &.is-style-fill {
-    .wp-block-button__link {
-      &:not(.has-background) {
-        color: #fff !important;
-        background-color: #007bff !important;
-        border-color: #007bff !important;
-        &:hover {
-          color: #fff !important;
-          background-color: #0069d9 !important;
-          border-color: #0069d9 !important;
-        }
-      }
-      // Get user defined colors
-      @each $label, $color, $bg, $border, $hover-color, $hover-bg, $hover-border in $block-btns {
-        &.has-#{$label}-background-color {
-          color: $color !important;
-          background-color: $bg !important;
-          border-color: $border !important;
-        }
-        &.has-#{$label}-background-color:hover {
-          color: $hover-color !important;
-          background-color: $hover-bg !important;
-          border-color: $hover-border !important;
-        }
-      }
-    }
-  }
+	&.is-style-fill {
+		.wp-block-button__link {
+			&:not(.has-background) {
+				color: #fff !important;
+				background-color: #007bff !important;
+				border-color: #007bff !important;
+				&:hover {
+					color: #fff !important;
+					background-color: #0069d9 !important;
+					border-color: #0069d9 !important;
+				}
+			}
+			// Get user defined colors
+			@each $label, $color, $bg, $border, $hover-color, $hover-bg,
+				$hover-border in $block-btns
+			{
+				&.has-#{$label}-background-color {
+					color: $color !important;
+					background-color: $bg !important;
+					border-color: $border !important;
+				}
+				&.has-#{$label}-background-color:hover {
+					color: $hover-color !important;
+					background-color: $hover-bg !important;
+					border-color: $hover-border !important;
+				}
+			}
+		}
+	}
 
-  &.is-style-outline {
-    .wp-block-button__link {
-      &:not(.has-background) {
-        color: #007bff !important;
-        background-color: transparent !important;
-        border-color: #007bff !important;
-        &:hover {
-          color: #fff !important;
-          background-color: #007bff !important;
-          border-color: #007bff !important;
-        }
-      }
-      // Get user defined colors
-      @each $label, $color, $bg, $border, $hover-color, $hover-bg, $hover-border in $block-btns {
-        &.has-#{$label}-background-color {
-          color: $bg;
-          background-color: transparent !important;
-          border-color: $border;
-        }
-        &.has-#{$label}-background-color:hover {
-          color: $color !important;
-          background-color: $bg !important;
-          border-color: $border !important;
-        }
-      }
-    }
-  }
-
+	&.is-style-outline {
+		.wp-block-button__link {
+			&:not(.has-background) {
+				color: #007bff !important;
+				background-color: transparent !important;
+				border-color: #007bff !important;
+				&:hover {
+					color: #fff !important;
+					background-color: #007bff !important;
+					border-color: #007bff !important;
+				}
+			}
+			// Get user defined colors
+			@each $label, $color, $bg, $border, $hover-color, $hover-bg,
+				$hover-border in $block-btns
+			{
+				&.has-#{$label}-background-color {
+					color: $bg;
+					background-color: transparent !important;
+					border-color: $border;
+				}
+				&.has-#{$label}-background-color:hover {
+					color: $color !important;
+					background-color: $bg !important;
+					border-color: $border !important;
+				}
+			}
+		}
+	}
 }
 
 // WooCommerce
 .wc-block-grid .wc-block-grid__products .wc-block-grid__product {
-  padding: 0 28px 0 0;
-  margin: 0 0 24px;
-  
-  .wc-block-grid__product-title {
-    padding: .5em 0;
-    margin-bottom: 0;
-    font-size: 1em;
-    font-weight: 500;
-    color: #222222;
-  }
-  .wc-block-grid__product-price.price {
-    margin-bottom: .5em;
-    color: #555;
-    font-size: .9em;
-    line-height: 1.5;
-  }
-  .wc-block-grid__product-rating {
-    line-height: 1.5;
-    margin-bottom: .5em;
-    .star-rating span::before {
-      color: #f7de00;
-    }
-  }
-  .wc-block-grid__product-image {
-    margin-bottom: .5em;
-    img {
-      border-radius: 7px;
-    }
-  }
+	padding: 0 28px 0 0;
+	margin: 0 0 24px;
 
+	.wc-block-grid__product-title {
+		padding: 0.5em 0;
+		margin-bottom: 0;
+		font-size: 1em;
+		font-weight: 500;
+		color: #222222;
+	}
+	.wc-block-grid__product-price.price {
+		margin-bottom: 0.5em;
+		color: #555;
+		font-size: 0.9em;
+		line-height: 1.5;
+	}
+	.wc-block-grid__product-rating {
+		line-height: 1.5;
+		margin-bottom: 0.5em;
+		.star-rating span::before {
+			color: #f7de00;
+		}
+	}
+	.wc-block-grid__product-image {
+		margin-bottom: 0.5em;
+		img {
+			border-radius: 7px;
+		}
+	}
 }
 
 // WooCommerce product grid font size
-.wc-block-grid.has-4-columns:not(.alignwide):not(.alignfull) .wc-block-grid__product {
-  font-size: 1rem;
+.wc-block-grid.has-4-columns:not(.alignwide):not(.alignfull)
+	.wc-block-grid__product {
+	font-size: 1rem;
 }
 
 // WooCommerce product grid alignfull
 .wc-block-grid.alignfull {
-  padding-left: 15px;
+	padding-left: 15px;
 }
 
 // Easy Digital Downloads
 .editor-styles-wrapper .edd_downloads_list {
-  display: flex;
-  flex-wrap: wrap;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
+	display: flex;
+	flex-wrap: wrap;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
 
-  // breakpoints for up to 1 columns
-  &.edd_download_columns_1 {
-    grid-template-columns: 0;
-    .edd_download {
-      width: 100%;
-    }
-  }
-  // breakpoints for 2 columns
-  &.edd_download_columns_2,
-  &.edd_download_columns_3,
-  &.edd_download_columns_4,
-  &.edd_download_columns_5,
-  &.edd_download_columns_6 {
-    grid-template-columns: 0;
-    .edd_download {
-      width: 100%;
-      @media (min-width: 576px) {
-        width: 50%;
-      }
-    }
-  }
-  // breakpoint for 3 columns
-  &.edd_download_columns_3,
-  &.edd_download_columns_4,
-  &.edd_download_columns_5,
-  &.edd_download_columns_6 {
-    .edd_download {
-      @media (min-width: 992px) {
-        width: 33%;
-      }
-    }
-  }
-  // breakpoint for 4 columns
-  &.edd_download_columns_4 {
-    .edd_download {
-      @media (min-width: 1200px) {
-        width: 25%;
-      }
-    }
-  }
-  // breakpoint for 5 columns
-  &.edd_download_columns_5 {
-    .edd_download {
-      @media (min-width: 1200px) {
-        width: 20%;
-      }
-    }
-  }
-  // breakpoint for 6 columns
-  &.edd_download_columns_6 {
-    .edd_download {
-      @media (min-width: 1200px) {
-        width: 16.6%;
-      }
-    }
-  }
-  .edd_download_inner {
-    display: flex;
-    display: -webkit-box;
-    flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-  }
-  .edd_download_image {
-    margin: 0 0 1rem 0;
-    + .edd_download_title {
-      margin-top: 0;
-    }
-  }
-  .edd_download_title a {
-    color: #222;
-    &:hover {
-      color: #222;
-    }
-  }
-  .edd_download_excerpt p {
-    color: #6c757d;
-    margin: 0 0 1rem;
-    font-size: 15px;
-  }
-  div.edd_price {
-    margin-top: auto !important;
-    color: #555;
-  }
-  div.edd_price + .components-disabled {
-    margin-top: 0;
-  }
-  .components-disabled {
-    margin-top: auto;
-  }
-  .edd_download_purchase_form {
-    .edd_price_options {
-      display: none;
-    }
-    a.edd-add-to-cart {
-      @extend .btn;
-      @extend .btn-lg;
-      @extend .btn-block;
-    }
-  }
+	// breakpoints for up to 1 columns
+	&.edd_download_columns_1 {
+		grid-template-columns: 0;
+		.edd_download {
+			width: 100%;
+		}
+	}
+	// breakpoints for 2 columns
+	&.edd_download_columns_2,
+	&.edd_download_columns_3,
+	&.edd_download_columns_4,
+	&.edd_download_columns_5,
+	&.edd_download_columns_6 {
+		grid-template-columns: 0;
+		.edd_download {
+			width: 100%;
+			@media (min-width: 576px) {
+				width: 50%;
+			}
+		}
+	}
+	// breakpoint for 3 columns
+	&.edd_download_columns_3,
+	&.edd_download_columns_4,
+	&.edd_download_columns_5,
+	&.edd_download_columns_6 {
+		.edd_download {
+			@media (min-width: 992px) {
+				width: 33%;
+			}
+		}
+	}
+	// breakpoint for 4 columns
+	&.edd_download_columns_4 {
+		.edd_download {
+			@media (min-width: 1200px) {
+				width: 25%;
+			}
+		}
+	}
+	// breakpoint for 5 columns
+	&.edd_download_columns_5 {
+		.edd_download {
+			@media (min-width: 1200px) {
+				width: 20%;
+			}
+		}
+	}
+	// breakpoint for 6 columns
+	&.edd_download_columns_6 {
+		.edd_download {
+			@media (min-width: 1200px) {
+				width: 16.6%;
+			}
+		}
+	}
+	.edd_download_inner {
+		display: flex;
+		display: -webkit-box;
+		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		width: 100%;
+		height: 100%;
+		padding: 1rem;
+	}
+	.edd_download_image {
+		margin: 0 0 1rem 0;
+		+ .edd_download_title {
+			margin-top: 0;
+		}
+	}
+	.edd_download_title a {
+		color: #222;
+		&:hover {
+			color: #222;
+		}
+	}
+	.edd_download_excerpt p {
+		color: #6c757d;
+		margin: 0 0 1rem;
+		font-size: 15px;
+	}
+	div.edd_price {
+		margin-top: auto !important;
+		color: #555;
+	}
+	div.edd_price + .components-disabled {
+		margin-top: 0;
+	}
+	.components-disabled {
+		margin-top: auto;
+	}
+	.edd_download_purchase_form {
+		.edd_price_options {
+			display: none;
+		}
+		a.edd-add-to-cart {
+			@extend .btn;
+			@extend .btn-lg;
+			@extend .btn-block;
+		}
+	}
 }

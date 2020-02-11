@@ -2,113 +2,115 @@
 .sticky,
 .gallery-caption,
 .bypostauthor {
-  font-size: inherit;
+	font-size: inherit;
 }
 
 // Separate sticky wrapper from main content
-.wrapper#wrapper-sticky { 
-  border-bottom: 1px solid $gray-300; 
+.wrapper#wrapper-sticky {
+	border-bottom: 1px solid $gray-300;
 }
 
 // Necessary WP classes
-.wp-caption { 
-  font-size: inherit; 
+.wp-caption {
+	font-size: inherit;
 }
 .wp-caption-text {
-  font-size: 13px;
-  color: #555d66;
-  margin-top: .5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
+	font-size: 13px;
+	color: #555d66;
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
 }
-.screen-reader-text { 
-  @extend .sr-only; 
+.screen-reader-text {
+	@extend .sr-only;
 }
 .alignleft {
-  float: left;
-  margin-right: 1.5em;
+	float: left;
+	margin-right: 1.5em;
 }
 .alignright {
-  float: right;
-  margin-left: 1.5em;
+	float: right;
+	margin-left: 1.5em;
 }
-.aligncenter { 
-  @extend .mx-auto;
-  text-align: center;
-  display: block;
-  clear: both;
+.aligncenter {
+	@extend .mx-auto;
+	text-align: center;
+	display: block;
+	clear: both;
 }
-table { 
-  @extend .table;
-  @extend .table-bordered;
-  border-spacing: 0;
-  &.table thead th, thead th {
-    border-bottom-width: 1px;
-  }
+table {
+	@extend .table;
+	@extend .table-bordered;
+	border-spacing: 0;
+	&.table thead th,
+	thead th {
+		border-bottom-width: 1px;
+	}
 }
 blockquote {
-  padding: 16px 24px;
-  border-left: 5px solid #aaa;
-  cite {
-    display: block;
-    font-size: 80%;
-    line-height: 1.4;
-    color: #555;
-    margin-top: .5rem;
-    font-style: normal;
-  }
+	padding: 16px 24px;
+	border-left: 5px solid #aaa;
+	cite {
+		display: block;
+		font-size: 80%;
+		line-height: 1.4;
+		color: #555;
+		margin-top: 0.5rem;
+		font-style: normal;
+	}
 }
 cite {
-  color: #555;
+	color: #555;
 }
 pre {
-  background-color: rgba(0,0,0,.05);
-  padding: 1em;
-  max-width: 100%;
-  overflow: auto;
-  color: #222;
-  margin-bottom: 1.5rem;
-  code {
-    padding: 0;
-    background: transparent;
-    color: #222;
-  }
+	background-color: rgba(0, 0, 0, 0.05);
+	padding: 1em;
+	max-width: 100%;
+	overflow: auto;
+	color: #222;
+	margin-bottom: 1.5rem;
+	code {
+		padding: 0;
+		background: transparent;
+		color: #222;
+	}
 }
 code {
-  background-color: rgba(0,0,0,.05);
-  padding: .202em .5407911001em;
-  color: #222;
+	background-color: rgba(0, 0, 0, 0.05);
+	padding: 0.202em 0.5407911001em;
+	color: #222;
 }
 
 // Calender widget
 table#wp-calendar {
-  caption {
-    text-align: center;
-    caption-side: top;
-  }
-  th {
-    background: #edeff0;
-  }
+	caption {
+		text-align: center;
+		caption-side: top;
+	}
+	th {
+		background: #edeff0;
+	}
 }
-.widget.widget_calendar, 
+.widget.widget_calendar,
 .footer-widget-area .widget_calendar {
-  table#wp-calendar {
-    table-layout: fixed;
-    td, th {
-      padding: .35em;
-      text-align: center;
-    }
-  }
+	table#wp-calendar {
+		table-layout: fixed;
+		td,
+		th {
+			padding: 0.35em;
+			text-align: center;
+		}
+	}
 }
 .footer-widget-area .widget_calendar {
-  table#wp-calendar th {
-    background: none;
-  }
+	table#wp-calendar th {
+		background: none;
+	}
 }
 
 // Post design
-.entry-footer span { 
-  padding-right: 10px; 
+.entry-footer span {
+	padding-right: 10px;
 }
 
 // Limit featured image size to 100%
@@ -117,20 +119,20 @@ article img,
 figure,
 img,
 #secondary img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 // Skip to content link
 a.skip-link {
-  position: fixed;
-  z-index: 1000;
-  top: 0px;
-  right: 0px;
+	position: fixed;
+	z-index: 1000;
+	top: 0px;
+	right: 0px;
 }
 
 // Password protected post button
 form.post-password-form input[type="submit"] {
-  @extend .btn;
-  @extend .btn-primary;
+	@extend .btn;
+	@extend .btn-primary;
 }

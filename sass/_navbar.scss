@@ -1,210 +1,210 @@
 // Navbar styles
 #wrapper-navbar .navbar {
+	a.navbar-brand img {
+		height: 100%;
+		width: auto;
+	}
 
-  a.navbar-brand img {
-    height: 100%;
-    width: auto;
-  }
+	h1 {
+		font-weight: $font-weight-normal;
+	}
 
-  h1 { 
-    font-weight: $font-weight-normal;
-  }
+	// mobile menu padding
+	ul#main-menu {
+		padding-top: 0.5rem;
+		@include media-breakpoint-up(lg) {
+			padding-top: 0;
+		}
+	}
 
-  // mobile menu padding
-  ul#main-menu {
-    padding-top: .5rem;
-    @include media-breakpoint-up(lg) {
-      padding-top: 0;
-    }
-  }
+	// Nav icons
+	#main-menu {
+		// cart
+		a.cart-customlocation i.fas.fa-shopping-bag {
+			font-size: 1.15rem;
+			margin-right: 0.25rem;
+		}
+		// account
+		.account-icon.menu-item a i.fas.fa-user {
+			font-size: 1.05rem;
+		}
+		// search
+		.search-icon.menu-item a i.fas.fa-search {
+			font-size: 1.05rem;
+		}
+	}
 
-  // Nav icons
-  #main-menu { 
-    // cart
-    a.cart-customlocation i.fas.fa-shopping-bag {
-      font-size: 1.15rem;
-      margin-right: .25rem;
-    }
-    // account
-    .account-icon.menu-item a i.fas.fa-user {
-      font-size: 1.05rem;
-    }
-    // search
-    .search-icon.menu-item a i.fas.fa-search {
-      font-size: 1.05rem;
-    }
-  }
-  
-  // Large devices (desktops, 992px and up)
-  @include media-breakpoint-up(lg) {
-    ul.navbar-nav {
-      display: inline-block;
-      li.menu-item {
-        display: inline-block;
-        a.nav-link {
-          white-space: nowrap;
-        }
-        .dropdown-menu li.menu-item {
-          display: block;
-        }
-      }
-      li.nav-callout-button.menu-item {
-        margin-left: .5rem;
-      }
-    }
-  }
+	// Large devices (desktops, 992px and up)
+	@include media-breakpoint-up(lg) {
+		ul.navbar-nav {
+			display: inline-block;
+			li.menu-item {
+				display: inline-block;
+				a.nav-link {
+					white-space: nowrap;
+				}
+				.dropdown-menu li.menu-item {
+					display: block;
+				}
+			}
+			li.nav-callout-button.menu-item {
+				margin-left: 0.5rem;
+			}
+		}
+	}
 
-  // Offcanvas on mobile devices 
-  .offcanvas-collapse {
-    @include media-breakpoint-down(md) {
-      position: fixed;
-      bottom: 0;
-      left: 100%;
-      width: 100%;
-      height: 100%;
-      padding-right: 1rem;
-      padding-left: 1rem;
-      overflow-y: auto;
-      visibility: hidden;
-      transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
-      z-index: 999;
-      
-      &.open {
-        visibility: visible;
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-      }
-    }
-  }
+	// Offcanvas on mobile devices
+	.offcanvas-collapse {
+		@include media-breakpoint-down(md) {
+			position: fixed;
+			bottom: 0;
+			left: 100%;
+			width: 100%;
+			height: 100%;
+			padding-right: 1rem;
+			padding-left: 1rem;
+			overflow-y: auto;
+			visibility: hidden;
+			transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out,
+				-webkit-transform 0.3s ease-in-out;
+			z-index: 999;
 
+			&.open {
+				visibility: visible;
+				-webkit-transform: translateX(-100%);
+				transform: translateX(-100%);
+			}
+		}
+	}
 }
 
 // If white navbar add bottom border
 #wrapper-navbar.is-white-color {
-  border-bottom: 1px solid #dee2e6;
-} 
+	border-bottom: 1px solid #dee2e6;
+}
 
 // IE edge prefix for fixed navbar -- prevents element jitter
 .fixed-top#wrapper-navbar {
-  position: -ms-device-fixed;
+	position: -ms-device-fixed;
 }
 
 // Offcanvas when open add class to body prevent horizontal scrolling.
 // See js/theme.js -- Toggle offcanvas mobile menu -- function for more details.
-html.offcanvas-overflowx, body.offcanvas-overflowx {
-  overflow-x: hidden;
+html.offcanvas-overflowx,
+body.offcanvas-overflowx {
+	overflow-x: hidden;
 }
 
 // Navbar link colors
 #wrapper-navbar nav {
-  &.navbar-dark {
-    a.nav-link { 
-      color: rgba(255,255,255,1);
-      &:hover {
-        color: rgba(255,255,255,.8);
-      }
-    }
-  }
-  &.navbar-light {
-    a.nav-link {
-      color: rgba(0,0,0,1);
-      &:hover {
-        color: rgba(0,0,0,.8);
-      }
-    }
-  }
-  &.navbar-dark.bg-dark {
-    .offcanvas-collapse {
-      background-color: $dark;
-    }
-  }
-  &.navbar-light.bg-light {
-    .offcanvas-collapse {
-      background-color: $light;
-    }
-  }
-  &.navbar-light.bg-white {
-    .offcanvas-collapse {
-      background-color: $white;
-    }
-  }
-  &.navbar-dark.bg-primary {
-    .offcanvas-collapse {
-      background-color: $primary;
-    }
-  }
-  &.navbar-dark.bg-secondary {
-    .offcanvas-collapse {
-      background-color: $secondary;
-    }
-  }
-  &.navbar-dark.bg-success {
-    .offcanvas-collapse {
-      background-color: $success;
-    }
-  }
-  &.navbar-dark.bg-danger {
-    .offcanvas-collapse {
-      background-color: $danger;
-    }
-  }
-  &.navbar-light.bg-warning {
-    .offcanvas-collapse {
-      background-color: $warning;
-    }
-  }
-  &.navbar-dark.bg-info {
-    .offcanvas-collapse {
-      background-color: $info;
-    }
-  }
+	&.navbar-dark {
+		a.nav-link {
+			color: rgba(255, 255, 255, 1);
+			&:hover {
+				color: rgba(255, 255, 255, 0.8);
+			}
+		}
+	}
+	&.navbar-light {
+		a.nav-link {
+			color: rgba(0, 0, 0, 1);
+			&:hover {
+				color: rgba(0, 0, 0, 0.8);
+			}
+		}
+	}
+	&.navbar-dark.bg-dark {
+		.offcanvas-collapse {
+			background-color: $dark;
+		}
+	}
+	&.navbar-light.bg-light {
+		.offcanvas-collapse {
+			background-color: $light;
+		}
+	}
+	&.navbar-light.bg-white {
+		.offcanvas-collapse {
+			background-color: $white;
+		}
+	}
+	&.navbar-dark.bg-primary {
+		.offcanvas-collapse {
+			background-color: $primary;
+		}
+	}
+	&.navbar-dark.bg-secondary {
+		.offcanvas-collapse {
+			background-color: $secondary;
+		}
+	}
+	&.navbar-dark.bg-success {
+		.offcanvas-collapse {
+			background-color: $success;
+		}
+	}
+	&.navbar-dark.bg-danger {
+		.offcanvas-collapse {
+			background-color: $danger;
+		}
+	}
+	&.navbar-light.bg-warning {
+		.offcanvas-collapse {
+			background-color: $warning;
+		}
+	}
+	&.navbar-dark.bg-info {
+		.offcanvas-collapse {
+			background-color: $info;
+		}
+	}
 }
 
 // Nav search modal
 .admin-bar #csearchModal {
-  z-index: 100000;
+	z-index: 100000;
 }
 #csearchModal {
-  .modal-dialog {
-    position: fixed;
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    padding: 0;
-  }
-  .modal-content {
-    height: auto;
-    min-height: 100%;
-    border-radius: 0;
-    background: $dark;
-  }
-  .modal-header {
-    display: flex;
-    justify-content: flex-end;
-    border-bottom: 0;
-  }
-  .modal-title {
-    color: $white;
-    margin-bottom: .5em;
-  }
-  .modal-body {
-    justify-content: flex-start;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    p {
-      color: #ddd;
-    }
-  }
-  form#searchform input.field.form-control {
-    @extend .form-control-lg;
-  }
-  button.close {
-    opacity: 1;
-  }
-  i.fa-times {
-    color: $gray-200;
-    font-size: 30px;
-  }
+	.modal-dialog {
+		position: fixed;
+		margin: 0;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+	.modal-content {
+		height: auto;
+		min-height: 100%;
+		border-radius: 0;
+		background: $dark;
+	}
+	.modal-header {
+		display: flex;
+		justify-content: flex-end;
+		border-bottom: 0;
+	}
+	.modal-title {
+		color: $white;
+		margin-bottom: 0.5em;
+	}
+	.modal-body {
+		justify-content: flex-start;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		p {
+			color: #ddd;
+		}
+	}
+	form#searchform input.field.form-control {
+		@extend .form-control-lg;
+	}
+	button.close {
+		opacity: 1;
+	}
+	i.fa-times {
+		color: $gray-200;
+		font-size: 30px;
+	}
 }

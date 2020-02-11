@@ -1,16 +1,16 @@
 // Adminbar position fix on small screens
 html #wpadminbar {
-  @media screen and (max-width:600px) {
-    position: fixed;
-  }
+	@media screen and (max-width: 600px) {
+		position: fixed;
+	}
 }
 
 // Adminbar add space when active
 .admin-bar #wrapper-navbar.fixed-top {
-  top: 46px;
-  @media screen and (min-width: 783px) {
-    top: 32px;
-  }
+	top: 46px;
+	@media screen and (min-width: 783px) {
+		top: 32px;
+	}
 }
 
 // Lower z-index when fancybox is open

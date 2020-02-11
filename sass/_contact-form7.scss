@@ -5,44 +5,42 @@
 // Set max-width in case its just the form and nothing else
 // Do not want a form spanning whole page
 .wpcf7 {
-  max-width: 600px;
+	max-width: 600px;
 
-  // submit button, inherit .btn and .btn-outline-primary classes.
-  input[type=submit] {
-    @extend .btn;
-    @extend .btn-primary;
-  }
+	// submit button, inherit .btn and .btn-outline-primary classes.
+	input[type="submit"] {
+		@extend .btn;
+		@extend .btn-primary;
+	}
 
-  .wpcf7-form {
+	.wpcf7-form {
+		// set paragraphs to behave like divs with class .form-group
+		p {
+			@extend .form-group;
+		}
 
-    // set paragraphs to behave like divs with class .form-group
-    p {
-      @extend .form-group;
-    }
+		// let labels be 100%
+		label {
+			width: 100%;
+		}
+	}
 
-    // let labels be 100%
-    label {
-      width: 100%;
-    }
-  }
+	// not valid tip for each control
+	.wpcf7-not-valid-tip {
+		color: theme-color("danger");
+	}
 
-  // not valid tip for each control
-  .wpcf7-not-valid-tip {
-    color: theme-color("danger");
-  }
+	// response messages
+	div.wpcf7-response-output {
+		@extend .alert;
+		@extend .alert-primary;
 
-  // response messages
-  div.wpcf7-response-output {
-    @extend .alert;
-    @extend .alert-primary;
+		&.wpcf7-mail-sent-ok {
+			@extend .alert-success;
+		}
 
-    &.wpcf7-mail-sent-ok {
-      @extend .alert-success;
-    }
-
-    &.wpcf7-validation-errors {
-      @extend .alert-danger;
-    }
-  }
-  
+		&.wpcf7-validation-errors {
+			@extend .alert-danger;
+		}
+	}
 }

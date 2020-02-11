@@ -203,8 +203,8 @@ fieldset:disabled .editor-styles-wrapper .edd_downloads_list .edd_download_purch
 
 .btn-dark {
   color: #fff;
-  background-color: #151B26;
-  border-color: #151B26; }
+  background-color: #151b26;
+  border-color: #151b26; }
   .btn-dark:hover {
     color: #fff;
     background-color: #07090d;
@@ -216,8 +216,8 @@ fieldset:disabled .editor-styles-wrapper .edd_downloads_list .edd_download_purch
     box-shadow: 0 0 0 0.2rem rgba(56, 61, 71, 0.5); }
   .btn-dark.disabled, .btn-dark:disabled {
     color: #fff;
-    background-color: #151B26;
-    border-color: #151B26; }
+    background-color: #151b26;
+    border-color: #151b26; }
   .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active, .show > .btn-dark.dropdown-toggle {
     color: #fff;
     background-color: #030405;
@@ -359,21 +359,21 @@ fieldset:disabled .editor-styles-wrapper .edd_downloads_list .edd_download_purch
       box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
 
 .btn-outline-dark {
-  color: #151B26;
-  border-color: #151B26; }
+  color: #151b26;
+  border-color: #151b26; }
   .btn-outline-dark:hover {
     color: #fff;
-    background-color: #151B26;
-    border-color: #151B26; }
+    background-color: #151b26;
+    border-color: #151b26; }
   .btn-outline-dark:focus, .btn-outline-dark.focus {
     box-shadow: 0 0 0 0.2rem rgba(21, 27, 38, 0.5); }
   .btn-outline-dark.disabled, .btn-outline-dark:disabled {
-    color: #151B26;
+    color: #151b26;
     background-color: transparent; }
   .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active, .show > .btn-outline-dark.dropdown-toggle {
     color: #fff;
-    background-color: #151B26;
-    border-color: #151B26; }
+    background-color: #151b26;
+    border-color: #151b26; }
     .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(21, 27, 38, 0.5); }
 
@@ -435,7 +435,18 @@ input[type="button"].btn-block {
 .editor-block-list__block[data-align="center"] {
   clear: both; }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 500; }
 
 .editor-styles-wrapper .wp-block-heading h1 {
@@ -455,7 +466,18 @@ input[type="button"].btn-block {
   color: #222222; }
   .editor-styles-wrapper .editor-writing-flow .editor-post-title__block .editor-post-title__input {
     color: #222222; }
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h1, .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h2, .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h3, .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h4, .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h5, .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h6, .editor-styles-wrapper .editor-writing-flow .wp-block-heading h1, .editor-styles-wrapper .editor-writing-flow .wp-block-heading h2, .editor-styles-wrapper .editor-writing-flow .wp-block-heading h3, .editor-styles-wrapper .editor-writing-flow .wp-block-heading h4, .editor-styles-wrapper .editor-writing-flow .wp-block-heading h5, .editor-styles-wrapper .editor-writing-flow .wp-block-heading h6 {
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h1,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h2,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h3,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h4,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h5,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h6,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h1,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h2,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h3,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h4,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h5,
+  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h6 {
     color: #222222; }
 
 .wp-block-separator {
@@ -471,7 +493,7 @@ pre.wp-block-verse {
   max-width: 100%;
   overflow: auto;
   color: #222;
-  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 87.5%; }
   .wp-block-preformatted pre code,
   .wp-block-verse pre code,
@@ -482,10 +504,11 @@ pre.wp-block-verse {
 
 code {
   background-color: rgba(0, 0, 0, 0.05);
-  padding: .202em .5407911001em;
+  padding: 0.202em 0.5407911001em;
   color: #222; }
 
-.wp-block-table td, .wp-block-table th {
+.wp-block-table td,
+.wp-block-table th {
   border: 1px solid #dee2e6; }
 
 .wp-block-cover-image .wp-block-cover-image-text,
@@ -494,7 +517,8 @@ code {
 .wp-block-cover-image h3,
 .wp-block-cover-image h4,
 .wp-block-cover-image h5,
-.wp-block-cover-image h6, .wp-block-cover .wp-block-cover-image-text,
+.wp-block-cover-image h6,
+.wp-block-cover .wp-block-cover-image-text,
 .wp-block-cover .wp-block-cover-text,
 .wp-block-cover h2,
 .wp-block-cover h3,
@@ -510,7 +534,7 @@ blockquote.wp-block-quote, blockquote.wp-block-quote.is-large, blockquote.wp-blo
   blockquote.wp-block-quote .wp-block-quote__citation, blockquote.wp-block-quote.is-large .wp-block-quote__citation, blockquote.wp-block-quote.is-style-large .wp-block-quote__citation {
     color: #555;
     font-size: 80%;
-    margin-top: .5em;
+    margin-top: 0.5em;
     line-height: 1.4;
     font-style: normal; }
   blockquote.wp-block-quote p, blockquote.wp-block-quote.is-large p, blockquote.wp-block-quote.is-style-large p {
@@ -548,7 +572,18 @@ blockquote.wp-block-quote.has-text-align-right {
 .wp-block-media-text {
   margin-bottom: 1.5rem; }
 
-.wp-block-freeform.block-library-rich-text__tinymce .h1, .wp-block-freeform.block-library-rich-text__tinymce .h2, .wp-block-freeform.block-library-rich-text__tinymce .h3, .wp-block-freeform.block-library-rich-text__tinymce .h4, .wp-block-freeform.block-library-rich-text__tinymce .h5, .wp-block-freeform.block-library-rich-text__tinymce .h6, .wp-block-freeform.block-library-rich-text__tinymce h1, .wp-block-freeform.block-library-rich-text__tinymce h2, .wp-block-freeform.block-library-rich-text__tinymce h3, .wp-block-freeform.block-library-rich-text__tinymce h4, .wp-block-freeform.block-library-rich-text__tinymce h5, .wp-block-freeform.block-library-rich-text__tinymce h6 {
+.wp-block-freeform.block-library-rich-text__tinymce .h1,
+.wp-block-freeform.block-library-rich-text__tinymce .h2,
+.wp-block-freeform.block-library-rich-text__tinymce .h3,
+.wp-block-freeform.block-library-rich-text__tinymce .h4,
+.wp-block-freeform.block-library-rich-text__tinymce .h5,
+.wp-block-freeform.block-library-rich-text__tinymce .h6,
+.wp-block-freeform.block-library-rich-text__tinymce h1,
+.wp-block-freeform.block-library-rich-text__tinymce h2,
+.wp-block-freeform.block-library-rich-text__tinymce h3,
+.wp-block-freeform.block-library-rich-text__tinymce h4,
+.wp-block-freeform.block-library-rich-text__tinymce h5,
+.wp-block-freeform.block-library-rich-text__tinymce h6 {
   font-weight: 500; }
 .wp-block-freeform.block-library-rich-text__tinymce p {
   margin-top: 0;
@@ -561,9 +596,9 @@ blockquote.wp-block-quote.has-text-align-right {
   font-weight: 700; }
 .wp-block-freeform.block-library-rich-text__tinymce dd {
   margin-left: 0;
-  margin-bottom: .5rem; }
+  margin-bottom: 0.5rem; }
 .wp-block-freeform.block-library-rich-text__tinymce code {
-  padding: .202em .5407911001em;
+  padding: 0.202em 0.5407911001em;
   margin: 0;
   border-radius: 0;
   color: #222;
@@ -577,17 +612,17 @@ blockquote.wp-block-quote.has-text-align-right {
   overflow: auto;
   white-space: pre; }
 .wp-block-freeform.block-library-rich-text__tinymce kbd {
-  padding: .2rem .4rem;
+  padding: 0.2rem 0.4rem;
   font-size: 87.5%;
   color: #fff;
   background-color: #212529;
-  border-radius: .2rem; }
+  border-radius: 0.2rem; }
 
 .has-primary-color {
-  color: #007BFF; }
+  color: #007bff; }
 
 .has-primary-background-color {
-  background-color: #007BFF; }
+  background-color: #007bff; }
 
 .has-secondary-color {
   color: #6c757d; }
@@ -626,10 +661,10 @@ blockquote.wp-block-quote.has-text-align-right {
   background-color: #f8f9fa; }
 
 .has-dark-color {
-  color: #151B26; }
+  color: #151b26; }
 
 .has-dark-background-color {
-  background-color: #151B26; }
+  background-color: #151b26; }
 
 .wp-block-button .wp-block-button__link:hover {
   text-decoration: none; }
@@ -854,27 +889,28 @@ blockquote.wp-block-quote.has-text-align-right {
   padding: 0 28px 0 0;
   margin: 0 0 24px; }
   .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
-    padding: .5em 0;
+    padding: 0.5em 0;
     margin-bottom: 0;
     font-size: 1em;
     font-weight: 500;
     color: #222222; }
   .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-price.price {
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
     color: #555;
-    font-size: .9em;
+    font-size: 0.9em;
     line-height: 1.5; }
   .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-rating {
     line-height: 1.5;
-    margin-bottom: .5em; }
+    margin-bottom: 0.5em; }
     .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-rating .star-rating span::before {
       color: #f7de00; }
   .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-image {
-    margin-bottom: .5em; }
+    margin-bottom: 0.5em; }
     .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-image img {
       border-radius: 7px; }
 
-.wc-block-grid.has-4-columns:not(.alignwide):not(.alignfull) .wc-block-grid__product {
+.wc-block-grid.has-4-columns:not(.alignwide):not(.alignfull)
+.wc-block-grid__product {
   font-size: 1rem; }
 
 .wc-block-grid.alignfull {

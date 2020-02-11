@@ -15,8 +15,8 @@ ul.conversions_homepage_sorting li {
 
 ul.conversions_homepage_sorting li:hover {
 	border-color: #999;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
-	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 ul.conversions_homepage_sorting li .visibility {
@@ -35,7 +35,7 @@ ul.conversions_homepage_sorting li .visibility {
 
 ul.conversions_homepage_sorting li .visibility:before {
 	-webkit-font-smoothing: antialiased;
-	font: normal 14px/1 'dashicons';
+	font: normal 14px/1 "dashicons";
 	content: "\f147";
 	position: absolute;
 	top: 0;
