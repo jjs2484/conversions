@@ -10951,9 +10951,6 @@ section.c-hero {
   padding: 2rem 0; }
   section.c-hero p.lead.c-hero__description {
     margin-bottom: 1.5rem; }
-  @media (min-width: 576px) {
-    section.c-hero .c-hero__callout-btn {
-      margin-right: 1.5rem; } }
   section.c-hero .c-hero__fb-video {
     display: block;
     margin-top: 1rem; }
@@ -10962,7 +10959,8 @@ section.c-hero {
     @media (min-width: 576px) {
       section.c-hero .c-hero__fb-video {
         display: inline-block;
-        margin-top: 0; } }
+        margin-top: 0;
+        margin-left: 1.5rem; } }
     section.c-hero .c-hero__fb-video .c-hero__video-btn.btn--circle {
       width: 50px;
       height: 50px;
@@ -11503,6 +11501,15 @@ figure.wp-block-pullquote > blockquote {
   font-size: 13px;
   text-align: center; }
 
+figcaption.blocks-gallery-caption {
+  margin-top: .25rem;
+  margin-bottom: 1em;
+  color: #555d66;
+  font-size: 13px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto; }
+
 .wp-block-audio,
 .wp-block-image,
 .wp-block-embed,
@@ -11552,6 +11559,10 @@ figure.wp-block-pullquote > blockquote {
 .wp-block-cover h6:not(.has-text-color),
 .wp-block-cover p:not(.has-text-color) {
   color: #f8f9f9; }
+
+.wp-block-group.has-background {
+  padding: 20px 30px;
+  margin-bottom: 1.5rem; }
 
 .wp-block-calendar tbody td,
 .wp-block-calendar th {

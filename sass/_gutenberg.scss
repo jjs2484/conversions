@@ -83,6 +83,15 @@ figure.wp-block-pullquote > blockquote {
 		text-align: center;
 	}
 }
+figcaption.blocks-gallery-caption {
+	margin-top: .25rem;
+	margin-bottom: 1em;
+	color: #555d66;
+	font-size: 13px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
 
 // Images, embeds, cover spacing
 .wp-block-audio,
@@ -136,6 +145,12 @@ figure.wp-block-pullquote > blockquote {
 .wp-block-cover h6:not(.has-text-color),
 .wp-block-cover p:not(.has-text-color) {
 	color: #f8f9f9;
+}
+
+// Block group
+.wp-block-group.has-background {
+	padding: 20px 30px;
+	margin-bottom: 1.5rem;
 }
 
 // Calender

@@ -199,11 +199,6 @@ section.c-hero {
 	p.lead.c-hero__description {
 		margin-bottom: 1.5rem;
 	}
-	.c-hero__callout-btn {
-		@media (min-width: 576px) {
-			margin-right: 1.5rem;
-		}
-	}
 	.c-hero__fb-video {
 		display: block;
 		margin-top: 1rem;
@@ -213,6 +208,7 @@ section.c-hero {
 		@media (min-width: 576px) {
 			display: inline-block;
 			margin-top: 0;
+			margin-left: 1.5rem;
 		}
 		.c-hero__video-btn {
 			&.btn--circle {
