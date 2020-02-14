@@ -87,7 +87,9 @@ class Homepage {
 
 		$sections = static::get_sorted_sections();
 		$counter  = 1;
-		foreach ( $sections as $section_id => $ignore ) {
+		foreach ( $sections as $section_id => $section ) {
+			if ( isset( $section[ 'disabled' ] ) )
+				continue;
 			add_action( 'homepage', [ $this, $section_id ], $counter * 100 );
 			$counter++;
 		}
