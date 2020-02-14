@@ -69,7 +69,7 @@ Full documentation: https://conversionswp.com/documentation/
 * Fix: remove no-sidebar class from wrapper of singular download posts.
 * Fix: add page title to blog index if not front page.
 * Fix: center posts pagination.
-* Fix: make some homepage sections visibility checking more robust.
+* Fix: add some extra checks for homepage sections visibility.
 
 == Resources ==
 
