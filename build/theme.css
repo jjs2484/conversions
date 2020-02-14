@@ -11022,8 +11022,10 @@ section.c-features .row:first-of-type .c-features__block {
   section.c-features .row:first-of-type .c-features__block .card {
     text-align: center;
     background-color: transparent; }
-    section.c-features .row:first-of-type .c-features__block .card .c-features__block-icon i {
-      font-size: 3rem; }
+    section.c-features .row:first-of-type .c-features__block .card .c-features__block-icon {
+      display: block; }
+      section.c-features .row:first-of-type .c-features__block .card .c-features__block-icon i {
+        font-size: 3rem; }
 section.c-features .c-features__block-desc {
   color: #6c757d;
   margin-bottom: 1rem; }

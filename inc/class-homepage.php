@@ -165,7 +165,7 @@ class Homepage {
 		$features_decoded = json_decode( $features );
 		if ( ! $features_decoded )
 			return false;
-		$has_features = ( $features_decoded[ 0 ]->text != '' );
+		$has_features = ( $features_decoded[ 0 ]->icon_value != '' || $features_decoded[ 0 ]->title != '' );
 		if ( ! $has_features )
 			return false;
 		return $features_decoded;
@@ -207,7 +207,7 @@ class Homepage {
 		if ( ! $pricing )
 			return false;
 
-		$has_pricing = ( $pricing[ 0 ]->title != '' );
+		$has_pricing = ( $pricing[ 0 ]->title != '' || $pricing[ 0 ]->subtitle != '' );
 
 		if ( ! $has_pricing )
 			return false;
@@ -257,7 +257,7 @@ class Homepage {
 		if ( ! $testimonials )
 			return false;
 
-		$has_testimonials = ( $testimonials[ 0 ]->text != '' );
+		$has_testimonials = ( $testimonials[ 0 ]->title != '' || $testimonials[ 0 ]->text != '' );
 
 		if ( ! $has_testimonials )
 			return false;
