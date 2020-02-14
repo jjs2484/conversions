@@ -76,11 +76,9 @@ class Enqueue {
 
 			// Enqueue headings font.
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			wp_register_style(
+			wp_register_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
 				'conversions-gutenberg-heading-font',
-				'//fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap',
-				array(),
-				$theme_version
+				'//fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap'
 			);
 			wp_enqueue_style( 'conversions-gutenberg-heading-font' );
 
@@ -89,11 +87,9 @@ class Enqueue {
 			if ( $body_font === $headings_font ) {
 				return;
 			} else {
-				wp_register_style(
+				wp_register_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
 					'conversions-gutenberg-body-font',
-					'//fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap',
-					array(),
-					$theme_version
+					'//fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap'
 				);
 				wp_enqueue_style( 'conversions-gutenberg-body-font' );
 			}
@@ -299,11 +295,9 @@ class Enqueue {
 
 			// Headings font.
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			wp_enqueue_style(
+			wp_enqueue_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
 				'conversions-heading-gfont',
-				'//fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap',
-				array(),
-				$theme_version
+				'//fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap'
 			);
 
 			// Body font.
@@ -311,11 +305,9 @@ class Enqueue {
 			if ( $body_font === $headings_font ) {
 				return;
 			} else {
-				wp_enqueue_style(
+				wp_enqueue_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
 					'conversions-body-gfont',
-					'//fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap',
-					array(),
-					$theme_version
+					'//fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap'
 				);
 			}
 		}
