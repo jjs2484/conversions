@@ -71,6 +71,7 @@ Full documentation: https://conversionswp.com/documentation/
 * Fix: center posts pagination.
 * Fix: add some extra checks for homepage sections visibility.
 * Fix: only show comment count in post meta if 1+ exists.
+* Fix: add missing ob_start to beginning of news_content
 
 == Resources ==
 
