@@ -945,7 +945,10 @@ class Homepage {
 	 * @since 2019-12-19
 	 */
 	public function news_content() {
-		$news       = $this->get_news();
+		$news = $this->get_news();
+		if ( ! $news )
+			return;
+		ob_start();
 		$news_count = 0;
 		while ( $news->have_posts() ) :
 			$news->the_post();
@@ -976,7 +979,7 @@ class Homepage {
 						<p class="text-muted">
 							<?php
 							$related_content = strip_shortcodes( get_the_content() );
-							echo wp_trim_words( $related_content, 15, '...' );
+							echo wp_kses_post( wp_trim_words( $related_content, 15, '...' ) );
 							?>
 						</p>
 					</div>

@@ -133,7 +133,7 @@ class Template {
 
 		?>
 
-		<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+		<nav aria-label="<?php echo esc_attr( $args['screen_reader_text'] ); ?>">
 			<ul class="pagination justify-content-center">
 				<?php
 				foreach ( $links as $key => $link ) {
@@ -248,11 +248,15 @@ class Template {
 
 		if ( comments_open() ) {
 			if ( 0 == $num_comments ) { // phpcs:ignore WordPress.PHP.StrictComparisons.LooseComparison
-				$comments = __( 'No Comments', 'conversions' );
+				$comments = '';
 			} elseif ( $num_comments > 0 ) {
-				$comments = $num_comments;
+				$comments = sprintf(
+					'<span class="c-single-comments"><a href="%s">%s</a></span>',
+					esc_url( get_comments_link() ),
+					esc_html( $num_comments )
+				);
 			}
-			echo '<span class="c-single-comments"><a href="' . esc_url( get_comments_link() ) . '">' . $comments . '</a></span>';
+			echo $comments; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 	}
 
@@ -340,7 +344,7 @@ class Template {
 								<p class="text-muted">
 									<?php
 									$related_content = strip_shortcodes( get_the_content() );
-									echo wp_trim_words( $related_content, 15, '...' );
+									echo wp_kses_post( wp_trim_words( $related_content, 15, '...' ) );
 									?>
 								</p>
 							</div>
@@ -514,7 +518,8 @@ class Template {
 		}
 
 		echo sprintf(
-			'&copy;' . gmdate( 'Y' ) . '&nbsp;&bull;&nbsp;<a class="site-name" href="%s" rel="home">%s</a>',
+			'&copy;%s&nbsp;&bull;&nbsp;<a class="site-name" href="%s" rel="home">%s</a>',
+			esc_html( gmdate( 'Y' ) ),
 			esc_url( home_url( '/' ) ),
 			esc_html( $copyright_text )
 		);
