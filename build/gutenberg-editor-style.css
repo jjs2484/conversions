@@ -416,7 +416,8 @@ input[type="button"].btn-block {
 
 .editor-styles-wrapper {
   margin-left: 30px;
-  margin-right: 30px; }
+  margin-right: 30px;
+  padding-bottom: 50px; }
 
 .wp-block {
   max-width: 1140px; }
