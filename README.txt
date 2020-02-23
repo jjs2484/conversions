@@ -80,3 +80,4 @@ Full documentation: https://conversionswp.com/documentation/
 * Font Awesome v5.12.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * Slick v1.8.1 | MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
+* WP Bootstrap Comment Walker | GPL-3.0+
