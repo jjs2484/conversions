@@ -1,15 +1,13 @@
 <?php
 /**
- * Plugin Name: WP Bootstrap Comment Walker
- * Plugin URI:  https://github.com/wp-bootstrap/wp-bootstrap-comment-walker
- * Version: 2.0.5
- * Description: A WordPress class to format WordPress Comments to Twitter Bootstrap.
- * Author: WP-Bootstrap
- * Author URI: https://github.com/wp-bootstrap
- * GitHub Plugin URI: https://github.com/wp-bootstrap/wp-bootstrap-comment-walker
- * GitHub Branch: master
- * License: GPL-3.0+
- * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+ * Plugin Name: WP Bootstrap Comments
+ * Plugin URI:  http://darrinb.com/plugins/wp-bootstrap-comments
+ * Description: Easily build valid Bootstrap v3 comment lists. Includes nested comments.
+ * Version:     0.1.0
+ * Author:      Darrin Boutote
+ * Author URI:  http://darrinb.com
+ * License:     GPL2
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
 namespace conversions;
