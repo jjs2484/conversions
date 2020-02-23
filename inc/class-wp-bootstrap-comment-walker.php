@@ -155,7 +155,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 		$comment_classes = apply_filters( 'wp_bootstrap_comment_class', $comment_classes, $comment, $depth, $args );
 		$class_str       = implode( ' ', $comment_classes );
 		?>
-		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $class_str, $comment ); ?>>
+		<<?php echo esc_html( $tag ); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $class_str, $comment ); ?>>
 
 			<div class="media">
 
@@ -167,14 +167,24 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 
 					<div class="comment-meta">
 						<div class="comment-author vcard">
-							<?php printf( __( '%s <span class="says sr-only">says:</span>', 'conversions' ), sprintf( '<b class="media-heading fn">%s</b>', get_comment_author_link( $comment ) ) ); ?>
+							<?php
+							printf(
+								/* translators: 1: Comment author name and HTML link of the comment author’s URL. */
+								__( '%s <span class="says sr-only">says:</span>', 'conversions' ),
+								sprintf( '<b class="media-heading fn">%s</b>', get_comment_author_link( $comment ) )
+							);
+							?>
 						</div><!-- /.comment-author -->
 
 						<ul class="comment-metadata list-inline">
 							<li class="list-inline-item">
 								<time datetime="<?php comment_time( 'c' ); ?>">
 									<?php
-										printf( _x( '%s ago', '%s = human-readable time difference', 'conversions' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
+									printf(
+										/* translators: 1: human-readable time difference. */
+										_x( '%s ago', '%s = human-readable time difference', 'conversions' ),
+										human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) )
+									);
 									?>
 								</time>
 							</li>
@@ -245,7 +255,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 					</div><!-- /.child-comments -->
 				</div><!-- /.media-body -->
 			</div><!-- /.media -->
-		</<?php echo $tag; ?>><!-- /.parent -->
+		</<?php echo esc_html( $tag ); ?>><!-- /.parent -->
 
 		<?php
 	}
@@ -268,7 +278,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 		$comment_classes   = apply_filters( 'wp_bootstrap_comment_class', $comment_classes, $comment, $depth, $args );
 		$class_str         = implode( ' ', $comment_classes );
 		?>
-		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $class_str, $comment ); ?>>
+		<<?php echo esc_html( $tag ); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $class_str, $comment ); ?>>
 			<div class="comment-body">
 				<div class="media-body">
 					<?php esc_html_e( 'Pingback:', 'conversions' ); ?> <?php comment_author_link( $comment ); ?> <?php edit_comment_link( __( 'Edit', 'conversions' ), '<span class="edit-link">', '</span>' ); ?>

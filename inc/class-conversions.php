@@ -257,6 +257,7 @@ namespace conversions
 		}
 	}
 }
+
 namespace
 {
 	/**

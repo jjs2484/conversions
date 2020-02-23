@@ -548,6 +548,7 @@ class Conversions_Repeater extends \WP_Customize_Control {
 			<span class="description customize-control-description">
 				<?php
 					echo sprintf(
+						/* translators: 1: <a href...>Fontawesome</a> */
 						esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %1$s.', 'conversions' ),
 						sprintf(
 							'<a href="%s" rel="nofollow" target="_blank">%s</a>',

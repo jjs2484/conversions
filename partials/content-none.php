@@ -29,6 +29,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php
 				printf(
 					wp_kses(
+						/* translators: 1: url. */
 						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'conversions' ),
 						array( 'a' => array( 'href' => array() ) )
 					),
