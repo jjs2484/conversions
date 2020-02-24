@@ -20,14 +20,12 @@ if ( post_password_required() ) {
 
 <div class="comments-area" id="comments">
 
-	<?php // You can start editing here -- including this comment! ?>
-
 	<?php if ( have_comments() ) : ?>
 
 		<h3 class="comments-title pb-2 border-bottom">
 
 			<?php
-			$comments_number = get_comments_number();
+			$comments_number = absint( get_comments_number() );
 			if ( 1 === (int) $comments_number ) {
 				printf(
 					/* translators: %s: post title */
@@ -46,7 +44,7 @@ if ( post_password_required() ) {
 							'conversions'
 						)
 					),
-					number_format_i18n( $comments_number ),
+					esc_html( number_format_i18n( $comments_number ) ),
 					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
 			}

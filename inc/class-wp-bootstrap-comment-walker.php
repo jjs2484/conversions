@@ -8,6 +8,10 @@
  * Author URI:  http://darrinb.com
  * License:     GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * NOTE: Credited comment walker has been modified to work with Bootstrap 4.
+ *
+ * @package conversions
  */
 
 namespace conversions;
@@ -160,16 +164,20 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 				<div class="commenter d-flex flex-row mb-1">
 
 					<?php if ( 0 != $args['avatar_size'] && 'pingback' !== $type && 'trackback' !== $type ) { ?>
-						<?php echo $this->get_comment_author_avatar( $comment, $args ); ?>
+						<?php echo get_avatar( $comment, $args['avatar_size'], '', '', array( 'class' => 'comment_avatar mr-3' ) ); ?>
 					<?php }; ?>
 
 					<div class="comment-meta">
 						<div class="comment-author vcard">
 							<?php
 							printf(
-								/* translators: 1: Comment author name and HTML link of the comment author’s URL. */
-								__( '%s <span class="says sr-only">says:</span>', 'conversions' ),
-								sprintf( '<b class="media-heading fn">%s</b>', get_comment_author_link( $comment ) )
+								/* translators: 1: Comment author name and HTML link. 2: Screen reader text. */
+								'%s <span class="says sr-only">%s</span>',
+								sprintf(
+									'<b class="media-heading fn">%s</b>',
+									get_comment_author_link( $comment )
+								),
+								esc_html__( 'says:', 'conversions' )
 							);
 							?>
 						</div><!-- /.comment-author -->
@@ -179,9 +187,12 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 								<time datetime="<?php comment_time( 'c' ); ?>">
 									<?php
 									printf(
-										/* translators: 1: human-readable time difference. */
-										_x( '%s ago', '%s = human-readable time difference', 'conversions' ),
-										human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) )
+										/* translators: time. */
+										esc_html__( '%s ago', 'conversions' ),
+										human_time_diff( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+											get_comment_time( 'U' ),
+											strtotime( wp_date( 'Y-m-d H:i:s' ) )
+										)
 									);
 									?>
 								</time>
@@ -284,19 +295,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 			</div><!-- /.comment-body -->
 		<?php
 	}
-	/**
-	 * Generate avatar markup
-	 *
-	 * @access protected
-	 * @since 0.1.0
-	 *
-	 * @param object $comment Comment to display.
-	 * @param array  $args    An array of arguments.
-	 */
-	protected function get_comment_author_avatar( $comment, $args ) {
-		$avatar_string = get_avatar( $comment, $args['avatar_size'], '', '', array( 'class' => 'comment_avatar mr-3' ) );
-		return $avatar_string;
-	}
+
 	/**
 	 * Displays the HTML content for reply to comment link.
 	 *
