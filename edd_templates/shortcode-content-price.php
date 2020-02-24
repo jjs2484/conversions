@@ -12,13 +12,13 @@ $download_id = get_the_ID();
 
 // Get the prices.
 if ( edd_is_free_download( $download_id ) ) {
-	$price = __( 'Free', 'conversions' );
+	$price = esc_html__( 'Free', 'conversions' );
 } elseif ( edd_has_variable_prices( $download_id ) ) {
 	$price = edd_price_range( $download_id );
 } else {
-	$price = edd_price( $download_id );
+	$price = esc_html( edd_price( $download_id ) );
 }
 
-echo esc_html( $price );
+echo $price; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
 
 echo '</div></div>';

@@ -65,7 +65,7 @@ class Easy_Digital_Downloads {
 		if ( edd_is_free_download( $download_id ) ) {
 			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . esc_html__( 'Free', 'conversions' ) . '</h3>';
 		} elseif ( edd_has_variable_prices( $download_id ) ) {
-			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . esc_html( edd_price_range( $download_id ) ) . '</h3>';
+			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . edd_price_range( $download_id ) . '</h3>';
 		} else {
 			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . esc_html( edd_price( $download_id, false ) ) . '</h3>';
 		}
