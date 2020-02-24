@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.3.2
 Requires PHP: 5.6.20
-Stable tag: 1.5
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,13 @@ Full documentation: https://conversionswp.com/documentation/
 * Fix: add some extra checks for homepage sections visibility.
 * Fix: only show comment count in post meta if 1+ exists.
 * Fix: add missing ob_start to beginning of news_content
+
+= 1.5.1 =
+* New: add bottom padding to Gutenberg editor.
+* Update: add License info for Bootstrap WP nav and comment walkers.
+* Update: refactor comments.php
+* Update: refactor inc/class-template.php
+* Update: more escaping inc/class-wp-bootstrap-comment-walker.php
 
 == Resources ==
 
