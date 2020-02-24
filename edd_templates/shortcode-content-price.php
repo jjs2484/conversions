@@ -16,7 +16,7 @@ if ( edd_is_free_download( $download_id ) ) {
 } elseif ( edd_has_variable_prices( $download_id ) ) {
 	$price = edd_price_range( $download_id );
 } else {
-	$price = esc_html( edd_price( $download_id ) );
+	$price = edd_price( $download_id );
 }
 
 echo $price; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier

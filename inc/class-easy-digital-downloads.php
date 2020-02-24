@@ -67,7 +67,7 @@ class Easy_Digital_Downloads {
 		} elseif ( edd_has_variable_prices( $download_id ) ) {
 			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . edd_price_range( $download_id ) . '</h3>';
 		} else {
-			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . esc_html( edd_price( $download_id ) ) . '</h3>';
+			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . edd_price( $download_id, false ) . '</h3>';
 		}
 
 		echo $price; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
