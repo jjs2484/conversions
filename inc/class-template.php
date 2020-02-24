@@ -140,7 +140,11 @@ class Template {
 					?>
 					<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
 						<?php
-						echo str_replace( 'page-numbers', 'page-link', $link );
+						echo str_replace( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							'page-numbers',
+							'page-link',
+							$link
+						);
 						?>
 					</li>
 					<?php
@@ -189,15 +193,11 @@ class Template {
 	 * @since 2019-09-10
 	 */
 	public function posted_by() {
-		$byline = apply_filters(
-			'conversions_posted_by',
-			sprintf(
-				'<span class="author vcard c-posted-by"><a class="url fn n" href="%1$s"> %2$s</a></span>',
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_html( get_the_author() )
-			)
+		echo sprintf(
+			'<span class="author vcard c-posted-by"><a class="url fn n" href="%1$s"> %2$s</a></span>',
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_html( get_the_author() )
 		);
-		echo $byline; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -206,20 +206,11 @@ class Template {
 	 * @since 2019-08-18
 	 */
 	public function posted_on() {
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		$time_string = sprintf(
-			$time_string,
+		echo sprintf(
+			'<span class="c-posted-on"><time class="entry-date published updated" datetime="%1$s">%2$s</time></span>',
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() )
 		);
-		$posted_on   = apply_filters(
-			'conversions_posted_on',
-			sprintf(
-				'<span class="c-posted-on">%1$s</span>',
-				apply_filters( 'conversions_posted_on_time', $time_string )
-			)
-		);
-		echo $posted_on; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -231,10 +222,13 @@ class Template {
 		$content          = get_the_content();
 		$word_count       = str_word_count( wp_strip_all_tags( $content ) );
 		$readingtime      = ceil( $word_count / 200 );
-		$time_unit        = esc_html_x( 'min read', 'time unit', 'conversions' );
-		$totalreadingtime = sprintf( "<span class='c-reading-time'>%d %s</span>", esc_html( $readingtime ), $time_unit );
+		$time_unit        = _x( 'min read', 'time unit', 'conversions' );
 
-		echo $totalreadingtime; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo sprintf(
+			'<span class="c-reading-time">%d %s</span>',
+			esc_html( $readingtime ),
+			esc_html( $time_unit )
+		);
 	}
 
 	/**
@@ -256,7 +250,7 @@ class Template {
 					esc_html( $num_comments )
 				);
 			}
-			echo $comments; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $comments; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- $comments is escaped before being passed in.
 		}
 	}
 
