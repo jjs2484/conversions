@@ -219,10 +219,10 @@ class Template {
 	 * @since 2019-09-05
 	 */
 	public function reading_time() {
-		$content          = get_the_content();
-		$word_count       = str_word_count( wp_strip_all_tags( $content ) );
-		$readingtime      = ceil( $word_count / 200 );
-		$time_unit        = _x( 'min read', 'time unit', 'conversions' );
+		$content     = get_the_content();
+		$word_count  = str_word_count( wp_strip_all_tags( $content ) );
+		$readingtime = ceil( $word_count / 200 );
+		$time_unit   = _x( 'min read', 'time unit', 'conversions' );
 
 		echo sprintf(
 			'<span class="c-reading-time">%d %s</span>',
