@@ -19,6 +19,6 @@ if ( edd_is_free_download( $download_id ) ) {
 	$price = edd_price( $download_id );
 }
 
-echo $price;
+echo esc_html( $price );
 
 echo '</div></div>';

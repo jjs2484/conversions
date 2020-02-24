@@ -19,7 +19,7 @@ $edd_primary_btn = get_theme_mod( 'conversions_edd_primary_btn', 'btn-primary' )
 		</div>
 		<?php
 	} else {
-		echo edd_get_purchase_link(
+		echo edd_get_purchase_link( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
 			array(
 				'class'       => 'btn btn-lg btn-block ' . esc_attr( $edd_primary_btn ) . '',
 				'download_id' => get_the_ID(),
