@@ -1,40 +1,33 @@
 // Comments section
-#comments {
-	&.comments-area {
-		#respond.comment-respond {
-			margin-top: 1em;
-		}
-		h3.comments-title {
-			margin-bottom: 1.5rem;
-		}
+.comments-area {
+	#respond {
+		margin-top: 1rem;
+	}
+	.comments-title {
+		margin-bottom: 1.5rem;
+	}
 
-		// pingbacks and trackbacks
-		li.pingback,
-		li.trackback {
-			margin-bottom: 1.5rem;
+	// Pingbacks and trackbacks
+	.pingback,
+	.trackback {
+		margin-bottom: 1.5rem;
 
-			.comment-body {
-				width: 100% !important;
-				background: #f7f7f7;
-				border: 1px solid #e3e3e3;
-				padding: 1.5rem;
-				border-radius: 5px;
+		.comment-body {
+			width: 100% !important;
+			background: #f7f7f7;
+			border: 1px solid #e3e3e3;
+			padding: 1.5rem;
+			border-radius: 5px;
 
-				.edit-link {
-					margin-left: 1rem;
-				}
+			.edit-link {
+				margin-left: 1rem;
 			}
 		}
+	}
 
-		.comment .media {
-			// stack on smaller screens
+	.comment {
+		.media {
 			flex-direction: column;
-
-			// Children styles
-			ul.children {
-				padding-left: 0.75em;
-				list-style: none;
-			}
 
 			// Avatar
 			.avatar {
@@ -43,8 +36,7 @@
 				align-self: flex-start;
 			}
 
-			// Icons
-			// user
+			// User
 			.media-heading {
 				&::before {
 					font-family: "Font Awesome 5 Free";
@@ -60,7 +52,8 @@
 					}
 				}
 			}
-			// time
+
+			// Time
 			.comment-metadata time {
 				&::before {
 					font-family: "Font Awesome 5 Free";
@@ -69,8 +62,9 @@
 					margin-right: 1px;
 				}
 			}
-			// permalink
-			span.comm-perm {
+			
+			// Permalink
+			.comm-perm {
 				&::before {
 					font-family: "Font Awesome 5 Free";
 					content: "\f02e";
@@ -83,13 +77,19 @@
 				}
 			}
 
-			// content
+			// Content
 			.comment-content {
 				background: #f7f7f7;
 				border: 1px solid #e3e3e3;
 				padding: 1.5rem 1.5rem 0.2rem;
 				border-radius: 5px;
 			}
+		}
+
+		// Children styles
+		.children {
+			padding-left: 0.75em;
+			list-style: none;
 		}
 	}
 }

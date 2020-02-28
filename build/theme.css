@@ -11198,62 +11198,62 @@ section.c-testimonials .c-testimonials__quote {
 #error-404-wrapper #main div.widget {
   margin-bottom: 1.5rem; }
 
-#comments.comments-area #respond.comment-respond {
-  margin-top: 1em; }
-#comments.comments-area h3.comments-title {
+.comments-area #respond {
+  margin-top: 1rem; }
+.comments-area .comments-title {
   margin-bottom: 1.5rem; }
-#comments.comments-area li.pingback,
-#comments.comments-area li.trackback {
+.comments-area .pingback,
+.comments-area .trackback {
   margin-bottom: 1.5rem; }
-  #comments.comments-area li.pingback .comment-body,
-  #comments.comments-area li.trackback .comment-body {
+  .comments-area .pingback .comment-body,
+  .comments-area .trackback .comment-body {
     width: 100% !important;
     background: #f7f7f7;
     border: 1px solid #e3e3e3;
     padding: 1.5rem;
     border-radius: 5px; }
-    #comments.comments-area li.pingback .comment-body .edit-link,
-    #comments.comments-area li.trackback .comment-body .edit-link {
+    .comments-area .pingback .comment-body .edit-link,
+    .comments-area .trackback .comment-body .edit-link {
       margin-left: 1rem; }
-#comments.comments-area .comment .media {
+.comments-area .comment .media {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column; }
-  #comments.comments-area .comment .media ul.children {
-    padding-left: 0.75em;
-    list-style: none; }
-  #comments.comments-area .comment .media .avatar {
+  .comments-area .comment .media .avatar {
     border-radius: 50%;
     height: 100%;
     align-self: flex-start; }
-  #comments.comments-area .comment .media .media-heading::before {
+  .comments-area .comment .media .media-heading::before {
     font-family: "Font Awesome 5 Free";
     content: "\f007";
     color: #6c757d;
     margin-right: 5px; }
-  #comments.comments-area .comment .media .media-heading a {
+  .comments-area .comment .media .media-heading a {
     color: #6c757d;
     text-decoration: underline; }
-    #comments.comments-area .comment .media .media-heading a:hover {
+    .comments-area .comment .media .media-heading a:hover {
       color: #5a6268; }
-  #comments.comments-area .comment .media .comment-metadata time::before {
+  .comments-area .comment .media .comment-metadata time::before {
     font-family: "Font Awesome 5 Free";
     content: "\f017";
     color: #6c757d;
     margin-right: 1px; }
-  #comments.comments-area .comment .media span.comm-perm::before {
+  .comments-area .comment .media .comm-perm::before {
     font-family: "Font Awesome 5 Free";
     content: "\f02e";
     color: #6c757d;
     margin-right: 2px; }
-  #comments.comments-area .comment .media span.comm-perm a {
+  .comments-area .comment .media .comm-perm a {
     color: #6c757d;
     text-decoration: underline; }
-  #comments.comments-area .comment .media .comment-content {
+  .comments-area .comment .media .comment-content {
     background: #f7f7f7;
     border: 1px solid #e3e3e3;
     padding: 1.5rem 1.5rem 0.2rem;
     border-radius: 5px; }
+.comments-area .comment .children {
+  padding-left: 0.75em;
+  list-style: none; }
 
 #sidebar-2,
 #sidebar-1 {
