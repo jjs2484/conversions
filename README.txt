@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.3.2
 Requires PHP: 5.6.20
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,6 +79,11 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: refactor comments.php
 * Update: refactor inc/class-template.php
 * Update: more escaping inc/class-wp-bootstrap-comment-walker.php
+
+= 1.5.2 =
+* Update: refactor comment walker.
+* Update: refactor comment styles.
+* Update: exclude WooCommerce files from WPCS.
 
 == Resources ==
 
