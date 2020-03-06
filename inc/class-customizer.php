@@ -74,7 +74,7 @@ namespace conversions
 		 */
 		public function customize_register( $wp_customize ) {
 			// require customizer repeater.
-			require get_template_directory() . '/inc/class-conversions-repeater.php';
+			require get_theme_file_path( '/inc/class-conversions-repeater.php' );
 
 			// font choices.
 			$font_choices = [
@@ -186,24 +186,24 @@ namespace conversions
 			// -----------------------------------------------------
 			// Include customizer sections
 			// -----------------------------------------------------
-			include __DIR__ . '/customizer/navbar.php';
-			include __DIR__ . '/customizer/layout.php';
-			include __DIR__ . '/customizer/typography.php';
-			include __DIR__ . '/customizer/call-to-action.php';
-			include __DIR__ . '/customizer/footer-colors.php';
-			include __DIR__ . '/customizer/blog.php';
-			include __DIR__ . '/customizer/featured-image.php';
-			include __DIR__ . '/customizer/woocommerce.php';
-			include __DIR__ . '/customizer/homepage.php';
-			include __DIR__ . '/customizer/homepage.hero.php';
-			include __DIR__ . '/customizer/homepage.clients.php';
-			include __DIR__ . '/customizer/homepage.features.php';
-			include __DIR__ . '/customizer/homepage.pricing.php';
-			include __DIR__ . '/customizer/homepage.testimonials.php';
-			include __DIR__ . '/customizer/homepage.news.php';
-			include __DIR__ . '/customizer/homepage.woocommerce.php';
-			include __DIR__ . '/customizer/homepage.edd.php';
-			include __DIR__ . '/customizer/edd.php';
+			include get_theme_file_path( '/inc/customizer/navbar.php' );
+			include get_theme_file_path( '/inc/customizer/layout.php' );
+			include get_theme_file_path( '/inc/customizer/typography.php' );
+			include get_theme_file_path( '/inc/customizer/call-to-action.php' );
+			include get_theme_file_path( '/inc/customizer/footer-colors.php' );
+			include get_theme_file_path( '/inc/customizer/blog.php' );
+			include get_theme_file_path( '/inc/customizer/featured-image.php' );
+			include get_theme_file_path( '/inc/customizer/woocommerce.php' );
+			include get_theme_file_path( '/inc/customizer/homepage.php' );
+			include get_theme_file_path( '/inc/customizer/homepage.hero.php' );
+			include get_theme_file_path( '/inc/customizer/homepage.clients.php' );
+			include get_theme_file_path( '/inc/customizer/homepage.features.php' );
+			include get_theme_file_path( '/inc/customizer/homepage.pricing.php' );
+			include get_theme_file_path( '/inc/customizer/homepage.testimonials.php' );
+			include get_theme_file_path( '/inc/customizer/homepage.news.php' );
+			include get_theme_file_path( '/inc/customizer/homepage.woocommerce.php' );
+			include get_theme_file_path( '/inc/customizer/homepage.edd.php' );
+			include get_theme_file_path( '/inc/customizer/edd.php' );
 		}
 
 		/**

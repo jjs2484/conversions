@@ -8,4 +8,4 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-require_once __DIR__ . '/inc/class-conversions.php';
+require_once get_theme_file_path( '/inc/class-conversions.php' );
