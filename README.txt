@@ -85,6 +85,9 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: refactor comment styles.
 * Update: exclude WooCommerce files from WPCS.
 
+= 1.5.3 =
+* Update: use get_theme_file_path to add class and customizer files for easy overriding.
+
 == Resources ==
 
 * Bootstrap 4.4.1 | MIT License
