@@ -74,7 +74,7 @@ namespace conversions
 		 */
 		public function customize_register( $wp_customize ) {
 			// require customizer repeater.
-			require get_theme_file_path( '/inc/class-conversions-repeater.php' );
+			require get_parent_theme_file_path( '/inc/class-conversions-repeater.php' );
 
 			// font choices.
 			$font_choices = [
@@ -186,24 +186,24 @@ namespace conversions
 			// -----------------------------------------------------
 			// Include customizer sections
 			// -----------------------------------------------------
-			include get_theme_file_path( '/inc/customizer/navbar.php' );
-			include get_theme_file_path( '/inc/customizer/layout.php' );
-			include get_theme_file_path( '/inc/customizer/typography.php' );
-			include get_theme_file_path( '/inc/customizer/call-to-action.php' );
-			include get_theme_file_path( '/inc/customizer/footer-colors.php' );
-			include get_theme_file_path( '/inc/customizer/blog.php' );
-			include get_theme_file_path( '/inc/customizer/featured-image.php' );
-			include get_theme_file_path( '/inc/customizer/woocommerce.php' );
-			include get_theme_file_path( '/inc/customizer/homepage.php' );
-			include get_theme_file_path( '/inc/customizer/homepage.hero.php' );
-			include get_theme_file_path( '/inc/customizer/homepage.clients.php' );
-			include get_theme_file_path( '/inc/customizer/homepage.features.php' );
-			include get_theme_file_path( '/inc/customizer/homepage.pricing.php' );
-			include get_theme_file_path( '/inc/customizer/homepage.testimonials.php' );
-			include get_theme_file_path( '/inc/customizer/homepage.news.php' );
-			include get_theme_file_path( '/inc/customizer/homepage.woocommerce.php' );
-			include get_theme_file_path( '/inc/customizer/homepage.edd.php' );
-			include get_theme_file_path( '/inc/customizer/edd.php' );
+			include get_parent_theme_file_path( '/inc/customizer/navbar.php' );
+			include get_parent_theme_file_path( '/inc/customizer/layout.php' );
+			include get_parent_theme_file_path( '/inc/customizer/typography.php' );
+			include get_parent_theme_file_path( '/inc/customizer/call-to-action.php' );
+			include get_parent_theme_file_path( '/inc/customizer/footer-colors.php' );
+			include get_parent_theme_file_path( '/inc/customizer/blog.php' );
+			include get_parent_theme_file_path( '/inc/customizer/featured-image.php' );
+			include get_parent_theme_file_path( '/inc/customizer/woocommerce.php' );
+			include get_parent_theme_file_path( '/inc/customizer/homepage.php' );
+			include get_parent_theme_file_path( '/inc/customizer/homepage.hero.php' );
+			include get_parent_theme_file_path( '/inc/customizer/homepage.clients.php' );
+			include get_parent_theme_file_path( '/inc/customizer/homepage.features.php' );
+			include get_parent_theme_file_path( '/inc/customizer/homepage.pricing.php' );
+			include get_parent_theme_file_path( '/inc/customizer/homepage.testimonials.php' );
+			include get_parent_theme_file_path( '/inc/customizer/homepage.news.php' );
+			include get_parent_theme_file_path( '/inc/customizer/homepage.woocommerce.php' );
+			include get_parent_theme_file_path( '/inc/customizer/homepage.edd.php' );
+			include get_parent_theme_file_path( '/inc/customizer/edd.php' );
 		}
 
 		/**

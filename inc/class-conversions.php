@@ -38,18 +38,18 @@ namespace conversions
 		 * @since 2019-08-18
 		 */
 		public function load() {
-			require_once get_theme_file_path( '/inc/class-comments.php' );
-			require_once get_theme_file_path( '/inc/class-customizer.php' );
-			require_once get_theme_file_path( '/inc/class-enqueue.php' );
-			require_once get_theme_file_path( '/inc/class-extras.php' );
-			require_once get_theme_file_path( '/inc/class-homepage.php' );
-			require_once get_theme_file_path( '/inc/class-navbar.php' );
-			require_once get_theme_file_path( '/inc/class-template.php' );
-			require_once get_theme_file_path( '/inc/class-widgets.php' );
-			require_once get_theme_file_path( '/inc/class-woocommerce.php' );
-			require_once get_theme_file_path( '/inc/class-wp-bootstrap-comment-walker.php' );
-			require_once get_theme_file_path( '/inc/class-wp-bootstrap-navwalker.php' );
-			require_once get_theme_file_path( '/inc/class-easy-digital-downloads.php' );
+			require_once get_parent_theme_file_path( '/inc/class-comments.php' );
+			require_once get_parent_theme_file_path( '/inc/class-customizer.php' );
+			require_once get_parent_theme_file_path( '/inc/class-enqueue.php' );
+			require_once get_parent_theme_file_path( '/inc/class-extras.php' );
+			require_once get_parent_theme_file_path( '/inc/class-homepage.php' );
+			require_once get_parent_theme_file_path( '/inc/class-navbar.php' );
+			require_once get_parent_theme_file_path( '/inc/class-template.php' );
+			require_once get_parent_theme_file_path( '/inc/class-widgets.php' );
+			require_once get_parent_theme_file_path( '/inc/class-woocommerce.php' );
+			require_once get_parent_theme_file_path( '/inc/class-wp-bootstrap-comment-walker.php' );
+			require_once get_parent_theme_file_path( '/inc/class-wp-bootstrap-navwalker.php' );
+			require_once get_parent_theme_file_path( '/inc/class-easy-digital-downloads.php' );
 
 			$this->setup();
 		}

@@ -86,8 +86,8 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: exclude WooCommerce files from WPCS.
 
 = 1.5.3 =
-* Update: use get_theme_file_path to add class and customizer files for easy overriding.
-* Update: use get_theme_file_uri to enqueue scripts and styles for easy overriding.
+* Update: use get_parent_theme_file_path to add class and customizer files for child theme filtering.
+* Update: use get_theme_file_uri to enqueue scripts and styles for child theme overriding.
 
 == Resources ==
 
