@@ -65,7 +65,7 @@ class Enqueue {
 		// Editor styles.
 		wp_register_style(
 			'conversions-gutenberg',
-			get_template_directory_uri() . '/build/gutenberg-editor-style.min.css',
+			get_theme_file_uri( '/build/gutenberg-editor-style.min.css' ),
 			array(),
 			$theme_version
 		);
@@ -254,13 +254,13 @@ class Enqueue {
 		// CSS.
 		wp_enqueue_style(
 			'conversions-styles',
-			get_template_directory_uri() . '/build/theme.min.css',
+			get_theme_file_uri( '/build/theme.min.css' ),
 			array(),
 			$theme_version
 		);
 		wp_enqueue_style(
 			'font-awesome',
-			get_template_directory_uri() . '/build/font-awesome.min.css',
+			get_theme_file_uri( '/build/font-awesome.min.css' ),
 			array(),
 			$theme_version
 		);
@@ -268,7 +268,7 @@ class Enqueue {
 		if ( is_rtl() ) {
 			wp_enqueue_style(
 				'conversions-styles-rtl',
-				get_template_directory_uri() . '/build/theme.rtl.min.css',
+				get_theme_file_uri( '/build/theme.rtl.min.css' ),
 				array(),
 				$theme_version
 			);
@@ -281,7 +281,7 @@ class Enqueue {
 		// Javascript.
 		wp_enqueue_script(
 			'conversions-scripts',
-			get_template_directory_uri() . '/build/theme.min.js',
+			get_theme_file_uri( '/build/theme.min.js' ),
 			array(),
 			$theme_version,
 			true
@@ -327,13 +327,13 @@ class Enqueue {
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_style(
 			'font-awesome',
-			get_template_directory_uri() . '/build/font-awesome.min.css',
+			get_theme_file_uri( '/build/font-awesome.min.css' ),
 			array(),
 			$theme_version
 		);
 		wp_enqueue_style(
 			'conversions-customizer-css',
-			get_template_directory_uri() . '/build/conversions-customizer.min.css',
+			get_theme_file_uri( '/build/conversions-customizer.min.css' ),
 			array(),
 			$theme_version
 		);
@@ -343,7 +343,7 @@ class Enqueue {
 		wp_enqueue_script( 'jquery-ui-sortable' );
 		wp_enqueue_script(
 			'conversions-customizer-js',
-			get_template_directory_uri() . '/build/conversions-customizer.min.js',
+			get_theme_file_uri( '/build/conversions-customizer.min.js' ),
 			array('jquery', 'jquery-ui-draggable', 'wp-color-picker' ),
 			$theme_version,
 			true

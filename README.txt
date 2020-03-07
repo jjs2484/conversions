@@ -87,6 +87,7 @@ Full documentation: https://conversionswp.com/documentation/
 
 = 1.5.3 =
 * Update: use get_theme_file_path to add class and customizer files for easy overriding.
+* Update: use get_theme_file_uri to enqueue scripts and styles for easy overriding.
 
 == Resources ==
 
