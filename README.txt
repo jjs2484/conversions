@@ -88,6 +88,8 @@ Full documentation: https://conversionswp.com/documentation/
 = 1.5.3 =
 * Update: use get_parent_theme_file_path to add class and customizer files for child theme filtering.
 * Update: use get_theme_file_uri to enqueue scripts and styles for child theme overriding.
+* Update: Gutenberg editor styles for markup changes in WordPress 5.4
+* Fix: add Bootstrap colors to button placeholder text in Gutenberg editor.
 
 == Resources ==
 
