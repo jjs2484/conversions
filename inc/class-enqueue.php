@@ -156,15 +156,16 @@ class Enqueue {
 		);
 
 		$custom_gb_css = '
-			.editor-styles-wrapper .editor-writing-flow .editor-post-title__block .editor-post-title__input,
-			.editor-styles-wrapper .editor-writing-flow .wp-block-heading h1,
-			.editor-styles-wrapper .editor-writing-flow .wp-block-heading h2,
-			.editor-styles-wrapper .editor-writing-flow .wp-block-heading h3,
-			.editor-styles-wrapper .editor-writing-flow .wp-block-heading h4,
-			.editor-styles-wrapper .editor-writing-flow .wp-block-heading h5 {
+			.editor-styles-wrapper .editor-post-title__block .editor-post-title__input,
+			.editor-styles-wrapper h1,
+			.editor-styles-wrapper h2,
+			.editor-styles-wrapper h3,
+			.editor-styles-wrapper h4,
+			.editor-styles-wrapper h5 {
 				font-family: ' . esc_html( $headings_font ) . ';
 			}
-			.editor-styles-wrapper .editor-writing-flow {
+			.editor-styles-wrapper .editor-writing-flow,
+			.editor-styles-wrapper .block-editor-writing-flow {
 				font-family: ' . esc_html( $body_font ) . ';
 			}
 			.editor-styles-wrapper a,

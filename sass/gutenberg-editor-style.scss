@@ -6,14 +6,12 @@
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/buttons";
 
-// Add margin to wrapper to avoid overflow
+// Add padding to wrapper to prevent overflow
 .editor-styles-wrapper {
-	margin-left: 30px;
-	margin-right: 30px;
-	padding-bottom: 50px;
+	padding: 50px 30px;
 }
 
-// Block width
+// Block widths
 .wp-block {
 	max-width: 1140px;
 }
@@ -33,67 +31,58 @@
 		margin-left: 1.5em;
 	}
 }
-.editor-block-list__block[data-align="center"] {
+.editor-block-list__block[data-align="center"],
+.block-editor-block-list__block[data-align="center"] {
 	clear: both;
 }
 
 // Titles
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
 	font-weight: 500;
 }
-.editor-styles-wrapper .wp-block-heading {
-	h1 {
+.editor-styles-wrapper .wp-block {
+	h1,
+	.h1 {
 		font-size: 2.5rem;
 	}
-	h2 {
+	h2,
+	.h2 {
 		font-size: 2rem;
 	}
-	h3 {
+	h3,
+	.h3 {
 		font-size: 1.75rem;
 	}
-	h4 {
+	h4,
+	.h4 {
 		font-size: 1.5rem;
 	}
-	h5 {
+	h5,
+	.h5 {
 		font-size: 1.25rem;
 	}
-	h6 {
+	h6,
+	.h6 {
 		font-size: 1rem;
 	}
 }
 
 // Text color
-.editor-styles-wrapper .editor-writing-flow {
+.editor-styles-wrapper {
 	color: #222222;
 	.editor-post-title__block .editor-post-title__input {
 		color: #222222;
-	}
-	.wp-block-heading {
-		.h1,
-		.h2,
-		.h3,
-		.h4,
-		.h5,
-		.h6,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			color: #222222;
-		}
 	}
 }
 
@@ -107,6 +96,7 @@ h6 {
 
 // Pre and code
 .wp-block-preformatted pre,
+pre.wp-block-preformatted,
 .wp-block-verse pre,
 pre.wp-block-verse {
 	background-color: rgba(0, 0, 0, 0.05);
@@ -201,12 +191,7 @@ blockquote {
 }
 .wp-block[data-type="core/pullquote"][data-align="full"] blockquote {
 	border: 0;
-	margin: 1em 0;
-}
-
-// archive dropdown
-.wp-block-archives.wp-block-archives-dropdown select {
-	font-size: 14px;
+	margin: 1rem 0;
 }
 
 // Media text block
@@ -241,6 +226,7 @@ blockquote {
 		border-left: 5px solid #aaa;
 		padding: 16px 24px;
 		margin-left: 0;
+		margin-bottom: 1.5rem;
 	}
 	// Definitions
 	dt {
@@ -266,6 +252,10 @@ blockquote {
 		max-width: 100%;
 		overflow: auto;
 		white-space: pre;
+		margin-bottom: 1.5rem;
+	}
+	table {
+		margin-bottom: 1.5rem;
 	}
 	// keyboard text
 	kbd {
@@ -334,8 +324,7 @@ $block-btns: (
 			}
 		}
 		// User defined colors with no button type
-		@each $label, $color, $bg, $border, $hover-color, $hover-bg,
-			$hover-border in $block-btns
+		@each $label, $color, $bg, $border, $hover-color, $hover-bg, $hover-border in $block-btns
 		{
 			&.has-#{$label}-background-color {
 				color: $color;
@@ -363,8 +352,7 @@ $block-btns: (
 				}
 			}
 			// Get user defined colors
-			@each $label, $color, $bg, $border, $hover-color, $hover-bg,
-				$hover-border in $block-btns
+			@each $label, $color, $bg, $border, $hover-color, $hover-bg, $hover-border in $block-btns
 			{
 				&.has-#{$label}-background-color {
 					color: $color !important;
@@ -393,8 +381,7 @@ $block-btns: (
 				}
 			}
 			// Get user defined colors
-			@each $label, $color, $bg, $border, $hover-color, $hover-bg,
-				$hover-border in $block-btns
+			@each $label, $color, $bg, $border, $hover-color, $hover-bg, $hover-border in $block-btns
 			{
 				&.has-#{$label}-background-color {
 					color: $bg;

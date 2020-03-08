@@ -415,9 +415,7 @@ input[type="button"].btn-block {
   width: 100%; }
 
 .editor-styles-wrapper {
-  margin-left: 30px;
-  margin-right: 30px;
-  padding-bottom: 50px; }
+  padding: 50px 30px; }
 
 .wp-block {
   max-width: 1140px; }
@@ -433,52 +431,46 @@ input[type="button"].btn-block {
 .editor-styles-wrapper .alignright {
   margin-left: 1.5em; }
 
-.editor-block-list__block[data-align="center"] {
+.editor-block-list__block[data-align="center"],
+.block-editor-block-list__block[data-align="center"] {
   clear: both; }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-weight: 500; }
 
-.editor-styles-wrapper .wp-block-heading h1 {
+.editor-styles-wrapper .wp-block h1,
+.editor-styles-wrapper .wp-block .h1 {
   font-size: 2.5rem; }
-.editor-styles-wrapper .wp-block-heading h2 {
+.editor-styles-wrapper .wp-block h2,
+.editor-styles-wrapper .wp-block .h2 {
   font-size: 2rem; }
-.editor-styles-wrapper .wp-block-heading h3 {
+.editor-styles-wrapper .wp-block h3,
+.editor-styles-wrapper .wp-block .h3 {
   font-size: 1.75rem; }
-.editor-styles-wrapper .wp-block-heading h4 {
+.editor-styles-wrapper .wp-block h4,
+.editor-styles-wrapper .wp-block .h4 {
   font-size: 1.5rem; }
-.editor-styles-wrapper .wp-block-heading h5 {
+.editor-styles-wrapper .wp-block h5,
+.editor-styles-wrapper .wp-block .h5 {
   font-size: 1.25rem; }
-.editor-styles-wrapper .wp-block-heading h6 {
+.editor-styles-wrapper .wp-block h6,
+.editor-styles-wrapper .wp-block .h6 {
   font-size: 1rem; }
 
-.editor-styles-wrapper .editor-writing-flow {
+.editor-styles-wrapper {
   color: #222222; }
-  .editor-styles-wrapper .editor-writing-flow .editor-post-title__block .editor-post-title__input {
-    color: #222222; }
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h1,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h2,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h3,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h4,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h5,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading .h6,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h1,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h2,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h3,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h4,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h5,
-  .editor-styles-wrapper .editor-writing-flow .wp-block-heading h6 {
+  .editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
     color: #222222; }
 
 .wp-block-separator {
@@ -487,6 +479,7 @@ h6 {
     border-bottom-width: 1px; }
 
 .wp-block-preformatted pre,
+pre.wp-block-preformatted,
 .wp-block-verse pre,
 pre.wp-block-verse {
   background-color: rgba(0, 0, 0, 0.05);
@@ -497,6 +490,7 @@ pre.wp-block-verse {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 87.5%; }
   .wp-block-preformatted pre code,
+  pre.wp-block-preformatted code,
   .wp-block-verse pre code,
   pre.wp-block-verse code {
     padding: 0;
@@ -565,10 +559,7 @@ blockquote.wp-block-quote.has-text-align-right {
 
 .wp-block[data-type="core/pullquote"][data-align="full"] blockquote {
   border: 0;
-  margin: 1em 0; }
-
-.wp-block-archives.wp-block-archives-dropdown select {
-  font-size: 14px; }
+  margin: 1rem 0; }
 
 .wp-block-media-text {
   margin-bottom: 1.5rem; }
@@ -592,7 +583,8 @@ blockquote.wp-block-quote.has-text-align-right {
 .wp-block-freeform.block-library-rich-text__tinymce blockquote {
   border-left: 5px solid #aaa;
   padding: 16px 24px;
-  margin-left: 0; }
+  margin-left: 0;
+  margin-bottom: 1.5rem; }
 .wp-block-freeform.block-library-rich-text__tinymce dt {
   font-weight: 700; }
 .wp-block-freeform.block-library-rich-text__tinymce dd {
@@ -611,7 +603,10 @@ blockquote.wp-block-quote.has-text-align-right {
   padding: 1em;
   max-width: 100%;
   overflow: auto;
-  white-space: pre; }
+  white-space: pre;
+  margin-bottom: 1.5rem; }
+.wp-block-freeform.block-library-rich-text__tinymce table {
+  margin-bottom: 1.5rem; }
 .wp-block-freeform.block-library-rich-text__tinymce kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
