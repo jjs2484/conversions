@@ -317,10 +317,21 @@ $block-btns: (
 			color: #fff;
 			background-color: #007bff;
 			border-color: #007bff;
+
+			[data-rich-text-placeholder]::after {
+				color: #fff;
+				opacity: 1;
+			}
+
 			&:hover {
 				color: #fff !important;
 				background-color: #0069d9 !important;
 				border-color: #0069d9 !important;
+				
+				[data-rich-text-placeholder]::after {
+					color: #fff;
+					opacity: 1;
+				}
 			}
 		}
 		// User defined colors with no button type
@@ -330,11 +341,22 @@ $block-btns: (
 				color: $color;
 				background-color: $bg;
 				border-color: $border;
+				
+				[data-rich-text-placeholder]::after {
+					color: $color;
+					opacity: 1;
+				}
 			}
+
 			&.has-#{$label}-background-color:hover {
 				color: $hover-color !important;
 				background-color: $hover-bg !important;
 				border-color: $hover-border !important;
+
+				[data-rich-text-placeholder]::after {
+					color: $hover-color;
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -345,10 +367,21 @@ $block-btns: (
 				color: #fff !important;
 				background-color: #007bff !important;
 				border-color: #007bff !important;
+
+				[data-rich-text-placeholder]::after {
+					color: #fff;
+					opacity: 1;
+				}
+
 				&:hover {
 					color: #fff !important;
 					background-color: #0069d9 !important;
 					border-color: #0069d9 !important;
+
+					[data-rich-text-placeholder]::after {
+						color: #fff;
+						opacity: 1;
+					}
 				}
 			}
 			// Get user defined colors
@@ -358,11 +391,22 @@ $block-btns: (
 					color: $color !important;
 					background-color: $bg !important;
 					border-color: $border !important;
+
+					[data-rich-text-placeholder]::after {
+						color: $color;
+						opacity: 1;
+					}
 				}
+
 				&.has-#{$label}-background-color:hover {
 					color: $hover-color !important;
 					background-color: $hover-bg !important;
 					border-color: $hover-border !important;
+
+					[data-rich-text-placeholder]::after {
+						color: $hover-color;
+						opacity: 1;
+					}
 				}
 			}
 		}
@@ -374,10 +418,21 @@ $block-btns: (
 				color: #007bff !important;
 				background-color: transparent !important;
 				border-color: #007bff !important;
+
+				[data-rich-text-placeholder]::after {
+					color: #007bff;
+					opacity: 1;
+				}
+
 				&:hover {
 					color: #fff !important;
 					background-color: #007bff !important;
 					border-color: #007bff !important;
+
+					[data-rich-text-placeholder]::after {
+						color: #fff;
+						opacity: 1;
+					}
 				}
 			}
 			// Get user defined colors
@@ -387,11 +442,22 @@ $block-btns: (
 					color: $bg;
 					background-color: transparent !important;
 					border-color: $border;
+
+					[data-rich-text-placeholder]::after {
+						color: $bg;
+						opacity: 1;
+					}
 				}
+
 				&.has-#{$label}-background-color:hover {
 					color: $color !important;
 					background-color: $bg !important;
 					border-color: $border !important;
+
+					[data-rich-text-placeholder]::after {
+						color: $color;
+						opacity: 1;
+					}
 				}
 			}
 		}
