@@ -176,6 +176,7 @@ class Navbar {
 					'menu_id'         => 'main-menu',
 					'items_wrap'      => '<ul id="%1$s" class="%2$s" role="menu">%3$s</ul>',
 					'depth'           => 2,
+					'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
 					'walker'          => new WP_Bootstrap_Navwalker(),
 				)
 			);
