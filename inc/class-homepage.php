@@ -122,7 +122,9 @@ class Homepage {
 			]
 		);
 
-		require_once __DIR__ . '/class-homepage-sorting-customizer-control.php';
+		// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+		require_once get_parent_theme_file_path( '/inc/class-homepage-sorting-customizer-control.php' );
+		// phpcs:enable
 
 		$theme = wp_get_theme();
 

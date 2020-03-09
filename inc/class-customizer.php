@@ -74,7 +74,9 @@ namespace conversions
 		 */
 		public function customize_register( $wp_customize ) {
 			// require customizer repeater.
+			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			require get_parent_theme_file_path( '/inc/class-conversions-repeater.php' );
+			// phpcs:enable
 
 			// font choices.
 			$font_choices = [
@@ -186,6 +188,7 @@ namespace conversions
 			// -----------------------------------------------------
 			// Include customizer sections
 			// -----------------------------------------------------
+			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			include get_parent_theme_file_path( '/inc/customizer/navbar.php' );
 			include get_parent_theme_file_path( '/inc/customizer/layout.php' );
 			include get_parent_theme_file_path( '/inc/customizer/typography.php' );
@@ -204,6 +207,7 @@ namespace conversions
 			include get_parent_theme_file_path( '/inc/customizer/homepage.woocommerce.php' );
 			include get_parent_theme_file_path( '/inc/customizer/homepage.edd.php' );
 			include get_parent_theme_file_path( '/inc/customizer/edd.php' );
+			// phpcs:enable
 		}
 
 		/**
