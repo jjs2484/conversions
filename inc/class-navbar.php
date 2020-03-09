@@ -142,46 +142,41 @@ class Navbar {
 	 * @since 2020-01-28
 	 */
 	public function conversions_navbar_menu() {
-		// Check for active menu.
-		if ( has_nav_menu( 'primary' ) ) :
 
-			// mobile nav type.
-			$mobile_nav_type = get_theme_mod( 'conversions_nav_mobile_type', 'collapse' );
+		// mobile nav type.
+		$mobile_nav_type = get_theme_mod( 'conversions_nav_mobile_type', 'collapse' );
 
-			// mobile nav container class.
-			switch ( $mobile_nav_type ) {
-				case 'collapse':
-					$mobile_nav_container = 'collapse navbar-collapse';
-					break;
-				case 'offcanvas':
-					$mobile_nav_container = 'navbar-collapse offcanvas-collapse';
-					break;
-				default:
-					$mobile_nav_container = 'navbar-collapse offcanvas-collapse';
-			}
-			?>
+		// mobile nav container class.
+		switch ( $mobile_nav_type ) {
+			case 'collapse':
+				$mobile_nav_container = 'collapse navbar-collapse';
+				break;
+			case 'offcanvas':
+				$mobile_nav_container = 'navbar-collapse offcanvas-collapse';
+				break;
+			default:
+				$mobile_nav_container = 'navbar-collapse offcanvas-collapse';
+		}
+		?>
 
-			<button class="navbar-toggler" type="button" data-toggle="<?php echo esc_attr( $mobile_nav_type ); ?>" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'conversions' ); ?>">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+		<button class="navbar-toggler" type="button" data-toggle="<?php echo esc_attr( $mobile_nav_type ); ?>" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'conversions' ); ?>">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location'  => 'primary',
-					'container_class' => $mobile_nav_container,
-					'container_id'    => 'navbarNavDropdown',
-					'menu_class'      => 'navbar-nav ml-auto',
-					'fallback_cb'     => '',
-					'menu_id'         => 'main-menu',
-					'items_wrap'      => '<ul id="%1$s" class="%2$s" role="menu">%3$s</ul>',
-					'depth'           => 2,
-					'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-					'walker'          => new WP_Bootstrap_Navwalker(),
-				)
-			);
-
-		endif;
+		<?php
+		$walker = new WP_Bootstrap_Navwalker();
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'primary',
+				'container_class' => $mobile_nav_container,
+				'container_id'    => 'navbarNavDropdown',
+				'menu_class'      => 'navbar-nav ml-auto',
+				'menu_id'         => 'main-menu',
+				'items_wrap'      => '<ul id="%1$s" class="%2$s" role="menu">%3$s</ul>',
+				'depth'           => 2,
+				'fallback_cb'     => [ $walker, 'fallback' ],
+				'walker'          => $walker,
+			)
+		);
 	}
-
 }
