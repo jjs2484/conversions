@@ -90,6 +90,7 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: use get_theme_file_uri to enqueue scripts and styles for child theme overriding.
 * Update: Gutenberg editor styles for markup changes in WordPress 5.4
 * Update: screenshot
+* Update: add fallback navbar menu if none are assigned.
 * Fix: add Bootstrap colors to button placeholder text in Gutenberg editor.
 
 == Resources ==
