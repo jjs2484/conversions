@@ -93,6 +93,10 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: add fallback navbar menu if none are assigned.
 * Fix: add Bootstrap colors to button placeholder text in Gutenberg editor.
 
+= 1.5.4 =
+* Update: use jQuery for anchor link click events and offset.
+* Fix: CSS margin for blog featured images.
+
 == Resources ==
 
 * Bootstrap 4.4.1 | MIT License

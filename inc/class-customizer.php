@@ -264,7 +264,6 @@ namespace conversions
 			$nav_tbpadding    = get_theme_mod( 'conversions_nav_tbpadding', '.5' );
 			$logo_padding     = .625;
 			$total_nav_height = $logo_height + ( $nav_tbpadding * 2 ) + $logo_padding - .1250;
-			$nav_offset       = $total_nav_height + 3.125;
 
 			// WC button option.
 			$wc_primary_btn   = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
@@ -356,14 +355,6 @@ namespace conversions
 				if ( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) === 'fixed-top' ) {
 					echo '.content-wrapper {
 							margin-top: ' . esc_html( $total_nav_height ) . 'rem;
-					}';
-					echo '.wrapper :target:before, .wrapper li[id].comment:before {
-						display: block;
-						content: " ";
-						margin-top: -' . esc_html( $nav_offset ) . 'rem;
-						height: ' . esc_html( $nav_offset ) . 'rem;
-						visibility: hidden;
-						pointer-events: none;
 					}';
 				}
 				// Navbar drop shadow.
