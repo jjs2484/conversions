@@ -89,7 +89,7 @@ jQuery(function() {
 /**
  * Anchor link offset for fixed navbar
 */
-jQuery(function($) {
+jQuery(function() {
 	
 	function scrollToAnchor(hash) {
 		// Get the navbar classes.
@@ -101,7 +101,7 @@ jQuery(function($) {
 		}
 		else if (navbarClasses.contains('fixed-top')) {
 		
-			var target = $(hash);
+			var target = jQuery(hash);
 
 			// Get height of the navbar and adminbar.
 			var navbarHeight = jQuery('#wrapper-navbar').innerHeight();
@@ -110,10 +110,10 @@ jQuery(function($) {
 			// Total height calculation.
 			var offsetHeight = navbarHeight + adminBarHeight + 50;
 
-			target = target.length ? target : $('[name=' + hash.slice(1) +']');
+			target = target.length ? target : jQuery('[name=' + hash.slice(1) +']');
 
 			if (target.length) {
-				$('html,body').animate({
+				jQuery('html,body').animate({
 					scrollTop: target.offset().top - offsetHeight
 				}, 100);
 				event.preventDefault();
@@ -126,12 +126,12 @@ jQuery(function($) {
 		scrollToAnchor(window.location.hash);
 	}
 
-	$('a[href*=\\#]:not([href=\\#])').click(function() {
+	jQuery('a[href*=\\#]:not([href=\\#])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
 			scrollToAnchor(this.hash);
 		}
 	});
-})(jQuery);
+});
 
 /**
  * Initialize Slick client section
