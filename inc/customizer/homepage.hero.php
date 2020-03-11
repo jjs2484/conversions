@@ -335,17 +335,17 @@ $wp_customize->add_setting(
 		'default'           => '',
 		'type'              => 'theme_mod',
 		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_url_raw',
+		'sanitize_callback' => 'wp_filter_nohtml_kses',
 	]
 );
 $wp_customize->add_control(
 	'conversions_hh_vbtn_url_control',
 	[
-		'label'       => __( 'Video URL', 'conversions' ),
-		'description' => __( 'Youtube or Vimeo video URL.', 'conversions' ),
+		'label'       => __( 'YouTube Video ID', 'conversions' ),
+		'description' => __( 'Example: _sI_Ps7JSEk', 'conversions' ),
 		'section'     => 'conversions_homepage_hero',
 		'settings'    => 'conversions_hh_vbtn_url',
 		'priority'    => 15,
-		'type'        => 'url',
+		'type'        => 'text',
 	]
 );

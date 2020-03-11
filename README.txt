@@ -100,7 +100,6 @@ Full documentation: https://conversionswp.com/documentation/
 == Resources ==
 
 * Bootstrap 4.4.1 | MIT License
-* Fancybox v3.5.7 | GPLv3 license | Extended Commercial license
 * Font Awesome v5.12.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * Slick v1.8.1 | MIT License
 * WP Bootstrap Navwalker | GPL-3.0+

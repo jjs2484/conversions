@@ -156,21 +156,24 @@ jQuery(document).ready(function() {
 });
 
 /**
- * Initialize fancybox options
+ * Hero youtube modal 
 */
-jQuery('[data-fancybox="c-hero__fb-video1"]').fancybox({
-	// Options go here.
-	youtube : {
-		showinfo : 0,
-		autoplay : 1,
-		rel : 0
-	},
-	onInit : function() {
-		jQuery('#wrapper-navbar').addClass('compensate-for-scrollbar');
-		jQuery('#wpadminbar').addClass('compensate-for-scrollbar');
-	},
-	afterClose : function() {
-		jQuery('#wrapper-navbar').removeClass('compensate-for-scrollbar');
-		jQuery('#wpadminbar').removeClass('compensate-for-scrollbar');
-	}
+jQuery(document).ready(function() {
+
+	// Gets the video src from the data-src on each button
+	var $videoSrc;  
+	jQuery( '.c-hero__fb-video' ).click(function() {
+		$videoSrc = jQuery(this).data( 'src' );
+	});
+
+	// when the modal is opened autoplay it  
+	jQuery( '#c-hero-modal' ).on( 'shown.bs.modal', function (e) {
+		// set the video src to autoplay and not to show related video.
+		jQuery( '#video' ).attr( 'src', $videoSrc + '?autoplay=1&amp;modestbranding=1&amp;showinfo=0&amp;rel=0' ); 
+	});
+
+	// stop playing the youtube video when I close the modal
+	jQuery( '#c-hero-modal' ).on( 'hide.bs.modal', function (e) {
+		jQuery( '#video' ).attr( 'src', $videoSrc ); 
+	});
 });

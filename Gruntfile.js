@@ -23,9 +23,8 @@ module.exports = function(grunt) {
 		concat: {
 			basic_and_extras: {
 				files: {
-					'build/theme.js': ['node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'js/skip-link-focus-fix.js', 'node_modules/slick-carousel/slick/slick.js', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js', 'js/theme.js'],
+					'build/theme.js': ['node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'js/skip-link-focus-fix.js', 'node_modules/slick-carousel/slick/slick.js', 'js/theme.js'],
 					'build/conversions-customizer.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js', 'js/customizer-conditionals.js', 'js/homepage_sorting.js'],
-					'build/theme.css': ['build/theme.css', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'],
 				},
 			},
 		},

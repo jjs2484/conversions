@@ -311,12 +311,32 @@ class Homepage {
 
 						// video modal.
 						if ( get_theme_mod( 'conversions_hh_vbtn', 'no' ) !== 'no' ) {
+
 							echo sprintf(
-								'<a data-fancybox="c-hero__fb-video1" href="%1$s" class="c-hero__fb-video"><span class="c-hero__video-btn btn btn-%2$s btn--circle"><i class="fa fa-play"></i></span><span class="c-hero__video-text btn btn-link text-%2$s">%3$s</span></a>',
-								esc_url( get_theme_mod( 'conversions_hh_vbtn_url' ) ),
+								'<a data-src="%1$s" data-toggle="modal" data-target="#c-hero-modal" href="#" class="c-hero__fb-video"><span class="c-hero__video-btn btn btn-%2$s btn--circle"><i class="fa fa-play"></i></span><span class="c-hero__video-text btn btn-link text-%2$s">%3$s</span></a>',
+								esc_url( 'https://www.youtube.com/embed/' . get_theme_mod( 'conversions_hh_vbtn_url' ) ),
 								esc_attr( get_theme_mod( 'conversions_hh_vbtn' ) ),
 								esc_html( get_theme_mod( 'conversions_hh_vbtn_text' ) )
 							);
+							?>
+
+							<!-- Modal -->
+							<div class="modal fade" id="c-hero-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-body">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+											<!-- 16:9 aspect ratio -->
+											<div class="embed-responsive embed-responsive-16by9">
+												<iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<?php
 						}
 
 						echo '</p>';
