@@ -330,7 +330,7 @@ class Homepage {
 											</button>
 											<!-- 16:9 aspect ratio -->
 											<div class="embed-responsive embed-responsive-16by9">
-												<iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+												<iframe class="embed-responsive-item" src="" id="video" allow="autoplay"></iframe>
 											</div>
 										</div>
 									</div>
