@@ -10975,7 +10975,7 @@ section.c-hero {
       section.c-hero .c-hero__fb-video .c-hero__video-text:hover {
         text-decoration: none; }
   section.c-hero #c-hero-modal .modal-dialog {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 100px auto 10px; }
   section.c-hero #c-hero-modal .modal-body {
     padding: 0px; }
