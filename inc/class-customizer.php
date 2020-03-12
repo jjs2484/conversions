@@ -475,7 +475,7 @@ namespace conversions
 						}
 						// output the cart icon with item count.
 						$cart_link = sprintf(
-							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-bag"></i>%s</a></li>',
+							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-cart"></i>%s</a></li>',
 							wc_get_cart_url(),
 							$cart_totals
 						);
@@ -516,7 +516,7 @@ namespace conversions
 
 						// output the cart icon with item count.
 						$edd_cart_link = sprintf(
-							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-bag"></i>%s</a></li>',
+							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-cart"></i>%s</a></li>',
 							esc_url( edd_get_checkout_uri() ),
 							$edd_cart_totals
 						);

@@ -10304,8 +10304,7 @@ jQuery(function() {
 	if(window.location.hash) {
 		scrollToAnchor(window.location.hash);
 	}
-
-	jQuery('a[href*=\\#]:not([href=\\#])').click(function() {
+	jQuery('a[href*=\\#]:not([href=\\#],[data-toggle])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
 			scrollToAnchor(this.hash);
 		}

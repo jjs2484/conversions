@@ -1959,21 +1959,7 @@ select:focus::-ms-value {
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
-  .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg, #csearchModal form#searchform input.form-control-plaintext.field.form-control, #csearchModal form#searchform input.form-control-plaintext.field[type="text"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="email"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="url"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="password"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="search"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="number"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="tel"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="range"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="date"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="month"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="week"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="time"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="datetime"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="datetime-local"],
-  #csearchModal form#searchform input.form-control-plaintext.field[type="color"] {
+  .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg, #csearchModal #searchform input.form-control-plaintext.field {
     padding-right: 0;
     padding-left: 0; }
 
@@ -1984,21 +1970,7 @@ select:focus::-ms-value {
   line-height: 1.5;
   border-radius: 0.2rem; }
 
-.form-control-lg, #csearchModal form#searchform input.field.form-control, #csearchModal form#searchform input.field[type="text"],
-#csearchModal form#searchform input.field[type="email"],
-#csearchModal form#searchform input.field[type="url"],
-#csearchModal form#searchform input.field[type="password"],
-#csearchModal form#searchform input.field[type="search"],
-#csearchModal form#searchform input.field[type="number"],
-#csearchModal form#searchform input.field[type="tel"],
-#csearchModal form#searchform input.field[type="range"],
-#csearchModal form#searchform input.field[type="date"],
-#csearchModal form#searchform input.field[type="month"],
-#csearchModal form#searchform input.field[type="week"],
-#csearchModal form#searchform input.field[type="time"],
-#csearchModal form#searchform input.field[type="datetime"],
-#csearchModal form#searchform input.field[type="datetime-local"],
-#csearchModal form#searchform input.field[type="color"] {
+.form-control-lg, #csearchModal #searchform input.field {
   height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -10662,7 +10634,7 @@ a.skip-link {
   top: 0px;
   right: 0px; }
 
-#wrapper-navbar .navbar a.navbar-brand img {
+#wrapper-navbar .navbar .navbar-brand img {
   height: 100%;
   width: auto; }
 #wrapper-navbar .navbar h1 {
@@ -10672,23 +10644,22 @@ a.skip-link {
   @media (min-width: 992px) {
     #wrapper-navbar .navbar ul#main-menu {
       padding-top: 0; } }
-#wrapper-navbar .navbar #main-menu a.cart-customlocation i.fas.fa-shopping-bag {
-  font-size: 1.15rem;
+#wrapper-navbar .navbar .cart-customlocation .fa-shopping-bag {
+  font-size: 1.05rem;
   margin-right: 0.25rem; }
-#wrapper-navbar .navbar #main-menu .account-icon.menu-item a i.fas.fa-user {
-  font-size: 1.05rem; }
-#wrapper-navbar .navbar #main-menu .search-icon.menu-item a i.fas.fa-search {
+#wrapper-navbar .navbar .account-icon .fa-user,
+#wrapper-navbar .navbar .search-icon .fa-search {
   font-size: 1.05rem; }
 @media (min-width: 992px) {
-  #wrapper-navbar .navbar ul.navbar-nav {
+  #wrapper-navbar .navbar .navbar-nav {
     display: inline-block; }
-    #wrapper-navbar .navbar ul.navbar-nav li.menu-item {
+    #wrapper-navbar .navbar .navbar-nav .menu-item {
       display: inline-block; }
-      #wrapper-navbar .navbar ul.navbar-nav li.menu-item a.nav-link {
+      #wrapper-navbar .navbar .navbar-nav .menu-item .nav-link {
         white-space: nowrap; }
-      #wrapper-navbar .navbar ul.navbar-nav li.menu-item .dropdown-menu li.menu-item {
+      #wrapper-navbar .navbar .navbar-nav .menu-item .dropdown-menu li.menu-item {
         display: block; }
-    #wrapper-navbar .navbar ul.navbar-nav li.nav-callout-button.menu-item {
+    #wrapper-navbar .navbar .navbar-nav .nav-callout-button {
       margin-left: 0.5rem; } }
 @media (max-width: 991.98px) {
   #wrapper-navbar .navbar .offcanvas-collapse {

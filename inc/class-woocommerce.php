@@ -115,7 +115,7 @@ class WooCommerce {
 		}
 		?>
 		<a class="cart-customlocation nav-link" title="<?php esc_attr_e( 'View your shopping cart', 'conversions' ); ?>" href="<?php echo esc_url( wc_get_cart_url() ); ?>">
-			<i aria-hidden="true" class="fas fa-shopping-bag"></i>
+			<i aria-hidden="true" class="fas fa-shopping-cart"></i>
 			<?php
 			echo $cart_totals; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			?>
