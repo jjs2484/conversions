@@ -60,6 +60,33 @@ class WooCommerce {
 	}
 
 	/**
+	 * WooCommerce cart for navbar.
+	 *
+	 * @since 2020-03-12
+	 */
+	public static function get_cart_nav_html() {
+		// get WC cart totals and if = 0 only show icon with no text.
+		$cart_totals = WC()->cart->get_cart_contents_count();
+		if ( $cart_totals > 0 ) {
+			$cart_totals = sprintf(	'<span>%d<span class="sr-only">' . __( 'items in your shopping cart', 'conversions' ) . '</span></span>',
+				WC()->cart->get_cart_contents_count()
+			);
+		} else {
+			$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
+		}
+
+		$cart_icon = '<i aria-hidden="true" class="fas fa-shopping-cart"></i>';
+
+		$cart_html = sprintf( '<a class="cart-customlocation nav-link" title="%s" href="%s">%s%s</a>',
+			esc_attr( 'View your shopping cart', 'conversions' ),   // title.
+			esc_url( wc_get_cart_url() ),                           // href.
+			$cart_icon,
+			$cart_totals
+		);
+		return $cart_html;
+	}
+
+	/**
 	 * Enable review ratings support.
 	 *
 	 * @since 2019-08-06
@@ -102,26 +129,7 @@ class WooCommerce {
 	 * @param array $fragments Fragments to refresh via AJAX.
 	 */
 	public function woocommerce_add_to_cart_fragments( $fragments ) {
-		global $woocommerce;
-		ob_start();
-		$cart_totals = WC()->cart->get_cart_contents_count();
-		if ( WC()->cart->get_cart_contents_count() > 0 ) {
-			$cart_totals = sprintf(
-				'%d<span class="sr-only">' . __( 'items in your shopping cart', 'conversions' ) . '</span>',
-				WC()->cart->get_cart_contents_count()
-			);
-		} else {
-			$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
-		}
-		?>
-		<a class="cart-customlocation nav-link" title="<?php esc_attr_e( 'View your shopping cart', 'conversions' ); ?>" href="<?php echo esc_url( wc_get_cart_url() ); ?>">
-			<i aria-hidden="true" class="fas fa-shopping-cart"></i>
-			<?php
-			echo $cart_totals; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			?>
-		</a>
-		<?php
-		$fragments['a.cart-customlocation.nav-link'] = ob_get_clean();
+		$fragments['a.cart-customlocation.nav-link'] = static::get_cart_nav_html();
 		return $fragments;
 	}
 

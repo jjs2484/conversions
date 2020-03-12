@@ -463,21 +463,10 @@ namespace conversions
 
 					// Append WooCommerce Cart icon?
 					if ( get_theme_mod( 'conversions_wc_cart_nav', true ) === true ) {
-						// get WC cart totals and if = 0 only show icon with no text.
-						$cart_totals = WC()->cart->get_cart_contents_count();
-						if ( WC()->cart->get_cart_contents_count() > 0 ) {
-							$cart_totals = sprintf(
-								'%d<span class="sr-only">' . __( 'items in your shopping cart', 'conversions' ) . '</span>',
-								WC()->cart->get_cart_contents_count()
-							);
-						} else {
-							$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
-						}
 						// output the cart icon with item count.
 						$cart_link = sprintf(
-							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-cart"></i>%s</a></li>',
-							wc_get_cart_url(),
-							$cart_totals
+							'<li class="cart menu-item nav-item">%s</li>',
+							WooCommerce::get_cart_nav_html()
 						);
 						// Add the cart icon to the end of the menu.
 						$items .= $cart_link;
