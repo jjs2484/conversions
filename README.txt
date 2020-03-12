@@ -100,6 +100,12 @@ Full documentation: https://conversionswp.com/documentation/
 = 1.5.5 =
 * Update: remove Fancybox, use Bootstrap modal for video instead.
 
+= 1.5.6 =
+* Update: WooCommerce templates to 4.0. 
+* Update: refactor navbar CSS.
+* Update: cart icon.
+* Fix: jQuery anchor link offset - ignore elements with data-toggle attribute.
+
 == Resources ==
 
 * Bootstrap 4.4.1 | MIT License
