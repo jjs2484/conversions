@@ -467,7 +467,7 @@ namespace conversions
 						$cart_totals = WC()->cart->get_cart_contents_count();
 						if ( WC()->cart->get_cart_contents_count() > 0 ) {
 							$cart_totals = sprintf(
-								'%s<span class="sr-only">' . __( ' items in your shopping cart', 'conversions' ) . '</span>',
+								'%d<span class="sr-only">' . __( 'items in your shopping cart', 'conversions' ) . '</span>',
 								WC()->cart->get_cart_contents_count()
 							);
 						} else {
@@ -480,7 +480,7 @@ namespace conversions
 							$cart_totals
 						);
 						// Add the cart icon to the end of the menu.
-						$items = $items . $cart_link;
+						$items .= $cart_link;
 					}
 
 					// Append WooCommerce Account icon?
@@ -499,7 +499,7 @@ namespace conversions
 						);
 
 						// Add the account to the end of the menu.
-						$items = $items . $wc_account_link;
+						$items .= $wc_account_link;
 					}
 				}
 
@@ -522,7 +522,7 @@ namespace conversions
 						);
 
 						// Add the cart icon to the end of the menu.
-						$items = $items . $edd_cart_link;
+						$items .= $edd_cart_link;
 					}
 
 					// Append Easy Digital Downloads Account icon?
@@ -541,7 +541,7 @@ namespace conversions
 						);
 
 						// Add the account to the end of the menu.
-						$items = $items . $edd_account_link;
+						$items .= $edd_account_link;
 					}
 				}
 
@@ -553,7 +553,7 @@ namespace conversions
 					);
 
 					// Add the nav button to the end of the menu.
-					$items = $items . $nav_search;
+					$items .= $nav_search;
 				}
 
 				// Append Navigation Button?
@@ -576,7 +576,7 @@ namespace conversions
 					);
 
 					// Add the nav button to the end of the menu.
-					$items = $items . $nav_button;
+					$items .= $nav_button;
 				}
 			}
 			return $items;

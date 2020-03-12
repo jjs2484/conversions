@@ -107,7 +107,7 @@ class WooCommerce {
 		$cart_totals = WC()->cart->get_cart_contents_count();
 		if ( WC()->cart->get_cart_contents_count() > 0 ) {
 			$cart_totals = sprintf(
-				'%s<span class="sr-only">' . __( ' items in your shopping cart', 'conversions' ) . '</span>',
+				'%d<span class="sr-only">' . __( 'items in your shopping cart', 'conversions' ) . '</span>',
 				WC()->cart->get_cart_contents_count()
 			);
 		} else {

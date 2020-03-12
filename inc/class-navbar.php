@@ -167,6 +167,7 @@ class Navbar {
 		$walker = new WP_Bootstrap_Navwalker();
 		wp_nav_menu(
 			array(
+				'item_spacing'    => 'discard',
 				'theme_location'  => 'primary',
 				'container_class' => $mobile_nav_container,
 				'container_id'    => 'navbarNavDropdown',
