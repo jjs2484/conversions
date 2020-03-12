@@ -104,6 +104,7 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: WooCommerce templates to 4.0. 
 * Update: refactor navbar CSS.
 * Update: cart icon.
+* Update: nav walker improvements.
 * Fix: jQuery anchor link offset - ignore elements with data-toggle attribute.
 
 == Resources ==
