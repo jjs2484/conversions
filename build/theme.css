@@ -10644,7 +10644,7 @@ a.skip-link {
   @media (min-width: 992px) {
     #wrapper-navbar .navbar ul#main-menu {
       padding-top: 0; } }
-#wrapper-navbar .navbar .cart-customlocation .fa-shopping-bag {
+#wrapper-navbar .navbar .cart-customlocation .fa-shopping-cart {
   font-size: 1.05rem;
   margin-right: 0.25rem; }
 #wrapper-navbar .navbar .account-icon .fa-user,
