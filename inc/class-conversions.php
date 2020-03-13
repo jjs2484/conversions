@@ -255,6 +255,52 @@ namespace conversions
 					set_theme_mod( $c, $v );
 				}
 			}
+
+			// Add support for starter content.
+			add_theme_support(
+				'starter-content',
+				array(
+					// Content Section.
+					'posts' => array(
+						// Post Symbol -> for internal use.
+						'home' => array(
+							'post_type'  => 'page',
+							'post_title' => _x( 'Conversion Focused WordPress Theme', 'Theme starter content', 'conversions' ),
+							'template'   => 'page-templates/homepage.php',
+							'thumbnail'  => '{{image-shopping}}',
+						),
+						'blog' => array(
+							'post_type'  => 'page',
+							'post_title' => _x( 'Blog', 'Theme starter content', 'conversions' ),
+						),
+					),
+					// Image Section.
+					'attachments' => array(
+						'image-shopping' => array(
+							'post_title' => _x( 'Shopping', 'Theme starter content', 'conversions' ),
+							'file'       => 'images/shopping.jpg',
+						),
+					),
+					// Options Section.
+					'options' => array(
+						'show_on_front'  => 'page',
+						'page_on_front'  => '{{home}}',
+						'page_for_posts' => '{{blog}}',
+					),
+					// Customizer settings.
+					'theme_mods' => array(
+						'conversions_hh_title_color' => '#ffffff',
+						'conversions_hh_desc'        => _x( 'Built to convert your website visitors into customers and subscribers!​', 'Theme starter content', 'conversions' ),
+						'conversions_hh_desc_color'  => '#ffffff',
+						'conversions_hh_button'      => 'btn-light',
+						'conversions_hh_button_text' => _x( 'Click me', 'Theme starter content', 'conversions' ),
+						'conversions_hh_button_url'  => '#',
+						'conversions_hh_vbtn'        => 'light',
+						'conversions_hh_vbtn_text'   => _x( 'Play intro', 'Theme starter content', 'conversions' ),
+						'conversions_hh_vbtn_url'    => '72xdCU__XCk',
+					),
+				)
+			);
 		}
 	}
 }
