@@ -108,6 +108,7 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: screenshot.
 * Update: add starter-content for fresh installs.
 * Fix: jQuery anchor link offset - ignore elements with data-toggle attribute.
+* Fix: CSS bottom border on navbar.
 
 == Resources ==
 
