@@ -106,6 +106,7 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: cart icon.
 * Update: nav walker improvements.
 * Update: screenshot.
+* Update: add starter-content for fresh installs.
 * Fix: jQuery anchor link offset - ignore elements with data-toggle attribute.
 
 == Resources ==
