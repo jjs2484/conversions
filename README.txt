@@ -116,6 +116,12 @@ Full documentation: https://conversionswp.com/documentation/
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
 
+* Adobe images
+Extended License: https://stock.adobe.com/license-terms
+
+    images/shopping.jpg
+	https://stock.adobe.com/images/shopping-online-concept-shopping-service-on-the-online-web-with-payment-by-credit-card-and-offers-home-delivery-parcel-or-paper-cartons-with-a-shopping-cart-logo-on-a-laptop-keyboard/250318394?asset_id=250318394#
+
 * Google Fonts
 
 	Comfortaa
