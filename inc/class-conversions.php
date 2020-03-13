@@ -306,15 +306,15 @@ namespace conversions
 					// Nav settings.
 					'nav_menus' => array(
 						'primary' => array(
-							'name' => _x( 'Main Menu', 'Theme starter content', 'conversions' ),
+							'name'  => _x( 'Main Menu', 'Theme starter content', 'conversions' ),
 							'items' => array(
 								'page_home2' => array(
 									'title' => _x( 'Home', 'Theme starter content', 'conversions' ),
-									'url' => site_url(),
+									'url'   => site_url(),
 								),
-								'page_blog' => array(
-									'type' => 'post_type',
-									'object' => 'page',
+								'page_blog'  => array(
+									'type'      => 'post_type',
+									'object'    => 'page',
 									'object_id' => '{{blog}}',
 								),
 							),
