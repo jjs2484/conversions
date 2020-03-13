@@ -107,6 +107,7 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: nav walker improvements.
 * Update: screenshot.
 * Update: add starter-content for fresh installs.
+* Update: add additional resource licences.
 * Fix: jQuery anchor link offset - ignore elements with data-toggle attribute.
 * Fix: CSS bottom border on navbar.
 
@@ -117,12 +118,6 @@ Full documentation: https://conversionswp.com/documentation/
 * Slick v1.8.1 | MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
-
-* Adobe images
-Extended License: https://stock.adobe.com/license-terms
-
-    images/shopping.jpg
-	https://stock.adobe.com/images/shopping-online-concept-shopping-service-on-the-online-web-with-payment-by-credit-card-and-offers-home-delivery-parcel-or-paper-cartons-with-a-shopping-cart-logo-on-a-laptop-keyboard/250318394?asset_id=250318394#
 
 * Google Fonts
 
@@ -185,3 +180,10 @@ Extended License: https://stock.adobe.com/license-terms
     Ubuntu
     Source: https://fonts.google.com/specimen/Ubuntu
 	License: Ubuntu Font License, 1.0 - design.ubuntu.com/font/
+
+* Adobe images
+Extended License: https://stock.adobe.com/license-terms
+
+    images/shopping.jpg
+	https://stock.adobe.com/images/shopping-online-concept-shopping-service-on-the-online-web-with-payment-by-credit-card-and-offers-home-delivery-parcel-or-paper-cartons-with-a-shopping-cart-logo-on-a-laptop-keyboard/250318394?asset_id=250318394#
+    
