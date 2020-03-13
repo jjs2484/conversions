@@ -290,7 +290,7 @@ namespace conversions
 					// Customizer settings.
 					'theme_mods' => array(
 						'conversions_hh_title_color'  => '#ffffff',
-						'conversions_hh_desc'         => _x( 'Built to convert your website visitors into customers and subscribers!​', 'Theme starter content', 'conversions' ),
+						'conversions_hh_desc'         => _x( 'Built to convert your website visitors into customers and subscribers!', 'Theme starter content', 'conversions' ),
 						'conversions_hh_desc_color'   => '#ffffff',
 						'conversions_hh_button'       => 'btn-light',
 						'conversions_hh_button_text'  => _x( 'Click me', 'Theme starter content', 'conversions' ),
