@@ -114,3 +114,66 @@ Full documentation: https://conversionswp.com/documentation/
 * Font Awesome v5.12.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * Slick v1.8.1 | MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
+* _s, or underscores | GPLv2 or later
+
+* Google Fonts
+
+	Comfortaa
+    Source: https://fonts.google.com/specimen/Comfortaa
+	License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Handlee
+    Source: https://fonts.google.com/specimen/Handlee
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Indie Flower
+    Source: https://fonts.google.com/specimen/Indie+Flower
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Lato
+    Source: https://fonts.google.com/specimen/Lato
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Libre Baskerville
+    Source: https://fonts.google.com/specimen/Libre+Baskerville
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Lora
+    Source: https://fonts.google.com/specimen/Lora
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Merriweather
+    Source: https://fonts.google.com/specimen/Merriweather
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Noto Sans
+    Source: https://fonts.google.com/specimen/Noto+Sans
+    License: Apache License, version 2 - apache.org/licenses/LICENSE-2.0.html
+
+    Open Sans
+	Source: https://www.google.com/fonts/specimen/Open+Sans
+	License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Oxygen
+    Source: https://fonts.google.com/specimen/Oxygen
+	License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Roboto
+    Source: https://fonts.google.com/specimen/Roboto
+	License: Apache License, version 2 - apache.org/licenses/LICENSE-2.0.html
+
+    Roboto Mono
+    Source: https://fonts.google.com/specimen/Roboto+Mono
+	License: Apache License, version 2 - apache.org/licenses/LICENSE-2.0.html
+
+    Roboto Slab
+    Source: https://fonts.google.com/specimen/Roboto+Slab
+	License: Apache License, version 2 - apache.org/licenses/LICENSE-2.0.html
+
+    Special Elite
+    Source: https://fonts.google.com/specimen/Special+Elite
+	License: Apache License, version 2 - apache.org/licenses/LICENSE-2.0.html
+
+    Ubuntu
+    Source: https://fonts.google.com/specimen/Ubuntu
+	License: Ubuntu Font License, 1.0 - design.ubuntu.com/font/
