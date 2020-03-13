@@ -289,15 +289,36 @@ namespace conversions
 					),
 					// Customizer settings.
 					'theme_mods' => array(
-						'conversions_hh_title_color' => '#ffffff',
-						'conversions_hh_desc'        => _x( 'Built to convert your website visitors into customers and subscribers!​', 'Theme starter content', 'conversions' ),
-						'conversions_hh_desc_color'  => '#ffffff',
-						'conversions_hh_button'      => 'btn-light',
-						'conversions_hh_button_text' => _x( 'Click me', 'Theme starter content', 'conversions' ),
-						'conversions_hh_button_url'  => '#',
-						'conversions_hh_vbtn'        => 'light',
-						'conversions_hh_vbtn_text'   => _x( 'Play intro', 'Theme starter content', 'conversions' ),
-						'conversions_hh_vbtn_url'    => '72xdCU__XCk',
+						'conversions_hh_title_color'  => '#ffffff',
+						'conversions_hh_desc'         => _x( 'Built to convert your website visitors into customers and subscribers!​', 'Theme starter content', 'conversions' ),
+						'conversions_hh_desc_color'   => '#ffffff',
+						'conversions_hh_button'       => 'btn-light',
+						'conversions_hh_button_text'  => _x( 'Click me', 'Theme starter content', 'conversions' ),
+						'conversions_hh_button_url'   => '#',
+						'conversions_hh_vbtn'         => 'light',
+						'conversions_hh_vbtn_text'    => _x( 'Play intro', 'Theme starter content', 'conversions' ),
+						'conversions_hh_vbtn_url'     => '72xdCU__XCk',
+						'conversions_nav_search_icon' => true,
+						'conversions_nav_button'      => 'btn-outline-dark',
+						'conversions_nav_button_text' => _x( 'Click me', 'Theme starter content', 'conversions' ),
+						'conversions_nav_button_url'  => '#',
+					),
+					// Nav settings.
+					'nav_menus' => array(
+						'primary' => array(
+							'name' => _x( 'Main Menu', 'Theme starter content', 'conversions' ),
+							'items' => array(
+								'page_home2' => array(
+									'title' => _x( 'Home', 'Theme starter content', 'conversions' ),
+									'url' => site_url(),
+								),
+								'page_blog' => array(
+									'type' => 'post_type',
+									'object' => 'page',
+									'object_id' => '{{blog}}',
+								),
+							),
+						),
 					),
 				)
 			);
