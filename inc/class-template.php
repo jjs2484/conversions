@@ -263,6 +263,10 @@ class Template {
 
 		global $post;
 
+		if ( is_single() && 'post' != get_post_type() ) {
+			return;
+		}
+
 		$related_posts_tax = get_theme_mod( 'conversions_blog_taxonomy', 'categories' );
 		if ( 'tags' === $related_posts_tax ) {
 
