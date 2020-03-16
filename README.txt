@@ -111,6 +111,10 @@ Full documentation: https://conversionswp.com/docs/documentation/
 * Fix: jQuery anchor link offset - ignore elements with data-toggle attribute.
 * Fix: CSS bottom border on navbar.
 
+= 1.5.7 =
+* Fix: only show related posts on default post type.
+* Fix: add .wp-block-buttons selector for Gutenberg buttons in WP v5.4.
+
 == Resources ==
 
 * Bootstrap 4.4.1 | MIT License
