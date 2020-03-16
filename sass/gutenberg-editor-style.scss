@@ -302,7 +302,9 @@ $block-btns: (
 );
 
 // Button block
-.wp-block-button {
+// Note: .wp-block-buttons was added in WP 5.4
+.wp-block-button,
+.wp-block-buttons .wp-block-button {
 	// universal button styles
 	.wp-block-button__link {
 		&:hover {
