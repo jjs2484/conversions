@@ -671,5 +671,5 @@ namespace
 
 		return $string;
 	}
-	add_filter( 'repeater_input_labels_filter', 'conversions_repeater_labels', 10, 3 );
+	add_filter( 'conversions_repeater_labels_filter', 'conversions_repeater_labels', 10, 3 );
 }

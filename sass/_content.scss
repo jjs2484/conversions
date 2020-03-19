@@ -48,9 +48,6 @@ textarea {
 .wrapper {
 	padding: 2rem 0 3rem;
 	word-wrap: break-word;
-	:focus {
-		outline: none;
-	}
 }
 
 // Content wrapper - if fullwidth page add overflow hidden

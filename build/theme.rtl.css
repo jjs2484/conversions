@@ -10957,8 +10957,6 @@ textarea {
 .wrapper {
   padding: 2rem 0 3rem;
   word-wrap: break-word; }
-  .wrapper :focus {
-    outline: none; }
 
 .no-sidebar .content-wrapper {
   overflow-x: hidden; }

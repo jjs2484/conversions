@@ -330,7 +330,9 @@ class Homepage {
 											</button>
 											<!-- 16:9 aspect ratio -->
 											<div class="embed-responsive embed-responsive-16by9">
+												<?php // phpcs:disable WPThemeReview.ThouShallNotUse.ForbiddenIframe.Found ?>
 												<iframe class="embed-responsive-item" src="" id="video" allow="autoplay" allowfullscreen></iframe>
+												<?php // phpcs:enable ?>
 											</div>
 										</div>
 									</div>
