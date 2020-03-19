@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.4
 Requires PHP: 5.6.20
-Stable tag: 1.5.6
+Stable tag: 1.5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -113,7 +113,12 @@ Full documentation: https://conversionswp.com/docs/documentation/
 
 = 1.5.7 =
 * Fix: only show related posts on default post type.
-* Fix: add .wp-block-buttons selector for Gutenberg buttons in WP v5.4.
+* Fix: add .wp-block-buttons selector for Gutenberg buttons in WP v5.4
+* Fix: keyboard focus highlighting.
+* Fix: prefix edd_primary_btn variable in shortcode-content-cart-button.php
+* Fix: prefix variables in shortcode-content-price.php
+* Fix: prefix variables in shortcode-download.php
+* Fix: prefix repeater_input_labels_filter hook in class-conversions-repeater.php
 
 == Resources ==
 
