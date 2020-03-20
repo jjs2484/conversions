@@ -41,7 +41,7 @@ class WooCommerce {
 	 */
 	public function after_setup_theme() {
 		// Is WooCommerce active?
-		if ( ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) )
+		if ( ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 			return;
 
 		// Add theme support.

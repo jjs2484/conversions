@@ -11,9 +11,9 @@ defined( 'ABSPATH' ) || exit;
 
 </div><!-- #closing primary container from /partials/left-sidebar-check.php -->
 
-<?php $sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' ); ?>
+<?php $conversions_sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' ); ?>
 
-<?php if ( 'right' === $sidebar_pos ) : ?>
+<?php if ( 'right' === $conversions_sidebar_pos ) : ?>
 
 	<?php get_template_part( 'partials/sidebar', 'right' ); ?>
 

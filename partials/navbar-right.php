@@ -7,10 +7,10 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-$navbar = new conversions\navbar();
+$conversions_navbar = new conversions\navbar();
 ?>
 
-	<div id="wrapper-navbar" class="<?php echo esc_attr( $navbar->conversions_wrapper_classes() ); ?>">
+	<div id="wrapper-navbar" class="<?php echo esc_attr( $conversions_navbar->conversions_wrapper_classes() ); ?>">
 
 		<?php if ( is_page_template( 'page-templates/homepage.php' ) ) : ?>
 
