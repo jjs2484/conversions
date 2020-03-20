@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.4
 Requires PHP: 5.6.20
-Stable tag: 1.5.7
+Stable tag: 1.5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,17 @@ Full documentation: https://conversionswp.com/docs/documentation/
 * Fix: prefix variables in shortcode-content-price.php
 * Fix: prefix variables in shortcode-download.php
 * Fix: prefix repeater_input_labels_filter hook in class-conversions-repeater.php
+
+= 1.5.8 =
+* Fix: prefix variables in:
+- partials/content.php
+- partials/download-grid.php
+- partials/footer-cta.php
+- partials/left-sidebar-check.php
+- partials/navbar-right.php
+- partials/right-sidebar-check.php
+- partials/sidebar-left.php
+- partials/sidebar-right.php
 
 == Resources ==
 
