@@ -121,6 +121,8 @@ Full documentation: https://conversionswp.com/docs/documentation/
 * Fix: prefix repeater_input_labels_filter hook in class-conversions-repeater.php
 
 = 1.5.8 =
+* Fix: add page template checks to sidebar display.
+* Fix: add phpcs comments in inc/class-wp-bootstrap-navwalker.php
 * Fix: prefix variables in:
 - partials/content.php
 - partials/download-grid.php
@@ -130,6 +132,9 @@ Full documentation: https://conversionswp.com/docs/documentation/
 - partials/right-sidebar-check.php
 - partials/sidebar-left.php
 - partials/sidebar-right.php
+- taxonomy-download_category.php
+- taxonomy-download_tag.php 
+- archive-download.php
 
 == Resources ==
 
