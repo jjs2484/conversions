@@ -136,6 +136,11 @@ Full documentation: https://conversionswp.com/docs/documentation/
 - taxonomy-download_tag.php 
 - archive-download.php
 
+= 1.5.9 =
+* Update: Font Awesome to v5.13.
+* Update: NPM Dependencies.
+* Update: Further optimize CSS prefixes.
+
 == Resources ==
 
 * Bootstrap 4.4.1 | MIT License
