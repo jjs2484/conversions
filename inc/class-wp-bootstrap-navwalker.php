@@ -56,7 +56,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 		 * @param stdClass $args    An object of `wp_nav_menu()` arguments.
 		 * @param int      $depth   Depth of menu item. Used for padding.
 		 */
-		$class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
+		$class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 		/**
 		 * The `.dropdown-menu` container needs to have a labelledby
@@ -121,7 +121,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 		 * @param WP_Post  $item  Menu item data object.
 		 * @param int      $depth Depth of menu item. Used for padding.
 		 */
-		$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+		$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		// Add .dropdown or .active classes where they are needed.
 		if ( isset( $args->has_children ) && $args->has_children ) {
 			$classes[] = 'dropdown';
@@ -133,7 +133,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 		$classes[] = 'menu-item-' . $item->ID;
 		$classes[] = 'nav-item';
 		// Allow filtering the classes.
-		$classes = apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth );
+		$classes = apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		// Form a string of classes in format: class="class_names".
 		$class_names = join( ' ', $classes );
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
@@ -148,7 +148,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 		 * @param stdClass $args    An object of wp_nav_menu() arguments.
 		 * @param int      $depth   Depth of menu item. Used for padding.
 		 */
-		$id      = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
+		$id      = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		$id      = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 		$output .= $indent . '<li role="none presentation" ' . $id . $class_names . '>';
 		// initialize array for holding the $atts for the link item.
@@ -186,7 +186,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 		// update atts of this item based on any custom linkmod classes.
 		$atts = self::update_atts_for_linkmod_type( $atts, $linkmod_classes );
 		// Allow filtering of the $atts array before using it.
-		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
+		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		// Build a string of html containing all the atts for the item.
 		$attributes = '';
 		foreach ( $atts as $attr => $value ) {
@@ -225,7 +225,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 			$icon_html = '<i class="' . esc_attr( $icon_class_string ) . '" aria-hidden="true"></i> ';
 		}
 		/** This filter is documented in wp-includes/post-template.php */
-		$title = apply_filters( 'the_title', $item->title, $item->ID );
+		$title = apply_filters( 'the_title', $item->title, $item->ID ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		/**
 		 * Filters a menu item's title.
 		 *
@@ -236,7 +236,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 		 * @param stdClass $args  An object of wp_nav_menu() arguments.
 		 * @param int      $depth Depth of menu item. Used for padding.
 		 */
-		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
+		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		/**
 		 * If the .sr-only class was set apply to the nav items text only.
 		 */
@@ -264,7 +264,7 @@ class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu {
 		/**
 		 * END appending the internal item contents to the output.
 		 */
-		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 	}
 	/**
 	 * Traverse elements to create list from elements.

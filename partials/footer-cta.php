@@ -49,19 +49,19 @@ defined( 'ABSPATH' ) || exit;
 
 								if ( get_theme_mod( 'conversions_hcta_btn', 'no' ) !== 'no' ) {
 									// Button.
-									$cta_btn_text = get_theme_mod( 'conversions_hcta_btn_text' );
-									if ( empty( $cta_btn_text ) ) {
-										$cta_btn_text = '';
+									$conversions_cta_btn_text = get_theme_mod( 'conversions_hcta_btn_text' );
+									if ( empty( $conversions_cta_btn_text ) ) {
+										$conversions_cta_btn_text = '';
 									}
-									$cta_btn_url = get_theme_mod( 'conversions_cta_btn_url' );
-									if ( empty( $cta_btn_url ) ) {
-										$cta_btn_url = '';
+									$conversions_cta_btn_url = get_theme_mod( 'conversions_cta_btn_url' );
+									if ( empty( $conversions_cta_btn_url ) ) {
+										$conversions_cta_btn_url = '';
 									}
 									echo sprintf(
 										'<a href="%s" class="btn %s btn-lg">%s</a>',
-										esc_url( $cta_btn_url ),
+										esc_url( $conversions_cta_btn_url ),
 										esc_attr( get_theme_mod( 'conversions_hcta_btn', 'btn-light' ) ),
-										esc_html( $cta_btn_text )
+										esc_html( $conversions_cta_btn_text )
 									);
 								}
 								?>

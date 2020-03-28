@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-$edd = new conversions\easy_digital_downloads();
+$conversions_edd = new conversions\easy_digital_downloads();
 ?>
 
 <div class="wrapper content-wrapper" id="edd-archive-wrapper">
@@ -36,7 +36,7 @@ $edd = new conversions\easy_digital_downloads();
 						?>
 					</header><!-- .page-header -->
 
-					<div class="<?php echo esc_attr( $edd->conversions_edd_archive_list_classes() ); ?>">
+					<div class="<?php echo esc_attr( $conversions_edd->conversions_edd_archive_list_classes() ); ?>">
 
 						<?php
 						while ( have_posts() ) :

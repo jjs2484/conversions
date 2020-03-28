@@ -263,6 +263,10 @@ class Template {
 
 		global $post;
 
+		if ( is_single() && 'post' != get_post_type() ) {
+			return;
+		}
+
 		$related_posts_tax = get_theme_mod( 'conversions_blog_taxonomy', 'categories' );
 		if ( 'tags' === $related_posts_tax ) {
 
@@ -526,7 +530,7 @@ class Template {
 			'&nbsp;&bull;&nbsp;<span class="conversions-powered">%s&nbsp;<a href="%s">%s</a></span>',
 			esc_html__( 'Powered by', 'conversions' ),
 			esc_url( 'https://conversionswp.com' ),
-			esc_html__( 'Conversions', 'conversions' )
+			esc_html__( 'Conversions Theme', 'conversions' )
 		);
 
 		echo '</div>';

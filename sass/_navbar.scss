@@ -1,6 +1,6 @@
 // Navbar styles
 #wrapper-navbar .navbar {
-	a.navbar-brand img {
+	.navbar-brand img {
 		height: 100%;
 		width: auto;
 	}
@@ -18,36 +18,31 @@
 	}
 
 	// Nav icons
-	#main-menu {
-		// cart
-		a.cart-customlocation i.fas.fa-shopping-bag {
-			font-size: 1.15rem;
-			margin-right: 0.25rem;
-		}
-		// account
-		.account-icon.menu-item a i.fas.fa-user {
-			font-size: 1.05rem;
-		}
-		// search
-		.search-icon.menu-item a i.fas.fa-search {
-			font-size: 1.05rem;
-		}
+	// cart
+	.cart-customlocation .fa-shopping-cart {
+		font-size: 1.05rem;
+		margin-right: 0.2rem;
+	}
+	// account and search
+	.account-icon .fa-user,
+	.search-icon .fa-search {
+		font-size: 1.05rem;
 	}
 
 	// Large devices (desktops, 992px and up)
 	@include media-breakpoint-up(lg) {
-		ul.navbar-nav {
+		.navbar-nav {
 			display: inline-block;
-			li.menu-item {
+			.menu-item {
 				display: inline-block;
-				a.nav-link {
+				.nav-link {
 					white-space: nowrap;
 				}
 				.dropdown-menu li.menu-item {
 					display: block;
 				}
 			}
-			li.nav-callout-button.menu-item {
+			.nav-callout-button {
 				margin-left: 0.5rem;
 			}
 		}
@@ -79,7 +74,7 @@
 }
 
 // If white navbar add bottom border
-#wrapper-navbar.is-white-color {
+#wrapper-navbar.is-white-color .navbar {
 	border-bottom: 1px solid #dee2e6;
 }
 
@@ -197,7 +192,7 @@ body.offcanvas-overflowx {
 			color: #ddd;
 		}
 	}
-	form#searchform input.field.form-control {
+	#searchform input.field {
 		@extend .form-control-lg;
 	}
 	button.close {

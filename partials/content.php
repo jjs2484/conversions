@@ -16,12 +16,12 @@ defined( 'ABSPATH' ) || exit;
 		<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
 			<?php
 				/* grab the featured image sizes */
-				$blog_index_img     = get_post_thumbnail_id( $post->ID );
-				$blog_index_img_sm  = wp_get_attachment_image_src( $blog_index_img, 'news-image', false );
-				$blog_index_img_lg  = wp_get_attachment_image_src( $blog_index_img, 'blog-index', false );
-				$blog_index_img_alt = get_post_meta( $blog_index_img, '_wp_attachment_image_alt', true );
+				$conversions_index_img     = get_post_thumbnail_id( $post->ID );
+				$conversions_index_img_sm  = wp_get_attachment_image_src( $conversions_index_img, 'news-image', false );
+				$conversions_index_img_lg  = wp_get_attachment_image_src( $conversions_index_img, 'blog-index', false );
+				$conversions_index_img_alt = get_post_meta( $conversions_index_img, '_wp_attachment_image_alt', true );
 
-				echo '<img class="card-img-top" src="' . esc_url( $blog_index_img_lg[0] ) . '" alt="' . esc_attr( $blog_index_img_alt ) . '" srcset="' . esc_url( $blog_index_img_sm[0] ) . ' 550w, ' . esc_url( $blog_index_img_lg[0] ) . ' 1200w">';
+				echo '<img class="card-img-top" src="' . esc_url( $conversions_index_img_lg[0] ) . '" alt="' . esc_attr( $conversions_index_img_alt ) . '" srcset="' . esc_url( $conversions_index_img_sm[0] ) . ' 550w, ' . esc_url( $conversions_index_img_lg[0] ) . ' 1200w">';
 			?>
 		</a>
 	<?php endif; ?>

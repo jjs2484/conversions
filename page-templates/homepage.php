@@ -20,7 +20,9 @@ get_header();
 
 <div id="homepage-wrapper" class="wrapper content-wrapper">
 
-<?php do_action( 'homepage' ); ?>
+<?php
+do_action( 'homepage' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+?>
 
 </div><!-- Wrapper end -->
 

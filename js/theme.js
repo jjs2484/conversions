@@ -3,17 +3,17 @@
 */
 jQuery(function() {
 
-	var resizeTimer; // Set resizeTimer to empty so it resets on page load.
-
 	function resizeFunction() {
-		// Are we using a fixed header?
-		var fixedHeader = document.getElementById('wrapper-navbar').classList;
-		if (fixedHeader.contains('header-p-n')) {
+		// Get the navbar classes.
+		var navbarClasses = document.getElementById('wrapper-navbar').classList;
+
+		// Are we using a fixed header? If not return.
+		if (navbarClasses.contains('header-p-n')) {
 			return;
 		}
-		else if (fixedHeader.contains('fixed-top')) {
+		else if (navbarClasses.contains('fixed-top')) {
 	
-			// get height of header and adminbar.
+			// get height of header.
 			var fixedHeight = jQuery('#wrapper-navbar.fixed-top').innerHeight();
 			var adjustedFixedHeight = fixedHeight - 2;
 	
@@ -22,13 +22,13 @@ jQuery(function() {
 		}
 	}
 
+	var resizeTimer; // Set resizeTimer to empty so it resets on page load.
+
 	// On resize, run the function and reset the timeout.
-	// 150 is the delay in milliseconds. Change as you see fit.
 	jQuery(window).resize(function() {
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(resizeFunction, 150);
 	});
-
 });
 
 /**
@@ -39,31 +39,33 @@ jQuery(function() {
 	jQuery('[data-toggle="offcanvas"]').on('click', function () {
 		// add open class to nav.
 		jQuery('.offcanvas-collapse').toggleClass('open');
+		
 		// set html and body overflow-x: hidden to prevent horizontal scrollbar.
 		jQuery('html').toggleClass('offcanvas-overflowx');
 		jQuery('body').toggleClass('offcanvas-overflowx');
-		// run size function.
-		OffresizeFunction();
+		
+		// run resize function.
+		offcanvasResize();
 	});
 
-	function OffresizeFunction() {
-		// get height of header and adminbar.
+	function offcanvasResize() {
+		// Get height of header and adminbar.
 		var offcanvasHeight = jQuery('#wrapper-navbar').innerHeight();
 		var adminBarHeight = jQuery('#wpadminbar').innerHeight();
 		
-		// if adminbar is null lets not include it.
-		if (adminBarHeight == null) { var totalHeight = offcanvasHeight - 3; }
-		// eslint-disable-next-line no-redeclare
-		else { var totalHeight = offcanvasHeight + adminBarHeight - 3; }
+		// Total height calculation.
+		var totalHeight = offcanvasHeight + adminBarHeight - 3;
 
-		// set offcanvas top position.
+		// Set offcanvas top position.
 		jQuery('.offcanvas-collapse.open').css({'top' : totalHeight + 'px'});
 		
+		// Get the navbar classes.
+		var navbarClasses = document.getElementById('wrapper-navbar').classList;
+
 		// Check if we are using a non-fixed header.
-		var offcanvasRHeader = document.getElementById('wrapper-navbar').classList;
 		// If so lets toggle fixed while offcanvas is open.
-		if (offcanvasRHeader.contains('header-p-n')) {
-			offcanvasRHeader.toggle('fixed-top');
+		if (navbarClasses.contains('header-p-n')) {
+			navbarClasses.toggle('fixed-top');
 			if (jQuery('.content-wrapper')[0].hasAttribute('style')) {
 				jQuery('.content-wrapper').removeAttr('style');
 			}
@@ -71,19 +73,63 @@ jQuery(function() {
 				jQuery('.content-wrapper').css({'margin-top' : offcanvasHeight + 'px'});
 			}
 		}
-
 	}
 
-	var resizeTime;
+	var resizeTime; // Set resizeTime to empty so it resets on page load.
+
 	// On resize run the function and reset the timeout.
-	// 150 is the delay in milliseconds.
 	jQuery(window).resize(function() {
 		if (jQuery('.offcanvas-collapse.open').length > 0) {
 			clearTimeout(resizeTime);
-			resizeTime = setTimeout(OffresizeFunction, 150);
+			resizeTime = setTimeout(offcanvasResize, 150);
 		}
 	});
-   
+});
+
+/**
+ * Anchor link offset for fixed navbar
+*/
+jQuery(function() {
+	
+	function scrollToAnchor(hash) {
+		// Get the navbar classes.
+		var navbarClasses = document.getElementById('wrapper-navbar').classList;
+
+		// Are we using a fixed header? If not return.
+		if (navbarClasses.contains('header-p-n')) {
+			return;
+		}
+		else if (navbarClasses.contains('fixed-top')) {
+		
+			var target = jQuery(hash);
+
+			// Get height of the navbar and adminbar.
+			var navbarHeight = jQuery('#wrapper-navbar').innerHeight();
+			var adminBarHeight = jQuery('#wpadminbar').innerHeight();
+		
+			// Total height calculation.
+			var offsetHeight = navbarHeight + adminBarHeight + 50;
+
+			target = target.length ? target : jQuery('[name=' + hash.slice(1) +']');
+
+			if (target.length) {
+				jQuery('html,body').animate({
+					scrollTop: target.offset().top - offsetHeight
+				}, 100);
+				event.preventDefault();
+				event.stopPropagation();
+			}
+		}
+	}
+
+	if(window.location.hash) {
+		scrollToAnchor(window.location.hash);
+	}
+	jQuery('a[href*=\\#]:not([href=\\#],[data-toggle])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
+			scrollToAnchor(this.hash);
+		}
+	});
 });
 
 /**
@@ -94,7 +140,7 @@ jQuery(document).ready(function() {
 });
 
 /**
- * Initialize Slick client section
+ * Initialize Slick testimonial section
 */
 jQuery(document).ready(function() {
 	jQuery('.c-testimonials__carousel').slick({
@@ -109,21 +155,24 @@ jQuery(document).ready(function() {
 });
 
 /**
- * Initialize fancybox options
+ * Hero youtube modal 
 */
-jQuery('[data-fancybox="c-hero__fb-video1"]').fancybox({
-	// Options go here.
-	youtube : {
-		showinfo : 0,
-		autoplay : 1,
-		rel : 0
-	},
-	onInit : function() {
-		jQuery('#wrapper-navbar').addClass('compensate-for-scrollbar');
-		jQuery('#wpadminbar').addClass('compensate-for-scrollbar');
-	},
-	afterClose : function() {
-		jQuery('#wrapper-navbar').removeClass('compensate-for-scrollbar');
-		jQuery('#wpadminbar').removeClass('compensate-for-scrollbar');
-	}
+jQuery(document).ready(function() {
+
+	// Gets the video src from the data-src on each button
+	var $videoSrc;  
+	jQuery( '.c-hero__fb-video' ).click(function() {
+		$videoSrc = jQuery(this).data( 'src' );
+	});
+
+	// when the modal is opened autoplay it  
+	jQuery( '#c-hero-modal' ).on( 'shown.bs.modal', function (e) {
+		// set the video src to autoplay and not to show related video.
+		jQuery( '#video' ).attr( 'src', $videoSrc + '?autoplay=1&amp;modestbranding=1&amp;showinfo=0&amp;rel=0' ); 
+	});
+
+	// stop playing the youtube video when I close the modal
+	jQuery( '#c-hero-modal' ).on( 'hide.bs.modal', function (e) {
+		jQuery( '#video' ).attr( 'src', $videoSrc ); 
+	});
 });

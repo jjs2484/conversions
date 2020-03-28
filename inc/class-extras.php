@@ -139,7 +139,7 @@ class Extras {
 	public function adjust_content_width() {
 		if ( is_page_template( 'page-templates/fullwidthpage.php' ) || is_page_template( 'page-templates/homepage.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) || ! is_active_sidebar( 'sidebar-2' ) ) {
 			global $content_width;
-			$content_width = 1140 - ( 15 * 2 );
+			$content_width = 1140 - ( 15 * 2 ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
 		}
 	}
 

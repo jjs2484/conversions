@@ -48,9 +48,6 @@ textarea {
 .wrapper {
 	padding: 2rem 0 3rem;
 	word-wrap: break-word;
-	:focus {
-		outline: none;
-	}
 }
 
 // Content wrapper - if fullwidth page add overflow hidden
@@ -227,6 +224,25 @@ section.c-hero {
 			&:hover {
 				text-decoration: none;
 			}
+		}
+	}
+	#c-hero-modal {
+		.modal-dialog {
+			max-width: 1000px;
+			margin: 100px auto 10px;
+		}
+		.modal-body {
+			padding: 0px;
+		}
+		.close {
+			position:absolute;
+			right: 0;
+		  	top: 0;
+		  	z-index: 999;
+			font-size: 2rem;
+		  	font-weight: normal;
+		  	color: #fff;
+		  	opacity: 1;
 		}
 	}
 }
@@ -411,7 +427,7 @@ section.c-testimonials {
 
 // Page/Post featured image
 .conversions-hero-cover {
-	margin: -30px 0 2em;
+	margin: -34px 0 2rem;
 	padding: 2em 0;
 	background-size: cover;
 	background-position: center;

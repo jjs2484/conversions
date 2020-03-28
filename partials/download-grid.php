@@ -8,8 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$edd = new conversions\easy_digital_downloads();
-$download_grid_options = $edd->conversions_edd_grid_options();
+$conversions_edd = new conversions\easy_digital_downloads();
+$conversions_download_grid = $conversions_edd->conversions_edd_grid_options();
 ?>
 
 <div class="<?php echo esc_attr( apply_filters( 'edd_download_class', 'edd_download', get_the_ID(), '', '' ) ); ?>" id="edd_download_<?php the_ID(); ?>">
@@ -20,7 +20,7 @@ $download_grid_options = $edd->conversions_edd_grid_options();
 
 		do_action( 'edd_download_before' );
 
-		if ( true === $download_grid_options['thumbnails'] ) {
+		if ( true === $conversions_download_grid['thumbnails'] ) {
 			edd_get_template_part( 'shortcode', 'content-image' );
 			do_action( 'edd_download_after_thumbnail' );
 		}
@@ -32,27 +32,27 @@ $download_grid_options = $edd->conversions_edd_grid_options();
 
 		do_action( 'edd_download_after_title' );
 
-		if ( true === $download_grid_options['excerpt'] && true !== $download_grid_options['full_content'] ) {
+		if ( true === $conversions_download_grid['excerpt'] && true !== $conversions_download_grid['full_content'] ) {
 			edd_get_template_part( 'shortcode', 'content-excerpt' );
 			do_action( 'edd_download_after_content' );
-		} elseif ( true === $download_grid_options['full_content'] ) {
+		} elseif ( true === $conversions_download_grid['full_content'] ) {
 			edd_get_template_part( 'shortcode', 'content-full' );
 			do_action( 'edd_download_after_content' );
 		}
 
 		// Check if price or button are active.
-		if ( true === $download_grid_options['price'] || true === $download_grid_options['buy_button'] ) :
+		if ( true === $conversions_download_grid['price'] || true === $conversions_download_grid['buy_button'] ) :
 
 			// Add a wrapper to the price and buy button.
 			echo '<div class="edd-downloads-footer">';
 
-			if ( true === $download_grid_options['price'] ) :
+			if ( true === $conversions_download_grid['price'] ) :
 				// Show the download price.
 				edd_get_template_part( 'shortcode', 'content-price' );
 				do_action( 'edd_download_after_price' );
 			endif;
 
-			if ( true === $download_grid_options['buy_button'] ) :
+			if ( true === $conversions_download_grid['buy_button'] ) :
 				// Show the download by button.
 				edd_get_template_part( 'shortcode', 'content-cart-button' );
 			endif;

@@ -213,7 +213,9 @@ $block-btns: (
 );
 
 // Button block
-.wp-block-button {
+// Note: .wp-block-buttons was added in WP 5.4
+.wp-block-button,
+.wp-block-buttons .wp-block-button {
 	// no alignment
 	margin-bottom: 1.5rem;
 	// align center

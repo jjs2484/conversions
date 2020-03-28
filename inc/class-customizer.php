@@ -81,17 +81,17 @@ namespace conversions
 			// font choices.
 			$font_choices = [
 				'Comfortaa:400,700'                       => __( 'Comfortaa', 'conversions' ),
-				'Droid Sans:400,700'                      => __( 'Droid Sans', 'conversions' ),
-				'Droid Serif:400,700,400italic,700italic' => __( 'Droid Serif', 'conversions' ),
 				'Handlee:400'                             => __( 'Handlee', 'conversions' ),
 				'Indie Flower:400'                        => __( 'Indie Flower', 'conversions' ),
 				'Lato:400,700,400italic,700italic'        => __( 'Lato', 'conversions' ),
 				'Libre Baskerville:400,400italic,700'     => __( 'Libre Baskerville', 'conversions' ),
 				'Lora:400,700,400italic,700italic'        => __( 'Lora', 'conversions' ),
 				'Merriweather:400,300italic,300,400italic,700,700italic' => __( 'Merriweather', 'conversions' ),
+				'Noto Sans:400,400italic,700,700italic'   => __( 'Noto Sans', 'conversions' ),
 				'Open Sans:400italic,700italic,400,700'   => __( 'Open Sans', 'conversions' ),
 				'Oxygen:400,300,700'                      => __( 'Oxygen', 'conversions' ),
 				'Roboto:400,400italic,700,700italic'      => __( 'Roboto', 'conversions' ),
+				'Roboto Mono:400,400italic,700,700italic' => __( 'Roboto Mono', 'conversions' ),
 				'Roboto Slab:400,700'                     => __( 'Roboto Slab', 'conversions' ),
 				'Special Elite:400'                       => __( 'Special Elite', 'conversions' ),
 				'Ubuntu:400,700,400italic,700italic'      => __( 'Ubuntu', 'conversions' ),
@@ -264,7 +264,6 @@ namespace conversions
 			$nav_tbpadding    = get_theme_mod( 'conversions_nav_tbpadding', '.5' );
 			$logo_padding     = .625;
 			$total_nav_height = $logo_height + ( $nav_tbpadding * 2 ) + $logo_padding - .1250;
-			$nav_offset       = $total_nav_height + 3.125;
 
 			// WC button option.
 			$wc_primary_btn   = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
@@ -356,14 +355,6 @@ namespace conversions
 				if ( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) === 'fixed-top' ) {
 					echo '.content-wrapper {
 							margin-top: ' . esc_html( $total_nav_height ) . 'rem;
-					}';
-					echo '.wrapper :target:before, .wrapper li[id].comment:before {
-						display: block;
-						content: " ";
-						margin-top: -' . esc_html( $nav_offset ) . 'rem;
-						height: ' . esc_html( $nav_offset ) . 'rem;
-						visibility: hidden;
-						pointer-events: none;
 					}';
 				}
 				// Navbar drop shadow.
@@ -472,24 +463,13 @@ namespace conversions
 
 					// Append WooCommerce Cart icon?
 					if ( get_theme_mod( 'conversions_wc_cart_nav', true ) === true ) {
-						// get WC cart totals and if = 0 only show icon with no text.
-						$cart_totals = WC()->cart->get_cart_contents_count();
-						if ( WC()->cart->get_cart_contents_count() > 0 ) {
-							$cart_totals = sprintf(
-								'%s<span class="sr-only">' . __( ' items in your shopping cart', 'conversions' ) . '</span>',
-								WC()->cart->get_cart_contents_count()
-							);
-						} else {
-							$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
-						}
 						// output the cart icon with item count.
 						$cart_link = sprintf(
-							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-bag"></i>%s</a></li>',
-							wc_get_cart_url(),
-							$cart_totals
+							'<li class="cart menu-item nav-item">%s</li>',
+							WooCommerce::get_cart_nav_html()
 						);
 						// Add the cart icon to the end of the menu.
-						$items = $items . $cart_link;
+						$items .= $cart_link;
 					}
 
 					// Append WooCommerce Account icon?
@@ -508,7 +488,7 @@ namespace conversions
 						);
 
 						// Add the account to the end of the menu.
-						$items = $items . $wc_account_link;
+						$items .= $wc_account_link;
 					}
 				}
 
@@ -525,13 +505,13 @@ namespace conversions
 
 						// output the cart icon with item count.
 						$edd_cart_link = sprintf(
-							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-bag"></i>%s</a></li>',
+							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-cart"></i>%s</a></li>',
 							esc_url( edd_get_checkout_uri() ),
 							$edd_cart_totals
 						);
 
 						// Add the cart icon to the end of the menu.
-						$items = $items . $edd_cart_link;
+						$items .= $edd_cart_link;
 					}
 
 					// Append Easy Digital Downloads Account icon?
@@ -550,7 +530,7 @@ namespace conversions
 						);
 
 						// Add the account to the end of the menu.
-						$items = $items . $edd_account_link;
+						$items .= $edd_account_link;
 					}
 				}
 
@@ -562,7 +542,7 @@ namespace conversions
 					);
 
 					// Add the nav button to the end of the menu.
-					$items = $items . $nav_search;
+					$items .= $nav_search;
 				}
 
 				// Append Navigation Button?
@@ -585,7 +565,7 @@ namespace conversions
 					);
 
 					// Add the nav button to the end of the menu.
-					$items = $items . $nav_button;
+					$items .= $nav_button;
 				}
 			}
 			return $items;
@@ -691,5 +671,5 @@ namespace
 
 		return $string;
 	}
-	add_filter( 'repeater_input_labels_filter', 'conversions_repeater_labels', 10, 3 );
+	add_filter( 'conversions_repeater_labels_filter', 'conversions_repeater_labels', 10, 3 );
 }

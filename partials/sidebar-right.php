@@ -13,11 +13,11 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 
 // which sidebar is selected?
-$sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' );
+$conversions_sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right' );
 ?>
 
 <?php
-if ( 'right' === $sidebar_pos ) {
+if ( 'right' === $conversions_sidebar_pos || is_page_template( 'page-templates/right-sidebarpage.php') ) {
 	?>
 	<div class="col-md-4 col-lg-3 widget-area pl-md-4 pl-lg-3" id="sidebar-1" role="complementary">
 	<?php

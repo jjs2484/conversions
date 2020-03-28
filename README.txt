@@ -2,9 +2,9 @@
 Contributors: uniquelylost
 Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, footer-widgets, full-width-template, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 Requires at least: 4.7
-Tested up to: WordPress 5.3.2
+Tested up to: WordPress 5.4
 Requires PHP: 5.6.20
-Stable tag: 1.5.2
+Stable tag: 1.5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Conversions is conversion-focused WordPress theme. It’s based on Bootstrap 4 a
 
 Conversions is conversion-focused WordPress theme. It’s based on Bootstrap 4 and Automattic’s starter theme called _s, or underscores. Conversions enables you to create almost any type of website such as: business, startup, agency, e-commerce shop, portfolio, non-profit, or blog. It is fully compatible with Gutenberg and most popular page builders (Elementor, Visual Composer, etc.). Some of the theme features include: ✓ Mobile First Design ✓ Customizer Options ✓ Search Engine Optimized ✓ Google Fonts ✓ Font Awesome ✓ Translation Ready ✓ RTL Support ✓ Highly Extendable. Conversions supports many popular WordPress plugins like: WooCommerce, Easy Digital Downloads, Contact Form 7, Google Analytics, and much more. 
 
-Full documentation: https://conversionswp.com/documentation/
+Full documentation: https://conversionswp.com/docs/documentation/
 
 == Changelog ==
 
@@ -90,12 +90,131 @@ Full documentation: https://conversionswp.com/documentation/
 * Update: use get_theme_file_uri to enqueue scripts and styles for child theme overriding.
 * Update: Gutenberg editor styles for markup changes in WordPress 5.4
 * Update: screenshot
+* Update: add fallback navbar menu if none are assigned.
 * Fix: add Bootstrap colors to button placeholder text in Gutenberg editor.
+
+= 1.5.4 =
+* Update: use jQuery for anchor link click events and offset.
+* Fix: CSS margin for blog featured images.
+
+= 1.5.5 =
+* Update: remove Fancybox, use Bootstrap modal for video instead.
+
+= 1.5.6 =
+* Update: WooCommerce templates to 4.0. 
+* Update: refactor navbar CSS.
+* Update: cart icon.
+* Update: nav walker improvements.
+* Update: screenshot.
+* Update: add starter-content for fresh installs.
+* Update: add additional resource licences.
+* Fix: jQuery anchor link offset - ignore elements with data-toggle attribute.
+* Fix: CSS bottom border on navbar.
+
+= 1.5.7 =
+* Fix: only show related posts on default post type.
+* Fix: add .wp-block-buttons selector for Gutenberg buttons in WP v5.4
+* Fix: keyboard focus highlighting.
+* Fix: prefix edd_primary_btn variable in shortcode-content-cart-button.php
+* Fix: prefix variables in shortcode-content-price.php
+* Fix: prefix variables in shortcode-download.php
+* Fix: prefix repeater_input_labels_filter hook in class-conversions-repeater.php
+
+= 1.5.8 =
+* Fix: add page template checks to sidebar display.
+* Fix: add phpcs comments in inc/class-wp-bootstrap-navwalker.php
+* Fix: prefix variables in:
+- partials/content.php
+- partials/download-grid.php
+- partials/footer-cta.php
+- partials/left-sidebar-check.php
+- partials/navbar-right.php
+- partials/right-sidebar-check.php
+- partials/sidebar-left.php
+- partials/sidebar-right.php
+- taxonomy-download_category.php
+- taxonomy-download_tag.php 
+- archive-download.php
+
+= 1.5.9 =
+* Update: Font Awesome to v5.13.
+* Update: NPM Dependencies.
+* Update: Further optimize CSS prefixes.
+* Update: Footer credit to - Powered by Conversions Theme.
 
 == Resources ==
 
 * Bootstrap 4.4.1 | MIT License
-* Fancybox v3.5.7 | GPLv3 license | Extended Commercial license
 * Font Awesome v5.12.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * Slick v1.8.1 | MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
+* _s, or underscores | GPLv2 or later
+
+* Google Fonts
+
+	Comfortaa
+    Source: https://fonts.google.com/specimen/Comfortaa
+	License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Handlee
+    Source: https://fonts.google.com/specimen/Handlee
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Indie Flower
+    Source: https://fonts.google.com/specimen/Indie+Flower
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Lato
+    Source: https://fonts.google.com/specimen/Lato
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Libre Baskerville
+    Source: https://fonts.google.com/specimen/Libre+Baskerville
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Lora
+    Source: https://fonts.google.com/specimen/Lora
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Merriweather
+    Source: https://fonts.google.com/specimen/Merriweather
+    License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Noto Sans
+    Source: https://fonts.google.com/specimen/Noto+Sans
+    License: Apache License, version 2 - apache.org/licenses/LICENSE-2.0.html
+
+    Open Sans
+	Source: https://www.google.com/fonts/specimen/Open+Sans
+	License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Oxygen
+    Source: https://fonts.google.com/specimen/Oxygen
+	License: SIL Open Font License, 1.1 - scripts.sil.org/OFL
+
+    Roboto
+    Source: https://fonts.google.com/specimen/Roboto
+	License: Apache License, version 2 - apache.org/licenses/LICENSE-2.0.html
+
+    Roboto Mono
+    Source: https://fonts.google.com/specimen/Roboto+Mono
+	License: Apache License, version 2 - apache.org/licenses/LICENSE-2.0.html
+
+    Roboto Slab
+    Source: https://fonts.google.com/specimen/Roboto+Slab
+	License: Apache License, version 2 - apache.org/licenses/LICENSE-2.0.html
+
+    Special Elite
+    Source: https://fonts.google.com/specimen/Special+Elite
+	License: Apache License, version 2 - apache.org/licenses/LICENSE-2.0.html
+
+    Ubuntu
+    Source: https://fonts.google.com/specimen/Ubuntu
+	License: Ubuntu Font License, 1.0 - design.ubuntu.com/font/
+
+* Adobe images
+Extended License: https://stock.adobe.com/license-terms
+
+    images/shopping.jpg
+	https://stock.adobe.com/images/shopping-online-concept-shopping-service-on-the-online-web-with-payment-by-credit-card-and-offers-home-delivery-parcel-or-paper-cartons-with-a-shopping-cart-logo-on-a-laptop-keyboard/250318394?asset_id=250318394#
+    

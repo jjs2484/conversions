@@ -8,17 +8,17 @@
 echo '<div><div class="edd_price">';
 
 // Get the download ID.
-$download_id = get_the_ID();
+$conversions_download_id = get_the_ID();
 
 // Get the prices.
-if ( edd_is_free_download( $download_id ) ) {
-	$price = esc_html__( 'Free', 'conversions' );
-} elseif ( edd_has_variable_prices( $download_id ) ) {
-	$price = edd_price_range( $download_id );
+if ( edd_is_free_download( $conversions_download_id ) ) {
+	$conversions_download_price = esc_html__( 'Free', 'conversions' );
+} elseif ( edd_has_variable_prices( $conversions_download_id ) ) {
+	$conversions_download_price = edd_price_range( $conversions_download_id );
 } else {
-	$price = edd_price( $download_id );
+	$conversions_download_price = edd_price( $conversions_download_id );
 }
 
-echo $price; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
+echo $conversions_download_price; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
 
 echo '</div></div>';
