@@ -90,7 +90,10 @@ class Homepage {
 		foreach ( $sections as $section_id => $section ) {
 			if ( isset( $section[ 'disabled' ] ) )
 				continue;
-			add_action( 'homepage', [ $this, $section_id ], $counter * 100 );
+			$cc = $this;
+			if ( isset( $section[ 'callback_class' ] ) )
+				$cc = $section[ 'callback_class' ];
+			add_action( 'homepage', [ $cc, $section_id ], $counter * 100 );
 			$counter++;
 		}
 	}
@@ -220,12 +223,23 @@ class Homepage {
 	}
 
 	/**
+		@brief		Return all available sections.
+		@since		2020-03-28 18:09:14
+	**/
+	public static function get_sections()
+	{
+		$sections = static::$sections;
+		$sections = apply_filters( 'conversions_get_sections', $sections );
+		return $sections;
+	}
+
+	/**
 	 * Return the sections array but sorted as per the user's sorting.
 	 *
 	 * @since 2019-12-16
 	 */
 	public static function get_sorted_sections() {
-		$sections = static::$sections;
+		$sections = static::get_sections();
 		$options  = get_theme_mod( static::$theme_mod_key );
 
 		if ( $options != '' ) {
