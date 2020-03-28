@@ -140,6 +140,7 @@ Full documentation: https://conversionswp.com/docs/documentation/
 * Update: Font Awesome to v5.13.
 * Update: NPM Dependencies.
 * Update: Further optimize CSS prefixes.
+* Update: Footer credit to - Powered by Conversions Theme.
 
 == Resources ==
 

@@ -530,7 +530,7 @@ class Template {
 			'&nbsp;&bull;&nbsp;<span class="conversions-powered">%s&nbsp;<a href="%s">%s</a></span>',
 			esc_html__( 'Powered by', 'conversions' ),
 			esc_url( 'https://conversionswp.com' ),
-			esc_html__( 'Conversions', 'conversions' )
+			esc_html__( 'Conversions Theme', 'conversions' )
 		);
 
 		echo '</div>';
