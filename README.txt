@@ -142,6 +142,7 @@ Full documentation: https://conversionswp.com/docs/documentation/
 * Update: Further optimize CSS prefixes.
 * Update: Footer credit to - Powered by Conversions Theme.
 * Update: Add filter to allow other classes to add homepage sections.
+* Update: Prefix add_image_size images. Requires image sizes to be regenerated.
 
 == Resources ==
 

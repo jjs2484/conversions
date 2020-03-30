@@ -328,7 +328,7 @@ class Template {
 							<!-- Post image -->
 							<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
 								<?php if ( has_post_thumbnail() ) : ?>
-									<?php the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) ); ?>
+									<?php the_post_thumbnail( 'conversions-news', array( 'class' => 'card-img-top' ) ); ?>
 								<?php else : ?>
 									<img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo esc_url( get_template_directory_uri() ); ?>/placeholder.png" />
 								<?php endif; ?>
@@ -382,7 +382,7 @@ class Template {
 		$medium       = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium', false );
 		$medium_large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium_large', false );
 		$large        = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
-		$fullscreen   = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullscreen', false );
+		$conversions_fullscreen   = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'conversions-fullscreen', false );
 
 		if ( is_page_template( 'page-templates/homepage.php' ) ) : // homepage template.
 			// Get the customizer setting.
@@ -413,7 +413,7 @@ class Template {
 			' . esc_html( $css_selector ) . ' {background-image: url(' . esc_url( $medium[0] ) . ');}
 			@media (min-width: 300px) { ' . esc_html( $css_selector ) . ' { background-image: linear-gradient(rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . '), rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . ') ), url(' . esc_url( $medium_large[0] ) . ');} }
 			@media (min-width: 768px) { ' . esc_html( $css_selector ) . ' { background-image: linear-gradient(rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . '), rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . ') ), url(' . esc_url( $large[0] ) . ');} }
-			@media (min-width: 1024px) { ' . esc_html( $css_selector ) . ' { background-image: linear-gradient(rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . '), rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . ')), url(' . esc_url( $fullscreen[0] ) . ');} }
+			@media (min-width: 1024px) { ' . esc_html( $css_selector ) . ' { background-image: linear-gradient(rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . '), rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . ')), url(' . esc_url( $conversions_fullscreen[0] ) . ');} }
 		</style>';
 
 	}

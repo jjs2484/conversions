@@ -1000,7 +1000,7 @@ class Homepage {
 					<a class="c-news__img-link" href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>">
 						<?php
 						if ( has_post_thumbnail() ) :
-							the_post_thumbnail( 'news-image', array( 'class' => 'card-img-top' ) );
+							the_post_thumbnail( 'conversions-news', array( 'class' => 'card-img-top' ) );
 						else :
 							echo '<img class="card-img-top" alt="' . esc_html( get_the_title() ) . '" src="' . esc_url( get_template_directory_uri() ) . '/placeholder.png" />';
 						endif;

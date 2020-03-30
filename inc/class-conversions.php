@@ -98,13 +98,13 @@ namespace conversions
 			add_theme_support( 'post-thumbnails' );
 
 			// Add fullscreen thumbnail size.
-			add_image_size( 'fullscreen', 1920, 9999 );
+			add_image_size( 'conversions-fullscreen', 1920, 9999 );
 
 			// Add news image size.
-			add_image_size( 'news-image', 550, 320, true );
+			add_image_size( 'conversions-news', 550, 320, true );
 
 			// Add blog index image size.
-			add_image_size( 'blog-index', 1200, 480, true );
+			add_image_size( 'conversions-blog', 1200, 480, true );
 
 			// Set up the WordPress core custom background feature.
 			add_theme_support(
