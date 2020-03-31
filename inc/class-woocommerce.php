@@ -69,7 +69,7 @@ class WooCommerce {
 		$cart_totals = WC()->cart->get_cart_contents_count();
 		if ( $cart_totals > 0 ) {
 			$cart_totals = sprintf(	'<span>%d<span class="sr-only">' . __( 'items in your shopping cart', 'conversions' ) . '</span></span>',
-				WC()->cart->get_cart_contents_count()
+				esc_html( WC()->cart->get_cart_contents_count() )
 			);
 		} else {
 			$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
@@ -78,7 +78,7 @@ class WooCommerce {
 		$cart_icon = '<i aria-hidden="true" class="fas fa-shopping-cart"></i>';
 
 		$cart_html = sprintf( '<a class="cart-customlocation nav-link" title="%s" href="%s">%s%s</a>',
-			esc_attr( 'View your shopping cart', 'conversions' ),   // title.
+			esc_attr__( 'View your shopping cart', 'conversions' ), // title.
 			esc_url( wc_get_cart_url() ),                           // href.
 			$cart_icon,
 			$cart_totals

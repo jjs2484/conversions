@@ -326,7 +326,7 @@ class Template {
 						<article class="card shadow-sm h-100 mb-3">
 
 							<!-- Post image -->
-							<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
+							<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
 								<?php if ( has_post_thumbnail() ) : ?>
 									<?php the_post_thumbnail( 'conversions-news', array( 'class' => 'card-img-top' ) ); ?>
 								<?php else : ?>
@@ -517,7 +517,7 @@ class Template {
 
 		echo sprintf(
 			'&copy;%s&nbsp;&bull;&nbsp;<a class="site-name" href="%s" rel="home">%s</a>',
-			esc_html( gmdate( 'Y' ) ),
+			esc_html( date_i18n( __( 'Y', 'conversions' ) ) ),
 			esc_url( home_url( '/' ) ),
 			esc_html( $copyright_text )
 		);
