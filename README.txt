@@ -213,10 +213,3 @@ Full documentation: https://conversionswp.com/docs/documentation/
     Ubuntu
     Source: https://fonts.google.com/specimen/Ubuntu
 	License: Ubuntu Font License, 1.0 - design.ubuntu.com/font/
-
-* Adobe images
-Extended License: https://stock.adobe.com/license-terms
-
-    images/shopping.jpg
-	https://stock.adobe.com/images/shopping-online-concept-shopping-service-on-the-online-web-with-payment-by-credit-card-and-offers-home-delivery-parcel-or-paper-cartons-with-a-shopping-cart-logo-on-a-laptop-keyboard/250318394?asset_id=250318394#
-    
