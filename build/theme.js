@@ -10304,14 +10304,8 @@ jQuery(function() {
 	if(window.location.hash) {
 		scrollToAnchor(window.location.hash);
 	}
-	jQuery('a[href*=\\#]:not([href=\\#],[data-toggle])').click(function() {
+	jQuery('a[href*=\\#]:not([href=\\#],[data-toggle],[href="#homepage-wrapper"],[href="#content"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
-			scrollToAnchor(this.hash);
-		}
-	});
-	jQuery('[href="#homepage-wrapper"],[href="#content"]').keypress(function(event){
-		var keycode = (event.keyCode ? event.keyCode : event.which);
-		if(keycode == '13'){
 			scrollToAnchor(this.hash);
 		}
 	});
