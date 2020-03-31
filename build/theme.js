@@ -10304,7 +10304,7 @@ jQuery(function() {
 	if(window.location.hash) {
 		scrollToAnchor(window.location.hash);
 	}
-	jQuery('a[href*=\\#]:not([href=\\#],[data-toggle])').click(function() {
+	jQuery('a[href*=\\#]:not([href=\\#],[data-toggle],[href="#homepage-wrapper"],[href="#content"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
 			scrollToAnchor(this.hash);
 		}
@@ -10345,13 +10345,13 @@ jQuery(document).ready(function() {
 	});
 
 	// when the modal is opened autoplay it  
-	jQuery( '#c-hero-modal' ).on( 'shown.bs.modal', function (e) {
+	jQuery( '#c-hero-modal' ).on( 'shown.bs.modal', function () {
 		// set the video src to autoplay and not to show related video.
 		jQuery( '#video' ).attr( 'src', $videoSrc + '?autoplay=1&amp;modestbranding=1&amp;showinfo=0&amp;rel=0' ); 
 	});
 
 	// stop playing the youtube video when I close the modal
-	jQuery( '#c-hero-modal' ).on( 'hide.bs.modal', function (e) {
+	jQuery( '#c-hero-modal' ).on( 'hide.bs.modal', function () {
 		jQuery( '#video' ).attr( 'src', $videoSrc ); 
 	});
 });
