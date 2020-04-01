@@ -10312,6 +10312,16 @@ jQuery(function() {
 });
 
 /**
+ * Skip link focus jumps to the first heading.
+*/
+jQuery(document).ready(function() {
+	jQuery('.skip-link').click(function(e) {
+		e.preventDefault();
+		jQuery(':header:first').attr('tabindex', '-1').focus();
+	});
+});
+
+/**
  * Initialize Slick client section
 */
 jQuery(document).ready(function() {
