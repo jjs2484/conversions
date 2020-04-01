@@ -85,7 +85,7 @@ get_header();
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php conversions()->template->pagination(); ?>
+			<?php conversions()->template->the_posts_pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'partials/right-sidebar-check' ); ?>

@@ -60,7 +60,7 @@ $conversions_edd = new conversions\easy_digital_downloads();
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php conversions()->template->pagination(); ?>
+			<?php conversions()->template->the_posts_pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'partials/right-sidebar-check' ); ?>

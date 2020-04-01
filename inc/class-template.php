@@ -113,7 +113,7 @@ class Template {
 	 * @param string $args Arguments.
 	 * @param string $class pagination.
 	 */
-	public function pagination( $args = array(), $class = 'pagination' ) {
+	public function the_posts_pagination( $args = array(), $class = 'pagination' ) {
 		if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) return;
 
 		$args = wp_parse_args(
