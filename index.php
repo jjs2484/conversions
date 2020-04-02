@@ -17,7 +17,7 @@ get_header();
 
 <div class="wrapper content-wrapper" id="index-wrapper">
 
-	<div class="container-fluid" id="content" tabindex="-1">
+	<div class="container-fluid" id="content">
 
 		<div class="row">
 

@@ -13,7 +13,7 @@ get_header();
 
 <div class="wrapper content-wrapper" id="search-wrapper">
 
-	<div class="container-fluid" id="content" tabindex="-1">
+	<div class="container-fluid" id="content">
 
 		<div class="row">
 

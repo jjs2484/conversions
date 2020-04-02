@@ -219,7 +219,7 @@ class WooCommerce {
 	 */
 	public function woocommerce_before_main_content() {
 		echo '<div class="wrapper content-wrapper" id="woocommerce-wrapper">';
-		echo '<div class="container-fluid" id="content" tabindex="-1">';
+		echo '<div class="container-fluid" id="content">';
 		echo '<div class="row">';
 		get_template_part( 'partials/left-sidebar-check' );
 		echo '<main class="site-main" id="main">';

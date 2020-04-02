@@ -10312,12 +10312,18 @@ jQuery(function() {
 });
 
 /**
- * Skip link focus jumps to the first heading.
+ * Skip link focus jumps to #content container or the first heading.
 */
 jQuery(document).ready(function() {
 	jQuery('.skip-link').click(function(e) {
 		e.preventDefault();
-		jQuery(':header:first').attr('tabindex', '-1').focus();
+		if ($('#conversions-hero-content').length) {
+			jQuery('#conversions-hero-content').attr('tabindex', '-1').focus();
+		} else if ($('#content').length) {
+			jQuery('#content').attr('tabindex', '-1').focus();
+		} else {
+			jQuery(':header:first').attr('tabindex', '-1').focus();
+		}
 	});
 });
 

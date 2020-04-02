@@ -22,7 +22,7 @@ get_header();
 	if ( has_post_thumbnail( get_the_ID() ) ) {
 		// HTML for background image and title.
 		echo '<div class="conversions-hero-cover">
-    		<div class="container-fluid" id="content" tabindex="-1">
+    		<div class="container-fluid" id="conversions-hero-content">
     			<div class="row">
 					<div class="col-sm-12">
     					<div class="conversions-hero-cover__inner">
@@ -35,7 +35,7 @@ get_header();
 	}
 	?>
 
-	<div class="container-fluid" id="content" tabindex="-1">
+	<div class="container-fluid" id="content">
 
 		<div class="row">
 

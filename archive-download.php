@@ -16,7 +16,7 @@ $conversions_edd = new conversions\easy_digital_downloads();
 
 <div class="wrapper content-wrapper" id="edd-archive-wrapper">
 
-	<div class="container-fluid" id="content" tabindex="-1">
+	<div class="container-fluid" id="content">
 
 		<div class="row">
 
