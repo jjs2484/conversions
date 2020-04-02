@@ -10317,9 +10317,9 @@ jQuery(function() {
 jQuery(document).ready(function() {
 	jQuery('.skip-link').click(function(e) {
 		e.preventDefault();
-		if ($('#conversions-hero-content').length) {
+		if (jQuery('#conversions-hero-content').length) {
 			jQuery('#conversions-hero-content').attr('tabindex', '-1').focus();
-		} else if ($('#content').length) {
+		} else if (jQuery('#content').length) {
 			jQuery('#content').attr('tabindex', '-1').focus();
 		} else {
 			jQuery(':header:first').attr('tabindex', '-1').focus();
