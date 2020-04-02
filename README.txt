@@ -150,6 +150,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus as required by the Bootstrap 
 * Update: Improve skip link focus.
 * Fix: Exclude skip link hashes from anchor link offset script.
 * Fix: rename pagination function to the_posts_pagination
+* Fix: Better escaping for the comments fields.
 
 == Resources ==
 
