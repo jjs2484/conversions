@@ -145,6 +145,11 @@ NOTE: Nav menu only supports 2 levels of sub-menus as required by the Bootstrap 
 * Update: Footer credit to - Powered by Conversions Theme.
 * Update: Add filter to allow other classes to add homepage sections.
 * Update: Prefix add_image_size images. Requires image sizes to be regenerated.
+* Update: Remove starter content.
+* Update: Screenshot.
+* Update: Improve skip link focus.
+* Fix: Exclude skip link hashes from anchor link offset script.
+* Fix: rename pagination function to the_posts_pagination
 
 == Resources ==
 
