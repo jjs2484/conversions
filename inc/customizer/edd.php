@@ -85,7 +85,7 @@ if ( class_exists( 'Easy_Digital_Downloads' ) ) {
 				'section'     => 'conversions_edd',
 				'settings'    => 'conversions_edd_primary_btn',
 				'type'        => 'select',
-				'choices'     => $button_choices,
+				'choices'     => $this->button_choices,
 				'priority'    => '30',
 			]
 		)

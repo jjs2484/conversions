@@ -59,7 +59,7 @@ $wp_customize->add_control(
 			'section'     => 'conversions_typography',
 			'settings'    => 'conversions_headings_fonts',
 			'type'        => 'select',
-			'choices'     => $font_choices,
+			'choices'     => $this->font_choices,
 			'priority'    => '2',
 		]
 	)
@@ -84,7 +84,7 @@ $wp_customize->add_control(
 			'section'     => 'conversions_typography',
 			'settings'    => 'conversions_body_fonts',
 			'type'        => 'select',
-			'choices'     => $font_choices,
+			'choices'     => $this->font_choices,
 			'priority'    => '3',
 		]
 	)

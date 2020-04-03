@@ -86,7 +86,7 @@ $wp_customize->add_control(
 			'section'     => 'conversions_cta',
 			'settings'    => 'conversions_hcta_bg_gradient',
 			'type'        => 'select',
-			'choices'     => $gradient_choices,
+			'choices'     => $this->gradient_choices,
 			'priority'    => '3',
 		]
 	)
@@ -247,7 +247,7 @@ $wp_customize->add_control(
 			'section'     => 'conversions_cta',
 			'settings'    => 'conversions_hcta_btn',
 			'type'        => 'select',
-			'choices'     => $alt_button_choices,
+			'choices'     => $this->alt_button_choices,
 			'priority'    => '60',
 		]
 	)

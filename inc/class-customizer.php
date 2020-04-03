@@ -36,9 +36,11 @@ namespace conversions
 		 * @param object $wp_customize The Customizer object.
 		 */
 		public function customize_register( $wp_customize ) {
+			// Save this so that it can be passed to the conversions_customize_register action.
+			$this->wp_customize = $wp_customize;
 
 			// font choices.
-			$font_choices = [
+			$this->font_choices = [
 				'Comfortaa:400,700'                       => __( 'Comfortaa', 'conversions' ),
 				'Handlee:400'                             => __( 'Handlee', 'conversions' ),
 				'Indie Flower:400'                        => __( 'Indie Flower', 'conversions' ),
@@ -57,7 +59,7 @@ namespace conversions
 			];
 
 			// button choices.
-			$button_choices = [
+			$this->button_choices = [
 				'btn-primary'           => __( 'Primary', 'conversions' ),
 				'btn-secondary'         => __( 'Secondary', 'conversions' ),
 				'btn-success'           => __( 'Success', 'conversions' ),
@@ -77,15 +79,15 @@ namespace conversions
 			];
 
 			// extra button choices.
-			$extra_button_choices = [
+			$this->extra_button_choices = [
 				'no' => __( 'None', 'conversions' ),
 			];
 
 			// alt button choices.
-			$alt_button_choices = array_merge( $extra_button_choices, $button_choices );
+			$this->alt_button_choices = array_merge( $this->extra_button_choices, $this->button_choices );
 
 			// gradient choices.
-			$gradient_choices = [
+			$this->gradient_choices = [
 				'grade-grey'       => __( 'Grade Grey', 'conversions' ),
 				'cool-blues'       => __( 'Cool Blues', 'conversions' ),
 				'moonlit-asteroid' => __( 'Moonlit Asteroid', 'conversions' ),
@@ -158,6 +160,8 @@ namespace conversions
 			include get_parent_theme_file_path( '/inc/customizer/woocommerce.php' );
 			include get_parent_theme_file_path( '/inc/customizer/edd.php' );
 			// phpcs:enable
+
+			do_action( 'conversions_customize_register', $this );
 		}
 
 		/**

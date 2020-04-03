@@ -67,7 +67,7 @@ $wp_customize->add_control(
 			'section'     => 'conversions_blog',
 			'settings'    => 'conversions_blog_more_btn',
 			'type'        => 'select',
-			'choices'     => $button_choices,
+			'choices'     => $this->button_choices,
 			'priority'    => '2',
 		]
 	)
@@ -92,7 +92,7 @@ $wp_customize->add_control(
 			'section'     => 'conversions_blog',
 			'settings'    => 'conversions_comment_btn',
 			'type'        => 'select',
-			'choices'     => $button_choices,
+			'choices'     => $this->button_choices,
 			'priority'    => '3',
 		]
 	)

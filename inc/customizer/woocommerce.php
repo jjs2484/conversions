@@ -113,7 +113,7 @@ $wp_customize->add_control(
 			'section'     => 'conversions_woocommerce',
 			'settings'    => 'conversions_wc_primary_btn',
 			'type'        => 'select',
-			'choices'     => $button_choices,
+			'choices'     => $this->button_choices,
 			'priority'    => '40',
 		]
 	)
@@ -138,7 +138,7 @@ $wp_customize->add_control(
 			'section'     => 'conversions_woocommerce',
 			'settings'    => 'conversions_wc_secondary_btn',
 			'type'        => 'select',
-			'choices'     => $button_choices,
+			'choices'     => $this->button_choices,
 			'priority'    => '45',
 		]
 	)

@@ -171,7 +171,7 @@ $wp_customize->add_control(
 			'section'     => 'conversions_nav',
 			'settings'    => 'conversions_nav_button',
 			'type'        => 'select',
-			'choices'     => $alt_button_choices,
+			'choices'     => $this->alt_button_choices,
 			'priority'    => '70',
 		]
 	)
