@@ -43,7 +43,6 @@ namespace conversions
 			require_once get_parent_theme_file_path( '/inc/class-customizer.php' );
 			require_once get_parent_theme_file_path( '/inc/class-enqueue.php' );
 			require_once get_parent_theme_file_path( '/inc/class-extras.php' );
-			require_once get_parent_theme_file_path( '/inc/class-homepage.php' );
 			require_once get_parent_theme_file_path( '/inc/class-navbar.php' );
 			require_once get_parent_theme_file_path( '/inc/class-template.php' );
 			require_once get_parent_theme_file_path( '/inc/class-widgets.php' );
@@ -196,7 +195,6 @@ namespace conversions
 				'conversions_footer_text_color'    => '#222222',
 				'conversions_footer_link_color'    => '#0068d7',
 				'conversions_footer_link_hcolor'   => '#00698c',
-				'conversions_social_size'          => '1.5',
 				'conversions_wc_cart_nav'          => true,
 				'conversions_wc_checkout_columns'  => 'two-column',
 				'conversions_wc_primary_btn'       => 'btn-outline-primary',
@@ -211,43 +209,14 @@ namespace conversions
 				'conversions_blog_related'         => true,
 				'conversions_blog_taxonomy'        => 'categories',
 				'conversions_blog_postnav'         => true,
-				'conversions_hh_content_position'  => 'col-lg-6',
-				'conversions_hh_img_height'        => '72',
-				'conversions_hh_img_color'         => '#000000',
-				'conversions_hh_img_overlay'       => '.5',
-				'conversions_hh_button'            => 'no',
-				'conversions_hh_vbtn'              => 'no',
-				'conversions_hc_logo_width'        => '6.2',
-				'conversions_hc_respond'           => 'auto',
-				'conversions_hc_sm'                => '2',
-				'conversions_hc_md'                => '3',
-				'conversions_hc_lg'                => '4',
-				'conversions_hc_max'               => '5',
-				'conversions_features_sm'          => '2',
-				'conversions_features_md'          => '2',
-				'conversions_features_lg'          => '3',
-				'conversions_pricing_respond'      => 'auto',
-				'conversions_pricing_sm'           => '1',
-				'conversions_pricing_md'           => '1',
-				'conversions_pricing_lg'           => '3',
-				'conversions_news_mposts'          => '2',
 				'conversions_hcta_bg_choice'       => 'gradient',
 				'conversions_hcta_bg_gradient'     => 'crystal-clear',
 				'conversions_hcta_title_color'     => '#ffffff',
 				'conversions_hcta_desc_color'      => '#ffffff',
 				'conversions_hcta_btn'             => 'no',
-				'conversions_woo_products'         => 'no',
-				'conversions_woo_product_limit'    => '8',
-				'conversions_woo_product_columns'  => '4',
-				'conversions_woo_products_order'   => 'popularity',
 				'conversions_edd_nav_cart'         => true,
 				'conversions_edd_primary_btn'      => 'btn-primary',
 				'conversions_edd_download_details' => true,
-				'conversions_edd_products'         => 'no',
-				'conversions_edd_product_limit'    => '6',
-				'conversions_edd_product_columns'  => '3',
-				'conversions_edd_products_orderby' => 'post_date',
-				'conversions_edd_products_order'   => 'DESC',
 			];
 
 			foreach ( $defaults as $c => $v ) {

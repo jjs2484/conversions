@@ -22,47 +22,10 @@ namespace conversions
 		 * @since 2019-08-15
 		 */
 		public function __construct() {
-			add_action( 'conversions_footer_info', [ $this, 'conversions_footer_social' ], 20 );
 			add_action( 'customize_register', [ $this, 'customize_register' ] );
 			add_action( 'wp_footer', [ $this, 'wp_footer' ], 100 );
 			add_action( 'wp_head', [ $this, 'wp_head' ], 99 );
 			add_filter( 'wp_nav_menu_items', [ $this, 'wp_nav_menu_items' ], 10, 2 );
-		}
-
-		/**
-		 * Footer social icons output.
-		 *
-		 * @since 2019-08-15
-		 */
-		public function conversions_footer_social() {
-
-			// get option values and decode.
-			$conversions_si         = get_theme_mod( 'conversions_social_icons' );
-			$conversions_si_decoded = json_decode( $conversions_si );
-
-			if ( ! empty( $conversions_si_decoded ) ) {
-
-				echo '<div class="social-media-icons col-md"><ul class="list-inline">';
-
-				foreach ( $conversions_si_decoded as $repeater_item ) {
-
-					// remove prefixes for titles and screen reader text.
-					$find  = [ '/\bfas \b/', '/\bfab \b/', '/\bfar \b/', '/\bfa-\b/' ];
-					$title = preg_replace( $find, '', $repeater_item->icon_value );
-
-					// output the icon and link.
-					echo sprintf(
-						'<li class="list-inline-item"><a title="%1$s" href="%2$s" target="_blank"><i aria-hidden="true" class="%3$s"></i><span class="sr-only">%1$s</span></a></li>',
-						esc_attr( $title ),
-						esc_url( $repeater_item->link ),
-						esc_attr( $repeater_item->icon_value )
-					);
-				}
-
-				echo '</ul></div>';
-
-			}
-
 		}
 
 		/**
@@ -73,10 +36,6 @@ namespace conversions
 		 * @param object $wp_customize The Customizer object.
 		 */
 		public function customize_register( $wp_customize ) {
-			// require customizer repeater.
-			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-			require get_parent_theme_file_path( '/inc/class-conversions-repeater.php' );
-			// phpcs:enable
 
 			// font choices.
 			$font_choices = [
@@ -197,15 +156,6 @@ namespace conversions
 			include get_parent_theme_file_path( '/inc/customizer/blog.php' );
 			include get_parent_theme_file_path( '/inc/customizer/featured-image.php' );
 			include get_parent_theme_file_path( '/inc/customizer/woocommerce.php' );
-			include get_parent_theme_file_path( '/inc/customizer/homepage.php' );
-			include get_parent_theme_file_path( '/inc/customizer/homepage.hero.php' );
-			include get_parent_theme_file_path( '/inc/customizer/homepage.clients.php' );
-			include get_parent_theme_file_path( '/inc/customizer/homepage.features.php' );
-			include get_parent_theme_file_path( '/inc/customizer/homepage.pricing.php' );
-			include get_parent_theme_file_path( '/inc/customizer/homepage.testimonials.php' );
-			include get_parent_theme_file_path( '/inc/customizer/homepage.news.php' );
-			include get_parent_theme_file_path( '/inc/customizer/homepage.woocommerce.php' );
-			include get_parent_theme_file_path( '/inc/customizer/homepage.edd.php' );
 			include get_parent_theme_file_path( '/inc/customizer/edd.php' );
 			// phpcs:enable
 		}
@@ -303,35 +253,11 @@ namespace conversions
 				[ 'a', 'color', get_theme_mod( 'conversions_link_color' ) ],
 				[ 'a:hover', 'color', get_theme_mod( 'conversions_link_hcolor' ) ],
 				[ '.conversions-hero-cover .conversions-hero-cover__inner h1', 'color', get_theme_mod( 'conversions_featured_title_color' ) ],
-				[ '.page-template-homepage section.c-hero h1', 'color', get_theme_mod( 'conversions_hh_title_color' ) ],
-				[ '.page-template-homepage section.c-hero .c-hero__description', 'color', get_theme_mod( 'conversions_hh_desc_color' ) ],
-				[ '.page-template-homepage section.c-clients', 'background-color', get_theme_mod( 'conversions_hc_bg_color' ) ],
-				[ 'section.c-clients img.client', 'max-width', get_theme_mod( 'conversions_hc_logo_width' ), 'rem' ],
 				[ 'section.c-cta h2', 'color', get_theme_mod( 'conversions_hcta_title_color' ) ],
 				[ 'section.c-cta p.subtitle', 'color', get_theme_mod( 'conversions_hcta_desc_color' ) ],
-				[ '.page-template-homepage section.c-news', 'background-color', get_theme_mod( 'conversions_news_bg_color' ) ],
-				[ '.page-template-homepage section.c-news h2', 'color', get_theme_mod( 'conversions_news_title_color' ) ],
-				[ '.page-template-homepage section.c-news p.subtitle', 'color', get_theme_mod( 'conversions_news_desc_color' ) ],
-				[ '.page-template-homepage section.c-testimonials', 'background-color', get_theme_mod( 'conversions_testimonials_bg_color' ) ],
-				[ '.page-template-homepage section.c-testimonials h2', 'color', get_theme_mod( 'conversions_testimonials_title_color' ) ],
-				[ '.page-template-homepage section.c-testimonials p.subtitle', 'color', get_theme_mod( 'conversions_testimonials_desc_color' ) ],
-				[ '.page-template-homepage section.c-pricing', 'background-color', get_theme_mod( 'conversions_pricing_bg_color' ) ],
-				[ '.page-template-homepage section.c-pricing h2', 'color', get_theme_mod( 'conversions_pricing_title_color' ) ],
-				[ '.page-template-homepage section.c-pricing p.subtitle', 'color', get_theme_mod( 'conversions_pricing_desc_color' ) ],
-				[ '.page-template-homepage section.c-features', 'background-color', get_theme_mod( 'conversions_features_bg_color' ) ],
-				[ '.page-template-homepage section.c-features h2, section.c-features .card h3', 'color', get_theme_mod( 'conversions_features_title_color' ) ],
-				[ '.page-template-homepage section.c-features p.subtitle, section.c-features .card .c-features__block-desc', 'color', get_theme_mod( 'conversions_features_desc_color' ) ],
 				[ '.conversions-hero-cover', 'min-height', get_theme_mod( 'conversions_featured_img_height' ), 'vh' ],
 				[ '.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6', 'font-family', $headings_font ],
 				[ 'body, input, select, textarea', 'font-family', $body_font ],
-				[ '#wrapper-footer .social-media-icons ul li.list-inline-item i', 'font-size', get_theme_mod( 'conversions_social_size' ), 'rem' ],
-				[ '.page-template-homepage section.c-hero', 'min-height', get_theme_mod( 'conversions_hh_img_height' ), 'vh' ],
-				[ '.page-template-homepage section.c-woo', 'background-color', get_theme_mod( 'conversions_woo_bg_color' ) ],
-				[ '.page-template-homepage section.c-woo h2', 'color', get_theme_mod( 'conversions_woo_title_color' ) ],
-				[ '.page-template-homepage section.c-woo p.subtitle', 'color', get_theme_mod( 'conversions_woo_desc_color' ) ],
-				[ '.page-template-homepage section.c-edd', 'background-color', get_theme_mod( 'conversions_edd_bg_color' ) ],
-				[ '.page-template-homepage section.c-edd h2', 'color', get_theme_mod( 'conversions_edd_title_color' ) ],
-				[ '.page-template-homepage section.c-edd p.subtitle', 'color', get_theme_mod( 'conversions_edd_desc_color' ) ],
 			];
 			?>
 
@@ -419,28 +345,6 @@ namespace conversions
 				// Sidebar.
 				if ( get_theme_mod( 'conversions_sidebar_mv', true ) === false ) {
 					echo '@media (max-width: 767.98px) { #sidebar-2, #sidebar-1 { display: none; } }';
-				}
-				// Homepage hero.
-				if ( get_theme_mod( 'conversions_hh_img_parallax', false ) === true ) {
-					echo '.page-template-homepage section.c-hero {
-						background-attachment: fixed;
-					}';
-				}
-				// Homepage news.
-				if ( get_theme_mod( 'conversions_news_mposts', '2' ) == 1 ) {
-					echo '@media (max-width: 991.98px) {
-						section.c-news #c-news__1,
-						section.c-news #c-news__2 {
-							display: none;
-						}
-					}';
-				}
-				if ( get_theme_mod( 'conversions_news_mposts', '2' ) == 2 ) {
-					echo '@media (max-width: 991.98px) {
-						section.c-news #c-news__2 {
-							display: none;
-						}
-					}';
 				}
 				?>
 			</style>
@@ -614,62 +518,4 @@ namespace
 		$input = filter_var( $input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
 		return $input;
 	}
-
-	/**
-	 * Sanitize repeater option input.
-	 *
-	 * @since 2019-08-15
-	 *
-	 * @param string $input Repeater input.
-	 */
-	function conversions_repeater_sanitize( $input ) {
-		$input_decoded = json_decode( $input, true );
-		if ( ! empty( $input_decoded ) ) {
-			foreach ( $input_decoded as $boxk => $box ) {
-				foreach ( $box as $key => $value ) {
-					$input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
-				}
-			}
-			return json_encode( $input_decoded );
-		}
-		return $input;
-	}
-
-	/**
-	 * Filter to modify input label for repeater controls.
-	 *
-	 * @since 2019-08-15
-	 *
-	 * @param string $string String.
-	 * @param string $id Control ID.
-	 * @param string $control Control name.
-	 */
-	function conversions_repeater_labels( $string, $id, $control ) {
-
-		// testimonial repeater labels.
-		if ( $id === 'conversions_testimonials_repeater' ) {
-			if ( $control === 'customizer_repeater_title_control' ) {
-				return esc_html__( 'Full name', 'conversions' );
-			}
-			if ( $control === 'customizer_repeater_subtitle_control' ) {
-				return esc_html__( 'Company name', 'conversions' );
-			}
-			if ( $control === 'customizer_repeater_text_control' ) {
-				return esc_html__( 'Testimonial text', 'conversions' );
-			}
-		}
-
-		// pricing table repeater labels.
-		if ( $id === 'conversions_pricing_repeater' ) {
-			if ( $control === 'customizer_repeater_subtitle_control' ) {
-				return esc_html__( 'Price', 'conversions' );
-			}
-			if ( $control === 'customizer_repeater_subtitle2_control' ) {
-				return esc_html__( 'Duration', 'conversions' );
-			}
-		}
-
-		return $string;
-	}
-	add_filter( 'conversions_repeater_labels_filter', 'conversions_repeater_labels', 10, 3 );
 }
