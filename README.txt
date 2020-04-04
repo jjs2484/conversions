@@ -156,7 +156,6 @@ NOTE: Nav menu only supports 2 levels of sub-menus as required by the Bootstrap 
 
 * Bootstrap 4.4.1 | MIT License
 * Font Awesome v5.12.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
-* Slick v1.8.1 | MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
 

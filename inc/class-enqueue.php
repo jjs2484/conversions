@@ -332,20 +332,12 @@ class Enqueue {
 			array(),
 			$theme_version
 		);
-		wp_enqueue_style(
-			'conversions-customizer-css',
-			get_theme_file_uri( '/build/conversions-customizer.min.css' ),
-			array(),
-			$theme_version
-		);
 
 		// Scripts.
-		wp_enqueue_script( 'jquery-ui-core' );
-		wp_enqueue_script( 'jquery-ui-sortable' );
 		wp_enqueue_script(
 			'conversions-customizer-js',
 			get_theme_file_uri( '/build/conversions-customizer.min.js' ),
-			array('jquery', 'jquery-ui-draggable', 'wp-color-picker' ),
+			array(),
 			$theme_version,
 			true
 		);

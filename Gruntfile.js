@@ -16,15 +16,14 @@ module.exports = function(grunt) {
 					'build/font-awesome.css': 'sass/font-awesome.scss',
 					'build/gutenberg-editor-style.css': 'sass/gutenberg-editor-style.scss',
 					'build/classic-editor-style.css': 'sass/classic-editor-style.scss',
-					'build/conversions-customizer.css': 'sass/customizer.scss',
 				}
 			}
 		},
 		concat: {
 			basic_and_extras: {
 				files: {
-					'build/theme.js': ['node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'js/skip-link-focus-fix.js', 'node_modules/slick-carousel/slick/slick.js', 'js/theme.js'],
-					'build/conversions-customizer.js': ['js/conversions-repeater.js', 'js/fontawesome-iconpicker.js', 'js/customizer-conditionals.js', 'js/homepage_sorting.js'],
+					'build/theme.js': ['node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'js/skip-link-focus-fix.js', 'js/theme.js'],
+					'build/conversions-customizer.js': ['js/customizer-conditionals.js'],
 				},
 			},
 		},
@@ -71,7 +70,6 @@ module.exports = function(grunt) {
 					'build/font-awesome.min.css': ['build/font-awesome.css'],
 					'build/gutenberg-editor-style.min.css': ['build/gutenberg-editor-style.css'],
 					'build/classic-editor-style.min.css': ['build/classic-editor-style.css'],
-					'build/conversions-customizer.min.css': ['build/conversions-customizer.css'],
 				}
 			}
 		},
@@ -104,13 +102,6 @@ module.exports = function(grunt) {
 						expand: true,
 						flatten: true,
 						src: ['node_modules/@fortawesome/fontawesome-free/webfonts/*'], 
-						dest: 'fonts/',
-						filter: 'isFile'
-					},
-					{ 
-						expand: true,
-						flatten: true,
-						src: ['node_modules/slick-carousel/slick/fonts/*'], 
 						dest: 'fonts/',
 						filter: 'isFile'
 					},
