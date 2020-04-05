@@ -45,7 +45,7 @@ section.c-cta {
 	}
 }
 
-// Copyright and social icons
+// Copyright
 #wrapper-footer {
 	.site-info {
 		align-items: center;
@@ -57,34 +57,6 @@ section.c-cta {
 		flex-wrap: wrap;
 		@include media-breakpoint-up(md) {
 			justify-content: flex-start;
-		}
-	}
-	.social-media-icons {
-		display: flex;
-		justify-content: center;
-		margin: 0.75rem 0 0 0;
-		flex-wrap: wrap;
-		@include media-breakpoint-down(sm) {
-			text-align: center;
-		}
-		@include media-breakpoint-up(md) {
-			justify-content: flex-end;
-			margin: 0;
-		}
-
-		ul.list-inline {
-			margin-bottom: 0;
-			li.list-inline-item:not(:last-child) {
-				margin-right: 0.65rem;
-			}
-			li.list-inline-item {
-				a {
-					display: inline-block;
-				}
-				i {
-					vertical-align: middle;
-				}
-			}
 		}
 	}
 }
