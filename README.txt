@@ -138,7 +138,8 @@ NOTE: Nav menu only supports 2 levels of sub-menus as required by the Bootstrap 
 - taxonomy-download_tag.php 
 - archive-download.php
 
-= 1.5.9 =
+= 1.6.0 =
+* Update: Moved homepage sections and footer social icons to Conversions Extensions plugin. 
 * Update: Font Awesome to v5.13.
 * Update: NPM Dependencies.
 * Update: Further optimize CSS prefixes.
