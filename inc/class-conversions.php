@@ -53,7 +53,7 @@ namespace conversions
 			require_once get_parent_theme_file_path( '/inc/class-tgm-plugin-activation.php' );
 			// phpcs:enable
 			$this->setup();
-			$this->conversions_register_required_plugins();
+			add_action( 'tgmpa_register', [ $this, 'conversions_register_required_plugins' ] );
 		}
 
 		/**
