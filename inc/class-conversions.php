@@ -53,6 +53,7 @@ namespace conversions
 			require_once get_parent_theme_file_path( '/inc/class-tgm-plugin-activation.php' );
 			// phpcs:enable
 			$this->setup();
+			$this->conversions_register_required_plugins();
 		}
 
 		/**
@@ -225,6 +226,35 @@ namespace conversions
 					set_theme_mod( $c, $v );
 				}
 			}
+		}
+
+		/**
+		 * Register the required plugins for this theme.
+		 */
+		public function conversions_register_required_plugins() {
+
+			// Include plugin from the WordPress Plugin Repository.
+			$plugins = array(
+				array(
+					'name'      => 'Conversions Extensions',
+					'slug'      => 'conversions-extensions',
+					'required'  => false,
+				),
+			);
+
+			// Array of configuration settings. Amend each line as needed.
+			$config = array(
+				'id'           => 'conversions',           // Unique ID for hashing notices for multiple instances of TGMPA.
+				'default_path' => '',                      // Default absolute path to bundled plugins.
+				'menu'         => 'tgmpa-install-plugins', // Menu slug.
+				'has_notices'  => true,                    // Show admin notices or not.
+				'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
+				'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
+				'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+				'message'      => '',                      // Message to output right before the plugins table.
+			);
+
+			tgmpa( $plugins, $config );
 		}
 	}
 }
