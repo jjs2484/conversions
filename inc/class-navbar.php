@@ -155,7 +155,7 @@ class Navbar {
 				$mobile_nav_container = 'navbar-collapse offcanvas-collapse';
 				break;
 			default:
-				$mobile_nav_container = 'navbar-collapse offcanvas-collapse';
+				$mobile_nav_container = 'collapse navbar-collapse';
 		}
 		?>
 
