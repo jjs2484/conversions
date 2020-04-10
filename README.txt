@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.4
 Requires PHP: 5.6.20
-Stable tag: 1.5.8
+Stable tag: 1.6.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -139,12 +139,12 @@ NOTE: Nav menu only supports 2 levels of sub-menus as required by the Bootstrap 
 - archive-download.php
 
 = 1.6.0 =
-* Update: Moved homepage sections and footer social icons to Conversions Extensions plugin. 
+* New: Add TGM plugin activation class.
+* Update: Moved homepage sections and footer social icons to <a href="https://wordpress.org/plugins/conversions-extensions/">Conversions Extensions plugin.</a> 
 * Update: Font Awesome to v5.13.
 * Update: NPM Dependencies.
 * Update: Further optimize CSS prefixes.
 * Update: Footer credit to - Powered by Conversions Theme.
-* Update: Add filter to allow other classes to add homepage sections.
 * Update: Prefix add_image_size images. Requires image sizes to be regenerated.
 * Update: Remove starter content.
 * Update: Screenshot.
