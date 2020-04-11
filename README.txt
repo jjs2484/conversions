@@ -141,6 +141,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus as required by the Bootstrap 
 = 1.6.0 =
 * New: Add TGM plugin activation class.
 * Update: Moved homepage sections and footer social icons to <a href="https://wordpress.org/plugins/conversions-extensions/">Conversions Extensions plugin.</a> 
+* Update: add notice on homepage template if Conversions Extensions plugin is not activated
 * Update: Font Awesome to v5.13.
 * Update: NPM Dependencies.
 * Update: Further optimize CSS prefixes.
