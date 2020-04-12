@@ -16,7 +16,7 @@ Conversions is conversion-focused WordPress theme. It’s based on Bootstrap 4 a
 
 Full documentation: https://conversionswp.com/docs/documentation/
 
-NOTE: Nav menu only supports 2 levels of sub-menus as required by the Bootstrap 4 Navbar.
+NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items with sub-menus are only used to toggle the sub-menu on or off as required by the Bootstrap 4 Navbar.
 
 == Changelog ==
 
