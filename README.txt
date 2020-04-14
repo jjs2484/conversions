@@ -5,7 +5,7 @@ Requires at least: 4.7
 Tested up to: WordPress 5.4
 Requires PHP: 5.6.20
 Stable tag: 1.6.0
-License: GPLv2
+License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Conversions is conversion-focused WordPress theme. It’s based on Bootstrap 4 and Automattic’s starter theme called _s, or underscores.

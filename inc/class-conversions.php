@@ -236,9 +236,9 @@ namespace conversions
 			// Include plugin from the WordPress Plugin Repository.
 			$plugins = array(
 				array(
-					'name'      => 'Conversions Extensions',
-					'slug'      => 'conversions-extensions',
-					'required'  => false,
+					'name'     => 'Conversions Extensions',
+					'slug'     => 'conversions-extensions',
+					'required' => false,
 				),
 			);
 
