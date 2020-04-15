@@ -13,6 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @package 	WooCommerce/Templates
  * @version     3.6.1
+ * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  */
 
 // Exit if accessed directly.
@@ -27,7 +28,7 @@ if ( is_user_logged_in() ) {
 
 	<?php do_action( 'woocommerce_login_form_start' ); ?>
 
-	<?php echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; // @codingStandardsIgnoreLine ?>
+	<?php echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 
 	<p class="form-row form-row-first">
 		<label for="username"><?php esc_html_e( 'Username or email', 'conversions' ); ?>&nbsp;<span class="required">*</span></label>

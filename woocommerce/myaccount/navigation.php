@@ -14,6 +14,8 @@
  * @author  WooThemes
  * @package WooCommerce/Templates
  * @version 2.6.1
+ * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+ * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

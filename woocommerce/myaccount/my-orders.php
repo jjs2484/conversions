@@ -3,6 +3,8 @@
  * My Orders - Deprecated
  *
  * @deprecated 2.6.0 this template file is no longer used. My Account shortcode uses orders.php.
+ * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+ * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -27,7 +29,7 @@ $customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_q
 
 if ( $customer_orders ) : ?>
 
-	<h2><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent orders', 'conversions' ) ); ?></h2>
+	<h2><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent orders', 'conversions' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
 
 	<table class="shop_table shop_table_responsive my_account_orders table-hover table-striped">
 
@@ -41,7 +43,7 @@ if ( $customer_orders ) : ?>
 
 		<tbody>
 			<?php foreach ( $customer_orders as $customer_order ) :
-				$order      = wc_get_order( $customer_order );
+				$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 				$item_count = $order->get_item_count();
 				?>
 				<tr class="order">
@@ -52,7 +54,7 @@ if ( $customer_orders ) : ?>
 
 							<?php elseif ( 'order-number' === $column_id ) : ?>
 								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-									<?php echo _x( '#', 'hash before order number', 'conversions' ) . $order->get_order_number(); ?>
+									<?php echo _x( '#', 'hash before order number', 'conversions' ) . $order->get_order_number(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 								</a>
 
 							<?php elseif ( 'order-date' === $column_id ) : ?>
@@ -64,7 +66,7 @@ if ( $customer_orders ) : ?>
 							<?php elseif ( 'order-total' === $column_id ) : ?>
 								<?php
 								/* translators: 1: formatted order total 2: total order items */
-								printf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'conversions' ), $order->get_formatted_order_total(), $item_count );
+								printf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'conversions' ), $order->get_formatted_order_total(), $item_count ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 								?>
 
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
@@ -72,7 +74,7 @@ if ( $customer_orders ) : ?>
 								$actions = wc_get_account_orders_actions( $order );
 								
 								if ( ! empty( $actions ) ) {
-									foreach ( $actions as $key => $action ) {
+									foreach ( $actions as $key => $action ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 										echo '<a href="' . esc_url( $action['url'] ) . '" class="btn '.esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ).' ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
 									}
 								}

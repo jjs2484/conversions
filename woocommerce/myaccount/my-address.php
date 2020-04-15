@@ -14,6 +14,8 @@
  * @author  WooThemes
  * @package WooCommerce/Templates
  * @version 2.6.1
+ * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+ * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -38,19 +40,19 @@ $col    = 1;
 ?>
 
 <p>
-	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'conversions' ) ); ?>
+	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'conversions' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 </p>
 
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) : ?>
 	<div class="u-columns woocommerce-Addresses col2-set addresses">
 <?php endif; ?>
 
-<?php foreach ( $get_addresses as $name => $title ) : ?>
+<?php foreach ( $get_addresses as $name => $title ) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
 
 	<div class="u-column woocommerce-Address">
 		<header class="woocommerce-Address-title title">
-			<h3><?php echo $title; ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'conversions' ); ?></a>
+			<h3><?php echo $title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h3>
+			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php esc_attr_e( 'Edit', 'conversions' ); ?></a>
 		</header>
 		<address><?php
 			$address = wc_get_account_formatted_address( $name );
