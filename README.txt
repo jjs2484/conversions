@@ -154,6 +154,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Fix: rename pagination function to the_posts_pagination
 * Fix: Better escaping for the comments fields.
 * Fix: Mobile menu focus trapping.
+* Fix: WPCS annotations.
 
 == Resources ==
 
