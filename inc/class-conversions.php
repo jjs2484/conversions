@@ -181,10 +181,11 @@ namespace conversions
 			// Check if settings are set, if not set defaults.
 			$defaults = [
 				'conversions_logo_height'          => '2.5',
+				'conversions_nav_layout'           => 'right',
 				'conversions_nav_position'         => 'fixed-top',
 				'conversions_nav_colors'           => 'white',
+				'conversions_branding_tbpadding'   => '.5',
 				'conversions_nav_tbpadding'        => '.5',
-				'conversions_nav_mobile_type'      => 'collapse',
 				'conversions_nav_button'           => 'no',
 				'conversions_sidebar_position'     => 'right',
 				'conversions_sidebar_mv'           => true,

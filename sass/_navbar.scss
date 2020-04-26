@@ -48,29 +48,102 @@
 		}
 	}
 
-	// Offcanvas on mobile devices
-	.offcanvas-collapse {
-		@include media-breakpoint-down(md) {
-			position: fixed;
-			bottom: 0;
-			left: 100%;
-			width: 100%;
-			height: 100%;
-			padding-right: 1rem;
-			padding-left: 1rem;
-			overflow-y: auto;
-			visibility: hidden;
-			transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out,
-				-webkit-transform 0.3s ease-in-out;
-			z-index: 999;
+	// Navbar right specific
+	&.navbar-right #main-menu {
+		margin-left: auto;
+	}
 
-			&.open {
-				visibility: visible;
-				-webkit-transform: translateX(-100%);
-				transform: translateX(-100%);
+	// Navbar below specific
+	&.navbar-below {
+		@include media-breakpoint-up(lg) {
+			flex-flow: column nowrap;
+			align-items: normal;
+			padding: 0;
+		}
+		.navbar-below-branding,
+		.navbar-below-menu {
+			@include media-breakpoint-up(lg) {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+		}
+		.navbar-below-branding {
+			@include media-breakpoint-down(md) {
+				padding-top: 0;
+				padding-bottom: 0;
+				width: 100%;
+			}
+			.container-fluid {
+				@include media-breakpoint-down(md) {
+					padding-right: 0;
+					padding-left: 0;
+				}
+			}
+			.nav-extras {
+				margin: 0;
+				@include media-breakpoint-down(md) {
+					display: none;
+				}
+				.list-inline-item {
+					margin-right: 0;
+					.nav-link {
+						padding: .5rem;
+					}
+				}
+				.nav-callout-button {
+					margin-left: .75rem;
+				}
+			}
+		}
+		.navbar-below-menu {
+			@include media-breakpoint-down(md) {
+				width: 100%;
+				background: #fff !important;
+			}
+			.container-fluid {
+				@include media-breakpoint-down(md) {
+					padding-right: 0;
+					padding-left: 0;
+				}
+			}
+			li:first-child a.nav-link {
+				@include media-breakpoint-up(lg) {
+					padding-left: 0;
+				}
+			}
+			.nav-link {
+				@include media-breakpoint-down(md) {
+					color: #000;
+				}
+				@include media-breakpoint-up(lg) {
+					padding-left: 1rem;
+					padding-right: 1rem;
+				}
+				&:hover {
+					@include media-breakpoint-down(md) {
+						color: rgba(0,0,0,.8);
+					}
+				}
+			}
+			.active > .nav-link,
+			.nav-link.active,
+			.nav-link.show,
+			.show > .nav-link {
+				@include media-breakpoint-down(md) {
+					color: rgba(0,0,0,.8);
+				}
+			}
+			.search-icon,
+			.cart,
+			.account-icon,
+			.nav-callout-button {
+				@include media-breakpoint-up(lg) {
+					display: none;
+				}
 			}
 		}
 	}
+
 }
 
 // If white navbar add bottom border
@@ -83,16 +156,10 @@
 	position: -ms-device-fixed;
 }
 
-// Offcanvas when open add class to body prevent horizontal scrolling.
-// See js/theme.js -- Toggle offcanvas mobile menu -- function for more details.
-html.offcanvas-overflowx,
-body.offcanvas-overflowx {
-	overflow-x: hidden;
-}
-
 // Navbar link colors
 #wrapper-navbar nav {
-	&.navbar-dark {
+	&.navbar-dark,
+	div.navbar-dark {
 		a.nav-link {
 			color: rgba(255, 255, 255, 1);
 			&:hover {
@@ -100,57 +167,13 @@ body.offcanvas-overflowx {
 			}
 		}
 	}
-	&.navbar-light {
+	&.navbar-light,
+	div.navbar-light {
 		a.nav-link {
 			color: rgba(0, 0, 0, 1);
 			&:hover {
 				color: rgba(0, 0, 0, 0.8);
 			}
-		}
-	}
-	&.navbar-dark.bg-dark {
-		.offcanvas-collapse {
-			background-color: $dark;
-		}
-	}
-	&.navbar-light.bg-light {
-		.offcanvas-collapse {
-			background-color: $light;
-		}
-	}
-	&.navbar-light.bg-white {
-		.offcanvas-collapse {
-			background-color: $white;
-		}
-	}
-	&.navbar-dark.bg-primary {
-		.offcanvas-collapse {
-			background-color: $primary;
-		}
-	}
-	&.navbar-dark.bg-secondary {
-		.offcanvas-collapse {
-			background-color: $secondary;
-		}
-	}
-	&.navbar-dark.bg-success {
-		.offcanvas-collapse {
-			background-color: $success;
-		}
-	}
-	&.navbar-dark.bg-danger {
-		.offcanvas-collapse {
-			background-color: $danger;
-		}
-	}
-	&.navbar-light.bg-warning {
-		.offcanvas-collapse {
-			background-color: $warning;
-		}
-	}
-	&.navbar-dark.bg-info {
-		.offcanvas-collapse {
-			background-color: $info;
 		}
 	}
 }

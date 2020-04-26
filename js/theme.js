@@ -32,61 +32,6 @@ jQuery(function() {
 });
 
 /**
- * Toggle offcanvas mobile menu
-*/
-jQuery(function() {
-	
-	jQuery('[data-toggle="offcanvas"]').on('click', function () {
-		// add open class to nav.
-		jQuery('.offcanvas-collapse').toggleClass('open');
-		
-		// set html and body overflow-x: hidden to prevent horizontal scrollbar.
-		jQuery('html').toggleClass('offcanvas-overflowx');
-		jQuery('body').toggleClass('offcanvas-overflowx');
-		
-		// run resize function.
-		offcanvasResize();
-	});
-
-	function offcanvasResize() {
-		// Get height of header and adminbar.
-		var offcanvasHeight = jQuery('#wrapper-navbar').innerHeight();
-		var adminBarHeight = jQuery('#wpadminbar').innerHeight();
-		
-		// Total height calculation.
-		var totalHeight = offcanvasHeight + adminBarHeight - 3;
-
-		// Set offcanvas top position.
-		jQuery('.offcanvas-collapse.open').css({'top' : totalHeight + 'px'});
-		
-		// Get the navbar classes.
-		var navbarClasses = document.getElementById('wrapper-navbar').classList;
-
-		// Check if we are using a non-fixed header.
-		// If so lets toggle fixed while offcanvas is open.
-		if (navbarClasses.contains('header-p-n')) {
-			navbarClasses.toggle('fixed-top');
-			if (jQuery('.content-wrapper')[0].hasAttribute('style')) {
-				jQuery('.content-wrapper').removeAttr('style');
-			}
-			else {
-				jQuery('.content-wrapper').css({'margin-top' : offcanvasHeight + 'px'});
-			}
-		}
-	}
-
-	var resizeTime; // Set resizeTime to empty so it resets on page load.
-
-	// On resize run the function and reset the timeout.
-	jQuery(window).resize(function() {
-		if (jQuery('.offcanvas-collapse.open').length > 0) {
-			clearTimeout(resizeTime);
-			resizeTime = setTimeout(offcanvasResize, 150);
-		}
-	});
-});
-
-/**
  * Anchor link offset for fixed navbar
 */
 jQuery(function() {

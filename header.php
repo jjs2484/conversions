@@ -33,6 +33,6 @@ if ( function_exists( 'wp_body_open' ) ) {
 <div class="site" id="page">
 
 	<!-- The Navbar -->
-	<?php get_template_part( 'partials/navbar', 'right' ); ?>
+	<?php get_template_part( 'partials/navbar' ); ?>
 
 	<?php do_action( 'conversions_before_content' ); ?>
