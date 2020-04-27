@@ -105,7 +105,7 @@ class Navbar {
 	 *
 	 * @since 2020-04-20
 	 */
-	public function conversions_navbar_toggler() {
+	public static function conversions_navbar_toggler() {
 
 		// mobile navbar toggler button.
 		$navbar_mobile_toggler = sprintf(
