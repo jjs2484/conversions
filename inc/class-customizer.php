@@ -190,6 +190,36 @@ namespace conversions
 		}
 
 		/**
+		 * Fixed navbar height calculations for inline styles.
+		 *
+		 * @since 2020-04-27
+		 */
+		public function fixed_navbar_height_calc() {
+
+			// fixed navbar height calc variables.
+			if ( has_custom_logo() ) {
+				$logo_height = get_theme_mod( 'conversions_logo_height', '2.5' );
+			} else {
+				$logo_height = 1.875;
+			}
+			$logo_padding  = .625;
+			$nav_tbpadding = get_theme_mod( 'conversions_nav_tbpadding', '.5' ) * 2;
+
+			// Nav height total calc.
+			$total_nav_height = $logo_height + $nav_tbpadding + $logo_padding - .1250;
+
+			// Desktop nav below calc specifics.
+			$nav_link_height             = 1.5;
+			$nav_menu_padding_height     = get_theme_mod( 'conversions_nav_tbpadding', '.5' ) * 2;
+			$nav_branding_padding_height = get_theme_mod( 'conversions_branding_tbpadding', '.5' ) * 2;
+			$nav_below_ph                = $nav_link_height + $nav_menu_padding_height + $nav_branding_padding_height;
+			$total_nav_height_below      = $logo_height + $nav_below_ph + $logo_padding - .1250;
+
+			return [$total_nav_height, $total_nav_height_below];
+
+		}
+
+		/**
 		 * Customizer options styles added to wp_head inline.
 		 *
 		 * @since 2019-08-15
@@ -210,24 +240,8 @@ namespace conversions
 				$body_font     = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
 			}
 
-			// fixed header height calc variables.
-			if ( has_custom_logo() ) {
-				$logo_height = get_theme_mod( 'conversions_logo_height', '2.5' );
-			} else {
-				$logo_height = 1.875;
-			}
-			$logo_padding  = .625;
-			$nav_tbpadding = get_theme_mod( 'conversions_nav_tbpadding', '.5' ) * 2;
-
-			// Desktop nav below calc specifics.
-			$nav_link_height             = 1.5;
-			$nav_menu_padding_height     = get_theme_mod( 'conversions_nav_tbpadding', '.5' ) * 2;
-			$nav_branding_padding_height = get_theme_mod( 'conversions_branding_tbpadding', '.5' ) * 2;
-			$nav_below_ph                = $nav_link_height + $nav_menu_padding_height + $nav_branding_padding_height;
-			$total_nav_height_below      = $logo_height + $nav_below_ph + $logo_padding - .1250;
-
-			// Nav height total calc.
-			$total_nav_height = $logo_height + $nav_tbpadding + $logo_padding - .1250;
+			// fixed navbar height calc variables.
+			$fixed_navbar_height = $this->fixed_navbar_height_calc();
 
 			// WC button option.
 			$wc_primary_btn   = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
@@ -272,10 +286,6 @@ namespace conversions
 				[ '.conversions-hero-cover', 'min-height', get_theme_mod( 'conversions_featured_img_height' ), 'vh' ],
 				[ '.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6', 'font-family', $headings_font ],
 				[ 'body, input, select, textarea', 'font-family', $body_font ],
-				[ '.navbar-below .navbar-below-menu .nav-link', 'padding-top', get_theme_mod( 'conversions_nav_tbpadding' ), 'rem' ],
-				[ '.navbar-below .navbar-below-menu .nav-link', 'padding-bottom', get_theme_mod( 'conversions_nav_tbpadding' ), 'rem' ],
-				[ '.navbar-below .navbar-below-branding', 'padding-top', get_theme_mod( 'conversions_branding_tbpadding' ), 'rem' ],
-				[ '.navbar-below .navbar-below-branding', 'padding-bottom', get_theme_mod( 'conversions_branding_tbpadding' ), 'rem' ],
 			];
 			?>
 
@@ -299,16 +309,7 @@ namespace conversions
 				if ( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) === 'fixed-top' ) {
 					if ( get_theme_mod( 'conversions_nav_layout', 'right' ) == 'right' ) {
 						echo '.content-wrapper {
-							margin-top: ' . esc_html( $total_nav_height ) . 'rem;
-						}';
-					} else {
-						echo '.content-wrapper {
-							margin-top: ' . esc_html( $total_nav_height ) . 'rem;
-						}';
-						echo '@media screen and (min-width: 992px) {
-							.content-wrapper {
-								margin-top: ' . esc_html( $total_nav_height_below ) . 'rem;
-							}
+							margin-top: ' . esc_html( $fixed_navbar_height[0] ) . 'rem;
 						}';
 					}
 				}
