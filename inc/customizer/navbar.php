@@ -78,6 +78,32 @@ $wp_customize->add_control(
 	)
 );
 $wp_customize->add_setting(
+	'conversions_nav_tbpadding',
+	[
+		'default'           => '.5',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'conversions_sanitize_float',
+	]
+);
+$wp_customize->add_control(
+	'conversions_nav_tbpadding_control',
+	[
+		'label'       => __( 'Navbar padding', 'conversions' ),
+		'description' => __( 'Top and bottom padding in rem.', 'conversions' ),
+		'section'     => 'conversions_nav',
+		'settings'    => 'conversions_nav_tbpadding',
+		'priority'    => 22,
+		'type'        => 'number',
+		'input_attrs' => [
+			'min'  => 0,
+			'max'  => 100,
+			'step' => 0.1,
+		],
+	]
+);
+$wp_customize->add_setting(
 	'conversions_nav_dropshadow',
 	[
 		'default'           => false,
@@ -100,32 +126,6 @@ $wp_customize->add_control(
 			'priority'    => '30',
 		]
 	)
-);
-$wp_customize->add_setting(
-	'conversions_nav_tbpadding',
-	[
-		'default'           => '.5',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'conversions_sanitize_float',
-	]
-);
-$wp_customize->add_control(
-	'conversions_nav_tbpadding_control',
-	[
-		'label'       => __( 'Navbar padding', 'conversions' ),
-		'description' => __( 'Top and bottom padding in rem.', 'conversions' ),
-		'section'     => 'conversions_nav',
-		'settings'    => 'conversions_nav_tbpadding',
-		'priority'    => 40,
-		'type'        => 'number',
-		'input_attrs' => [
-			'min'  => 0,
-			'max'  => 100,
-			'step' => 0.1,
-		],
-	]
 );
 $wp_customize->add_setting(
 	'conversions_nav_search_icon',
