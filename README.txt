@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.4
 Requires PHP: 5.6.20
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -155,6 +155,17 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Fix: Better escaping for the comments fields.
 * Fix: Mobile menu focus trapping.
 * Fix: WPCS annotations.
+
+= 1.6.1 =
+* Update: Remove offcanvas menu.
+* Update: NPM dependencies.
+* Update: Composer dependencies.
+* Update: Reorder navbar customizer options.
+* New: Add fixed_navbar_height_calc function in class-customizer.php
+* New: Add navbar filters:
+- conversions_nav_open_wrapper
+- conversions_nav_close_wrapper
+- conversions_nav_branding_output
 
 == Resources ==
 
