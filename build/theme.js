@@ -7214,7 +7214,7 @@ jQuery(function() {
 		else if (navbarClasses.contains('fixed-top')) {
 		
 			var target = jQuery(hash);
-
+			
 			// Get height of the navbar and adminbar.
 			var navbarHeight = jQuery('#wrapper-navbar').innerHeight();
 			var adminBarHeight = jQuery('#wpadminbar').innerHeight();
@@ -7228,6 +7228,7 @@ jQuery(function() {
 				jQuery('html,body').animate({
 					scrollTop: target.offset().top - offsetHeight
 				}, 100);
+				location.hash = target.selector;
 				event.preventDefault();
 				event.stopPropagation();
 			}
