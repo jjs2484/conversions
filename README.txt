@@ -169,6 +169,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.6.2 =
 * Update: WooCommerce form-login.php template for v4.1.0.
+* Update: NPM dependencies.
 
 == Resources ==
 
