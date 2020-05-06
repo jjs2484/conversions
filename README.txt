@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.4
 Requires PHP: 5.6.20
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -166,6 +166,9 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 - conversions_nav_open_wrapper
 - conversions_nav_close_wrapper
 - conversions_nav_branding_output
+
+= 1.6.2 =
+* Update: WooCommerce form-login.php template for v4.1.0.
 
 == Resources ==
 
