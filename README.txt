@@ -171,9 +171,13 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: WooCommerce form-login.php template for v4.1.0.
 * Update: NPM dependencies.
 
+= 1.6.3 =
+* Update: Bootstrap to v4.5.0
+* Update: NPM dependencies.
+
 == Resources ==
 
-* Bootstrap 4.4.1 | MIT License
+* Bootstrap 4.5.0 | MIT License
 * Font Awesome v5.12.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
