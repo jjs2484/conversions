@@ -5,7 +5,6 @@
   color: #212529;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
@@ -26,6 +25,8 @@
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .btn.disabled, .wp-block-button .disabled.wp-block-button__link, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.disabled.edd-add-to-cart, .btn:disabled, .wp-block-button .wp-block-button__link:disabled, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart:disabled {
     opacity: 0.65; }
+  .btn:not(:disabled):not(.disabled), .wp-block-button .wp-block-button__link:not(:disabled):not(.disabled), .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart:not(:disabled):not(.disabled) {
+    cursor: pointer; }
 
 a.btn.disabled, .wp-block-button a.disabled.wp-block-button__link, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.disabled.edd-add-to-cart,
 fieldset:disabled a.btn,
@@ -387,8 +388,7 @@ fieldset:disabled .editor-styles-wrapper .edd_downloads_list .edd_download_purch
     color: #0056b3;
     text-decoration: underline; }
   .btn-link:focus, .btn-link.focus {
-    text-decoration: underline;
-    box-shadow: none; }
+    text-decoration: underline; }
   .btn-link:disabled, .btn-link.disabled {
     color: #6c757d;
     pointer-events: none; }
