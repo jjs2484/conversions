@@ -10333,12 +10333,15 @@ article .entry-content::after {
   clear: both;
   content: ""; }
 
-a.c-news__img-link {
+a.c-news__img-link,
+a.c-img-features__img-link {
   background: #000;
   border-radius: 4px; }
-  a.c-news__img-link img {
+  a.c-news__img-link img,
+  a.c-img-features__img-link img {
     transition: 0.3s; }
-    a.c-news__img-link img:hover {
+    a.c-news__img-link img:hover,
+    a.c-img-features__img-link img:hover {
       transition: 0.3s;
       opacity: 0.8; }
 

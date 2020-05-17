@@ -108,7 +108,8 @@ article {
 }
 
 // News img
-a.c-news__img-link {
+a.c-news__img-link,
+a.c-img-features__img-link {
 	background: #000;
 	border-radius: 4px;
 	img {
