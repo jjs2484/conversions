@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.4
 Requires PHP: 5.6.20
-Stable tag: 1.6.3
+Stable tag: 1.6.4
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -173,6 +173,10 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.6.3 =
 * Update: Bootstrap to v4.5.0
+* Update: NPM dependencies.
+
+= 1.6.4 =
+* New: Add conversions-team image size.
 * Update: NPM dependencies.
 
 == Resources ==
