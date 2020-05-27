@@ -107,6 +107,9 @@ namespace conversions
 			// Add blog index image size.
 			add_image_size( 'conversions-blog', 1200, 480, true );
 
+			// Add team image size.
+			add_image_size( 'conversions-team', 270, 270, true );
+
 			// Set up the WordPress core custom background feature.
 			add_theme_support(
 				'custom-background',
