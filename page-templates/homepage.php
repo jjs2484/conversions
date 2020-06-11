@@ -22,7 +22,7 @@ get_header();
 
 	<?php
 	// If conversions extensions plugin isn't installed lets recommend it.
-	if ( ! class_exists( '\conversions\Homepage' ) ) {
+	if ( ! class_exists( '\conversions\extensions\homepage\Homepage' ) ) {
 		if ( current_user_can( 'edit_theme_options' ) ) { // Display this only to those with the right access.
 			?>
 			<div class="container-fluid">
