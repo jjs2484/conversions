@@ -14,13 +14,13 @@ $conversions_navbar = new conversions\navbar();
 
 		<?php if ( is_page_template( 'page-templates/homepage.php' ) ) : ?>
 
-			<a class="skip-link sr-only sr-only-focusable" href="#homepage-wrapper">
+			<a class="skip-link" href="#homepage-wrapper">
 				<?php esc_html_e( 'Skip to content', 'conversions' ); ?>
 			</a>
 
 		<?php else : ?>
 
-			<a class="skip-link sr-only sr-only-focusable" href="#content">
+			<a class="skip-link" href="#content">
 				<?php esc_html_e( 'Skip to content', 'conversions' ); ?>
 			</a>
 

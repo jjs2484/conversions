@@ -176,7 +176,10 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: NPM dependencies.
 
 = 1.6.4 =
+* New: Add skip link styles to match default WordPress styles.
 * New: Add conversions-team image size.
+* Update: Add resource list to style.css
+* Update: Add new required header fields for style.css
 * Update: NPM dependencies.
 * Fix: Namespace path for conversions-extensions homepage class.
 

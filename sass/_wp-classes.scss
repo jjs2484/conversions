@@ -123,12 +123,29 @@ img,
 	height: auto;
 }
 
-// Skip to content link
-a.skip-link {
-	position: fixed;
-	z-index: 1000;
-	top: 0px;
-	right: 0px;
+// Skip link
+.skip-link {
+	position: absolute;
+	top: -1000em;
+	&:focus {
+		left: 6px;
+		top: 7px;
+		height: auto;
+		width: auto;
+		display: block;
+		font-size: 14px;
+		font-weight: 600;
+		padding: 15px 23px 14px;
+		background: #f1f1f1;
+		color: #0073aa;
+		z-index: 100001;
+		line-height: normal;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		text-decoration: none;
+		/* Only visible in Windows High Contrast mode */
+		outline: 2px solid transparent;
+		outline-offset: -2px;
+	}
 }
 
 // Password protected post button
