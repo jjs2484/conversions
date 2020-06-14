@@ -64,7 +64,7 @@ get_header();
 							the_post();
 							?>
 							<li>
-								<a rel="bookmark" href="<?php the_permalink(); ?>" title="<?php esc_html_e( 'Permanent Link:', 'conversions' ); ?> <?php the_title(); ?>">
+								<a rel="bookmark" href="<?php esc_url( the_permalink() ); ?>" title="<?php esc_attr_e( 'Permanent Link:', 'conversions' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?>
 								</a>
 								<?php esc_html_e( 'posted on', 'conversions' ); ?>

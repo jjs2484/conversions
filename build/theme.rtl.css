@@ -10079,9 +10079,6 @@ a.text-dark:hover, a.text-dark:focus {
     .admin-bar #wrapper-navbar.fixed-top {
       top: 32px; } }
 
-#wpadminbar.compensate-for-scrollbar {
-  z-index: 99991; }
-
 .sticky,
 .gallery-caption,
 .bypostauthor {

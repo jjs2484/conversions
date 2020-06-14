@@ -52,7 +52,7 @@ $col    = 1;
 	<div class="u-column woocommerce-Address">
 		<header class="woocommerce-Address-title title">
 			<h3><?php echo $title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php esc_attr_e( 'Edit', 'conversions' ); ?></a>
+			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php esc_html_e( 'Edit', 'conversions' ); ?></a>
 		</header>
 		<address><?php
 			$address = wc_get_account_formatted_address( $name );

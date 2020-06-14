@@ -10,6 +10,7 @@ module.exports = function(grunt) {
 				options: {
 					style: 'nested',
 					precision: 5,
+					sourcemap: 'none',
 				},
 				files: {
 					'build/theme.css': 'sass/theme.scss',

@@ -183,6 +183,11 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: NPM dependencies.
 * Fix: Namespace path for conversions-extensions homepage class.
 
+= 1.6.5 =
+* Update: Remove some unused styles.
+* Update: Remove CSS map files for WP theme directory.
+* Fix: Minor escaping changes based on Theme Check findings.
+
 == Resources ==
 
 * Bootstrap 4.5.0 | MIT License
