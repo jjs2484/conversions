@@ -188,10 +188,14 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Remove CSS map files for WP theme directory.
 * Fix: Minor escaping changes based on Theme Check findings.
 
+= 1.6.6 =
+* Update: Font Awesome to v5.13.1
+* Update: NPM dependencies.
+
 == Resources ==
 
 * Bootstrap 4.5.0 | MIT License
-* Font Awesome v5.12.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
+* Font Awesome v5.13.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
 
