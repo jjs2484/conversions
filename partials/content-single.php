@@ -47,11 +47,15 @@ defined( 'ABSPATH' ) || exit;
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-
-		<?php conversions()->template->entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
+	<?php
+	if ( ! empty( conversions()->template->entry_footer() ) ) :
+		?>
+		<footer class="entry-footer">
+			<?php conversions()->template->entry_footer(); ?>
+		</footer><!-- .entry-footer -->
+		<?php
+	endif;
+	?>
 
 	<?php do_action( 'conversions_post_after_content' ); ?>
 

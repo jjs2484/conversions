@@ -40,12 +40,16 @@ defined( 'ABSPATH' ) || exit;
 
 	</div>
 
-	<div class="card-footer text-muted small">
-
-		<footer class="entry-footer">
-			<?php conversions()->template->entry_footer(); ?>
-		</footer><!-- .entry-footer -->
-
-	</div>
+	<?php
+	if ( ! empty( conversions()->template->entry_footer() ) ) :
+		?>
+		<div class="card-footer text-muted small">
+			<footer class="entry-footer">
+				<?php conversions()->template->entry_footer(); ?>
+			</footer><!-- .entry-footer -->
+		</div>
+		<?php
+	endif;
+	?>
 
 </article><!-- #post-## -->
