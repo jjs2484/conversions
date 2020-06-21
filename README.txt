@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: WordPress 5.4.2
 Requires PHP: 5.6.20
-Stable tag: 1.6.5
+Stable tag: 1.6.6
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -191,6 +191,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 = 1.6.6 =
 * Update: Font Awesome to v5.13.1
 * Update: NPM dependencies.
+* Fix: Only show entry-footer when content exists.
 
 == Resources ==
 
