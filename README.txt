@@ -2,8 +2,8 @@
 Contributors: uniquelylost
 Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, footer-widgets, full-width-template, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 Requires at least: 4.7
-Tested up to: WordPress 5.4.2
-Requires PHP: 5.6.20
+Tested up to: 5.4
+Requires PHP: 5.6
 Stable tag: 1.6.6
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
