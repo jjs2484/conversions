@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.13.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
@@ -420,6 +420,12 @@ readers do not read off random characters that represent icons */
 
 .fa-bacon:before {
   content: ""; }
+
+.fa-bacteria:before {
+  content: "陵"; }
+
+.fa-bacterium:before {
+  content: "讀"; }
 
 .fa-bahai:before {
   content: ""; }
@@ -1198,6 +1204,9 @@ readers do not read off random characters that represent icons */
 .fa-deaf:before {
   content: ""; }
 
+.fa-deezer:before {
+  content: "亮"; }
+
 .fa-delicious:before {
   content: ""; }
 
@@ -1380,6 +1389,9 @@ readers do not read off random characters that represent icons */
 
 .fa-edge:before {
   content: ""; }
+
+.fa-edge-legacy:before {
+  content: "兩"; }
 
 .fa-edit:before {
   content: ""; }
@@ -1872,6 +1884,9 @@ readers do not read off random characters that represent icons */
 
 .fa-google-drive:before {
   content: ""; }
+
+.fa-google-pay:before {
+  content: "凉"; }
 
 .fa-google-play:before {
   content: ""; }
@@ -3295,6 +3310,9 @@ readers do not read off random characters that represent icons */
 .fa-rupee-sign:before {
   content: ""; }
 
+.fa-rust:before {
+  content: "梁"; }
+
 .fa-sad-cry:before {
   content: ""; }
 
@@ -3450,6 +3468,9 @@ readers do not read off random characters that represent icons */
 
 .fa-simplybuilt:before {
   content: ""; }
+
+.fa-sink:before {
+  content: "省"; }
 
 .fa-sistrix:before {
   content: ""; }
@@ -3937,6 +3958,9 @@ readers do not read off random characters that represent icons */
 .fa-ticket-alt:before {
   content: ""; }
 
+.fa-tiktok:before {
+  content: "糧"; }
+
 .fa-times:before {
   content: ""; }
 
@@ -4123,6 +4147,9 @@ readers do not read off random characters that represent icons */
 .fa-unlock-alt:before {
   content: ""; }
 
+.fa-unsplash:before {
+  content: "良"; }
+
 .fa-untappd:before {
   content: ""; }
 
@@ -4212,6 +4239,9 @@ readers do not read off random characters that represent icons */
 
 .fa-users-cog:before {
   content: ""; }
+
+.fa-users-slash:before {
+  content: "拾"; }
 
 .fa-usps:before {
   content: ""; }
@@ -4502,7 +4532,7 @@ readers do not read off random characters that represent icons */
   width: auto; }
 
 /*!
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.13.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -4518,7 +4548,7 @@ readers do not read off random characters that represent icons */
   font-weight: 900; }
 
 /*!
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.13.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -4533,7 +4563,7 @@ readers do not read off random characters that represent icons */
   font-weight: 400; }
 
 /*!
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.13.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
