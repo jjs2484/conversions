@@ -65,7 +65,7 @@ defined( 'ABSPATH' ) || exit;
 	</div>
 
 	<?php
-	if ( ! empty( conversions()->template->entry_footer() ) ) :
+	if ( has_tag() || has_category() ) :
 		?>
 		<div class="card-footer text-muted small">
 			<footer class="entry-footer">
