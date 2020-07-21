@@ -197,6 +197,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Font Awesome to v5.14.0
 * Update: NPM dependencies.
 * Fix: Add dl to footer conversions_footer_text_color style.
+* Fix: Remove role attributes from the nav menu.
 
 == Resources ==
 
