@@ -193,6 +193,10 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: NPM dependencies.
 * Fix: Only show entry-footer when content exists.
 
+= 1.6.7 =
+* Update: Font Awesome to v5.14.0
+* Update: NPM dependencies.
+
 == Resources ==
 
 * Bootstrap 4.5.0 | MIT License
