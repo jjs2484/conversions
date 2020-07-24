@@ -1,0 +1,63 @@
+// bbPress wrapper
+.bbpress-wrapper {
+
+	// Base font-size
+	&#bbpress-forums {
+		ul.bbp-forums,
+		ul.bbp-lead-topic,
+		ul.bbp-replies,
+		ul.bbp-search-results,
+		ul.bbp-topics {
+			font-size: 14px;
+		}
+	}
+
+	// Topics text font size
+	.forums.bbp-replies .bbp-body .bbp-reply-content {
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	// Forum and topic item padding
+	&#bbpress-forums {
+		li.bbp-body ul.forum,
+		li.bbp-body ul.topic {
+			padding: 10px;
+		}
+	}
+
+	// Add Bootstrap alerts
+	div.bbp-template-notice, 
+	.bbpress-wrapper div.indicator-hint {
+		position: relative;
+  		padding: $alert-padding-y $alert-padding-x;
+  		margin-bottom: $alert-margin-bottom;
+ 		border: $alert-border-width solid transparent;
+  		@include border-radius($alert-border-radius);
+
+		&.info {
+			@include alert-variant(theme-color-level(info, $alert-bg-level), theme-color-level(info, $alert-border-level), theme-color-level(info, $alert-color-level));
+			a {
+				font-weight: $alert-link-font-weight;
+				color: darken($cyan, 10%);
+			}
+		}
+		&.important {
+			@include alert-variant(theme-color-level(warning, $alert-bg-level), theme-color-level(warning, $alert-border-level), theme-color-level(warning, $alert-color-level));
+			a {
+				font-weight: $alert-link-font-weight;
+				color: darken($yellow, 10%);
+			}
+		}
+		&.error, &.warning {
+			@include alert-variant(theme-color-level(danger, $alert-bg-level), theme-color-level(danger, $alert-border-level), theme-color-level(danger, $alert-color-level));
+			a {
+				font-weight: $alert-link-font-weight;
+				color: darken($red, 10%);
+			}
+		}
+		li, p {
+			margin: 0;
+		}
+	}
+}

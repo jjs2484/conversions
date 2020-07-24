@@ -150,6 +150,6 @@ img,
 
 // Password protected post button
 form.post-password-form input[type="submit"] {
-	@extend .btn;
-	@extend .btn-primary;
+	@include c-btn;
+	@include c-btn-primary;
 }

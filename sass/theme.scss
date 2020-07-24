@@ -4,6 +4,9 @@
 // Loads Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+// Loads Mixins
+@import "mixins";
+
 // Loads Underscores media styles
 @import "galleries";
 
@@ -30,4 +33,6 @@
 // Loads Contact Form 7 styles
 @import "contact-form7";
 // Loads Easy Digital Downloads styles
-@import "_easy-digital-downloads";
+@import "easy-digital-downloads";
+// Loads bbPress styles
+@import "bbpress";

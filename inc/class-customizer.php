@@ -159,6 +159,7 @@ namespace conversions
 			include get_parent_theme_file_path( '/inc/customizer/featured-image.php' );
 			include get_parent_theme_file_path( '/inc/customizer/woocommerce.php' );
 			include get_parent_theme_file_path( '/inc/customizer/edd.php' );
+			include get_parent_theme_file_path( '/inc/customizer/bbpress.php' );
 			// phpcs:enable
 
 			do_action( 'conversions_customize_register', $this );

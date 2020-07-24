@@ -310,7 +310,7 @@ $block-btns: (
 		&:hover {
 			text-decoration: none;
 		}
-		@extend .btn;
+		@include c-btn;
 	}
 
 	// button styles if no button type
@@ -615,9 +615,9 @@ $block-btns: (
 			display: none;
 		}
 		a.edd-add-to-cart {
-			@extend .btn;
-			@extend .btn-lg;
-			@extend .btn-block;
+			@include c-btn;
+			@include c-btn-lg;
+			@include c-btn-block;
 		}
 	}
 }

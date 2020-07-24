@@ -2205,13 +2205,7 @@ textarea.is-invalid {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, form.post-password-form input[type="submit"], .wp-block-button .wp-block-button__link,
-.wp-block-buttons .wp-block-button .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .added_to_cart, .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .added_to_cart, #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons
-a.button, .wpcf7 input[type="submit"], #edd-purchase-button,
-.edd-submit,
-[type="submit"].edd-submit {
+.btn {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -2229,129 +2223,45 @@ a.button, .wpcf7 input[type="submit"], #edd-purchase-button,
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn, form.post-password-form input[type="submit"], .wp-block-button .wp-block-button__link,
-    .wp-block-buttons .wp-block-button .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .added_to_cart, .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .added_to_cart, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons
-    a.button, .wpcf7 input[type="submit"], #edd-purchase-button,
-    .edd-submit,
-    [type="submit"].edd-submit {
+    .btn {
       transition: none; } }
-  .btn:hover, form.post-password-form input[type="submit"]:hover, .wp-block-button .wp-block-button__link:hover, .wc-block-grid__products .wc-block-grid__product .added_to_cart:hover, .woocommerce ul.products li.product .button:hover, .woocommerce ul.products li.product .added_to_cart:hover, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.button:hover, .wpcf7 input[type="submit"]:hover, #edd-purchase-button:hover,
-  .edd-submit:hover {
+  .btn:hover {
     color: #212529;
     text-decoration: none; }
-  .btn:focus, form.post-password-form input[type="submit"]:focus, .wp-block-button .wp-block-button__link:focus, .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus, .woocommerce ul.products li.product .button:focus, .woocommerce ul.products li.product .added_to_cart:focus, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.button:focus, .wpcf7 input[type="submit"]:focus, #edd-purchase-button:focus,
-  .edd-submit:focus, .btn.focus, form.post-password-form input.focus[type="submit"], .wp-block-button .focus.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .focus.added_to_cart, .woocommerce ul.products li.product .focus.button, .woocommerce ul.products li.product .focus.added_to_cart, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.focus.button, .wpcf7 input.focus[type="submit"], .focus#edd-purchase-button,
-  .focus.edd-submit {
+  .btn:focus, .btn.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .btn.disabled, form.post-password-form input.disabled[type="submit"], .wp-block-button .disabled.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .disabled.added_to_cart, .woocommerce ul.products li.product .disabled.button, .woocommerce ul.products li.product .disabled.added_to_cart, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.disabled.button, .wpcf7 input.disabled[type="submit"], .disabled#edd-purchase-button,
-  .disabled.edd-submit, .btn:disabled, form.post-password-form input[type="submit"]:disabled, .wp-block-button .wp-block-button__link:disabled, .wc-block-grid__products .wc-block-grid__product .added_to_cart:disabled, .woocommerce ul.products li.product .button:disabled, .woocommerce ul.products li.product .added_to_cart:disabled, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.button:disabled, .wpcf7 input[type="submit"]:disabled, #edd-purchase-button:disabled,
-  .edd-submit:disabled {
+  .btn.disabled, .btn:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled), form.post-password-form input[type="submit"]:not(:disabled):not(.disabled), .wp-block-button .wp-block-button__link:not(:disabled):not(.disabled), .wc-block-grid__products .wc-block-grid__product .added_to_cart:not(:disabled):not(.disabled), .woocommerce ul.products li.product .button:not(:disabled):not(.disabled), .woocommerce ul.products li.product .added_to_cart:not(:disabled):not(.disabled), #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.button:not(:disabled):not(.disabled), .wpcf7 input[type="submit"]:not(:disabled):not(.disabled), #edd-purchase-button:not(:disabled):not(.disabled),
-  .edd-submit:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
-a.btn.disabled, .wp-block-button a.disabled.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product a.disabled.added_to_cart, .woocommerce ul.products li.product a.disabled.button, .woocommerce ul.products li.product a.disabled.added_to_cart, #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons
-a.disabled.button, a.disabled#edd-purchase-button,
-a.disabled.edd-submit,
-fieldset:disabled a.btn,
-fieldset:disabled .wp-block-button a.wp-block-button__link,
-.wp-block-button fieldset:disabled a.wp-block-button__link,
-fieldset:disabled .wc-block-grid__products .wc-block-grid__product a.added_to_cart,
-.wc-block-grid__products .wc-block-grid__product fieldset:disabled a.added_to_cart,
-fieldset:disabled .woocommerce ul.products li.product a.button,
-.woocommerce ul.products li.product fieldset:disabled a.button,
-fieldset:disabled .woocommerce ul.products li.product a.added_to_cart,
-.woocommerce ul.products li.product fieldset:disabled a.added_to_cart,
-fieldset:disabled #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons a.button,
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons fieldset:disabled a.button,
-fieldset:disabled a#edd-purchase-button,
-fieldset:disabled a.edd-submit {
+a.btn.disabled,
+fieldset:disabled a.btn {
   pointer-events: none; }
 
-.btn-primary, form.post-password-form input[type="submit"], #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons
-a.button, .wpcf7 input[type="submit"] {
+.btn-primary {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff; }
-  .btn-primary:hover, form.post-password-form input[type="submit"]:hover, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.button:hover, .wpcf7 input[type="submit"]:hover {
+  .btn-primary:hover {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc; }
-  .btn-primary:focus, form.post-password-form input[type="submit"]:focus, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.button:focus, .wpcf7 input[type="submit"]:focus, .btn-primary.focus, form.post-password-form input.focus[type="submit"], #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.focus.button, .wpcf7 input.focus[type="submit"] {
+  .btn-primary:focus, .btn-primary.focus {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc;
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
-  .btn-primary.disabled, form.post-password-form input.disabled[type="submit"], #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.disabled.button, .wpcf7 input.disabled[type="submit"], .btn-primary:disabled, form.post-password-form input[type="submit"]:disabled, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.button:disabled, .wpcf7 input[type="submit"]:disabled {
+  .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff; }
-  .btn-primary:not(:disabled):not(.disabled):active, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled):active, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.button:not(:disabled):not(.disabled):active, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.button:not(:disabled):not(.disabled).active, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, form.post-password-form .show > input.dropdown-toggle[type="submit"], #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .show > a.dropdown-toggle.button, .wpcf7 .show > input.dropdown-toggle[type="submit"] {
+  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #0062cc;
     border-color: #005cbf; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled):active:focus, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons
-    a.button:not(:disabled):not(.disabled):active:focus, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active:focus, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons
-    a.button:not(:disabled):not(.disabled).active:focus, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, form.post-password-form .show > input.dropdown-toggle[type="submit"]:focus, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .show > a.dropdown-toggle.button:focus, .wpcf7 .show > input.dropdown-toggle[type="submit"]:focus {
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
 
 .btn-secondary {
@@ -2687,47 +2597,27 @@ a.button, .wpcf7 input[type="submit"] {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn, form.post-password-form .btn-group-lg > input[type="submit"], .wp-block-button .btn-group-lg > .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .btn-group-lg > .added_to_cart, .woocommerce ul.products li.product .btn-group-lg > .button, .woocommerce ul.products li.product .btn-group-lg > .added_to_cart, #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group-lg > a.button, .wpcf7 .btn-group-lg > input[type="submit"],
-.btn-group-lg > .edd-submit, #edd-purchase-button,
-.edd-submit,
-[type="submit"].edd-submit {
+.btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, form.post-password-form .btn-group-sm > input[type="submit"], .wp-block-button .btn-group-sm > .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .btn-group-sm > .added_to_cart, .woocommerce ul.products li.product .btn-group-sm > .button, .woocommerce ul.products li.product .btn-group-sm > .added_to_cart, #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group-sm > a.button, .wpcf7 .btn-group-sm > input[type="submit"], .btn-group-sm > #edd-purchase-button,
-.btn-group-sm > .edd-submit {
+.btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.2rem; }
 
-.btn-block, #edd-purchase-button,
-.edd-submit,
-[type="submit"].edd-submit {
+.btn-block {
   display: block;
   width: 100%; }
-  .btn-block + .btn-block, #edd-purchase-button + .btn-block,
-  .edd-submit + .btn-block, .btn-block + #edd-purchase-button, #edd-purchase-button + #edd-purchase-button,
-  .edd-submit + #edd-purchase-button,
-  .btn-block + .edd-submit,
-  #edd-purchase-button + .edd-submit,
-  .edd-submit + .edd-submit {
+  .btn-block + .btn-block {
     margin-top: 0.5rem; }
 
-input[type="submit"].btn-block, input[type="submit"]#edd-purchase-button,
-input[type="submit"].edd-submit,
+input[type="submit"].btn-block,
 input[type="reset"].btn-block,
-input[type="reset"]#edd-purchase-button,
-input[type="reset"].edd-submit,
-input[type="button"].btn-block,
-input[type="button"]#edd-purchase-button,
-input[type="button"].edd-submit {
+input[type="button"].btn-block {
   width: 100%; }
 
 .fade {
@@ -2947,87 +2837,17 @@ input[type="button"].edd-submit {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, form.post-password-form .btn-group > input[type="submit"], .wp-block-button .btn-group > .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart, .woocommerce ul.products li.product .btn-group > .button, .woocommerce ul.products li.product .btn-group > .added_to_cart, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group > a.button, .wpcf7 .btn-group > input[type="submit"], .btn-group > #edd-purchase-button,
-  .btn-group > .edd-submit,
-  .btn-group-vertical > .btn,
-  form.post-password-form .btn-group-vertical > input[type="submit"],
-  .wp-block-button .btn-group-vertical > .wp-block-button__link,
-  .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart,
-  .woocommerce ul.products li.product .btn-group-vertical > .button,
-  .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button,
-  .wpcf7 .btn-group-vertical > input[type="submit"],
-  .btn-group-vertical > #edd-purchase-button,
-  .btn-group-vertical > .edd-submit {
+  .btn-group > .btn,
+  .btn-group-vertical > .btn {
     position: relative;
     flex: 1 1 auto; }
-    .btn-group > .btn:hover, form.post-password-form .btn-group > input[type="submit"]:hover, .wp-block-button .btn-group > .wp-block-button__link:hover, .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:hover, .woocommerce ul.products li.product .btn-group > .button:hover, .woocommerce ul.products li.product .btn-group > .added_to_cart:hover, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group > a.button:hover, .wpcf7 .btn-group > input[type="submit"]:hover, .btn-group > #edd-purchase-button:hover,
-    .btn-group > .edd-submit:hover,
-    .btn-group-vertical > .btn:hover,
-    form.post-password-form .btn-group-vertical > input[type="submit"]:hover,
-    .wp-block-button .btn-group-vertical > .wp-block-button__link:hover,
-    .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart:hover,
-    .woocommerce ul.products li.product .btn-group-vertical > .button:hover,
-    .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart:hover,
-    #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button:hover,
-    .wpcf7 .btn-group-vertical > input[type="submit"]:hover,
-    .btn-group-vertical > #edd-purchase-button:hover,
-    .btn-group-vertical > .edd-submit:hover {
+    .btn-group > .btn:hover,
+    .btn-group-vertical > .btn:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, form.post-password-form .btn-group > input[type="submit"]:focus, .wp-block-button .btn-group > .wp-block-button__link:focus, .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:focus, .woocommerce ul.products li.product .btn-group > .button:focus, .woocommerce ul.products li.product .btn-group > .added_to_cart:focus, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group > a.button:focus, .wpcf7 .btn-group > input[type="submit"]:focus, .btn-group > #edd-purchase-button:focus,
-    .btn-group > .edd-submit:focus, .btn-group > .btn:active, form.post-password-form .btn-group > input[type="submit"]:active, .wp-block-button .btn-group > .wp-block-button__link:active, .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:active, .woocommerce ul.products li.product .btn-group > .button:active, .woocommerce ul.products li.product .btn-group > .added_to_cart:active, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group > a.button:active, .wpcf7 .btn-group > input[type="submit"]:active, .btn-group > #edd-purchase-button:active,
-    .btn-group > .edd-submit:active, .btn-group > .btn.active, form.post-password-form .btn-group > input.active[type="submit"], .wp-block-button .btn-group > .active.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .btn-group > .active.added_to_cart, .woocommerce ul.products li.product .btn-group > .active.button, .woocommerce ul.products li.product .btn-group > .active.added_to_cart, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group > a.active.button, .wpcf7 .btn-group > input.active[type="submit"], .btn-group > .active#edd-purchase-button,
-    .btn-group > .active.edd-submit,
+    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
     .btn-group-vertical > .btn:focus,
-    form.post-password-form .btn-group-vertical > input[type="submit"]:focus,
-    .wp-block-button .btn-group-vertical > .wp-block-button__link:focus,
-    .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart:focus,
-    .woocommerce ul.products li.product .btn-group-vertical > .button:focus,
-    .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart:focus,
-    #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button:focus,
-    .wpcf7 .btn-group-vertical > input[type="submit"]:focus,
-    .btn-group-vertical > #edd-purchase-button:focus,
-    .btn-group-vertical > .edd-submit:focus,
     .btn-group-vertical > .btn:active,
-    form.post-password-form .btn-group-vertical > input[type="submit"]:active,
-    .wp-block-button .btn-group-vertical > .wp-block-button__link:active,
-    .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart:active,
-    .woocommerce ul.products li.product .btn-group-vertical > .button:active,
-    .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart:active,
-    #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button:active,
-    .wpcf7 .btn-group-vertical > input[type="submit"]:active,
-    .btn-group-vertical > #edd-purchase-button:active,
-    .btn-group-vertical > .edd-submit:active,
-    .btn-group-vertical > .btn.active,
-    form.post-password-form .btn-group-vertical > input.active[type="submit"],
-    .wp-block-button .btn-group-vertical > .active.wp-block-button__link,
-    .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .active.added_to_cart,
-    .woocommerce ul.products li.product .btn-group-vertical > .active.button,
-    .woocommerce ul.products li.product .btn-group-vertical > .active.added_to_cart,
-    #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.active.button,
-    .wpcf7 .btn-group-vertical > input.active[type="submit"],
-    .btn-group-vertical > .active#edd-purchase-button,
-    .btn-group-vertical > .active.edd-submit {
+    .btn-group-vertical > .btn.active {
       z-index: 1; }
 
 .btn-toolbar {
@@ -3037,46 +2857,15 @@ input[type="button"].edd-submit {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child), form.post-password-form .btn-group > input[type="submit"]:not(:first-child), .wp-block-button .btn-group > .wp-block-button__link:not(:first-child), .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:not(:first-child), .woocommerce ul.products li.product .btn-group > .button:not(:first-child), .woocommerce ul.products li.product .btn-group > .added_to_cart:not(:first-child), #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group > a.button:not(:first-child), .wpcf7 .btn-group > input[type="submit"]:not(:first-child), .btn-group > #edd-purchase-button:not(:first-child),
-.btn-group > .edd-submit:not(:first-child),
+.btn-group > .btn:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), form.post-password-form .btn-group > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .wp-block-button .btn-group > .wp-block-button__link:not(:last-child):not(.dropdown-toggle), .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:not(:last-child):not(.dropdown-toggle), .woocommerce ul.products li.product .btn-group > .button:not(:last-child):not(.dropdown-toggle), .woocommerce ul.products li.product .btn-group > .added_to_cart:not(:last-child):not(.dropdown-toggle), #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group > a.button:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group > #edd-purchase-button:not(:last-child):not(.dropdown-toggle),
-.btn-group > .edd-submit:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn,
-form.post-password-form .btn-group > .btn-group:not(:last-child) > input[type="submit"],
-.wp-block-button .btn-group > .btn-group:not(:last-child) > .wp-block-button__link,
-.wc-block-grid__products .wc-block-grid__product .btn-group > .btn-group:not(:last-child) > .added_to_cart,
-.woocommerce ul.products li.product .btn-group > .btn-group:not(:last-child) > .button,
-.woocommerce ul.products li.product .btn-group > .btn-group:not(:last-child) > .added_to_cart,
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group > .btn-group:not(:last-child) > a.button,
-.wpcf7 .btn-group > .btn-group:not(:last-child) > input[type="submit"],
-.btn-group > .btn-group:not(:last-child) > #edd-purchase-button,
-.btn-group > .btn-group:not(:last-child) > .edd-submit {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
-.btn-group > .btn:not(:first-child), form.post-password-form .btn-group > input[type="submit"]:not(:first-child), .wp-block-button .btn-group > .wp-block-button__link:not(:first-child), .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:not(:first-child), .woocommerce ul.products li.product .btn-group > .button:not(:first-child), .woocommerce ul.products li.product .btn-group > .added_to_cart:not(:first-child), #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group > a.button:not(:first-child), .wpcf7 .btn-group > input[type="submit"]:not(:first-child), .btn-group > #edd-purchase-button:not(:first-child),
-.btn-group > .edd-submit:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn,
-form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="submit"],
-.wp-block-button .btn-group > .btn-group:not(:first-child) > .wp-block-button__link,
-.wc-block-grid__products .wc-block-grid__product .btn-group > .btn-group:not(:first-child) > .added_to_cart,
-.woocommerce ul.products li.product .btn-group > .btn-group:not(:first-child) > .button,
-.woocommerce ul.products li.product .btn-group > .btn-group:not(:first-child) > .added_to_cart,
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group > .btn-group:not(:first-child) > a.button,
-.wpcf7 .btn-group > .btn-group:not(:first-child) > input[type="submit"],
-.btn-group > .btn-group:not(:first-child) > #edd-purchase-button,
-.btn-group > .btn-group:not(:first-child) > .edd-submit {
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -3088,18 +2877,11 @@ form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, form.post-password-form .btn-group-sm > input[type="submit"] + .dropdown-toggle-split, .wp-block-button .btn-group-sm > .wp-block-button__link + .dropdown-toggle-split, .wc-block-grid__products .wc-block-grid__product .btn-group-sm > .added_to_cart + .dropdown-toggle-split, .woocommerce ul.products li.product .btn-group-sm > .button + .dropdown-toggle-split, .woocommerce ul.products li.product .btn-group-sm > .added_to_cart + .dropdown-toggle-split, #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group-sm > a.button + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type="submit"] + .dropdown-toggle-split, .btn-group-sm > #edd-purchase-button + .dropdown-toggle-split,
-.btn-group-sm > .edd-submit + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, form.post-password-form .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, .wp-block-button .btn-group-lg > .wp-block-button__link + .dropdown-toggle-split, .wc-block-grid__products .wc-block-grid__product .btn-group-lg > .added_to_cart + .dropdown-toggle-split, .woocommerce ul.products li.product .btn-group-lg > .button + .dropdown-toggle-split, .woocommerce ul.products li.product .btn-group-lg > .added_to_cart + .dropdown-toggle-split, #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group-lg > a.button + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, .btn-group-lg > #edd-purchase-button + .dropdown-toggle-split,
-.btn-group-lg > .edd-submit + .dropdown-toggle-split, #edd-purchase-button + .dropdown-toggle-split,
-.edd-submit + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -3107,112 +2889,28 @@ form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical > .btn, form.post-password-form .btn-group-vertical > input[type="submit"], .wp-block-button .btn-group-vertical > .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart, .woocommerce ul.products li.product .btn-group-vertical > .button, .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button, .wpcf7 .btn-group-vertical > input[type="submit"], .btn-group-vertical > #edd-purchase-button,
-  .btn-group-vertical > .edd-submit,
+  .btn-group-vertical > .btn,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child), form.post-password-form .btn-group-vertical > input[type="submit"]:not(:first-child), .wp-block-button .btn-group-vertical > .wp-block-button__link:not(:first-child), .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart:not(:first-child), .woocommerce ul.products li.product .btn-group-vertical > .button:not(:first-child), .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart:not(:first-child), #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button:not(:first-child), .wpcf7 .btn-group-vertical > input[type="submit"]:not(:first-child), .btn-group-vertical > #edd-purchase-button:not(:first-child),
-  .btn-group-vertical > .edd-submit:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), form.post-password-form .btn-group-vertical > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .wp-block-button .btn-group-vertical > .wp-block-button__link:not(:last-child):not(.dropdown-toggle), .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart:not(:last-child):not(.dropdown-toggle), .woocommerce ul.products li.product .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle), .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart:not(:last-child):not(.dropdown-toggle), #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > #edd-purchase-button:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .edd-submit:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-  form.post-password-form .btn-group-vertical > .btn-group:not(:last-child) > input[type="submit"],
-  .wp-block-button .btn-group-vertical > .btn-group:not(:last-child) > .wp-block-button__link,
-  .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .btn-group:not(:last-child) > .added_to_cart,
-  .woocommerce ul.products li.product .btn-group-vertical > .btn-group:not(:last-child) > .button,
-  .woocommerce ul.products li.product .btn-group-vertical > .btn-group:not(:last-child) > .added_to_cart,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > .btn-group:not(:last-child) > a.button,
-  .wpcf7 .btn-group-vertical > .btn-group:not(:last-child) > input[type="submit"],
-  .btn-group-vertical > .btn-group:not(:last-child) > #edd-purchase-button,
-  .btn-group-vertical > .btn-group:not(:last-child) > .edd-submit {
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), form.post-password-form .btn-group-vertical > input[type="submit"]:not(:first-child), .wp-block-button .btn-group-vertical > .wp-block-button__link:not(:first-child), .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart:not(:first-child), .woocommerce ul.products li.product .btn-group-vertical > .button:not(:first-child), .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart:not(:first-child), #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button:not(:first-child), .wpcf7 .btn-group-vertical > input[type="submit"]:not(:first-child), .btn-group-vertical > #edd-purchase-button:not(:first-child),
-  .btn-group-vertical > .edd-submit:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-  form.post-password-form .btn-group-vertical > .btn-group:not(:first-child) > input[type="submit"],
-  .wp-block-button .btn-group-vertical > .btn-group:not(:first-child) > .wp-block-button__link,
-  .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .btn-group:not(:first-child) > .added_to_cart,
-  .woocommerce ul.products li.product .btn-group-vertical > .btn-group:not(:first-child) > .button,
-  .woocommerce ul.products li.product .btn-group-vertical > .btn-group:not(:first-child) > .added_to_cart,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > .btn-group:not(:first-child) > a.button,
-  .wpcf7 .btn-group-vertical > .btn-group:not(:first-child) > input[type="submit"],
-  .btn-group-vertical > .btn-group:not(:first-child) > #edd-purchase-button,
-  .btn-group-vertical > .btn-group:not(:first-child) > .edd-submit {
+  .btn-group-vertical > .btn:not(:first-child),
+  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, form.post-password-form .btn-group-toggle > input[type="submit"], .wp-block-button .btn-group-toggle > .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .btn-group-toggle > .added_to_cart, .woocommerce ul.products li.product .btn-group-toggle > .button, .woocommerce ul.products li.product .btn-group-toggle > .added_to_cart, #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group-toggle > a.button, .wpcf7 .btn-group-toggle > input[type="submit"], .btn-group-toggle > #edd-purchase-button,
-.btn-group-toggle > .edd-submit,
-.btn-group-toggle > .btn-group > .btn,
-form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
-.wp-block-button .btn-group-toggle > .btn-group > .wp-block-button__link,
-.wc-block-grid__products .wc-block-grid__product .btn-group-toggle > .btn-group > .added_to_cart,
-.woocommerce ul.products li.product .btn-group-toggle > .btn-group > .button,
-.woocommerce ul.products li.product .btn-group-toggle > .btn-group > .added_to_cart,
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .btn-group-toggle > .btn-group > a.button,
-.wpcf7 .btn-group-toggle > .btn-group > input[type="submit"],
-.btn-group-toggle > .btn-group > #edd-purchase-button,
-.btn-group-toggle > .btn-group > .edd-submit {
+.btn-group-toggle > .btn,
+.btn-group-toggle > .btn-group > .btn {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], form.post-password-form .btn-group-toggle > input[type="submit"] input[type="radio"], .wp-block-button .btn-group-toggle > .wp-block-button__link input[type="radio"], .wc-block-grid__products .wc-block-grid__product .btn-group-toggle > .added_to_cart input[type="radio"], .woocommerce ul.products li.product .btn-group-toggle > .button input[type="radio"], .woocommerce ul.products li.product .btn-group-toggle > .added_to_cart input[type="radio"], #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-toggle > a.button input[type="radio"], .wpcf7 .btn-group-toggle > input[type="submit"] input[type="radio"], .btn-group-toggle > #edd-purchase-button input[type="radio"],
-  .btn-group-toggle > .edd-submit input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
-  form.post-password-form .btn-group-toggle > input[type="submit"] input[type="checkbox"],
-  .wp-block-button .btn-group-toggle > .wp-block-button__link input[type="checkbox"],
-  .wc-block-grid__products .wc-block-grid__product .btn-group-toggle > .added_to_cart input[type="checkbox"],
-  .woocommerce ul.products li.product .btn-group-toggle > .button input[type="checkbox"],
-  .woocommerce ul.products li.product .btn-group-toggle > .added_to_cart input[type="checkbox"],
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-toggle > a.button input[type="checkbox"],
-  .wpcf7 .btn-group-toggle > input[type="submit"] input[type="checkbox"],
-  .btn-group-toggle > #edd-purchase-button input[type="checkbox"],
-  .btn-group-toggle > .edd-submit input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"] input[type="radio"],
-  .wp-block-button .btn-group-toggle > .btn-group > .wp-block-button__link input[type="radio"],
-  .wc-block-grid__products .wc-block-grid__product .btn-group-toggle > .btn-group > .added_to_cart input[type="radio"],
-  .woocommerce ul.products li.product .btn-group-toggle > .btn-group > .button input[type="radio"],
-  .woocommerce ul.products li.product .btn-group-toggle > .btn-group > .added_to_cart input[type="radio"],
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-toggle > .btn-group > a.button input[type="radio"],
-  .wpcf7 .btn-group-toggle > .btn-group > input[type="submit"] input[type="radio"],
-  .btn-group-toggle > .btn-group > #edd-purchase-button input[type="radio"],
-  .btn-group-toggle > .btn-group > .edd-submit input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
-  form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"] input[type="checkbox"],
-  .wp-block-button .btn-group-toggle > .btn-group > .wp-block-button__link input[type="checkbox"],
-  .wc-block-grid__products .wc-block-grid__product .btn-group-toggle > .btn-group > .added_to_cart input[type="checkbox"],
-  .woocommerce ul.products li.product .btn-group-toggle > .btn-group > .button input[type="checkbox"],
-  .woocommerce ul.products li.product .btn-group-toggle > .btn-group > .added_to_cart input[type="checkbox"],
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn-group-toggle > .btn-group > a.button input[type="checkbox"],
-  .wpcf7 .btn-group-toggle > .btn-group > input[type="submit"] input[type="checkbox"],
-  .btn-group-toggle > .btn-group > #edd-purchase-button input[type="checkbox"],
-  .btn-group-toggle > .btn-group > .edd-submit input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -3741,932 +3439,21 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend form.post-password-form input[type="submit"], form.post-password-form .input-group-prepend input[type="submit"], .input-group-prepend .wp-block-button .wp-block-button__link, .wp-block-button .input-group-prepend .wp-block-button__link, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart, .input-group-prepend .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .input-group-prepend .button, .input-group-prepend .woocommerce ul.products li.product .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .added_to_cart, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button, .input-group-prepend .wpcf7 input[type="submit"], .wpcf7 .input-group-prepend input[type="submit"], .input-group-prepend #edd-purchase-button,
-  .input-group-prepend .edd-submit,
-  .input-group-append .btn,
-  .input-group-append form.post-password-form input[type="submit"],
-  form.post-password-form .input-group-append input[type="submit"],
-  .input-group-append .wp-block-button .wp-block-button__link,
-  .wp-block-button .input-group-append .wp-block-button__link,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart,
-  .input-group-append .woocommerce ul.products li.product .button,
-  .woocommerce ul.products li.product .input-group-append .button,
-  .input-group-append .woocommerce ul.products li.product .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .added_to_cart,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button,
-  .input-group-append .wpcf7 input[type="submit"],
-  .wpcf7 .input-group-append input[type="submit"],
-  .input-group-append #edd-purchase-button,
-  .input-group-append .edd-submit {
+  .input-group-prepend .btn,
+  .input-group-append .btn {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus, .input-group-prepend form.post-password-form input[type="submit"]:focus, form.post-password-form .input-group-prepend input[type="submit"]:focus, .input-group-prepend .wp-block-button .wp-block-button__link:focus, .wp-block-button .input-group-prepend .wp-block-button__link:focus, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart:focus, .input-group-prepend .woocommerce ul.products li.product .button:focus, .woocommerce ul.products li.product .input-group-prepend .button:focus, .input-group-prepend .woocommerce ul.products li.product .added_to_cart:focus, .woocommerce ul.products li.product .input-group-prepend .added_to_cart:focus, .input-group-prepend #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons a.button:focus, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button:focus, .input-group-prepend .wpcf7 input[type="submit"]:focus, .wpcf7 .input-group-prepend input[type="submit"]:focus, .input-group-prepend #edd-purchase-button:focus,
-    .input-group-prepend .edd-submit:focus,
-    .input-group-append .btn:focus,
-    .input-group-append form.post-password-form input[type="submit"]:focus,
-    form.post-password-form .input-group-append input[type="submit"]:focus,
-    .input-group-append .wp-block-button .wp-block-button__link:focus,
-    .wp-block-button .input-group-append .wp-block-button__link:focus,
-    .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus,
-    .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart:focus,
-    .input-group-append .woocommerce ul.products li.product .button:focus,
-    .woocommerce ul.products li.product .input-group-append .button:focus,
-    .input-group-append .woocommerce ul.products li.product .added_to_cart:focus,
-    .woocommerce ul.products li.product .input-group-append .added_to_cart:focus,
-    .input-group-append #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons a.button:focus,
-    #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .input-group-append a.button:focus,
-    .input-group-append .wpcf7 input[type="submit"]:focus,
-    .wpcf7 .input-group-append input[type="submit"]:focus,
-    .input-group-append #edd-purchase-button:focus,
-    .input-group-append .edd-submit:focus {
+    .input-group-prepend .btn:focus,
+    .input-group-append .btn:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend form.post-password-form input[type="submit"] + .btn, form.post-password-form .input-group-prepend input[type="submit"] + .btn, .input-group-prepend .wp-block-button .wp-block-button__link + .btn, .wp-block-button .input-group-prepend .wp-block-button__link + .btn,
-  .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .btn,
-  .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + .btn, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + .btn, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + .btn, .input-group-prepend .woocommerce ul.products li.product .button + .btn, .woocommerce ul.products li.product .input-group-prepend .button + .btn, .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .btn, .woocommerce ul.products li.product .input-group-prepend .added_to_cart + .btn, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .btn, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + .btn, .input-group-prepend .wpcf7 input[type="submit"] + .btn, .wpcf7 .input-group-prepend input[type="submit"] + .btn, .input-group-prepend #edd-purchase-button + .btn,
-  .input-group-prepend .edd-submit + .btn,
-  .input-group-prepend [type="submit"].edd-submit + .btn, .input-group-prepend form.post-password-form .btn + input[type="submit"], form.post-password-form .input-group-prepend .btn + input[type="submit"], .input-group-prepend form.post-password-form input[type="submit"] + input[type="submit"], form.post-password-form .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-prepend .wp-block-button form.post-password-form .wp-block-button__link + input[type="submit"], form.post-password-form .input-group-prepend .wp-block-button .wp-block-button__link + input[type="submit"], .wp-block-button .input-group-prepend form.post-password-form .wp-block-button__link + input[type="submit"], form.post-password-form .wp-block-button .input-group-prepend .wp-block-button__link + input[type="submit"],
-  .input-group-prepend .wp-block-buttons .wp-block-button form.post-password-form .wp-block-button__link + input[type="submit"],
-  form.post-password-form .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + input[type="submit"],
-  .wp-block-buttons .wp-block-button .input-group-prepend form.post-password-form .wp-block-button__link + input[type="submit"],
-  form.post-password-form .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + input[type="submit"], .input-group-prepend .wc-block-grid__products .wc-block-grid__product form.post-password-form .added_to_cart + input[type="submit"], form.post-password-form .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + input[type="submit"], .wc-block-grid__products .wc-block-grid__product .input-group-prepend form.post-password-form .added_to_cart + input[type="submit"], form.post-password-form .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + input[type="submit"], .input-group-prepend .woocommerce ul.products li.product form.post-password-form .button + input[type="submit"], form.post-password-form .input-group-prepend .woocommerce ul.products li.product .button + input[type="submit"], .woocommerce ul.products li.product .input-group-prepend form.post-password-form .button + input[type="submit"], form.post-password-form .woocommerce ul.products li.product .input-group-prepend .button + input[type="submit"], .input-group-prepend .woocommerce ul.products li.product form.post-password-form .added_to_cart + input[type="submit"], form.post-password-form .input-group-prepend .woocommerce ul.products li.product .added_to_cart + input[type="submit"], .woocommerce ul.products li.product .input-group-prepend form.post-password-form .added_to_cart + input[type="submit"], form.post-password-form .woocommerce ul.products li.product .input-group-prepend .added_to_cart + input[type="submit"], .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons form.post-password-form a.button + input[type="submit"], form.post-password-form .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + input[type="submit"], #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend form.post-password-form a.button + input[type="submit"], form.post-password-form #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + input[type="submit"], .input-group-prepend .wpcf7 form.post-password-form input[type="submit"] + input[type="submit"], form.post-password-form .input-group-prepend .wpcf7 input[type="submit"] + input[type="submit"], .wpcf7 .input-group-prepend form.post-password-form input[type="submit"] + input[type="submit"], form.post-password-form .wpcf7 .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-prepend form.post-password-form #edd-purchase-button + input[type="submit"], form.post-password-form .input-group-prepend #edd-purchase-button + input[type="submit"],
-  .input-group-prepend form.post-password-form .edd-submit + input[type="submit"],
-  form.post-password-form .input-group-prepend .edd-submit + input[type="submit"],
-  .input-group-prepend form.post-password-form [type="submit"].edd-submit + input[type="submit"],
-  form.post-password-form .input-group-prepend [type="submit"].edd-submit + input[type="submit"], .input-group-prepend .wp-block-button .btn + .wp-block-button__link, .wp-block-button .input-group-prepend .btn + .wp-block-button__link, .input-group-prepend form.post-password-form .wp-block-button input[type="submit"] + .wp-block-button__link, .wp-block-button .input-group-prepend form.post-password-form input[type="submit"] + .wp-block-button__link, form.post-password-form .input-group-prepend .wp-block-button input[type="submit"] + .wp-block-button__link, .wp-block-button form.post-password-form .input-group-prepend input[type="submit"] + .wp-block-button__link, .input-group-prepend .wp-block-button .wp-block-button__link + .wp-block-button__link, .wp-block-button .input-group-prepend .wp-block-button__link + .wp-block-button__link,
-  .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + .wp-block-button__link, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .wp-block-button .added_to_cart + .wp-block-button__link, .wp-block-button .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .wp-block-button .added_to_cart + .wp-block-button__link, .wp-block-button .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + .wp-block-button__link, .input-group-prepend .woocommerce ul.products li.product .wp-block-button .button + .wp-block-button__link, .wp-block-button .input-group-prepend .woocommerce ul.products li.product .button + .wp-block-button__link, .woocommerce ul.products li.product .input-group-prepend .wp-block-button .button + .wp-block-button__link, .wp-block-button .woocommerce ul.products li.product .input-group-prepend .button + .wp-block-button__link, .input-group-prepend .woocommerce ul.products li.product .wp-block-button .added_to_cart + .wp-block-button__link, .wp-block-button .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .wp-block-button__link, .woocommerce ul.products li.product .input-group-prepend .wp-block-button .added_to_cart + .wp-block-button__link, .wp-block-button .woocommerce ul.products li.product .input-group-prepend .added_to_cart + .wp-block-button__link, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button a.button + .wp-block-button__link, .wp-block-button .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .wp-block-button__link, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .wp-block-button a.button + .wp-block-button__link, .wp-block-button #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + .wp-block-button__link, .input-group-prepend .wpcf7 .wp-block-button input[type="submit"] + .wp-block-button__link, .wp-block-button .input-group-prepend .wpcf7 input[type="submit"] + .wp-block-button__link, .wpcf7 .input-group-prepend .wp-block-button input[type="submit"] + .wp-block-button__link, .wp-block-button .wpcf7 .input-group-prepend input[type="submit"] + .wp-block-button__link, .input-group-prepend .wp-block-button #edd-purchase-button + .wp-block-button__link, .wp-block-button .input-group-prepend #edd-purchase-button + .wp-block-button__link,
-  .input-group-prepend .wp-block-button .edd-submit + .wp-block-button__link,
-  .wp-block-button .input-group-prepend .edd-submit + .wp-block-button__link,
-  .input-group-prepend .wp-block-button [type="submit"].edd-submit + .wp-block-button__link,
-  .wp-block-button .input-group-prepend [type="submit"].edd-submit + .wp-block-button__link,
-  .input-group-prepend .wp-block-buttons .wp-block-button .btn + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend .btn + .wp-block-button__link,
-  .input-group-prepend form.post-password-form .wp-block-buttons .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend form.post-password-form input[type="submit"] + .wp-block-button__link,
-  form.post-password-form .input-group-prepend .wp-block-buttons .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button form.post-password-form .input-group-prepend input[type="submit"] + .wp-block-button__link,
-  .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .wp-block-button__link,
-  .wp-block-buttons .input-group-prepend .wp-block-button .wp-block-button__link + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + .wp-block-button__link,
-  .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + .wp-block-button__link,
-  .input-group-prepend .wc-block-grid__products .wc-block-grid__product .wp-block-buttons .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + .wp-block-button__link,
-  .wc-block-grid__products .wc-block-grid__product .input-group-prepend .wp-block-buttons .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + .wp-block-button__link,
-  .input-group-prepend .woocommerce ul.products li.product .wp-block-buttons .wp-block-button .button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend .woocommerce ul.products li.product .button + .wp-block-button__link,
-  .woocommerce ul.products li.product .input-group-prepend .wp-block-buttons .wp-block-button .button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .woocommerce ul.products li.product .input-group-prepend .button + .wp-block-button__link,
-  .input-group-prepend .woocommerce ul.products li.product .wp-block-buttons .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .wp-block-button__link,
-  .woocommerce ul.products li.product .input-group-prepend .wp-block-buttons .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .woocommerce ul.products li.product .input-group-prepend .added_to_cart + .wp-block-button__link,
-  .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-buttons .wp-block-button a.button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .wp-block-button__link,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .wp-block-buttons .wp-block-button a.button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + .wp-block-button__link,
-  .input-group-prepend .wpcf7 .wp-block-buttons .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend .wpcf7 input[type="submit"] + .wp-block-button__link,
-  .wpcf7 .input-group-prepend .wp-block-buttons .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .wpcf7 .input-group-prepend input[type="submit"] + .wp-block-button__link,
-  .input-group-prepend .wp-block-buttons .wp-block-button #edd-purchase-button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend #edd-purchase-button + .wp-block-button__link,
-  .input-group-prepend .wp-block-buttons .wp-block-button .edd-submit + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend .edd-submit + .wp-block-button__link,
-  .input-group-prepend .wp-block-buttons .wp-block-button [type="submit"].edd-submit + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-prepend [type="submit"].edd-submit + .wp-block-button__link, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .btn + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .btn + .added_to_cart, .input-group-prepend form.post-password-form .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend form.post-password-form input[type="submit"] + .added_to_cart, form.post-password-form .input-group-prepend .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart, .wc-block-grid__products .wc-block-grid__product form.post-password-form .input-group-prepend input[type="submit"] + .added_to_cart, .input-group-prepend .wp-block-button .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .wp-block-button .wp-block-button__link + .added_to_cart, .wp-block-button .input-group-prepend .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .wp-block-button .input-group-prepend .wp-block-button__link + .added_to_cart,
-  .input-group-prepend .wp-block-buttons .wp-block-button .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .added_to_cart,
-  .wp-block-buttons .wp-block-button .input-group-prepend .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + .added_to_cart, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + .added_to_cart, .input-group-prepend .woocommerce ul.products li.product .wc-block-grid__products .wc-block-grid__product .button + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .woocommerce ul.products li.product .button + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .wc-block-grid__products .wc-block-grid__product .button + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .woocommerce ul.products li.product .input-group-prepend .button + .added_to_cart, .input-group-prepend .woocommerce ul.products li.product .wc-block-grid__products .wc-block-grid__product .added_to_cart + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .woocommerce ul.products li.product .input-group-prepend .added_to_cart + .added_to_cart, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wc-block-grid__products .wc-block-grid__product a.button + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .added_to_cart, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .wc-block-grid__products .wc-block-grid__product a.button + .added_to_cart, .wc-block-grid__products .wc-block-grid__product #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + .added_to_cart, .input-group-prepend .wpcf7 .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .wpcf7 input[type="submit"] + .added_to_cart, .wpcf7 .input-group-prepend .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .wpcf7 .input-group-prepend input[type="submit"] + .added_to_cart, .input-group-prepend .wc-block-grid__products .wc-block-grid__product #edd-purchase-button + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend #edd-purchase-button + .added_to_cart,
-  .input-group-prepend .wc-block-grid__products .wc-block-grid__product .edd-submit + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-prepend .edd-submit + .added_to_cart,
-  .input-group-prepend .wc-block-grid__products .wc-block-grid__product [type="submit"].edd-submit + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-prepend [type="submit"].edd-submit + .added_to_cart, .input-group-prepend .woocommerce ul.products li.product .btn + .button, .woocommerce ul.products li.product .input-group-prepend .btn + .button, .input-group-prepend form.post-password-form .woocommerce ul.products li.product input[type="submit"] + .button, .woocommerce ul.products li.product .input-group-prepend form.post-password-form input[type="submit"] + .button, form.post-password-form .input-group-prepend .woocommerce ul.products li.product input[type="submit"] + .button, .woocommerce ul.products li.product form.post-password-form .input-group-prepend input[type="submit"] + .button, .input-group-prepend .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .button, .woocommerce ul.products li.product .input-group-prepend .wp-block-button .wp-block-button__link + .button, .wp-block-button .input-group-prepend .woocommerce ul.products li.product .wp-block-button__link + .button, .woocommerce ul.products li.product .wp-block-button .input-group-prepend .wp-block-button__link + .button,
-  .input-group-prepend .wp-block-buttons .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .button,
-  .woocommerce ul.products li.product .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .button,
-  .wp-block-buttons .wp-block-button .input-group-prepend .woocommerce ul.products li.product .wp-block-button__link + .button,
-  .woocommerce ul.products li.product .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + .button, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .woocommerce ul.products li.product .added_to_cart + .button, .woocommerce ul.products li.product .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + .button, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .button, .woocommerce ul.products li.product .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + .button, .input-group-prepend .woocommerce ul.products li.product .button + .button, .woocommerce ul.products li.product .input-group-prepend .button + .button, .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .button, .woocommerce ul.products li.product .input-group-prepend .added_to_cart + .button, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product a.button + .button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend ul.products li.product a.button + .button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .input-group-prepend a.button + .button, .input-group-prepend .wpcf7 .woocommerce ul.products li.product input[type="submit"] + .button, .woocommerce ul.products li.product .input-group-prepend .wpcf7 input[type="submit"] + .button, .wpcf7 .input-group-prepend .woocommerce ul.products li.product input[type="submit"] + .button, .woocommerce ul.products li.product .wpcf7 .input-group-prepend input[type="submit"] + .button, .input-group-prepend .woocommerce ul.products li.product #edd-purchase-button + .button, .woocommerce ul.products li.product .input-group-prepend #edd-purchase-button + .button,
-  .input-group-prepend .woocommerce ul.products li.product .edd-submit + .button,
-  .woocommerce ul.products li.product .input-group-prepend .edd-submit + .button,
-  .input-group-prepend .woocommerce ul.products li.product [type="submit"].edd-submit + .button,
-  .woocommerce ul.products li.product .input-group-prepend [type="submit"].edd-submit + .button, .input-group-prepend .woocommerce ul.products li.product .btn + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .btn + .added_to_cart, .input-group-prepend form.post-password-form .woocommerce ul.products li.product input[type="submit"] + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend form.post-password-form input[type="submit"] + .added_to_cart, form.post-password-form .input-group-prepend .woocommerce ul.products li.product input[type="submit"] + .added_to_cart, .woocommerce ul.products li.product form.post-password-form .input-group-prepend input[type="submit"] + .added_to_cart, .input-group-prepend .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .wp-block-button .wp-block-button__link + .added_to_cart, .wp-block-button .input-group-prepend .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart, .woocommerce ul.products li.product .wp-block-button .input-group-prepend .wp-block-button__link + .added_to_cart,
-  .input-group-prepend .wp-block-buttons .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .added_to_cart,
-  .wp-block-buttons .wp-block-button .input-group-prepend .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart,
-  .woocommerce ul.products li.product .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + .added_to_cart, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .woocommerce ul.products li.product .added_to_cart + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .added_to_cart, .woocommerce ul.products li.product .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + .added_to_cart, .input-group-prepend .woocommerce ul.products li.product .button + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .button + .added_to_cart, .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .added_to_cart + .added_to_cart, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product a.button + .added_to_cart, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend ul.products li.product a.button + .added_to_cart, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .input-group-prepend a.button + .added_to_cart, .input-group-prepend .wpcf7 .woocommerce ul.products li.product input[type="submit"] + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .wpcf7 input[type="submit"] + .added_to_cart, .wpcf7 .input-group-prepend .woocommerce ul.products li.product input[type="submit"] + .added_to_cart, .woocommerce ul.products li.product .wpcf7 .input-group-prepend input[type="submit"] + .added_to_cart, .input-group-prepend .woocommerce ul.products li.product #edd-purchase-button + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend #edd-purchase-button + .added_to_cart,
-  .input-group-prepend .woocommerce ul.products li.product .edd-submit + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-prepend .edd-submit + .added_to_cart,
-  .input-group-prepend .woocommerce ul.products li.product [type="submit"].edd-submit + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-prepend [type="submit"].edd-submit + .added_to_cart, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .btn + a.button, .input-group-prepend form.post-password-form #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons input[type="submit"] + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend form.post-password-form input[type="submit"] + a.button, form.post-password-form .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons input[type="submit"] + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons form.post-password-form .input-group-prepend input[type="submit"] + a.button, .input-group-prepend .wp-block-button #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button__link + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .wp-block-button .wp-block-button__link + a.button, .wp-block-button .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button__link + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button .input-group-prepend .wp-block-button__link + a.button,
-  .input-group-prepend .wp-block-buttons .wp-block-button #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button__link + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + a.button,
-  .wp-block-buttons .wp-block-button .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button__link + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + a.button, .input-group-prepend .wc-block-grid__products .wc-block-grid__product #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .added_to_cart + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + a.button, .wc-block-grid__products .wc-block-grid__product .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .added_to_cart + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + a.button, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .button + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .input-group-prepend .button + a.button, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .added_to_cart + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .input-group-prepend .added_to_cart + a.button, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + a.button, .input-group-prepend .wpcf7 #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons input[type="submit"] + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .wpcf7 input[type="submit"] + a.button, .wpcf7 .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons input[type="submit"] + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wpcf7 .input-group-prepend input[type="submit"] + a.button, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons #edd-purchase-button + a.button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend #edd-purchase-button + a.button,
-  .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .edd-submit + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .edd-submit + a.button,
-  .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons [type="submit"].edd-submit + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend [type="submit"].edd-submit + a.button, .input-group-prepend .wpcf7 .btn + input[type="submit"], .wpcf7 .input-group-prepend .btn + input[type="submit"], .input-group-prepend form.post-password-form .wpcf7 input[type="submit"] + input[type="submit"], .wpcf7 .input-group-prepend form.post-password-form input[type="submit"] + input[type="submit"], form.post-password-form .input-group-prepend .wpcf7 input[type="submit"] + input[type="submit"], .wpcf7 form.post-password-form .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-prepend .wp-block-button .wpcf7 .wp-block-button__link + input[type="submit"], .wpcf7 .input-group-prepend .wp-block-button .wp-block-button__link + input[type="submit"], .wp-block-button .input-group-prepend .wpcf7 .wp-block-button__link + input[type="submit"], .wpcf7 .wp-block-button .input-group-prepend .wp-block-button__link + input[type="submit"],
-  .input-group-prepend .wp-block-buttons .wp-block-button .wpcf7 .wp-block-button__link + input[type="submit"],
-  .wpcf7 .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + input[type="submit"],
-  .wp-block-buttons .wp-block-button .input-group-prepend .wpcf7 .wp-block-button__link + input[type="submit"],
-  .wpcf7 .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + input[type="submit"], .input-group-prepend .wc-block-grid__products .wc-block-grid__product .wpcf7 .added_to_cart + input[type="submit"], .wpcf7 .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + input[type="submit"], .wc-block-grid__products .wc-block-grid__product .input-group-prepend .wpcf7 .added_to_cart + input[type="submit"], .wpcf7 .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + input[type="submit"], .input-group-prepend .woocommerce ul.products li.product .wpcf7 .button + input[type="submit"], .wpcf7 .input-group-prepend .woocommerce ul.products li.product .button + input[type="submit"], .woocommerce ul.products li.product .input-group-prepend .wpcf7 .button + input[type="submit"], .wpcf7 .woocommerce ul.products li.product .input-group-prepend .button + input[type="submit"], .input-group-prepend .woocommerce ul.products li.product .wpcf7 .added_to_cart + input[type="submit"], .wpcf7 .input-group-prepend .woocommerce ul.products li.product .added_to_cart + input[type="submit"], .woocommerce ul.products li.product .input-group-prepend .wpcf7 .added_to_cart + input[type="submit"], .wpcf7 .woocommerce ul.products li.product .input-group-prepend .added_to_cart + input[type="submit"], .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wpcf7 a.button + input[type="submit"], .wpcf7 .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + input[type="submit"], #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .wpcf7 a.button + input[type="submit"], .wpcf7 #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + input[type="submit"], .input-group-prepend .wpcf7 input[type="submit"] + input[type="submit"], .wpcf7 .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-prepend .wpcf7 #edd-purchase-button + input[type="submit"], .wpcf7 .input-group-prepend #edd-purchase-button + input[type="submit"],
-  .input-group-prepend .wpcf7 .edd-submit + input[type="submit"],
-  .wpcf7 .input-group-prepend .edd-submit + input[type="submit"],
-  .input-group-prepend .wpcf7 [type="submit"].edd-submit + input[type="submit"],
-  .wpcf7 .input-group-prepend [type="submit"].edd-submit + input[type="submit"], .input-group-prepend .btn + #edd-purchase-button, .input-group-prepend form.post-password-form input[type="submit"] + #edd-purchase-button, form.post-password-form .input-group-prepend input[type="submit"] + #edd-purchase-button, .input-group-prepend .wp-block-button .wp-block-button__link + #edd-purchase-button, .wp-block-button .input-group-prepend .wp-block-button__link + #edd-purchase-button,
-  .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + #edd-purchase-button,
-  .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + #edd-purchase-button, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + #edd-purchase-button, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + #edd-purchase-button, .input-group-prepend .woocommerce ul.products li.product .button + #edd-purchase-button, .woocommerce ul.products li.product .input-group-prepend .button + #edd-purchase-button, .input-group-prepend .woocommerce ul.products li.product .added_to_cart + #edd-purchase-button, .woocommerce ul.products li.product .input-group-prepend .added_to_cart + #edd-purchase-button, .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + #edd-purchase-button, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + #edd-purchase-button, .input-group-prepend .wpcf7 input[type="submit"] + #edd-purchase-button, .wpcf7 .input-group-prepend input[type="submit"] + #edd-purchase-button, .input-group-prepend #edd-purchase-button + #edd-purchase-button,
-  .input-group-prepend .edd-submit + #edd-purchase-button,
-  .input-group-prepend [type="submit"].edd-submit + #edd-purchase-button,
-  .input-group-prepend .btn + .edd-submit,
-  .input-group-prepend form.post-password-form input[type="submit"] + .edd-submit,
-  form.post-password-form .input-group-prepend input[type="submit"] + .edd-submit,
-  .input-group-prepend .wp-block-button .wp-block-button__link + .edd-submit,
-  .wp-block-button .input-group-prepend .wp-block-button__link + .edd-submit,
-  .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .edd-submit,
-  .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + .edd-submit,
-  .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + .edd-submit,
-  .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + .edd-submit,
-  .input-group-prepend .woocommerce ul.products li.product .button + .edd-submit,
-  .woocommerce ul.products li.product .input-group-prepend .button + .edd-submit,
-  .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .edd-submit,
-  .woocommerce ul.products li.product .input-group-prepend .added_to_cart + .edd-submit,
-  .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .edd-submit,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + .edd-submit,
-  .input-group-prepend .wpcf7 input[type="submit"] + .edd-submit,
-  .wpcf7 .input-group-prepend input[type="submit"] + .edd-submit,
-  .input-group-prepend #edd-purchase-button + .edd-submit,
-  .input-group-prepend .edd-submit + .edd-submit,
-  .input-group-prepend [type="submit"].edd-submit + .edd-submit,
-  .input-group-prepend .btn + [type="submit"].edd-submit,
-  .input-group-prepend form.post-password-form input[type="submit"] + [type="submit"].edd-submit,
-  form.post-password-form .input-group-prepend input[type="submit"] + [type="submit"].edd-submit,
-  .input-group-prepend .wp-block-button .wp-block-button__link + [type="submit"].edd-submit,
-  .wp-block-button .input-group-prepend .wp-block-button__link + [type="submit"].edd-submit,
-  .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + [type="submit"].edd-submit,
-  .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + [type="submit"].edd-submit,
-  .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + [type="submit"].edd-submit,
-  .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + [type="submit"].edd-submit,
-  .input-group-prepend .woocommerce ul.products li.product .button + [type="submit"].edd-submit,
-  .woocommerce ul.products li.product .input-group-prepend .button + [type="submit"].edd-submit,
-  .input-group-prepend .woocommerce ul.products li.product .added_to_cart + [type="submit"].edd-submit,
-  .woocommerce ul.products li.product .input-group-prepend .added_to_cart + [type="submit"].edd-submit,
-  .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + [type="submit"].edd-submit,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + [type="submit"].edd-submit,
-  .input-group-prepend .wpcf7 input[type="submit"] + [type="submit"].edd-submit,
-  .wpcf7 .input-group-prepend input[type="submit"] + [type="submit"].edd-submit,
-  .input-group-prepend #edd-purchase-button + [type="submit"].edd-submit,
-  .input-group-prepend .edd-submit + [type="submit"].edd-submit,
-  .input-group-prepend [type="submit"].edd-submit + [type="submit"].edd-submit,
+  .input-group-prepend .btn + .btn,
   .input-group-prepend .btn + .input-group-text,
-  .input-group-prepend form.post-password-form input[type="submit"] + .input-group-text,
-  form.post-password-form .input-group-prepend input[type="submit"] + .input-group-text,
-  .input-group-prepend .wp-block-button .wp-block-button__link + .input-group-text,
-  .wp-block-button .input-group-prepend .wp-block-button__link + .input-group-text,
-  .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + .input-group-text,
-  .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + .input-group-text,
-  .input-group-prepend .woocommerce ul.products li.product .button + .input-group-text,
-  .woocommerce ul.products li.product .input-group-prepend .button + .input-group-text,
-  .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .input-group-text,
-  .woocommerce ul.products li.product .input-group-prepend .added_to_cart + .input-group-text,
-  .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .input-group-text,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + .input-group-text,
-  .input-group-prepend .wpcf7 input[type="submit"] + .input-group-text,
-  .wpcf7 .input-group-prepend input[type="submit"] + .input-group-text,
-  .input-group-prepend #edd-purchase-button + .input-group-text,
-  .input-group-prepend .edd-submit + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
-  .input-group-prepend form.post-password-form .input-group-text + input[type="submit"],
-  form.post-password-form .input-group-prepend .input-group-text + input[type="submit"],
-  .input-group-prepend .wp-block-button .input-group-text + .wp-block-button__link,
-  .wp-block-button .input-group-prepend .input-group-text + .wp-block-button__link,
-  .input-group-prepend .wc-block-grid__products .wc-block-grid__product .input-group-text + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-prepend .input-group-text + .added_to_cart,
-  .input-group-prepend .woocommerce ul.products li.product .input-group-text + .button,
-  .woocommerce ul.products li.product .input-group-prepend .input-group-text + .button,
-  .input-group-prepend .woocommerce ul.products li.product .input-group-text + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-prepend .input-group-text + .added_to_cart,
-  .input-group-prepend #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-text + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .input-group-text + a.button,
-  .input-group-prepend .wpcf7 .input-group-text + input[type="submit"],
-  .wpcf7 .input-group-prepend .input-group-text + input[type="submit"],
-  .input-group-prepend .input-group-text + #edd-purchase-button,
-  .input-group-prepend .input-group-text + .edd-submit,
   .input-group-append .btn + .btn,
-  .input-group-append form.post-password-form input[type="submit"] + .btn,
-  form.post-password-form .input-group-append input[type="submit"] + .btn,
-  .input-group-append .wp-block-button .wp-block-button__link + .btn,
-  .wp-block-button .input-group-append .wp-block-button__link + .btn,
-  .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + .btn,
-  .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + .btn,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + .btn,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + .btn,
-  .input-group-append .woocommerce ul.products li.product .button + .btn,
-  .woocommerce ul.products li.product .input-group-append .button + .btn,
-  .input-group-append .woocommerce ul.products li.product .added_to_cart + .btn,
-  .woocommerce ul.products li.product .input-group-append .added_to_cart + .btn,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .btn,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + .btn,
-  .input-group-append .wpcf7 input[type="submit"] + .btn,
-  .wpcf7 .input-group-append input[type="submit"] + .btn,
-  .input-group-append #edd-purchase-button + .btn,
-  .input-group-append .edd-submit + .btn,
-  .input-group-append [type="submit"].edd-submit + .btn,
-  .input-group-append form.post-password-form .btn + input[type="submit"],
-  form.post-password-form .input-group-append .btn + input[type="submit"],
-  .input-group-append form.post-password-form input[type="submit"] + input[type="submit"],
-  form.post-password-form .input-group-append input[type="submit"] + input[type="submit"],
-  .input-group-append .wp-block-button form.post-password-form .wp-block-button__link + input[type="submit"],
-  form.post-password-form .input-group-append .wp-block-button .wp-block-button__link + input[type="submit"],
-  .wp-block-button .input-group-append form.post-password-form .wp-block-button__link + input[type="submit"],
-  form.post-password-form .wp-block-button .input-group-append .wp-block-button__link + input[type="submit"],
-  .input-group-append .wp-block-buttons .wp-block-button form.post-password-form .wp-block-button__link + input[type="submit"],
-  form.post-password-form .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + input[type="submit"],
-  .wp-block-buttons .wp-block-button .input-group-append form.post-password-form .wp-block-button__link + input[type="submit"],
-  form.post-password-form .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + input[type="submit"],
-  .input-group-append .wc-block-grid__products .wc-block-grid__product form.post-password-form .added_to_cart + input[type="submit"],
-  form.post-password-form .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + input[type="submit"],
-  .wc-block-grid__products .wc-block-grid__product .input-group-append form.post-password-form .added_to_cart + input[type="submit"],
-  form.post-password-form .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + input[type="submit"],
-  .input-group-append .woocommerce ul.products li.product form.post-password-form .button + input[type="submit"],
-  form.post-password-form .input-group-append .woocommerce ul.products li.product .button + input[type="submit"],
-  .woocommerce ul.products li.product .input-group-append form.post-password-form .button + input[type="submit"],
-  form.post-password-form .woocommerce ul.products li.product .input-group-append .button + input[type="submit"],
-  .input-group-append .woocommerce ul.products li.product form.post-password-form .added_to_cart + input[type="submit"],
-  form.post-password-form .input-group-append .woocommerce ul.products li.product .added_to_cart + input[type="submit"],
-  .woocommerce ul.products li.product .input-group-append form.post-password-form .added_to_cart + input[type="submit"],
-  form.post-password-form .woocommerce ul.products li.product .input-group-append .added_to_cart + input[type="submit"],
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons form.post-password-form a.button + input[type="submit"],
-  form.post-password-form .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + input[type="submit"],
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append form.post-password-form a.button + input[type="submit"],
-  form.post-password-form #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + input[type="submit"],
-  .input-group-append .wpcf7 form.post-password-form input[type="submit"] + input[type="submit"],
-  form.post-password-form .input-group-append .wpcf7 input[type="submit"] + input[type="submit"],
-  .wpcf7 .input-group-append form.post-password-form input[type="submit"] + input[type="submit"],
-  form.post-password-form .wpcf7 .input-group-append input[type="submit"] + input[type="submit"],
-  .input-group-append form.post-password-form #edd-purchase-button + input[type="submit"],
-  form.post-password-form .input-group-append #edd-purchase-button + input[type="submit"],
-  .input-group-append form.post-password-form .edd-submit + input[type="submit"],
-  form.post-password-form .input-group-append .edd-submit + input[type="submit"],
-  .input-group-append form.post-password-form [type="submit"].edd-submit + input[type="submit"],
-  form.post-password-form .input-group-append [type="submit"].edd-submit + input[type="submit"],
-  .input-group-append .wp-block-button .btn + .wp-block-button__link,
-  .wp-block-button .input-group-append .btn + .wp-block-button__link,
-  .input-group-append form.post-password-form .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-button .input-group-append form.post-password-form input[type="submit"] + .wp-block-button__link,
-  form.post-password-form .input-group-append .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-button form.post-password-form .input-group-append input[type="submit"] + .wp-block-button__link,
-  .input-group-append .wp-block-button .wp-block-button__link + .wp-block-button__link,
-  .wp-block-button .input-group-append .wp-block-button__link + .wp-block-button__link,
-  .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + .wp-block-button__link,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-button .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + .wp-block-button__link,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-button .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + .wp-block-button__link,
-  .input-group-append .woocommerce ul.products li.product .wp-block-button .button + .wp-block-button__link,
-  .wp-block-button .input-group-append .woocommerce ul.products li.product .button + .wp-block-button__link,
-  .woocommerce ul.products li.product .input-group-append .wp-block-button .button + .wp-block-button__link,
-  .wp-block-button .woocommerce ul.products li.product .input-group-append .button + .wp-block-button__link,
-  .input-group-append .woocommerce ul.products li.product .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-button .input-group-append .woocommerce ul.products li.product .added_to_cart + .wp-block-button__link,
-  .woocommerce ul.products li.product .input-group-append .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-button .woocommerce ul.products li.product .input-group-append .added_to_cart + .wp-block-button__link,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button a.button + .wp-block-button__link,
-  .wp-block-button .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .wp-block-button__link,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .wp-block-button a.button + .wp-block-button__link,
-  .wp-block-button #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + .wp-block-button__link,
-  .input-group-append .wpcf7 .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-button .input-group-append .wpcf7 input[type="submit"] + .wp-block-button__link,
-  .wpcf7 .input-group-append .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-button .wpcf7 .input-group-append input[type="submit"] + .wp-block-button__link,
-  .input-group-append .wp-block-button #edd-purchase-button + .wp-block-button__link,
-  .wp-block-button .input-group-append #edd-purchase-button + .wp-block-button__link,
-  .input-group-append .wp-block-button .edd-submit + .wp-block-button__link,
-  .wp-block-button .input-group-append .edd-submit + .wp-block-button__link,
-  .input-group-append .wp-block-button [type="submit"].edd-submit + .wp-block-button__link,
-  .wp-block-button .input-group-append [type="submit"].edd-submit + .wp-block-button__link,
-  .input-group-append .wp-block-buttons .wp-block-button .btn + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append .btn + .wp-block-button__link,
-  .input-group-append form.post-password-form .wp-block-buttons .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append form.post-password-form input[type="submit"] + .wp-block-button__link,
-  form.post-password-form .input-group-append .wp-block-buttons .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button form.post-password-form .input-group-append input[type="submit"] + .wp-block-button__link,
-  .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + .wp-block-button__link,
-  .wp-block-buttons .input-group-append .wp-block-button .wp-block-button__link + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + .wp-block-button__link,
-  .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + .wp-block-button__link,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .wp-block-buttons .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + .wp-block-button__link,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .wp-block-buttons .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + .wp-block-button__link,
-  .input-group-append .woocommerce ul.products li.product .wp-block-buttons .wp-block-button .button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append .woocommerce ul.products li.product .button + .wp-block-button__link,
-  .woocommerce ul.products li.product .input-group-append .wp-block-buttons .wp-block-button .button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .woocommerce ul.products li.product .input-group-append .button + .wp-block-button__link,
-  .input-group-append .woocommerce ul.products li.product .wp-block-buttons .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append .woocommerce ul.products li.product .added_to_cart + .wp-block-button__link,
-  .woocommerce ul.products li.product .input-group-append .wp-block-buttons .wp-block-button .added_to_cart + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .woocommerce ul.products li.product .input-group-append .added_to_cart + .wp-block-button__link,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-buttons .wp-block-button a.button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .wp-block-button__link,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .wp-block-buttons .wp-block-button a.button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + .wp-block-button__link,
-  .input-group-append .wpcf7 .wp-block-buttons .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append .wpcf7 input[type="submit"] + .wp-block-button__link,
-  .wpcf7 .input-group-append .wp-block-buttons .wp-block-button input[type="submit"] + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .wpcf7 .input-group-append input[type="submit"] + .wp-block-button__link,
-  .input-group-append .wp-block-buttons .wp-block-button #edd-purchase-button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append #edd-purchase-button + .wp-block-button__link,
-  .input-group-append .wp-block-buttons .wp-block-button .edd-submit + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append .edd-submit + .wp-block-button__link,
-  .input-group-append .wp-block-buttons .wp-block-button [type="submit"].edd-submit + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .input-group-append [type="submit"].edd-submit + .wp-block-button__link,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .btn + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .btn + .added_to_cart,
-  .input-group-append form.post-password-form .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append form.post-password-form input[type="submit"] + .added_to_cart,
-  form.post-password-form .input-group-append .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product form.post-password-form .input-group-append input[type="submit"] + .added_to_cart,
-  .input-group-append .wp-block-button .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .wp-block-button .wp-block-button__link + .added_to_cart,
-  .wp-block-button .input-group-append .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .wp-block-button .input-group-append .wp-block-button__link + .added_to_cart,
-  .input-group-append .wp-block-buttons .wp-block-button .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + .added_to_cart,
-  .wp-block-buttons .wp-block-button .input-group-append .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + .added_to_cart,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + .added_to_cart,
-  .input-group-append .woocommerce ul.products li.product .wc-block-grid__products .wc-block-grid__product .button + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .woocommerce ul.products li.product .button + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .wc-block-grid__products .wc-block-grid__product .button + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .woocommerce ul.products li.product .input-group-append .button + .added_to_cart,
-  .input-group-append .woocommerce ul.products li.product .wc-block-grid__products .wc-block-grid__product .added_to_cart + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .woocommerce ul.products li.product .added_to_cart + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .woocommerce ul.products li.product .input-group-append .added_to_cart + .added_to_cart,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wc-block-grid__products .wc-block-grid__product a.button + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .added_to_cart,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .wc-block-grid__products .wc-block-grid__product a.button + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + .added_to_cart,
-  .input-group-append .wpcf7 .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .wpcf7 input[type="submit"] + .added_to_cart,
-  .wpcf7 .input-group-append .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .wpcf7 .input-group-append input[type="submit"] + .added_to_cart,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product #edd-purchase-button + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append #edd-purchase-button + .added_to_cart,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .edd-submit + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .edd-submit + .added_to_cart,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product [type="submit"].edd-submit + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append [type="submit"].edd-submit + .added_to_cart,
-  .input-group-append .woocommerce ul.products li.product .btn + .button,
-  .woocommerce ul.products li.product .input-group-append .btn + .button,
-  .input-group-append form.post-password-form .woocommerce ul.products li.product input[type="submit"] + .button,
-  .woocommerce ul.products li.product .input-group-append form.post-password-form input[type="submit"] + .button,
-  form.post-password-form .input-group-append .woocommerce ul.products li.product input[type="submit"] + .button,
-  .woocommerce ul.products li.product form.post-password-form .input-group-append input[type="submit"] + .button,
-  .input-group-append .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .button,
-  .woocommerce ul.products li.product .input-group-append .wp-block-button .wp-block-button__link + .button,
-  .wp-block-button .input-group-append .woocommerce ul.products li.product .wp-block-button__link + .button,
-  .woocommerce ul.products li.product .wp-block-button .input-group-append .wp-block-button__link + .button,
-  .input-group-append .wp-block-buttons .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .button,
-  .woocommerce ul.products li.product .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + .button,
-  .wp-block-buttons .wp-block-button .input-group-append .woocommerce ul.products li.product .wp-block-button__link + .button,
-  .woocommerce ul.products li.product .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + .button,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .woocommerce ul.products li.product .added_to_cart + .button,
-  .woocommerce ul.products li.product .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + .button,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .woocommerce ul.products li.product .added_to_cart + .button,
-  .woocommerce ul.products li.product .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + .button,
-  .input-group-append .woocommerce ul.products li.product .button + .button,
-  .woocommerce ul.products li.product .input-group-append .button + .button,
-  .input-group-append .woocommerce ul.products li.product .added_to_cart + .button,
-  .woocommerce ul.products li.product .input-group-append .added_to_cart + .button,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product a.button + .button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append ul.products li.product a.button + .button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .input-group-append a.button + .button,
-  .input-group-append .wpcf7 .woocommerce ul.products li.product input[type="submit"] + .button,
-  .woocommerce ul.products li.product .input-group-append .wpcf7 input[type="submit"] + .button,
-  .wpcf7 .input-group-append .woocommerce ul.products li.product input[type="submit"] + .button,
-  .woocommerce ul.products li.product .wpcf7 .input-group-append input[type="submit"] + .button,
-  .input-group-append .woocommerce ul.products li.product #edd-purchase-button + .button,
-  .woocommerce ul.products li.product .input-group-append #edd-purchase-button + .button,
-  .input-group-append .woocommerce ul.products li.product .edd-submit + .button,
-  .woocommerce ul.products li.product .input-group-append .edd-submit + .button,
-  .input-group-append .woocommerce ul.products li.product [type="submit"].edd-submit + .button,
-  .woocommerce ul.products li.product .input-group-append [type="submit"].edd-submit + .button,
-  .input-group-append .woocommerce ul.products li.product .btn + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .btn + .added_to_cart,
-  .input-group-append form.post-password-form .woocommerce ul.products li.product input[type="submit"] + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append form.post-password-form input[type="submit"] + .added_to_cart,
-  form.post-password-form .input-group-append .woocommerce ul.products li.product input[type="submit"] + .added_to_cart,
-  .woocommerce ul.products li.product form.post-password-form .input-group-append input[type="submit"] + .added_to_cart,
-  .input-group-append .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .wp-block-button .wp-block-button__link + .added_to_cart,
-  .wp-block-button .input-group-append .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart,
-  .woocommerce ul.products li.product .wp-block-button .input-group-append .wp-block-button__link + .added_to_cart,
-  .input-group-append .wp-block-buttons .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + .added_to_cart,
-  .wp-block-buttons .wp-block-button .input-group-append .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart,
-  .woocommerce ul.products li.product .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + .added_to_cart,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .woocommerce ul.products li.product .added_to_cart + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .woocommerce ul.products li.product .added_to_cart + .added_to_cart,
-  .woocommerce ul.products li.product .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + .added_to_cart,
-  .input-group-append .woocommerce ul.products li.product .button + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .button + .added_to_cart,
-  .input-group-append .woocommerce ul.products li.product .added_to_cart + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .added_to_cart + .added_to_cart,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product a.button + .added_to_cart,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append ul.products li.product a.button + .added_to_cart,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .input-group-append a.button + .added_to_cart,
-  .input-group-append .wpcf7 .woocommerce ul.products li.product input[type="submit"] + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .wpcf7 input[type="submit"] + .added_to_cart,
-  .wpcf7 .input-group-append .woocommerce ul.products li.product input[type="submit"] + .added_to_cart,
-  .woocommerce ul.products li.product .wpcf7 .input-group-append input[type="submit"] + .added_to_cart,
-  .input-group-append .woocommerce ul.products li.product #edd-purchase-button + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append #edd-purchase-button + .added_to_cart,
-  .input-group-append .woocommerce ul.products li.product .edd-submit + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .edd-submit + .added_to_cart,
-  .input-group-append .woocommerce ul.products li.product [type="submit"].edd-submit + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append [type="submit"].edd-submit + .added_to_cart,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .btn + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .btn + a.button,
-  .input-group-append form.post-password-form #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons input[type="submit"] + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append form.post-password-form input[type="submit"] + a.button,
-  form.post-password-form .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons input[type="submit"] + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons form.post-password-form .input-group-append input[type="submit"] + a.button,
-  .input-group-append .wp-block-button #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button__link + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .wp-block-button .wp-block-button__link + a.button,
-  .wp-block-button .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button__link + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button .input-group-append .wp-block-button__link + a.button,
-  .input-group-append .wp-block-buttons .wp-block-button #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button__link + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + a.button,
-  .wp-block-buttons .wp-block-button .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-button__link + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + a.button,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .added_to_cart + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + a.button,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .added_to_cart + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + a.button,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .button + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .input-group-append .button + a.button,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .added_to_cart + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons ul.products li.product .input-group-append .added_to_cart + a.button,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + a.button,
-  .input-group-append .wpcf7 #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons input[type="submit"] + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .wpcf7 input[type="submit"] + a.button,
-  .wpcf7 .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons input[type="submit"] + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wpcf7 .input-group-append input[type="submit"] + a.button,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons #edd-purchase-button + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append #edd-purchase-button + a.button,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .edd-submit + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .edd-submit + a.button,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons [type="submit"].edd-submit + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append [type="submit"].edd-submit + a.button,
-  .input-group-append .wpcf7 .btn + input[type="submit"],
-  .wpcf7 .input-group-append .btn + input[type="submit"],
-  .input-group-append form.post-password-form .wpcf7 input[type="submit"] + input[type="submit"],
-  .wpcf7 .input-group-append form.post-password-form input[type="submit"] + input[type="submit"],
-  form.post-password-form .input-group-append .wpcf7 input[type="submit"] + input[type="submit"],
-  .wpcf7 form.post-password-form .input-group-append input[type="submit"] + input[type="submit"],
-  .input-group-append .wp-block-button .wpcf7 .wp-block-button__link + input[type="submit"],
-  .wpcf7 .input-group-append .wp-block-button .wp-block-button__link + input[type="submit"],
-  .wp-block-button .input-group-append .wpcf7 .wp-block-button__link + input[type="submit"],
-  .wpcf7 .wp-block-button .input-group-append .wp-block-button__link + input[type="submit"],
-  .input-group-append .wp-block-buttons .wp-block-button .wpcf7 .wp-block-button__link + input[type="submit"],
-  .wpcf7 .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + input[type="submit"],
-  .wp-block-buttons .wp-block-button .input-group-append .wpcf7 .wp-block-button__link + input[type="submit"],
-  .wpcf7 .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + input[type="submit"],
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .wpcf7 .added_to_cart + input[type="submit"],
-  .wpcf7 .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + input[type="submit"],
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .wpcf7 .added_to_cart + input[type="submit"],
-  .wpcf7 .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + input[type="submit"],
-  .input-group-append .woocommerce ul.products li.product .wpcf7 .button + input[type="submit"],
-  .wpcf7 .input-group-append .woocommerce ul.products li.product .button + input[type="submit"],
-  .woocommerce ul.products li.product .input-group-append .wpcf7 .button + input[type="submit"],
-  .wpcf7 .woocommerce ul.products li.product .input-group-append .button + input[type="submit"],
-  .input-group-append .woocommerce ul.products li.product .wpcf7 .added_to_cart + input[type="submit"],
-  .wpcf7 .input-group-append .woocommerce ul.products li.product .added_to_cart + input[type="submit"],
-  .woocommerce ul.products li.product .input-group-append .wpcf7 .added_to_cart + input[type="submit"],
-  .wpcf7 .woocommerce ul.products li.product .input-group-append .added_to_cart + input[type="submit"],
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .wpcf7 a.button + input[type="submit"],
-  .wpcf7 .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + input[type="submit"],
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .wpcf7 a.button + input[type="submit"],
-  .wpcf7 #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + input[type="submit"],
-  .input-group-append .wpcf7 input[type="submit"] + input[type="submit"],
-  .wpcf7 .input-group-append input[type="submit"] + input[type="submit"],
-  .input-group-append .wpcf7 #edd-purchase-button + input[type="submit"],
-  .wpcf7 .input-group-append #edd-purchase-button + input[type="submit"],
-  .input-group-append .wpcf7 .edd-submit + input[type="submit"],
-  .wpcf7 .input-group-append .edd-submit + input[type="submit"],
-  .input-group-append .wpcf7 [type="submit"].edd-submit + input[type="submit"],
-  .wpcf7 .input-group-append [type="submit"].edd-submit + input[type="submit"],
-  .input-group-append .btn + #edd-purchase-button,
-  .input-group-append form.post-password-form input[type="submit"] + #edd-purchase-button,
-  form.post-password-form .input-group-append input[type="submit"] + #edd-purchase-button,
-  .input-group-append .wp-block-button .wp-block-button__link + #edd-purchase-button,
-  .wp-block-button .input-group-append .wp-block-button__link + #edd-purchase-button,
-  .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + #edd-purchase-button,
-  .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + #edd-purchase-button,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + #edd-purchase-button,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + #edd-purchase-button,
-  .input-group-append .woocommerce ul.products li.product .button + #edd-purchase-button,
-  .woocommerce ul.products li.product .input-group-append .button + #edd-purchase-button,
-  .input-group-append .woocommerce ul.products li.product .added_to_cart + #edd-purchase-button,
-  .woocommerce ul.products li.product .input-group-append .added_to_cart + #edd-purchase-button,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + #edd-purchase-button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + #edd-purchase-button,
-  .input-group-append .wpcf7 input[type="submit"] + #edd-purchase-button,
-  .wpcf7 .input-group-append input[type="submit"] + #edd-purchase-button,
-  .input-group-append #edd-purchase-button + #edd-purchase-button,
-  .input-group-append .edd-submit + #edd-purchase-button,
-  .input-group-append [type="submit"].edd-submit + #edd-purchase-button,
-  .input-group-append .btn + .edd-submit,
-  .input-group-append form.post-password-form input[type="submit"] + .edd-submit,
-  form.post-password-form .input-group-append input[type="submit"] + .edd-submit,
-  .input-group-append .wp-block-button .wp-block-button__link + .edd-submit,
-  .wp-block-button .input-group-append .wp-block-button__link + .edd-submit,
-  .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + .edd-submit,
-  .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + .edd-submit,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + .edd-submit,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + .edd-submit,
-  .input-group-append .woocommerce ul.products li.product .button + .edd-submit,
-  .woocommerce ul.products li.product .input-group-append .button + .edd-submit,
-  .input-group-append .woocommerce ul.products li.product .added_to_cart + .edd-submit,
-  .woocommerce ul.products li.product .input-group-append .added_to_cart + .edd-submit,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .edd-submit,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + .edd-submit,
-  .input-group-append .wpcf7 input[type="submit"] + .edd-submit,
-  .wpcf7 .input-group-append input[type="submit"] + .edd-submit,
-  .input-group-append #edd-purchase-button + .edd-submit,
-  .input-group-append .edd-submit + .edd-submit,
-  .input-group-append [type="submit"].edd-submit + .edd-submit,
-  .input-group-append .btn + [type="submit"].edd-submit,
-  .input-group-append form.post-password-form input[type="submit"] + [type="submit"].edd-submit,
-  form.post-password-form .input-group-append input[type="submit"] + [type="submit"].edd-submit,
-  .input-group-append .wp-block-button .wp-block-button__link + [type="submit"].edd-submit,
-  .wp-block-button .input-group-append .wp-block-button__link + [type="submit"].edd-submit,
-  .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + [type="submit"].edd-submit,
-  .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + [type="submit"].edd-submit,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + [type="submit"].edd-submit,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + [type="submit"].edd-submit,
-  .input-group-append .woocommerce ul.products li.product .button + [type="submit"].edd-submit,
-  .woocommerce ul.products li.product .input-group-append .button + [type="submit"].edd-submit,
-  .input-group-append .woocommerce ul.products li.product .added_to_cart + [type="submit"].edd-submit,
-  .woocommerce ul.products li.product .input-group-append .added_to_cart + [type="submit"].edd-submit,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + [type="submit"].edd-submit,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + [type="submit"].edd-submit,
-  .input-group-append .wpcf7 input[type="submit"] + [type="submit"].edd-submit,
-  .wpcf7 .input-group-append input[type="submit"] + [type="submit"].edd-submit,
-  .input-group-append #edd-purchase-button + [type="submit"].edd-submit,
-  .input-group-append .edd-submit + [type="submit"].edd-submit,
-  .input-group-append [type="submit"].edd-submit + [type="submit"].edd-submit,
   .input-group-append .btn + .input-group-text,
-  .input-group-append form.post-password-form input[type="submit"] + .input-group-text,
-  form.post-password-form .input-group-append input[type="submit"] + .input-group-text,
-  .input-group-append .wp-block-button .wp-block-button__link + .input-group-text,
-  .wp-block-button .input-group-append .wp-block-button__link + .input-group-text,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + .input-group-text,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + .input-group-text,
-  .input-group-append .woocommerce ul.products li.product .button + .input-group-text,
-  .woocommerce ul.products li.product .input-group-append .button + .input-group-text,
-  .input-group-append .woocommerce ul.products li.product .added_to_cart + .input-group-text,
-  .woocommerce ul.products li.product .input-group-append .added_to_cart + .input-group-text,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button + .input-group-text,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + .input-group-text,
-  .input-group-append .wpcf7 input[type="submit"] + .input-group-text,
-  .wpcf7 .input-group-append input[type="submit"] + .input-group-text,
-  .input-group-append #edd-purchase-button + .input-group-text,
-  .input-group-append .edd-submit + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
-  .input-group-append .input-group-text + .btn,
-  .input-group-append form.post-password-form .input-group-text + input[type="submit"],
-  form.post-password-form .input-group-append .input-group-text + input[type="submit"],
-  .input-group-append .wp-block-button .input-group-text + .wp-block-button__link,
-  .wp-block-button .input-group-append .input-group-text + .wp-block-button__link,
-  .input-group-append .wc-block-grid__products .wc-block-grid__product .input-group-text + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .input-group-append .input-group-text + .added_to_cart,
-  .input-group-append .woocommerce ul.products li.product .input-group-text + .button,
-  .woocommerce ul.products li.product .input-group-append .input-group-text + .button,
-  .input-group-append .woocommerce ul.products li.product .input-group-text + .added_to_cart,
-  .woocommerce ul.products li.product .input-group-append .input-group-text + .added_to_cart,
-  .input-group-append #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-text + a.button,
-  #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .input-group-append .input-group-text + a.button,
-  .input-group-append .wpcf7 .input-group-text + input[type="submit"],
-  .wpcf7 .input-group-append .input-group-text + input[type="submit"],
-  .input-group-append .input-group-text + #edd-purchase-button,
-  .input-group-append .input-group-text + .edd-submit {
+  .input-group-append .input-group-text + .btn {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -4734,29 +3521,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-form.post-password-form .input-group-lg > .input-group-prepend > input[type="submit"],
-.wp-block-button .input-group-lg > .input-group-prepend > .wp-block-button__link,
-.wc-block-grid__products .wc-block-grid__product .input-group-lg > .input-group-prepend > .added_to_cart,
-.woocommerce ul.products li.product .input-group-lg > .input-group-prepend > .button,
-.woocommerce ul.products li.product .input-group-lg > .input-group-prepend > .added_to_cart,
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .input-group-lg > .input-group-prepend > a.button,
-.wpcf7 .input-group-lg > .input-group-prepend > input[type="submit"],
-.input-group-lg > .input-group-prepend > #edd-purchase-button,
-.input-group-lg > .input-group-prepend > .edd-submit,
-.input-group-lg > .input-group-append > .btn,
-form.post-password-form .input-group-lg > .input-group-append > input[type="submit"],
-.wp-block-button .input-group-lg > .input-group-append > .wp-block-button__link,
-.wc-block-grid__products .wc-block-grid__product .input-group-lg > .input-group-append > .added_to_cart,
-.woocommerce ul.products li.product .input-group-lg > .input-group-append > .button,
-.woocommerce ul.products li.product .input-group-lg > .input-group-append > .added_to_cart,
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .input-group-lg > .input-group-append > a.button,
-.wpcf7 .input-group-lg > .input-group-append > input[type="submit"],
-.input-group-lg > .input-group-append > #edd-purchase-button,
-.input-group-lg > .input-group-append > .edd-submit {
+.input-group-lg > .input-group-append > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -4803,29 +3568,7 @@ form.post-password-form .input-group-lg > .input-group-append > input[type="subm
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-form.post-password-form .input-group-sm > .input-group-prepend > input[type="submit"],
-.wp-block-button .input-group-sm > .input-group-prepend > .wp-block-button__link,
-.wc-block-grid__products .wc-block-grid__product .input-group-sm > .input-group-prepend > .added_to_cart,
-.woocommerce ul.products li.product .input-group-sm > .input-group-prepend > .button,
-.woocommerce ul.products li.product .input-group-sm > .input-group-prepend > .added_to_cart,
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .input-group-sm > .input-group-prepend > a.button,
-.wpcf7 .input-group-sm > .input-group-prepend > input[type="submit"],
-.input-group-sm > .input-group-prepend > #edd-purchase-button,
-.input-group-sm > .input-group-prepend > .edd-submit,
-.input-group-sm > .input-group-append > .btn,
-form.post-password-form .input-group-sm > .input-group-append > input[type="submit"],
-.wp-block-button .input-group-sm > .input-group-append > .wp-block-button__link,
-.wc-block-grid__products .wc-block-grid__product .input-group-sm > .input-group-append > .added_to_cart,
-.woocommerce ul.products li.product .input-group-sm > .input-group-append > .button,
-.woocommerce ul.products li.product .input-group-sm > .input-group-append > .added_to_cart,
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .input-group-sm > .input-group-append > a.button,
-.wpcf7 .input-group-sm > .input-group-append > input[type="submit"],
-.input-group-sm > .input-group-append > #edd-purchase-button,
-.input-group-sm > .input-group-append > .edd-submit {
+.input-group-sm > .input-group-append > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -4835,70 +3578,20 @@ form.post-password-form .input-group-sm > .input-group-append > input[type="subm
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn, form.post-password-form .input-group > .input-group-prepend > input[type="submit"], .wp-block-button .input-group > .input-group-prepend > .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .input-group > .input-group-prepend > .added_to_cart, .woocommerce ul.products li.product .input-group > .input-group-prepend > .button, .woocommerce ul.products li.product .input-group > .input-group-prepend > .added_to_cart, #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .input-group > .input-group-prepend > a.button, .wpcf7 .input-group > .input-group-prepend > input[type="submit"], .input-group > .input-group-prepend > #edd-purchase-button,
-.input-group > .input-group-prepend > .edd-submit,
+.input-group > .input-group-prepend > .btn,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
-form.post-password-form .input-group > .input-group-append:not(:last-child) > input[type="submit"],
-.wp-block-button .input-group > .input-group-append:not(:last-child) > .wp-block-button__link,
-.wc-block-grid__products .wc-block-grid__product .input-group > .input-group-append:not(:last-child) > .added_to_cart,
-.woocommerce ul.products li.product .input-group > .input-group-append:not(:last-child) > .button,
-.woocommerce ul.products li.product .input-group > .input-group-append:not(:last-child) > .added_to_cart,
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .input-group > .input-group-append:not(:last-child) > a.button,
-.wpcf7 .input-group > .input-group-append:not(:last-child) > input[type="submit"],
-.input-group > .input-group-append:not(:last-child) > #edd-purchase-button,
-.input-group > .input-group-append:not(:last-child) > .edd-submit,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-form.post-password-form .input-group > .input-group-append:last-child > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
-.wp-block-button .input-group > .input-group-append:last-child > .wp-block-button__link:not(:last-child):not(.dropdown-toggle),
-.wc-block-grid__products .wc-block-grid__product .input-group > .input-group-append:last-child > .added_to_cart:not(:last-child):not(.dropdown-toggle),
-.woocommerce ul.products li.product .input-group > .input-group-append:last-child > .button:not(:last-child):not(.dropdown-toggle),
-.woocommerce ul.products li.product .input-group > .input-group-append:last-child > .added_to_cart:not(:last-child):not(.dropdown-toggle),
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .input-group > .input-group-append:last-child > a.button:not(:last-child):not(.dropdown-toggle),
-.wpcf7 .input-group > .input-group-append:last-child > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > #edd-purchase-button:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > .edd-submit:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, form.post-password-form .input-group > .input-group-append > input[type="submit"], .wp-block-button .input-group > .input-group-append > .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .input-group > .input-group-append > .added_to_cart, .woocommerce ul.products li.product .input-group > .input-group-append > .button, .woocommerce ul.products li.product .input-group > .input-group-append > .added_to_cart, #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .input-group > .input-group-append > a.button, .wpcf7 .input-group > .input-group-append > input[type="submit"], .input-group > .input-group-append > #edd-purchase-button,
-.input-group > .input-group-append > .edd-submit,
+.input-group > .input-group-append > .btn,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
-form.post-password-form .input-group > .input-group-prepend:not(:first-child) > input[type="submit"],
-.wp-block-button .input-group > .input-group-prepend:not(:first-child) > .wp-block-button__link,
-.wc-block-grid__products .wc-block-grid__product .input-group > .input-group-prepend:not(:first-child) > .added_to_cart,
-.woocommerce ul.products li.product .input-group > .input-group-prepend:not(:first-child) > .button,
-.woocommerce ul.products li.product .input-group > .input-group-prepend:not(:first-child) > .added_to_cart,
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .input-group > .input-group-prepend:not(:first-child) > a.button,
-.wpcf7 .input-group > .input-group-prepend:not(:first-child) > input[type="submit"],
-.input-group > .input-group-prepend:not(:first-child) > #edd-purchase-button,
-.input-group > .input-group-prepend:not(:first-child) > .edd-submit,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-form.post-password-form .input-group > .input-group-prepend:first-child > input[type="submit"]:not(:first-child),
-.wp-block-button .input-group > .input-group-prepend:first-child > .wp-block-button__link:not(:first-child),
-.wc-block-grid__products .wc-block-grid__product .input-group > .input-group-prepend:first-child > .added_to_cart:not(:first-child),
-.woocommerce ul.products li.product .input-group > .input-group-prepend:first-child > .button:not(:first-child),
-.woocommerce ul.products li.product .input-group > .input-group-prepend:first-child > .added_to_cart:not(:first-child),
-#footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons .input-group > .input-group-prepend:first-child > a.button:not(:first-child),
-.wpcf7 .input-group > .input-group-prepend:first-child > input[type="submit"]:not(:first-child),
-.input-group > .input-group-prepend:first-child > #edd-purchase-button:not(:first-child),
-.input-group > .input-group-prepend:first-child > .edd-submit:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -5892,11 +4585,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
   .badge:empty {
     display: none; }
 
-.btn .badge, form.post-password-form input[type="submit"] .badge, .wp-block-button .wp-block-button__link .badge, .wc-block-grid__products .wc-block-grid__product .added_to_cart .badge, .woocommerce ul.products li.product .button .badge, .woocommerce ul.products li.product .added_to_cart .badge, #footer-full-content
-.woocommerce.widget_shopping_cart
-.woocommerce-mini-cart__buttons.buttons
-a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge,
-.edd-submit .badge {
+.btn .badge {
   position: relative;
   top: -1px; }
 
@@ -5999,7 +4688,7 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   padding-left: 0;
   border-radius: 0; }
 
-.alert, .wpcf7 div.wpcf7-response-output {
+.alert {
   position: relative;
   padding: 0.75rem 1.25rem;
   margin-bottom: 1.5rem;
@@ -6021,13 +4710,13 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
     padding: 0.75rem 1.25rem;
     color: inherit; }
 
-.alert-primary, .wpcf7 div.wpcf7-response-output {
+.alert-primary {
   color: #004085;
   background-color: #cce5ff;
   border-color: #b8daff; }
-  .alert-primary hr, .wpcf7 div.wpcf7-response-output hr {
+  .alert-primary hr {
     border-top-color: #9fcdff; }
-  .alert-primary .alert-link, .wpcf7 div.wpcf7-response-output .alert-link {
+  .alert-primary .alert-link {
     color: #002752; }
 
 .alert-secondary {
@@ -6039,13 +4728,13 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .alert-secondary .alert-link {
     color: #202326; }
 
-.alert-success, .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok {
+.alert-success {
   color: #014f3d;
   background-color: #cceae3;
   border-color: #b8e2d8; }
-  .alert-success hr, .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok hr {
+  .alert-success hr {
     border-top-color: #a6dbce; }
-  .alert-success .alert-link, .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok .alert-link {
+  .alert-success .alert-link {
     color: #001d16; }
 
 .alert-info {
@@ -6066,13 +4755,13 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .alert-warning .alert-link {
     color: #533f03; }
 
-.alert-danger, .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors {
+.alert-danger {
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb; }
-  .alert-danger hr, .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors hr {
+  .alert-danger hr {
     border-top-color: #f1b0b7; }
-  .alert-danger .alert-link, .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors .alert-link {
+  .alert-danger .alert-link {
     color: #491217; }
 
 .alert-light {
@@ -9970,7 +8659,7 @@ a.text-dark:hover, a.text-dark:focus {
     text-shadow: none !important;
     box-shadow: none !important; }
 
-  a:not(.btn):not(#edd-purchase-button) {
+  a:not(.btn) {
     text-decoration: underline; }
 
   abbr[title]::after {
@@ -10195,6 +8884,55 @@ img,
     /* Only visible in Windows High Contrast mode */
     outline: 2px solid transparent;
     outline-offset: -2px; }
+
+form.post-password-form input[type="submit"] {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff; }
+  @media (prefers-reduced-motion: reduce) {
+    form.post-password-form input[type="submit"] {
+      transition: none; } }
+  form.post-password-form input[type="submit"]:hover {
+    color: #212529;
+    text-decoration: none; }
+  .btn-check:focus + form.post-password-form input[type="submit"], form.post-password-form input[type="submit"]:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+  form.post-password-form input[type="submit"]:disabled, form.post-password-form input[type="submit"].disabled, fieldset:disabled form.post-password-form input[type="submit"] {
+    pointer-events: none;
+    opacity: 0.65; }
+  form.post-password-form input[type="submit"]:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc; }
+  form.post-password-form input[type="submit"]:focus, form.post-password-form input[type="submit"].focus {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
+  form.post-password-form input[type="submit"].disabled, form.post-password-form input[type="submit"]:disabled {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff; }
+  form.post-password-form input[type="submit"]:not(:disabled):not(.disabled):active, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active, .show > form.post-password-form input[type="submit"].dropdown-toggle {
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf; }
+    form.post-password-form input[type="submit"]:not(:disabled):not(.disabled):active:focus, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active:focus, .show > form.post-password-form input[type="submit"].dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
 
 #wrapper-navbar .navbar .navbar-brand img {
   height: 100%;
@@ -10855,9 +9593,41 @@ figcaption.blocks-gallery-caption {
   .wp-block-buttons .wp-block-button.alignleft,
   .wp-block-buttons .wp-block-button.alignright {
     margin-bottom: 0; }
-  .wp-block-button .wp-block-button__link:hover,
-  .wp-block-buttons .wp-block-button .wp-block-button__link:hover {
-    text-decoration: none; }
+  .wp-block-button .wp-block-button__link, .wp-block-buttons .wp-block-button .wp-block-button__link {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+    .wp-block-button .wp-block-button__link:hover,
+    .wp-block-buttons .wp-block-button .wp-block-button__link:hover {
+      text-decoration: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .wp-block-button .wp-block-button__link, .wp-block-buttons .wp-block-button .wp-block-button__link {
+        transition: none; } }
+    .wp-block-button .wp-block-button__link:hover,
+    .wp-block-buttons .wp-block-button .wp-block-button__link:hover {
+      color: #212529;
+      text-decoration: none; }
+    .btn-check:focus + .wp-block-button .wp-block-button__link, .wp-block-button .wp-block-button__link:focus, .btn-check:focus +
+    .wp-block-buttons .wp-block-button .wp-block-button__link,
+    .wp-block-buttons .wp-block-button .wp-block-button__link:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+    .wp-block-button .wp-block-button__link:disabled, .wp-block-button .wp-block-button__link.disabled, fieldset:disabled .wp-block-button .wp-block-button__link,
+    .wp-block-buttons .wp-block-button .wp-block-button__link:disabled,
+    .wp-block-buttons .wp-block-button .wp-block-button__link.disabled,
+    fieldset:disabled .wp-block-buttons .wp-block-button .wp-block-button__link {
+      pointer-events: none;
+      opacity: 0.65; }
   .wp-block-button .wp-block-button__link:not(.has-background),
   .wp-block-buttons .wp-block-button .wp-block-button__link:not(.has-background) {
     color: #fff;
@@ -11165,7 +9935,32 @@ figcaption.blocks-gallery-caption {
       box-shadow: none; }
   .wc-block-grid__products .wc-block-grid__product .added_to_cart {
     font-weight: normal;
-    vertical-align: middle; }
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .wc-block-grid__products .wc-block-grid__product .added_to_cart {
+        transition: none; } }
+    .wc-block-grid__products .wc-block-grid__product .added_to_cart:hover {
+      color: #212529;
+      text-decoration: none; }
+    .btn-check:focus + .wc-block-grid__products .wc-block-grid__product .added_to_cart, .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+    .wc-block-grid__products .wc-block-grid__product .added_to_cart:disabled, .wc-block-grid__products .wc-block-grid__product .added_to_cart.disabled, fieldset:disabled .wc-block-grid__products .wc-block-grid__product .added_to_cart {
+      pointer-events: none;
+      opacity: 0.65; }
     .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus {
       box-shadow: none; }
 
@@ -11202,7 +9997,32 @@ figure.woocommerce-product-gallery__wrapper {
   .woocommerce ul.products li.product .button {
     margin-top: 0.3em;
     font-weight: normal;
-    vertical-align: middle; }
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .woocommerce ul.products li.product .button {
+        transition: none; } }
+    .woocommerce ul.products li.product .button:hover {
+      color: #212529;
+      text-decoration: none; }
+    .btn-check:focus + .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .button:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+    .woocommerce ul.products li.product .button:disabled, .woocommerce ul.products li.product .button.disabled, fieldset:disabled .woocommerce ul.products li.product .button {
+      pointer-events: none;
+      opacity: 0.65; }
     .woocommerce ul.products li.product .button.added::after {
       display: none; }
     .woocommerce ul.products li.product .button.loading {
@@ -11214,7 +10034,32 @@ figure.woocommerce-product-gallery__wrapper {
   .woocommerce ul.products li.product .added_to_cart {
     margin-top: 0.3em;
     font-weight: normal;
-    vertical-align: middle; }
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .woocommerce ul.products li.product .added_to_cart {
+        transition: none; } }
+    .woocommerce ul.products li.product .added_to_cart:hover {
+      color: #212529;
+      text-decoration: none; }
+    .btn-check:focus + .woocommerce ul.products li.product .added_to_cart, .woocommerce ul.products li.product .added_to_cart:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+    .woocommerce ul.products li.product .added_to_cart:disabled, .woocommerce ul.products li.product .added_to_cart.disabled, fieldset:disabled .woocommerce ul.products li.product .added_to_cart {
+      pointer-events: none;
+      opacity: 0.65; }
     .woocommerce ul.products li.product .added_to_cart:focus {
       box-shadow: none; }
   .woocommerce ul.products li.product .star-rating {
@@ -11316,6 +10161,112 @@ p.no-comments::before {
   text-align: left;
   border-radius: 5px; }
 
+#footer-full-content
+.woocommerce.widget_shopping_cart
+.woocommerce-mini-cart__buttons.buttons
+a.button {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff; }
+  @media (prefers-reduced-motion: reduce) {
+    #footer-full-content
+    .woocommerce.widget_shopping_cart
+    .woocommerce-mini-cart__buttons.buttons
+    a.button {
+      transition: none; } }
+  #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button:hover {
+    color: #212529;
+    text-decoration: none; }
+  .btn-check:focus + #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button, #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+  #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button:disabled, #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button.disabled, fieldset:disabled #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button {
+    pointer-events: none;
+    opacity: 0.65; }
+  #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc; }
+  #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button:focus, #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button.focus {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
+  #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button.disabled, #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button:disabled {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff; }
+  #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button:not(:disabled):not(.disabled):active, #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button:not(:disabled):not(.disabled).active, .show > #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button.dropdown-toggle {
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf; }
+    #footer-full-content
+    .woocommerce.widget_shopping_cart
+    .woocommerce-mini-cart__buttons.buttons
+    a.button:not(:disabled):not(.disabled):active:focus, #footer-full-content
+    .woocommerce.widget_shopping_cart
+    .woocommerce-mini-cart__buttons.buttons
+    a.button:not(:disabled):not(.disabled).active:focus, .show > #footer-full-content
+    .woocommerce.widget_shopping_cart
+    .woocommerce-mini-cart__buttons.buttons
+    a.button.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
+
 .single-product.woocommerce div.product .woocommerce-product-gallery .flex-viewport {
   margin-bottom: 0.75rem; }
 .single-product.woocommerce div.product .woocommerce-product-gallery .flex-control-thumbs li {
@@ -11359,14 +10310,12 @@ p.no-comments::before {
     margin-right: 0.5rem; }
 .single-product.woocommerce .star-rating {
   color: #f7de00; }
-.single-product.woocommerce #respond input#submit.btn.btn-secondary, .single-product.woocommerce #respond form.post-password-form input#submit.btn-secondary[type="submit"], form.post-password-form .single-product.woocommerce #respond input#submit.btn-secondary[type="submit"], .single-product.woocommerce #respond .wp-block-button input#submit.btn-secondary.wp-block-button__link, .wp-block-button .single-product.woocommerce #respond input#submit.btn-secondary.wp-block-button__link, .single-product.woocommerce #respond .wc-block-grid__products .wc-block-grid__product input#submit.btn-secondary.added_to_cart, .wc-block-grid__products .wc-block-grid__product .single-product.woocommerce #respond input#submit.btn-secondary.added_to_cart, .single-product.woocommerce #respond ul.products li.product input#submit.btn-secondary.button, .single-product.woocommerce ul.products li.product #respond input#submit.btn-secondary.button, .single-product.woocommerce #respond ul.products li.product input#submit.btn-secondary.added_to_cart, .single-product.woocommerce ul.products li.product #respond input#submit.btn-secondary.added_to_cart, .single-product.woocommerce #respond .wpcf7 input#submit.btn-secondary[type="submit"], .wpcf7 .single-product.woocommerce #respond input#submit.btn-secondary[type="submit"],
-.single-product.woocommerce #respond input#submit.btn-secondary.edd-submit {
+.single-product.woocommerce #respond input#submit.btn.btn-secondary {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
   font-weight: normal; }
-  .single-product.woocommerce #respond input#submit.btn.btn-secondary:hover, .single-product.woocommerce #respond form.post-password-form input#submit.btn-secondary[type="submit"]:hover, form.post-password-form .single-product.woocommerce #respond input#submit.btn-secondary[type="submit"]:hover, .single-product.woocommerce #respond .wp-block-button input#submit.btn-secondary.wp-block-button__link:hover, .wp-block-button .single-product.woocommerce #respond input#submit.btn-secondary.wp-block-button__link:hover, .single-product.woocommerce #respond .wc-block-grid__products .wc-block-grid__product input#submit.btn-secondary.added_to_cart:hover, .wc-block-grid__products .wc-block-grid__product .single-product.woocommerce #respond input#submit.btn-secondary.added_to_cart:hover, .single-product.woocommerce #respond ul.products li.product input#submit.btn-secondary.button:hover, .single-product.woocommerce ul.products li.product #respond input#submit.btn-secondary.button:hover, .single-product.woocommerce #respond ul.products li.product input#submit.btn-secondary.added_to_cart:hover, .single-product.woocommerce ul.products li.product #respond input#submit.btn-secondary.added_to_cart:hover, .single-product.woocommerce #respond .wpcf7 input#submit.btn-secondary[type="submit"]:hover, .wpcf7 .single-product.woocommerce #respond input#submit.btn-secondary[type="submit"]:hover,
-  .single-product.woocommerce #respond input#submit.btn-secondary.edd-submit:hover {
+  .single-product.woocommerce #respond input#submit.btn.btn-secondary:hover {
     color: #fff;
     background-color: #5a6268;
     border-color: #545b62; }
@@ -11489,10 +10438,142 @@ p.woocommerce-store-notice.demo_store {
 */
 .wpcf7 {
   max-width: 600px; }
+  .wpcf7 input[type="submit"] {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff; }
+    @media (prefers-reduced-motion: reduce) {
+      .wpcf7 input[type="submit"] {
+        transition: none; } }
+    .wpcf7 input[type="submit"]:hover {
+      color: #212529;
+      text-decoration: none; }
+    .btn-check:focus + .wpcf7 input[type="submit"], .wpcf7 input[type="submit"]:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+    .wpcf7 input[type="submit"]:disabled, .wpcf7 input[type="submit"].disabled, fieldset:disabled .wpcf7 input[type="submit"] {
+      pointer-events: none;
+      opacity: 0.65; }
+    .wpcf7 input[type="submit"]:hover {
+      color: #fff;
+      background-color: #0069d9;
+      border-color: #0062cc; }
+    .wpcf7 input[type="submit"]:focus, .wpcf7 input[type="submit"].focus {
+      color: #fff;
+      background-color: #0069d9;
+      border-color: #0062cc;
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
+    .wpcf7 input[type="submit"].disabled, .wpcf7 input[type="submit"]:disabled {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff; }
+    .wpcf7 input[type="submit"]:not(:disabled):not(.disabled):active, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active, .show > .wpcf7 input[type="submit"].dropdown-toggle {
+      color: #fff;
+      background-color: #0062cc;
+      border-color: #005cbf; }
+      .wpcf7 input[type="submit"]:not(:disabled):not(.disabled):active:focus, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active:focus, .show > .wpcf7 input[type="submit"].dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
   .wpcf7 .wpcf7-form label {
     width: 100%; }
   .wpcf7 .wpcf7-not-valid-tip {
     color: #dc3545; }
+  .wpcf7 div.wpcf7-response-output {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff; }
+    .wpcf7 div.wpcf7-response-output hr {
+      border-top-color: #9fcdff; }
+    .wpcf7 div.wpcf7-response-output .alert-link {
+    .wpcf7 div.wpcf7-response-output a {
+      font-weight: 700;
+      color: #117a8b; }
+    .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok {
+      color: #014f3d;
+      background-color: #cceae3;
+      border-color: #b8e2d8; }
+      .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok hr {
+        border-top-color: #a6dbce; }
+      .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok .alert-link {
+        color: #001d16; }
+      .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok a {
+        font-weight: 700;
+        color: #117a8b; }
+    .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors {
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb; }
+      .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors hr {
+        border-top-color: #f1b0b7; }
+      .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors .alert-link {
+        color: #491217; }
+      .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors a {
+        font-weight: 700;
+        color: #117a8b; }
+
+#edd-purchase-button, .edd-submit, [type="submit"].edd-submit {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  display: block;
+  width: 100%; }
+  @media (prefers-reduced-motion: reduce) {
+    #edd-purchase-button, .edd-submit, [type="submit"].edd-submit {
+      transition: none; } }
+  #edd-purchase-button:hover,
+  .edd-submit:hover,
+  [type="submit"].edd-submit:hover {
+    color: #212529;
+    text-decoration: none; }
+  .btn-check:focus + #edd-purchase-button, #edd-purchase-button:focus, .btn-check:focus +
+  .edd-submit,
+  .edd-submit:focus, .btn-check:focus +
+  [type="submit"].edd-submit,
+  [type="submit"].edd-submit:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+  #edd-purchase-button:disabled, #edd-purchase-button.disabled, fieldset:disabled #edd-purchase-button,
+  .edd-submit:disabled,
+  .edd-submit.disabled,
+  fieldset:disabled .edd-submit,
+  [type="submit"].edd-submit:disabled,
+  [type="submit"].edd-submit.disabled,
+  fieldset:disabled [type="submit"].edd-submit {
+    pointer-events: none;
+    opacity: 0.65; }
+  #edd-purchase-button + .btn-block, .edd-submit + .btn-block, [type="submit"].edd-submit + .btn-block {
+    margin-top: 0.5rem; }
 
 .single-download #edd-single-wrapper .entry-header {
   text-align: center;
@@ -11506,12 +10587,7 @@ p.woocommerce-store-notice.demo_store {
   margin-bottom: 2rem; }
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd-cart-ajax-alert {
     display: none !important; }
-  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .btn-block + .btn-block, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd-purchase-button + .btn-block,
-  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd-submit + .btn-block, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .btn-block + #edd-purchase-button, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd-purchase-button + #edd-purchase-button,
-  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd-submit + #edd-purchase-button,
-  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .btn-block + .edd-submit,
-  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd-purchase-button + .edd-submit,
-  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd-submit + .edd-submit {
+  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .btn-block + .btn-block {
     margin-top: 0; }
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd_download_quantity_wrapper {
     margin: 0 0 0.75rem; }
@@ -11566,12 +10642,7 @@ p.woocommerce-store-notice.demo_store {
           color: #555; }
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-cart-ajax-alert {
           display: none; }
-        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + .btn-block, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd-purchase-button + .btn-block,
-        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-submit + .btn-block, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + #edd-purchase-button, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd-purchase-button + #edd-purchase-button,
-        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-submit + #edd-purchase-button,
-        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + .edd-submit,
-        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd-purchase-button + .edd-submit,
-        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-submit + .edd-submit {
+        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + .btn-block {
           margin-top: 0; }
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd_download_quantity_wrapper {
           margin: 0 0 0.75rem; }
@@ -11721,3 +10792,76 @@ table#edd_user_history {
   margin-top: 0; }
 #edd_profile_editor_form #edd_profile_editor_submit {
   margin: 1rem 0; }
+
+.bbpress-wrapper#bbpress-forums ul.bbp-forums,
+.bbpress-wrapper#bbpress-forums ul.bbp-lead-topic,
+.bbpress-wrapper#bbpress-forums ul.bbp-replies,
+.bbpress-wrapper#bbpress-forums ul.bbp-search-results,
+.bbpress-wrapper#bbpress-forums ul.bbp-topics {
+  font-size: 14px; }
+.bbpress-wrapper .forums.bbp-replies .bbp-body .bbp-reply-content {
+  font-size: 1rem;
+  line-height: 1.5; }
+.bbpress-wrapper#bbpress-forums li.bbp-body ul.forum,
+.bbpress-wrapper#bbpress-forums li.bbp-body ul.topic {
+  padding: 10px; }
+.bbpress-wrapper div.bbp-template-notice,
+.bbpress-wrapper .bbpress-wrapper div.indicator-hint {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem; }
+  .bbpress-wrapper div.bbp-template-notice.info,
+  .bbpress-wrapper .bbpress-wrapper div.indicator-hint.info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb; }
+    .bbpress-wrapper div.bbp-template-notice.info hr,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.info hr {
+      border-top-color: #abdde5; }
+    .bbpress-wrapper div.bbp-template-notice.info .alert-link,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.info .alert-link {
+      color: #062c33; }
+    .bbpress-wrapper div.bbp-template-notice.info a,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.info a {
+      font-weight: 700;
+      color: #117a8b; }
+  .bbpress-wrapper div.bbp-template-notice.important,
+  .bbpress-wrapper .bbpress-wrapper div.indicator-hint.important {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba; }
+    .bbpress-wrapper div.bbp-template-notice.important hr,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.important hr {
+      border-top-color: #ffe8a1; }
+    .bbpress-wrapper div.bbp-template-notice.important .alert-link,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.important .alert-link {
+      color: #533f03; }
+    .bbpress-wrapper div.bbp-template-notice.important a,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.important a {
+      font-weight: 700;
+      color: #d39e00; }
+  .bbpress-wrapper div.bbp-template-notice.error, .bbpress-wrapper div.bbp-template-notice.warning,
+  .bbpress-wrapper .bbpress-wrapper div.indicator-hint.error,
+  .bbpress-wrapper .bbpress-wrapper div.indicator-hint.warning {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb; }
+    .bbpress-wrapper div.bbp-template-notice.error hr, .bbpress-wrapper div.bbp-template-notice.warning hr,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.error hr,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.warning hr {
+      border-top-color: #f1b0b7; }
+    .bbpress-wrapper div.bbp-template-notice.error .alert-link, .bbpress-wrapper div.bbp-template-notice.warning .alert-link,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.error .alert-link,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.warning .alert-link {
+      color: #491217; }
+    .bbpress-wrapper div.bbp-template-notice.error a, .bbpress-wrapper div.bbp-template-notice.warning a,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.error a,
+    .bbpress-wrapper .bbpress-wrapper div.indicator-hint.warning a {
+      font-weight: 700;
+      color: #bd2130; }
+  .bbpress-wrapper div.bbp-template-notice li, .bbpress-wrapper div.bbp-template-notice p,
+  .bbpress-wrapper .bbpress-wrapper div.indicator-hint li,
+  .bbpress-wrapper .bbpress-wrapper div.indicator-hint p {
+    margin: 0; }

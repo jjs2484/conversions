@@ -9,8 +9,8 @@
 
 	// submit button, inherit .btn and .btn-outline-primary classes.
 	input[type="submit"] {
-		@extend .btn;
-		@extend .btn-primary;
+		@include c-btn;
+		@include c-btn-primary;
 	}
 
 	.wpcf7-form {
@@ -32,15 +32,31 @@
 
 	// response messages
 	div.wpcf7-response-output {
-		@extend .alert;
-		@extend .alert-primary;
+		position: relative;
+  		padding: $alert-padding-y $alert-padding-x;
+  		margin-bottom: $alert-margin-bottom;
+ 		border: $alert-border-width solid transparent;
+		@include border-radius($alert-border-radius);
+		@include alert-variant(theme-color-level(primary, $alert-bg-level), theme-color-level(primary, $alert-border-level), theme-color-level(primary, $alert-color-level));
+		a {
+			font-weight: $alert-link-font-weight;
+			color: darken($cyan, 10%);
+		}
 
 		&.wpcf7-mail-sent-ok {
-			@extend .alert-success;
+			@include alert-variant(theme-color-level(success, $alert-bg-level), theme-color-level(success, $alert-border-level), theme-color-level(success, $alert-color-level));
+			a {
+				font-weight: $alert-link-font-weight;
+				color: darken($cyan, 10%);
+			}
 		}
 
 		&.wpcf7-validation-errors {
-			@extend .alert-danger;
+			@include alert-variant(theme-color-level(danger, $alert-bg-level), theme-color-level(danger, $alert-border-level), theme-color-level(danger, $alert-color-level));
+			a {
+				font-weight: $alert-link-font-weight;
+				color: darken($cyan, 10%);
+			}
 		}
 	}
 }

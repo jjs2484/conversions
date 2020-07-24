@@ -233,7 +233,7 @@ $block-btns: (
 		&:hover {
 			text-decoration: none;
 		}
-		@extend .btn;
+		@include c-btn;
 	}
 
 	// button styles if no button type
@@ -377,7 +377,7 @@ $block-btns: (
 	.added_to_cart {
 		font-weight: normal;
 		vertical-align: middle;
-		@extend .btn;
+		@include c-btn;
 		&:focus {
 			box-shadow: none;
 		}

@@ -4,9 +4,9 @@
 #edd-purchase-button,
 .edd-submit,
 [type="submit"].edd-submit {
-	@extend .btn;
-	@extend .btn-lg;
-	@extend .btn-block;
+	@include c-btn;
+	@include c-btn-lg;
+	@include c-btn-block;
 }
 
 // Single product pages

@@ -1,0 +1,72 @@
+// Base Button
+@mixin c-btn {
+    display: inline-block;
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
+    line-height: $btn-line-height;
+    color: $body-color;
+    text-align: center;
+    text-decoration: if($link-decoration == none, null, none);
+    white-space: $btn-white-space;
+    vertical-align: middle;
+    // cursor: if($enable-button-pointers, pointer, null);
+    user-select: none;
+    background-color: transparent;
+    border: $btn-border-width solid transparent;
+   // @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+    @include transition($btn-transition);
+  
+    &:hover {
+      color: $body-color;
+      text-decoration: if($link-hover-decoration == underline, none, null);
+    }
+  
+    .btn-check:focus + &,
+    &:focus {
+      outline: 0;
+      box-shadow: $btn-focus-box-shadow;
+    }
+  
+    .btn-check:checked + &,
+    .btn-check:active + &,
+    &:active,
+    &.active {
+      @include box-shadow($btn-active-box-shadow);
+  
+      &:focus {
+        @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+      }
+    }
+  
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+      pointer-events: none;
+      opacity: $btn-disabled-opacity;
+      @include box-shadow(none);
+    }
+}
+
+// Button large
+@mixin c-btn-lg {
+    padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
+    font-size: $input-btn-font-size-lg;
+    line-height: 1.5;
+    border-radius: $border-radius-lg;
+}
+
+// Block button
+@mixin c-btn-block {
+    display: block;
+    width: 100%;
+  
+    // Vertically space out multiple block buttons
+    + .btn-block {
+      margin-top: $btn-block-spacing-y;
+    }
+}
+
+// btn-primary
+@mixin c-btn-primary {
+    @include button-variant($primary, $primary);
+}
