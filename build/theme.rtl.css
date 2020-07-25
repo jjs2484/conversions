@@ -10515,7 +10515,7 @@ p.woocommerce-store-notice.demo_store {
       color: #002752; }
     .wpcf7 div.wpcf7-response-output a {
       font-weight: 700;
-      color: #117a8b; }
+      color: #0062cc; }
     .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok {
       color: #014f3d;
       background-color: #cceae3;
@@ -10526,7 +10526,7 @@ p.woocommerce-store-notice.demo_store {
         color: #001d16; }
       .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok a {
         font-weight: 700;
-        color: #117a8b; }
+        color: #01654e; }
     .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors {
       color: #721c24;
       background-color: #f8d7da;
@@ -10537,7 +10537,7 @@ p.woocommerce-store-notice.demo_store {
         color: #491217; }
       .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors a {
         font-weight: 700;
-        color: #117a8b; }
+        color: #bd2130; }
 
 #edd-purchase-button, .edd-submit, [type="submit"].edd-submit {
   display: inline-block;
@@ -10832,13 +10832,13 @@ table#edd_user_history {
 .bbpress-wrapper#bbpress-forums ul.bbp-replies,
 .bbpress-wrapper#bbpress-forums ul.bbp-search-results,
 .bbpress-wrapper#bbpress-forums ul.bbp-topics {
-  font-size: 14px; }
+  font-size: 0.875rem; }
 .bbpress-wrapper .forums.bbp-replies .bbp-body .bbp-reply-content {
   font-size: 1rem;
   line-height: 1.5; }
 .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum,
 .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic {
-  padding: 10px; }
+  padding: 0.625rem; }
 .bbpress-wrapper div.bbp-template-notice,
 .bbpress-wrapper .bbpress-wrapper div.indicator-hint {
   position: relative;
