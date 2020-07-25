@@ -15,8 +15,8 @@ module.exports = function(grunt) {
 				files: {
 					'build/theme.css': 'sass/theme.scss',
 					'build/font-awesome.css': 'sass/font-awesome.scss',
-					'build/gutenberg-editor-style.css': 'sass/_gutenberg-editor-style.scss',
-					'build/classic-editor-style.css': 'sass/_classic-editor-style.scss',
+					'build/gutenberg-editor-style.css': 'sass/gutenberg-editor-style.scss',
+					'build/classic-editor-style.css': 'sass/classic-editor-style.scss',
 				}
 			}
 		},

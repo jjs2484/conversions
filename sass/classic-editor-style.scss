@@ -1,3 +1,10 @@
+// Import Bootstrap
+@import "variables";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "mixins";
+
 // Titles
 .h1,
 .h2,
@@ -20,11 +27,11 @@ body.mce-content-body h3,
 body.mce-content-body h4,
 body.mce-content-body h5,
 body.mce-content-body h6 {
-	color: #222222;
+	color: $body-color;
 }
 
 body.mce-content-body {
-	color: #222222;
+	color: $body-color;
 }
 
 // Paragraphs

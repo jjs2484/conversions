@@ -97,10 +97,10 @@
 			// Title
 			.edd_download_title a {
 				font-size: 1.25rem;
-				color: #222;
+				color: $body-color;
 				display: block;
 				&:hover {
-					color: #222;
+					color: $body-color;
 					text-decoration: none;
 				}
 			}
@@ -291,7 +291,7 @@
 		td,
 		th {
 			border: 1px solid #dee2e6;
-			color: #222;
+			color: $body-color;
 			padding: 0.75rem;
 		}
 
@@ -315,7 +315,7 @@
 		#edd_show_discount,
 		.edd-cart-adjustment {
 			background: #f8f9fa;
-			color: #222;
+			color: $body-color;
 		}
 
 		input.edd-input,
@@ -386,7 +386,7 @@
 		#edd_final_total_wrap {
 			border: 1px solid #dee2e6;
 			background: #f8f9fa;
-			color: #222;
+			color: $body-color;
 		}
 
 		#edd_register_account_fields,

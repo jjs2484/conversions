@@ -181,14 +181,14 @@ figcaption.blocks-gallery-caption {
 // Gutenberg color options
 // -- see editor-color-palette in inc/Conversions.php
 $colors: (
-	"primary": #007bff,
-	"secondary": #6c757d,
-	"success": #019875,
-	"danger": #dc3545,
-	"warning": #ffc107,
-	"info": #17a2b8,
-	"light": #f8f9fa,
-	"dark": #151b26
+	"primary": $primary,
+	"secondary": $secondary,
+	"success": $success,
+	"danger": $danger,
+	"warning": $warning,
+	"info": $info,
+	"light": $light,
+	"dark": $dark
 );
 
 @each $name, $color in $colors {
@@ -202,14 +202,14 @@ $colors: (
 }
 
 $block-btns: (
-	(primary, #fff, #007bff, #007bff, #fff, #0069d9, #0069d9),
-	(secondary, #fff, #6c757d, #6c757d, #fff, #5a6268, #5a6268),
-	(success, #fff, #019875, #019875, #fff, #017258, #017258),
-	(danger, #fff, #dc3545, #dc3545, #fff, #c82333, #c82333),
-	(warning, #212529, #ffc107, #ffc107, #212529, #e0a800, #e0a800),
-	(info, #fff, #17a2b8, #17a2b8, #fff, #138496, #138496),
-	(light, #212529, #f8f9fa, #f8f9fa, #212529, #e2e6ea, #e2e6ea),
-	(dark, #fff, #151b26, #151b26, #fff, #07090d, #07090d)
+	(primary, $white, $primary, $primary, $white, #0069d9, #0069d9),
+	(secondary, $white, $secondary, $secondary, $white, #5a6268, #5a6268),
+	(success, $white, $success, $success, $white, #017258, #017258),
+	(danger, $white, $danger, $danger, $white, #c82333, #c82333),
+	(warning, $body-color, $warning, $warning, $body-color, #e0a800, #e0a800),
+	(info, $white, $info, $info, $white, #138496, #138496),
+	(light, $body-color, $light, $light, $body-color, #e2e6ea, #e2e6ea),
+	(dark, $white, $dark, $dark, $white, #07090d, #07090d)
 );
 
 // Button block
@@ -239,11 +239,11 @@ $block-btns: (
 	// button styles if no button type
 	.wp-block-button__link {
 		&:not(.has-background) {
-			color: #fff;
-			background-color: #007bff;
-			border-color: #007bff;
+			color: $white;
+			background-color: $primary;
+			border-color: $primary;
 			&:hover {
-				color: #fff !important;
+				color: $white !important;
 				background-color: #0069d9 !important;
 				border-color: #0069d9 !important;
 			}
@@ -268,11 +268,11 @@ $block-btns: (
 	&.is-style-fill {
 		.wp-block-button__link {
 			&:not(.has-background) {
-				color: #fff !important;
-				background-color: #007bff !important;
-				border-color: #007bff !important;
+				color: $white !important;
+				background-color: $primary !important;
+				border-color: $primary !important;
 				&:hover {
-					color: #fff !important;
+					color: $white !important;
 					background-color: #0069d9 !important;
 					border-color: #0069d9 !important;
 				}
@@ -298,13 +298,13 @@ $block-btns: (
 	&.is-style-outline {
 		.wp-block-button__link {
 			&:not(.has-background) {
-				color: #007bff !important;
+				color: $primary !important;
 				background-color: transparent !important;
-				border-color: #007bff !important;
+				border-color: $primary !important;
 				&:hover {
-					color: #fff !important;
-					background-color: #007bff !important;
-					border-color: #007bff !important;
+					color: $white !important;
+					background-color: $primary !important;
+					border-color: $primary !important;
 				}
 			}
 			// Get user defined colors
