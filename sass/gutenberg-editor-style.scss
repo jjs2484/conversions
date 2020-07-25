@@ -291,14 +291,14 @@ $colors: (
 }
 
 $block-btns: (
-	(primary, $white, $primary, $primary, $white, #0069d9, #0069d9),
-	(secondary, $white, $secondary, $secondary, $white, #5a6268, #5a6268),
-	(success, $white, $success, $success, $white, #017258, #017258),
-	(danger, $white, $danger, $danger, $white, #c82333, #c82333),
-	(warning, $body-color, $warning, $warning, $body-color, #e0a800, #e0a800),
-	(info, $white, $info, $info, $white, #138496, #138496),
-	(light, $body-color, $light, $light, $body-color, #e2e6ea, #e2e6ea),
-	(dark, $white, $dark, $dark, $white, #07090d, #07090d)
+	(primary, $white, $primary, $primary, $white, darken($primary, 7.5%), darken($primary, 7.5%)),
+	(secondary, $white, $secondary, $secondary, $white, darken($secondary, 7.5%), darken($secondary, 7.5%)),
+	(success, $white, $success, $success, $white, darken($success, 7.5%), darken($success, 7.5%)),
+	(danger, $white, $danger, $danger, $white, darken($danger, 7.5%), darken($danger, 7.5%)),
+	(warning, $body-color, $warning, $warning, $body-color, darken($warning, 7.5%), darken($warning, 7.5%)),
+	(info, $white, $info, $info, $white, darken($info, 7.5%), darken($info, 7.5%)),
+	(light, $body-color, $light, $light, $body-color, darken($light, 7.5%), darken($light, 7.5%)),
+	(dark, $white, $dark, $dark, $white, darken($dark, 7.5%), darken($dark, 7.5%))
 );
 
 // Button block
@@ -327,8 +327,8 @@ $block-btns: (
 
 			&:hover {
 				color: $white !important;
-				background-color: #0069d9 !important;
-				border-color: #0069d9 !important;
+				background-color: darken($primary, 7.5%) !important;
+				border-color: darken($primary, 7.5%) !important;
 				
 				[data-rich-text-placeholder]::after {
 					color: $white;
@@ -377,8 +377,8 @@ $block-btns: (
 
 				&:hover {
 					color: $white !important;
-					background-color: #0069d9 !important;
-					border-color: #0069d9 !important;
+					background-color:darken($primary, 7.5%) !important;
+					border-color:darken($primary, 7.5%) !important;
 
 					[data-rich-text-placeholder]::after {
 						color: $white;
