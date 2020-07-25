@@ -197,6 +197,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Font Awesome to v5.14.0
 * Update: NPM dependencies.
 * Fix: Add mixins.scss for some elements rather than using @extend, to avoid adding selectors back to base classes.
+* Fix: Convert any hardcoded CSS colors to Bootstrap variables when available.
 * Fix: Add dl to footer conversions_footer_text_color style.
 * Fix: Remove role attributes from the nav menu.
 
