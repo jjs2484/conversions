@@ -4464,14 +4464,13 @@ input[type="button"].btn-block {
   .breadcrumb-item.active {
     color: #6c757d; }
 
-.pagination, .woocommerce nav.woocommerce-pagination ul.page-numbers, #edd_download_pagination {
+.pagination {
   display: flex;
   padding-left: 0;
   list-style: none;
   border-radius: 0.25rem; }
 
-.page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers, #edd_download_pagination .page-numbers {
+.page-link {
   position: relative;
   display: block;
   padding: 0.5rem 0.75rem;
@@ -4480,89 +4479,56 @@ input[type="button"].btn-block {
   color: #007bff;
   background-color: #fff;
   border: 1px solid #dee2e6; }
-  .page-link:hover, .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers:hover,
-  .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers:hover, #edd_download_pagination .page-numbers:hover {
+  .page-link:hover {
     z-index: 2;
     color: #0056b3;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #dee2e6; }
-  .page-link:focus, .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers:focus,
-  .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers:focus, #edd_download_pagination .page-numbers:focus {
+  .page-link:focus {
     z-index: 3;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
-.page-item:first-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-link, .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item:first-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child span.page-numbers,
-.page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item:first-child a.page-numbers,
 .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child a.page-numbers, .page-item:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .page-item:first-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-numbers {
+.page-item:first-child .page-link {
   margin-left: 0;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
-.page-item:last-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-link, .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item:last-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child span.page-numbers,
-.page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item:last-child a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child a.page-numbers, .page-item:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .page-item:last-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-numbers {
+.page-item:last-child .page-link {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem; }
-.page-item.active .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .page-link, .page-item.active .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item.active span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active span.page-numbers,
-.page-item.active .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item.active a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li.active a.page-numbers, .page-item.active #edd_download_pagination .page-numbers, #edd_download_pagination .page-item.active .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .page-numbers {
+.page-item.active .page-link {
   z-index: 3;
   color: #fff;
   background-color: #007bff;
   border-color: #007bff; }
-.page-item.disabled .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers li.disabled .page-link, .page-item.disabled .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item.disabled span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li.disabled span.page-numbers,
-.page-item.disabled .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item.disabled a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li.disabled a.page-numbers, .page-item.disabled #edd_download_pagination .page-numbers, #edd_download_pagination .page-item.disabled .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li.disabled #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers li.disabled .page-numbers {
+.page-item.disabled .page-link {
   color: #6c757d;
   pointer-events: none;
   cursor: auto;
   background-color: #fff;
   border-color: #dee2e6; }
 
-.pagination-lg .page-link, .pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-lg span.page-numbers,
-.pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-lg a.page-numbers, .pagination-lg #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-lg .page-numbers {
+.pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   line-height: 1.5; }
-.pagination-lg .page-item:first-child .page-link, .pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-lg li:first-child .page-link, .pagination-lg .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-lg .page-item:first-child span.page-numbers, .pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-lg li:first-child span.page-numbers,
-.pagination-lg .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-lg .page-item:first-child a.page-numbers,
-.pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-lg li:first-child a.page-numbers, .pagination-lg .page-item:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-lg .page-item:first-child .page-numbers, .pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-lg li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-lg li:first-child .page-numbers {
+.pagination-lg .page-item:first-child .page-link {
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem; }
-.pagination-lg .page-item:last-child .page-link, .pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-lg li:last-child .page-link, .pagination-lg .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-lg .page-item:last-child span.page-numbers, .pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-lg li:last-child span.page-numbers,
-.pagination-lg .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-lg .page-item:last-child a.page-numbers,
-.pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-lg li:last-child a.page-numbers, .pagination-lg .page-item:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-lg .page-item:last-child .page-numbers, .pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-lg .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-lg li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-lg li:last-child .page-numbers {
+.pagination-lg .page-item:last-child .page-link {
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem; }
 
-.pagination-sm .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm span.page-numbers,
-.pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm a.page-numbers, .pagination-sm #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .page-numbers {
+.pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5; }
-.pagination-sm .page-item:first-child .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child .page-link, .pagination-sm .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .page-item:first-child span.page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child span.page-numbers,
-.pagination-sm .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .page-item:first-child a.page-numbers,
-.pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child a.page-numbers, .pagination-sm .page-item:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .page-item:first-child .page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child .page-numbers {
+.pagination-sm .page-item:first-child .page-link {
   border-top-left-radius: 0.2rem;
   border-bottom-left-radius: 0.2rem; }
-.pagination-sm .page-item:last-child .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child .page-link, .pagination-sm .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .page-item:last-child span.page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child span.page-numbers,
-.pagination-sm .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .page-item:last-child a.page-numbers,
-.pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child a.page-numbers, .pagination-sm .page-item:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .page-item:last-child .page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child .page-numbers {
+.pagination-sm .page-item:last-child .page-link {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem; }
 
@@ -10337,13 +10303,58 @@ body.woocommerce-cart .product-quantity .quantity input.qty {
   justify-content: center; }
   .woocommerce nav.woocommerce-pagination ul {
     border: 0; }
-    .woocommerce nav.woocommerce-pagination ul.page-numbers li {
-      border-right: 0; }
-      .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers.current,
-      .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers.current {
-        color: #fff;
-        background-color: #007bff;
-        border-color: #007bff; }
+    .woocommerce nav.woocommerce-pagination ul.page-numbers {
+      display: flex;
+      padding-left: 0;
+      list-style: none;
+      border-radius: 0.25rem; }
+      .woocommerce nav.woocommerce-pagination ul.page-numbers li {
+        border-right: 0; }
+        .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-link {
+          margin-left: 0;
+          border-top-left-radius: 0.25rem;
+          border-bottom-left-radius: 0.25rem; }
+        .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-link {
+          border-top-right-radius: 0.25rem;
+          border-bottom-right-radius: 0.25rem; }
+        .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .page-link {
+          z-index: 3;
+          color: #fff;
+          background-color: #007bff;
+          border-color: #007bff; }
+        .woocommerce nav.woocommerce-pagination ul.page-numbers li.disabled .page-link {
+          color: #6c757d;
+          pointer-events: none;
+          cursor: auto;
+          background-color: #fff;
+          border-color: #dee2e6; }
+        .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers,
+        .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers {
+          position: relative;
+          display: block;
+          padding: 0.5rem 0.75rem;
+          margin-left: -1px;
+          line-height: 1.25;
+          color: #007bff;
+          background-color: #fff;
+          border: 1px solid #dee2e6; }
+          .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers:hover,
+          .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers:hover {
+            z-index: 2;
+            color: #0056b3;
+            text-decoration: none;
+            background-color: #e9ecef;
+            border-color: #dee2e6; }
+          .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers:focus,
+          .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers:focus {
+            z-index: 3;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+          .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers.current,
+          .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers.current {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff; }
 
 .woocommerce #reviews #comments ol.commentlist {
   display: flex;
@@ -10502,6 +10513,7 @@ p.woocommerce-store-notice.demo_store {
     .wpcf7 div.wpcf7-response-output hr {
       border-top-color: #9fcdff; }
     .wpcf7 div.wpcf7-response-output .alert-link {
+      color: #002752; }
     .wpcf7 div.wpcf7-response-output a {
       font-weight: 700;
       color: #117a8b; }
@@ -10649,15 +10661,38 @@ p.woocommerce-store-notice.demo_store {
 
 #edd_download_pagination {
   justify-content: center;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem; }
   #edd_download_pagination > :first-child {
     border-radius: 0.25rem 0 0 0.25rem; }
   #edd_download_pagination > :last-child {
     border-radius: 0 0.25rem 0.25rem 0; }
-  #edd_download_pagination .page-numbers.current {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff; }
+  #edd_download_pagination .page-numbers {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6; }
+    #edd_download_pagination .page-numbers:hover {
+      z-index: 2;
+      color: #0056b3;
+      text-decoration: none;
+      background-color: #e9ecef;
+      border-color: #dee2e6; }
+    #edd_download_pagination .page-numbers:focus {
+      z-index: 3;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+    #edd_download_pagination .page-numbers.current {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff; }
 
 .col-md-12.content-area .edd_downloads_list.edd_download_columns_2 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_3 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_4 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_5 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
   width: 100%; }

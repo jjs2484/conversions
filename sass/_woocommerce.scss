@@ -270,13 +270,13 @@ body.woocommerce-cart {
 	ul {
 		border: 0;
 		&.page-numbers {
-			@extend .pagination;
+			@include c-pagination;
 			li {
 				border-right: 0;
-				@extend .page-item;
+				@include c-page-item;
 				span.page-numbers,
 				a.page-numbers {
-					@extend .page-link;
+					@include c-page-link;
 					&.current {
 						color: $white;
 						background-color: $primary;
