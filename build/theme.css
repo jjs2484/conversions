@@ -4490,7 +4490,6 @@ input[type="button"].btn-block {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
-.woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child a.page-numbers, .page-item:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .page-item:first-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-numbers {
 .page-item:first-child .page-link {
   margin-left: 0;
   border-top-left-radius: 0.25rem;
