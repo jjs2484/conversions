@@ -33,7 +33,14 @@
   		padding: $alert-padding-y $alert-padding-x;
   		margin-bottom: $alert-margin-bottom;
  		border: $alert-border-width solid transparent;
-  		@include border-radius($alert-border-radius);
+		@include border-radius($alert-border-radius);
+		
+		// add a default color in case no colors are defined
+		@include alert-variant(theme-color-level(warning, $alert-bg-level), theme-color-level(warning, $alert-border-level), theme-color-level(warning, $alert-color-level));
+		a {
+			font-weight: $alert-link-font-weight;
+			color: darken($yellow, 10%);
+		}
 
 		&.info {
 			@include alert-variant(theme-color-level(info, $alert-bg-level), theme-color-level(info, $alert-border-level), theme-color-level(info, $alert-color-level));
@@ -57,7 +64,26 @@
 			}
 		}
 		li, p {
-			margin: 0;
+			margin: 0 !important;
+		}
+	}
+
+	// Base buttons
+	&#bbpress-forums {
+		.button.submit,
+		input.button {
+			@include c-btn;
+			@include c-btn-primary;
+		}
+	}
+
+	// Search form
+	&#bbpress-forums {
+		#bbp-search-form {
+			margin-bottom: 1rem;
+			#bbp_search {
+				vertical-align: middle;
+			}
 		}
 	}
 }
