@@ -86,4 +86,21 @@
 			}
 		}
 	}
+
+	// Avatars
+	&#bbpress-forums {
+		div.bbp-forum-author img.avatar,
+		div.bbp-reply-author img.avatar,
+		div.bbp-topic-author img.avatar {
+			border-radius: 50%;
+			margin-bottom: .25rem;
+		}
+	}
+
+	&#bbpress-forums {
+		fieldset.bbp-form input[type="text"], 
+		fieldset.bbp-form select {
+			@include c-form-control;
+		}
+	}
 }

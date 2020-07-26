@@ -8853,11 +8853,9 @@ img,
 form.post-password-form input[type="submit"] {
   display: inline-block;
   font-weight: 400;
-  line-height: 1.5;
   color: #222;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -8866,6 +8864,7 @@ form.post-password-form input[type="submit"] {
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
+  line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #fff;
@@ -8877,12 +8876,13 @@ form.post-password-form input[type="submit"] {
   form.post-password-form input[type="submit"]:hover {
     color: #222;
     text-decoration: none; }
-  .btn-check:focus + form.post-password-form input[type="submit"], form.post-password-form input[type="submit"]:focus {
+  form.post-password-form input[type="submit"]:focus, form.post-password-form input[type="submit"].focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  form.post-password-form input[type="submit"]:disabled, form.post-password-form input[type="submit"].disabled, fieldset:disabled form.post-password-form input[type="submit"] {
-    pointer-events: none;
+  form.post-password-form input[type="submit"].disabled, form.post-password-form input[type="submit"]:disabled {
     opacity: 0.65; }
+  form.post-password-form input[type="submit"]:not(:disabled):not(.disabled) {
+    cursor: pointer; }
   form.post-password-form input[type="submit"]:hover {
     color: #fff;
     background-color: #0069d9;
@@ -9562,14 +9562,13 @@ figcaption.blocks-gallery-caption {
   .wp-block-buttons .wp-block-button.alignleft,
   .wp-block-buttons .wp-block-button.alignright {
     margin-bottom: 0; }
-  .wp-block-button .wp-block-button__link, .wp-block-buttons .wp-block-button .wp-block-button__link {
+  .wp-block-button .wp-block-button__link,
+  .wp-block-buttons .wp-block-button .wp-block-button__link {
     display: inline-block;
     font-weight: 400;
-    line-height: 1.5;
     color: #222;
     text-align: center;
     vertical-align: middle;
-    cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -9578,29 +9577,32 @@ figcaption.blocks-gallery-caption {
     border: 1px solid transparent;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
+    line-height: 1.5;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
     .wp-block-button .wp-block-button__link:hover,
     .wp-block-buttons .wp-block-button .wp-block-button__link:hover {
       text-decoration: none; }
     @media (prefers-reduced-motion: reduce) {
-      .wp-block-button .wp-block-button__link, .wp-block-buttons .wp-block-button .wp-block-button__link {
+      .wp-block-button .wp-block-button__link,
+      .wp-block-buttons .wp-block-button .wp-block-button__link {
         transition: none; } }
     .wp-block-button .wp-block-button__link:hover,
     .wp-block-buttons .wp-block-button .wp-block-button__link:hover {
       color: #222;
       text-decoration: none; }
-    .btn-check:focus + .wp-block-button .wp-block-button__link, .wp-block-button .wp-block-button__link:focus, .btn-check:focus +
-    .wp-block-buttons .wp-block-button .wp-block-button__link,
-    .wp-block-buttons .wp-block-button .wp-block-button__link:focus {
+    .wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link.focus,
+    .wp-block-buttons .wp-block-button .wp-block-button__link:focus,
+    .wp-block-buttons .wp-block-button .wp-block-button__link.focus {
       outline: 0;
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-    .wp-block-button .wp-block-button__link:disabled, .wp-block-button .wp-block-button__link.disabled, fieldset:disabled .wp-block-button .wp-block-button__link,
-    .wp-block-buttons .wp-block-button .wp-block-button__link:disabled,
+    .wp-block-button .wp-block-button__link.disabled, .wp-block-button .wp-block-button__link:disabled,
     .wp-block-buttons .wp-block-button .wp-block-button__link.disabled,
-    fieldset:disabled .wp-block-buttons .wp-block-button .wp-block-button__link {
-      pointer-events: none;
+    .wp-block-buttons .wp-block-button .wp-block-button__link:disabled {
       opacity: 0.65; }
+    .wp-block-button .wp-block-button__link:not(:disabled):not(.disabled),
+    .wp-block-buttons .wp-block-button .wp-block-button__link:not(:disabled):not(.disabled) {
+      cursor: pointer; }
   .wp-block-button .wp-block-button__link:not(.has-background),
   .wp-block-buttons .wp-block-button .wp-block-button__link:not(.has-background) {
     color: #fff;
@@ -9911,11 +9913,9 @@ figcaption.blocks-gallery-caption {
     vertical-align: middle;
     display: inline-block;
     font-weight: 400;
-    line-height: 1.5;
     color: #222;
     text-align: center;
     vertical-align: middle;
-    cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -9924,6 +9924,7 @@ figcaption.blocks-gallery-caption {
     border: 1px solid transparent;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
+    line-height: 1.5;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
@@ -9932,12 +9933,13 @@ figcaption.blocks-gallery-caption {
     .wc-block-grid__products .wc-block-grid__product .added_to_cart:hover {
       color: #222;
       text-decoration: none; }
-    .btn-check:focus + .wc-block-grid__products .wc-block-grid__product .added_to_cart, .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus {
+    .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus, .wc-block-grid__products .wc-block-grid__product .added_to_cart.focus {
       outline: 0;
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-    .wc-block-grid__products .wc-block-grid__product .added_to_cart:disabled, .wc-block-grid__products .wc-block-grid__product .added_to_cart.disabled, fieldset:disabled .wc-block-grid__products .wc-block-grid__product .added_to_cart {
-      pointer-events: none;
+    .wc-block-grid__products .wc-block-grid__product .added_to_cart.disabled, .wc-block-grid__products .wc-block-grid__product .added_to_cart:disabled {
       opacity: 0.65; }
+    .wc-block-grid__products .wc-block-grid__product .added_to_cart:not(:disabled):not(.disabled) {
+      cursor: pointer; }
     .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus {
       box-shadow: none; }
 
@@ -9977,11 +9979,9 @@ figure.woocommerce-product-gallery__wrapper {
     vertical-align: middle;
     display: inline-block;
     font-weight: 400;
-    line-height: 1.5;
     color: #222;
     text-align: center;
     vertical-align: middle;
-    cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -9990,6 +9990,7 @@ figure.woocommerce-product-gallery__wrapper {
     border: 1px solid transparent;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
+    line-height: 1.5;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
@@ -9998,12 +9999,13 @@ figure.woocommerce-product-gallery__wrapper {
     .woocommerce ul.products li.product .button:hover {
       color: #222;
       text-decoration: none; }
-    .btn-check:focus + .woocommerce ul.products li.product .button, .woocommerce ul.products li.product .button:focus {
+    .woocommerce ul.products li.product .button:focus, .woocommerce ul.products li.product .button.focus {
       outline: 0;
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-    .woocommerce ul.products li.product .button:disabled, .woocommerce ul.products li.product .button.disabled, fieldset:disabled .woocommerce ul.products li.product .button {
-      pointer-events: none;
+    .woocommerce ul.products li.product .button.disabled, .woocommerce ul.products li.product .button:disabled {
       opacity: 0.65; }
+    .woocommerce ul.products li.product .button:not(:disabled):not(.disabled) {
+      cursor: pointer; }
     .woocommerce ul.products li.product .button.added::after {
       display: none; }
     .woocommerce ul.products li.product .button.loading {
@@ -10018,11 +10020,9 @@ figure.woocommerce-product-gallery__wrapper {
     vertical-align: middle;
     display: inline-block;
     font-weight: 400;
-    line-height: 1.5;
     color: #222;
     text-align: center;
     vertical-align: middle;
-    cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -10031,6 +10031,7 @@ figure.woocommerce-product-gallery__wrapper {
     border: 1px solid transparent;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
+    line-height: 1.5;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
@@ -10039,12 +10040,13 @@ figure.woocommerce-product-gallery__wrapper {
     .woocommerce ul.products li.product .added_to_cart:hover {
       color: #222;
       text-decoration: none; }
-    .btn-check:focus + .woocommerce ul.products li.product .added_to_cart, .woocommerce ul.products li.product .added_to_cart:focus {
+    .woocommerce ul.products li.product .added_to_cart:focus, .woocommerce ul.products li.product .added_to_cart.focus {
       outline: 0;
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-    .woocommerce ul.products li.product .added_to_cart:disabled, .woocommerce ul.products li.product .added_to_cart.disabled, fieldset:disabled .woocommerce ul.products li.product .added_to_cart {
-      pointer-events: none;
+    .woocommerce ul.products li.product .added_to_cart.disabled, .woocommerce ul.products li.product .added_to_cart:disabled {
       opacity: 0.65; }
+    .woocommerce ul.products li.product .added_to_cart:not(:disabled):not(.disabled) {
+      cursor: pointer; }
     .woocommerce ul.products li.product .added_to_cart:focus {
       box-shadow: none; }
   .woocommerce ul.products li.product .star-rating {
@@ -10152,11 +10154,9 @@ p.no-comments::before {
 a.button {
   display: inline-block;
   font-weight: 400;
-  line-height: 1.5;
   color: #222;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -10165,6 +10165,7 @@ a.button {
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
+  line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #fff;
@@ -10182,27 +10183,28 @@ a.button {
   a.button:hover {
     color: #222;
     text-decoration: none; }
-  .btn-check:focus + #footer-full-content
+  #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.button, #footer-full-content
+  a.button:focus, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.button:focus {
+  a.button.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.button:disabled, #footer-full-content
+  a.button.disabled, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.button.disabled, fieldset:disabled #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons
-  a.button {
-    pointer-events: none;
+  a.button:disabled {
     opacity: 0.65; }
+  #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons
+  a.button:not(:disabled):not(.disabled) {
+    cursor: pointer; }
   #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
@@ -10475,11 +10477,9 @@ p.woocommerce-store-notice.demo_store {
   .wpcf7 input[type="submit"] {
     display: inline-block;
     font-weight: 400;
-    line-height: 1.5;
     color: #222;
     text-align: center;
     vertical-align: middle;
-    cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -10488,6 +10488,7 @@ p.woocommerce-store-notice.demo_store {
     border: 1px solid transparent;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
+    line-height: 1.5;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     color: #fff;
@@ -10499,12 +10500,13 @@ p.woocommerce-store-notice.demo_store {
     .wpcf7 input[type="submit"]:hover {
       color: #222;
       text-decoration: none; }
-    .btn-check:focus + .wpcf7 input[type="submit"], .wpcf7 input[type="submit"]:focus {
+    .wpcf7 input[type="submit"]:focus, .wpcf7 input[type="submit"].focus {
       outline: 0;
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-    .wpcf7 input[type="submit"]:disabled, .wpcf7 input[type="submit"].disabled, fieldset:disabled .wpcf7 input[type="submit"] {
-      pointer-events: none;
+    .wpcf7 input[type="submit"].disabled, .wpcf7 input[type="submit"]:disabled {
       opacity: 0.65; }
+    .wpcf7 input[type="submit"]:not(:disabled):not(.disabled) {
+      cursor: pointer; }
     .wpcf7 input[type="submit"]:hover {
       color: #fff;
       background-color: #0069d9;
@@ -10567,14 +10569,14 @@ p.woocommerce-store-notice.demo_store {
         font-weight: 700;
         color: #bd2130; }
 
-#edd-purchase-button, .edd-submit, [type="submit"].edd-submit {
+#edd-purchase-button,
+.edd-submit,
+[type="submit"].edd-submit {
   display: inline-block;
   font-weight: 400;
-  line-height: 1.5;
   color: #222;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -10583,6 +10585,7 @@ p.woocommerce-store-notice.demo_store {
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
+  line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   padding: 0.5rem 1rem;
@@ -10592,30 +10595,35 @@ p.woocommerce-store-notice.demo_store {
   display: block;
   width: 100%; }
   @media (prefers-reduced-motion: reduce) {
-    #edd-purchase-button, .edd-submit, [type="submit"].edd-submit {
+    #edd-purchase-button,
+    .edd-submit,
+    [type="submit"].edd-submit {
       transition: none; } }
   #edd-purchase-button:hover,
   .edd-submit:hover,
   [type="submit"].edd-submit:hover {
     color: #222;
     text-decoration: none; }
-  .btn-check:focus + #edd-purchase-button, #edd-purchase-button:focus, .btn-check:focus +
-  .edd-submit,
-  .edd-submit:focus, .btn-check:focus +
-  [type="submit"].edd-submit,
-  [type="submit"].edd-submit:focus {
+  #edd-purchase-button:focus, #edd-purchase-button.focus,
+  .edd-submit:focus,
+  .edd-submit.focus,
+  [type="submit"].edd-submit:focus,
+  [type="submit"].edd-submit.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  #edd-purchase-button:disabled, #edd-purchase-button.disabled, fieldset:disabled #edd-purchase-button,
-  .edd-submit:disabled,
+  #edd-purchase-button.disabled, #edd-purchase-button:disabled,
   .edd-submit.disabled,
-  fieldset:disabled .edd-submit,
-  [type="submit"].edd-submit:disabled,
+  .edd-submit:disabled,
   [type="submit"].edd-submit.disabled,
-  fieldset:disabled [type="submit"].edd-submit {
-    pointer-events: none;
+  [type="submit"].edd-submit:disabled {
     opacity: 0.65; }
-  #edd-purchase-button + .btn-block, .edd-submit + .btn-block, [type="submit"].edd-submit + .btn-block {
+  #edd-purchase-button:not(:disabled):not(.disabled),
+  .edd-submit:not(:disabled):not(.disabled),
+  [type="submit"].edd-submit:not(:disabled):not(.disabled) {
+    cursor: pointer; }
+  #edd-purchase-button + .btn-block,
+  .edd-submit + .btn-block,
+  [type="submit"].edd-submit + .btn-block {
     margin-top: 0.5rem; }
 
 .single-download #edd-single-wrapper .entry-header {
@@ -10944,14 +10952,13 @@ table#edd_user_history {
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint li,
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint p {
     margin: 0 !important; }
-.bbpress-wrapper#bbpress-forums .button.submit, .bbpress-wrapper#bbpress-forums input.button {
+.bbpress-wrapper#bbpress-forums .button.submit,
+.bbpress-wrapper#bbpress-forums input.button {
   display: inline-block;
   font-weight: 400;
-  line-height: 1.5;
   color: #222;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -10960,49 +10967,120 @@ table#edd_user_history {
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
+  line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #fff;
   background-color: #007bff;
   border-color: #007bff; }
   @media (prefers-reduced-motion: reduce) {
-    .bbpress-wrapper#bbpress-forums .button.submit, .bbpress-wrapper#bbpress-forums input.button {
+    .bbpress-wrapper#bbpress-forums .button.submit,
+    .bbpress-wrapper#bbpress-forums input.button {
       transition: none; } }
   .bbpress-wrapper#bbpress-forums .button.submit:hover,
   .bbpress-wrapper#bbpress-forums input.button:hover {
     color: #222;
     text-decoration: none; }
-  .btn-check:focus + .bbpress-wrapper#bbpress-forums .button.submit, .bbpress-wrapper#bbpress-forums .button.submit:focus, .btn-check:focus +
-  .bbpress-wrapper#bbpress-forums input.button,
-  .bbpress-wrapper#bbpress-forums input.button:focus {
+  .bbpress-wrapper#bbpress-forums .button.submit:focus, .bbpress-wrapper#bbpress-forums .button.submit.focus,
+  .bbpress-wrapper#bbpress-forums input.button:focus,
+  .bbpress-wrapper#bbpress-forums input.button.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .bbpress-wrapper#bbpress-forums .button.submit:disabled, .bbpress-wrapper#bbpress-forums .button.submit.disabled, fieldset:disabled .bbpress-wrapper#bbpress-forums .button.submit,
-  .bbpress-wrapper#bbpress-forums input.button:disabled,
+  .bbpress-wrapper#bbpress-forums .button.submit.disabled, .bbpress-wrapper#bbpress-forums .button.submit:disabled,
   .bbpress-wrapper#bbpress-forums input.button.disabled,
-  fieldset:disabled .bbpress-wrapper#bbpress-forums input.button {
-    pointer-events: none;
+  .bbpress-wrapper#bbpress-forums input.button:disabled {
     opacity: 0.65; }
-  .bbpress-wrapper#bbpress-forums .button.submit:hover, .bbpress-wrapper#bbpress-forums input.button:hover {
+  .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled),
+  .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled) {
+    cursor: pointer; }
+  .bbpress-wrapper#bbpress-forums .button.submit:hover,
+  .bbpress-wrapper#bbpress-forums input.button:hover {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc; }
-  .bbpress-wrapper#bbpress-forums .button.submit:focus, .bbpress-wrapper#bbpress-forums .button.submit.focus, .bbpress-wrapper#bbpress-forums input.button:focus, .bbpress-wrapper#bbpress-forums input.button.focus {
+  .bbpress-wrapper#bbpress-forums .button.submit:focus, .bbpress-wrapper#bbpress-forums .button.submit.focus,
+  .bbpress-wrapper#bbpress-forums input.button:focus,
+  .bbpress-wrapper#bbpress-forums input.button.focus {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc;
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
-  .bbpress-wrapper#bbpress-forums .button.submit.disabled, .bbpress-wrapper#bbpress-forums .button.submit:disabled, .bbpress-wrapper#bbpress-forums input.button.disabled, .bbpress-wrapper#bbpress-forums input.button:disabled {
+  .bbpress-wrapper#bbpress-forums .button.submit.disabled, .bbpress-wrapper#bbpress-forums .button.submit:disabled,
+  .bbpress-wrapper#bbpress-forums input.button.disabled,
+  .bbpress-wrapper#bbpress-forums input.button:disabled {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff; }
-  .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled):active, .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled).active, .show > .bbpress-wrapper#bbpress-forums .button.submit.dropdown-toggle, .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled):active, .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled).active, .show > .bbpress-wrapper#bbpress-forums input.button.dropdown-toggle {
+  .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled):active, .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled).active, .show > .bbpress-wrapper#bbpress-forums .button.submit.dropdown-toggle,
+  .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled):active,
+  .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled).active, .show >
+  .bbpress-wrapper#bbpress-forums input.button.dropdown-toggle {
     color: #fff;
     background-color: #0062cc;
     border-color: #005cbf; }
-    .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled):active:focus, .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled).active:focus, .show > .bbpress-wrapper#bbpress-forums .button.submit.dropdown-toggle:focus, .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled):active:focus, .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled).active:focus, .show > .bbpress-wrapper#bbpress-forums input.button.dropdown-toggle:focus {
+    .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled):active:focus, .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled).active:focus, .show > .bbpress-wrapper#bbpress-forums .button.submit.dropdown-toggle:focus,
+    .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled):active:focus,
+    .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled).active:focus, .show >
+    .bbpress-wrapper#bbpress-forums input.button.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
 .bbpress-wrapper#bbpress-forums #bbp-search-form {
   margin-bottom: 1rem; }
   .bbpress-wrapper#bbpress-forums #bbp-search-form #bbp_search {
     vertical-align: middle; }
+.bbpress-wrapper#bbpress-forums div.bbp-forum-author img.avatar,
+.bbpress-wrapper#bbpress-forums div.bbp-reply-author img.avatar,
+.bbpress-wrapper#bbpress-forums div.bbp-topic-author img.avatar {
+  border-radius: 50%;
+  margin-bottom: .25rem; }
+.bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"],
+.bbpress-wrapper#bbpress-forums fieldset.bbp-form select {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+  @media (prefers-reduced-motion: reduce) {
+    .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"],
+    .bbpress-wrapper#bbpress-forums fieldset.bbp-form select {
+      transition: none; } }
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"]::-ms-expand,
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form select::-ms-expand {
+    background-color: transparent;
+    border: 0; }
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"]:-moz-focusring,
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #495057; }
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"]:focus,
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form select:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"]::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form select::-moz-placeholder {
+    color: #6c757d;
+    opacity: 1; }
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"]:-ms-input-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form select:-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1; }
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"]::-ms-input-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form select::-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1; }
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"]::placeholder,
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form select::placeholder {
+    color: #6c757d;
+    opacity: 1; }
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"]:disabled, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"][readonly],
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form select:disabled,
+  .bbpress-wrapper#bbpress-forums fieldset.bbp-form select[readonly] {
+    background-color: #e9ecef;
+    opacity: 1; }
