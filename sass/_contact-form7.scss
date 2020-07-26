@@ -32,11 +32,8 @@
 
 	// response messages
 	div.wpcf7-response-output {
-		position: relative;
-  		padding: $alert-padding-y $alert-padding-x;
-  		margin-bottom: $alert-margin-bottom;
- 		border: $alert-border-width solid transparent;
-		@include border-radius($alert-border-radius);
+		@include c-alert;
+		
 		@include alert-variant(theme-color-level(primary, $alert-bg-level), theme-color-level(primary, $alert-border-level), theme-color-level(primary, $alert-color-level));
 		a {
 			font-weight: $alert-link-font-weight;
