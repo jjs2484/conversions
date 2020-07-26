@@ -11168,6 +11168,8 @@ table#edd_user_history {
   text-align: left;
   width: 100%;
   font-size: 0.875rem; }
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile .pw-weak label {
+  width: 20% !important; }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button {
   display: inline-block;
   font-weight: 400;
@@ -11259,8 +11261,15 @@ table#edd_user_history {
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.bad a, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.short a {
       font-weight: 700;
       color: #bd2130; }
-.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile .pw-weak label {
-  width: 20% !important; }
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-topic-search-form,
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-reply-search-form {
+  margin-bottom: .75rem; }
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-topic-search-form div,
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-reply-search-form div {
+    display: flex; }
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-topic-search-form input[type="text"],
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-reply-search-form input[type="text"] {
+    margin-right: .25rem; }
 
 .bbp_widget_login .avatar {
   border-radius: 50%; }

@@ -100,10 +100,11 @@
 			@include c-form-control;
 		}
 	}
-
+	
 	// Profile
 	&#bbpress-forums #bbp-user-wrapper {
-		// User details display
+		
+		// User avatar and nav menu
 		#bbp-single-user-details {
 			#bbp-user-avatar img.avatar {
 				border-radius: 50%;
@@ -118,11 +119,13 @@
 				}
 			}
 		}
+		
 		// User profile display
 		.bbp-user-section {
 			font-size: 0.875rem;
 			line-height: 1.5;
 		}
+
 		// User profile edit
 		#bbp-your-profile fieldset.bbp-form {
 			margin-bottom: 2rem;
@@ -146,6 +149,9 @@
 			text-align: left;
 			width: 100%;
 			font-size: 0.875rem;
+		}
+		#bbp-your-profile .pw-weak label {
+			width: 20% !important;
 		}
 		#bbp-your-profile #password {
 			.button {
@@ -178,8 +184,19 @@
 				}
 			}
 		}
-		#bbp-your-profile .pw-weak label {
-			width: 20% !important;
+
+		// Profile topics and replies search form
+		#bbp-user-body {
+			#bbp-topic-search-form,
+			#bbp-reply-search-form {
+				margin-bottom: .75rem;
+				div {
+					display: flex;
+				}
+				input[type="text"] {
+					margin-right: .25rem;
+				}
+			}
 		}
 	}
 }
