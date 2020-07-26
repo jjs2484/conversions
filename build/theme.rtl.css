@@ -8857,12 +8857,16 @@ form.post-password-form input[type="submit"] {
   color: #222;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #fff;
   background-color: #007bff;
@@ -9565,12 +9569,16 @@ figcaption.blocks-gallery-caption {
     color: #222;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
     .wp-block-button .wp-block-button__link:hover,
     .wp-block-buttons .wp-block-button .wp-block-button__link:hover {
@@ -9907,12 +9915,16 @@ figcaption.blocks-gallery-caption {
     color: #222;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
       .wc-block-grid__products .wc-block-grid__product .added_to_cart {
@@ -9969,12 +9981,16 @@ figure.woocommerce-product-gallery__wrapper {
     color: #222;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
       .woocommerce ul.products li.product .button {
@@ -10006,12 +10022,16 @@ figure.woocommerce-product-gallery__wrapper {
     color: #222;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
       .woocommerce ul.products li.product .added_to_cart {
@@ -10136,12 +10156,16 @@ a.button {
   color: #222;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #fff;
   background-color: #007bff;
@@ -10455,12 +10479,16 @@ p.woocommerce-store-notice.demo_store {
     color: #222;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     color: #fff;
     background-color: #007bff;
@@ -10546,12 +10574,16 @@ p.woocommerce-store-notice.demo_store {
   color: #222;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
