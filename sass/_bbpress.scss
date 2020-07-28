@@ -87,8 +87,20 @@
 	&#bbpress-forums {
 		.bbp-pagination {
 			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			flex-direction: column;
+			align-items: flex-end;
+			@media (min-width: 768px) {
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			.bbp-pagination-count {
+				margin-bottom: .5rem;
+				@media (min-width: 768px) {
+					margin-bottom: 0;
+				}
+			}
 		
 			.bbp-pagination-links {
 				@include c-pagination;

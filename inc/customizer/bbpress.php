@@ -1,6 +1,6 @@
 <?php
 /**
- * bbPress customizer section
+ * BBPress customizer section
  *
  * @package conversions
  */

@@ -11029,8 +11029,18 @@ table#edd_user_history {
     vertical-align: middle; }
 .bbpress-wrapper#bbpress-forums .bbp-pagination {
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  flex-direction: column;
+  align-items: flex-end; }
+  @media (min-width: 768px) {
+    .bbpress-wrapper#bbpress-forums .bbp-pagination {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; } }
+  .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-count {
+    margin-bottom: .5rem; }
+    @media (min-width: 768px) {
+      .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-count {
+        margin-bottom: 0; } }
   .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links {
     display: flex;
     padding-left: 0;
