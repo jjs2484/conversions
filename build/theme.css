@@ -10969,10 +10969,7 @@ table#edd_user_history {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff; }
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .bbpress-wrapper#bbpress-forums .button.submit,
     .bbpress-wrapper#bbpress-forums input.button {
@@ -10993,36 +10990,6 @@ table#edd_user_history {
   .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled),
   .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled) {
     cursor: pointer; }
-  .bbpress-wrapper#bbpress-forums .button.submit:hover,
-  .bbpress-wrapper#bbpress-forums input.button:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc; }
-  .bbpress-wrapper#bbpress-forums .button.submit:focus, .bbpress-wrapper#bbpress-forums .button.submit.focus,
-  .bbpress-wrapper#bbpress-forums input.button:focus,
-  .bbpress-wrapper#bbpress-forums input.button.focus {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
-  .bbpress-wrapper#bbpress-forums .button.submit.disabled, .bbpress-wrapper#bbpress-forums .button.submit:disabled,
-  .bbpress-wrapper#bbpress-forums input.button.disabled,
-  .bbpress-wrapper#bbpress-forums input.button:disabled {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff; }
-  .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled):active, .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled).active, .show > .bbpress-wrapper#bbpress-forums .button.submit.dropdown-toggle,
-  .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled):active,
-  .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled).active, .show >
-  .bbpress-wrapper#bbpress-forums input.button.dropdown-toggle {
-    color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf; }
-    .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled):active:focus, .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled).active:focus, .show > .bbpress-wrapper#bbpress-forums .button.submit.dropdown-toggle:focus,
-    .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled):active:focus,
-    .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled).active:focus, .show >
-    .bbpress-wrapper#bbpress-forums input.button.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
 .bbpress-wrapper#bbpress-forums #bbp-search-form {
   margin-bottom: .75rem; }
   .bbpress-wrapper#bbpress-forums #bbp-search-form #bbp_search {
@@ -11243,10 +11210,7 @@ table#edd_user_history {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff; }
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button {
       transition: none; } }
@@ -11260,25 +11224,6 @@ table#edd_user_history {
     opacity: 0.65; }
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:not(:disabled):not(.disabled) {
     cursor: pointer; }
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc; }
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button.focus {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button.disabled, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:disabled {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff; }
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:not(:disabled):not(.disabled):active, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:not(:disabled):not(.disabled).active, .show > .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button.dropdown-toggle {
-    color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf; }
-    .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:not(:disabled):not(.disabled):active:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:not(:disabled):not(.disabled).active:focus, .show > .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result {
   position: relative;
   padding: 0.75rem 1.25rem;

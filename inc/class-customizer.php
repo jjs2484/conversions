@@ -251,6 +251,9 @@ namespace conversions
 			// EDD button option.
 			$edd_primary_btn = get_theme_mod( 'conversions_edd_primary_btn', 'btn-primary' );
 
+			// bbPress button option.
+			$bbp_primary_btn = get_theme_mod( 'conversions_bbp_primary_btn', 'btn-primary' );
+
 			// button multidimensional array.
 			$wc_btns = [
 				'btn-primary'           => [ 'btn_bg' => '#007bff', 'btn_color' => '#fff', 'btn_border' => '#007bff', 'btn_bg_hover' => '#0069d9', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#0069d9' ],
@@ -371,6 +374,26 @@ namespace conversions
 						color: ' . esc_html( $wc_btns[$edd_primary_btn]['btn_color_hover'] ) . ';
 						background-color: ' . esc_html( $wc_btns[$edd_primary_btn]['btn_bg_hover'] ) . ';
 						border-color: ' . esc_html( $wc_btns[$edd_primary_btn]['btn_border_hover'] ) . ';
+					}';
+				}
+				// bbPress.
+				if ( class_exists( 'bbPress' ) ) {
+					// primary buttons.
+					echo '#bbpress-forums #bbp-search-form #bbp_search_submit,
+					.widget_display_search #bbp-search-form #bbp_search_submit,
+					#bbpress-forums.bbpress-wrapper .button.submit,
+					#bbpress-forums.bbpress-wrapper #bbp-user-wrapper #bbp-your-profile #password .button {
+						background: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_bg'] ) . ';
+						color: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_color'] ) . ';
+						border: 1px solid ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_border'] ) . ';
+					}';
+					echo '#bbpress-forums #bbp-search-form #bbp_search_submit:hover,
+					.widget_display_search #bbp-search-form #bbp_search_submit:hover,
+					#bbpress-forums.bbpress-wrapper .button.submit:hover,
+					#bbpress-forums.bbpress-wrapper #bbp-user-wrapper #bbp-your-profile #password .button:hover {
+						color: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_color_hover'] ) . ';
+						background-color: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_bg_hover'] ) . ';
+						border-color: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_border_hover'] ) . ';
 					}';
 				}
 				// Sidebar.

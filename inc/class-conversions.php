@@ -224,6 +224,7 @@ namespace conversions
 				'conversions_edd_nav_cart'         => true,
 				'conversions_edd_primary_btn'      => 'btn-primary',
 				'conversions_edd_download_details' => true,
+				'conversions_bbp_primary_btn'      => 'btn-primary',
 			];
 
 			foreach ( $defaults as $c => $v ) {

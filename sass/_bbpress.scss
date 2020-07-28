@@ -69,7 +69,6 @@
 		.button.submit,
 		input.button {
 			@include c-btn;
-			@include c-btn-primary;
 		}
 	}
 
@@ -188,7 +187,6 @@
 		#bbp-your-profile #password {
 			.button {
 				@include c-btn;
-				@include c-btn-primary;
 			}
 			#pass-strength-result {
 				@include c-alert;

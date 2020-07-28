@@ -66,30 +66,4 @@ if ( class_exists( 'bbPress' ) ) {
 			]
 		)
 	);
-	$wp_customize->add_setting(
-		'conversions_bbp_secondary_btn',
-		[
-			'default'           => 'btn-secondary',
-			'type'              => 'theme_mod',
-			'sanitize_callback' => 'conversions_sanitize_select',
-			'capability'        => 'edit_theme_options',
-			'transport'         => 'refresh',
-		]
-	);
-	$wp_customize->add_control(
-		new \WP_Customize_Control(
-			$wp_customize,
-			'conversions_bbp_secondary_btn',
-			[
-				'label'       => __( 'Secondary button type', 'conversions' ),
-				'description' => __( 'Select the secondary button type. Applies to: view cart, proceed to checkout, place order, etc.', 'conversions' ),
-				'section'     => 'conversions_bbpress',
-				'settings'    => 'conversions_bbp_secondary_btn',
-				'type'        => 'select',
-				'choices'     => $this->button_choices,
-				'priority'    => '45',
-			]
-		)
-	);
-
 }
