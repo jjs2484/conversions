@@ -93,6 +93,9 @@
 			.bbp-pagination-links {
 				@include c-pagination;
 				justify-content: flex-end;
+				.page-item {
+					@include c-page-item;
+				}
 				.page-link {
 					@include c-page-link;
 				}

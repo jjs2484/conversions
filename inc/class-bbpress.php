@@ -19,21 +19,18 @@ class bbPress {
 	 * @since 2020-07-24
 	 */
 	public function __construct() {
-		/**
-		* First unhook the WooCommerce wrappers
-		*/
-		add_filter( 'bbp_get_topic_pagination_links', [ $this, 'bbp_get_topic_pagination_links' ], 777 );
-
+		add_filter( 'bbp_get_topic_pagination_links', [ $this, 'bbp_get_pagination_links' ] );
+		add_filter( 'bbp_get_forum_pagination_links', [ $this, 'bbp_get_pagination_links' ] );
 	}
 
 	/**
-	 * Adds Bootstrap syntax to the bbPress Topic pagination.
+	 * Adds Bootstrap syntax to the bbPress pagination.
 	 *
 	 * @since 2020-07-26
 	 *
 	 * @param string $pagination String of the topic pagination.
 	 */
-	public function bbp_get_topic_pagination_links( $pagination ) {
+	public function bbp_get_pagination_links( $pagination ) {
 
 		$pagination = str_replace( 'span', 'a', $pagination );
 		$pagination = str_replace( 'page-numbers', 'page-link', $pagination );

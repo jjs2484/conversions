@@ -11037,6 +11037,24 @@ table#edd_user_history {
     list-style: none;
     border-radius: 0.25rem;
     justify-content: flex-end; }
+    .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child .page-link {
+      margin-left: 0;
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem; }
+    .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child .page-link {
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem; }
+    .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item.active .page-link {
+      z-index: 3;
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff; }
+    .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item.disabled .page-link {
+      color: #6c757d;
+      pointer-events: none;
+      cursor: auto;
+      background-color: #fff;
+      border-color: #dee2e6; }
     .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link {
       position: relative;
       display: block;
