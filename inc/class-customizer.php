@@ -469,6 +469,32 @@ namespace conversions
 					}
 				}
 
+				// Is bbPress active?
+				if ( class_exists( 'bbPress' ) ) {
+
+					// Append bbPress Account icon?
+					if ( get_theme_mod( 'conversions_bbp_account', false ) === true ) {
+
+						if ( is_user_logged_in() ) {
+							$bbp_al          = __( 'My Account', 'conversions' );
+							$bbp_profile_url = bbp_get_user_profile_url( bbp_get_current_user_id() );
+						} else {
+							$bbp_al          = __( 'Login / Register', 'conversions' );
+							$bbp_profile_url = wp_login_url();
+						}
+
+						// output the account icon if active.
+						$bbp_account_link = sprintf(
+							'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
+							esc_url( $bbp_profile_url ),
+							$bbp_al
+						);
+
+						// Add the account to the end of the menu.
+						$items .= $bbp_account_link;
+					}
+				}
+
 				// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 				if ( get_theme_mod( 'conversions_nav_search_icon', false ) === true ) {
 					$nav_search = sprintf(
