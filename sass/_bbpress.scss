@@ -83,6 +83,23 @@
 		}
 	}
 
+	// Pagination
+	&#bbpress-forums {
+		.bbp-pagination {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		
+			.bbp-pagination-links {
+				@include c-pagination;
+				justify-content: flex-end;
+				.page-link {
+					@include c-page-link;
+				}
+			}
+		}
+	}
+
 	// Avatars
 	&#bbpress-forums {
 		div.bbp-forum-author img.avatar,

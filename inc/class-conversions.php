@@ -50,6 +50,7 @@ namespace conversions
 			require_once get_parent_theme_file_path( '/inc/class-wp-bootstrap-comment-walker.php' );
 			require_once get_parent_theme_file_path( '/inc/class-wp-bootstrap-navwalker.php' );
 			require_once get_parent_theme_file_path( '/inc/class-easy-digital-downloads.php' );
+			require_once get_parent_theme_file_path( '/inc/class-bbpress.php' );
 			require_once get_parent_theme_file_path( '/inc/class-tgm-plugin-activation.php' );
 			// phpcs:enable
 			$this->setup();

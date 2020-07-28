@@ -37,7 +37,7 @@
 		@include alert-variant(theme-color-level(primary, $alert-bg-level), theme-color-level(primary, $alert-border-level), theme-color-level(primary, $alert-color-level));
 		a {
 			font-weight: $alert-link-font-weight;
-			color: darken($blue, 10%);
+			color: darken($primary, 10%);
 		}
 
 		&.wpcf7-mail-sent-ok {

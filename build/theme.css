@@ -11027,6 +11027,35 @@ table#edd_user_history {
   margin-bottom: .75rem; }
   .bbpress-wrapper#bbpress-forums #bbp-search-form #bbp_search {
     vertical-align: middle; }
+.bbpress-wrapper#bbpress-forums .bbp-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+    justify-content: flex-end; }
+    .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link {
+      position: relative;
+      display: block;
+      padding: 0.5rem 0.75rem;
+      margin-left: -1px;
+      line-height: 1.25;
+      color: #007bff;
+      background-color: #fff;
+      border: 1px solid #dee2e6; }
+      .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link:hover {
+        z-index: 2;
+        color: #0056b3;
+        text-decoration: none;
+        background-color: #e9ecef;
+        border-color: #dee2e6; }
+      .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link:focus {
+        z-index: 3;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 .bbpress-wrapper#bbpress-forums div.bbp-forum-author img.avatar,
 .bbpress-wrapper#bbpress-forums div.bbp-reply-author img.avatar,
 .bbpress-wrapper#bbpress-forums div.bbp-topic-author img.avatar {
