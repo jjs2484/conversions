@@ -4,9 +4,9 @@
 #edd-purchase-button,
 .edd-submit,
 [type="submit"].edd-submit {
-	@include c-btn;
-	@include c-btn-lg;
-	@include c-btn-block;
+	@extend .btn;
+	@extend .btn-lg;
+	@extend .btn-block;
 }
 
 // Single product pages
@@ -138,7 +138,7 @@
 #edd_download_pagination {
 	justify-content: center;
 	margin-bottom: 1.5rem;
-	@include c-pagination;
+	@extend .pagination;
 
 	> :first-child {
 		border-radius: 0.25rem 0 0 0.25rem;
@@ -148,7 +148,7 @@
 	}
 
 	.page-numbers {
-		@include c-page-link;
+		@extend .page-link;
 		&.current {
 			color: #fff;
 			background-color: $primary;

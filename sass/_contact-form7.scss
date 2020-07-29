@@ -9,8 +9,8 @@
 
 	// submit button, inherit .btn and .btn-outline-primary classes.
 	input[type="submit"] {
-		@include c-btn;
-		@include c-btn-primary;
+		@extend .btn;
+		@extend .btn-primary;
 	}
 
 	.wpcf7-form {
@@ -32,7 +32,7 @@
 
 	// response messages
 	div.wpcf7-response-output {
-		@include c-alert;
+		@extend .alert;
 		
 		@include alert-variant(theme-color-level(primary, $alert-bg-level), theme-color-level(primary, $alert-border-level), theme-color-level(primary, $alert-color-level));
 		a {

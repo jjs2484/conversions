@@ -32,7 +32,7 @@ figure.woocommerce-product-gallery__wrapper {
 		margin-top: 0.3em;
 		font-weight: normal;
 		vertical-align: middle;
-		@include c-btn;
+		@extend .btn;
 		&.added::after {
 			display: none;
 		}
@@ -50,7 +50,7 @@ figure.woocommerce-product-gallery__wrapper {
 		margin-top: 0.3em;
 		font-weight: normal;
 		vertical-align: middle;
-		@include c-btn;
+		@extend .btn;
 		&:focus {
 			box-shadow: none;
 		}
@@ -151,8 +151,8 @@ p.no-comments::before {
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons
 a.button {
-	@include c-btn;
-	@include c-btn-primary;
+	@extend .btn;
+	@extend .btn-primary;
 }
 
 // single product pages
@@ -270,13 +270,13 @@ body.woocommerce-cart {
 	ul {
 		border: 0;
 		&.page-numbers {
-			@include c-pagination;
+			@extend .pagination;
 			li {
 				border-right: 0;
-				@include c-page-item;
+				@extend .page-item;
 				span.page-numbers,
 				a.page-numbers {
-					@include c-page-link;
+					@extend .page-link;
 					&.current {
 						color: $white;
 						background-color: $primary;

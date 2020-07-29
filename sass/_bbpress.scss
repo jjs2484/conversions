@@ -29,7 +29,7 @@
 	// Add Bootstrap alerts
 	div.bbp-template-notice, 
 	.bbpress-wrapper div.indicator-hint {
-		@include c-alert;
+		@extend .alert;
 		
 		// add a default color in case no colors are defined
 		@include alert-variant(theme-color-level(warning, $alert-bg-level), theme-color-level(warning, $alert-border-level), theme-color-level(warning, $alert-color-level));
@@ -68,7 +68,7 @@
 	&#bbpress-forums {
 		.button.submit,
 		input.button {
-			@include c-btn;
+			@extend .btn;
 		}
 	}
 
@@ -102,13 +102,13 @@
 			}
 		
 			.bbp-pagination-links {
-				@include c-pagination;
+				@extend .pagination;
 				justify-content: flex-end;
 				.page-item {
-					@include c-page-item;
+					@extend .page-item;
 				}
 				.page-link {
-					@include c-page-link;
+					@extend .page-link;
 				}
 			}
 		}
@@ -128,7 +128,7 @@
 	&#bbpress-forums {
 		fieldset.bbp-form input[type="text"], 
 		fieldset.bbp-form select {
-			@include c-form-control;
+			@extend .form-control;
 		}
 	}
 	
@@ -167,7 +167,7 @@
 		#bbp-your-profile fieldset input,
 		#bbp-your-profile fieldset textarea,
 		#bbp-your-profile fieldset select {
-			@include c-form-control;
+			@extend .form-control;
 		}
 		#bbp-your-profile fieldset.bbp-form input.checkbox {
 			width: auto;
@@ -186,10 +186,10 @@
 		}
 		#bbp-your-profile #password {
 			.button {
-				@include c-btn;
+				@extend .btn;
 			}
 			#pass-strength-result {
-				@include c-alert;
+				@extend .alert;
 
 				&.strong {
 					@include alert-variant(theme-color-level(success, $alert-bg-level), theme-color-level(success, $alert-border-level), theme-color-level(success, $alert-color-level));

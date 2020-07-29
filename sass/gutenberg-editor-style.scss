@@ -4,7 +4,6 @@
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/buttons";
-@import "mixins";
 
 // Add padding to wrapper to prevent overflow
 .editor-styles-wrapper {
@@ -310,7 +309,7 @@ $block-btns: (
 		&:hover {
 			text-decoration: none;
 		}
-		@include c-btn;
+		@extend .btn;
 	}
 
 	// button styles if no button type
@@ -615,9 +614,9 @@ $block-btns: (
 			display: none;
 		}
 		a.edd-add-to-cart {
-			@include c-btn;
-			@include c-btn-lg;
-			@include c-btn-block;
+			@extend .btn;
+			@extend .btn-lg;
+			@extend .btn-block;
 		}
 	}
 }
