@@ -9,7 +9,7 @@ $wp_customize->add_section(
 	'conversions_blog',
 	[
 		'title'      => __( 'Blog', 'conversions' ),
-		'priority'   => 21,
+		'priority'   => 46,
 		'capability' => 'edit_theme_options',
 	]
 );

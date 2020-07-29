@@ -111,9 +111,8 @@ namespace conversions
 			];
 
 			// -----------------------------------------------------
-			// Remove some default sections
+			// Remove background image section
 			// -----------------------------------------------------
-			$wp_customize->get_section( 'colors' )->active_callback           = '__return_false';
 			$wp_customize->get_section( 'background_image' )->active_callback = '__return_false';
 
 			// -----------------------------------------------------
@@ -160,6 +159,7 @@ namespace conversions
 			include get_parent_theme_file_path( '/inc/customizer/woocommerce.php' );
 			include get_parent_theme_file_path( '/inc/customizer/edd.php' );
 			include get_parent_theme_file_path( '/inc/customizer/bbpress.php' );
+			include get_parent_theme_file_path( '/inc/customizer/colors.php' );
 			// phpcs:enable
 
 			do_action( 'conversions_customize_register', $this );
@@ -321,6 +321,23 @@ namespace conversions
 				if ( get_theme_mod( 'conversions_nav_dropshadow', false ) === true ) {
 					echo '#wrapper-navbar {
 						box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+					}';
+				}
+				// Article card.
+				if ( get_theme_mod( 'conversions_content_cards', false ) === true ) {
+					echo 'body.page #primary #main > article, 
+					body.single #primary #main > article, 
+					body.archive #primary #main > article {
+						position: relative;
+						display: flex;
+						flex-direction: column;
+						min-width: 0;
+						word-wrap: break-word;
+						background-color: #fff;
+						border: 1px solid rgba(0,0,0,.125);
+						border-radius: .25rem;
+						box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+						padding: 2rem;
 					}';
 				}
 				// Featured image.

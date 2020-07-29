@@ -9,7 +9,7 @@ $wp_customize->add_section(
 	'conversions_nav',
 	[
 		'title'      => __( 'Navbar', 'conversions' ),
-		'priority'   => 21,
+		'priority'   => 41,
 		'capability' => 'edit_theme_options',
 	]
 );

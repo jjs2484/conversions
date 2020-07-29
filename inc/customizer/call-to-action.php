@@ -9,7 +9,7 @@ $wp_customize->add_section(
 	'conversions_cta',
 	[
 		'title'      => __( 'Call to Action', 'conversions' ),
-		'priority'   => 21,
+		'priority'   => 44,
 		'capability' => 'edit_theme_options',
 	]
 );

@@ -10,7 +10,7 @@ $wp_customize->add_section(
 	[
 		'title'      => __( 'Layout', 'conversions' ),
 		'capability' => 'edit_theme_options',
-		'priority'   => 21,
+		'priority'   => 42,
 	]
 );
 $wp_customize->add_setting(
@@ -63,6 +63,30 @@ $wp_customize->add_control(
 			'settings'    => 'conversions_sidebar_mv',
 			'type'        => 'checkbox',
 			'priority'    => '30',
+		]
+	)
+);
+$wp_customize->add_setting(
+	'conversions_content_cards',
+	[
+		'default'           => false,
+		'type'              => 'theme_mod',
+		'sanitize_callback' => 'conversions_sanitize_checkbox',
+		'capability'        => 'edit_theme_options',
+		'transport'         => 'refresh',
+	]
+);
+$wp_customize->add_control(
+	new \WP_Customize_Control(
+		$wp_customize,
+		'conversions_content_cards',
+		[
+			'label'       => __( 'Content container card?', 'conversions' ),
+			'description' => __( 'Check to turn content container in a card.', 'conversions' ),
+			'section'     => 'conversions_layout_options',
+			'settings'    => 'conversions_content_cards',
+			'type'        => 'checkbox',
+			'priority'    => '40',
 		]
 	)
 );
