@@ -170,9 +170,9 @@ class Template {
 			return;
 		}
 		?>
-				<nav class="container navigation post-navigation">
+				<nav class="row navigation post-navigation">
 					<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'conversions' ); ?></h2>
-					<div class="row nav-links justify-content-between">
+					<div class="nav-links d-flex justify-content-between">
 						<?php
 						if ( get_previous_post_link() ) {
 							previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-double-left"></i>&nbsp;%title', 'Previous post link', 'conversions' ) );
@@ -379,10 +379,10 @@ class Template {
 		global $post;
 
 		// Get featured image sizes.
-		$medium       = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium', false );
-		$medium_large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium_large', false );
-		$large        = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
-		$conversions_fullscreen   = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'conversions-fullscreen', false );
+		$medium                 = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium', false );
+		$medium_large           = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium_large', false );
+		$large                  = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
+		$conversions_fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'conversions-fullscreen', false );
 
 		if ( is_page_template( 'page-templates/homepage.php' ) ) : // homepage template.
 			// Get the customizer setting.

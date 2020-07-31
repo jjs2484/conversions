@@ -239,6 +239,13 @@ section p.subtitle {
 	.comment-navigation {
 		margin: 1rem 0;
 	}
+	.post-navigation .nav-links {
+		flex: 0 0 100%;
+		flex-flow: wrap;
+		.nav-previous {
+			margin-right: 2rem;
+		}
+	}
 }
 
 // Related posts

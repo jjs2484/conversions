@@ -203,7 +203,8 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: NPM dependencies.
 * Fix: Convert any hardcoded CSS colors to Bootstrap variables when available.
 * Fix: Add dl to footer conversions_footer_text_color style.
-* Fix: Remove role attributes from the nav menu.
+* Fix: Remove role attributes from the navbar menu.
+* Fix: Adjust post_nav HTML output.
 
 == Resources ==
 

@@ -351,8 +351,8 @@ namespace conversions
 						body.page #primary #main > :not(article), 
 						body.single #primary #main > :not(article), 
 						body.archive #primary #main > :not(article) {
-							margin-left: 15px;
-							margin-right: 15px;
+							padding-left: 15px;
+							padding-right: 15px;
 						}
 					}';
 				}

@@ -82,7 +82,7 @@ $wp_customize->add_control(
 		'conversions_content_cards',
 		[
 			'label'       => __( 'Content container card?', 'conversions' ),
-			'description' => __( 'Check to turn content container in a card.', 'conversions' ),
+			'description' => __( 'Experimental: check to turn content container in a card.', 'conversions' ),
 			'section'     => 'conversions_layout_options',
 			'settings'    => 'conversions_content_cards',
 			'type'        => 'checkbox',

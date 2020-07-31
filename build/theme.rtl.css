@@ -11603,6 +11603,11 @@ section p.subtitle {
   margin: 1.5rem 0; }
 .single-post .comment-navigation {
   margin: 1rem 0; }
+.single-post .post-navigation .nav-links {
+  flex: 0 0 100%;
+  flex-flow: wrap; }
+  .single-post .post-navigation .nav-links .nav-previous {
+    margin-left: 2rem; }
 
 .c-related-posts .col-12 {
   padding: 0; }
