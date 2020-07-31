@@ -2297,7 +2297,7 @@ textarea.is-invalid,
 a.button, .wpcf7 input[type="submit"], #edd-purchase-button,
 .edd-submit,
 [type="submit"].edd-submit, .bbpress-wrapper#bbpress-forums .button.submit,
-.bbpress-wrapper#bbpress-forums input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button {
+.bbpress-wrapper#bbpress-forums input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button, .widget_display_search #bbp-search-form #bbp_search_submit {
   display: inline-block;
   font-weight: 400;
   color: #222;
@@ -2322,14 +2322,14 @@ a.button, .wpcf7 input[type="submit"], #edd-purchase-button,
     a.button, .wpcf7 input[type="submit"], #edd-purchase-button,
     .edd-submit,
     [type="submit"].edd-submit, .bbpress-wrapper#bbpress-forums .button.submit,
-    .bbpress-wrapper#bbpress-forums input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button {
+    .bbpress-wrapper#bbpress-forums input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button, .widget_display_search #bbp-search-form #bbp_search_submit {
       transition: none; } }
   .btn:hover, form.post-password-form input[type="submit"]:hover, .wp-block-button .wp-block-button__link:hover, .wc-block-grid__products .wc-block-grid__product .added_to_cart:hover, .woocommerce ul.products li.product .button:hover, .woocommerce ul.products li.product .added_to_cart:hover, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
   a.button:hover, .wpcf7 input[type="submit"]:hover, #edd-purchase-button:hover,
   .edd-submit:hover, .bbpress-wrapper#bbpress-forums .button.submit:hover,
-  .bbpress-wrapper#bbpress-forums input.button:hover, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:hover {
+  .bbpress-wrapper#bbpress-forums input.button:hover, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:hover, .widget_display_search #bbp-search-form #bbp_search_submit:hover {
     color: #222;
     text-decoration: none; }
   .btn:focus, form.post-password-form input[type="submit"]:focus, .wp-block-button .wp-block-button__link:focus, .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus, .woocommerce ul.products li.product .button:focus, .woocommerce ul.products li.product .added_to_cart:focus, #footer-full-content
@@ -2337,12 +2337,12 @@ a.button, .wpcf7 input[type="submit"], #edd-purchase-button,
   .woocommerce-mini-cart__buttons.buttons
   a.button:focus, .wpcf7 input[type="submit"]:focus, #edd-purchase-button:focus,
   .edd-submit:focus, .bbpress-wrapper#bbpress-forums .button.submit:focus,
-  .bbpress-wrapper#bbpress-forums input.button:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:focus, .btn.focus, form.post-password-form input.focus[type="submit"], .wp-block-button .focus.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .focus.added_to_cart, .woocommerce ul.products li.product .focus.button, .woocommerce ul.products li.product .focus.added_to_cart, #footer-full-content
+  .bbpress-wrapper#bbpress-forums input.button:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:focus, .widget_display_search #bbp-search-form #bbp_search_submit:focus, .btn.focus, form.post-password-form input.focus[type="submit"], .wp-block-button .focus.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .focus.added_to_cart, .woocommerce ul.products li.product .focus.button, .woocommerce ul.products li.product .focus.added_to_cart, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
   a.focus.button, .wpcf7 input.focus[type="submit"], .focus#edd-purchase-button,
   .focus.edd-submit, .bbpress-wrapper#bbpress-forums .focus.button.submit,
-  .bbpress-wrapper#bbpress-forums input.focus.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .focus.button {
+  .bbpress-wrapper#bbpress-forums input.focus.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .focus.button, .widget_display_search #bbp-search-form .focus#bbp_search_submit {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .btn.disabled, form.post-password-form input.disabled[type="submit"], .wp-block-button .disabled.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .disabled.added_to_cart, .woocommerce ul.products li.product .disabled.button, .woocommerce ul.products li.product .disabled.added_to_cart, #footer-full-content
@@ -2350,26 +2350,26 @@ a.button, .wpcf7 input[type="submit"], #edd-purchase-button,
   .woocommerce-mini-cart__buttons.buttons
   a.disabled.button, .wpcf7 input.disabled[type="submit"], .disabled#edd-purchase-button,
   .disabled.edd-submit, .bbpress-wrapper#bbpress-forums .disabled.button.submit,
-  .bbpress-wrapper#bbpress-forums input.disabled.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .disabled.button, .btn:disabled, form.post-password-form input[type="submit"]:disabled, .wp-block-button .wp-block-button__link:disabled, .wc-block-grid__products .wc-block-grid__product .added_to_cart:disabled, .woocommerce ul.products li.product .button:disabled, .woocommerce ul.products li.product .added_to_cart:disabled, #footer-full-content
+  .bbpress-wrapper#bbpress-forums input.disabled.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .disabled.button, .widget_display_search #bbp-search-form .disabled#bbp_search_submit, .btn:disabled, form.post-password-form input[type="submit"]:disabled, .wp-block-button .wp-block-button__link:disabled, .wc-block-grid__products .wc-block-grid__product .added_to_cart:disabled, .woocommerce ul.products li.product .button:disabled, .woocommerce ul.products li.product .added_to_cart:disabled, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
   a.button:disabled, .wpcf7 input[type="submit"]:disabled, #edd-purchase-button:disabled,
   .edd-submit:disabled, .bbpress-wrapper#bbpress-forums .button.submit:disabled,
-  .bbpress-wrapper#bbpress-forums input.button:disabled, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:disabled {
+  .bbpress-wrapper#bbpress-forums input.button:disabled, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:disabled, .widget_display_search #bbp-search-form #bbp_search_submit:disabled {
     opacity: 0.65; }
   .btn:not(:disabled):not(.disabled), form.post-password-form input[type="submit"]:not(:disabled):not(.disabled), .wp-block-button .wp-block-button__link:not(:disabled):not(.disabled), .wc-block-grid__products .wc-block-grid__product .added_to_cart:not(:disabled):not(.disabled), .woocommerce ul.products li.product .button:not(:disabled):not(.disabled), .woocommerce ul.products li.product .added_to_cart:not(:disabled):not(.disabled), #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
   a.button:not(:disabled):not(.disabled), .wpcf7 input[type="submit"]:not(:disabled):not(.disabled), #edd-purchase-button:not(:disabled):not(.disabled),
   .edd-submit:not(:disabled):not(.disabled), .bbpress-wrapper#bbpress-forums .button.submit:not(:disabled):not(.disabled),
-  .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:not(:disabled):not(.disabled) {
+  .bbpress-wrapper#bbpress-forums input.button:not(:disabled):not(.disabled), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:not(:disabled):not(.disabled), .widget_display_search #bbp-search-form #bbp_search_submit:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
 a.btn.disabled, .wp-block-button a.disabled.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product a.disabled.added_to_cart, .woocommerce ul.products li.product a.disabled.button, .woocommerce ul.products li.product a.disabled.added_to_cart, #footer-full-content
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons
 a.disabled.button, a.disabled#edd-purchase-button,
-a.disabled.edd-submit, .bbpress-wrapper#bbpress-forums a.disabled.button.submit, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password a.disabled.button,
+a.disabled.edd-submit, .bbpress-wrapper#bbpress-forums a.disabled.button.submit, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password a.disabled.button, .widget_display_search #bbp-search-form a.disabled#bbp_search_submit,
 fieldset:disabled a.btn,
 fieldset:disabled .wp-block-button a.wp-block-button__link,
 .wp-block-button fieldset:disabled a.wp-block-button__link,
@@ -2390,7 +2390,9 @@ fieldset:disabled a.edd-submit,
 fieldset:disabled .bbpress-wrapper#bbpress-forums a.button.submit,
 .bbpress-wrapper#bbpress-forums fieldset:disabled a.button.submit,
 fieldset:disabled .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password a.button,
-.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password fieldset:disabled a.button {
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password fieldset:disabled a.button,
+fieldset:disabled .widget_display_search #bbp-search-form a#bbp_search_submit,
+.widget_display_search #bbp-search-form fieldset:disabled a#bbp_search_submit {
   pointer-events: none; }
 
 .btn-primary, form.post-password-form input[type="submit"], #footer-full-content
@@ -2788,7 +2790,7 @@ a.button, .wpcf7 input[type="submit"] {
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons .btn-group-lg > a.button, .wpcf7 .btn-group-lg > input[type="submit"],
 .btn-group-lg > .edd-submit, .bbpress-wrapper#bbpress-forums .btn-group-lg > .button.submit,
-.bbpress-wrapper#bbpress-forums .btn-group-lg > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-lg > .button, #edd-purchase-button,
+.bbpress-wrapper#bbpress-forums .btn-group-lg > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-lg > .button, .widget_display_search #bbp-search-form .btn-group-lg > #bbp_search_submit, #edd-purchase-button,
 .edd-submit,
 [type="submit"].edd-submit {
   padding: 0.5rem 1rem;
@@ -2800,7 +2802,7 @@ a.button, .wpcf7 input[type="submit"] {
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons .btn-group-sm > a.button, .wpcf7 .btn-group-sm > input[type="submit"], .btn-group-sm > #edd-purchase-button,
 .btn-group-sm > .edd-submit, .bbpress-wrapper#bbpress-forums .btn-group-sm > .button.submit,
-.bbpress-wrapper#bbpress-forums .btn-group-sm > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-sm > .button {
+.bbpress-wrapper#bbpress-forums .btn-group-sm > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-sm > .button, .widget_display_search #bbp-search-form .btn-group-sm > #bbp_search_submit {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3050,7 +3052,7 @@ input[type="button"].edd-submit {
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons .btn-group > a.button, .wpcf7 .btn-group > input[type="submit"], .btn-group > #edd-purchase-button,
   .btn-group > .edd-submit, .bbpress-wrapper#bbpress-forums .btn-group > .button.submit,
-  .bbpress-wrapper#bbpress-forums .btn-group > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button,
+  .bbpress-wrapper#bbpress-forums .btn-group > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button, .widget_display_search #bbp-search-form .btn-group > #bbp_search_submit,
   .btn-group-vertical > .btn,
   form.post-password-form .btn-group-vertical > input[type="submit"],
   .wp-block-button .btn-group-vertical > .wp-block-button__link,
@@ -3065,14 +3067,15 @@ input[type="button"].edd-submit {
   .btn-group-vertical > .edd-submit,
   .bbpress-wrapper#bbpress-forums .btn-group-vertical > .button.submit,
   .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button,
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button {
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button,
+  .widget_display_search #bbp-search-form .btn-group-vertical > #bbp_search_submit {
     position: relative;
     flex: 1 1 auto; }
     .btn-group > .btn:hover, form.post-password-form .btn-group > input[type="submit"]:hover, .wp-block-button .btn-group > .wp-block-button__link:hover, .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:hover, .woocommerce ul.products li.product .btn-group > .button:hover, .woocommerce ul.products li.product .btn-group > .added_to_cart:hover, #footer-full-content
     .woocommerce.widget_shopping_cart
     .woocommerce-mini-cart__buttons.buttons .btn-group > a.button:hover, .wpcf7 .btn-group > input[type="submit"]:hover, .btn-group > #edd-purchase-button:hover,
     .btn-group > .edd-submit:hover, .bbpress-wrapper#bbpress-forums .btn-group > .button.submit:hover,
-    .bbpress-wrapper#bbpress-forums .btn-group > input.button:hover, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:hover,
+    .bbpress-wrapper#bbpress-forums .btn-group > input.button:hover, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:hover, .widget_display_search #bbp-search-form .btn-group > #bbp_search_submit:hover,
     .btn-group-vertical > .btn:hover,
     form.post-password-form .btn-group-vertical > input[type="submit"]:hover,
     .wp-block-button .btn-group-vertical > .wp-block-button__link:hover,
@@ -3087,21 +3090,22 @@ input[type="button"].edd-submit {
     .btn-group-vertical > .edd-submit:hover,
     .bbpress-wrapper#bbpress-forums .btn-group-vertical > .button.submit:hover,
     .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button:hover,
-    .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button:hover {
+    .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button:hover,
+    .widget_display_search #bbp-search-form .btn-group-vertical > #bbp_search_submit:hover {
       z-index: 1; }
     .btn-group > .btn:focus, form.post-password-form .btn-group > input[type="submit"]:focus, .wp-block-button .btn-group > .wp-block-button__link:focus, .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:focus, .woocommerce ul.products li.product .btn-group > .button:focus, .woocommerce ul.products li.product .btn-group > .added_to_cart:focus, #footer-full-content
     .woocommerce.widget_shopping_cart
     .woocommerce-mini-cart__buttons.buttons .btn-group > a.button:focus, .wpcf7 .btn-group > input[type="submit"]:focus, .btn-group > #edd-purchase-button:focus,
     .btn-group > .edd-submit:focus, .bbpress-wrapper#bbpress-forums .btn-group > .button.submit:focus,
-    .bbpress-wrapper#bbpress-forums .btn-group > input.button:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:focus, .btn-group > .btn:active, form.post-password-form .btn-group > input[type="submit"]:active, .wp-block-button .btn-group > .wp-block-button__link:active, .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:active, .woocommerce ul.products li.product .btn-group > .button:active, .woocommerce ul.products li.product .btn-group > .added_to_cart:active, #footer-full-content
+    .bbpress-wrapper#bbpress-forums .btn-group > input.button:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:focus, .widget_display_search #bbp-search-form .btn-group > #bbp_search_submit:focus, .btn-group > .btn:active, form.post-password-form .btn-group > input[type="submit"]:active, .wp-block-button .btn-group > .wp-block-button__link:active, .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:active, .woocommerce ul.products li.product .btn-group > .button:active, .woocommerce ul.products li.product .btn-group > .added_to_cart:active, #footer-full-content
     .woocommerce.widget_shopping_cart
     .woocommerce-mini-cart__buttons.buttons .btn-group > a.button:active, .wpcf7 .btn-group > input[type="submit"]:active, .btn-group > #edd-purchase-button:active,
     .btn-group > .edd-submit:active, .bbpress-wrapper#bbpress-forums .btn-group > .button.submit:active,
-    .bbpress-wrapper#bbpress-forums .btn-group > input.button:active, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:active, .btn-group > .btn.active, form.post-password-form .btn-group > input.active[type="submit"], .wp-block-button .btn-group > .active.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .btn-group > .active.added_to_cart, .woocommerce ul.products li.product .btn-group > .active.button, .woocommerce ul.products li.product .btn-group > .active.added_to_cart, #footer-full-content
+    .bbpress-wrapper#bbpress-forums .btn-group > input.button:active, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:active, .widget_display_search #bbp-search-form .btn-group > #bbp_search_submit:active, .btn-group > .btn.active, form.post-password-form .btn-group > input.active[type="submit"], .wp-block-button .btn-group > .active.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .btn-group > .active.added_to_cart, .woocommerce ul.products li.product .btn-group > .active.button, .woocommerce ul.products li.product .btn-group > .active.added_to_cart, #footer-full-content
     .woocommerce.widget_shopping_cart
     .woocommerce-mini-cart__buttons.buttons .btn-group > a.active.button, .wpcf7 .btn-group > input.active[type="submit"], .btn-group > .active#edd-purchase-button,
     .btn-group > .active.edd-submit, .bbpress-wrapper#bbpress-forums .btn-group > .active.button.submit,
-    .bbpress-wrapper#bbpress-forums .btn-group > input.active.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .active.button,
+    .bbpress-wrapper#bbpress-forums .btn-group > input.active.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .active.button, .widget_display_search #bbp-search-form .btn-group > .active#bbp_search_submit,
     .btn-group-vertical > .btn:focus,
     form.post-password-form .btn-group-vertical > input[type="submit"]:focus,
     .wp-block-button .btn-group-vertical > .wp-block-button__link:focus,
@@ -3117,6 +3121,7 @@ input[type="button"].edd-submit {
     .bbpress-wrapper#bbpress-forums .btn-group-vertical > .button.submit:focus,
     .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button:focus,
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button:focus,
+    .widget_display_search #bbp-search-form .btn-group-vertical > #bbp_search_submit:focus,
     .btn-group-vertical > .btn:active,
     form.post-password-form .btn-group-vertical > input[type="submit"]:active,
     .wp-block-button .btn-group-vertical > .wp-block-button__link:active,
@@ -3132,6 +3137,7 @@ input[type="button"].edd-submit {
     .bbpress-wrapper#bbpress-forums .btn-group-vertical > .button.submit:active,
     .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button:active,
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button:active,
+    .widget_display_search #bbp-search-form .btn-group-vertical > #bbp_search_submit:active,
     .btn-group-vertical > .btn.active,
     form.post-password-form .btn-group-vertical > input.active[type="submit"],
     .wp-block-button .btn-group-vertical > .active.wp-block-button__link,
@@ -3146,7 +3152,8 @@ input[type="button"].edd-submit {
     .btn-group-vertical > .active.edd-submit,
     .bbpress-wrapper#bbpress-forums .btn-group-vertical > .active.button.submit,
     .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.active.button,
-    .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .active.button {
+    .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .active.button,
+    .widget_display_search #bbp-search-form .btn-group-vertical > .active#bbp_search_submit {
       z-index: 1; }
 
 .btn-toolbar {
@@ -3160,14 +3167,14 @@ input[type="button"].edd-submit {
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons .btn-group > a.button:not(:first-child), .wpcf7 .btn-group > input[type="submit"]:not(:first-child), .btn-group > #edd-purchase-button:not(:first-child),
 .btn-group > .edd-submit:not(:first-child), .bbpress-wrapper#bbpress-forums .btn-group > .button.submit:not(:first-child),
-.bbpress-wrapper#bbpress-forums .btn-group > input.button:not(:first-child), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:not(:first-child),
+.bbpress-wrapper#bbpress-forums .btn-group > input.button:not(:first-child), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:not(:first-child), .widget_display_search #bbp-search-form .btn-group > #bbp_search_submit:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle), form.post-password-form .btn-group > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .wp-block-button .btn-group > .wp-block-button__link:not(:last-child):not(.dropdown-toggle), .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:not(:last-child):not(.dropdown-toggle), .woocommerce ul.products li.product .btn-group > .button:not(:last-child):not(.dropdown-toggle), .woocommerce ul.products li.product .btn-group > .added_to_cart:not(:last-child):not(.dropdown-toggle), #footer-full-content
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons .btn-group > a.button:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group > #edd-purchase-button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .edd-submit:not(:last-child):not(.dropdown-toggle), .bbpress-wrapper#bbpress-forums .btn-group > .button.submit:not(:last-child):not(.dropdown-toggle),
-.bbpress-wrapper#bbpress-forums .btn-group > input.button:not(:last-child):not(.dropdown-toggle), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:not(:last-child):not(.dropdown-toggle),
+.bbpress-wrapper#bbpress-forums .btn-group > input.button:not(:last-child):not(.dropdown-toggle), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:not(:last-child):not(.dropdown-toggle), .widget_display_search #bbp-search-form .btn-group > #bbp_search_submit:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 form.post-password-form .btn-group > .btn-group:not(:last-child) > input[type="submit"],
 .wp-block-button .btn-group > .btn-group:not(:last-child) > .wp-block-button__link,
@@ -3182,14 +3189,15 @@ form.post-password-form .btn-group > .btn-group:not(:last-child) > input[type="s
 .btn-group > .btn-group:not(:last-child) > .edd-submit,
 .bbpress-wrapper#bbpress-forums .btn-group > .btn-group:not(:last-child) > .button.submit,
 .bbpress-wrapper#bbpress-forums .btn-group > .btn-group:not(:last-child) > input.button,
-.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .btn-group:not(:last-child) > .button {
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .btn-group:not(:last-child) > .button,
+.widget_display_search #bbp-search-form .btn-group > .btn-group:not(:last-child) > #bbp_search_submit {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 .btn-group > .btn:not(:first-child), form.post-password-form .btn-group > input[type="submit"]:not(:first-child), .wp-block-button .btn-group > .wp-block-button__link:not(:first-child), .wc-block-grid__products .wc-block-grid__product .btn-group > .added_to_cart:not(:first-child), .woocommerce ul.products li.product .btn-group > .button:not(:first-child), .woocommerce ul.products li.product .btn-group > .added_to_cart:not(:first-child), #footer-full-content
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons .btn-group > a.button:not(:first-child), .wpcf7 .btn-group > input[type="submit"]:not(:first-child), .btn-group > #edd-purchase-button:not(:first-child),
 .btn-group > .edd-submit:not(:first-child), .bbpress-wrapper#bbpress-forums .btn-group > .button.submit:not(:first-child),
-.bbpress-wrapper#bbpress-forums .btn-group > input.button:not(:first-child), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:not(:first-child),
+.bbpress-wrapper#bbpress-forums .btn-group > input.button:not(:first-child), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:not(:first-child), .widget_display_search #bbp-search-form .btn-group > #bbp_search_submit:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="submit"],
 .wp-block-button .btn-group > .btn-group:not(:first-child) > .wp-block-button__link,
@@ -3204,7 +3212,8 @@ form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="
 .btn-group > .btn-group:not(:first-child) > .edd-submit,
 .bbpress-wrapper#bbpress-forums .btn-group > .btn-group:not(:first-child) > .button.submit,
 .bbpress-wrapper#bbpress-forums .btn-group > .btn-group:not(:first-child) > input.button,
-.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .btn-group:not(:first-child) > .button {
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .btn-group:not(:first-child) > .button,
+.widget_display_search #bbp-search-form .btn-group > .btn-group:not(:first-child) > #bbp_search_submit {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -3220,7 +3229,7 @@ form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons .btn-group-sm > a.button + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type="submit"] + .dropdown-toggle-split, .btn-group-sm > #edd-purchase-button + .dropdown-toggle-split,
 .btn-group-sm > .edd-submit + .dropdown-toggle-split, .bbpress-wrapper#bbpress-forums .btn-group-sm > .button.submit + .dropdown-toggle-split,
-.bbpress-wrapper#bbpress-forums .btn-group-sm > input.button + .dropdown-toggle-split, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-sm > .button + .dropdown-toggle-split {
+.bbpress-wrapper#bbpress-forums .btn-group-sm > input.button + .dropdown-toggle-split, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-sm > .button + .dropdown-toggle-split, .widget_display_search #bbp-search-form .btn-group-sm > #bbp_search_submit + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
@@ -3228,7 +3237,7 @@ form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons .btn-group-lg > a.button + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, .btn-group-lg > #edd-purchase-button + .dropdown-toggle-split,
 .btn-group-lg > .edd-submit + .dropdown-toggle-split, .bbpress-wrapper#bbpress-forums .btn-group-lg > .button.submit + .dropdown-toggle-split,
-.bbpress-wrapper#bbpress-forums .btn-group-lg > input.button + .dropdown-toggle-split, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-lg > .button + .dropdown-toggle-split, #edd-purchase-button + .dropdown-toggle-split,
+.bbpress-wrapper#bbpress-forums .btn-group-lg > input.button + .dropdown-toggle-split, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-lg > .button + .dropdown-toggle-split, .widget_display_search #bbp-search-form .btn-group-lg > #bbp_search_submit + .dropdown-toggle-split, #edd-purchase-button + .dropdown-toggle-split,
 .edd-submit + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
@@ -3241,21 +3250,21 @@ form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button, .wpcf7 .btn-group-vertical > input[type="submit"], .btn-group-vertical > #edd-purchase-button,
   .btn-group-vertical > .edd-submit, .bbpress-wrapper#bbpress-forums .btn-group-vertical > .button.submit,
-  .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button,
+  .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button, .widget_display_search #bbp-search-form .btn-group-vertical > #bbp_search_submit,
   .btn-group-vertical > .btn-group {
     width: 100%; }
   .btn-group-vertical > .btn:not(:first-child), form.post-password-form .btn-group-vertical > input[type="submit"]:not(:first-child), .wp-block-button .btn-group-vertical > .wp-block-button__link:not(:first-child), .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart:not(:first-child), .woocommerce ul.products li.product .btn-group-vertical > .button:not(:first-child), .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart:not(:first-child), #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button:not(:first-child), .wpcf7 .btn-group-vertical > input[type="submit"]:not(:first-child), .btn-group-vertical > #edd-purchase-button:not(:first-child),
   .btn-group-vertical > .edd-submit:not(:first-child), .bbpress-wrapper#bbpress-forums .btn-group-vertical > .button.submit:not(:first-child),
-  .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button:not(:first-child), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button:not(:first-child),
+  .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button:not(:first-child), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button:not(:first-child), .widget_display_search #bbp-search-form .btn-group-vertical > #bbp_search_submit:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
   .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), form.post-password-form .btn-group-vertical > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .wp-block-button .btn-group-vertical > .wp-block-button__link:not(:last-child):not(.dropdown-toggle), .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart:not(:last-child):not(.dropdown-toggle), .woocommerce ul.products li.product .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle), .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart:not(:last-child):not(.dropdown-toggle), #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > #edd-purchase-button:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .edd-submit:not(:last-child):not(.dropdown-toggle), .bbpress-wrapper#bbpress-forums .btn-group-vertical > .button.submit:not(:last-child):not(.dropdown-toggle),
-  .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button:not(:last-child):not(.dropdown-toggle), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle),
+  .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button:not(:last-child):not(.dropdown-toggle), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle), .widget_display_search #bbp-search-form .btn-group-vertical > #bbp_search_submit:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
   form.post-password-form .btn-group-vertical > .btn-group:not(:last-child) > input[type="submit"],
   .wp-block-button .btn-group-vertical > .btn-group:not(:last-child) > .wp-block-button__link,
@@ -3270,14 +3279,15 @@ form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="
   .btn-group-vertical > .btn-group:not(:last-child) > .edd-submit,
   .bbpress-wrapper#bbpress-forums .btn-group-vertical > .btn-group:not(:last-child) > .button.submit,
   .bbpress-wrapper#bbpress-forums .btn-group-vertical > .btn-group:not(:last-child) > input.button,
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .btn-group:not(:last-child) > .button {
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .btn-group:not(:last-child) > .button,
+  .widget_display_search #bbp-search-form .btn-group-vertical > .btn-group:not(:last-child) > #bbp_search_submit {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .btn-group-vertical > .btn:not(:first-child), form.post-password-form .btn-group-vertical > input[type="submit"]:not(:first-child), .wp-block-button .btn-group-vertical > .wp-block-button__link:not(:first-child), .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .added_to_cart:not(:first-child), .woocommerce ul.products li.product .btn-group-vertical > .button:not(:first-child), .woocommerce ul.products li.product .btn-group-vertical > .added_to_cart:not(:first-child), #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button:not(:first-child), .wpcf7 .btn-group-vertical > input[type="submit"]:not(:first-child), .btn-group-vertical > #edd-purchase-button:not(:first-child),
   .btn-group-vertical > .edd-submit:not(:first-child), .bbpress-wrapper#bbpress-forums .btn-group-vertical > .button.submit:not(:first-child),
-  .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button:not(:first-child), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button:not(:first-child),
+  .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.button:not(:first-child), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .button:not(:first-child), .widget_display_search #bbp-search-form .btn-group-vertical > #bbp_search_submit:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
   form.post-password-form .btn-group-vertical > .btn-group:not(:first-child) > input[type="submit"],
   .wp-block-button .btn-group-vertical > .btn-group:not(:first-child) > .wp-block-button__link,
@@ -3292,7 +3302,8 @@ form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="
   .btn-group-vertical > .btn-group:not(:first-child) > .edd-submit,
   .bbpress-wrapper#bbpress-forums .btn-group-vertical > .btn-group:not(:first-child) > .button.submit,
   .bbpress-wrapper#bbpress-forums .btn-group-vertical > .btn-group:not(:first-child) > input.button,
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .btn-group:not(:first-child) > .button {
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .btn-group:not(:first-child) > .button,
+  .widget_display_search #bbp-search-form .btn-group-vertical > .btn-group:not(:first-child) > #bbp_search_submit {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
@@ -3300,7 +3311,7 @@ form.post-password-form .btn-group > .btn-group:not(:first-child) > input[type="
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons .btn-group-toggle > a.button, .wpcf7 .btn-group-toggle > input[type="submit"], .btn-group-toggle > #edd-purchase-button,
 .btn-group-toggle > .edd-submit, .bbpress-wrapper#bbpress-forums .btn-group-toggle > .button.submit,
-.bbpress-wrapper#bbpress-forums .btn-group-toggle > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-toggle > .button,
+.bbpress-wrapper#bbpress-forums .btn-group-toggle > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-toggle > .button, .widget_display_search #bbp-search-form .btn-group-toggle > #bbp_search_submit,
 .btn-group-toggle > .btn-group > .btn,
 form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
 .wp-block-button .btn-group-toggle > .btn-group > .wp-block-button__link,
@@ -3315,13 +3326,14 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
 .btn-group-toggle > .btn-group > .edd-submit,
 .bbpress-wrapper#bbpress-forums .btn-group-toggle > .btn-group > .button.submit,
 .bbpress-wrapper#bbpress-forums .btn-group-toggle > .btn-group > input.button,
-.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-toggle > .btn-group > .button {
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-toggle > .btn-group > .button,
+.widget_display_search #bbp-search-form .btn-group-toggle > .btn-group > #bbp_search_submit {
   margin-bottom: 0; }
   .btn-group-toggle > .btn input[type="radio"], form.post-password-form .btn-group-toggle > input[type="submit"] input[type="radio"], .wp-block-button .btn-group-toggle > .wp-block-button__link input[type="radio"], .wc-block-grid__products .wc-block-grid__product .btn-group-toggle > .added_to_cart input[type="radio"], .woocommerce ul.products li.product .btn-group-toggle > .button input[type="radio"], .woocommerce ul.products li.product .btn-group-toggle > .added_to_cart input[type="radio"], #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons .btn-group-toggle > a.button input[type="radio"], .wpcf7 .btn-group-toggle > input[type="submit"] input[type="radio"], .btn-group-toggle > #edd-purchase-button input[type="radio"],
   .btn-group-toggle > .edd-submit input[type="radio"], .bbpress-wrapper#bbpress-forums .btn-group-toggle > .button.submit input[type="radio"],
-  .bbpress-wrapper#bbpress-forums .btn-group-toggle > input.button input[type="radio"], .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-toggle > .button input[type="radio"],
+  .bbpress-wrapper#bbpress-forums .btn-group-toggle > input.button input[type="radio"], .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-toggle > .button input[type="radio"], .widget_display_search #bbp-search-form .btn-group-toggle > #bbp_search_submit input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   form.post-password-form .btn-group-toggle > input[type="submit"] input[type="checkbox"],
   .wp-block-button .btn-group-toggle > .wp-block-button__link input[type="checkbox"],
@@ -3337,6 +3349,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .btn-group-toggle > .button.submit input[type="checkbox"],
   .bbpress-wrapper#bbpress-forums .btn-group-toggle > input.button input[type="checkbox"],
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-toggle > .button input[type="checkbox"],
+  .widget_display_search #bbp-search-form .btn-group-toggle > #bbp_search_submit input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"] input[type="radio"],
   .wp-block-button .btn-group-toggle > .btn-group > .wp-block-button__link input[type="radio"],
@@ -3352,6 +3365,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .btn-group-toggle > .btn-group > .button.submit input[type="radio"],
   .bbpress-wrapper#bbpress-forums .btn-group-toggle > .btn-group > input.button input[type="radio"],
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-toggle > .btn-group > .button input[type="radio"],
+  .widget_display_search #bbp-search-form .btn-group-toggle > .btn-group > #bbp_search_submit input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
   form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"] input[type="checkbox"],
   .wp-block-button .btn-group-toggle > .btn-group > .wp-block-button__link input[type="checkbox"],
@@ -3366,7 +3380,8 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .btn-group-toggle > .btn-group > .edd-submit input[type="checkbox"],
   .bbpress-wrapper#bbpress-forums .btn-group-toggle > .btn-group > .button.submit input[type="checkbox"],
   .bbpress-wrapper#bbpress-forums .btn-group-toggle > .btn-group > input.button input[type="checkbox"],
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-toggle > .btn-group > .button input[type="checkbox"] {
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-toggle > .btn-group > .button input[type="checkbox"],
+  .widget_display_search #bbp-search-form .btn-group-toggle > .btn-group > #bbp_search_submit input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -4132,7 +4147,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button, .input-group-prepend .wpcf7 input[type="submit"], .wpcf7 .input-group-prepend input[type="submit"], .input-group-prepend #edd-purchase-button,
   .input-group-prepend .edd-submit, .input-group-prepend .bbpress-wrapper#bbpress-forums .button.submit, .bbpress-wrapper#bbpress-forums .input-group-prepend .button.submit,
   .input-group-prepend .bbpress-wrapper#bbpress-forums input.button,
-  .bbpress-wrapper#bbpress-forums .input-group-prepend input.button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button,
+  .bbpress-wrapper#bbpress-forums .input-group-prepend input.button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button, .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit,
   .input-group-append .btn,
   .input-group-append form.post-password-form input[type="submit"],
   form.post-password-form .input-group-append input[type="submit"],
@@ -4159,7 +4174,9 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-append .bbpress-wrapper#bbpress-forums input.button,
   .bbpress-wrapper#bbpress-forums .input-group-append input.button,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button,
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button {
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button,
+  .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit {
     position: relative;
     z-index: 2; }
     .input-group-prepend .btn:focus, .input-group-prepend form.post-password-form input[type="submit"]:focus, form.post-password-form .input-group-prepend input[type="submit"]:focus, .input-group-prepend .wp-block-button .wp-block-button__link:focus, .wp-block-button .input-group-prepend .wp-block-button__link:focus, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart:focus, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart:focus, .input-group-prepend .woocommerce ul.products li.product .button:focus, .woocommerce ul.products li.product .input-group-prepend .button:focus, .input-group-prepend .woocommerce ul.products li.product .added_to_cart:focus, .woocommerce ul.products li.product .input-group-prepend .added_to_cart:focus, .input-group-prepend #footer-full-content
@@ -4169,7 +4186,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
     .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button:focus, .input-group-prepend .wpcf7 input[type="submit"]:focus, .wpcf7 .input-group-prepend input[type="submit"]:focus, .input-group-prepend #edd-purchase-button:focus,
     .input-group-prepend .edd-submit:focus, .input-group-prepend .bbpress-wrapper#bbpress-forums .button.submit:focus, .bbpress-wrapper#bbpress-forums .input-group-prepend .button.submit:focus,
     .input-group-prepend .bbpress-wrapper#bbpress-forums input.button:focus,
-    .bbpress-wrapper#bbpress-forums .input-group-prepend input.button:focus, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button:focus,
+    .bbpress-wrapper#bbpress-forums .input-group-prepend input.button:focus, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button:focus, .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit:focus, .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit:focus,
     .input-group-append .btn:focus,
     .input-group-append form.post-password-form input[type="submit"]:focus,
     form.post-password-form .input-group-append input[type="submit"]:focus,
@@ -4196,7 +4213,9 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
     .input-group-append .bbpress-wrapper#bbpress-forums input.button:focus,
     .bbpress-wrapper#bbpress-forums .input-group-append input.button:focus,
     .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button:focus,
-    .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button:focus {
+    .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button:focus,
+    .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit:focus,
+    .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit:focus {
       z-index: 3; }
   .input-group-prepend .btn + .btn, .input-group-prepend form.post-password-form input[type="submit"] + .btn, form.post-password-form .input-group-prepend input[type="submit"] + .btn, .input-group-prepend .wp-block-button .wp-block-button__link + .btn, .wp-block-button .input-group-prepend .wp-block-button__link + .btn,
   .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .btn,
@@ -4208,7 +4227,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .edd-submit + .btn,
   .input-group-prepend [type="submit"].edd-submit + .btn, .input-group-prepend .bbpress-wrapper#bbpress-forums .button.submit + .btn, .bbpress-wrapper#bbpress-forums .input-group-prepend .button.submit + .btn,
   .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + .btn,
-  .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .btn, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .btn, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .btn, .input-group-prepend form.post-password-form .btn + input[type="submit"], form.post-password-form .input-group-prepend .btn + input[type="submit"], .input-group-prepend form.post-password-form input[type="submit"] + input[type="submit"], form.post-password-form .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-prepend .wp-block-button form.post-password-form .wp-block-button__link + input[type="submit"], form.post-password-form .input-group-prepend .wp-block-button .wp-block-button__link + input[type="submit"], .wp-block-button .input-group-prepend form.post-password-form .wp-block-button__link + input[type="submit"], form.post-password-form .wp-block-button .input-group-prepend .wp-block-button__link + input[type="submit"],
+  .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .btn, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .btn, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .btn, .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + .btn, .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + .btn, .input-group-prepend form.post-password-form .btn + input[type="submit"], form.post-password-form .input-group-prepend .btn + input[type="submit"], .input-group-prepend form.post-password-form input[type="submit"] + input[type="submit"], form.post-password-form .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-prepend .wp-block-button form.post-password-form .wp-block-button__link + input[type="submit"], form.post-password-form .input-group-prepend .wp-block-button .wp-block-button__link + input[type="submit"], .wp-block-button .input-group-prepend form.post-password-form .wp-block-button__link + input[type="submit"], form.post-password-form .wp-block-button .input-group-prepend .wp-block-button__link + input[type="submit"],
   .input-group-prepend .wp-block-buttons .wp-block-button form.post-password-form .wp-block-button__link + input[type="submit"],
   form.post-password-form .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + input[type="submit"],
   .wp-block-buttons .wp-block-button .input-group-prepend form.post-password-form .wp-block-button__link + input[type="submit"],
@@ -4228,7 +4247,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .bbpress-wrapper#bbpress-forums form.post-password-form input.button + input[type="submit"],
   form.post-password-form .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-prepend form.post-password-form input.button + input[type="submit"],
-  form.post-password-form .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + input[type="submit"], .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password form.post-password-form .button + input[type="submit"], form.post-password-form .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + input[type="submit"], .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend form.post-password-form .button + input[type="submit"], form.post-password-form .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + input[type="submit"], .input-group-prepend .wp-block-button .btn + .wp-block-button__link, .wp-block-button .input-group-prepend .btn + .wp-block-button__link, .input-group-prepend form.post-password-form .wp-block-button input[type="submit"] + .wp-block-button__link, .wp-block-button .input-group-prepend form.post-password-form input[type="submit"] + .wp-block-button__link, form.post-password-form .input-group-prepend .wp-block-button input[type="submit"] + .wp-block-button__link, .wp-block-button form.post-password-form .input-group-prepend input[type="submit"] + .wp-block-button__link, .input-group-prepend .wp-block-button .wp-block-button__link + .wp-block-button__link, .wp-block-button .input-group-prepend .wp-block-button__link + .wp-block-button__link,
+  form.post-password-form .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + input[type="submit"], .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password form.post-password-form .button + input[type="submit"], form.post-password-form .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + input[type="submit"], .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend form.post-password-form .button + input[type="submit"], form.post-password-form .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + input[type="submit"], .input-group-prepend .widget_display_search #bbp-search-form form.post-password-form #bbp_search_submit + input[type="submit"], form.post-password-form .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + input[type="submit"], .widget_display_search #bbp-search-form .input-group-prepend form.post-password-form #bbp_search_submit + input[type="submit"], form.post-password-form .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + input[type="submit"], .input-group-prepend .wp-block-button .btn + .wp-block-button__link, .wp-block-button .input-group-prepend .btn + .wp-block-button__link, .input-group-prepend form.post-password-form .wp-block-button input[type="submit"] + .wp-block-button__link, .wp-block-button .input-group-prepend form.post-password-form input[type="submit"] + .wp-block-button__link, form.post-password-form .input-group-prepend .wp-block-button input[type="submit"] + .wp-block-button__link, .wp-block-button form.post-password-form .input-group-prepend input[type="submit"] + .wp-block-button__link, .input-group-prepend .wp-block-button .wp-block-button__link + .wp-block-button__link, .wp-block-button .input-group-prepend .wp-block-button__link + .wp-block-button__link,
   .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .wp-block-button__link,
   .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + .wp-block-button__link, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .wp-block-button .added_to_cart + .wp-block-button__link, .wp-block-button .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + .wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .wp-block-button .added_to_cart + .wp-block-button__link, .wp-block-button .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + .wp-block-button__link, .input-group-prepend .woocommerce ul.products li.product .wp-block-button .button + .wp-block-button__link, .wp-block-button .input-group-prepend .woocommerce ul.products li.product .button + .wp-block-button__link, .woocommerce ul.products li.product .input-group-prepend .wp-block-button .button + .wp-block-button__link, .wp-block-button .woocommerce ul.products li.product .input-group-prepend .button + .wp-block-button__link, .input-group-prepend .woocommerce ul.products li.product .wp-block-button .added_to_cart + .wp-block-button__link, .wp-block-button .input-group-prepend .woocommerce ul.products li.product .added_to_cart + .wp-block-button__link, .woocommerce ul.products li.product .input-group-prepend .wp-block-button .added_to_cart + .wp-block-button__link, .wp-block-button .woocommerce ul.products li.product .input-group-prepend .added_to_cart + .wp-block-button__link, .input-group-prepend #footer-full-content
   .woocommerce.widget_shopping_cart
@@ -4246,7 +4265,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .bbpress-wrapper#bbpress-forums .wp-block-button input.button + .wp-block-button__link,
   .wp-block-button .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + .wp-block-button__link,
   .bbpress-wrapper#bbpress-forums .input-group-prepend .wp-block-button input.button + .wp-block-button__link,
-  .wp-block-button .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .wp-block-button__link, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-button .button + .wp-block-button__link, .wp-block-button .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .wp-block-button__link, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .wp-block-button .button + .wp-block-button__link, .wp-block-button .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .wp-block-button__link,
+  .wp-block-button .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .wp-block-button__link, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-button .button + .wp-block-button__link, .wp-block-button .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .wp-block-button__link, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .wp-block-button .button + .wp-block-button__link, .wp-block-button .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .wp-block-button__link, .input-group-prepend .widget_display_search #bbp-search-form .wp-block-button #bbp_search_submit + .wp-block-button__link, .wp-block-button .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + .wp-block-button__link, .widget_display_search #bbp-search-form .input-group-prepend .wp-block-button #bbp_search_submit + .wp-block-button__link, .wp-block-button .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + .wp-block-button__link,
   .input-group-prepend .wp-block-buttons .wp-block-button .btn + .wp-block-button__link,
   .wp-block-buttons .wp-block-button .input-group-prepend .btn + .wp-block-button__link,
   .input-group-prepend form.post-password-form .wp-block-buttons .wp-block-button input[type="submit"] + .wp-block-button__link,
@@ -4303,7 +4322,11 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-buttons .wp-block-button .button + .wp-block-button__link,
   .wp-block-buttons .wp-block-button .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .wp-block-button__link,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .wp-block-buttons .wp-block-button .button + .wp-block-button__link,
-  .wp-block-buttons .wp-block-button .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .wp-block-button__link, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .btn + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .btn + .added_to_cart, .input-group-prepend form.post-password-form .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend form.post-password-form input[type="submit"] + .added_to_cart, form.post-password-form .input-group-prepend .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart, .wc-block-grid__products .wc-block-grid__product form.post-password-form .input-group-prepend input[type="submit"] + .added_to_cart, .input-group-prepend .wp-block-button .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .wp-block-button .wp-block-button__link + .added_to_cart, .wp-block-button .input-group-prepend .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .wp-block-button .input-group-prepend .wp-block-button__link + .added_to_cart,
+  .wp-block-buttons .wp-block-button .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .wp-block-button__link,
+  .input-group-prepend .widget_display_search #bbp-search-form .wp-block-buttons .wp-block-button #bbp_search_submit + .wp-block-button__link,
+  .wp-block-buttons .wp-block-button .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + .wp-block-button__link,
+  .widget_display_search #bbp-search-form .input-group-prepend .wp-block-buttons .wp-block-button #bbp_search_submit + .wp-block-button__link,
+  .wp-block-buttons .wp-block-button .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + .wp-block-button__link, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .btn + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .btn + .added_to_cart, .input-group-prepend form.post-password-form .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend form.post-password-form input[type="submit"] + .added_to_cart, form.post-password-form .input-group-prepend .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart, .wc-block-grid__products .wc-block-grid__product form.post-password-form .input-group-prepend input[type="submit"] + .added_to_cart, .input-group-prepend .wp-block-button .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .wp-block-button .wp-block-button__link + .added_to_cart, .wp-block-button .input-group-prepend .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .wp-block-button .input-group-prepend .wp-block-button__link + .added_to_cart,
   .input-group-prepend .wp-block-buttons .wp-block-button .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart,
   .wc-block-grid__products .wc-block-grid__product .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .added_to_cart,
   .wp-block-buttons .wp-block-button .input-group-prepend .wc-block-grid__products .wc-block-grid__product .wp-block-button__link + .added_to_cart,
@@ -4323,7 +4346,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .bbpress-wrapper#bbpress-forums .wc-block-grid__products .wc-block-grid__product input.button + .added_to_cart,
   .wc-block-grid__products .wc-block-grid__product .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + .added_to_cart,
   .bbpress-wrapper#bbpress-forums .input-group-prepend .wc-block-grid__products .wc-block-grid__product input.button + .added_to_cart,
-  .wc-block-grid__products .wc-block-grid__product .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .added_to_cart, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wc-block-grid__products .wc-block-grid__product .button + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .added_to_cart, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .wc-block-grid__products .wc-block-grid__product .button + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .added_to_cart, .input-group-prepend .woocommerce ul.products li.product .btn + .button, .woocommerce ul.products li.product .input-group-prepend .btn + .button, .input-group-prepend form.post-password-form .woocommerce ul.products li.product input[type="submit"] + .button, .woocommerce ul.products li.product .input-group-prepend form.post-password-form input[type="submit"] + .button, form.post-password-form .input-group-prepend .woocommerce ul.products li.product input[type="submit"] + .button, .woocommerce ul.products li.product form.post-password-form .input-group-prepend input[type="submit"] + .button, .input-group-prepend .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .button, .woocommerce ul.products li.product .input-group-prepend .wp-block-button .wp-block-button__link + .button, .wp-block-button .input-group-prepend .woocommerce ul.products li.product .wp-block-button__link + .button, .woocommerce ul.products li.product .wp-block-button .input-group-prepend .wp-block-button__link + .button,
+  .wc-block-grid__products .wc-block-grid__product .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .added_to_cart, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wc-block-grid__products .wc-block-grid__product .button + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .added_to_cart, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .wc-block-grid__products .wc-block-grid__product .button + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .added_to_cart, .input-group-prepend .widget_display_search #bbp-search-form .wc-block-grid__products .wc-block-grid__product #bbp_search_submit + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + .added_to_cart, .widget_display_search #bbp-search-form .input-group-prepend .wc-block-grid__products .wc-block-grid__product #bbp_search_submit + .added_to_cart, .wc-block-grid__products .wc-block-grid__product .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + .added_to_cart, .input-group-prepend .woocommerce ul.products li.product .btn + .button, .woocommerce ul.products li.product .input-group-prepend .btn + .button, .input-group-prepend form.post-password-form .woocommerce ul.products li.product input[type="submit"] + .button, .woocommerce ul.products li.product .input-group-prepend form.post-password-form input[type="submit"] + .button, form.post-password-form .input-group-prepend .woocommerce ul.products li.product input[type="submit"] + .button, .woocommerce ul.products li.product form.post-password-form .input-group-prepend input[type="submit"] + .button, .input-group-prepend .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .button, .woocommerce ul.products li.product .input-group-prepend .wp-block-button .wp-block-button__link + .button, .wp-block-button .input-group-prepend .woocommerce ul.products li.product .wp-block-button__link + .button, .woocommerce ul.products li.product .wp-block-button .input-group-prepend .wp-block-button__link + .button,
   .input-group-prepend .wp-block-buttons .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .button,
   .woocommerce ul.products li.product .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .button,
   .wp-block-buttons .wp-block-button .input-group-prepend .woocommerce ul.products li.product .wp-block-button__link + .button,
@@ -4341,7 +4364,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .bbpress-wrapper#bbpress-forums .woocommerce ul.products li.product input.button + .button,
   .woocommerce ul.products li.product .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + .button,
   .bbpress-wrapper#bbpress-forums .input-group-prepend .woocommerce ul.products li.product input.button + .button,
-  .woocommerce ul.products li.product .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .woocommerce ul.products li.product .button + .button, .woocommerce ul.products li.product .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .woocommerce ul.products li.product .button + .button, .woocommerce ul.products li.product .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .button, .input-group-prepend .woocommerce ul.products li.product .btn + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .btn + .added_to_cart, .input-group-prepend form.post-password-form .woocommerce ul.products li.product input[type="submit"] + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend form.post-password-form input[type="submit"] + .added_to_cart, form.post-password-form .input-group-prepend .woocommerce ul.products li.product input[type="submit"] + .added_to_cart, .woocommerce ul.products li.product form.post-password-form .input-group-prepend input[type="submit"] + .added_to_cart, .input-group-prepend .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .wp-block-button .wp-block-button__link + .added_to_cart, .wp-block-button .input-group-prepend .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart, .woocommerce ul.products li.product .wp-block-button .input-group-prepend .wp-block-button__link + .added_to_cart,
+  .woocommerce ul.products li.product .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .woocommerce ul.products li.product .button + .button, .woocommerce ul.products li.product .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .woocommerce ul.products li.product .button + .button, .woocommerce ul.products li.product .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .button, .input-group-prepend .widget_display_search #bbp-search-form .woocommerce ul.products li.product #bbp_search_submit + .button, .woocommerce ul.products li.product .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + .button, .widget_display_search #bbp-search-form .input-group-prepend .woocommerce ul.products li.product #bbp_search_submit + .button, .woocommerce ul.products li.product .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + .button, .input-group-prepend .woocommerce ul.products li.product .btn + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .btn + .added_to_cart, .input-group-prepend form.post-password-form .woocommerce ul.products li.product input[type="submit"] + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend form.post-password-form input[type="submit"] + .added_to_cart, form.post-password-form .input-group-prepend .woocommerce ul.products li.product input[type="submit"] + .added_to_cart, .woocommerce ul.products li.product form.post-password-form .input-group-prepend input[type="submit"] + .added_to_cart, .input-group-prepend .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .wp-block-button .wp-block-button__link + .added_to_cart, .wp-block-button .input-group-prepend .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart, .woocommerce ul.products li.product .wp-block-button .input-group-prepend .wp-block-button__link + .added_to_cart,
   .input-group-prepend .wp-block-buttons .wp-block-button .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart,
   .woocommerce ul.products li.product .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .added_to_cart,
   .wp-block-buttons .wp-block-button .input-group-prepend .woocommerce ul.products li.product .wp-block-button__link + .added_to_cart,
@@ -4359,7 +4382,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .bbpress-wrapper#bbpress-forums .woocommerce ul.products li.product input.button + .added_to_cart,
   .woocommerce ul.products li.product .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + .added_to_cart,
   .bbpress-wrapper#bbpress-forums .input-group-prepend .woocommerce ul.products li.product input.button + .added_to_cart,
-  .woocommerce ul.products li.product .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .added_to_cart, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .woocommerce ul.products li.product .button + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .added_to_cart, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .woocommerce ul.products li.product .button + .added_to_cart, .woocommerce ul.products li.product .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .added_to_cart, .input-group-prepend #footer-full-content
+  .woocommerce ul.products li.product .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .added_to_cart, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .woocommerce ul.products li.product .button + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .added_to_cart, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .woocommerce ul.products li.product .button + .added_to_cart, .woocommerce ul.products li.product .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .added_to_cart, .input-group-prepend .widget_display_search #bbp-search-form .woocommerce ul.products li.product #bbp_search_submit + .added_to_cart, .woocommerce ul.products li.product .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + .added_to_cart, .widget_display_search #bbp-search-form .input-group-prepend .woocommerce ul.products li.product #bbp_search_submit + .added_to_cart, .woocommerce ul.products li.product .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + .added_to_cart, .input-group-prepend #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons .btn + a.button, #footer-full-content
   .woocommerce.widget_shopping_cart
@@ -4463,7 +4486,15 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons .button + a.button, #footer-full-content
   .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + a.button, .input-group-prepend .wpcf7 .btn + input[type="submit"], .wpcf7 .input-group-prepend .btn + input[type="submit"], .input-group-prepend form.post-password-form .wpcf7 input[type="submit"] + input[type="submit"], .wpcf7 .input-group-prepend form.post-password-form input[type="submit"] + input[type="submit"], form.post-password-form .input-group-prepend .wpcf7 input[type="submit"] + input[type="submit"], .wpcf7 form.post-password-form .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-prepend .wp-block-button .wpcf7 .wp-block-button__link + input[type="submit"], .wpcf7 .input-group-prepend .wp-block-button .wp-block-button__link + input[type="submit"], .wp-block-button .input-group-prepend .wpcf7 .wp-block-button__link + input[type="submit"], .wpcf7 .wp-block-button .input-group-prepend .wp-block-button__link + input[type="submit"],
+  .woocommerce-mini-cart__buttons.buttons .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + a.button, .input-group-prepend .widget_display_search #bbp-search-form #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons #bbp_search_submit + a.button, #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + a.button, .widget_display_search #bbp-search-form .input-group-prepend #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons #bbp_search_submit + a.button, #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + a.button, .input-group-prepend .wpcf7 .btn + input[type="submit"], .wpcf7 .input-group-prepend .btn + input[type="submit"], .input-group-prepend form.post-password-form .wpcf7 input[type="submit"] + input[type="submit"], .wpcf7 .input-group-prepend form.post-password-form input[type="submit"] + input[type="submit"], form.post-password-form .input-group-prepend .wpcf7 input[type="submit"] + input[type="submit"], .wpcf7 form.post-password-form .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-prepend .wp-block-button .wpcf7 .wp-block-button__link + input[type="submit"], .wpcf7 .input-group-prepend .wp-block-button .wp-block-button__link + input[type="submit"], .wp-block-button .input-group-prepend .wpcf7 .wp-block-button__link + input[type="submit"], .wpcf7 .wp-block-button .input-group-prepend .wp-block-button__link + input[type="submit"],
   .input-group-prepend .wp-block-buttons .wp-block-button .wpcf7 .wp-block-button__link + input[type="submit"],
   .wpcf7 .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + input[type="submit"],
   .wp-block-buttons .wp-block-button .input-group-prepend .wpcf7 .wp-block-button__link + input[type="submit"],
@@ -4483,7 +4514,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .bbpress-wrapper#bbpress-forums .wpcf7 input.button + input[type="submit"],
   .wpcf7 .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-prepend .wpcf7 input.button + input[type="submit"],
-  .wpcf7 .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + input[type="submit"], .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wpcf7 .button + input[type="submit"], .wpcf7 .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + input[type="submit"], .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .wpcf7 .button + input[type="submit"], .wpcf7 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + input[type="submit"], .input-group-prepend .btn + #edd-purchase-button, .input-group-prepend form.post-password-form input[type="submit"] + #edd-purchase-button, form.post-password-form .input-group-prepend input[type="submit"] + #edd-purchase-button, .input-group-prepend .wp-block-button .wp-block-button__link + #edd-purchase-button, .wp-block-button .input-group-prepend .wp-block-button__link + #edd-purchase-button,
+  .wpcf7 .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + input[type="submit"], .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wpcf7 .button + input[type="submit"], .wpcf7 .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + input[type="submit"], .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .wpcf7 .button + input[type="submit"], .wpcf7 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + input[type="submit"], .input-group-prepend .widget_display_search #bbp-search-form .wpcf7 #bbp_search_submit + input[type="submit"], .wpcf7 .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + input[type="submit"], .widget_display_search #bbp-search-form .input-group-prepend .wpcf7 #bbp_search_submit + input[type="submit"], .wpcf7 .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + input[type="submit"], .input-group-prepend .btn + #edd-purchase-button, .input-group-prepend form.post-password-form input[type="submit"] + #edd-purchase-button, form.post-password-form .input-group-prepend input[type="submit"] + #edd-purchase-button, .input-group-prepend .wp-block-button .wp-block-button__link + #edd-purchase-button, .wp-block-button .input-group-prepend .wp-block-button__link + #edd-purchase-button,
   .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + #edd-purchase-button,
   .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + #edd-purchase-button, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + #edd-purchase-button, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + #edd-purchase-button, .input-group-prepend .woocommerce ul.products li.product .button + #edd-purchase-button, .woocommerce ul.products li.product .input-group-prepend .button + #edd-purchase-button, .input-group-prepend .woocommerce ul.products li.product .added_to_cart + #edd-purchase-button, .woocommerce ul.products li.product .input-group-prepend .added_to_cart + #edd-purchase-button, .input-group-prepend #footer-full-content
   .woocommerce.widget_shopping_cart
@@ -4493,7 +4524,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .edd-submit + #edd-purchase-button,
   .input-group-prepend [type="submit"].edd-submit + #edd-purchase-button, .input-group-prepend .bbpress-wrapper#bbpress-forums .button.submit + #edd-purchase-button, .bbpress-wrapper#bbpress-forums .input-group-prepend .button.submit + #edd-purchase-button,
   .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + #edd-purchase-button,
-  .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + #edd-purchase-button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + #edd-purchase-button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + #edd-purchase-button,
+  .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + #edd-purchase-button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + #edd-purchase-button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + #edd-purchase-button, .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + #edd-purchase-button, .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + #edd-purchase-button,
   .input-group-prepend .btn + .edd-submit,
   .input-group-prepend form.post-password-form input[type="submit"] + .edd-submit,
   form.post-password-form .input-group-prepend input[type="submit"] + .edd-submit,
@@ -4524,6 +4555,8 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .edd-submit,
   .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .edd-submit,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .edd-submit,
+  .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + .edd-submit,
+  .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + .edd-submit,
   .input-group-prepend .btn + [type="submit"].edd-submit,
   .input-group-prepend form.post-password-form input[type="submit"] + [type="submit"].edd-submit,
   form.post-password-form .input-group-prepend input[type="submit"] + [type="submit"].edd-submit,
@@ -4553,7 +4586,9 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + [type="submit"].edd-submit,
   .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + [type="submit"].edd-submit,
   .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + [type="submit"].edd-submit,
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + [type="submit"].edd-submit, .input-group-prepend .bbpress-wrapper#bbpress-forums .btn + .button.submit, .bbpress-wrapper#bbpress-forums .input-group-prepend .btn + .button.submit, .input-group-prepend form.post-password-form .bbpress-wrapper#bbpress-forums input[type="submit"] + .button.submit, .bbpress-wrapper#bbpress-forums .input-group-prepend form.post-password-form input[type="submit"] + .button.submit, form.post-password-form .input-group-prepend .bbpress-wrapper#bbpress-forums input[type="submit"] + .button.submit, .bbpress-wrapper#bbpress-forums form.post-password-form .input-group-prepend input[type="submit"] + .button.submit, .input-group-prepend .wp-block-button .bbpress-wrapper#bbpress-forums .wp-block-button__link + .button.submit, .bbpress-wrapper#bbpress-forums .input-group-prepend .wp-block-button .wp-block-button__link + .button.submit, .wp-block-button .input-group-prepend .bbpress-wrapper#bbpress-forums .wp-block-button__link + .button.submit, .bbpress-wrapper#bbpress-forums .wp-block-button .input-group-prepend .wp-block-button__link + .button.submit,
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + [type="submit"].edd-submit,
+  .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + [type="submit"].edd-submit,
+  .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + [type="submit"].edd-submit, .input-group-prepend .bbpress-wrapper#bbpress-forums .btn + .button.submit, .bbpress-wrapper#bbpress-forums .input-group-prepend .btn + .button.submit, .input-group-prepend form.post-password-form .bbpress-wrapper#bbpress-forums input[type="submit"] + .button.submit, .bbpress-wrapper#bbpress-forums .input-group-prepend form.post-password-form input[type="submit"] + .button.submit, form.post-password-form .input-group-prepend .bbpress-wrapper#bbpress-forums input[type="submit"] + .button.submit, .bbpress-wrapper#bbpress-forums form.post-password-form .input-group-prepend input[type="submit"] + .button.submit, .input-group-prepend .wp-block-button .bbpress-wrapper#bbpress-forums .wp-block-button__link + .button.submit, .bbpress-wrapper#bbpress-forums .input-group-prepend .wp-block-button .wp-block-button__link + .button.submit, .wp-block-button .input-group-prepend .bbpress-wrapper#bbpress-forums .wp-block-button__link + .button.submit, .bbpress-wrapper#bbpress-forums .wp-block-button .input-group-prepend .wp-block-button__link + .button.submit,
   .input-group-prepend .wp-block-buttons .wp-block-button .bbpress-wrapper#bbpress-forums .wp-block-button__link + .button.submit,
   .bbpress-wrapper#bbpress-forums .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .button.submit,
   .wp-block-buttons .wp-block-button .input-group-prepend .bbpress-wrapper#bbpress-forums .wp-block-button__link + .button.submit,
@@ -4571,7 +4606,7 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .bbpress-wrapper#bbpress-forums [type="submit"].edd-submit + .button.submit,
   .bbpress-wrapper#bbpress-forums .input-group-prepend [type="submit"].edd-submit + .button.submit, .input-group-prepend .bbpress-wrapper#bbpress-forums .button.submit + .button.submit, .bbpress-wrapper#bbpress-forums .input-group-prepend .button.submit + .button.submit,
   .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + .button.submit,
-  .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .button.submit, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .button.submit, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .button.submit,
+  .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .button.submit, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .button.submit, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .button.submit, .input-group-prepend .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums #bbp_search_submit + .button.submit, .bbpress-wrapper#bbpress-forums .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + .button.submit, .widget_display_search #bbp-search-form .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp_search_submit + .button.submit, .bbpress-wrapper#bbpress-forums .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + .button.submit,
   .input-group-prepend .bbpress-wrapper#bbpress-forums .btn + input.button,
   .bbpress-wrapper#bbpress-forums .input-group-prepend .btn + input.button,
   .input-group-prepend form.post-password-form .bbpress-wrapper#bbpress-forums input[type="submit"] + input.button,
@@ -4625,7 +4660,11 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + input.button,
   .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + input.button,
   .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + input.button,
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + input.button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .btn + .button, .input-group-prepend form.post-password-form .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password input[type="submit"] + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend form.post-password-form input[type="submit"] + .button, form.post-password-form .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password input[type="submit"] + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password form.post-password-form .input-group-prepend input[type="submit"] + .button, .input-group-prepend .wp-block-button .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-button__link + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .wp-block-button .wp-block-button__link + .button, .wp-block-button .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-button__link + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-button .input-group-prepend .wp-block-button__link + .button,
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + input.button,
+  .input-group-prepend .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums #bbp_search_submit + input.button,
+  .bbpress-wrapper#bbpress-forums .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + input.button,
+  .widget_display_search #bbp-search-form .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp_search_submit + input.button,
+  .bbpress-wrapper#bbpress-forums .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + input.button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .btn + .button, .input-group-prepend form.post-password-form .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password input[type="submit"] + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend form.post-password-form input[type="submit"] + .button, form.post-password-form .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password input[type="submit"] + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password form.post-password-form .input-group-prepend input[type="submit"] + .button, .input-group-prepend .wp-block-button .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-button__link + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .wp-block-button .wp-block-button__link + .button, .wp-block-button .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-button__link + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-button .input-group-prepend .wp-block-button__link + .button,
   .input-group-prepend .wp-block-buttons .wp-block-button .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-button__link + .button,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + .button,
   .wp-block-buttons .wp-block-button .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .wp-block-button__link + .button,
@@ -4644,7 +4683,27 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend [type="submit"].edd-submit + .button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button.submit + .button, .bbpress-wrapper#bbpress-forums .input-group-prepend #bbp-user-wrapper #bbp-your-profile #password .button.submit + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button.submit + .button,
   .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password input.button + .button,
   .bbpress-wrapper#bbpress-forums .input-group-prepend #bbp-user-wrapper #bbp-your-profile #password input.button + .button,
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend input.button + .button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .button,
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend input.button + .button, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .button, .input-group-prepend .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #bbp_search_submit + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + .button, .widget_display_search #bbp-search-form .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #bbp_search_submit + .button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + .button, .input-group-prepend .widget_display_search #bbp-search-form .btn + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend .btn + #bbp_search_submit, .input-group-prepend form.post-password-form .widget_display_search #bbp-search-form input[type="submit"] + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend form.post-password-form input[type="submit"] + #bbp_search_submit, form.post-password-form .input-group-prepend .widget_display_search #bbp-search-form input[type="submit"] + #bbp_search_submit, .widget_display_search #bbp-search-form form.post-password-form .input-group-prepend input[type="submit"] + #bbp_search_submit, .input-group-prepend .wp-block-button .widget_display_search #bbp-search-form .wp-block-button__link + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend .wp-block-button .wp-block-button__link + #bbp_search_submit, .wp-block-button .input-group-prepend .widget_display_search #bbp-search-form .wp-block-button__link + #bbp_search_submit, .widget_display_search #bbp-search-form .wp-block-button .input-group-prepend .wp-block-button__link + #bbp_search_submit,
+  .input-group-prepend .wp-block-buttons .wp-block-button .widget_display_search #bbp-search-form .wp-block-button__link + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-prepend .wp-block-buttons .wp-block-button .wp-block-button__link + #bbp_search_submit,
+  .wp-block-buttons .wp-block-button .input-group-prepend .widget_display_search #bbp-search-form .wp-block-button__link + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .wp-block-buttons .wp-block-button .input-group-prepend .wp-block-button__link + #bbp_search_submit, .input-group-prepend .wc-block-grid__products .wc-block-grid__product .widget_display_search #bbp-search-form .added_to_cart + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend .wc-block-grid__products .wc-block-grid__product .added_to_cart + #bbp_search_submit, .wc-block-grid__products .wc-block-grid__product .input-group-prepend .widget_display_search #bbp-search-form .added_to_cart + #bbp_search_submit, .widget_display_search #bbp-search-form .wc-block-grid__products .wc-block-grid__product .input-group-prepend .added_to_cart + #bbp_search_submit, .input-group-prepend .woocommerce ul.products li.product .widget_display_search #bbp-search-form .button + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend .woocommerce ul.products li.product .button + #bbp_search_submit, .woocommerce ul.products li.product .input-group-prepend .widget_display_search #bbp-search-form .button + #bbp_search_submit, .widget_display_search #bbp-search-form .woocommerce ul.products li.product .input-group-prepend .button + #bbp_search_submit, .input-group-prepend .woocommerce ul.products li.product .widget_display_search #bbp-search-form .added_to_cart + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend .woocommerce ul.products li.product .added_to_cart + #bbp_search_submit, .woocommerce ul.products li.product .input-group-prepend .widget_display_search #bbp-search-form .added_to_cart + #bbp_search_submit, .widget_display_search #bbp-search-form .woocommerce ul.products li.product .input-group-prepend .added_to_cart + #bbp_search_submit, .input-group-prepend #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons .widget_display_search #bbp-search-form a.button + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons a.button + #bbp_search_submit, #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons .input-group-prepend .widget_display_search #bbp-search-form a.button + #bbp_search_submit, .widget_display_search #bbp-search-form #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons .input-group-prepend a.button + #bbp_search_submit, .input-group-prepend .wpcf7 .widget_display_search #bbp-search-form input[type="submit"] + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend .wpcf7 input[type="submit"] + #bbp_search_submit, .wpcf7 .input-group-prepend .widget_display_search #bbp-search-form input[type="submit"] + #bbp_search_submit, .widget_display_search #bbp-search-form .wpcf7 .input-group-prepend input[type="submit"] + #bbp_search_submit, .input-group-prepend .widget_display_search #bbp-search-form #edd-purchase-button + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend #edd-purchase-button + #bbp_search_submit,
+  .input-group-prepend .widget_display_search #bbp-search-form .edd-submit + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-prepend .edd-submit + #bbp_search_submit,
+  .input-group-prepend .widget_display_search #bbp-search-form [type="submit"].edd-submit + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-prepend [type="submit"].edd-submit + #bbp_search_submit, .input-group-prepend .bbpress-wrapper#bbpress-forums .widget_display_search #bbp-search-form .button.submit + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend .bbpress-wrapper#bbpress-forums .button.submit + #bbp_search_submit, .bbpress-wrapper#bbpress-forums .input-group-prepend .widget_display_search #bbp-search-form .button.submit + #bbp_search_submit, .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums .input-group-prepend .button.submit + #bbp_search_submit,
+  .input-group-prepend .bbpress-wrapper#bbpress-forums .widget_display_search #bbp-search-form input.button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-prepend .bbpress-wrapper#bbpress-forums input.button + #bbp_search_submit,
+  .bbpress-wrapper#bbpress-forums .input-group-prepend .widget_display_search #bbp-search-form input.button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + #bbp_search_submit, .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .widget_display_search #bbp-search-form .button + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + #bbp_search_submit, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .widget_display_search #bbp-search-form .button + #bbp_search_submit, .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + #bbp_search_submit, .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + #bbp_search_submit, .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + #bbp_search_submit,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend form.post-password-form input[type="submit"] + .input-group-text,
   form.post-password-form .input-group-prepend input[type="submit"] + .input-group-text,
@@ -4672,6 +4731,8 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-prepend input.button + .input-group-text,
   .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .input-group-text,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .button + .input-group-text,
+  .input-group-prepend .widget_display_search #bbp-search-form #bbp_search_submit + .input-group-text,
+  .widget_display_search #bbp-search-form .input-group-prepend #bbp_search_submit + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend form.post-password-form .input-group-text + input[type="submit"],
@@ -4700,6 +4761,8 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-prepend .input-group-text + input.button,
   .input-group-prepend .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-text + .button,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-prepend .input-group-text + .button,
+  .input-group-prepend .widget_display_search #bbp-search-form .input-group-text + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-prepend .input-group-text + #bbp_search_submit,
   .input-group-append .btn + .btn,
   .input-group-append form.post-password-form input[type="submit"] + .btn,
   form.post-password-form .input-group-append input[type="submit"] + .btn,
@@ -4730,6 +4793,8 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-append input.button + .btn,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .btn,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + .btn,
+  .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + .btn,
+  .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + .btn,
   .input-group-append form.post-password-form .btn + input[type="submit"],
   form.post-password-form .input-group-append .btn + input[type="submit"],
   .input-group-append form.post-password-form input[type="submit"] + input[type="submit"],
@@ -4788,6 +4853,10 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   form.post-password-form .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + input[type="submit"],
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append form.post-password-form .button + input[type="submit"],
   form.post-password-form .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + input[type="submit"],
+  .input-group-append .widget_display_search #bbp-search-form form.post-password-form #bbp_search_submit + input[type="submit"],
+  form.post-password-form .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + input[type="submit"],
+  .widget_display_search #bbp-search-form .input-group-append form.post-password-form #bbp_search_submit + input[type="submit"],
+  form.post-password-form .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + input[type="submit"],
   .input-group-append .wp-block-button .btn + .wp-block-button__link,
   .wp-block-button .input-group-append .btn + .wp-block-button__link,
   .input-group-append form.post-password-form .wp-block-button input[type="submit"] + .wp-block-button__link,
@@ -4844,6 +4913,10 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .wp-block-button .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .wp-block-button__link,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .wp-block-button .button + .wp-block-button__link,
   .wp-block-button .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + .wp-block-button__link,
+  .input-group-append .widget_display_search #bbp-search-form .wp-block-button #bbp_search_submit + .wp-block-button__link,
+  .wp-block-button .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + .wp-block-button__link,
+  .widget_display_search #bbp-search-form .input-group-append .wp-block-button #bbp_search_submit + .wp-block-button__link,
+  .wp-block-button .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + .wp-block-button__link,
   .input-group-append .wp-block-buttons .wp-block-button .btn + .wp-block-button__link,
   .wp-block-buttons .wp-block-button .input-group-append .btn + .wp-block-button__link,
   .input-group-append form.post-password-form .wp-block-buttons .wp-block-button input[type="submit"] + .wp-block-button__link,
@@ -4901,6 +4974,10 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .wp-block-buttons .wp-block-button .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .wp-block-button__link,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .wp-block-buttons .wp-block-button .button + .wp-block-button__link,
   .wp-block-buttons .wp-block-button .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + .wp-block-button__link,
+  .input-group-append .widget_display_search #bbp-search-form .wp-block-buttons .wp-block-button #bbp_search_submit + .wp-block-button__link,
+  .wp-block-buttons .wp-block-button .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + .wp-block-button__link,
+  .widget_display_search #bbp-search-form .input-group-append .wp-block-buttons .wp-block-button #bbp_search_submit + .wp-block-button__link,
+  .wp-block-buttons .wp-block-button .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + .wp-block-button__link,
   .input-group-append .wc-block-grid__products .wc-block-grid__product .btn + .added_to_cart,
   .wc-block-grid__products .wc-block-grid__product .input-group-append .btn + .added_to_cart,
   .input-group-append form.post-password-form .wc-block-grid__products .wc-block-grid__product input[type="submit"] + .added_to_cart,
@@ -4959,6 +5036,10 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .wc-block-grid__products .wc-block-grid__product .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .added_to_cart,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .wc-block-grid__products .wc-block-grid__product .button + .added_to_cart,
   .wc-block-grid__products .wc-block-grid__product .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + .added_to_cart,
+  .input-group-append .widget_display_search #bbp-search-form .wc-block-grid__products .wc-block-grid__product #bbp_search_submit + .added_to_cart,
+  .wc-block-grid__products .wc-block-grid__product .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + .added_to_cart,
+  .widget_display_search #bbp-search-form .input-group-append .wc-block-grid__products .wc-block-grid__product #bbp_search_submit + .added_to_cart,
+  .wc-block-grid__products .wc-block-grid__product .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + .added_to_cart,
   .input-group-append .woocommerce ul.products li.product .btn + .button,
   .woocommerce ul.products li.product .input-group-append .btn + .button,
   .input-group-append form.post-password-form .woocommerce ul.products li.product input[type="submit"] + .button,
@@ -5012,6 +5093,10 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .woocommerce ul.products li.product .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .button,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .woocommerce ul.products li.product .button + .button,
   .woocommerce ul.products li.product .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + .button,
+  .input-group-append .widget_display_search #bbp-search-form .woocommerce ul.products li.product #bbp_search_submit + .button,
+  .woocommerce ul.products li.product .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + .button,
+  .widget_display_search #bbp-search-form .input-group-append .woocommerce ul.products li.product #bbp_search_submit + .button,
+  .woocommerce ul.products li.product .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + .button,
   .input-group-append .woocommerce ul.products li.product .btn + .added_to_cart,
   .woocommerce ul.products li.product .input-group-append .btn + .added_to_cart,
   .input-group-append form.post-password-form .woocommerce ul.products li.product input[type="submit"] + .added_to_cart,
@@ -5065,6 +5150,10 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .woocommerce ul.products li.product .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .added_to_cart,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .woocommerce ul.products li.product .button + .added_to_cart,
   .woocommerce ul.products li.product .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + .added_to_cart,
+  .input-group-append .widget_display_search #bbp-search-form .woocommerce ul.products li.product #bbp_search_submit + .added_to_cart,
+  .woocommerce ul.products li.product .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + .added_to_cart,
+  .widget_display_search #bbp-search-form .input-group-append .woocommerce ul.products li.product #bbp_search_submit + .added_to_cart,
+  .woocommerce ul.products li.product .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + .added_to_cart,
   .input-group-append #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons .btn + a.button,
@@ -5203,6 +5292,18 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + a.button,
+  .input-group-append .widget_display_search #bbp-search-form #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons #bbp_search_submit + a.button,
+  #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + a.button,
+  .widget_display_search #bbp-search-form .input-group-append #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons #bbp_search_submit + a.button,
+  #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + a.button,
   .input-group-append .wpcf7 .btn + input[type="submit"],
   .wpcf7 .input-group-append .btn + input[type="submit"],
   .input-group-append form.post-password-form .wpcf7 input[type="submit"] + input[type="submit"],
@@ -5261,6 +5362,10 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .wpcf7 .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + input[type="submit"],
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .wpcf7 .button + input[type="submit"],
   .wpcf7 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + input[type="submit"],
+  .input-group-append .widget_display_search #bbp-search-form .wpcf7 #bbp_search_submit + input[type="submit"],
+  .wpcf7 .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + input[type="submit"],
+  .widget_display_search #bbp-search-form .input-group-append .wpcf7 #bbp_search_submit + input[type="submit"],
+  .wpcf7 .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + input[type="submit"],
   .input-group-append .btn + #edd-purchase-button,
   .input-group-append form.post-password-form input[type="submit"] + #edd-purchase-button,
   form.post-password-form .input-group-append input[type="submit"] + #edd-purchase-button,
@@ -5291,6 +5396,8 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-append input.button + #edd-purchase-button,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + #edd-purchase-button,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + #edd-purchase-button,
+  .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + #edd-purchase-button,
+  .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + #edd-purchase-button,
   .input-group-append .btn + .edd-submit,
   .input-group-append form.post-password-form input[type="submit"] + .edd-submit,
   form.post-password-form .input-group-append input[type="submit"] + .edd-submit,
@@ -5321,6 +5428,8 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-append input.button + .edd-submit,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .edd-submit,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + .edd-submit,
+  .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + .edd-submit,
+  .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + .edd-submit,
   .input-group-append .btn + [type="submit"].edd-submit,
   .input-group-append form.post-password-form input[type="submit"] + [type="submit"].edd-submit,
   form.post-password-form .input-group-append input[type="submit"] + [type="submit"].edd-submit,
@@ -5351,6 +5460,8 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-append input.button + [type="submit"].edd-submit,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + [type="submit"].edd-submit,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + [type="submit"].edd-submit,
+  .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + [type="submit"].edd-submit,
+  .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + [type="submit"].edd-submit,
   .input-group-append .bbpress-wrapper#bbpress-forums .btn + .button.submit,
   .bbpress-wrapper#bbpress-forums .input-group-append .btn + .button.submit,
   .input-group-append form.post-password-form .bbpress-wrapper#bbpress-forums input[type="submit"] + .button.submit,
@@ -5405,6 +5516,10 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-append input.button + .button.submit,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .button.submit,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + .button.submit,
+  .input-group-append .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums #bbp_search_submit + .button.submit,
+  .bbpress-wrapper#bbpress-forums .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + .button.submit,
+  .widget_display_search #bbp-search-form .input-group-append .bbpress-wrapper#bbpress-forums #bbp_search_submit + .button.submit,
+  .bbpress-wrapper#bbpress-forums .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + .button.submit,
   .input-group-append .bbpress-wrapper#bbpress-forums .btn + input.button,
   .bbpress-wrapper#bbpress-forums .input-group-append .btn + input.button,
   .input-group-append form.post-password-form .bbpress-wrapper#bbpress-forums input[type="submit"] + input.button,
@@ -5459,6 +5574,10 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-append input.button + input.button,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + input.button,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + input.button,
+  .input-group-append .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums #bbp_search_submit + input.button,
+  .bbpress-wrapper#bbpress-forums .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + input.button,
+  .widget_display_search #bbp-search-form .input-group-append .bbpress-wrapper#bbpress-forums #bbp_search_submit + input.button,
+  .bbpress-wrapper#bbpress-forums .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + input.button,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn + .button,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .btn + .button,
   .input-group-append form.post-password-form .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password input[type="submit"] + .button,
@@ -5515,6 +5634,72 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append input.button + .button,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .button,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + .button,
+  .input-group-append .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #bbp_search_submit + .button,
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + .button,
+  .widget_display_search #bbp-search-form .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #bbp_search_submit + .button,
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + .button,
+  .input-group-append .widget_display_search #bbp-search-form .btn + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .btn + #bbp_search_submit,
+  .input-group-append form.post-password-form .widget_display_search #bbp-search-form input[type="submit"] + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append form.post-password-form input[type="submit"] + #bbp_search_submit,
+  form.post-password-form .input-group-append .widget_display_search #bbp-search-form input[type="submit"] + #bbp_search_submit,
+  .widget_display_search #bbp-search-form form.post-password-form .input-group-append input[type="submit"] + #bbp_search_submit,
+  .input-group-append .wp-block-button .widget_display_search #bbp-search-form .wp-block-button__link + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .wp-block-button .wp-block-button__link + #bbp_search_submit,
+  .wp-block-button .input-group-append .widget_display_search #bbp-search-form .wp-block-button__link + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .wp-block-button .input-group-append .wp-block-button__link + #bbp_search_submit,
+  .input-group-append .wp-block-buttons .wp-block-button .widget_display_search #bbp-search-form .wp-block-button__link + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .wp-block-buttons .wp-block-button .wp-block-button__link + #bbp_search_submit,
+  .wp-block-buttons .wp-block-button .input-group-append .widget_display_search #bbp-search-form .wp-block-button__link + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .wp-block-buttons .wp-block-button .input-group-append .wp-block-button__link + #bbp_search_submit,
+  .input-group-append .wc-block-grid__products .wc-block-grid__product .widget_display_search #bbp-search-form .added_to_cart + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .wc-block-grid__products .wc-block-grid__product .added_to_cart + #bbp_search_submit,
+  .wc-block-grid__products .wc-block-grid__product .input-group-append .widget_display_search #bbp-search-form .added_to_cart + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .wc-block-grid__products .wc-block-grid__product .input-group-append .added_to_cart + #bbp_search_submit,
+  .input-group-append .woocommerce ul.products li.product .widget_display_search #bbp-search-form .button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .woocommerce ul.products li.product .button + #bbp_search_submit,
+  .woocommerce ul.products li.product .input-group-append .widget_display_search #bbp-search-form .button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .woocommerce ul.products li.product .input-group-append .button + #bbp_search_submit,
+  .input-group-append .woocommerce ul.products li.product .widget_display_search #bbp-search-form .added_to_cart + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .woocommerce ul.products li.product .added_to_cart + #bbp_search_submit,
+  .woocommerce ul.products li.product .input-group-append .widget_display_search #bbp-search-form .added_to_cart + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .woocommerce ul.products li.product .input-group-append .added_to_cart + #bbp_search_submit,
+  .input-group-append #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons .widget_display_search #bbp-search-form a.button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons a.button + #bbp_search_submit,
+  #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons .input-group-append .widget_display_search #bbp-search-form a.button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form #footer-full-content
+  .woocommerce.widget_shopping_cart
+  .woocommerce-mini-cart__buttons.buttons .input-group-append a.button + #bbp_search_submit,
+  .input-group-append .wpcf7 .widget_display_search #bbp-search-form input[type="submit"] + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .wpcf7 input[type="submit"] + #bbp_search_submit,
+  .wpcf7 .input-group-append .widget_display_search #bbp-search-form input[type="submit"] + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .wpcf7 .input-group-append input[type="submit"] + #bbp_search_submit,
+  .input-group-append .widget_display_search #bbp-search-form #edd-purchase-button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append #edd-purchase-button + #bbp_search_submit,
+  .input-group-append .widget_display_search #bbp-search-form .edd-submit + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .edd-submit + #bbp_search_submit,
+  .input-group-append .widget_display_search #bbp-search-form [type="submit"].edd-submit + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append [type="submit"].edd-submit + #bbp_search_submit,
+  .input-group-append .bbpress-wrapper#bbpress-forums .widget_display_search #bbp-search-form .button.submit + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .bbpress-wrapper#bbpress-forums .button.submit + #bbp_search_submit,
+  .bbpress-wrapper#bbpress-forums .input-group-append .widget_display_search #bbp-search-form .button.submit + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums .input-group-append .button.submit + #bbp_search_submit,
+  .input-group-append .bbpress-wrapper#bbpress-forums .widget_display_search #bbp-search-form input.button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .bbpress-wrapper#bbpress-forums input.button + #bbp_search_submit,
+  .bbpress-wrapper#bbpress-forums .input-group-append .widget_display_search #bbp-search-form input.button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums .input-group-append input.button + #bbp_search_submit,
+  .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .widget_display_search #bbp-search-form .button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + #bbp_search_submit,
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .widget_display_search #bbp-search-form .button + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + #bbp_search_submit,
+  .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + #bbp_search_submit,
   .input-group-append .btn + .input-group-text,
   .input-group-append form.post-password-form input[type="submit"] + .input-group-text,
   form.post-password-form .input-group-append input[type="submit"] + .input-group-text,
@@ -5542,6 +5727,8 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .bbpress-wrapper#bbpress-forums .input-group-append input.button + .input-group-text,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button + .input-group-text,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .button + .input-group-text,
+  .input-group-append .widget_display_search #bbp-search-form #bbp_search_submit + .input-group-text,
+  .widget_display_search #bbp-search-form .input-group-append #bbp_search_submit + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append form.post-password-form .input-group-text + input[type="submit"],
@@ -5569,7 +5756,9 @@ form.post-password-form .btn-group-toggle > .btn-group > input[type="submit"],
   .input-group-append .bbpress-wrapper#bbpress-forums .input-group-text + input.button,
   .bbpress-wrapper#bbpress-forums .input-group-append .input-group-text + input.button,
   .input-group-append .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-text + .button,
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .input-group-text + .button {
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-append .input-group-text + .button,
+  .input-group-append .widget_display_search #bbp-search-form .input-group-text + #bbp_search_submit,
+  .widget_display_search #bbp-search-form .input-group-append .input-group-text + #bbp_search_submit {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -5657,6 +5846,7 @@ form.post-password-form .input-group-lg > .input-group-prepend > input[type="sub
 .bbpress-wrapper#bbpress-forums .input-group-lg > .input-group-prepend > .button.submit,
 .bbpress-wrapper#bbpress-forums .input-group-lg > .input-group-prepend > input.button,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-lg > .input-group-prepend > .button,
+.widget_display_search #bbp-search-form .input-group-lg > .input-group-prepend > #bbp_search_submit,
 .input-group-lg > .input-group-append > .btn,
 form.post-password-form .input-group-lg > .input-group-append > input[type="submit"],
 .wp-block-button .input-group-lg > .input-group-append > .wp-block-button__link,
@@ -5671,7 +5861,8 @@ form.post-password-form .input-group-lg > .input-group-append > input[type="subm
 .input-group-lg > .input-group-append > .edd-submit,
 .bbpress-wrapper#bbpress-forums .input-group-lg > .input-group-append > .button.submit,
 .bbpress-wrapper#bbpress-forums .input-group-lg > .input-group-append > input.button,
-.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-lg > .input-group-append > .button {
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-lg > .input-group-append > .button,
+.widget_display_search #bbp-search-form .input-group-lg > .input-group-append > #bbp_search_submit {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -5738,6 +5929,7 @@ form.post-password-form .input-group-sm > .input-group-prepend > input[type="sub
 .bbpress-wrapper#bbpress-forums .input-group-sm > .input-group-prepend > .button.submit,
 .bbpress-wrapper#bbpress-forums .input-group-sm > .input-group-prepend > input.button,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-sm > .input-group-prepend > .button,
+.widget_display_search #bbp-search-form .input-group-sm > .input-group-prepend > #bbp_search_submit,
 .input-group-sm > .input-group-append > .btn,
 form.post-password-form .input-group-sm > .input-group-append > input[type="submit"],
 .wp-block-button .input-group-sm > .input-group-append > .wp-block-button__link,
@@ -5752,7 +5944,8 @@ form.post-password-form .input-group-sm > .input-group-append > input[type="subm
 .input-group-sm > .input-group-append > .edd-submit,
 .bbpress-wrapper#bbpress-forums .input-group-sm > .input-group-append > .button.submit,
 .bbpress-wrapper#bbpress-forums .input-group-sm > .input-group-append > input.button,
-.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-sm > .input-group-append > .button {
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group-sm > .input-group-append > .button,
+.widget_display_search #bbp-search-form .input-group-sm > .input-group-append > #bbp_search_submit {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -5766,7 +5959,7 @@ form.post-password-form .input-group-sm > .input-group-append > input[type="subm
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons .input-group > .input-group-prepend > a.button, .wpcf7 .input-group > .input-group-prepend > input[type="submit"], .input-group > .input-group-prepend > #edd-purchase-button,
 .input-group > .input-group-prepend > .edd-submit, .bbpress-wrapper#bbpress-forums .input-group > .input-group-prepend > .button.submit,
-.bbpress-wrapper#bbpress-forums .input-group > .input-group-prepend > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group > .input-group-prepend > .button,
+.bbpress-wrapper#bbpress-forums .input-group > .input-group-prepend > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group > .input-group-prepend > .button, .widget_display_search #bbp-search-form .input-group > .input-group-prepend > #bbp_search_submit,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 form.post-password-form .input-group > .input-group-append:not(:last-child) > input[type="submit"],
@@ -5783,6 +5976,7 @@ form.post-password-form .input-group > .input-group-append:not(:last-child) > in
 .bbpress-wrapper#bbpress-forums .input-group > .input-group-append:not(:last-child) > .button.submit,
 .bbpress-wrapper#bbpress-forums .input-group > .input-group-append:not(:last-child) > input.button,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group > .input-group-append:not(:last-child) > .button,
+.widget_display_search #bbp-search-form .input-group > .input-group-append:not(:last-child) > #bbp_search_submit,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 form.post-password-form .input-group > .input-group-append:last-child > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
@@ -5799,6 +5993,7 @@ form.post-password-form .input-group > .input-group-append:last-child > input[ty
 .bbpress-wrapper#bbpress-forums .input-group > .input-group-append:last-child > .button.submit:not(:last-child):not(.dropdown-toggle),
 .bbpress-wrapper#bbpress-forums .input-group > .input-group-append:last-child > input.button:not(:last-child):not(.dropdown-toggle),
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group > .input-group-append:last-child > .button:not(:last-child):not(.dropdown-toggle),
+.widget_display_search #bbp-search-form .input-group > .input-group-append:last-child > #bbp_search_submit:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
@@ -5807,7 +6002,7 @@ form.post-password-form .input-group > .input-group-append:last-child > input[ty
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons .input-group > .input-group-append > a.button, .wpcf7 .input-group > .input-group-append > input[type="submit"], .input-group > .input-group-append > #edd-purchase-button,
 .input-group > .input-group-append > .edd-submit, .bbpress-wrapper#bbpress-forums .input-group > .input-group-append > .button.submit,
-.bbpress-wrapper#bbpress-forums .input-group > .input-group-append > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group > .input-group-append > .button,
+.bbpress-wrapper#bbpress-forums .input-group > .input-group-append > input.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group > .input-group-append > .button, .widget_display_search #bbp-search-form .input-group > .input-group-append > #bbp_search_submit,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 form.post-password-form .input-group > .input-group-prepend:not(:first-child) > input[type="submit"],
@@ -5824,6 +6019,7 @@ form.post-password-form .input-group > .input-group-prepend:not(:first-child) > 
 .bbpress-wrapper#bbpress-forums .input-group > .input-group-prepend:not(:first-child) > .button.submit,
 .bbpress-wrapper#bbpress-forums .input-group > .input-group-prepend:not(:first-child) > input.button,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group > .input-group-prepend:not(:first-child) > .button,
+.widget_display_search #bbp-search-form .input-group > .input-group-prepend:not(:first-child) > #bbp_search_submit,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 form.post-password-form .input-group > .input-group-prepend:first-child > input[type="submit"]:not(:first-child),
@@ -5840,6 +6036,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
 .bbpress-wrapper#bbpress-forums .input-group > .input-group-prepend:first-child > .button.submit:not(:first-child),
 .bbpress-wrapper#bbpress-forums .input-group > .input-group-prepend:first-child > input.button:not(:first-child),
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .input-group > .input-group-prepend:first-child > .button:not(:first-child),
+.widget_display_search #bbp-search-form .input-group > .input-group-prepend:first-child > #bbp_search_submit:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -6809,32 +7006,34 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem; }
 
-.pagination-sm .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm span.page-numbers,
+.pagination-sm .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm span.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links span.page-numbers,
 .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm a.page-numbers, .pagination-sm #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .page-numbers, .pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-link {
+.woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm a.page-numbers,
+.bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
+.woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links a.page-numbers, .pagination-sm #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links #edd_download_pagination .page-numbers, #edd_download_pagination .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5; }
-.pagination-sm .page-item:first-child .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child .page-link, .pagination-sm .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .page-item:first-child span.page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child span.page-numbers, .pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child span.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-item:first-child span.page-numbers,
+.pagination-sm .page-item:first-child .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child .page-link, .pagination-sm .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .page-item:first-child span.page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child span.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links li:first-child span.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child span.page-numbers,
 .pagination-sm .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
 .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .page-item:first-child a.page-numbers,
 .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child a.page-numbers,
 .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child a.page-numbers,
-.pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child a.page-numbers,
-.bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-item:first-child a.page-numbers, .pagination-sm .page-item:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .page-item:first-child .page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child .page-numbers, .pagination-sm .page-item:first-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child .page-link, .pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-item:first-child .page-link {
+.bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child a.page-numbers,
+.woocommerce nav.woocommerce-pagination ul.page-numbers .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links li:first-child a.page-numbers,
+.bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
+.woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child a.page-numbers, .pagination-sm .page-item:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .page-item:first-child .page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links li:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links li:first-child .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child #edd_download_pagination .page-numbers, #edd_download_pagination .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child .page-numbers, .pagination-sm .page-item:first-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:first-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:first-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links li:first-child .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:first-child .page-link {
   border-top-left-radius: 0.2rem;
   border-bottom-left-radius: 0.2rem; }
-.pagination-sm .page-item:last-child .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child .page-link, .pagination-sm .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .page-item:last-child span.page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child span.page-numbers, .pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child span.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-item:last-child span.page-numbers,
+.pagination-sm .page-item:last-child .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child .page-link, .pagination-sm .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .page-item:last-child span.page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child span.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links li:last-child span.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child span.page-numbers,
 .pagination-sm .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
 .woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .page-item:last-child a.page-numbers,
 .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child a.page-numbers,
 .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child a.page-numbers,
-.pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child a.page-numbers,
-.bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-item:last-child a.page-numbers, .pagination-sm .page-item:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .page-item:last-child .page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child .page-numbers, .pagination-sm .page-item:last-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child .page-link, .pagination-sm .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .pagination-sm .page-item:last-child .page-link {
+.bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child a.page-numbers,
+.woocommerce nav.woocommerce-pagination ul.page-numbers .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links li:last-child a.page-numbers,
+.bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
+.woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child a.page-numbers, .pagination-sm .page-item:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .page-item:last-child .page-numbers, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links li:last-child .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child .page-numbers, .pagination-sm .page-item:last-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .pagination-sm .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .pagination-sm li:last-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links li:last-child .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child .page-link {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem; }
 
@@ -6862,7 +7061,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
 .woocommerce-mini-cart__buttons.buttons
 a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge,
 .edd-submit .badge, .bbpress-wrapper#bbpress-forums .button.submit .badge,
-.bbpress-wrapper#bbpress-forums input.button .badge, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button .badge {
+.bbpress-wrapper#bbpress-forums input.button .badge, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .button .badge, .widget_display_search #bbp-search-form #bbp_search_submit .badge {
   position: relative;
   top: -1px; }
 
@@ -12726,15 +12925,20 @@ table#edd_user_history {
 #edd_profile_editor_form #edd_profile_editor_submit {
   margin: 1rem 0; }
 
-.bbpress-wrapper#bbpress-forums ul.bbp-forums,
-.bbpress-wrapper#bbpress-forums ul.bbp-lead-topic,
-.bbpress-wrapper#bbpress-forums ul.bbp-replies,
-.bbpress-wrapper#bbpress-forums ul.bbp-search-results,
-.bbpress-wrapper#bbpress-forums ul.bbp-topics {
-  font-size: 0.875rem; }
+@media (min-width: 576px) {
+  .bbpress-wrapper#bbpress-forums ul.bbp-forums,
+  .bbpress-wrapper#bbpress-forums ul.bbp-lead-topic,
+  .bbpress-wrapper#bbpress-forums ul.bbp-replies,
+  .bbpress-wrapper#bbpress-forums ul.bbp-search-results,
+  .bbpress-wrapper#bbpress-forums ul.bbp-topics {
+    font-size: 0.875rem; } }
+.bbpress-wrapper#bbpress-forums li.bbp-footer, .bbpress-wrapper#bbpress-forums li.bbp-header {
+  font-size: 0.75rem; }
 .bbpress-wrapper .forums.bbp-replies .bbp-body .bbp-reply-content {
-  font-size: 1rem;
   line-height: 1.5; }
+  @media (min-width: 576px) {
+    .bbpress-wrapper .forums.bbp-replies .bbp-body .bbp-reply-content {
+      font-size: 1rem; } }
 .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum,
 .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic {
   padding: 0.625rem; }
@@ -12825,7 +13029,19 @@ table#edd_user_history {
       .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-count {
         margin-bottom: 0; } }
   .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links {
-    justify-content: flex-end; }
+    font-size: .875rem;
+    line-height: 1.5;
+    justify-content: flex-end;
+    flex-wrap: wrap; }
+    .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links span.page-numbers,
+    .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
+    .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links a.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links #edd_download_pagination .page-numbers, #edd_download_pagination .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link {
+      padding: .25rem .4rem; }
+      @media (min-width: 576px) {
+        .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links span.page-numbers,
+        .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
+        .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links a.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links #edd_download_pagination .page-numbers, #edd_download_pagination .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link {
+          padding: .25rem .5rem; } }
 .bbpress-wrapper#bbpress-forums div.bbp-forum-author img.avatar,
 .bbpress-wrapper#bbpress-forums div.bbp-reply-author img.avatar,
 .bbpress-wrapper#bbpress-forums div.bbp-topic-author img.avatar {
@@ -12833,15 +13049,21 @@ table#edd_user_history {
   margin-bottom: .25rem; }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-avatar img.avatar {
   border-radius: 50%; }
-.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation {
-  font-size: 0.875rem; }
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation a {
-    padding: 7px 8px; }
-  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation li.current a {
-    opacity: 1; }
+@media (max-width: 575.98px) {
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation {
+    margin-bottom: 1rem; } }
+@media (min-width: 576px) {
+  .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation {
+    font-size: 0.875rem; } }
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation a {
+  padding: 7px 8px; }
+.bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation li.current a {
+  opacity: 1; }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper .bbp-user-section {
-  font-size: 0.875rem;
   line-height: 1.5; }
+  @media (min-width: 576px) {
+    .bbpress-wrapper#bbpress-forums #bbp-user-wrapper .bbp-user-section {
+      font-size: 0.875rem; } }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset.bbp-form {
   margin-bottom: 2rem; }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset.submit {
@@ -12853,8 +13075,10 @@ table#edd_user_history {
   height: auto; }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset label[for] {
   text-align: left;
-  width: 100%;
-  font-size: 0.875rem; }
+  width: 100%; }
+  @media (min-width: 576px) {
+    .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset label[for] {
+      font-size: 0.875rem; } }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile .pw-weak label {
   width: 20% !important; }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.strong {
@@ -12867,7 +13091,7 @@ table#edd_user_history {
     color: #001d16; }
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.strong a {
     font-weight: 700;
-    color: #01654e; }
+    color: #003327; }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.good {
   color: #856404;
   background-color: #fff3cd;
@@ -12878,7 +13102,7 @@ table#edd_user_history {
     color: #533f03; }
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.good a {
     font-weight: 700;
-    color: #d39e00; }
+    color: #a07800; }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.bad, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.short {
   color: #721c24;
   background-color: #f8d7da;
@@ -12889,7 +13113,7 @@ table#edd_user_history {
     color: #491217; }
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.bad a, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.short a {
     font-weight: 700;
-    color: #bd2130; }
+    color: #921925; }
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-topic-search-form,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-reply-search-form {
   margin-bottom: .75rem; }
@@ -12899,9 +13123,53 @@ table#edd_user_history {
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-topic-search-form input[type="text"],
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-reply-search-form input[type="text"] {
     margin-right: .25rem; }
+@media (max-width: 575.98px) {
+  .bbpress-wrapper#bbpress-forums li.bbp-header li.bbp-forum-info, .bbpress-wrapper#bbpress-forums li.bbp-header li.bbp-topic-title {
+    text-align: left; } }
+@media (max-width: 575.98px) {
+  .bbpress-wrapper#bbpress-forums li.bbp-header li.bbp-topic-voice-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-header li.bbp-topic-reply-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-header li.bbp-topic-freshness {
+    display: none; } }
+@media (max-width: 575.98px) {
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic {
+    display: flex;
+    flex-direction: column; } }
+@media (max-width: 575.98px) {
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-forum-info, .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-topic-title,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-forum-info,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-topic-title {
+    width: 100%; } }
+@media (max-width: 575.98px) {
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-topic-voice-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-topic-voice-count {
+    display: none; } }
+@media (max-width: 575.98px) {
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-forum-reply-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-forum-topic-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-topic-reply-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-topic-voice-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-forum-freshness,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-topic-freshness,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-forum-reply-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-forum-topic-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-topic-reply-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-topic-voice-count,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-forum-freshness,
+  .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-topic-freshness {
+    width: 100%;
+    text-align: left; } }
+.bbpress-wrapper#bbpress-forums li.bbp-body ul.forum p.bbp-topic-meta span,
+.bbpress-wrapper#bbpress-forums li.bbp-body ul.topic p.bbp-topic-meta span {
+  white-space: normal; }
+  @media (min-width: 576px) {
+    .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum p.bbp-topic-meta span,
+    .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic p.bbp-topic-meta span {
+      white-space: nowrap; } }
 
 .bbp_widget_login .avatar {
   border-radius: 50%; }
 
-.widget_display_search #bbp_search {
+.widget_display_search #bbp-search-form #bbp_search {
   margin-bottom: .75rem; }

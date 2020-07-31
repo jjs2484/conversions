@@ -8,14 +8,25 @@
 		ul.bbp-replies,
 		ul.bbp-search-results,
 		ul.bbp-topics {
-			font-size: 0.875rem;
+			@media (min-width: 576px) {
+				font-size: 0.875rem;
+			}
 		}
 	}
 
-	// Topics text font size
+	// Forum / Topic header font-size
+	&#bbpress-forums {
+		li.bbp-footer, li.bbp-header {
+			font-size: 0.75rem;
+		}
+	}
+
+	// Topics font size
 	.forums.bbp-replies .bbp-body .bbp-reply-content {
-		font-size: 1rem;
 		line-height: 1.5;
+		@media (min-width: 576px) {
+			font-size: 1rem;
+		}
 	}
 
 	// Forum and topic item padding
@@ -103,12 +114,20 @@
 		
 			.bbp-pagination-links {
 				@extend .pagination;
+				@extend .pagination-sm;
+				font-size: .875rem;
+				line-height: 1.5;
 				justify-content: flex-end;
+				flex-wrap: wrap;
 				.page-item {
 					@extend .page-item;
 				}
 				.page-link {
 					@extend .page-link;
+					padding: .25rem .4rem;
+					@media (min-width: 576px) {
+						padding: .25rem .5rem;
+					}
 				}
 			}
 		}
@@ -132,7 +151,7 @@
 		}
 	}
 	
-	// Profile
+	// User profiles
 	&#bbpress-forums #bbp-user-wrapper {
 		
 		// User avatar and nav menu
@@ -141,7 +160,12 @@
 				border-radius: 50%;
 			}
 			#bbp-user-navigation {
-				font-size: 0.875rem;
+				@media (max-width: 575.98px) {
+					margin-bottom: 1rem;
+				}
+				@media (min-width: 576px) {
+					font-size: 0.875rem;
+				}
 				a {
 					padding: 7px 8px;
 				}
@@ -153,8 +177,10 @@
 		
 		// User profile display
 		.bbp-user-section {
-			font-size: 0.875rem;
 			line-height: 1.5;
+			@media (min-width: 576px) {
+				font-size: 0.875rem;
+			}
 		}
 
 		// User profile edit
@@ -179,7 +205,9 @@
 		#bbp-your-profile fieldset label[for] {
 			text-align: left;
 			width: 100%;
-			font-size: 0.875rem;
+			@media (min-width: 576px) {
+				font-size: 0.875rem;
+			}
 		}
 		#bbp-your-profile .pw-weak label {
 			width: 20% !important;
@@ -195,21 +223,21 @@
 					@include alert-variant(theme-color-level(success, $alert-bg-level), theme-color-level(success, $alert-border-level), theme-color-level(success, $alert-color-level));
 					a {
 						font-weight: $alert-link-font-weight;
-						color: darken($success, 10%);
+						color: darken($success, 20%);
 					}
 				}
 				&.good {
 					@include alert-variant(theme-color-level(warning, $alert-bg-level), theme-color-level(warning, $alert-border-level), theme-color-level(warning, $alert-color-level));
 					a {
 						font-weight: $alert-link-font-weight;
-						color: darken($yellow, 10%);
+						color: darken($yellow, 20%);
 					}
 				}
 				&.bad, &.short {
 					@include alert-variant(theme-color-level(danger, $alert-bg-level), theme-color-level(danger, $alert-border-level), theme-color-level(danger, $alert-color-level));
 					a {
 						font-weight: $alert-link-font-weight;
-						color: darken($red, 10%);
+						color: darken($red, 20%);
 					}
 				}
 			}
@@ -229,14 +257,81 @@
 			}
 		}
 	}
+	
+	// Forums / Topics responsiveness fixes on small screens
+	// Convert to flexbox and hide some elements 
+	&#bbpress-forums {
+
+		// Forums / Topics header
+		li.bbp-header {
+			li.bbp-forum-info, li.bbp-topic-title {
+				@media (max-width: 575.98px) {
+					text-align: left;
+				}
+			}
+			li.bbp-topic-voice-count,
+			li.bbp-topic-reply-count,
+			li.bbp-topic-freshness {
+				@media (max-width: 575.98px) { 
+					display: none;
+				}
+			}
+		}
+
+		// Forums / Topics body
+		li.bbp-body ul.forum, 
+		li.bbp-body ul.topic {
+			@media (max-width: 575.98px) { 
+				display: flex;
+				flex-direction: column;
+			}
+			
+			li.bbp-forum-info, li.bbp-topic-title {
+				@media (max-width: 575.98px) { 
+					width: 100%;
+				}
+			}
+
+			li.bbp-topic-voice-count {
+				@media (max-width: 575.98px) { 
+					display: none;
+				}
+			}
+			li.bbp-forum-reply-count, 
+			li.bbp-forum-topic-count, 
+			li.bbp-topic-reply-count, 
+			li.bbp-topic-voice-count,
+			li.bbp-forum-freshness, 
+			li.bbp-topic-freshness {
+				@media (max-width: 575.98px) { 
+					width: 100%;
+					text-align: left;
+				}
+			}
+			
+			p.bbp-topic-meta {
+				span {
+					white-space: normal;
+					@media (min-width: 576px) {
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+	}
 }
 
+// Widget changes
 // Login widget
 .bbp_widget_login .avatar {
 	border-radius: 50%;
 }
-
 // Search widget
-.widget_display_search #bbp_search {
-	margin-bottom: .75rem;
+.widget_display_search #bbp-search-form {
+	#bbp_search {
+		margin-bottom: .75rem;
+	}
+	#bbp_search_submit {
+		@extend .btn;
+	}
 }

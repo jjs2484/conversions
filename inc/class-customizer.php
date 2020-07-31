@@ -323,7 +323,7 @@ namespace conversions
 						box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 					}';
 				}
-				// Article card.
+				// Content article card.
 				if ( get_theme_mod( 'conversions_content_cards', false ) === true ) {
 					echo 'body.page #primary #main > article, 
 					body.single #primary #main > article, 
@@ -338,6 +338,22 @@ namespace conversions
 						border-radius: .25rem;
 						box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 						padding: 2rem;
+					}';
+					echo '@media (max-width: 575.98px) {
+						body.page #primary, 
+						body.single #primary, 
+						body.archive #primary {
+							padding-left: 0;
+							padding-right: 0;
+						}
+					}';
+					echo '@media (max-width: 575.98px) {
+						body.page #primary #main > :not(article), 
+						body.single #primary #main > :not(article), 
+						body.archive #primary #main > :not(article) {
+							margin-left: 15px;
+							margin-right: 15px;
+						}
 					}';
 				}
 				// Featured image.
