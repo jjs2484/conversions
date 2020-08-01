@@ -200,8 +200,9 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Move basic color controls to "Colors" customizer panel.
 * Update: Reorder customizer panels.
 * Update: Font Awesome to v5.14.0
+* Update: Screenshot.
 * Update: NPM dependencies.
-* Fix: Convert any hardcoded CSS colors to Bootstrap variables when available.
+* Fix: Convert CSS colors to Bootstrap variables when available.
 * Fix: Add dl to footer conversions_footer_text_color style.
 * Fix: Remove role attributes from the navbar menu.
 * Fix: Adjust post_nav HTML output.
