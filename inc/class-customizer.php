@@ -413,6 +413,7 @@ namespace conversions
 				if ( class_exists( 'bbPress' ) ) {
 					// primary buttons.
 					echo '#bbpress-forums #bbp-search-form #bbp_search_submit,
+					#bbpress-forums .bbp-search-form #bbp_search_submit,
 					.widget_display_search #bbp-search-form #bbp_search_submit,
 					#bbpress-forums.bbpress-wrapper .button.submit,
 					#bbpress-forums.bbpress-wrapper #bbp-user-wrapper #bbp-your-profile #password .button {
@@ -421,6 +422,7 @@ namespace conversions
 						border: 1px solid ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_border'] ) . ';
 					}';
 					echo '#bbpress-forums #bbp-search-form #bbp_search_submit:hover,
+					#bbpress-forums .bbp-search-form #bbp_search_submit:hover,
 					.widget_display_search #bbp-search-form #bbp_search_submit:hover,
 					#bbpress-forums.bbpress-wrapper .button.submit:hover,
 					#bbpress-forums.bbpress-wrapper #bbp-user-wrapper #bbp-your-profile #password .button:hover {
