@@ -29,14 +29,6 @@
 		}
 	}
 
-	// Forum and topic item padding
-	&#bbpress-forums {
-		li.bbp-body ul.forum,
-		li.bbp-body ul.topic {
-			padding: 0.625rem;
-		}
-	}
-
 	// Add Bootstrap alerts
 	div.bbp-template-notice, 
 	.bbpress-wrapper div.indicator-hint {
@@ -258,7 +250,7 @@
 		}
 	}
 	
-	// Forums / Topics responsiveness fixes on small screens
+	// Forums / Topics overview responsiveness fixes on small screens
 	// Convert to flexbox and hide some elements 
 	&#bbpress-forums {
 
@@ -281,6 +273,8 @@
 		// Forums / Topics body
 		li.bbp-body ul.forum, 
 		li.bbp-body ul.topic {
+			padding: 0.625rem;
+			
 			@media (max-width: 575.98px) { 
 				display: flex;
 				flex-direction: column;
@@ -316,6 +310,17 @@
 						white-space: nowrap;
 					}
 				}
+			}
+		}
+	}
+
+	// Topics admin links
+	&#bbpress-forums {
+		.bbp-replies .bbp-body {
+			.bbp-admin-links {
+				display: block;
+				width: 100%;
+				float: left;
 			}
 		}
 	}
