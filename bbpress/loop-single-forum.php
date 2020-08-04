@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
 		$conversions_bbp_forum_description = bbp_get_forum_content();
 		if ( ! empty( $conversions_bbp_forum_description ) ) {
 			echo '<div class="bbp-forum-content">';
-			echo $conversions_bbp_forum_description;
+			echo $conversions_bbp_forum_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo '</div>';
 		}
 		?>
