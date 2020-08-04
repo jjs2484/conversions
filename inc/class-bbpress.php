@@ -21,6 +21,8 @@ class bbPress {
 	public function __construct() {
 		add_filter( 'bbp_get_topic_pagination_links', [ $this, 'bbp_get_pagination_links' ] );
 		add_filter( 'bbp_get_forum_pagination_links', [ $this, 'bbp_get_pagination_links' ] );
+		add_action( 'bbp_theme_before_topic_freshness_link', [ $this, 'bbp_freshness_link_text' ] );
+		add_action( 'bbp_theme_before_forum_freshness_link', [ $this, 'bbp_freshness_link_text' ] );
 	}
 
 	/**
@@ -40,6 +42,15 @@ class bbPress {
 		$pagination = str_replace( '<li class="page-item"><a class="page-link dots">', '<li class="page-item disabled"><a class="page-link dots">', $pagination );
 
 		return $pagination;
+	}
+
+	/**
+	 * Adds text before the last post link -- for mobile devices
+	 *
+	 * @since 2020-08-03
+	 */
+	public function bbp_freshness_link_text() {
+		echo '<span class="c-bbp-freshness-text">' . esc_html__( 'Last post:', 'conversions' ) . '</span>';
 	}
 
 }

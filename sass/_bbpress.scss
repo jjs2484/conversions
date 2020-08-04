@@ -8,7 +8,7 @@
 		ul.bbp-replies,
 		ul.bbp-search-results,
 		ul.bbp-topics {
-			@media (min-width: 576px) {
+			@include media-breakpoint-up(sm) {
 				font-size: 0.875rem;
 			}
 		}
@@ -24,7 +24,7 @@
 	// Topics font size
 	.forums.bbp-replies .bbp-body .bbp-reply-content {
 		line-height: 1.5;
-		@media (min-width: 576px) {
+		@include media-breakpoint-up(sm) {
 			font-size: 1rem;
 		}
 	}
@@ -110,14 +110,14 @@
 				font-size: .875rem;
 				line-height: 1.5;
 				justify-content: flex-end;
-				flex-wrap: wrap;
+				flex-wrap: nowrap;
 				.page-item {
 					@extend .page-item;
 				}
 				.page-link {
 					@extend .page-link;
 					padding: .25rem .4rem;
-					@media (min-width: 576px) {
+					@include media-breakpoint-up(sm) {
 						padding: .25rem .5rem;
 					}
 				}
@@ -145,17 +145,31 @@
 	
 	// User profiles
 	&#bbpress-forums #bbp-user-wrapper {
+			display: flex;
+			flex-direction: column;
+			flex: 0 0 100%;
 		
 		// User avatar and nav menu
 		#bbp-single-user-details {
+			width: 100%;
+			#bbp-user-avatar {
+				width: 100px;
+			}
 			#bbp-user-avatar img.avatar {
 				border-radius: 50%;
+				height: auto;
+				width: 100px;
 			}
 			#bbp-user-navigation {
-				@media (max-width: 575.98px) {
-					margin-bottom: 1rem;
+				margin-bottom: 1rem;
+				ul {
+					@extend .nav;
+					flex-direction: column;
+					@include media-breakpoint-up(sm) {
+						flex-direction: row;
+					}
 				}
-				@media (min-width: 576px) {
+				@include media-breakpoint-up(sm) {
 					font-size: 0.875rem;
 				}
 				a {
@@ -166,11 +180,16 @@
 				}
 			}
 		}
+
+		// User body
+		#bbp-user-body {
+			margin-left: 0;
+		}
 		
 		// User profile display
 		.bbp-user-section {
 			line-height: 1.5;
-			@media (min-width: 576px) {
+			@include media-breakpoint-up(sm) {
 				font-size: 0.875rem;
 			}
 		}
@@ -197,7 +216,7 @@
 		#bbp-your-profile fieldset label[for] {
 			text-align: left;
 			width: 100%;
-			@media (min-width: 576px) {
+			@include media-breakpoint-up(sm) {
 				font-size: 0.875rem;
 			}
 		}
@@ -242,6 +261,7 @@
 				margin-bottom: .75rem;
 				div {
 					display: flex;
+					flex-flow: nowrap;
 				}
 				input[type="text"] {
 					margin-right: .25rem;
@@ -254,17 +274,26 @@
 	// Convert to flexbox and hide some elements 
 	&#bbpress-forums {
 
+		// Remove voice count 
+		.bbp-topic-voice-count {
+			display: none;
+		}
+
+		// Make topic freshness column bigger
+		li.bbp-topic-freshness {
+			width: 35%;
+		}
+
 		// Forums / Topics header
 		li.bbp-header {
 			li.bbp-forum-info, li.bbp-topic-title {
-				@media (max-width: 575.98px) {
+				@include media-breakpoint-down(xs) {
 					text-align: left;
 				}
 			}
-			li.bbp-topic-voice-count,
 			li.bbp-topic-reply-count,
 			li.bbp-topic-freshness {
-				@media (max-width: 575.98px) { 
+				@include media-breakpoint-down(xs) { 
 					display: none;
 				}
 			}
@@ -274,30 +303,34 @@
 		li.bbp-body ul.forum, 
 		li.bbp-body ul.topic {
 			padding: 0.625rem;
-			
-			@media (max-width: 575.98px) { 
+
+			@include media-breakpoint-down(xs) { 
 				display: flex;
 				flex-direction: column;
 			}
 			
 			li.bbp-forum-info, li.bbp-topic-title {
-				@media (max-width: 575.98px) { 
+				@include media-breakpoint-down(xs) { 
 					width: 100%;
 				}
 			}
 
-			li.bbp-topic-voice-count {
-				@media (max-width: 575.98px) { 
+			// Descriptive text for mobile (topic, post, last post) 
+			.c-bbp-topic-count,
+			.c-bbp-post-count,
+			.c-bbp-freshness-text {
+				@include media-breakpoint-up(sm) {
 					display: none;
 				}
 			}
+
 			li.bbp-forum-reply-count, 
 			li.bbp-forum-topic-count, 
 			li.bbp-topic-reply-count, 
 			li.bbp-topic-voice-count,
 			li.bbp-forum-freshness, 
 			li.bbp-topic-freshness {
-				@media (max-width: 575.98px) { 
+				@include media-breakpoint-down(xs) { 
 					width: 100%;
 					text-align: left;
 				}
@@ -306,7 +339,7 @@
 			p.bbp-topic-meta {
 				span {
 					white-space: normal;
-					@media (min-width: 576px) {
+					@include media-breakpoint-up(sm) {
 						white-space: nowrap;
 					}
 				}
@@ -340,3 +373,4 @@
 		@extend .btn;
 	}
 }
+
