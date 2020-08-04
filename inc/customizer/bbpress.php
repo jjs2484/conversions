@@ -66,4 +66,28 @@ if ( class_exists( 'bbPress' ) ) {
 			]
 		)
 	);
+	$wp_customize->add_setting(
+		'conversions_bbp_profile_search',
+		[
+			'default'           => false,
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'conversions_sanitize_checkbox',
+			'capability'        => 'edit_theme_options',
+			'transport'         => 'refresh',
+		]
+	);
+	$wp_customize->add_control(
+		new \WP_Customize_Control(
+			$wp_customize,
+			'conversions_bbp_profile_search',
+			[
+				'label'       => __( 'Search on profile pages', 'conversions' ),
+				'description' => __( 'Enable searchbox on profile pages?', 'conversions' ),
+				'section'     => 'conversions_bbpress',
+				'settings'    => 'conversions_bbp_profile_search',
+				'type'        => 'checkbox',
+				'priority'    => '50',
+			]
+		)
+	);
 }

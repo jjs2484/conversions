@@ -430,6 +430,10 @@ namespace conversions
 						background-color: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_bg_hover'] ) . ';
 						border-color: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_border_hover'] ) . ';
 					}';
+					// Profile search box.
+					if ( get_theme_mod( 'conversions_bbp_profile_search', false ) === false ) {
+						echo '#bbpress-forums #bbp-user-wrapper .bbp-search-form { display: none; }';
+					}
 				}
 				// Sidebar.
 				if ( get_theme_mod( 'conversions_sidebar_mv', true ) === false ) {
