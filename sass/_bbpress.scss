@@ -270,11 +270,11 @@
 		}
 	}
 	
-	// Forums / Topics overview responsiveness fixes on small screens
-	// Convert to flexbox and hide some elements 
+	// Forums / Topics overview responsiveness fixes
+	// On small screens convert to flexbox and hide some elements 
 	&#bbpress-forums {
 
-		// Remove voice count 
+		// Remove topic voice count 
 		.bbp-topic-voice-count {
 			display: none;
 		}
@@ -291,6 +291,9 @@
 					text-align: left;
 				}
 			}
+			li.bbp-forum-topic-count,
+			li.bbp-forum-reply-count,
+			li.bbp-forum-freshness,
 			li.bbp-topic-reply-count,
 			li.bbp-topic-freshness {
 				@include media-breakpoint-down(xs) { 
@@ -309,7 +312,8 @@
 				flex-direction: column;
 			}
 			
-			li.bbp-forum-info, li.bbp-topic-title {
+			li.bbp-forum-info,
+			li.bbp-topic-title {
 				@include media-breakpoint-down(xs) { 
 					width: 100%;
 				}
@@ -344,6 +348,15 @@
 					}
 				}
 			}
+
+			li.bbp-topic-freshness,
+			li.bbp-forum-freshness {
+				.bbp-topic-meta {
+					@include media-breakpoint-down(xs) { 
+						display: none;
+					}
+				}
+			}
 		}
 	}
 
@@ -373,4 +386,3 @@
 		@extend .btn;
 	}
 }
-
