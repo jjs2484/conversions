@@ -213,7 +213,6 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Font Awesome v5.14.0 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
-
 * Google Fonts
 
 	Comfortaa
@@ -275,3 +274,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
     Ubuntu
     Source: https://fonts.google.com/specimen/Ubuntu
 	License: Ubuntu Font License, 1.0 - design.ubuntu.com/font/
+
+* Screenshot - Image used:
+https://www.pexels.com/photo/woman-holding-card-while-operating-silver-laptop-919436/
+License: Public Domain CC0
