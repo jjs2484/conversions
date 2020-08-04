@@ -36,7 +36,14 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php do_action( 'bbp_theme_before_forum_description' ); ?>
 
-		<div class="bbp-forum-content"><?php bbp_forum_content(); ?></div>
+		<?php
+		$conversions_bbp_forum_description = bbp_get_forum_content();
+		if ( ! empty( $conversions_bbp_forum_description ) ) {
+			echo '<div class="bbp-forum-content">';
+			echo $conversions_bbp_forum_description;
+			echo '</div>';
+		}
+		?>
 
 		<?php do_action( 'bbp_theme_after_forum_description' ); ?>
 
