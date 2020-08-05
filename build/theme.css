@@ -12679,28 +12679,28 @@ p.woocommerce-store-notice.demo_store {
     .wpcf7 div.wpcf7-response-output a {
       font-weight: 700;
       color: #0062cc; }
-    .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok {
-      color: #014f3d;
-      background-color: #cceae3;
-      border-color: #b8e2d8; }
-      .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok hr {
-        border-top-color: #a6dbce; }
-      .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok .alert-link {
-        color: #001d16; }
-      .wpcf7 div.wpcf7-response-output.wpcf7-mail-sent-ok a {
-        font-weight: 700;
-        color: #01654e; }
-    .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors {
-      color: #721c24;
-      background-color: #f8d7da;
-      border-color: #f5c6cb; }
-      .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors hr {
-        border-top-color: #f1b0b7; }
-      .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors .alert-link {
-        color: #491217; }
-      .wpcf7 div.wpcf7-response-output.wpcf7-validation-errors a {
-        font-weight: 700;
-        color: #bd2130; }
+  .wpcf7 .wpcf7-form.sent div.wpcf7-response-output {
+    color: #014f3d;
+    background-color: #cceae3;
+    border-color: #b8e2d8; }
+    .wpcf7 .wpcf7-form.sent div.wpcf7-response-output hr {
+      border-top-color: #a6dbce; }
+    .wpcf7 .wpcf7-form.sent div.wpcf7-response-output .alert-link {
+      color: #001d16; }
+    .wpcf7 .wpcf7-form.sent div.wpcf7-response-output a {
+      font-weight: 700;
+      color: #01654e; }
+  .wpcf7 .wpcf7-form.invalid div.wpcf7-response-output {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb; }
+    .wpcf7 .wpcf7-form.invalid div.wpcf7-response-output hr {
+      border-top-color: #f1b0b7; }
+    .wpcf7 .wpcf7-form.invalid div.wpcf7-response-output .alert-link {
+      color: #491217; }
+    .wpcf7 .wpcf7-form.invalid div.wpcf7-response-output a {
+      font-weight: 700;
+      color: #bd2130; }
 
 .single-download #edd-single-wrapper .entry-header {
   text-align: center;
