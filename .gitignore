@@ -7,7 +7,10 @@ npm-debug.log
 
 # Composer
 composer.phar
-/vendor/
+/vendor/squizlabs/
+/vendor/wp-coding-standards/
+/vendor/dealerdirect/
+/vendor/bin/
 
 # macOS
 .DS_Store
