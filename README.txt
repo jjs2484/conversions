@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 1.6.7
+Stable tag: 1.6.8
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -207,11 +207,15 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Fix: Remove role attributes from the navbar menu.
 * Fix: Adjust post_nav HTML output.
 * Fix: Correct Contact form 7 alert CSS selectors.
-* Fix: Base block button styles preventing some WooCommerce specific overrides. 
+* Fix: Base block button styles preventing some WooCommerce specific overrides.
+
+= 1.6.8 =
+* New: Add composer class autoloader.
+* Update: Bootstrap to v4.5.2
 
 == Resources ==
 
-* Bootstrap 4.5.0 | MIT License
+* Bootstrap 4.5.2 | MIT License
 * Font Awesome v5.14.0 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
