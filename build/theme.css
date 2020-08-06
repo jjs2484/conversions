@@ -12036,9 +12036,9 @@ figcaption.blocks-gallery-caption {
     border-color: #007bff; }
     .wp-block-button .wp-block-button__link:not(.has-background):hover,
     .wp-block-buttons .wp-block-button .wp-block-button__link:not(.has-background):hover {
-      color: #fff !important;
-      background-color: #0069d9 !important;
-      border-color: #0069d9 !important; }
+      color: #fff;
+      background-color: #0069d9;
+      border-color: #0069d9; }
   .wp-block-button .wp-block-button__link.has-primary-background-color,
   .wp-block-buttons .wp-block-button .wp-block-button__link.has-primary-background-color {
     color: #fff;
