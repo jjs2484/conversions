@@ -206,6 +206,8 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Fix: Add dl to footer conversions_footer_text_color style.
 * Fix: Remove role attributes from the navbar menu.
 * Fix: Adjust post_nav HTML output.
+* Fix: Correct Contact form 7 alert CSS selectors.
+* Fix: Base block button styles preventing some WooCommerce specific overrides. 
 
 == Resources ==
 
