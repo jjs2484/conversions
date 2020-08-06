@@ -343,4 +343,3 @@ class Enqueue {
 		);
 	}
 }
-new Enqueue();

@@ -342,4 +342,3 @@ class Easy_Digital_Downloads {
 	}
 
 }
-new Easy_Digital_Downloads();

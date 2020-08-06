@@ -537,4 +537,3 @@ class Template {
 	}
 
 }
-conversions()->template = new Template();

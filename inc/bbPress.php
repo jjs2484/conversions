@@ -54,4 +54,3 @@ class bbPress {
 	}
 
 }
-new bbPress();

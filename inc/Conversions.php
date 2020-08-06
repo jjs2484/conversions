@@ -38,21 +38,20 @@ namespace conversions
 		 * @since 2019-08-18
 		 */
 		public function load() {
+			new Comments();
+			$this->customizer = new Customizer();
+			new Enqueue();
+			new Extras();
+			$this->template = new Template();
+			$this->widgets = new Widgets();
+			new WooCommerce();
+			new Easy_Digital_Downloads();
+			new bbPress();
+
 			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-			require_once get_parent_theme_file_path( '/inc/class-comments.php' );
-			require_once get_parent_theme_file_path( '/inc/class-customizer.php' );
-			require_once get_parent_theme_file_path( '/inc/class-enqueue.php' );
-			require_once get_parent_theme_file_path( '/inc/class-extras.php' );
-			require_once get_parent_theme_file_path( '/inc/class-navbar.php' );
-			require_once get_parent_theme_file_path( '/inc/class-template.php' );
-			require_once get_parent_theme_file_path( '/inc/class-widgets.php' );
-			require_once get_parent_theme_file_path( '/inc/class-woocommerce.php' );
-			require_once get_parent_theme_file_path( '/inc/class-wp-bootstrap-comment-walker.php' );
-			require_once get_parent_theme_file_path( '/inc/class-wp-bootstrap-navwalker.php' );
-			require_once get_parent_theme_file_path( '/inc/class-easy-digital-downloads.php' );
-			require_once get_parent_theme_file_path( '/inc/class-bbpress.php' );
 			require_once get_parent_theme_file_path( '/inc/class-tgm-plugin-activation.php' );
 			// phpcs:enable
+
 			$this->setup();
 			add_action( 'tgmpa_register', [ $this, 'conversions_register_required_plugins' ] );
 		}
@@ -275,7 +274,4 @@ namespace
 	function conversions() {
 		return \conversions\Conversions::$instance;
 	}
-
-	new \conversions\Conversions();
-	conversions()->load();
 }

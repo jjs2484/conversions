@@ -101,4 +101,3 @@ class Widgets {
 		);
 	}
 }
-conversions()->widgets = new Widgets();

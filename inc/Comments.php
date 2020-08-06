@@ -72,4 +72,3 @@ class Comments {
 	}
 
 }
-new Comments();

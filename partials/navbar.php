@@ -7,7 +7,7 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-$conversions_navbar = new conversions\navbar();
+$conversions_navbar = new conversions\Navbar();
 ?>
 
 	<div id="wrapper-navbar" class="<?php echo esc_attr( $conversions_navbar->conversions_wrapper_classes() ); ?>">

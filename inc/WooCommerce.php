@@ -239,4 +239,3 @@ class WooCommerce {
 	}
 
 }
-new WooCommerce();

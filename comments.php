@@ -90,7 +90,7 @@ if ( post_password_required() ) {
 					'style'       => 'ul',
 					'short_ping'  => true,
 					'avatar_size' => '60',
-					'walker'      => new conversions\WP_Bootstrap_Comment_Walker(),
+					'walker'      => new \conversions\WP_Bootstrap_Comment_Walker(),
 				)
 			);
 			?>

@@ -325,8 +325,8 @@ namespace conversions
 				}
 				// Content article card.
 				if ( get_theme_mod( 'conversions_content_cards', false ) === true ) {
-					echo 'body.page #primary #main > article, 
-					body.single #primary #main > article, 
+					echo 'body.page #primary #main > article,
+					body.single #primary #main > article,
 					body.archive #primary #main > article {
 						position: relative;
 						display: flex;
@@ -340,16 +340,16 @@ namespace conversions
 						padding: 2rem;
 					}';
 					echo '@media (max-width: 575.98px) {
-						body.page #primary, 
-						body.single #primary, 
+						body.page #primary,
+						body.single #primary,
 						body.archive #primary {
 							padding-left: 0;
 							padding-right: 0;
 						}
 					}';
 					echo '@media (max-width: 575.98px) {
-						body.page #primary #main > :not(article), 
-						body.single #primary #main > :not(article), 
+						body.page #primary #main > :not(article),
+						body.single #primary #main > :not(article),
 						body.archive #primary #main > :not(article) {
 							padding-left: 15px;
 							padding-right: 15px;
@@ -594,7 +594,6 @@ namespace conversions
 			return $items;
 		}
 	}
-	conversions()->customizer = new Customizer();
 }
 
 namespace
