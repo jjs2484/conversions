@@ -507,15 +507,17 @@ class Template {
 	 * @since 2019-12-17
 	 */
 	public function conversions_footer_credits() {
-		echo '<div class="copyright col-md">';
 
+		// Get copyright text.
 		if ( ! empty( get_theme_mod( 'conversions_copyright_text' ) ) ) {
 			$copyright_text = get_theme_mod( 'conversions_copyright_text' );
 		} else {
 			$copyright_text = get_bloginfo( 'name' );
 		}
 
-		echo sprintf(
+		$footer_credits = '<div class="copyright col-md">';
+
+		$footer_credits .= sprintf(
 			'&copy;%s&nbsp;&bull;&nbsp;<a class="site-name" href="%s" rel="home">%s</a>',
 			esc_html( date_i18n( __( 'Y', 'conversions' ) ) ),
 			esc_url( home_url( '/' ) ),
@@ -523,17 +525,23 @@ class Template {
 		);
 
 		if ( function_exists( 'the_privacy_policy_link' ) ) {
-			the_privacy_policy_link( '&nbsp;&bull;&nbsp;' );
+			$footer_credits .= get_the_privacy_policy_link( '&nbsp;&bull;&nbsp;' );
 		}
 
-		echo sprintf(
+		$footer_credits .= sprintf(
 			'&nbsp;&bull;&nbsp;<span class="conversions-powered">%s&nbsp;<a href="%s">%s</a></span>',
 			esc_html__( 'Powered by', 'conversions' ),
 			esc_url( 'https://conversionswp.com' ),
 			esc_html__( 'Conversions Theme', 'conversions' )
 		);
 
-		echo '</div>';
+		$footer_credits .= '</div>';
+
+		if ( has_filter( 'conversions_footer_credits' ) ) {
+			$footer_credits = apply_filters( 'conversions_footer_credits', $footer_credits );
+		}
+
+		echo $footer_credits; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
 	}
 
 }
