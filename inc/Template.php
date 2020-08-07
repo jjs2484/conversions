@@ -515,8 +515,6 @@ class Template {
 			$copyright_text = get_bloginfo( 'name' );
 		}
 
-		$footer_credits = '<div class="copyright col-md">';
-
 		$footer_credits .= sprintf(
 			'&copy;%s&nbsp;&bull;&nbsp;<a class="site-name" href="%s" rel="home">%s</a>',
 			esc_html( date_i18n( __( 'Y', 'conversions' ) ) ),
@@ -535,13 +533,11 @@ class Template {
 			esc_html__( 'Conversions Theme', 'conversions' )
 		);
 
-		$footer_credits .= '</div>';
-
 		if ( has_filter( 'conversions_footer_credits' ) ) {
 			$footer_credits = apply_filters( 'conversions_footer_credits', $footer_credits );
 		}
 
-		echo $footer_credits; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
+		echo '<div class="copyright col-md">' . $footer_credits . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
 	}
 
 }
