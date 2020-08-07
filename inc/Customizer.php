@@ -275,7 +275,7 @@ namespace conversions
 			];
 
 			$mods = [
-				[ 'a.navbar-brand img', 'max-height', get_theme_mod( 'conversions_logo_height' ), 'rem' ],
+				[ '.navbar-brand img', 'max-height', get_theme_mod( 'conversions_logo_height' ), 'rem' ],
 				[ '.navbar', 'padding-top', get_theme_mod( 'conversions_nav_tbpadding' ), 'rem' ],
 				[ '.navbar', 'padding-bottom', get_theme_mod( 'conversions_nav_tbpadding' ), 'rem' ],
 				[ 'footer.site-footer', 'background-color', get_theme_mod( 'conversions_footer_bg_color' ) ],
