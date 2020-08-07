@@ -11588,16 +11588,16 @@ section p.subtitle {
   color: #6c757d;
   margin-left: 2px; }
 
-.single-post .entry-footer,
-.single-post .post-navigation,
-.single-post .c-related-posts {
+.single .entry-footer,
+.single .post-navigation,
+.single .c-related-posts {
   margin: 1.5rem 0; }
-.single-post .comment-navigation {
+.single .comment-navigation {
   margin: 1rem 0; }
-.single-post .post-navigation .nav-links {
+.single .post-navigation .nav-links {
   flex: 0 0 100%;
   flex-flow: wrap; }
-  .single-post .post-navigation .nav-links .nav-previous {
+  .single .post-navigation .nav-links .nav-previous {
     margin-left: 2rem; }
 
 .c-related-posts .col-12 {
