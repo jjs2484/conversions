@@ -212,6 +212,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 = 1.6.8 =
 * New: Add composer class autoloader.
 * Update: Bootstrap to v4.5.2
+* Fix: .single-post CSS selector to .single for meta/navs/related spacing styles.
 
 == Resources ==
 
