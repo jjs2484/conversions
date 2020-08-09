@@ -214,6 +214,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * New: Add conversions_footer_credits filter.
 * Update: Bootstrap to v4.5.2
 * Fix: .single-post CSS selector to .single for meta/navs/related spacing styles.
+* Fix: Change logo CSS selector from a.navbar-brand to .navbar-brand for WP 5.5 compatibility.
 
 == Resources ==
 
