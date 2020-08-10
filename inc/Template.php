@@ -515,7 +515,7 @@ class Template {
 			$copyright_text = get_bloginfo( 'name' );
 		}
 
-		$footer_credits .= sprintf(
+		$footer_credits = sprintf(
 			'&copy;%s&nbsp;&bull;&nbsp;<a class="site-name" href="%s" rel="home">%s</a>',
 			esc_html( date_i18n( __( 'Y', 'conversions' ) ) ),
 			esc_url( home_url( '/' ) ),
