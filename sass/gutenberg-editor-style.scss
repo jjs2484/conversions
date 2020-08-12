@@ -5,11 +5,6 @@
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/buttons";
 
-// Add padding to wrapper to prevent overflow
-.editor-styles-wrapper {
-	padding: 50px 30px;
-}
-
 // Block widths
 .wp-block {
 	max-width: 1140px;

@@ -416,9 +416,6 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
 
-.editor-styles-wrapper {
-  padding: 50px 30px; }
-
 .wp-block {
   max-width: 1140px; }
 
