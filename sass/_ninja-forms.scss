@@ -1,0 +1,109 @@
+/*
+* Use existing Bootstrap classes for Ninja Forms styles
+*/
+
+// NF form wrapper
+.nf-form-wrap {
+
+	// Add .form-control to inputs
+	.nf-form-content input:not([type="button"]), 
+	.nf-form-content textarea,
+	.nf-form-content .list-select-wrap > div select {
+		@extend .form-control;
+	}
+
+	// Add .form-check-input to checkbox and radio inputs
+	.nf-form-content input[type="checkbox"].ninja-forms-field, 
+	.nf-form-content input[type="radio"].ninja-forms-field {
+		@extend .form-check-input;
+	}
+
+	// Hides the NF radio and checkbox they output as psuedo elements
+	.listradio-wrap .nf-field-element label::after,
+	.listradio-wrap .nf-field-element label.nf-checked-label::before,
+	.listcheckbox-wrap .nf-field-element label::after,
+	.listcheckbox-wrap .nf-field-element label.nf-checked-label::before {
+		display: none;
+	}
+
+	// Fixes the margin from the radio or checkbox to the label
+	.listradio-wrap .nf-field-element label,
+	.listcheckbox-wrap .nf-field-element label {
+		margin-left: .25rem !important;
+	}
+
+	// Add .form-check-label to checkbox and radio labels
+	.list-checkbox-wrap .nf-field-element li label,
+	.list-radio-wrap .nf-field-element li label {
+		@extend .form-check-label;
+	}
+
+	// Add .form-check wrapper to checkbox and radios
+	.nf-form-content {
+		.listcheckbox-wrap,
+		.listradio-wrap {
+			li {
+				@extend .form-check;
+				padding-left: 1.25rem !important;
+			}
+		}
+		.two-col-list,
+		.three-col-list,
+		.four-col-list,
+		.five-col-list,
+		.six-col-list {
+			.listcheckbox-wrap,
+			.listradio-wrap {
+				ul li {
+					@extend .form-check-inline;
+				}
+			}
+		}
+	}
+
+	// Hide unused select div
+	.nf-form-content .list-select-wrap .nf-field-element > div {
+		display: none;
+	}
+
+	// Add normal dropdown arrow back
+	.nf-form-content .list-select-wrap > div select {
+		-webkit-appearance: menulist;
+		-moz-appearance: menulist;
+		appearance: menulist;
+	}
+
+	// Error icon for individual fields
+	.nf-error.field-wrap .nf-field-element::after {
+		background: $danger;
+		color: $white;
+		height: 36px;
+		line-height: 36px;
+	}
+
+	// Error text below individual fields
+	.nf-error .nf-error-msg {
+		color: $danger;
+	}
+
+	// Bottom main error alert
+	.nf-form-errors .nf-error-msg {
+		@extend .alert;
+		@include alert-variant(theme-color-level(danger, $alert-bg-level), theme-color-level(danger, $alert-border-level), theme-color-level(danger, $alert-color-level));
+	}
+
+	// Success icon for individual fields
+	.nf-pass.field-wrap .nf-field-element::after {
+		color: $success;
+		height: 36px;
+		line-height: 36px;
+	}
+
+	// Submit buttons
+	.nf-form-content button, 
+	.nf-form-content input[type="button"], 
+	.nf-form-content input[type="submit"] {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+}
