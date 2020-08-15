@@ -14502,6 +14502,9 @@ table#edd_user_history {
 /*
 * Use existing Bootstrap classes for Ninja Forms styles
 */
+body.no-sidebar .nf-form-content {
+  margin: 0 0 auto 0; }
+
 .nf-form-wrap .listradio-wrap .nf-field-element label::after,
 .nf-form-wrap .listradio-wrap .nf-field-element label.nf-checked-label::before,
 .nf-form-wrap .listcheckbox-wrap .nf-field-element label::after,

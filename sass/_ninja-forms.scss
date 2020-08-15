@@ -2,6 +2,11 @@
 * Use existing Bootstrap classes for Ninja Forms styles
 */
 
+// If no active sidebar no left margin
+body.no-sidebar .nf-form-content {
+	margin: 0 0 auto 0;
+}
+
 // NF form wrapper
 .nf-form-wrap {
 
