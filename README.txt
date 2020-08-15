@@ -218,6 +218,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.6.9 =
 * New: Ninja Forms integration.
+* Update: NPM dependencies.
 * Update: Composer dependencies.
 * Fix: Remove GB in editor wrapper padding hack, its no longer necessary as of WP 5.5.
 
