@@ -224,6 +224,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.7.0 =
 * Update: WooCommerce cart.php template to 4.4.0.
+* Update: NPM dependencies.
 
 == Resources ==
 
