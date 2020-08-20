@@ -11,6 +11,10 @@ class ComposerStaticInitfc52364ec4983ffd88b3649ecd587fe0
         array (
             'conversions\\' => 12,
         ),
+        'W' => 
+        array (
+            'WPTRT\\Customize\\Section\\' => 24,
+        ),
         'D' => 
         array (
             'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 55,
@@ -21,6 +25,10 @@ class ComposerStaticInitfc52364ec4983ffd88b3649ecd587fe0
         'conversions\\' => 
         array (
             0 => __DIR__ . '/../..' . '/inc',
+        ),
+        'WPTRT\\Customize\\Section\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wptrt/customize-section-button/src',
         ),
         'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 
         array (

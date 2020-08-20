@@ -146,6 +146,22 @@ namespace conversions
 			);
 
 			// -----------------------------------------------------
+			// Add Premium Extensions link
+			// -----------------------------------------------------
+			$wp_customize->register_section_type( Button::class );
+			$wp_customize->add_section(
+				new \WPTRT\Customize\Section\Button(
+					$wp_customize,
+					'conversions_premium',
+					[
+						'title'       => __( 'Premium Extensions', 'conversions' ),
+						'button_text' => __( 'Go Pro', 'conversions' ),
+						'button_url'  => 'https://conversions.com',
+					]
+				)
+			);
+
+			// -----------------------------------------------------
 			// Include customizer sections
 			// -----------------------------------------------------
 			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound

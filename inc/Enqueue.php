@@ -332,6 +332,12 @@ class Enqueue {
 			array(),
 			$theme_version
 		);
+		wp_enqueue_style(
+			'conversions-customizer-css',
+			get_theme_file_uri( '/build/conversions-customizer.min.css' ),
+			array(),
+			$theme_version
+		);
 
 		// Scripts.
 		wp_enqueue_script(
