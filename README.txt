@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.6.9
+Stable tag: 1.7.0
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -221,6 +221,9 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: NPM dependencies.
 * Update: Composer dependencies.
 * Fix: Remove GB in editor wrapper padding hack, its no longer necessary as of WP 5.5.
+
+= 1.7.0 =
+* Update: WooCommerce cart.php template to 4.4.0.
 
 == Resources ==
 
