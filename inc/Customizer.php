@@ -148,7 +148,7 @@ namespace conversions
 			// -----------------------------------------------------
 			// Add Premium Extensions link
 			// -----------------------------------------------------
-			$wp_customize->register_section_type( Button::class );
+			$wp_customize->register_section_type( \WPTRT\Customize\Section\Button::class );
 			$wp_customize->add_section(
 				new \WPTRT\Customize\Section\Button(
 					$wp_customize,
