@@ -7,6 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'conversions\\' => array($baseDir . '/inc'),
-    'WPTRT\\Customize\\Section\\' => array($vendorDir . '/wptrt/customize-section-button/src'),
     'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => array($vendorDir . '/dealerdirect/phpcodesniffer-composer-installer/src'),
 );

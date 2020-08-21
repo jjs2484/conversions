@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 					'build/font-awesome.css': 'sass/font-awesome.scss',
 					'build/gutenberg-editor-style.css': 'sass/gutenberg-editor-style.scss',
 					'build/classic-editor-style.css': 'sass/classic-editor-style.scss',
-					'build/conversions-customizer.css': 'vendor/wptrt/customize-section-button/resources/scss/customize-controls.scss',
+					'build/conversions-customizer.css': 'sass/customizer.scss',
 				}
 			}
 		},
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 			basic_and_extras: {
 				files: {
 					'build/theme.js': ['node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'js/skip-link-focus-fix.js', 'js/theme.js'],
-					'build/conversions-customizer.js': ['js/customizer-conditionals.js', 'vendor/wptrt/customize-section-button/public/js/customize-controls.js'],
+					'build/conversions-customizer.js': ['js/customizer.js'],
 				},
 			},
 		},

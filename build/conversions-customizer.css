@@ -1,9 +1,16 @@
-.control-section-wptrt-button .accordion-section-title:hover, .control-section-wptrt-button .accordion-section-title:focus {
-  background-color: #fff; }
-.control-section-wptrt-button .accordion-section-title .button {
-  margin-top: -4px;
-  margin-left: 8px;
-  font-weight: 400; }
-  .rtl .control-section-wptrt-button .accordion-section-title .button {
-    margin-left: 0;
-    margin-right: 8px; }
+#accordion-section-conversions_premium.control-section-conversions-customizer-button .accordion-section-title {
+  background: transparent;
+  border-left: 0;
+  display: flex;
+  padding-left: 1px;
+  padding-right: 1px;
+  flex-wrap: wrap; }
+  #accordion-section-conversions_premium.control-section-conversions-customizer-button .accordion-section-title:hover, #accordion-section-conversions_premium.control-section-conversions-customizer-button .accordion-section-title:focus {
+    background-color: transparent; }
+  #accordion-section-conversions_premium.control-section-conversions-customizer-button .accordion-section-title .button {
+    margin-top: -4px;
+    margin-left: 8px;
+    font-weight: 400; }
+    .rtl #accordion-section-conversions_premium.control-section-conversions-customizer-button .accordion-section-title .button {
+      margin-left: 0;
+      margin-right: 8px; }

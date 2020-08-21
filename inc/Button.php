@@ -3,14 +3,9 @@
  * Customize Section Button Class.
  *
  * Adds a custom "button" section to the WordPress customizer.
- *
- * @author    WPTRT <themes@wordpress.org>
- * @copyright 2019 WPTRT
- * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://github.com/WPTRT/customize-section-button
  */
 
-namespace WPTRT\Customize\Section;
+namespace conversions;
 
 use WP_Customize_Section;
 
@@ -19,16 +14,14 @@ class Button extends WP_Customize_Section {
 	/**
 	 * The type of customize section being rendered.
 	 *
-	 * @since  1.0.0
 	 * @access public
 	 * @var    string
 	 */
-	public $type = 'wptrt-button';
+	public $type = 'conversions-customizer-button';
 
 	/**
 	 * Custom button text to output.
 	 *
-	 * @since  1.0.0
 	 * @access public
 	 * @var    string
 	 */
@@ -37,16 +30,30 @@ class Button extends WP_Customize_Section {
 	/**
 	 * Custom button URL to output.
 	 *
-	 * @since  1.0.0
 	 * @access public
 	 * @var    string
 	 */
 	public $button_url = '';
 
 	/**
+	 * Custom button 2 text to output.
+	 *
+	 * @access public
+	 * @var    string
+	 */
+	public $button_text_2 = '';
+
+	/**
+	 * Custom button 2 URL to output.
+	 *
+	 * @access public
+	 * @var    string
+	 */
+	public $button_url_2 = '';
+
+	/**
 	 * Default priority of the section.
 	 *
-	 * @since  1.0.0
 	 * @access public
 	 * @var    string
 	 */
@@ -55,7 +62,6 @@ class Button extends WP_Customize_Section {
 	/**
 	 * Add custom parameters to pass to the JS via JSON.
 	 *
-	 * @since  1.0.0
 	 * @access public
 	 * @return array
 	 */
@@ -66,18 +72,22 @@ class Button extends WP_Customize_Section {
 		$button_url = $this->button_url;
 
 		// Fall back to the `Theme URI` defined in `style.css`.
-		if ( ! $this->button_url && $theme->get( 'ThemeURI' ) ) {
+		if ( ! $button_url && $theme->get( 'ThemeURI' ) ) {
 
-			$button_url = $theme->get( 'ThemeURI' );
+			$button_url   = $theme->get( 'ThemeURI' );
+			$button_url_2 = $theme->get( 'ThemeURI' );
 
 		// Fall back to the `Author URI` defined in `style.css`.
-		} elseif ( ! $this->button_url && $theme->get( 'AuthorURI' ) ) {
+		} elseif ( ! $button_url && $theme->get( 'AuthorURI' ) ) {
 
-			$button_url = $theme->get( 'AuthorURI' );
+			$button_url   = $theme->get( 'AuthorURI' );
+			$button_url_2 = $theme->get( 'AuthorURI' );
 		}
 
-		$json['button_text'] = $this->button_text ? $this->button_text : $theme->get( 'Name' );
-		$json['button_url']  = esc_url( $button_url );
+		$json['button_text']   = $this->button_text ? $this->button_text : $theme->get( 'Name' );
+		$json['button_url']    = esc_url( $button_url );
+		$json['button_text_2'] = $this->button_text_2 ? $this->button_text_2 : $theme->get( 'Name' );
+		$json['button_url_2']  = esc_url( $button_url_2 );
 
 		return $json;
 	}
@@ -85,7 +95,6 @@ class Button extends WP_Customize_Section {
 	/**
 	 * Outputs the Underscore.js template.
 	 *
-	 * @since  1.0.0
 	 * @access public
 	 * @return void
 	 */
@@ -97,9 +106,13 @@ class Button extends WP_Customize_Section {
 				{{ data.title }}
 
 				<# if ( data.button_text && data.button_url ) { #>
-					<a href="{{ data.button_url }}" class="button button-secondary alignright" target="_blank" rel="external nofollow noopener noreferrer">{{ data.button_text }}</a>
+					<a href="{{ data.button_url }}" class="button button-secondary alignleft" target="_blank" rel="external nofollow noopener noreferrer">{{ data.button_text }}</a>
+				<# } #>
+				<# if ( data.button_text_2 && data.button_url_2 ) { #>
+					<a href="{{ data.button_url_2 }}" class="button button-secondary alignright" target="_blank" rel="external nofollow noopener noreferrer">{{ data.button_text_2 }}</a>
 				<# } #>
 			</h3>
 		</li>
-	<?php }
+		<?php
+	}
 }

@@ -148,15 +148,19 @@ namespace conversions
 			// -----------------------------------------------------
 			// Add Premium Extensions link
 			// -----------------------------------------------------
-			$wp_customize->register_section_type( \WPTRT\Customize\Section\Button::class );
+			$wp_customize->register_section_type( \conversions\Button::class );
 			$wp_customize->add_section(
-				new \WPTRT\Customize\Section\Button(
+				new \conversions\Button(
 					$wp_customize,
 					'conversions_premium',
 					[
-						'title'       => __( 'Premium Extensions', 'conversions' ),
-						'button_text' => __( 'Go Pro', 'conversions' ),
-						'button_url'  => 'https://conversions.com',
+						'title'         => '',
+						'button_text'   => __( 'Documentation', 'conversions' ),
+						'button_url'    => 'https://conversionswp.com/docs/documentation/',
+						'button_text_2' => __( 'Premium Extensions', 'conversions' ),
+						'button_url_2'  => 'https://conversions.com',
+						'priority'      => 1,
+						'capability'    => 'edit_theme_options',
 					]
 				)
 			);

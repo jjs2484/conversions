@@ -12,6 +12,5 @@
         "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2"
     },
 	"require": {
-		"wptrt/customize-section-button": "^1.0"
 	}
 }

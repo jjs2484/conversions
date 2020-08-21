@@ -4,51 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee09322699a291fc541e9c2fcfe81860",
-    "packages": [
-        {
-            "name": "wptrt/customize-section-button",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WPTT/customize-section-button.git",
-                "reference": "510c956c1142f712cda3041fc2d02d316228f031"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WPTT/customize-section-button/zipball/510c956c1142f712cda3041fc2d02d316228f031",
-                "reference": "510c956c1142f712cda3041fc2d02d316228f031",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "WPTRT\\Customize\\Section\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "WordPress.org Theme Review Team",
-                    "email": "themes@wordpress.org",
-                    "homepage": "https://make.wordpress.org/themes",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A button section for the WordPress customizer.",
-            "homepage": "https://github.com/WPTRT/customize-section-button",
-            "keywords": [
-                "wordpress"
-            ],
-            "time": "2019-07-01T16:39:26+00:00"
-        }
-    ],
+    "content-hash": "6bc0731e07f1d742ead372ffc48d4c6b",
+    "packages": [],
     "packages-dev": [
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
