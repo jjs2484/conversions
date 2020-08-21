@@ -146,7 +146,7 @@ namespace conversions
 			);
 
 			// -----------------------------------------------------
-			// Add Premium Extensions link
+			// Add Doc and Premium Extensions link
 			// -----------------------------------------------------
 			$wp_customize->register_section_type( \conversions\Button::class );
 			$wp_customize->add_section(

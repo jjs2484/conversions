@@ -14,3 +14,5 @@
     .rtl #accordion-section-conversions_premium.control-section-conversions-customizer-button .accordion-section-title .button {
       margin-left: 0;
       margin-right: 8px; }
+    #accordion-section-conversions_premium.control-section-conversions-customizer-button .accordion-section-title .button.button-secondary {
+      padding: 0 7px; }
