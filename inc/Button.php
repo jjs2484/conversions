@@ -67,9 +67,10 @@ class Button extends WP_Customize_Section {
 	 */
 	public function json() {
 
-		$json       = parent::json();
-		$theme      = wp_get_theme();
-		$button_url = $this->button_url;
+		$json         = parent::json();
+		$theme        = wp_get_theme();
+		$button_url   = $this->button_url;
+		$button_url_2 = $this->button_url_2;
 
 		// Fall back to the `Theme URI` defined in `style.css`.
 		if ( ! $button_url && $theme->get( 'ThemeURI' ) ) {
