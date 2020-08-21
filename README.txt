@@ -223,6 +223,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Fix: Remove GB in editor wrapper padding hack, its no longer necessary as of WP 5.5.
 
 = 1.7.0 =
+* New: Customizer links to documentation and premium extensions.
 * Update: WooCommerce cart.php template to 4.4.0.
 * Update: NPM dependencies.
 
