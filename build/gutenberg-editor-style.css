@@ -483,7 +483,6 @@ pre.wp-block-preformatted,
 pre.wp-block-verse {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 1em;
-  max-width: 100%;
   overflow: auto;
   color: #222;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;

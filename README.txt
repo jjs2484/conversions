@@ -226,6 +226,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * New: Customizer links to documentation and premium extensions.
 * Update: WooCommerce cart.php template to 4.4.0.
 * Update: NPM dependencies.
+* Fix: Preformatted block width in Gutenberg editor.
 
 == Resources ==
 
