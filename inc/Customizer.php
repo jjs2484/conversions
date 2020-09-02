@@ -478,17 +478,6 @@ namespace conversions
 				// Is woocommerce is active?
 				if ( class_exists( 'woocommerce' ) ) {
 
-					// Append WooCommerce Cart icon?
-					if ( get_theme_mod( 'conversions_wc_cart_nav', true ) === true ) {
-						// output the cart icon with item count.
-						$cart_link = sprintf(
-							'<li class="cart menu-item nav-item">%s</li>',
-							WooCommerce::get_cart_nav_html()
-						);
-						// Add the cart icon to the end of the menu.
-						$items .= $cart_link;
-					}
-
 					// Append WooCommerce Account icon?
 					if ( get_theme_mod( 'conversions_wc_account', false ) === true ) {
 
@@ -507,29 +496,21 @@ namespace conversions
 						// Add the account to the end of the menu.
 						$items .= $wc_account_link;
 					}
+
+					// Append WooCommerce Cart icon?
+					if ( get_theme_mod( 'conversions_wc_cart_nav', true ) === true ) {
+						// output the cart icon with item count.
+						$cart_link = sprintf(
+							'<li class="cart menu-item nav-item">%s</li>',
+							WooCommerce::get_cart_nav_html()
+						);
+						// Add the cart icon to the end of the menu.
+						$items .= $cart_link;
+					}
 				}
 
 				// Is Easy Digital Downloads active?
 				if ( class_exists( 'Easy_Digital_Downloads' ) ) {
-
-					// Append Easy Digital Downloads Cart icon?
-					if ( get_theme_mod( 'conversions_edd_nav_cart', true ) === true ) {
-
-						$edd_cart_totals = sprintf(
-							'<span class="header-cart edd-cart-quantity">%s</span><span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>',
-							edd_get_cart_quantity()
-						);
-
-						// output the cart icon with item count.
-						$edd_cart_link = sprintf(
-							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-cart"></i>%s</a></li>',
-							esc_url( edd_get_checkout_uri() ),
-							$edd_cart_totals
-						);
-
-						// Add the cart icon to the end of the menu.
-						$items .= $edd_cart_link;
-					}
 
 					// Append Easy Digital Downloads Account icon?
 					if ( get_theme_mod( 'conversions_edd_nav_account', false ) === true ) {
@@ -548,6 +529,25 @@ namespace conversions
 
 						// Add the account to the end of the menu.
 						$items .= $edd_account_link;
+					}
+
+					// Append Easy Digital Downloads Cart icon?
+					if ( get_theme_mod( 'conversions_edd_nav_cart', true ) === true ) {
+
+						$edd_cart_totals = sprintf(
+							'<span class="header-cart edd-cart-quantity">%s</span><span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>',
+							edd_get_cart_quantity()
+						);
+
+						// output the cart icon with item count.
+						$edd_cart_link = sprintf(
+							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-cart"></i>%s</a></li>',
+							esc_url( edd_get_checkout_uri() ),
+							$edd_cart_totals
+						);
+
+						// Add the cart icon to the end of the menu.
+						$items .= $edd_cart_link;
 					}
 				}
 
