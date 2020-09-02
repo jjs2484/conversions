@@ -229,6 +229,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Reverse display order of cart and account nav icons for Easy Digital Downloads.
 * Update: NPM dependencies.
 * Fix: Preformatted block width in Gutenberg editor.
+* Fix: Add Easy Digital Downloads checkout button styles - discount, license key.
 
 == Resources ==
 
