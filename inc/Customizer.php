@@ -158,7 +158,7 @@ namespace conversions
 						'button_text'   => __( 'Documentation', 'conversions' ),
 						'button_url'    => 'https://conversionswp.com/docs/documentation/',
 						'button_text_2' => __( 'Premium Extensions', 'conversions' ),
-						'button_url_2'  => 'https://conversions.com',
+						'button_url_2'  => 'https://conversionswp.com/premium-extensions/',
 						'priority'      => 1,
 						'capability'    => 'edit_theme_options',
 					]
