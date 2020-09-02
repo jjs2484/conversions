@@ -3,7 +3,8 @@
 // Buttons
 #edd-purchase-button,
 .edd-submit,
-[type="submit"].edd-submit {
+[type="submit"].edd-submit,
+#edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit {
 	@extend .btn;
 	@extend .btn-lg;
 	@extend .btn-block;
