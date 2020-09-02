@@ -225,6 +225,8 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 = 1.7.0 =
 * New: Customizer links to documentation and premium extensions.
 * Update: WooCommerce cart.php template to 4.4.0.
+* Update: Reverse display order of cart and account nav icons for WooCommerce.
+* Update: Reverse display order of cart and account nav icons for Easy Digital Downloads.
 * Update: NPM dependencies.
 * Fix: Preformatted block width in Gutenberg editor.
 
