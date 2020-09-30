@@ -231,10 +231,13 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Fix: Preformatted block width in Gutenberg editor.
 * Fix: Add Easy Digital Downloads checkout button styles - discount, license key.
 
+= 1.7.1 =
+* Update: Font Awesome to v5.15.0
+
 == Resources ==
 
 * Bootstrap 4.5.2 | MIT License
-* Font Awesome v5.14.0 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
+* Font Awesome v5.15.0 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
 * Google Fonts
