@@ -233,6 +233,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.7.1 =
 * Update: Font Awesome to v5.15.0
+* Update: Move Homepage Hero YouTube video modal script to Conversions Extensions plugin.
 
 == Resources ==
 
