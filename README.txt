@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 5.5.1
 Requires PHP: 5.6
-Stable tag: 1.7.1
+Stable tag: 1.7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -235,10 +235,13 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Font Awesome to v5.15.0
 * Update: Move Homepage Hero YouTube video modal script to Conversions Extensions plugin.
 
+= 1.7.2 =
+* Update: Font Awesome to v5.15.1
+
 == Resources ==
 
 * Bootstrap 4.5.2 | MIT License
-* Font Awesome v5.15.0 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
+* Font Awesome v5.15.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
 * Google Fonts
