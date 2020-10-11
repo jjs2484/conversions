@@ -70,6 +70,11 @@ class Easy_Digital_Downloads {
 			$price = '<h3 id="edd-price-' . esc_attr( $download_id ) . '" class="edd-price">' . edd_price( $download_id, false ) . '</h3>';
 		}
 
+		// Add optional filter and check for its usage.
+		if ( has_filter( 'conversions_edd_singular_price' ) ) {
+			$price = apply_filters( 'conversions_edd_singular_price', $price );
+		}
+
 		echo $price; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
 	}
 
