@@ -238,6 +238,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 = 1.7.2 =
 * Update: Font Awesome to v5.15.1
 * Update: Add conversions_edd_singular_price filter.
+* Update: NPM dependencies.
 
 == Resources ==
 
