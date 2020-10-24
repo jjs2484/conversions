@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 5.5.1
 Requires PHP: 5.6
-Stable tag: 1.7.2
+Stable tag: 1.7.3
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -240,9 +240,13 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Add conversions_edd_singular_price filter.
 * Update: NPM dependencies.
 
+= 1.7.3 =
+* Update: Bootstrap to 4.5.3
+* Update: NPM dependencies.
+
 == Resources ==
 
-* Bootstrap 4.5.2 | MIT License
+* Bootstrap 4.5.3 | MIT License
 * Font Awesome v5.15.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
