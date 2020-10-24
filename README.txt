@@ -243,6 +243,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 = 1.7.3 =
 * Update: Bootstrap to 4.5.3
 * Update: NPM dependencies.
+* Update: Composer dependencies.
 
 == Resources ==
 
