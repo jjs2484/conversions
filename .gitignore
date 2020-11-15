@@ -23,7 +23,9 @@ composer.phar
 /vendor/tgmpa/tgm-plugin-activation/LICENSE.md
 /vendor/tgmpa/tgm-plugin-activation/phpcs.xml
 /vendor/tgmpa/tgm-plugin-activation/README.md
-
+/vendor/wptt/webfont-loader/.gitattributes
+/vendor/wptt/webfont-loader/LICENSE
+/vendor/wptt/webfont-loader/README.md
 
 
 # macOS
