@@ -12,5 +12,6 @@
         "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2"
     },
 	"require": {
+		"wptt/webfont-loader": "^1.1"
 	}
 }
