@@ -4,7 +4,8 @@
 		"psr-4":
 		{
 			"conversions\\": "inc/"
-		}
+		},
+		"files": ["vendor/wptt/webfont-loader/wptt-webfont-loader.php", "vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php"]
 	},
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.5",
@@ -12,6 +13,7 @@
         "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2"
     },
 	"require": {
-		"wptt/webfont-loader": "^1.1"
+		"wptt/webfont-loader": "^1.1",
+		"tgmpa/tgm-plugin-activation": "^2.6"
 	}
 }
