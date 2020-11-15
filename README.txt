@@ -245,12 +245,18 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: NPM dependencies.
 * Update: Composer dependencies.
 
+= 1.7.4 =
+* New: Add Webfonts Loader: downloads webfonts (Google-Fonts), and hosts them locally.
+* Update: Load TGM Plugin Activation through Composer instead of manually including file.
+
 == Resources ==
 
 * Bootstrap 4.5.3 | MIT License
 * Font Awesome v5.15.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
+* Webfonts Loader | MIT License
+* TGM Plugin Activation | GPLv2 or later
 * Google Fonts
 
 	Comfortaa
