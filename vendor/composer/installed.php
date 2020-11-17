@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'a6e81ecf26d8c5a6dfffa9e11a5db8e9a63acba6',
+    'reference' => 'bd0d1d7a9f8427a441639eb12cb41259f029d54b',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'a6e81ecf26d8c5a6dfffa9e11a5db8e9a63acba6',
+      'reference' => 'bd0d1d7a9f8427a441639eb12cb41259f029d54b',
     ),
     'dealerdirect/phpcodesniffer-composer-installer' => 
     array (
@@ -37,15 +37,6 @@
       array (
       ),
       'reference' => '9d583721a7157ee997f235f327de038e7ea6dac4',
-    ),
-    'tgmpa/tgm-plugin-activation' => 
-    array (
-      'pretty_version' => '2.6.1',
-      'version' => '2.6.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'c626d0d91fc8ef24916e809c7b79eeafab1c1cac',
     ),
     'wp-coding-standards/wpcs' => 
     array (

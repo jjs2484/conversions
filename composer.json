@@ -1,23 +1,18 @@
 {
-	"autoload":
-	{
-		"psr-4": {
-			"conversions\\": "inc/"
-		},
-		"files": [
-			"vendor/wptt/webfont-loader/wptt-webfont-loader.php"
-		],
-		"exclude-from-classmap": [
-            "vendor/tgmpa/*"
+    "autoload": {
+        "psr-4": {
+            "conversions\\": "inc/"
+        },
+        "files": [
+            "vendor/wptt/webfont-loader/wptt-webfont-loader.php"
         ]
-	},
+    },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.5",
         "wp-coding-standards/wpcs": "^2.2",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0"
     },
-	"require": {
-		"wptt/webfont-loader": "^1.1",
-		"tgmpa/tgm-plugin-activation": "^2.6"
-	}
+    "require": {
+        "wptt/webfont-loader": "^1.1"
+    }
 }
