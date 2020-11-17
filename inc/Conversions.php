@@ -43,7 +43,7 @@ namespace conversions
 			new Enqueue();
 			new Extras();
 			$this->template = new Template();
-			$this->widgets = new Widgets();
+			$this->widgets  = new Widgets();
 			new WooCommerce();
 			new Easy_Digital_Downloads();
 			new bbPress();

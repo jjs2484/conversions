@@ -7,7 +7,7 @@
 
 global $edd_download_shortcode_item_atts, $edd_download_shortcode_item_i;
 
-$conversions_edd = new conversions\easy_digital_downloads();
+$conversions_edd              = new conversions\easy_digital_downloads();
 $conversions_edd_grid_options = $conversions_edd->conversions_edd_grid_options( $edd_download_shortcode_item_atts );
 ?>
 

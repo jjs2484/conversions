@@ -68,7 +68,8 @@ class WooCommerce {
 		// get WC cart totals and if = 0 only show icon with no text.
 		$cart_totals = WC()->cart->get_cart_contents_count();
 		if ( $cart_totals > 0 ) {
-			$cart_totals = sprintf(	'<span>%d<span class="sr-only">' . __( 'items in your shopping cart', 'conversions' ) . '</span></span>',
+			$cart_totals = sprintf(
+				'<span>%d<span class="sr-only">' . __( 'items in your shopping cart', 'conversions' ) . '</span></span>',
 				esc_html( WC()->cart->get_cart_contents_count() )
 			);
 		} else {
@@ -77,7 +78,8 @@ class WooCommerce {
 
 		$cart_icon = '<i aria-hidden="true" class="fas fa-shopping-cart"></i>';
 
-		$cart_html = sprintf( '<a class="cart-customlocation nav-link" title="%s" href="%s">%s%s</a>',
+		$cart_html = sprintf(
+			'<a class="cart-customlocation nav-link" title="%s" href="%s">%s%s</a>',
 			esc_attr__( 'View your shopping cart', 'conversions' ), // title.
 			esc_url( wc_get_cart_url() ),                           // href.
 			$cart_icon,

@@ -124,8 +124,8 @@ class Navbar {
 	public function conversions_navbar_open() {
 
 		$navbar_color_scheme = implode( ' ', $this->conversions_navbar_color() );
-		$navbar_open = '<nav class="navbar navbar-expand-lg navbar-right ' . esc_attr( $navbar_color_scheme ) . '">';
-		$navbar_open .= '<div class="container-fluid">';
+		$navbar_open         = '<nav class="navbar navbar-expand-lg navbar-right ' . esc_attr( $navbar_color_scheme ) . '">';
+		$navbar_open        .= '<div class="container-fluid">';
 
 		if ( has_filter( 'conversions_nav_open_wrapper' ) ) {
 			$navbar_open = apply_filters( 'conversions_nav_open_wrapper', $navbar_open );

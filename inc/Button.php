@@ -3,12 +3,17 @@
  * Customize Section Button Class.
  *
  * Adds a custom "button" section to the WordPress customizer.
+ *
+ * @package conversions
  */
 
 namespace conversions;
 
 use WP_Customize_Section;
 
+/**
+ * Class Button
+ */
 class Button extends WP_Customize_Section {
 
 	/**
@@ -78,9 +83,9 @@ class Button extends WP_Customize_Section {
 			$button_url   = $theme->get( 'ThemeURI' );
 			$button_url_2 = $theme->get( 'ThemeURI' );
 
-		// Fall back to the `Author URI` defined in `style.css`.
 		} elseif ( ! $button_url && $theme->get( 'AuthorURI' ) ) {
 
+			// Fall back to the `Author URI` defined in `style.css`.
 			$button_url   = $theme->get( 'AuthorURI' );
 			$button_url_2 = $theme->get( 'AuthorURI' );
 		}
