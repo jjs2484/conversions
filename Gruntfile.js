@@ -100,12 +100,20 @@ module.exports = function(grunt) {
 		copy: {
 			main: {
 				files: [
-					// includes files within path
+					// copies font awesome files
 					{ 
 						expand: true,
 						flatten: true,
 						src: ['node_modules/@fortawesome/fontawesome-free/webfonts/*'], 
 						dest: 'fonts/',
+						filter: 'isFile'
+					},
+					// copies tgm plugin activation files
+					{ 
+						expand: true,
+						flatten: true,
+						src: ['vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php'], 
+						dest: 'inc/',
 						filter: 'isFile'
 					},
 				],
