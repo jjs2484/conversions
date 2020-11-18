@@ -108,14 +108,6 @@ module.exports = function(grunt) {
 						dest: 'fonts/',
 						filter: 'isFile'
 					},
-					// copies tgm plugin activation files
-					{ 
-						expand: true,
-						flatten: true,
-						src: ['vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php'], 
-						dest: 'inc/',
-						filter: 'isFile'
-					},
 				],
 			},
 		},

@@ -247,7 +247,8 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.7.4 =
 * New: Add Webfonts Loader: downloads webfonts (Google-Fonts), and hosts them locally.
-* Update: Load TGM Plugin Activation through Composer instead of manually including file.
+* Update: Composer dependencies.
+* Fix: Some phpcs formatting.
 
 == Resources ==
 
