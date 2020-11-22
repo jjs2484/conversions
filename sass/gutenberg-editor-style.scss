@@ -277,8 +277,8 @@ $colors: (
 	.has-#{$name}-color {
 		color: $color;
 	}
-
-	.has-#{$name}-background-color {
+	:root .editor-styles-wrapper .has-#{$name}-background-color,
+	:root .has-#{$name}-background-color {
 		background-color: $color;
 	}
 }
