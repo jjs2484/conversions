@@ -248,6 +248,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 = 1.7.4 =
 * New: Add Webfonts Loader: downloads webfonts (Google-Fonts), and hosts them locally.
 * Update: Composer dependencies.
+* Fix: Gutenberg block background colors CSS selector.
 * Fix: Some phpcs formatting.
 
 == Resources ==
