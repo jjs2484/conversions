@@ -341,9 +341,18 @@ class Template {
 								</h4>
 								<p class="text-muted">
 									<?php
+									// Get the post exerpt and limit output to 15 words.
 									$related_content = strip_shortcodes( get_the_excerpt() );
 									$related_content = wp_trim_words( $related_content, 15, '...' );
-									echo esc_html( str_replace( '[...]Read More', '', $related_content ) );
+									$related_content = esc_html( str_replace( '[...]Read More', '', $related_content ) );
+
+									// Apply filter if exists.
+									if ( has_filter( 'conversions_related_post_content' ) ) {
+										$related_content = apply_filters( 'conversions_related_post_content', $related_content );
+									}
+
+									// Output related post content.
+									echo $related_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier.
 									?>
 								</p>
 							</div>
