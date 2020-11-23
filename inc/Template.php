@@ -341,8 +341,9 @@ class Template {
 								</h4>
 								<p class="text-muted">
 									<?php
-									$related_content = strip_shortcodes( get_the_content() );
-									echo wp_kses_post( wp_trim_words( $related_content, 15, '...' ) );
+									$related_content = strip_shortcodes( get_the_excerpt() );
+									$related_content = wp_trim_words( $related_content, 15, '...' );
+									echo esc_html( str_replace( '[...]Read More', '', $related_content ) );
 									?>
 								</p>
 							</div>
