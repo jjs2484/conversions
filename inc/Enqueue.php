@@ -297,6 +297,7 @@ class Enqueue {
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
 			// Headings font.
+			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
 			wp_enqueue_style(
 				'conversions-heading-gfont',
 				wptt_get_webfont_url( 'https://fonts.googleapis.com/css2?family=' . esc_html( $headings_font ) . '&display=swap' ),
