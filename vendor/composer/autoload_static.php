@@ -6,10 +6,6 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitfc52364ec4983ffd88b3649ecd587fe0
 {
-    public static $files = array (
-        '4bb3635572d297c3a73695e4e5daf5c5' => __DIR__ . '/..' . '/wptt/webfont-loader/wptt-webfont-loader.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
         'c' => 
         array (

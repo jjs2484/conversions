@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8d1d75228d80ff4a77ff12132cbe6898fbb29c08',
+    'reference' => 'c99820791fd9e24137b655e4dfec3f3afb22a3f4',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8d1d75228d80ff4a77ff12132cbe6898fbb29c08',
+      'reference' => 'c99820791fd9e24137b655e4dfec3f3afb22a3f4',
     ),
     'dealerdirect/phpcodesniffer-composer-installer' => 
     array (
@@ -46,15 +46,6 @@
       array (
       ),
       'reference' => '7da1894633f168fe244afc6de00d141f27517b62',
-    ),
-    'wptt/webfont-loader' => 
-    array (
-      'pretty_version' => 'v1.1.1',
-      'version' => '1.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '7243420fec7f202a9355485b8533bd99a7654941',
     ),
   ),
 );

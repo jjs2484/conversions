@@ -246,7 +246,6 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Composer dependencies.
 
 = 1.7.4 =
-* New: Add Webfonts Loader: downloads webfonts (Google-Fonts), and hosts them locally.
 * New: Add conversions_related_post_content filter.
 * Update: NPM dependencies.
 * Update: Composer dependencies.

@@ -175,50 +175,6 @@
                 "wordpress"
             ],
             "install-path": "../wp-coding-standards/wpcs"
-        },
-        {
-            "name": "wptt/webfont-loader",
-            "version": "v1.1.1",
-            "version_normalized": "1.1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WPTT/webfont-loader.git",
-                "reference": "7243420fec7f202a9355485b8533bd99a7654941"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WPTT/webfont-loader/zipball/7243420fec7f202a9355485b8533bd99a7654941",
-                "reference": "7243420fec7f202a9355485b8533bd99a7654941",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "composer/installers": "~1.0",
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-                "php-parallel-lint/php-parallel-lint": "^1.2",
-                "wptrt/wpthemereview": "^0.2.1"
-            },
-            "time": "2020-10-03T12:29:50+00:00",
-            "type": "package",
-            "installation-source": "dist",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Contributors",
-                    "homepage": "https://github.com/WPTT/font-loader/graphs/contributors"
-                }
-            ],
-            "description": "Locally host webfonts.",
-            "homepage": "https://github.com/WPTT/font-loader",
-            "keywords": [
-                "wordpress"
-            ],
-            "install-path": "../wptt/webfont-loader"
         }
     ],
     "dev": true,
