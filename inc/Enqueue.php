@@ -42,28 +42,41 @@ class Enqueue {
 	}
 
 	/**
-	 * Add Google fonts to TinyMCE editor.
+	 * Get Google Font options.
 	 *
-	 * @since 2019-08-19
+	 * @since 2020-11-25
 	 */
-	public function after_setup_theme() {
-		// Are Google fonts enabled?
+	public function get_google_fonts() {
+
+		if ( get_theme_mod( 'conversions_google_fonts', true ) !== true ) {
+			return;
+		}
+
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
-			// Enqueue headings font.
-			$headings_font     = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			$headings_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap' );
-			add_editor_style( $headings_font_url );
+			// Get the user choices.
+			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
+			$body_font     = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
 
-			// Enqueue body font.
-			$body_font = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
-			if ( $body_font === $headings_font ) {
-				return;
-			} else {
-				$body_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap' );
-				add_editor_style( $body_font_url );
+			if ( $headings_font === $body_font ) {
+				$google_font = wp_enqueue_style(
+					'conversions-gfont',
+					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap',
+					array(),
+					$theme_version
+				);
+			} elseif ( $headings_font !== $body_font ) {
+				$google_font = wp_enqueue_style(
+					'conversions-gfont',
+					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '|' . esc_html( $body_font ) . '&display=swap',
+					array(),
+					$theme_version
+				);
 			}
+
+			return $google_font;
 		}
+
 	}
 
 	/**
@@ -77,37 +90,18 @@ class Enqueue {
 		$theme_version = $this->get_theme_version();
 
 		// Google Fonts.
-		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
-
-			// Get the user choices.
-			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			$body_font     = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
-
-			if ( $headings_font === $body_font ) {
-				wp_enqueue_style(
-					'conversions-gutenberg-gfont',
-					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap',
-					array(),
-					$theme_version
-				);
-			} elseif ( $headings_font !== $body_font ) {
-				wp_enqueue_style(
-					'conversions-gutenberg-gfont',
-					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '|' . esc_html( $body_font ) . '&display=swap',
-					array(),
-					$theme_version
-				);
-			}
+		$google_font = $this->get_google_fonts();
+		if ( ! empty( $google_font ) ) {
+			$google_font;
 		}
 
 		// Editor styles.
-		wp_register_style(
+		wp_enqueue_style(
 			'conversions-gutenberg',
 			get_theme_file_uri( '/build/gutenberg-editor-style.min.css' ),
 			array(),
 			$theme_version
 		);
-		wp_enqueue_style( 'conversions-gutenberg' );
 	}
 
 	/**
@@ -216,6 +210,31 @@ class Enqueue {
 	}
 
 	/**
+	 * Add Google fonts to TinyMCE editor.
+	 *
+	 * @since 2019-08-19
+	 */
+	public function after_setup_theme() {
+		// Are Google fonts enabled?
+		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
+
+			// Enqueue headings font.
+			$headings_font     = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
+			$headings_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap' );
+			add_editor_style( $headings_font_url );
+
+			// Enqueue body font.
+			$body_font = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
+			if ( $body_font === $headings_font ) {
+				return;
+			} else {
+				$body_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap' );
+				add_editor_style( $body_font_url );
+			}
+		}
+	}
+
+	/**
 	 * Add custom styles to TinyMCE editor.
 	 *
 	 * @since 2019-08-19
@@ -266,28 +285,10 @@ class Enqueue {
 		// Get theme version.
 		$theme_version = $this->get_theme_version();
 
-		// Google fonts.
-		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
-
-			// Get the user choices.
-			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			$body_font     = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
-
-			if ( $headings_font === $body_font ) {
-				wp_enqueue_style(
-					'conversions-gfont',
-					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap',
-					array(),
-					$theme_version
-				);
-			} elseif ( $headings_font !== $body_font ) {
-				wp_enqueue_style(
-					'conversions-gfont',
-					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '|' . esc_html( $body_font ) . '&display=swap',
-					array(),
-					$theme_version
-				);
-			}
+		// Google Fonts.
+		$google_font = $this->get_google_fonts();
+		if ( ! empty( $google_font ) ) {
+			$google_font;
 		}
 
 		// Font Awesome.
