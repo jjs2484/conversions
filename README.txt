@@ -250,6 +250,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * New: Add conversions_resource_hints filter.
 * Update: Further optimize Google Fonts: combine requests, add preconnect, and load before CSS.
 * Update: Further optimize Font Awesome: add preload, and load before CSS.
+* Update: Refactor and reorg functions in inc/enqueue.php.
 * Update: NPM dependencies.
 * Update: Composer dependencies.
 * Fix: Gutenberg block background colors CSS selector.
