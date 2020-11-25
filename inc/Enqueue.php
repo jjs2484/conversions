@@ -35,8 +35,8 @@ class Enqueue {
 	 */
 	public function get_theme_version() {
 		// Get theme version.
-		$the_theme     = wp_get_theme();
-		$theme_version = $the_theme->get( 'Version' );
+		$theme     = wp_get_theme();
+		$theme_version = $theme->get( 'Version' );
 
 		return $theme_version;
 	}
@@ -47,6 +47,9 @@ class Enqueue {
 	 * @since 2020-11-25
 	 */
 	public function get_google_fonts() {
+
+		// Get theme version.
+		$theme_version = $this->get_theme_version();
 
 		if ( get_theme_mod( 'conversions_google_fonts', true ) !== true ) {
 			return;
