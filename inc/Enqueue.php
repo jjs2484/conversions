@@ -25,7 +25,7 @@ class Enqueue {
 		add_action( 'tiny_mce_before_init', [ $this, 'tiny_mce_before_init' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ] );
 		add_action( 'customize_controls_enqueue_scripts', [ $this, 'customize_controls_enqueue_scripts' ] );
-		add_action( 'wp_head', [ $this, 'preconnect_google_fonts' ], 2 );
+		add_action( 'wp_head', [ $this, 'preconnect_google_fonts' ], 1 );
 	}
 
 	/**
