@@ -25,7 +25,20 @@ class Enqueue {
 		add_action( 'tiny_mce_before_init', [ $this, 'tiny_mce_before_init' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ] );
 		add_action( 'customize_controls_enqueue_scripts', [ $this, 'customize_controls_enqueue_scripts' ] );
-		add_action( 'wp_head', [ $this, 'preconnect_google_fonts' ], 1 );
+		add_action( 'wp_head', [ $this, 'resource_hints' ], 1 );
+	}
+
+	/**
+	 * Get theme version.
+	 *
+	 * @since 2020-11-24
+	 */
+	public function get_theme_version() {
+		// Get theme version.
+		$the_theme     = wp_get_theme();
+		$theme_version = $the_theme->get( 'Version' );
+
+		return $theme_version;
 	}
 
 	/**
@@ -59,9 +72,9 @@ class Enqueue {
 	 * @since 2019-08-16
 	 */
 	public function enqueue_block_editor_assets() {
-		// Get the theme data.
-		$the_theme     = wp_get_theme();
-		$theme_version = $the_theme->get( 'Version' );
+
+		// Get theme version.
+		$theme_version = $this->get_theme_version();
 
 		// Google Fonts.
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
@@ -211,7 +224,8 @@ class Enqueue {
 	 * @return array $mceInit Array of TinyMCE config.
 	 */
 	public function tiny_mce_before_init( $mceInit ) {
-		// Are Google fonts enabled?
+
+		// Are Google fonts active?
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
 			// Headings font.
@@ -248,9 +262,9 @@ class Enqueue {
 	 * @since 2019-08-16
 	 */
 	public function wp_enqueue_scripts() {
-		// Get the theme data.
-		$the_theme     = wp_get_theme();
-		$theme_version = $the_theme->get( 'Version' );
+
+		// Get theme version.
+		$theme_version = $this->get_theme_version();
 
 		// Google fonts.
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
@@ -325,9 +339,9 @@ class Enqueue {
 	 * @since 2019-12-25
 	 */
 	public function customize_controls_enqueue_scripts() {
-		// Get the theme data.
-		$the_theme     = wp_get_theme();
-		$theme_version = $the_theme->get( 'Version' );
+
+		// Get theme version.
+		$theme_version = $this->get_theme_version();
 
 		// Styles.
 		wp_enqueue_style( 'wp-color-picker' );
@@ -355,15 +369,29 @@ class Enqueue {
 	}
 
 	/**
-	 * Preconnect Resource Hint for Google Fonts.
+	 * Resource hints: preload, preconnect.
 	 *
 	 * @since 2020-11-24
 	 */
-	public function preconnect_google_fonts() {
+	public function resource_hints() {
+
+		// Font Awesome preload.
+		$resources  = '<link rel="preload" href="' . esc_url( get_theme_file_uri( '/fonts/fa-solid-900.woff2' ) ) . '" as="font" type="font/woff2" crossorigin="anonymous">';
+		$resources .= '<link rel="preload" href="' . esc_url( get_theme_file_uri( '/fonts/fa-brands-400.woff2' ) ) . '" as="font" type="font/woff2" crossorigin="anonymous">';
+		$resources .= '<link rel="preload" href="' . esc_url( get_theme_file_uri( '/fonts/fa-regular-400.woff2' ) ) . '" as="font" type="font/woff2" crossorigin="anonymous">';
+
 		// Are Google Fonts active?
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
-			// Add Preconnect Resource Hint.
-			echo '<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>';
+			// Add Google Fonts preconnect.
+			$resources .= '<link rel="preconnect" href="' . esc_url( 'https://fonts.gstatic.com/' ) . '" crossorigin>';
 		}
+
+		// Apply filter if exists.
+		if ( has_filter( 'conversions_resource_hints' ) ) {
+			$resources = apply_filters( 'conversions_resource_hints', $resources );
+		}
+
+		echo $resources; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier.
+
 	}
 }
