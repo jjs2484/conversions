@@ -48,6 +48,24 @@ class Enqueue {
 	 */
 	public function get_google_fonts() {
 
+		// Get the user choices.
+		$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
+		$body_font     = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
+
+		$google_fonts   = [];
+		$google_fonts[] = $headings_font;
+		$google_fonts[] = $body_font;
+
+		return $google_fonts;
+	}
+
+	/**
+	 * Get Google Font options.
+	 *
+	 * @since 2020-11-25
+	 */
+	public function google_fonts_enqueue() {
+
 		// Get theme version.
 		$theme_version = $this->get_theme_version();
 
@@ -58,20 +76,19 @@ class Enqueue {
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
 			// Get the user choices.
-			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			$body_font     = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
+			$google_fonts = $this->get_google_fonts();
 
 			if ( $headings_font === $body_font ) {
 				$google_font = wp_enqueue_style(
 					'conversions-gfont',
-					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap',
+					'https://fonts.googleapis.com/css?family=' . esc_html( $google_fonts[0] ) . '&display=swap',
 					array(),
 					$theme_version
 				);
-			} elseif ( $headings_font !== $body_font ) {
+			} elseif ( $google_fonts[0] !== $google_fonts[1] ) {
 				$google_font = wp_enqueue_style(
 					'conversions-gfont',
-					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '|' . esc_html( $body_font ) . '&display=swap',
+					'https://fonts.googleapis.com/css?family=' . esc_html( $google_fonts[0] ) . '|' . esc_html( $google_fonts[1] ) . '&display=swap',
 					array(),
 					$theme_version
 				);
@@ -93,7 +110,7 @@ class Enqueue {
 		$theme_version = $this->get_theme_version();
 
 		// Google Fonts.
-		$google_font = $this->get_google_fonts();
+		$google_font = $this->google_fonts_enqueue();
 		if ( ! empty( $google_font ) ) {
 			$google_font;
 		}
@@ -119,16 +136,13 @@ class Enqueue {
 		// Are Google fonts enabled?
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
-			// Enqueue headings font.
-			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-
-			// Enqueue body font.
-			$body_font = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
+			// Get the user choices.
+			$google_fonts = $this->get_google_fonts();
 
 			// Create variables for inline styles.
-			$headings_font_pieces = explode( ':', $headings_font );
+			$headings_font_pieces = explode( ':', $google_fonts[0] );
 			$headings_font        = $headings_font_pieces[0];
-			$body_font_pieces     = explode( ':', $body_font );
+			$body_font_pieces     = explode( ':', $google_fonts[1] );
 			$body_font            = $body_font_pieces[0];
 
 		} else {
@@ -221,17 +235,16 @@ class Enqueue {
 		// Are Google fonts enabled?
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
+			// Get the user choices.
+			$google_fonts = $this->get_google_fonts();
+
 			// Enqueue headings font.
-			$headings_font     = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			$headings_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap' );
+			$headings_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_url( $google_fonts[0] ) . '&display=swap' );
 			add_editor_style( $headings_font_url );
 
 			// Enqueue body font.
-			$body_font = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
-			if ( $body_font === $headings_font ) {
-				return;
-			} else {
-				$body_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap' );
+			if ( $google_fonts[0] !== $google_fonts[1] ) {
+				$body_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_url( $google_fonts[1] ) . '&display=swap' );
 				add_editor_style( $body_font_url );
 			}
 		}
@@ -250,14 +263,15 @@ class Enqueue {
 		// Are Google fonts active?
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
+			// Get the user choices.
+			$google_fonts = $this->get_google_fonts();
+
 			// Headings font.
-			$headings_font        = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			$headings_font_pieces = explode( ':', $headings_font );
+			$headings_font_pieces = explode( ':', $google_fonts[0] );
 			$headings_font        = $headings_font_pieces[0];
 
 			// Body font.
-			$body_font        = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
-			$body_font_pieces = explode( ':', $body_font );
+			$body_font_pieces = explode( ':', $google_fonts[1] );
 			$body_font        = $body_font_pieces[0];
 
 		} else {
@@ -289,7 +303,7 @@ class Enqueue {
 		$theme_version = $this->get_theme_version();
 
 		// Google Fonts.
-		$google_font = $this->get_google_fonts();
+		$google_font = $this->google_fonts_enqueue();
 		if ( ! empty( $google_font ) ) {
 			$google_font;
 		}
