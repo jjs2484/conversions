@@ -49,12 +49,9 @@ class Enqueue {
 	public function get_google_fonts() {
 
 		// Get the user choices.
-		$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-		$body_font     = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
-
 		$google_fonts   = [];
-		$google_fonts[] = $headings_font;
-		$google_fonts[] = $body_font;
+		$google_fonts[] = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
+		$google_fonts[] = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
 
 		return $google_fonts;
 	}
@@ -66,27 +63,27 @@ class Enqueue {
 	 */
 	public function google_fonts_enqueue() {
 
-		// Get theme version.
-		$theme_version = $this->get_theme_version();
-
 		if ( get_theme_mod( 'conversions_google_fonts', true ) !== true ) {
 			return;
 		}
 
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
+			// Get theme version.
+			$theme_version = $this->get_theme_version();
+
 			// Get the user choices.
 			$google_fonts = $this->get_google_fonts();
 
-			if ( $headings_font === $body_font ) {
-				$google_font = wp_enqueue_style(
+			if ( $google_fonts[0] === $google_fonts[1] ) {
+				$google_fonts_enqueue = wp_enqueue_style(
 					'conversions-gfont',
 					'https://fonts.googleapis.com/css?family=' . esc_html( $google_fonts[0] ) . '&display=swap',
 					array(),
 					$theme_version
 				);
 			} elseif ( $google_fonts[0] !== $google_fonts[1] ) {
-				$google_font = wp_enqueue_style(
+				$google_fonts_enqueue = wp_enqueue_style(
 					'conversions-gfont',
 					'https://fonts.googleapis.com/css?family=' . esc_html( $google_fonts[0] ) . '|' . esc_html( $google_fonts[1] ) . '&display=swap',
 					array(),
@@ -94,8 +91,40 @@ class Enqueue {
 				);
 			}
 
-			return $google_font;
+			return $google_fonts_enqueue;
 		}
+
+	}
+
+	/**
+	 * Get font family.
+	 *
+	 * @since 2020-11-25
+	 */
+	public function get_font_family() {
+
+		// Are Google fonts enabled?
+		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
+
+			// Get the user choices.
+			$google_fonts = $this->get_google_fonts();
+
+			// Create variables for inline styles.
+			$headings_font_pieces = explode( ':', $google_fonts[0] );
+			$headings_font        = $headings_font_pieces[0];
+			$body_font_pieces     = explode( ':', $google_fonts[1] );
+			$body_font            = $body_font_pieces[0];
+
+		} else {
+			$headings_font = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
+			$body_font     = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
+		}
+
+		$font_family   = [];
+		$font_family[] = $headings_font;
+		$font_family[] = $body_font;
+
+		return $font_family;
 
 	}
 
@@ -110,10 +139,7 @@ class Enqueue {
 		$theme_version = $this->get_theme_version();
 
 		// Google Fonts.
-		$google_font = $this->google_fonts_enqueue();
-		if ( ! empty( $google_font ) ) {
-			$google_font;
-		}
+		$this->google_fonts_enqueue();
 
 		// Editor styles.
 		wp_enqueue_style(
@@ -133,22 +159,8 @@ class Enqueue {
 	 */
 	public function enqueue_block_editor_inline() {
 
-		// Are Google fonts enabled?
-		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
-
-			// Get the user choices.
-			$google_fonts = $this->get_google_fonts();
-
-			// Create variables for inline styles.
-			$headings_font_pieces = explode( ':', $google_fonts[0] );
-			$headings_font        = $headings_font_pieces[0];
-			$body_font_pieces     = explode( ':', $google_fonts[1] );
-			$body_font            = $body_font_pieces[0];
-
-		} else {
-			$headings_font = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
-			$body_font     = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
-		}
+		// Get the user choices.
+		$font_family = $this->get_font_family();
 
 		$links_color  = get_theme_mod( 'conversions_link_color', '#0068d7' );
 		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#00698c' );
@@ -186,11 +198,11 @@ class Enqueue {
 			.editor-styles-wrapper h3,
 			.editor-styles-wrapper h4,
 			.editor-styles-wrapper h5 {
-				font-family: ' . esc_html( $headings_font ) . ';
+				font-family: ' . esc_html( $font_family[0] ) . ';
 			}
 			.editor-styles-wrapper .editor-writing-flow,
 			.editor-styles-wrapper .block-editor-writing-flow {
-				font-family: ' . esc_html( $body_font ) . ';
+				font-family: ' . esc_html( $font_family[1] ) . ';
 			}
 			.editor-styles-wrapper a,
 			.wp-block-freeform.block-library-rich-text__tinymce a {
@@ -260,30 +272,14 @@ class Enqueue {
 	 */
 	public function tiny_mce_before_init( $mceInit ) {
 
-		// Are Google fonts active?
-		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
-
-			// Get the user choices.
-			$google_fonts = $this->get_google_fonts();
-
-			// Headings font.
-			$headings_font_pieces = explode( ':', $google_fonts[0] );
-			$headings_font        = $headings_font_pieces[0];
-
-			// Body font.
-			$body_font_pieces = explode( ':', $google_fonts[1] );
-			$body_font        = $body_font_pieces[0];
-
-		} else {
-			$headings_font = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
-			$body_font     = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
-		}
+		// Get the user choices.
+		$font_family = $this->get_font_family();
 
 		$links_color  = get_theme_mod( 'conversions_link_color', '#0068d7' );
 		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#00698c' );
 
 		// Add them to the classic editor.
-		$styles = 'body.mce-content-body { font-family:' . esc_html( $body_font ) . '; } body.mce-content-body h1, body.mce-content-body h2, body.mce-content-body h3, body.mce-content-body h4, body.mce-content-body h5, body.mce-content-body h6 { font-family:' . esc_html( $headings_font ) . '; } body.mce-content-body a { color:' . esc_html( $links_color ) . '; } body.mce-content-body a:hover { color:' . esc_html( $links_hcolor ) . '; }';
+		$styles = 'body.mce-content-body { font-family:' . esc_html( $font_family[1] ) . '; } body.mce-content-body h1, body.mce-content-body h2, body.mce-content-body h3, body.mce-content-body h4, body.mce-content-body h5, body.mce-content-body h6 { font-family:' . esc_html( $font_family[0] ) . '; } body.mce-content-body a { color:' . esc_html( $links_color ) . '; } body.mce-content-body a:hover { color:' . esc_html( $links_hcolor ) . '; }';
 		if ( isset( $mceInit['content_style'] ) ) {
 			$mceInit['content_style'] .= ' ' . $styles . ' ';
 		} else {
@@ -303,10 +299,7 @@ class Enqueue {
 		$theme_version = $this->get_theme_version();
 
 		// Google Fonts.
-		$google_font = $this->google_fonts_enqueue();
-		if ( ! empty( $google_font ) ) {
-			$google_font;
-		}
+		$this->google_fonts_enqueue();
 
 		// Font Awesome.
 		wp_enqueue_style(
