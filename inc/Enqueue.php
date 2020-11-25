@@ -60,7 +60,7 @@ class Enqueue {
 	}
 
 	/**
-	 * Get Google Font options.
+	 * Google Fonts enqueue.
 	 *
 	 * @since 2020-11-25
 	 */
