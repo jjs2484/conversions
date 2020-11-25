@@ -35,7 +35,7 @@ class Enqueue {
 	 */
 	public function get_theme_version() {
 		// Get theme version.
-		$theme     = wp_get_theme();
+		$theme         = wp_get_theme();
 		$theme_version = $theme->get( 'Version' );
 
 		return $theme_version;
