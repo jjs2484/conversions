@@ -25,6 +25,7 @@ class Enqueue {
 		add_action( 'tiny_mce_before_init', [ $this, 'tiny_mce_before_init' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ] );
 		add_action( 'customize_controls_enqueue_scripts', [ $this, 'customize_controls_enqueue_scripts' ] );
+		add_action( 'wp_head', [ $this, 'preconnect_google_fonts' ], 2 );
 	}
 
 	/**
@@ -38,7 +39,7 @@ class Enqueue {
 
 			// Enqueue headings font.
 			$headings_font     = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			$headings_font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap' );
+			$headings_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap' );
 			add_editor_style( $headings_font_url );
 
 			// Enqueue body font.
@@ -46,7 +47,7 @@ class Enqueue {
 			if ( $body_font === $headings_font ) {
 				return;
 			} else {
-				$body_font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap' );
+				$body_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap' );
 				add_editor_style( $body_font_url );
 			}
 		}
@@ -74,27 +75,26 @@ class Enqueue {
 		// Are Google fonts enabled?
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
-			// Enqueue headings font.
+			// Get the user choices.
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			wp_register_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
-				'conversions-gutenberg-heading-font',
-				'//fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap'
-			);
-			wp_enqueue_style( 'conversions-gutenberg-heading-font' );
+			$body_font     = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
 
-			// Enqueue body font.
-			$body_font = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
-			if ( $body_font === $headings_font ) {
-				return;
-			} else {
-				wp_register_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
-					'conversions-gutenberg-body-font',
-					'//fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap'
+			if ( $headings_font === $body_font ) {
+				wp_enqueue_style(
+					'conversions-gutenberg-gfont',
+					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap',
+					array(),
+					$theme_version
 				);
-				wp_enqueue_style( 'conversions-gutenberg-body-font' );
+			} elseif ( $headings_font !== $body_font ) {
+				wp_enqueue_style(
+					'conversions-gutenberg-gfont',
+					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '|' . esc_html( $body_font ) . '&display=swap',
+					array(),
+					$theme_version
+				);
 			}
 		}
-
 	}
 
 	/**
@@ -294,21 +294,23 @@ class Enqueue {
 		// Google fonts.
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
-			// Headings font.
+			// Get the user choices.
 			$headings_font = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-			wp_enqueue_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
-				'conversions-heading-gfont',
-				'//fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap'
-			);
+			$body_font     = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
 
-			// Body font.
-			$body_font = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
-			if ( $body_font === $headings_font ) {
-				return;
-			} else {
-				wp_enqueue_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
-					'conversions-body-gfont',
-					'//fonts.googleapis.com/css?family=' . esc_html( $body_font ) . '&display=swap'
+			if ( $headings_font === $body_font ) {
+				wp_enqueue_style(
+					'conversions-gfont',
+					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '&display=swap',
+					array(),
+					$theme_version
+				);
+			} elseif ( $headings_font !== $body_font ) {
+				wp_enqueue_style(
+					'conversions-gfont',
+					'https://fonts.googleapis.com/css?family=' . esc_html( $headings_font ) . '|' . esc_html( $body_font ) . '&display=swap',
+					array(),
+					$theme_version
 				);
 			}
 		}
@@ -347,5 +349,18 @@ class Enqueue {
 			$theme_version,
 			true
 		);
+	}
+
+	/**
+	 * Preconnect Resource Hint for Google Fonts.
+	 *
+	 * @since 2020-11-24
+	 */
+	public function preconnect_google_fonts() {
+		// Are Google Fonts active?
+		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
+			// Add Preconnect Resource Hint.
+			echo '<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>';
+		}
 	}
 }
