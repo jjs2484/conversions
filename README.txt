@@ -247,6 +247,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.7.4 =
 * New: Add conversions_related_post_content filter.
+* Update: Further optimize Google Fonts: combine requests, add preconnect, and load before CSS.
 * Update: NPM dependencies.
 * Update: Composer dependencies.
 * Fix: Gutenberg block background colors CSS selector.
