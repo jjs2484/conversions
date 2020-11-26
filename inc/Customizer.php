@@ -241,25 +241,77 @@ namespace conversions
 		}
 
 		/**
+		 * Get Google Font options.
+		 *
+		 * @since 2020-11-25
+		 */
+		public function get_google_fonts() {
+			/*
+			 * Get the user choices and add to an array.
+			 * $google_fonts = get_google_fonts();
+			 * heading font is $google_fonts[0]
+			 * body font is $google_fonts[1]
+			 */
+			$google_fonts   = [];
+			$google_fonts[] = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
+			$google_fonts[] = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
+
+			return $google_fonts;
+		}
+
+		/**
+		 * Get font family.
+		 *
+		 * @since 2020-11-25
+		 */
+		public function get_font_family() {
+			/*
+			 * Get the user choices and add to an array.
+			 * $font_family = get_font_family();
+			 * heading font is $font_family[0]
+			 * body font is $font_family[1]
+			 */
+
+			// Are Google fonts enabled?
+			if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
+
+				// Get the user choices.
+				$google_fonts = $this->get_google_fonts();
+
+				// Get the font family name to use in inline styles.
+				$headings_font_pieces = explode( ':', $google_fonts[0] );
+				$headings_font        = $headings_font_pieces[0];
+				$body_font_pieces     = explode( ':', $google_fonts[1] );
+				$body_font            = $body_font_pieces[0];
+
+			} else {
+				// If not use web safe fonts.
+				$headings_font = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
+				$body_font     = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
+			}
+
+			// Create an array.
+			$font_family   = [];
+			$font_family[] = $headings_font;
+			$font_family[] = $body_font;
+
+			// Apply filter if exists.
+			if ( has_filter( 'conversions_font_family' ) ) {
+				$resources = apply_filters( 'conversions_font_family', $font_family );
+			}
+
+			return $font_family;
+		}
+
+		/**
 		 * Customizer options styles added to wp_head inline.
 		 *
 		 * @since 2019-08-15
 		 */
 		public function wp_head() {
-			// font variables.
-			if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
-				// headings.
-				$headings_font       = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-				$heading_font_pieces = explode( ':', $headings_font );
-				$headings_font       = $heading_font_pieces[0];
-				// body.
-				$body_font        = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
-				$body_font_pieces = explode( ':', $body_font );
-				$body_font        = $body_font_pieces[0];
-			} else {
-				$headings_font = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
-				$body_font     = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
-			}
+
+			// Get the user choices.
+			$font_family = $this->get_font_family();
 
 			// fixed navbar height calc variables.
 			$fixed_navbar_height = $this->fixed_navbar_height_calc();
@@ -308,8 +360,8 @@ namespace conversions
 				[ 'section.c-cta h2', 'color', get_theme_mod( 'conversions_hcta_title_color' ) ],
 				[ 'section.c-cta p.subtitle', 'color', get_theme_mod( 'conversions_hcta_desc_color' ) ],
 				[ '.conversions-hero-cover', 'min-height', get_theme_mod( 'conversions_featured_img_height' ), 'vh' ],
-				[ '.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6', 'font-family', $headings_font ],
-				[ 'body, input, select, textarea', 'font-family', $body_font ],
+				[ '.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6', 'font-family', $font_family[0] ],
+				[ 'body, input, select, textarea', 'font-family', $font_family[1] ],
 			];
 			?>
 

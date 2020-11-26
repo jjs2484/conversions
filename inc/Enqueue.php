@@ -42,21 +42,6 @@ class Enqueue {
 	}
 
 	/**
-	 * Get Google Font options.
-	 *
-	 * @since 2020-11-25
-	 */
-	public function get_google_fonts() {
-
-		// Get the user choices.
-		$google_fonts   = [];
-		$google_fonts[] = get_theme_mod( 'conversions_headings_fonts', 'Roboto:400,400italic,700,700italic' );
-		$google_fonts[] = get_theme_mod( 'conversions_body_fonts', 'Roboto:400,400italic,700,700italic' );
-
-		return $google_fonts;
-	}
-
-	/**
 	 * Google Fonts enqueue.
 	 *
 	 * @since 2020-11-25
@@ -73,7 +58,7 @@ class Enqueue {
 			$theme_version = $this->get_theme_version();
 
 			// Get the user choices.
-			$google_fonts = $this->get_google_fonts();
+			$google_fonts = conversions()->customizer->get_google_fonts();
 
 			if ( $google_fonts[0] === $google_fonts[1] ) {
 				$google_fonts_enqueue = wp_enqueue_style(
@@ -93,38 +78,6 @@ class Enqueue {
 
 			return $google_fonts_enqueue;
 		}
-
-	}
-
-	/**
-	 * Get font family.
-	 *
-	 * @since 2020-11-25
-	 */
-	public function get_font_family() {
-
-		// Are Google fonts enabled?
-		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
-
-			// Get the user choices.
-			$google_fonts = $this->get_google_fonts();
-
-			// Create variables for inline styles.
-			$headings_font_pieces = explode( ':', $google_fonts[0] );
-			$headings_font        = $headings_font_pieces[0];
-			$body_font_pieces     = explode( ':', $google_fonts[1] );
-			$body_font            = $body_font_pieces[0];
-
-		} else {
-			$headings_font = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
-			$body_font     = 'Arial, Helvetica, sans-serif, -apple-system, BlinkMacSystemFont';
-		}
-
-		$font_family   = [];
-		$font_family[] = $headings_font;
-		$font_family[] = $body_font;
-
-		return $font_family;
 
 	}
 
@@ -160,7 +113,7 @@ class Enqueue {
 	public function enqueue_block_editor_inline() {
 
 		// Get the user choices.
-		$font_family = $this->get_font_family();
+		$font_family = conversions()->customizer->get_font_family();
 
 		$links_color  = get_theme_mod( 'conversions_link_color', '#0068d7' );
 		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#00698c' );
@@ -248,7 +201,7 @@ class Enqueue {
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 
 			// Get the user choices.
-			$google_fonts = $this->get_google_fonts();
+			$google_fonts = conversions()->customizer->get_google_fonts();
 
 			// Enqueue headings font.
 			$headings_font_url = str_replace( ',', '%2C', 'https://fonts.googleapis.com/css?family=' . esc_url( $google_fonts[0] ) . '&display=swap' );
@@ -273,7 +226,7 @@ class Enqueue {
 	public function tiny_mce_before_init( $mceInit ) {
 
 		// Get the user choices.
-		$font_family = $this->get_font_family();
+		$font_family = conversions()->customizer->get_font_family();
 
 		$links_color  = get_theme_mod( 'conversions_link_color', '#0068d7' );
 		$links_hcolor = get_theme_mod( 'conversions_link_hcolor', '#00698c' );
