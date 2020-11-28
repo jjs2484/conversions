@@ -23,9 +23,7 @@ namespace conversions
 		 */
 		public function __construct() {
 			add_action( 'customize_register', [ $this, 'customize_register' ] );
-			add_action( 'wp_footer', [ $this, 'wp_footer' ], 100 );
 			add_action( 'wp_head', [ $this, 'wp_head' ], 99 );
-			add_filter( 'wp_nav_menu_items', [ $this, 'wp_nav_menu_items' ], 10, 2 );
 		}
 
 		/**
@@ -183,31 +181,6 @@ namespace conversions
 			// phpcs:enable
 
 			do_action( 'conversions_customize_register', $this );
-		}
-
-		/**
-		 * Search modal for nav search icon added to wp_footer.
-		 *
-		 * @since 2019-08-15
-		 */
-		public function wp_footer() {
-			if ( get_theme_mod( 'conversions_nav_search_icon', false ) === true ) {
-				// Add modal window for search.
-				$search_form = get_search_form( false );
-				echo '<div id="csearchModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="csearchModal__label" aria-hidden="true">',
-					'<div class="modal-dialog">',
-						'<div class="modal-content">',
-							'<div class="modal-header">',
-								'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>',
-							'</div>',
-							'<div class="modal-body">',
-								'<h3 id="csearchModal__label" class="modal-title">' . esc_html__( 'Start typing and press enter to search', 'conversions' ) . '</h3>',
-								'' . $search_form . '', // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							'</div>',
-						'</div>',
-					'</div>',
-				'</div>';
-			}
 		}
 
 		/**
@@ -383,7 +356,7 @@ namespace conversions
 
 				// Fixed navbar height.
 				if ( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) === 'fixed-top' ) {
-					if ( get_theme_mod( 'conversions_nav_layout', 'right' ) == 'right' ) {
+					if ( get_theme_mod( 'conversions_nav_layout', 'right' ) === 'right' ) {
 						echo '.content-wrapper {
 							margin-top: ' . esc_html( $fixed_navbar_height[0] ) . 'rem;
 						}';
@@ -514,156 +487,6 @@ namespace conversions
 				?>
 			</style>
 			<?php
-		}
-
-		/**
-		 * Add menu items from customizer options.
-		 *
-		 * @since 2019-08-15
-		 *
-		 * @param string $items Menu items.
-		 * @param string $args Arguments.
-		 */
-		public function wp_nav_menu_items( $items, $args ) {
-			if ( $args->theme_location === 'primary' ) {
-
-				// Is woocommerce is active?
-				if ( class_exists( 'woocommerce' ) ) {
-
-					// Append WooCommerce Account icon?
-					if ( get_theme_mod( 'conversions_wc_account', false ) === true ) {
-
-						if ( is_user_logged_in() ) {
-							$wc_al = __( 'My Account', 'conversions' );
-						} else {
-							$wc_al = __( 'Login / Register', 'conversions' );
-						}
-						// output the account icon if active.
-						$wc_account_link = sprintf(
-							'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
-							esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ),
-							$wc_al
-						);
-
-						// Add the account to the end of the menu.
-						$items .= $wc_account_link;
-					}
-
-					// Append WooCommerce Cart icon?
-					if ( get_theme_mod( 'conversions_wc_cart_nav', true ) === true ) {
-						// output the cart icon with item count.
-						$cart_link = sprintf(
-							'<li class="cart menu-item nav-item">%s</li>',
-							WooCommerce::get_cart_nav_html()
-						);
-						// Add the cart icon to the end of the menu.
-						$items .= $cart_link;
-					}
-				}
-
-				// Is Easy Digital Downloads active?
-				if ( class_exists( 'Easy_Digital_Downloads' ) ) {
-
-					// Append Easy Digital Downloads Account icon?
-					if ( get_theme_mod( 'conversions_edd_nav_account', false ) === true ) {
-
-						if ( is_user_logged_in() ) {
-							$edd_al = __( 'My Account', 'conversions' );
-						} else {
-							$edd_al = __( 'Login / Register', 'conversions' );
-						}
-						// output the account icon if active.
-						$edd_account_link = sprintf(
-							'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
-							esc_url( edd_get_user_verification_page() ),
-							$edd_al
-						);
-
-						// Add the account to the end of the menu.
-						$items .= $edd_account_link;
-					}
-
-					// Append Easy Digital Downloads Cart icon?
-					if ( get_theme_mod( 'conversions_edd_nav_cart', true ) === true ) {
-
-						$edd_cart_totals = sprintf(
-							'<span class="header-cart edd-cart-quantity">%s</span><span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>',
-							edd_get_cart_quantity()
-						);
-
-						// output the cart icon with item count.
-						$edd_cart_link = sprintf(
-							'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-cart"></i>%s</a></li>',
-							esc_url( edd_get_checkout_uri() ),
-							$edd_cart_totals
-						);
-
-						// Add the cart icon to the end of the menu.
-						$items .= $edd_cart_link;
-					}
-				}
-
-				// Is bbPress active?
-				if ( class_exists( 'bbPress' ) ) {
-
-					// Append bbPress Account icon?
-					if ( get_theme_mod( 'conversions_bbp_account', false ) === true ) {
-
-						if ( is_user_logged_in() ) {
-							$bbp_al          = __( 'My Account', 'conversions' );
-							$bbp_profile_url = bbp_get_user_profile_url( bbp_get_current_user_id() );
-						} else {
-							$bbp_al          = __( 'Login / Register', 'conversions' );
-							$bbp_profile_url = wp_login_url();
-						}
-
-						// output the account icon if active.
-						$bbp_account_link = sprintf(
-							'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
-							esc_url( $bbp_profile_url ),
-							$bbp_al
-						);
-
-						// Add the account to the end of the menu.
-						$items .= $bbp_account_link;
-					}
-				}
-
-				// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
-				if ( get_theme_mod( 'conversions_nav_search_icon', false ) === true ) {
-					$nav_search = sprintf(
-						'<li class="search-icon menu-item nav-item"><a href="#csearchModal" data-toggle="modal" class="nav-link" title="%1$s"><i aria-hidden="true" class="fas fa-search"></i><span class="sr-only">%1$s</span></a></li>',
-						__( 'Search', 'conversions' )
-					);
-
-					// Add the nav button to the end of the menu.
-					$items .= $nav_search;
-				}
-
-				// Append Navigation Button?
-				if ( get_theme_mod( 'conversions_nav_button', 'no' ) !== 'no' ) {
-
-					$nav_btn_text = get_theme_mod( 'conversions_nav_button_text' );
-					if ( empty( $nav_btn_text ) ) {
-						$nav_btn_text = '';
-					}
-					$nav_btn_url = get_theme_mod( 'conversions_nav_button_url' );
-					if ( empty( $nav_btn_url ) ) {
-						$nav_btn_url = '';
-					}
-
-					$nav_button = sprintf(
-						'<li class="nav-callout-button menu-item nav-item"><a title="%1$s" href="%2$s" class="btn %3$s">%1$s</a></li>',
-						esc_html( $nav_btn_text ),
-						esc_url( $nav_btn_url ),
-						esc_attr( get_theme_mod( 'conversions_nav_button' ) )
-					);
-
-					// Add the nav button to the end of the menu.
-					$items .= $nav_button;
-				}
-			}
-			return $items;
 		}
 	}
 }
