@@ -246,17 +246,33 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Composer dependencies.
 
 = 1.7.4 =
-* New: Add conversions_related_post_content filter.
-* New: Add conversions_resource_hints filter.
-* New: Add conversions_font_family filter.
 * Update: Further optimize Google Fonts: combine requests, add preconnect, and load before CSS.
 * Update: Further optimize Font Awesome: add preload, and load before CSS.
-* Update: Refactor and reorg functions in inc/enqueue.php.
+* Update: Refactor and reorg functions in inc/enqueue.
+* Update: Move some navbar functions cart, icons, button, etc, from inc/customizer to inc/navbar.
+* Update: Refactor and reorg functions in inc/navbar.
 * Update: NPM dependencies.
 * Update: Composer dependencies.
 * Fix: Gutenberg block background colors CSS selector.
 * Fix: Get related post content from get_the_excerpt. 
 * Fix: Some phpcs formatting.
+* New: Filter hooks:
+- conversions_related_post_content
+- conversions_resource_hints
+- conversions_font_family
+- conversions_navbar_menu
+- conversions_navbar_extras
+* New: Action hooks:
+- conversions_navbar_before_woocommerce
+- conversions_navbar_after_woocommerce
+- conversions_navbar_before_edd
+- conversions_navbar_after_edd
+- conversions_navbar_before_bbpress
+- conversions_navbar_after_bbpress
+- conversions_navbar_before_search
+- conversions_navbar_after_search
+- conversions_navbar_before_button
+- conversions_navbar_after_button
 
 == Resources ==
 
