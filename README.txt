@@ -37,17 +37,6 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 - conversions_font_family
 - conversions_navbar_menu
 - conversions_navbar_extras
-* New: Action hooks:
-- conversions_navbar_before_woocommerce
-- conversions_navbar_after_woocommerce
-- conversions_navbar_before_edd
-- conversions_navbar_after_edd
-- conversions_navbar_before_bbpress
-- conversions_navbar_after_bbpress
-- conversions_navbar_before_search
-- conversions_navbar_after_search
-- conversions_navbar_before_button
-- conversions_navbar_after_button
 
 = 1.7.3 =
 * Update: Bootstrap to 4.5.3

@@ -249,35 +249,25 @@ class Navbar {
 			$search      = $this->conversions_navbar_search();
 			$button      = $this->conversions_navbar_button();
 
-			do_action( 'conversions_navbar_before_woocommerce' );
 			if ( ! empty( $woocommerce ) ) {
 				$items .= $woocommerce;
 			}
-			do_action( 'conversions_navbar_after_woocommerce' );
 
-			do_action( 'conversions_navbar_before_edd' );
 			if ( ! empty( $edd ) ) {
 				$items .= $edd;
 			}
-			do_action( 'conversions_navbar_after_edd' );
 
-			do_action( 'conversions_navbar_before_bbpress' );
 			if ( ! empty( $bbpress ) ) {
 				$items .= $bbpress;
 			}
-			do_action( 'conversions_navbar_after_bbpress' );
 
-			do_action( 'conversions_navbar_before_search' );
 			if ( ! empty( $search ) ) {
 				$items .= $search;
 			}
-			do_action( 'conversions_navbar_after_search' );
 
-			do_action( 'conversions_navbar_before_button' );
 			if ( ! empty( $button ) ) {
 				$items .= $button;
 			}
-			do_action( 'conversions_navbar_after_button' );
 
 			// Apply filter if exists.
 			if ( has_filter( 'conversions_navbar_extras' ) ) {
@@ -292,7 +282,7 @@ class Navbar {
 	 *
 	 * @since 2020-11-27
 	 */
-	public function conversions_navbar_woocommerce() {
+	public static function conversions_navbar_woocommerce() {
 
 		// Create empty string variable to add active elements to.
 		$items = '';
@@ -338,7 +328,7 @@ class Navbar {
 	 *
 	 * @since 2020-11-27
 	 */
-	public function conversions_navbar_edd() {
+	public static function conversions_navbar_edd() {
 
 		// Create empty string variable to add active elements to.
 		$items = '';
@@ -392,7 +382,7 @@ class Navbar {
 	 *
 	 * @since 2020-11-27
 	 */
-	public function conversions_navbar_bbp() {
+	public static function conversions_navbar_bbp() {
 
 		// Create empty string variable to add active elements to.
 		$items = '';
@@ -430,7 +420,7 @@ class Navbar {
 	 *
 	 * @since 2020-11-27
 	 */
-	public function conversions_navbar_search() {
+	public static function conversions_navbar_search() {
 
 		// Create empty string variable to add active elements to.
 		$items = '';
@@ -454,7 +444,7 @@ class Navbar {
 	 *
 	 * @since 2020-11-27
 	 */
-	public function conversions_navbar_button() {
+	public static function conversions_navbar_button() {
 
 		// Create empty string variable to add active elements to.
 		$items = '';
