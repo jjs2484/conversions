@@ -265,6 +265,15 @@ class Navbar {
 				$items .= $search;
 			}
 
+			if ( get_theme_mod( 'conversions_social_navbar', false ) === true ) {
+				$navbar_social_icons = $this->social_icons_content();
+				$navbar_social_icons = str_replace( 'list-inline-item', 'c-social-icons--navbar menu-item nav-item', $navbar_social_icons );
+				$navbar_social_icons = str_replace( '<a title=', '<a class="nav-link" title=', $navbar_social_icons );
+				if ( ! empty( $navbar_social_icons ) ) {
+					$items .= $navbar_social_icons;
+				}
+			}
+
 			if ( ! empty( $button ) ) {
 				$items .= $button;
 			}
