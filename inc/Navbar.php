@@ -243,11 +243,11 @@ class Navbar {
 
 		if ( $args->theme_location === 'primary' && get_theme_mod( 'conversions_nav_layout', 'right' ) === 'right' ) {
 
-			$woocommerce = $this->conversions_navbar_woocommerce();
-			$edd         = $this->conversions_navbar_edd();
-			$bbpress     = $this->conversions_navbar_bbp();
-			$search      = $this->conversions_navbar_search();
-			$button      = $this->conversions_navbar_button();
+			$woocommerce = self::conversions_navbar_woocommerce();
+			$edd         = self::conversions_navbar_edd();
+			$bbpress     = self::conversions_navbar_bbp();
+			$search      = self::conversions_navbar_search();
+			$button      = self::conversions_navbar_button();
 
 			if ( ! empty( $woocommerce ) ) {
 				$items .= $woocommerce;
