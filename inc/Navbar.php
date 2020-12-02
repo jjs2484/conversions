@@ -241,7 +241,7 @@ class Navbar {
 	 */
 	public function wp_nav_menu_items( $items, $args ) {
 
-		if ( $args->theme_location === 'primary' ) {
+		if ( $args->theme_location === 'primary' && get_theme_mod( 'conversions_nav_layout', 'right' ) === 'right' ) {
 
 			$woocommerce = $this->conversions_navbar_woocommerce();
 			$edd         = $this->conversions_navbar_edd();
@@ -265,12 +265,12 @@ class Navbar {
 				$items .= $search;
 			}
 
-			if ( get_theme_mod( 'conversions_social_navbar', false ) === true ) {
-				$navbar_social_icons = $this->social_icons_content();
-				$navbar_social_icons = str_replace( 'list-inline-item', 'c-social-icons--navbar menu-item nav-item', $navbar_social_icons );
-				$navbar_social_icons = str_replace( '<a title=', '<a class="nav-link" title=', $navbar_social_icons );
+			if ( class_exists( '\conversions\extensions\Conversions_Extensions' ) && get_theme_mod( 'conversions_social_navbar', false ) === true ) {
+				$navbar_social_icons = \conversions\extensions\social\social_icons::social_icons_content();
 				if ( ! empty( $navbar_social_icons ) ) {
-					$items .= $navbar_social_icons;
+					$navbar_social_icons = str_replace( 'list-inline-item', 'c-social-icons--navbar menu-item nav-item', $navbar_social_icons );
+					$navbar_social_icons = str_replace( '<a title=', '<a class="nav-link" title=', $navbar_social_icons );
+					$items              .= $navbar_social_icons;
 				}
 			}
 
