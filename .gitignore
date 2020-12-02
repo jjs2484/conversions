@@ -15,9 +15,6 @@ composer.phar
 /vendor/wptt/webfont-loader/LICENSE
 /vendor/wptt/webfont-loader/README.md
 
-# VSCode
-.vscode
-
 # macOS
 .DS_Store
 
