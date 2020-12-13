@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '7b142e2aa0302b1a78ef02106d0b5a704455bd9e',
+    'reference' => 'dab41c4b2d5a498e784df6b32d5565c7277a3c28',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,16 +18,16 @@
       'aliases' => 
       array (
       ),
-      'reference' => '7b142e2aa0302b1a78ef02106d0b5a704455bd9e',
+      'reference' => 'dab41c4b2d5a498e784df6b32d5565c7277a3c28',
     ),
     'dealerdirect/phpcodesniffer-composer-installer' => 
     array (
-      'pretty_version' => 'v0.7.0',
-      'version' => '0.7.0.0',
+      'pretty_version' => 'v0.7.1',
+      'version' => '0.7.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e8d808670b8f882188368faaf1144448c169c0b7',
+      'reference' => 'fe390591e0241955f22eb9ba327d137e501c771c',
     ),
     'squizlabs/php_codesniffer' => 
     array (
