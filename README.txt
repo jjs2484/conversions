@@ -30,7 +30,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Composer dependencies.
 * Fix: Gutenberg block background colors CSS selector.
 * Fix: Get related post content from get_the_excerpt. 
-* Fix: Switch some customizer sanitization from wp_filter_nohtml_kses to sanitize_text_field.
+* Fix: Switch some customizer sanitization callbacks from wp_filter_nohtml_kses to sanitize_text_field.
 * Fix: Some phpcs formatting.
 * New: Filter hooks:
 - conversions_related_post_content
