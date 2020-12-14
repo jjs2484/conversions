@@ -26,6 +26,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Refactor and reorg functions in inc/enqueue.
 * Update: Move some navbar functions cart, icons, button, etc, from inc/customizer to inc/navbar.
 * Update: Refactor and reorg functions in inc/navbar.
+* Update: Refactor CTA background color output.
 * Update: NPM dependencies.
 * Update: Composer dependencies.
 * Fix: Gutenberg block background colors CSS selector.
