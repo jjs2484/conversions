@@ -217,6 +217,8 @@ namespace conversions
 				'conversions_blog_postnav'         => true,
 				'conversions_hcta_bg_choice'       => 'gradient',
 				'conversions_hcta_bg_gradient'     => 'crystal-clear',
+				'conversions_hcta_bg_bootstrap'    => 'bg-secondary',
+				'conversions_hcta_bg_color'        => '#6c757d',
 				'conversions_hcta_title_color'     => '#ffffff',
 				'conversions_hcta_desc_color'      => '#ffffff',
 				'conversions_hcta_btn'             => 'no',

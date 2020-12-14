@@ -94,7 +94,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'conversions_hcta_bg_bootstrap',
 	[
-		'default'           => '',
+		'default'           => 'bg-secondary',
 		'type'              => 'theme_mod',
 		'sanitize_callback' => 'conversions_sanitize_select',
 		'capability'        => 'edit_theme_options',
@@ -129,7 +129,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'conversions_hcta_bg_color',
 	[
-		'default'           => '',
+		'default'           => '#6c757d',
 		'type'              => 'theme_mod',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'sanitize_hex_color',

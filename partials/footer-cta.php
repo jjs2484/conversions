@@ -1,6 +1,6 @@
 <?php
 /**
- * Call to action partial for footer
+ * Call to action partial
  *
  * @package conversions
  */
@@ -11,18 +11,20 @@ defined( 'ABSPATH' ) || exit;
 
 	<!-- Call-to-action section -->
 	<?php
-	if ( get_theme_mod( 'conversions_hcta_bg_choice' ) === 'gradient' ) {
-		?>
-		<section class="c-cta <?php if ( ! empty( get_theme_mod( 'conversions_hcta_bg_gradient' ) ) ) { echo esc_attr( get_theme_mod( 'conversions_hcta_bg_gradient' ) ); } ?>">
-		<?php
-	} elseif ( get_theme_mod( 'conversions_hcta_bg_choice' ) === 'bootstrap' ) {
-		?>
-		<section class="c-cta <?php if ( ! empty( get_theme_mod( 'conversions_hcta_bg_bootstrap' ) ) ) { echo esc_attr( get_theme_mod( 'conversions_hcta_bg_bootstrap' ) ); } ?>">
-		<?php
-	} elseif ( get_theme_mod( 'conversions_hcta_bg_choice' ) === 'custom' ) {
-		?>
-		<section class="c-cta" style="background-color: <?php if ( ! empty( get_theme_mod( 'conversions_hcta_bg_color' ) ) ) { echo esc_attr( get_theme_mod( 'conversions_hcta_bg_color' ) ); } ?>;">
-		<?php
+	// CTA background type.
+	$conversions_cta_bg_type = get_theme_mod( 'conversions_hcta_bg_choice', 'gradient' );
+	switch ( $conversions_cta_bg_type ) {
+		case 'gradient':
+			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_gradient', 'crystal-clear' ) ) . '">';
+			break;
+		case 'bootstrap':
+			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_bootstrap', 'bg-secondary' ) ) . '">';
+			break;
+		case 'custom':
+			echo '<section class="c-cta" style="background-color: ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_color', '#6c757d' ) ) . '">';
+			break;
+		default:
+			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_gradient', 'crystal-clear' ) ) . '">';
 	}
 	?>
 
