@@ -362,12 +362,6 @@ namespace conversions
 						}';
 					}
 				}
-				// Navbar drop shadow.
-				if ( get_theme_mod( 'conversions_nav_dropshadow', false ) === true ) {
-					echo '#wrapper-navbar {
-						box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-					}';
-				}
 				// Content article card.
 				if ( get_theme_mod( 'conversions_content_cards', false ) === true ) {
 					echo 'body.page #primary #main > article,

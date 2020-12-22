@@ -90,12 +90,21 @@ class Navbar {
 	public function conversions_wrapper_classes() {
 		$nav_color_scheme = get_theme_mod( 'conversions_nav_colors', 'white' );
 		$nav_position     = get_theme_mod( 'conversions_nav_position', 'fixed-top' );
+		$nav_drop_shadow  = get_theme_mod( 'conversions_nav_dropshadow', false );
 
-		// Set up array.
+		// Set up empty array.
 		$classes = [];
 
-		$classes[] = get_theme_mod( 'conversions_nav_position', 'fixed-top' );
+		// Add position class.
+		$classes[] = $nav_position;
+
+		// Add color scheme class.
 		$classes[] = 'is-' . $nav_color_scheme . '-color';
+
+		// Add drop shadow class if active.
+		if ( $nav_drop_shadow === true ) {
+			$classes[] = 'drop-shadow-is-true';
+		}
 
 		$classes = implode( ' ', array_filter( $classes ) );
 

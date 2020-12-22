@@ -13058,8 +13058,11 @@ img,
 #wrapper-navbar .navbar.navbar-right #main-menu {
   margin-left: auto; }
 
-#wrapper-navbar.is-white-color .navbar {
+#wrapper-navbar.is-white-color:not(.drop-shadow-is-true) .navbar {
   border-bottom: 1px solid #dee2e6; }
+
+#wrapper-navbar.drop-shadow-is-true {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33); }
 
 .fixed-top#wrapper-navbar {
   position: -ms-device-fixed; }
