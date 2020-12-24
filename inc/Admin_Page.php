@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="wrap about-wrap full-width-layout">
+<div class="wrap about-wrap full-width-layout c-info">
 	<!-- Page title -->
 	<h1><?php esc_html_e( 'Thanks for choosing Conversions!', 'conversions' ); ?></h1>
 
@@ -21,10 +21,10 @@
 	?>
 
 	<!-- Get Started! -->
-	<h2><?php esc_html_e( 'Get Started in 3 Easy Steps', 'conversions' ); ?></h2>
+	<h2 class="c-info__start"><?php esc_html_e( 'Get Started in 3 Easy Steps', 'conversions' ); ?></h2>
 
 	<!-- Step 1 -->
-	<h3><?php esc_html_e( '1. Install the recommended plugins', 'conversions' ); ?></h3>
+	<h3 class="c-info__subtitle"><?php esc_html_e( '1. Install the recommended plugins', 'conversions' ); ?></h3>
 
 	<div class="recommended-plugins">
 		<?php
@@ -33,7 +33,7 @@
 	</div>
 
 	<!-- Step 2 -->	
-	<h3>
+	<h3 class="c-info__subtitle">
 		<?php
 		esc_html_e( '2. Customize your site: ', 'conversions' );
 		echo \conversions\Admin::get_customize_btn(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
@@ -41,5 +41,5 @@
 	</h3>
 
 	<!-- Step 3 -->
-	<h3><?php esc_html_e( '3. Enjoy! :)', 'conversions' ); ?></h3>
+	<h3 class="c-info__subtitle"><?php esc_html_e( '3. Enjoy! :)', 'conversions' ); ?></h3>
 </div>

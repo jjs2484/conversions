@@ -28,6 +28,7 @@ class Admin {
 	 */
 	public function __construct() {
 		add_action( 'admin_menu', [ $this, 'add_theme_page' ] );
+		add_action( 'admin_enqueue_scripts', [ $this, 'admin_enqueue_scripts' ] );
 		add_action( 'init', [ $this, 'get_tgmpa_plugins' ], 11 );
 	}
 
@@ -47,6 +48,33 @@ class Admin {
 	 */
 	public function theme_admin_page() {
 		include get_template_directory() . '/inc/Admin_Page.php';
+	}
+
+	/**
+	 * Enqueue scripts and styles for Admin page.
+	 *
+	 * @since 2020-12-24
+	 *
+	 * @param string $hook The current admin page.
+	 */
+	public function admin_enqueue_scripts( $hook ) {
+
+		// Check we are on the right page.
+		if ( 'appearance_page_conversions-info' != $hook ) { // phpcs:ignore WordPress.PHP.StrictComparisons.LooseComparison
+			return;
+		}
+
+		// Get theme version.
+		$theme         = wp_get_theme();
+		$theme_version = $theme->get( 'Version' );
+
+		// Styles.
+		wp_enqueue_style(
+			'conversions-admin-info',
+			get_theme_file_uri( '/build/conversions-admin.min.css' ),
+			array(),
+			$theme_version
+		);
 	}
 
 	/**
@@ -146,8 +174,8 @@ class Admin {
 
 			// Build the output.
 			$output  = '';
-			$output .= '<div class="conversions-install-notice ' . esc_attr( $notice_color ) . '">';
-			$output .= '<h3 class="conversions-plugin-title">' . esc_html( $title ) . '</h3>';
+			$output .= '<div class="c-info__notice ' . esc_attr( $notice_color ) . '">';
+			$output .= '<h3 class="c-info__notice-title">' . esc_html( $title ) . '</h3>';
 			$output .= '<p>' . esc_html( $description ) . '</p>';
 			if ( ! $plugin_is_ready ) {
 				$output .= sprintf(

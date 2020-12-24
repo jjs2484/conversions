@@ -18,6 +18,7 @@ module.exports = function(grunt) {
 					'build/gutenberg-editor-style.css': 'sass/gutenberg-editor-style.scss',
 					'build/classic-editor-style.css': 'sass/classic-editor-style.scss',
 					'build/conversions-customizer.css': 'sass/customizer.scss',
+					'build/conversions-admin.css': 'sass/admin.scss',
 				}
 			}
 		},
@@ -73,6 +74,7 @@ module.exports = function(grunt) {
 					'build/gutenberg-editor-style.min.css': ['build/gutenberg-editor-style.css'],
 					'build/classic-editor-style.min.css': ['build/classic-editor-style.css'],
 					'build/conversions-customizer.min.css': ['build/conversions-customizer.css'],
+					'build/conversions-admin.min.css': ['build/conversions-admin.css'],
 				}
 			}
 		},

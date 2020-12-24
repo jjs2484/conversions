@@ -1,0 +1,30 @@
+// Admin info page wrapper
+.c-info {
+
+	// h2 left align
+	h2.c-info__start {
+		text-align: left;
+	}
+
+	// h3 font-weight
+	h3.c-info__subtitle {
+		font-weight: normal;
+	}
+
+	// Plugin dependency notices
+	.c-info__notice {
+		background: #fff;
+		border-left: 4px solid #ffb900;
+		padding: 1rem 1rem 1rem 1.5rem;
+		margin: 1rem 0;
+		box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, .1);
+		&.blue {
+			border-left-color: #00a0d2;
+		}
+
+		// Notice title
+		.c-info__notice-title {
+			margin-top: 0;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.c-info h2.c-info__start {
+  text-align: left; }
+.c-info h3.c-info__subtitle {
+  font-weight: normal; }
+.c-info .c-info__notice {
+  background: #fff;
+  border-left: 4px solid #ffb900;
+  padding: 1rem 1rem 1rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1); }
+  .c-info .c-info__notice.blue {
+    border-left-color: #00a0d2; }
+  .c-info .c-info__notice .c-info__notice-title {
+    margin-top: 0; }
