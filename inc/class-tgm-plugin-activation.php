@@ -1020,7 +1020,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 */
 		public function notices() {
 			// Remove nag on the install page / Return early if the nag message has been dismissed or user < author.
-			if ( ( $this->is_tgmpa_page() || $this->is_core_update_page() ) || get_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id, true ) || ! current_user_can( apply_filters( 'tgmpa_show_admin_notice_capability', 'publish_posts' ) ) ) { // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+			if ( ( $this->is_tgmpa_page() || $this->is_core_update_page() || $this->is_conversions_theme_page() ) || get_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id, true ) || ! current_user_can( apply_filters( 'tgmpa_show_admin_notice_capability', 'publish_posts' ) ) ) { // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 				return;
 			}
 
@@ -1643,6 +1643,27 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				return true;
 			} elseif ( 'update' === $screen->base && ! empty( $_POST['action'] ) ) { // WPCS: CSRF ok.
 				// Individual updates (ajax call).
+				return true;
+			}
+
+			return false;
+		}
+
+		/**
+		 * Determine if we're on Conversions theme page.
+		 *
+		 * @return boolean True when on Conversions theme page, false otherwise.
+		 */
+		protected function is_conversions_theme_page() {
+			// Current screen is not always available, most notably on the customizer screen.
+			if ( ! function_exists( 'get_current_screen' ) ) {
+				return false;
+			}
+
+			$screen = get_current_screen();
+
+			if ( 'appearance_page_conversions-info' === $screen->base ) {
+				// Conversions theme page.
 				return true;
 			}
 
