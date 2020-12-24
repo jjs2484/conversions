@@ -21,6 +21,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 == Changelog ==
 
 = 1.7.4 =
+* New: Theme Info admin page.
 * Update: Further optimize Google Fonts: combine requests, add preconnect, and load before CSS.
 * Update: Further optimize Font Awesome: add preload, and load before CSS.
 * Update: Refactor and reorg functions in inc/enqueue.

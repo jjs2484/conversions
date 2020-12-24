@@ -47,13 +47,14 @@ namespace conversions
 			new WooCommerce();
 			new Easy_Digital_Downloads();
 			new bbPress();
+			new Admin();
 
 			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			require_once get_parent_theme_file_path( '/inc/class-tgm-plugin-activation.php' );
 			// phpcs:enable
 
 			$this->setup();
-			add_action( 'tgmpa_register', [ $this, 'conversions_register_required_plugins' ] );
+			add_action( 'tgmpa_register', [ $this, 'tgmpa_register' ] );
 		}
 
 		/**
@@ -238,7 +239,7 @@ namespace conversions
 		/**
 		 * Register the required plugins for this theme.
 		 */
-		public function conversions_register_required_plugins() {
+		public function tgmpa_register() {
 
 			// Include plugin from the WordPress Plugin Repository.
 			$plugins = [
@@ -259,6 +260,8 @@ namespace conversions
 				'id'           => 'conversions',           // Unique ID for hashing notices for multiple instances of TGMPA.
 				'default_path' => '',                      // Default absolute path to bundled plugins.
 				'menu'         => 'tgmpa-install-plugins', // Menu slug.
+				'parent_slug'  => 'themes.php',            // Parent menu slug.
+				'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
 				'has_notices'  => true,                    // Show admin notices or not.
 				'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
 				'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
