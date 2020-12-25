@@ -1,13 +1,8 @@
 // Admin info page wrapper
 .c-info {
 
-	// h2 left align
-	h2.c-info__start {
-		text-align: left;
-	}
-
-	// h3 font-weight
-	h3.c-info__subtitle {
+	// Enjoy message font-weight
+	h3.c-info__enjoy {
 		font-weight: normal;
 	}
 
@@ -25,6 +20,7 @@
 		// Notice title
 		.c-info__notice-title {
 			margin-top: 0;
+			font-weight: normal;
 		}
 	}
 }

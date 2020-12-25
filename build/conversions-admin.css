@@ -1,6 +1,4 @@
-.c-info h2.c-info__start {
-  text-align: left; }
-.c-info h3.c-info__subtitle {
+.c-info h3.c-info__enjoy {
   font-weight: normal; }
 .c-info .c-info__notice {
   background: #fff;
@@ -11,4 +9,5 @@
   .c-info .c-info__notice.blue {
     border-left-color: #00a0d2; }
   .c-info .c-info__notice .c-info__notice-title {
-    margin-top: 0; }
+    margin-top: 0;
+    font-weight: normal; }

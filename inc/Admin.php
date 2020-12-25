@@ -198,6 +198,24 @@ class Admin {
 	/**
 	 * Create customize button.
 	 *
+	 * @since 2020-12-25
+	 */
+	public static function get_import_page_btn() {
+
+		// Get import page URL.
+		$import_page_link = admin_url( 'themes.php?page=pt-one-click-demo-import' );
+
+		// Create button HTML.
+		echo sprintf(
+			'<a class="button" href="%s">%s</a>',
+			esc_url( $import_page_link ),
+			esc_html__( 'Conversions Demos', 'conversions' )
+		);
+	}
+
+	/**
+	 * Create customize button.
+	 *
 	 * @since 2020-12-23
 	 */
 	public static function get_customize_btn() {
