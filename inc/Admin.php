@@ -38,7 +38,7 @@ class Admin {
 	 * @since 2020-12-22
 	 */
 	public function add_theme_page() {
-		add_theme_page( 'Conversions Info', 'Conversions Info', 'edit_theme_options', 'conversions-info', [ $this, 'theme_admin_page' ] );
+		add_theme_page( 'Conversions Info', 'Conversions Info', 'edit_theme_options', 'conversions-info', [ $this, 'theme_admin_page' ], 5 );
 	}
 
 	/**
