@@ -47,7 +47,7 @@ class Admin {
 	 * @since 2020-12-22
 	 */
 	public function theme_admin_page() {
-		include get_template_directory() . '/inc/Admin_Page.php';
+		include_once get_theme_file_path( '/inc/Admin_Page.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 	}
 
 	/**

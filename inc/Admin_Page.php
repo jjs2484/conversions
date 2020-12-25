@@ -16,7 +16,7 @@
 	echo sprintf(
 		'<p>%s<br>%s</p>',
 		esc_html__( 'We\'re glad you chose Conversions theme and hope it will help you create a beautiful website in no time!', 'conversions' ),
-		esc_html__( 'If you have any suggestions, don\'t hesitate to leave us feedback.', 'conversions' ),
+		esc_html__( 'If you have any suggestions, don\'t hesitate to leave us feedback.', 'conversions' )
 	);
 	?>
 
