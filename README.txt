@@ -30,6 +30,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Refactor and reorg functions in inc/navbar.
 * Update: Navbar drop shadow styling.
 * Update: Refactor CTA background color output.
+* Update: Add Get Started customizer intro button.
 * Update: NPM dependencies.
 * Update: Composer dependencies.
 * Fix: Gutenberg block background colors CSS selector.

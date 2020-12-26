@@ -153,9 +153,9 @@ namespace conversions
 					'conversions_premium',
 					[
 						'title'         => '',
-						'button_text'   => __( 'Documentation', 'conversions' ),
-						'button_url'    => 'https://conversionswp.com/docs/documentation/',
-						'button_text_2' => __( 'Premium Extensions', 'conversions' ),
+						'button_text'   => __( 'Get Started', 'conversions' ),
+						'button_url'    => admin_url( 'themes.php?page=conversions-info' ),
+						'button_text_2' => __( 'Premium', 'conversions' ),
 						'button_url_2'  => 'https://conversionswp.com/premium-extensions/',
 						'priority'      => 1,
 						'capability'    => 'edit_theme_options',
