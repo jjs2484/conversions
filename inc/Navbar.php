@@ -274,7 +274,7 @@ class Navbar {
 				$items .= $search;
 			}
 
-			if ( class_exists( '\conversions\extensions\Conversions_Extensions' ) && get_theme_mod( 'conversions_social_navbar', false ) === true ) {
+			if ( class_exists( '\conversions\extensions\social\Social' ) && get_theme_mod( 'conversions_social_navbar', false ) === true ) {
 				$navbar_social_icons = \conversions\extensions\social\social_icons::social_icons_content();
 				if ( ! empty( $navbar_social_icons ) ) {
 					$navbar_social_icons = str_replace( 'list-inline-item', 'c-social-icons--navbar menu-item nav-item', $navbar_social_icons );
