@@ -248,11 +248,6 @@ namespace conversions
 					'slug'     => 'conversions-extensions',
 					'required' => false,
 				],
-				[
-					'name'     => 'One Click Demo Import',
-					'slug'     => 'one-click-demo-import',
-					'required' => false,
-				],
 			];
 
 			// Array of configuration settings. Amend each line as needed.
