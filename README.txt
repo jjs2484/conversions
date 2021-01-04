@@ -23,6 +23,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 = 1.7.5 =
 * Update: Add more Bootstrap color options to stick post highlight in customizer.
 * Update: Use .c-sticky-highlight to style stick posts rather than Bootstrap border classes ex. border-primary.
+* Update: NPM dependencies.
 * Fix: Only highlight sticky post at top of page not in its original position too.
 
 = 1.7.4 =
