@@ -289,6 +289,9 @@ namespace conversions
 			// fixed navbar height calc variables.
 			$fixed_navbar_height = $this->fixed_navbar_height_calc();
 
+			// Sticky post highlight option.
+			$sticky_post_highlight = get_theme_mod( 'conversions_blog_sticky_posts', 'primary' );
+
 			// WC button option.
 			$wc_primary_btn   = get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' );
 			$wc_secondary_btn = get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' );
@@ -317,6 +320,18 @@ namespace conversions
 				'btn-outline-info'      => [ 'btn_bg' => 'transparent', 'btn_color' => '#17a2b8', 'btn_border' => '#17a2b8', 'btn_bg_hover' => '#17a2b8', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#17a2b8' ],
 				'btn-outline-light'     => [ 'btn_bg' => 'transparent', 'btn_color' => '#f8f9fa', 'btn_border' => '#f8f9fa', 'btn_bg_hover' => '#f8f9fa', 'btn_color_hover' => '#212529', 'btn_border_hover' => '#f8f9fa' ],
 				'btn-outline-dark'      => [ 'btn_bg' => 'transparent', 'btn_color' => '#151b26', 'btn_border' => '#151b26', 'btn_bg_hover' => '#151b26', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#151b26' ],
+			];
+
+			// bootstrap colors.
+			$bs_colors = [
+				'primary'   => [ '#007bff' ],
+				'secondary' => [ '#6c757d' ],
+				'success'   => [ '#019875' ],
+				'danger'    => [ '#dc3545' ],
+				'warning'   => [ '#ffc107' ],
+				'info'      => [ '#17a2b8' ],
+				'light'     => [ '#f8f9fa' ],
+				'dark'      => [ '#151b26' ],
 			];
 
 			$mods = [
@@ -399,6 +414,12 @@ namespace conversions
 				if ( get_theme_mod( 'conversions_featured_img_parallax', false ) === true ) {
 					echo '.conversions-hero-cover {
 						background-attachment: fixed;
+					}';
+				}
+				// Sticky post highlight.
+				if ( $sticky_post_highlight !== 'no' ) {
+					echo '.blog:not(.paged) .card.c-sticky-highlight {
+						border-color: ' . esc_html( $bs_colors[$sticky_post_highlight][0] ) . ';
 					}';
 				}
 				// Woocommerce.

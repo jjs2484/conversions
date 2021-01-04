@@ -441,11 +441,10 @@ class Template {
 			return $classes;
 		}
 
-		$sticky_posts_highlight = get_theme_mod( 'conversions_blog_sticky_posts', 'primary' );
-		$body_classes           = get_body_class();
+		$body_classes = get_body_class();
 
-		if ( $sticky_posts_highlight !== 'no' && in_array( 'blog', $body_classes ) ) {
-			$classes[] = 'border-' . esc_attr( $sticky_posts_highlight );
+		if ( in_array( 'blog', $body_classes, true ) ) {
+			$classes[] = 'c-sticky-highlight';
 		}
 
 		return $classes;

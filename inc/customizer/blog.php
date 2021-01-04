@@ -42,6 +42,8 @@ $wp_customize->add_control(
 				'danger'    => __( 'Danger', 'conversions' ),
 				'warning'   => __( 'Warning', 'conversions' ),
 				'info'      => __( 'Info', 'conversions' ),
+				'light'     => __( 'Light', 'conversions' ),
+				'dark'      => __( 'Dark', 'conversions' ),
 			],
 			'priority'    => '1',
 		]
