@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '3569c8c6c0995caaceaf16c45739e96107fdcbd6',
+    'reference' => '09189c4330c7764c5be9cc7d46e347840682e1f9',
     'name' => '__root__',
   ),
   'versions' => 
@@ -31,7 +31,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '3569c8c6c0995caaceaf16c45739e96107fdcbd6',
+      'reference' => '09189c4330c7764c5be9cc7d46e347840682e1f9',
     ),
     'dealerdirect/phpcodesniffer-composer-installer' => 
     array (
