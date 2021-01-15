@@ -21,6 +21,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 == Changelog ==
 
 = 1.7.6 =
+* New: Responsive font sizes.
 * Update: Reorder typography customizer panel.
 * Update: Font Awesome to v5.15.2
 
