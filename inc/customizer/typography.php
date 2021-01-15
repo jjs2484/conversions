@@ -9,7 +9,7 @@ $wp_customize->add_section(
 	'conversions_typography',
 	[
 		'title'       => __( 'Typography', 'conversions' ),
-		'priority'    => 43,
+		'priority'    => 39,
 		'description' => __( 'Select your typography settings', 'conversions' ),
 		'capability'  => 'edit_theme_options',
 	]
