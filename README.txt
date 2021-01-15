@@ -22,6 +22,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.7.6 =
 * Update: Reorder typography customizer panel.
+* Update: Font Awesome to v5.15.2
 
 = 1.7.5 =
 * Update: Add more Bootstrap color options to stick post highlight in customizer.
@@ -281,7 +282,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 == Resources ==
 
 * Bootstrap 4.5.3 | MIT License
-* Font Awesome v5.15.1 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
+* Font Awesome v5.15.2 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
 * Webfonts Loader | MIT License
