@@ -20,6 +20,9 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
+= 1.7.6 =
+* Update: Reorder typography customizer panel.
+
 = 1.7.5 =
 * Update: Add more Bootstrap color options to stick post highlight in customizer.
 * Update: Use .c-sticky-highlight to style stick posts rather than Bootstrap border classes ex. border-primary.
