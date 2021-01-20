@@ -7093,6 +7093,9 @@ jQuery(function() {
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(resizeFunction, 150);
 	});
+
+	// Onload, run the function.
+	jQuery( document ).ready( resizeFunction );
 });
 
 /**
