@@ -25,6 +25,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Reorder typography customizer panel.
 * Update: Font Awesome to v5.15.2
 * Update: Run fixed header margin calc onload in addition to on resize.
+* Update: Move pricing table auto_col_calc function to extensions plugin.
 
 = 1.7.5 =
 * Update: Add more Bootstrap color options to stick post highlight in customizer.
