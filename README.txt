@@ -22,10 +22,12 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.7.6 =
 * New: Responsive font sizes.
+* Update: Bootstrap to v4.6.0
 * Update: Reorder typography customizer panel.
 * Update: Font Awesome to v5.15.2
 * Update: Run fixed header margin calc onload in addition to on resize.
 * Update: Move pricing table auto_col_calc function to extensions plugin.
+* Update: NPM dependencies.
 
 = 1.7.5 =
 * Update: Add more Bootstrap color options to stick post highlight in customizer.
@@ -284,7 +286,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Resources ==
 
-* Bootstrap 4.5.3 | MIT License
+* Bootstrap 4.6.0 | MIT License
 * Font Awesome v5.15.2 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
