@@ -306,7 +306,7 @@ namespace conversions
 			$wc_btns = [
 				'btn-primary'           => [ 'btn_bg' => '#007bff', 'btn_color' => '#fff', 'btn_border' => '#007bff', 'btn_bg_hover' => '#0069d9', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#0069d9' ],
 				'btn-secondary'         => [ 'btn_bg' => '#6c757d', 'btn_color' => '#fff', 'btn_border' => '#6c757d', 'btn_bg_hover' => '#5a6268', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#5a6268' ],
-				'btn-success'           => [ 'btn_bg' => '#019875', 'btn_color' => '#fff', 'btn_border' => '#019875', 'btn_bg_hover' => '#017258', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#017258' ],
+				'btn-success'           => [ 'btn_bg' => '#198754', 'btn_color' => '#fff', 'btn_border' => '#198754', 'btn_bg_hover' => '#017258', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#017258' ],
 				'btn-danger'            => [ 'btn_bg' => '#dc3545', 'btn_color' => '#fff', 'btn_border' => '#dc3545', 'btn_bg_hover' => '#c82333', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#c82333' ],
 				'btn-warning'           => [ 'btn_bg' => '#ffc107', 'btn_color' => '#212529', 'btn_border' => '#ffc107', 'btn_bg_hover' => '#e0a800', 'btn_color_hover' => '#212529', 'btn_border_hover' => '#e0a800' ],
 				'btn-info'              => [ 'btn_bg' => '#17a2b8', 'btn_color' => '#fff', 'btn_border' => '#17a2b8', 'btn_bg_hover' => '#138496', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#138496' ],
@@ -314,7 +314,7 @@ namespace conversions
 				'btn-dark'              => [ 'btn_bg' => '#151b26', 'btn_color' => '#fff', 'btn_border' => '#151b26', 'btn_bg_hover' => '#07090d', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#07090d' ],
 				'btn-outline-primary'   => [ 'btn_bg' => 'transparent', 'btn_color' => '#007bff', 'btn_border' => '#007bff', 'btn_bg_hover' => '#007bff', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#007bff' ],
 				'btn-outline-secondary' => [ 'btn_bg' => 'transparent', 'btn_color' => '#6c757d', 'btn_border' => '#6c757d', 'btn_bg_hover' => '#6c757d', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#6c757d' ],
-				'btn-outline-success'   => [ 'btn_bg' => 'transparent', 'btn_color' => '#019875', 'btn_border' => '#019875', 'btn_bg_hover' => '#019875', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#019875' ],
+				'btn-outline-success'   => [ 'btn_bg' => 'transparent', 'btn_color' => '#198754', 'btn_border' => '#198754', 'btn_bg_hover' => '#198754', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#198754' ],
 				'btn-outline-danger'    => [ 'btn_bg' => 'transparent', 'btn_color' => '#dc3545', 'btn_border' => '#dc3545', 'btn_bg_hover' => '#dc3545', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#dc3545' ],
 				'btn-outline-warning'   => [ 'btn_bg' => 'transparent', 'btn_color' => '#ffc107', 'btn_border' => '#ffc107', 'btn_bg_hover' => '#ffc107', 'btn_color_hover' => '#212529', 'btn_border_hover' => '#ffc107' ],
 				'btn-outline-info'      => [ 'btn_bg' => 'transparent', 'btn_color' => '#17a2b8', 'btn_border' => '#17a2b8', 'btn_bg_hover' => '#17a2b8', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#17a2b8' ],
@@ -326,7 +326,7 @@ namespace conversions
 			$bs_colors = [
 				'primary'   => [ '#007bff' ],
 				'secondary' => [ '#6c757d' ],
-				'success'   => [ '#019875' ],
+				'success'   => [ '#198754' ],
 				'danger'    => [ '#dc3545' ],
 				'warning'   => [ '#ffc107' ],
 				'info'      => [ '#17a2b8' ],

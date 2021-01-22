@@ -27,6 +27,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Font Awesome to v5.15.2
 * Update: Run fixed header margin calc onload in addition to on resize.
 * Update: Move pricing table auto_col_calc function to extensions plugin.
+* Update: Bootstap success color to v5 #198754.
 * Update: NPM dependencies.
 
 = 1.7.5 =
