@@ -22,12 +22,14 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.7.6 =
 * New: Responsive font sizes.
+* New: Image background for call to action section.
 * Update: Bootstrap to v4.6.0
-* Update: Reorder typography customizer panel.
+* Update: Bootstrap success color to v5 #198754.
 * Update: Font Awesome to v5.15.2
+* Update: Reorder typography customizer panel.
 * Update: Run fixed header margin calc onload in addition to on resize.
 * Update: Move pricing table auto_col_calc function to extensions plugin.
-* Update: Bootstap success color to v5 #198754.
+* Update: Remove some small image sizes from fullscreen featured image output.
 * Update: NPM dependencies.
 
 = 1.7.5 =

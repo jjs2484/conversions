@@ -23,6 +23,14 @@ defined( 'ABSPATH' ) || exit;
 		case 'custom':
 			echo '<section class="c-cta" style="background-color: ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_color', '#6c757d' ) ) . '">';
 			break;
+		case 'image':
+			// Get image ID.
+			$conversions_cta_bg_img = get_theme_mod( 'conversions_hcta_bg_img' );
+			if ( ! empty( $conversions_cta_bg_img ) ) {
+				echo conversions()->template->fullscreen_cta_image(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
+			}
+			echo '<section class="c-cta">';
+			break;
 		default:
 			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_gradient', 'crystal-clear' ) ) . '">';
 	}

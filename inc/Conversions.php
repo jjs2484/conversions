@@ -152,7 +152,7 @@ namespace conversions
 					[
 						'name'  => __( 'Success', 'conversions' ),
 						'slug'  => 'success',
-						'color' => '#019875',
+						'color' => '#198754',
 					],
 					[
 						'name'  => __( 'Danger', 'conversions' ),
@@ -220,6 +220,8 @@ namespace conversions
 				'conversions_hcta_bg_gradient'     => 'crystal-clear',
 				'conversions_hcta_bg_bootstrap'    => 'bg-secondary',
 				'conversions_hcta_bg_color'        => '#6c757d',
+				'conversions_hcta_img_color'       => '#000000',
+				'conversions_hcta_img_overlay'     => '.5',
 				'conversions_hcta_title_color'     => '#ffffff',
 				'conversions_hcta_desc_color'      => '#ffffff',
 				'conversions_hcta_btn'             => 'no',

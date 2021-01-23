@@ -389,8 +389,6 @@ class Template {
 		global $post;
 
 		// Get featured image sizes.
-		$medium                 = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium', false );
-		$medium_large           = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium_large', false );
 		$large                  = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
 		$conversions_fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'conversions-fullscreen', false );
 
@@ -420,10 +418,65 @@ class Template {
 
 		// Inline styles for background image.
 		echo '<style>
-			' . esc_html( $css_selector ) . ' {background-image: url(' . esc_url( $medium[0] ) . ');}
-			@media (min-width: 300px) { ' . esc_html( $css_selector ) . ' { background-image: linear-gradient(rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . '), rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . ') ), url(' . esc_url( $medium_large[0] ) . ');} }
-			@media (min-width: 768px) { ' . esc_html( $css_selector ) . ' { background-image: linear-gradient(rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . '), rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . ') ), url(' . esc_url( $large[0] ) . ');} }
+			' . esc_html( $css_selector ) . ' { background-image: linear-gradient(rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . '), rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . ') ), url(' . esc_url( $large[0] ) . ');}
 			@media (min-width: 1024px) { ' . esc_html( $css_selector ) . ' { background-image: linear-gradient(rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . '), rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . ')), url(' . esc_url( $conversions_fullscreen[0] ) . ');} }
+		</style>';
+
+	}
+
+	/**
+	 * Fullscreen cta image output.
+	 *
+	 * @since 2021-01-22
+	 */
+	public function fullscreen_cta_image() {
+
+		$cta_bg_img        = get_theme_mod( 'conversions_hcta_bg_img' );
+		$cta_overlay_color = get_theme_mod( 'conversions_hcta_img_color', '#000000' );
+		$cta_img_overlay   = get_theme_mod( 'conversions_hcta_img_overlay', '.5' );
+
+		// Get featured image sizes.
+		$large      = wp_get_attachment_image_src( $cta_bg_img, 'large', false );
+		$fullscreen = wp_get_attachment_image_src( $cta_bg_img, 'conversions-fullscreen', false );
+
+		// convert color from hex to rgb.
+		$hex = str_replace( '#', '', $cta_overlay_color );
+		if ( strlen( $hex ) == 3 ) :
+			$rgb_array['r'] = hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) );
+			$rgb_array['g'] = hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) );
+			$rgb_array['b'] = hexdec( substr( $hex, 2, 1 ) . substr( $hex, 2, 1 ) );
+		else :
+			$rgb_array['r'] = hexdec( substr( $hex, 0, 2 ) );
+			$rgb_array['g'] = hexdec( substr( $hex, 2, 2 ) );
+			$rgb_array['b'] = hexdec( substr( $hex, 4, 2 ) );
+		endif;
+
+		$rgb_string  = implode( ',', $rgb_array );
+		$rgba_string = $rgb_string . ',' . $cta_img_overlay;
+
+		// Inline styles for background image.
+		echo '<style>
+			section.c-cta {
+				background-image:
+					linear-gradient(
+						rgba(' . esc_attr( $rgba_string ) . '),
+						rgba(' . esc_attr( $rgba_string ) . ')
+					),
+				url(' . esc_url( $large[0] ) . ');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			@media (min-width: 1024px) {
+				section.c-cta {
+					background-image:
+						linear-gradient(
+							rgba(' . esc_attr( $rgba_string ) . '),
+							rgba(' . esc_attr( $rgba_string ) . ')
+						),
+					url(' . esc_url( $fullscreen[0] ) . ');
+				}
+			}
 		</style>';
 
 	}

@@ -53,7 +53,7 @@ $wp_customize->add_control(
 		'conversions_hcta_bg_choice',
 		[
 			'label'       => __( 'Background type', 'conversions' ),
-			'description' => __( 'Select gradient, bootstrap colors, or custom.', 'conversions' ),
+			'description' => __( 'Select gradient, bootstrap colors, custom color, background image.', 'conversions' ),
 			'section'     => 'conversions_cta',
 			'settings'    => 'conversions_hcta_bg_choice',
 			'type'        => 'select',
@@ -61,6 +61,7 @@ $wp_customize->add_control(
 				'bootstrap' => __( 'Bootstrap colors', 'conversions' ),
 				'custom'    => __( 'Custom colors', 'conversions' ),
 				'gradient'  => __( 'Gradient colors', 'conversions' ),
+				'image'     => __( 'Image Background', 'conversions' ),
 			],
 			'priority'    => '2',
 		]
@@ -145,6 +146,86 @@ $wp_customize->add_control(
 		'priority'    => 10,
 		'type'        => 'color',
 	]
+);
+$wp_customize->add_setting(
+	'conversions_hcta_bg_img',
+	[
+		'default'           => '',
+		'type'              => 'theme_mod',
+		'transport'         => 'refresh',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	]
+);
+$wp_customize->add_control(
+	new WP_Customize_Media_Control(
+		$wp_customize,
+		'conversions_hcta_bg_img',
+		[
+			'label'     => __( 'Upload image', 'conversions' ),
+			'section'   => 'conversions_cta',
+			'settings'  => 'conversions_hcta_bg_img',
+			'priority'  => 11,
+			'mime_type' => 'image',
+		]
+	)
+);
+$wp_customize->add_setting(
+	'conversions_hcta_img_color',
+	[
+		'default'           => '#000000',
+		'type'              => 'theme_mod',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
+	]
+);
+$wp_customize->add_control(
+	'conversions_hcta_img_color_control',
+	[
+		'label'       => __( 'Image overlay color', 'conversions' ),
+		'description' => __( 'Select a color for the image overlay.', 'conversions' ),
+		'section'     => 'conversions_cta',
+		'settings'    => 'conversions_hcta_img_color',
+		'priority'    => 12,
+		'type'        => 'color',
+	]
+);
+$wp_customize->add_setting(
+	'conversions_hcta_img_overlay',
+	[
+		'default'           => '.5',
+		'type'              => 'theme_mod',
+		'sanitize_callback' => 'conversions_sanitize_select',
+		'capability'        => 'edit_theme_options',
+		'transport'         => 'refresh',
+	]
+);
+$wp_customize->add_control(
+	new \WP_Customize_Control(
+		$wp_customize,
+		'conversions_hcta_img_overlay',
+		[
+			'label'       => __( 'Image overlay opacity', 'conversions' ),
+			'description' => __( 'Lighten or darken the image overlay. Set the contrast high enough so the text is readable.', 'conversions' ),
+			'section'     => 'conversions_cta',
+			'settings'    => 'conversions_hcta_img_overlay',
+			'type'        => 'select',
+			'choices'     => [
+				'0'  => __( '0%', 'conversions' ),
+				'.1' => __( '10%', 'conversions' ),
+				'.2' => __( '20%', 'conversions' ),
+				'.3' => __( '30%', 'conversions' ),
+				'.4' => __( '40%', 'conversions' ),
+				'.5' => __( '50%', 'conversions' ),
+				'.6' => __( '60%', 'conversions' ),
+				'.7' => __( '70%', 'conversions' ),
+				'.8' => __( '80%', 'conversions' ),
+				'.9' => __( '90%', 'conversions' ),
+				'1'  => __( '100%', 'conversions' ),
+			],
+			'priority'    => '15',
+		]
+	)
 );
 $wp_customize->add_setting(
 	'conversions_hcta_title',
