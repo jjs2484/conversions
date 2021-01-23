@@ -389,8 +389,8 @@ class Template {
 		global $post;
 
 		// Get featured image sizes.
-		$large                  = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
-		$conversions_fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'conversions-fullscreen', false );
+		$large      = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
+		$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'conversions-fullscreen', false );
 
 		if ( is_page_template( 'page-templates/homepage.php' ) ) : // homepage template.
 			// Get the customizer setting.
@@ -416,12 +416,26 @@ class Template {
 			$rgb_array['b'] = hexdec( substr( $hex, 4, 2 ) );
 		endif;
 
+		$rgb_string  = implode( ',', $rgb_array );
+		$rgba_string = $rgb_string . ',' . $img_overlay;
+
 		// Inline styles for background image.
 		echo '<style>
-			' . esc_html( $css_selector ) . ' { background-image: linear-gradient(rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . '), rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . ') ), url(' . esc_url( $large[0] ) . ');}
-			@media (min-width: 1024px) { ' . esc_html( $css_selector ) . ' { background-image: linear-gradient(rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . '), rgba(' . esc_attr( $rgb_array['r'] ) . ', ' . esc_attr( $rgb_array['g'] ) . ', ' . esc_attr( $rgb_array['b'] ) . ', ' . esc_attr( $img_overlay ) . ')), url(' . esc_url( $conversions_fullscreen[0] ) . ');} }
+			' . esc_html( $css_selector ) . ' {
+				background-image: linear-gradient(
+					rgba(' . esc_attr( $rgba_string ) . '),
+					rgba(' . esc_attr( $rgba_string ) . ')
+				), url(' . esc_url( $large[0] ) . ');
+			}
+			@media (min-width: 1024px) {
+				' . esc_html( $css_selector ) . ' {
+					background-image: linear-gradient(
+						rgba(' . esc_attr( $rgba_string ) . '),
+						rgba(' . esc_attr( $rgba_string ) . ')
+					), url(' . esc_url( $fullscreen[0] ) . ');
+				}
+			}
 		</style>';
-
 	}
 
 	/**
