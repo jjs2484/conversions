@@ -287,7 +287,7 @@ class Enqueue {
 		wp_enqueue_script(
 			'conversions-scripts',
 			get_theme_file_uri( '/build/theme.min.js' ),
-			array(),
+			[ 'jquery' ],
 			$theme_version,
 			true
 		);
@@ -326,7 +326,7 @@ class Enqueue {
 		wp_enqueue_script(
 			'conversions-customizer-js',
 			get_theme_file_uri( '/build/conversions-customizer.min.js' ),
-			array(),
+			[ 'jquery' ],
 			$theme_version,
 			true
 		);
