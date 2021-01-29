@@ -25,7 +25,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * New: Responsive font sizes.
 * New: Image background for call to action section.
 * Update: Bootstrap to v4.6.0
-* Update: Bootstrap success color to v5 #198754.
+* Update: Bootstrap success color to #198754.
 * Update: Font Awesome to v5.15.2
 * Update: Reorder typography customizer panel.
 * Update: Run fixed header margin calc onload in addition to on resize.
