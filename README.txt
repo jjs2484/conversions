@@ -21,6 +21,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 == Changelog ==
 
 = 1.7.6 =
+* New: Floating action buttons (FABs)
 * New: Responsive font sizes.
 * New: Image background for call to action section.
 * Update: Bootstrap to v4.6.0
@@ -31,6 +32,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Move pricing table auto_col_calc function to extensions plugin.
 * Update: Remove some small image sizes from fullscreen featured image output.
 * Update: Add jquery dep to all wp_enqueue_script calls.
+* Update: Switch fixed header anchor link offset to use scroll-padding-top.
 * Update: NPM dependencies.
 
 = 1.7.5 =
