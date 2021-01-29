@@ -210,8 +210,8 @@ class Fab {
 		}
 
 		// Check for filter before output.
-		if ( has_filter( 'conversions_fab_button_icon' ) ) {
-			$fab_button_icon = apply_filters( 'conversions_fab_button_icon', $fab_button_icon );
+		if ( has_filter( 'conversions_fab_fullwidth_icon' ) ) {
+			$fab_button_icon = apply_filters( 'conversions_fab_fullwidth_icon', $fab_button_icon );
 		}
 
 		return $fab_button_icon;
