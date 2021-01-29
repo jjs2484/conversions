@@ -34,6 +34,12 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Add jquery dep to all wp_enqueue_script calls.
 * Update: Switch fixed header anchor link offset to use scroll-padding-top.
 * Update: NPM dependencies.
+* New: Filter hooks:
+- conversions_fab
+- conversions_fab_cart
+- conversions_fab_fullwidth
+- conversions_fab_fullwidth_icon
+- conversions_fab_color
 
 = 1.7.5 =
 * Update: Add more Bootstrap color options to stick post highlight in customizer.
