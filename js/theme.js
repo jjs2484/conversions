@@ -16,9 +16,12 @@ jQuery(function() {
 			// get height of header.
 			var fixedHeight = jQuery('#wrapper-navbar.fixed-top').innerHeight();
 			var adjustedFixedHeight = fixedHeight - 2;
+			var anchorLinkOffset = fixedHeight + 50;
 	
 			// apply height to page as margin-top.
 			jQuery('.content-wrapper').css({'margin-top' : adjustedFixedHeight + 'px'});
+			// add anchor link offset.
+			jQuery('html').css({'scroll-padding-top' : anchorLinkOffset + 'px'});
 		}
 	}
 
@@ -32,53 +35,6 @@ jQuery(function() {
 
 	// Onload, run the function.
 	jQuery( document ).ready( resizeFunction );
-});
-
-/**
- * Anchor link offset for fixed navbar
-*/
-jQuery(function() {
-	
-	function scrollToAnchor(hash) {
-		// Get the navbar classes.
-		var navbarClasses = document.getElementById('wrapper-navbar').classList;
-
-		// Are we using a fixed header? If not return.
-		if (navbarClasses.contains('header-p-n')) {
-			return;
-		}
-		else if (navbarClasses.contains('fixed-top')) {
-		
-			var target = jQuery(hash);
-			
-			// Get height of the navbar and adminbar.
-			var navbarHeight = jQuery('#wrapper-navbar').innerHeight();
-			var adminBarHeight = jQuery('#wpadminbar').innerHeight();
-		
-			// Total height calculation.
-			var offsetHeight = navbarHeight + adminBarHeight + 50;
-
-			target = target.length ? target : jQuery('[name=' + hash.slice(1) +']');
-
-			if (target.length) {
-				jQuery('html,body').animate({
-					scrollTop: target.offset().top - offsetHeight
-				}, 100);
-				location.hash = target.selector;
-				event.preventDefault();
-				event.stopPropagation();
-			}
-		}
-	}
-
-	if(window.location.hash) {
-		scrollToAnchor(window.location.hash);
-	}
-	jQuery('a[href*=\\#]:not([href=\\#],[data-toggle],[href="#homepage-wrapper"],[href="#content"])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
-			scrollToAnchor(this.hash);
-		}
-	});
 });
 
 /**
@@ -163,3 +119,20 @@ jQuery( document ).ready( function( $ ) {
 		}
 	} );
 } );
+
+function cScrollToCart() { 
+	
+	// Check for WooCommerce add to cart button
+	var elem = document.getElementById('woocommerce-wrapper').getElementsByClassName('entry-summary');
+	
+	if(elem[0] == null)
+	{
+		// Check for EDD cart button.
+		var elem = document.getElementById('sidebar-1').getElementsByClassName('edd-price');
+	}
+	
+	if(elem[0] != null)
+	{
+		elem[0].scrollIntoView();
+	}
+} 

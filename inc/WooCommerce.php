@@ -131,7 +131,7 @@ class WooCommerce {
 	 * @param array $fragments Fragments to refresh via AJAX.
 	 */
 	public function woocommerce_add_to_cart_fragments( $fragments ) {
-		$fragments['a.cart-customlocation.nav-link'] = static::get_cart_nav_html();
+		$fragments['a.cart-customlocation'] = static::get_cart_nav_html();
 		return $fragments;
 	}
 

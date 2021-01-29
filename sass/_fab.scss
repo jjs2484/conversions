@@ -1,0 +1,43 @@
+// FAB styles
+.c-fab {
+	position: fixed;
+	z-index: 9999;
+	display: block;
+
+	@media (min-width: 992px) {
+		display: none;
+	}
+
+	&.c-fab__btn-wrapper {
+		bottom: 0;
+		width: 100%;
+
+		.c-fab__btn {
+			border-radius: 0;
+		}
+	}
+
+	&.c-fab__cart-wrapper {
+		bottom: 1.25rem;
+		right: 1.25rem;
+	}
+
+	&.c-fab__cart-add {
+		bottom: 5rem;
+		right: 1.25rem;
+	}
+
+	&.c-fab__cart-wrapper,
+	&.c-fab__cart-add {
+		.c-fab__btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			width: 3.125rem;
+			height: 3.125rem;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		}
+	}
+}
+

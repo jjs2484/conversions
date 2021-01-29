@@ -372,8 +372,13 @@ namespace conversions
 				// Fixed navbar height.
 				if ( get_theme_mod( 'conversions_nav_position', 'fixed-top' ) === 'fixed-top' ) {
 					if ( get_theme_mod( 'conversions_nav_layout', 'right' ) === 'right' ) {
+						// Content margin.
 						echo '.content-wrapper {
 							margin-top: ' . esc_html( $fixed_navbar_height[0] ) . 'rem;
+						}';
+						// Anchor link padding.
+						echo 'html {
+							scroll-padding-top: ' . esc_html( $fixed_navbar_height[0] ) . 'rem;
 						}';
 					}
 				}

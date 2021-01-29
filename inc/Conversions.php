@@ -48,6 +48,7 @@ namespace conversions
 			new Easy_Digital_Downloads();
 			new bbPress();
 			new Admin();
+			new Fab();
 
 			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			require_once get_parent_theme_file_path( '/inc/class-tgm-plugin-activation.php' );

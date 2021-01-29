@@ -13516,6 +13516,33 @@ section.c-cta .c-cta__items {
     #wrapper-footer .copyright {
       justify-content: flex-start; } }
 
+.c-fab {
+  position: fixed;
+  z-index: 9999;
+  display: block; }
+  @media (min-width: 992px) {
+    .c-fab {
+      display: none; } }
+  .c-fab.c-fab__btn-wrapper {
+    bottom: 0;
+    width: 100%; }
+    .c-fab.c-fab__btn-wrapper .c-fab__btn {
+      border-radius: 0; }
+  .c-fab.c-fab__cart-wrapper {
+    bottom: 1.25rem;
+    left: 1.25rem; }
+  .c-fab.c-fab__cart-add {
+    bottom: 5rem;
+    left: 1.25rem; }
+  .c-fab.c-fab__cart-wrapper .c-fab__btn, .c-fab.c-fab__cart-add .c-fab__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
 .grade-grey {
   background: #bdc3c7;
   background: linear-gradient(to left, #2c3e50, #bdc3c7); }
