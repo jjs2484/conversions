@@ -7201,15 +7201,15 @@ jQuery( document ).ready( function( $ ) {
 function cScrollToCart() { 
 	
 	// Check for WooCommerce add to cart button
-	var elem = document.getElementById('woocommerce-wrapper').getElementsByClassName('entry-summary');
+	var elem = jQuery('.summary.entry-summary');
 	
-	if(elem[0] == null)
+	if( !elem.length )
 	{
 		// Check for EDD cart button.
-		var elem = document.getElementById('sidebar-1').getElementsByClassName('edd-price');
+		var elem = jQuery('.edd_download_purchase_form');
 	}
-	
-	if(elem[0] != null)
+
+	if( elem.length )
 	{
 		elem[0].scrollIntoView();
 	}
