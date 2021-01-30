@@ -72,7 +72,7 @@ class Fab {
 		}
 
 		// Check if we are on single product page.
-		if ( is_product() || is_singular( 'Download' ) ) {
+		if ( is_singular( 'product' ) || is_singular( 'Download' ) ) {
 
 			// Add to cart FAB.
 			$fab_cart = sprintf(
