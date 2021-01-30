@@ -13520,7 +13520,7 @@ section.c-cta .c-cta__items {
   position: fixed;
   z-index: 9999;
   display: block; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .c-fab {
       display: none; } }
   .c-fab.c-fab__btn-wrapper {
