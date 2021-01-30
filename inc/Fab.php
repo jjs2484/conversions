@@ -84,7 +84,7 @@ class Fab {
 			$fab_cart = '<div class="c-fab c-fab__cart-add">' . $fab_cart . '</div>';
 
 			// Cart FAD.
-			$fab_button .= sprintf(
+			$fab_button = sprintf(
 				'<a title="%1$s" class="c-fab__btn btn %2$s" href="%3$s"><i aria-hidden="true" class="fas fa-shopping-cart"></i></a>',
 				__( 'View your shopping cart', 'conversions' ),
 				esc_attr( 'btn-light' ),
