@@ -15,11 +15,11 @@ if ( get_theme_mod( 'conversions_hcta_state', false ) === true ) {
 
 <?php do_action( 'conversions_before_footer' ); ?>
 
-<footer class="site-footer" id="colophon">
+<footer id="colophon" class="site-footer">
 
 	<?php get_template_part( 'partials/sidebar', 'footer' ); ?>
 
-	<div class="wrapper" id="wrapper-footer">
+	<div id="wrapper-footer" class="wrapper">
 
 		<div class="container-fluid">
 
