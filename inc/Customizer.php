@@ -382,6 +382,16 @@ namespace conversions
 						}';
 					}
 				}
+				// Footer padding if fullwidth FAB active.
+				if ( ! class_exists( 'woocommerce' ) && ! class_exists( 'Easy_Digital_Downloads' ) ) {
+					if ( get_theme_mod( 'conversions_nav_button', 'no' ) !== 'no' ) {
+						echo '@media (max-width: 767.98px) {
+							#wrapper-footer.wrapper {
+								padding-bottom: 5rem;
+							}
+						}';
+					}
+				}
 				// Content article card.
 				if ( get_theme_mod( 'conversions_content_cards', false ) === true ) {
 					echo 'body.page #primary #main > article,

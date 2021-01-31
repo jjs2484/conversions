@@ -13497,7 +13497,7 @@ section.c-cta .c-cta__items {
       padding-top: 4rem; } }
 
 #wrapper-footer.wrapper {
-  padding-bottom: 30px; }
+  padding-bottom: 1.875rem; }
 
 #wrapper-footer-full .footer-widget {
   display: block;
@@ -13542,6 +13542,8 @@ section.c-cta .c-cta__items {
     width: 3.125rem;
     height: 3.125rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+    .c-fab.c-fab__cart-wrapper .c-fab__btn i, .c-fab.c-fab__cart-add .c-fab__btn i {
+      font-size: 1.125rem; }
 
 .grade-grey {
   background: #bdc3c7;
