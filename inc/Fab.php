@@ -109,7 +109,7 @@ class Fab {
 
 		// Check for filter before output.
 		if ( has_filter( 'conversions_fab_cart' ) ) {
-			$color = apply_filters( 'conversions_fab_cart', $color );
+			$fab_button = apply_filters( 'conversions_fab_cart', $fab_button );
 		}
 
 		return $fab_button;
@@ -157,7 +157,7 @@ class Fab {
 
 		// Check for filter before output.
 		if ( has_filter( 'conversions_fab_fullwidth' ) ) {
-			$color = apply_filters( 'conversions_fab_fullwidth', $color );
+			$fab_button = apply_filters( 'conversions_fab_fullwidth', $fab_button );
 		}
 
 		return $fab_button;
