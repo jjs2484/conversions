@@ -549,6 +549,39 @@ class Template {
 	}
 
 	/**
+	 * Automatically calculate pricing table columns.
+	 *
+	 * Deprecated as of v1.7.6.
+	 * Was used in extensions plugin.
+	 * Remove in the future.
+	 *
+	 * @since 2019-11-15
+	 *
+	 * @param string $cpt_total_count Number of items the loop contains.
+	 */
+	public function auto_col_calc( $cpt_total_count ) {
+		if ( 1 == $cpt_total_count ) {
+			return 5;
+		} elseif ( is_int( $cpt_total_count / 3 ) ) {
+			return 4;
+		} elseif ( is_int( $cpt_total_count / 2 ) ) {
+			return 5;
+		} else {
+			// prime numbers test divided by three.
+			$get_float = $cpt_total_count / 3;
+			$integer   = floor( $get_float );
+			$float     = $get_float - $integer;
+
+			// Does it fill up atleast a half column?
+			if ( $float >= 0.5 ) {
+				return 4;
+			} else { // if not than revert to 2 items per column.
+				return 5;
+			}
+		}
+	}
+
+	/**
 	 * Footer credits.
 	 *
 	 * @since 2019-12-17
