@@ -302,7 +302,6 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Font Awesome v5.15.2 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
-* Webfonts Loader | MIT License
 * TGM Plugin Activation | GPLv2 or later
 * Google Fonts
 
