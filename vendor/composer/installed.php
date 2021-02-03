@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'd76f0669ef89802a7239354c66325db42f795417',
+    'reference' => '4684ffdabc048b54a98c26864f8ee07ce66fe168',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'd76f0669ef89802a7239354c66325db42f795417',
+      'reference' => '4684ffdabc048b54a98c26864f8ee07ce66fe168',
     ),
     'dealerdirect/phpcodesniffer-composer-installer' => 
     array (
