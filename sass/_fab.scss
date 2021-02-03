@@ -4,7 +4,7 @@
 	z-index: 9999;
 	display: block;
 
-	@media (min-width: 768px) {
+	@include media-breakpoint-up(lg) {
 		display: none;
 	}
 

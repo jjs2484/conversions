@@ -11,9 +11,9 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<div class="wrapper content-wrapper" id="edd-single-wrapper">
+<div id="edd-single-wrapper" class="wrapper content-wrapper">
 
-	<div class="container-fluid" id="content">
+	<div id="content" class="container-fluid">
 
 		<div class="row">
 
@@ -30,7 +30,7 @@ get_header();
 
 			</div>
 
-			<div class="col-md-8 col-lg-9 pr-lg-5 content-area" id="primary">
+			<div class="col-lg-9 pr-lg-5 content-area" id="primary">
 
 				<main class="site-main" id="main">
 
@@ -54,7 +54,7 @@ get_header();
 			</div>
 
 			<!-- right sidebar -->
-			<div class="col-md-4 col-lg-3 widget-area pl-md-4 pl-lg-3" id="sidebar-1" role="complementary">
+			<div class="col-lg-3 widget-area pl-lg-3" id="sidebar-1" role="complementary">
 
 				<?php
 				// Price, purchase button, and download details.

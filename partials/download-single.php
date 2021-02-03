@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php if ( has_post_thumbnail( get_the_ID() ) ) : ?>
 		<div class="post-thumbnail">
-			<?php the_post_thumbnail( 'large' ); ?>
+			<?php the_post_thumbnail( 'full' ); ?>
 		</div>
 	<?php endif; ?>
 
