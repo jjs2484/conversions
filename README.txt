@@ -23,6 +23,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 = 1.7.7 =
 * Fix: conversions_fab_cart filter variable.
 * Fix: conversions_fab_fullwidth filter variable.
+* Update: NPM dependencies.
 
 = 1.7.6 =
 * New: Floating action buttons (FABs)
