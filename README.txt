@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 1.7.6
+Stable tag: 1.7.7
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,10 @@ Full documentation: https://conversionswp.com/docs/documentation/
 NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items with sub-menus are only used to toggle the sub-menu on or off.
 
 == Changelog ==
+
+= 1.7.7 =
+* Fix: conversions_fab_cart filter variable.
+* Fix: conversions_fab_fullwidth filter variable.
 
 = 1.7.6 =
 * New: Floating action buttons (FABs)
