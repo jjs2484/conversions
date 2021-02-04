@@ -13128,38 +13128,35 @@ img,
   width: auto; }
 #wrapper-navbar .navbar h1 {
   font-weight: 400; }
-#wrapper-navbar .navbar ul#main-menu {
+#wrapper-navbar .navbar #main-menu {
   padding-top: 0.5rem; }
   @media (min-width: 992px) {
-    #wrapper-navbar .navbar ul#main-menu {
-      padding-top: 0; } }
-#wrapper-navbar .navbar .cart-customlocation .fa-shopping-cart {
-  font-size: 1.05rem;
-  margin-left: 0.2rem; }
-#wrapper-navbar .navbar .account-icon .fa-user,
-#wrapper-navbar .navbar .search-icon .fa-search {
-  font-size: 1.05rem; }
-@media (min-width: 992px) {
-  #wrapper-navbar .navbar .navbar-nav {
-    display: inline-block; }
-    #wrapper-navbar .navbar .navbar-nav .menu-item {
-      display: inline-block; }
-      #wrapper-navbar .navbar .navbar-nav .menu-item .nav-link {
-        white-space: nowrap; }
-      #wrapper-navbar .navbar .navbar-nav .menu-item .dropdown-menu li.menu-item {
-        display: block; }
-    #wrapper-navbar .navbar .navbar-nav .nav-callout-button {
-      margin-right: 0.5rem; } }
+    #wrapper-navbar .navbar #main-menu {
+      padding-top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; } }
 #wrapper-navbar .navbar.navbar-right #main-menu {
   margin-right: auto; }
-
+#wrapper-navbar .navbar .c-nav__social {
+  display: flex;
+  padding-right: 0;
+  list-style: none; }
+  @media (max-width: 991.98px) {
+    #wrapper-navbar .navbar .c-nav__social .c-nav__social-icon {
+      margin-left: 1rem; } }
+#wrapper-navbar .navbar .nav-link i {
+  font-size: 1.05rem; }
+#wrapper-navbar .navbar .cart-customlocation .fa-shopping-cart {
+  margin-left: 0.2rem; }
+@media (min-width: 992px) {
+  #wrapper-navbar .navbar .nav-callout-button {
+    margin-right: 0.5rem; } }
 #wrapper-navbar.is-white-color:not(.drop-shadow-is-true) .navbar {
   border-bottom: 1px solid #dee2e6; }
-
 #wrapper-navbar.drop-shadow-is-true {
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33); }
-
-.fixed-top#wrapper-navbar {
+#wrapper-navbar.fixed-top {
   position: -ms-device-fixed; }
 
 #wrapper-navbar nav.navbar-dark a.nav-link,

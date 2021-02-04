@@ -24,8 +24,12 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Change sidebar breakpoint from 768px to 992px.
 * Update: Change FAB visibility to 991.98px down.
 * Update: EDD single product page use WP full size image.
+* Update: Let Navbar items wrap with flexbox rather than inline blocks.
+* Update: Display Navbar social icons horizontally on mobile menu.
+* Update: Refactor Navbar sass.
 * Fix: conversions_fab_cart filter variable.
 * Fix: conversions_fab_fullwidth filter variable.
+* Fix: Add extra items to base nav regardless of which Navbar layout is chosen.
 * Update: NPM dependencies.
 
 = 1.7.6 =

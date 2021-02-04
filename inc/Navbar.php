@@ -250,7 +250,7 @@ class Navbar {
 	 */
 	public function wp_nav_menu_items( $items, $args ) {
 
-		if ( $args->theme_location === 'primary' && get_theme_mod( 'conversions_nav_layout', 'right' ) === 'right' ) {
+		if ( $args->theme_location === 'primary' ) {
 
 			$woocommerce = self::conversions_navbar_woocommerce();
 			$edd         = self::conversions_navbar_edd();
@@ -277,8 +277,9 @@ class Navbar {
 			if ( class_exists( '\conversions\extensions\social\Social' ) && get_theme_mod( 'conversions_social_navbar', false ) === true ) {
 				$navbar_social_icons = \conversions\extensions\social\social_icons::social_icons_content();
 				if ( ! empty( $navbar_social_icons ) ) {
-					$navbar_social_icons = str_replace( 'list-inline-item', 'c-social-icons--navbar menu-item nav-item', $navbar_social_icons );
+					$navbar_social_icons = str_replace( 'list-inline-item', 'c-nav__social-icon menu-item nav-item', $navbar_social_icons );
 					$navbar_social_icons = str_replace( '<a title=', '<a class="nav-link" title=', $navbar_social_icons );
+					$navbar_social_icons = '<ul class="c-nav__social">' . $navbar_social_icons . '</ul>';
 					$items              .= $navbar_social_icons;
 				}
 			}

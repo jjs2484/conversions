@@ -1,72 +1,72 @@
 // Navbar styles
-#wrapper-navbar .navbar {
-	.navbar-brand img {
-		height: 100%;
-		width: auto;
-	}
-
-	h1 {
-		font-weight: $font-weight-normal;
-	}
-
-	// mobile menu padding
-	ul#main-menu {
-		padding-top: 0.5rem;
-		@include media-breakpoint-up(lg) {
-			padding-top: 0;
+#wrapper-navbar {
+	.navbar {
+		.navbar-brand img {
+			height: 100%;
+			width: auto;
 		}
-	}
 
-	// Nav icons
-	// cart
-	.cart-customlocation .fa-shopping-cart {
-		font-size: 1.05rem;
-		margin-right: 0.2rem;
-	}
-	// account and search
-	.account-icon .fa-user,
-	.search-icon .fa-search {
-		font-size: 1.05rem;
-	}
+		h1 {
+			font-weight: $font-weight-normal;
+		}
 
-	// Large devices (desktops, 992px and up)
-	@include media-breakpoint-up(lg) {
-		.navbar-nav {
-			display: inline-block;
-			.menu-item {
-				display: inline-block;
-				.nav-link {
-					white-space: nowrap;
-				}
-				.dropdown-menu li.menu-item {
-					display: block;
+		// mobile menu padding
+		#main-menu {
+			padding-top: 0.5rem;
+			@include media-breakpoint-up(lg) {
+				padding-top: 0;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+		}
+
+		// Navbar right specific
+		&.navbar-right #main-menu {
+			margin-left: auto;
+		}
+
+		.c-nav__social {
+			display: flex;
+			padding-left: 0;
+			list-style: none;
+			.c-nav__social-icon {
+				@include media-breakpoint-down(md) {
+					margin-right: 1rem;
 				}
 			}
-			.nav-callout-button {
+		}
+
+		// Nav icons
+		.nav-link i {
+			font-size: 1.05rem;
+		}
+		.cart-customlocation .fa-shopping-cart {
+			margin-right: 0.2rem;
+		}
+
+		// Nav callout button.
+		.nav-callout-button {
+			@include media-breakpoint-up(lg) {
 				margin-left: 0.5rem;
 			}
 		}
 	}
-
-	// Navbar right specific
-	&.navbar-right #main-menu {
-		margin-left: auto;
+	
+	// If white navbar add bottom border
+	&.is-white-color:not(.drop-shadow-is-true) .navbar {
+		border-bottom: 1px solid #dee2e6;
 	}
-}
 
-// If white navbar add bottom border
-#wrapper-navbar.is-white-color:not(.drop-shadow-is-true) .navbar {
-	border-bottom: 1px solid #dee2e6;
-}
+	// Navbar drop shadow
+	&.drop-shadow-is-true {
+		box-shadow: 0 0 5px 2px rgba(0,0,0,.33);
+	}
 
-// Navbar drop shadow
-#wrapper-navbar.drop-shadow-is-true {
-	box-shadow: 0 0 5px 2px rgba(0,0,0,.33);
-}
-
-// IE edge prefix for fixed navbar -- prevents element jitter
-.fixed-top#wrapper-navbar {
-	position: -ms-device-fixed;
+	// IE edge prefix for fixed navbar -- prevents element jitter
+	&.fixed-top {
+		position: -ms-device-fixed;
+	}
 }
 
 // Navbar link colors
