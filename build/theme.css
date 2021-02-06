@@ -13545,7 +13545,8 @@ section.c-cta .c-cta__items {
     bottom: 0;
     width: 100%; }
     .c-fab.c-fab__btn-wrapper .c-fab__btn {
-      border-radius: 0; }
+      border-radius: 0;
+      box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.15), 0 -2px 2px rgba(0, 0, 0, 0.1), 0 -4px 4px rgba(0, 0, 0, 0.05); }
   .c-fab.c-fab__cart-wrapper {
     bottom: 1.25rem;
     right: 1.25rem; }

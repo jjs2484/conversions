@@ -24,6 +24,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * New: Navbar toggler animation.
 * Update: Change sidebar breakpoint from 768px to 992px.
 * Update: Change FAB visibility to 991.98px down.
+* Update: FAB fullwidth button box-shadow.
 * Update: EDD single product page use WP full size image.
 * Update: Let Navbar items wrap with flexbox rather than inline blocks.
 * Update: Display Navbar social icons horizontally on mobile menu.
