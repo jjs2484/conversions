@@ -1715,9 +1715,6 @@ textarea, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"],
   .form-control:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="range"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder, input[type="month"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, input[type="datetime"]:-ms-input-placeholder, input[type="datetime-local"]:-ms-input-placeholder, input[type="color"]:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"]:-ms-input-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form select:-ms-input-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input:-ms-input-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea:-ms-input-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select:-ms-input-placeholder, .nf-form-wrap .nf-form-content input:not([type="button"]):-ms-input-placeholder, .nf-form-wrap .nf-form-content textarea:-ms-input-placeholder, .nf-form-wrap .nf-form-content .list-select-wrap > div select:-ms-input-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control::-ms-input-placeholder, input[type="text"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, input[type="url"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder, input[type="search"]::-ms-input-placeholder, input[type="number"]::-ms-input-placeholder, input[type="tel"]::-ms-input-placeholder, input[type="range"]::-ms-input-placeholder, input[type="date"]::-ms-input-placeholder, input[type="month"]::-ms-input-placeholder, input[type="week"]::-ms-input-placeholder, input[type="time"]::-ms-input-placeholder, input[type="datetime"]::-ms-input-placeholder, input[type="datetime-local"]::-ms-input-placeholder, input[type="color"]::-ms-input-placeholder, select::-ms-input-placeholder, textarea::-ms-input-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type="text"]::-ms-input-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form select::-ms-input-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input::-ms-input-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea::-ms-input-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select::-ms-input-placeholder, .nf-form-wrap .nf-form-content input:not([type="button"])::-ms-input-placeholder, .nf-form-wrap .nf-form-content textarea::-ms-input-placeholder, .nf-form-wrap .nf-form-content .list-select-wrap > div select::-ms-input-placeholder {
-    color: #6c757d;
-    opacity: 1; }
   .form-control::placeholder, input[type="text"]::placeholder,
   input[type="email"]::placeholder,
   input[type="url"]::placeholder,
@@ -15104,12 +15101,10 @@ body.no-sidebar .nf-form-content {
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 0.75rem 0.25rem;
+  padding: 0.25rem 0.75rem;
   display: inline-block;
   cursor: pointer;
-  transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
-  transition-property: opacity, filter, -webkit-filter;
   transition-duration: 0.15s;
   transition-timing-function: linear;
   font: inherit;
@@ -15132,17 +15127,17 @@ body.no-sidebar .nf-form-content {
 
 .hamburger-box {
   width: 26px;
-  height: 19px;
+  height: 18px;
   display: inline-block;
   position: relative; }
 
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -1.5px; }
+  margin-top: -1px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 26px;
-    height: 3px;
+    height: 2px;
     background-color: #000;
     border-radius: 0;
     position: absolute;
@@ -15161,7 +15156,7 @@ body.no-sidebar .nf-form-content {
  * Spring
  */
 .hamburger--spring .hamburger-inner {
-  top: 1.5px;
+  top: 1px;
   transition: background-color 0s 0.13s linear; }
   .hamburger--spring .hamburger-inner::before {
     top: 8px;
