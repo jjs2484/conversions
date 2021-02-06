@@ -1,16 +1,72 @@
 // Navbar styles
 #wrapper-navbar {
 	.navbar {
+
+		// Logo image
 		.navbar-brand img {
 			height: 100%;
 			width: auto;
 		}
 
+		// Site title
 		h1 {
 			font-weight: $font-weight-normal;
 		}
 
-		// mobile menu padding
+		// Mobile toggler
+		&.navbar-light .navbar-toggler {
+			.icon-bar {
+				background-color: #000000;
+			}
+		}
+		&.navbar-dark .navbar-toggler {
+			.icon-bar {
+				background-color: #ffffff;
+			}
+		}
+		.navbar-toggler {
+			border: none;
+
+			.icon-bar {
+				display: block;
+				width: 22px;
+				height: 2px;
+				border-radius: 1px;
+				transition: all 0.15s;
+
+				&+ .icon-bar {
+					margin-top: 4px;
+				}
+				&:nth-of-type(1) {
+					transform: rotate(0);
+				}
+				&:nth-of-type(2) {
+					opacity: 1;
+					filter: alpha(opacity=100);
+				}
+				&:nth-of-type(3) {
+					transform: rotate(0);
+				}
+			}
+			&[aria-expanded="true"] {
+				.icon-bar {
+					&:nth-of-type(1) {
+						transform: rotate(45deg);
+						transform-origin: 10% 10%;
+					}
+					&:nth-of-type(2) {
+						opacity: 0;
+						filter: alpha(opacity=0);
+					}
+					&:nth-of-type(3) {
+						transform: rotate(-45deg);
+						transform-origin: 10% 90%;
+					}
+				}
+			}
+		}
+
+		// Mobile menu padding
 		#main-menu {
 			padding-top: 0.5rem;
 			@include media-breakpoint-up(lg) {

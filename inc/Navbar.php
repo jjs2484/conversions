@@ -120,7 +120,7 @@ class Navbar {
 
 		// mobile navbar toggler button.
 		$navbar_mobile_toggler = sprintf(
-			'<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="%s"><span class="navbar-toggler-icon"></span></button>',
+			'<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="%s"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>',
 			esc_attr__( 'Toggle navigation', 'conversions' )
 		);
 
