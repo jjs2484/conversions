@@ -316,6 +316,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
 * TGM Plugin Activation | GPLv2 or later
+* Hamburgers v1.1.3 | MIT License
 * Google Fonts
 
 	Comfortaa

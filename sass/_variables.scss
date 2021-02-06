@@ -18,3 +18,17 @@ $alert-margin-bottom: 1.5rem;
 
 // Font awesome
 $fa-font-path: "../fonts";
+
+// Hamburger
+$hamburger-padding-x: .25rem;
+$hamburger-padding-y: .75rem;
+$hamburger-layer-width: 26px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 5px;
+$hamburger-layer-border-radius: 0;
+$hamburger-hover-opacity: 1;
+// Remove or comment out the hamburger types you don’t want
+// or need, so they get excluded from the compiled CSS.
+$hamburger-types: (
+  spring
+);
