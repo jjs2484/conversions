@@ -138,15 +138,14 @@ class Fab {
 			$fab_button_url = '';
 		}
 
-		// Button color.
-		$fab_button_color = get_theme_mod( 'conversions_nav_button' );
-		$fab_button_color = str_replace( '-outline-', '-', $fab_button_color );
+		// Get fab color.
+		$color = $this->fab_color();
 
 		$fab_button = sprintf(
 			'<a title="%1$s" href="%2$s" class="c-fab__btn btn %3$s btn-lg btn-block">%4$s%1$s</a>',
 			esc_html( $fab_button_text ),
 			esc_url( $fab_button_url ),
-			esc_attr( $fab_button_color ),
+			esc_attr( $color ),
 			$fab_button_icon
 		);
 
@@ -169,13 +168,23 @@ class Fab {
 	 * @since 2021-01-26
 	 */
 	public function fab_color() {
-		// Get nav bg color.
-		$color = \conversions\Navbar::conversions_navbar_color();
-		$color = $color[1];
-		// Add btn selector.
-		$color = str_replace( 'bg-', 'btn-', $color );
-		// If white invert it.
-		$color = str_replace( 'btn-white', 'btn-dark', $color );
+
+		if ( class_exists( 'woocommerce' ) || class_exists( 'Easy_Digital_Downloads' ) ) {
+
+			// Get nav bg color.
+			$color = \conversions\Navbar::conversions_navbar_color();
+			$color = $color[1];
+			// Add btn selector.
+			$color = str_replace( 'bg-', 'btn-', $color );
+			// If white invert it.
+			$color = str_replace( 'btn-white', 'btn-dark', $color );
+
+		} else {
+
+			// Button color.
+			$color = get_theme_mod( 'conversions_nav_button' );
+			$color = str_replace( '-outline-', '-', $color );
+		}
 
 		// Check for filter before output.
 		if ( has_filter( 'conversions_fab_color' ) ) {
