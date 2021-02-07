@@ -221,7 +221,7 @@ class Navbar {
 				'theme_location'  => 'primary',
 				'container_class' => 'collapse navbar-collapse',
 				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav',
+				'menu_class'      => 'navbar-nav navbar-nav-scroll',
 				'menu_id'         => 'main-menu',
 				'items_wrap'      => '<ul id="%1$s" class="%2$s" role="menu">%3$s</ul>',
 				'depth'           => 2,

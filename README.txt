@@ -22,6 +22,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.7.7 =
 * New: Navbar toggler animation.
+* New: Vertical scrolling of the mobile Navbar when the contents are 75vh+.
 * Update: Change sidebar breakpoint from 768px to 992px.
 * Update: Change FAB visibility to 991.98px down.
 * Update: FAB fullwidth button box-shadow.
