@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 // Featured image styles.
 if ( has_post_thumbnail( get_the_ID() ) ) {
-	conversions()->template->get_featured_image();
+	conversions()->template->get_hero_image();
 }
 
 get_header();

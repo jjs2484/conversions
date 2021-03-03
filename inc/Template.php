@@ -371,6 +371,32 @@ class Template {
 	}
 
 	/**
+	 * Hex to rgb.
+	 *
+	 * @since 2021-02-09
+	 */
+	public function hex_to_rgba( $hex, $alpha ) {
+
+		// convert color from hex to rgb.
+		$hex = str_replace( '#', '', $hex );
+		if ( strlen( $hex ) == 3 ) :
+			$rgb_array['r'] = hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) );
+			$rgb_array['g'] = hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) );
+			$rgb_array['b'] = hexdec( substr( $hex, 2, 1 ) . substr( $hex, 2, 1 ) );
+		else :
+			$rgb_array['r'] = hexdec( substr( $hex, 0, 2 ) );
+			$rgb_array['g'] = hexdec( substr( $hex, 2, 2 ) );
+			$rgb_array['b'] = hexdec( substr( $hex, 4, 2 ) );
+		endif;
+
+		// Convert to a string.
+		$rgb  = implode( ',', $rgb_array );
+		$rgba = $rgb . ',' . $alpha;
+
+		return $rgba;
+	}
+
+	/**
 	 * Get featured image.
 	 *
 	 * @since 2019-11-29
@@ -405,37 +431,92 @@ class Template {
 		endif;
 
 		// convert color from hex to rgb.
-		$hex = str_replace( '#', '', $img_overlay_color );
-		if ( strlen( $hex ) == 3 ) :
-			$rgb_array['r'] = hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) );
-			$rgb_array['g'] = hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) );
-			$rgb_array['b'] = hexdec( substr( $hex, 2, 1 ) . substr( $hex, 2, 1 ) );
-		else :
-			$rgb_array['r'] = hexdec( substr( $hex, 0, 2 ) );
-			$rgb_array['g'] = hexdec( substr( $hex, 2, 2 ) );
-			$rgb_array['b'] = hexdec( substr( $hex, 4, 2 ) );
-		endif;
-
-		$rgb_string  = implode( ',', $rgb_array );
-		$rgba_string = $rgb_string . ',' . $img_overlay;
+		$rgba = $this->hex_to_rgba( $img_overlay_color, $img_overlay );
 
 		// Inline styles for background image.
 		echo '<style>
 			' . esc_html( $css_selector ) . ' {
 				background-image: linear-gradient(
-					rgba(' . esc_attr( $rgba_string ) . '),
-					rgba(' . esc_attr( $rgba_string ) . ')
+					rgba(' . esc_attr( $rgba ) . '),
+					rgba(' . esc_attr( $rgba ) . ')
 				), url(' . esc_url( $large[0] ) . ');
 			}
 			@media (min-width: 1024px) {
 				' . esc_html( $css_selector ) . ' {
 					background-image: linear-gradient(
-						rgba(' . esc_attr( $rgba_string ) . '),
-						rgba(' . esc_attr( $rgba_string ) . ')
+						rgba(' . esc_attr( $rgba ) . '),
+						rgba(' . esc_attr( $rgba ) . ')
 					), url(' . esc_url( $fullscreen[0] ) . ');
 				}
 			}
 		</style>';
+	}
+
+	/**
+	 * Get hero image.
+	 *
+	 * @since 2021-02-09
+	 */
+	public function get_hero_image() {
+		add_action( 'wp_head', [ $this, 'hero_image' ] );
+	}
+
+	/**
+	 * Hero image.
+	 *
+	 * @since 2021-02-09
+	 */
+	public function hero_image() {
+
+		global $post;
+
+		// Get featured image sizes.
+		$large      = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
+		$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'conversions-fullscreen', false );
+
+		if ( get_theme_mod( 'conversions_hh_type', 'full' ) === 'full' ) {
+
+			// Get the customizer setting.
+			$img_overlay_color = get_theme_mod( 'conversions_hh_img_color', '#000000' );
+			$img_overlay       = get_theme_mod( 'conversions_hh_img_overlay', '.5' );
+			$css_selector      = '.c-hero.c-hero__full';
+
+			// convert color from hex to rgb.
+			$rgba = $this->hex_to_rgba( $img_overlay_color, $img_overlay );
+
+			// Inline styles for background image.
+			echo '<style>
+				' . esc_html( $css_selector ) . ' {
+					background-image: linear-gradient(
+					rgba(' . esc_attr( $rgba ) . '),
+					rgba(' . esc_attr( $rgba ) . ')
+					), url(' . esc_url( $large[0] ) . ');
+				}
+				@media (min-width: 1024px) {
+					' . esc_html( $css_selector ) . ' {
+						background-image: linear-gradient(
+						rgba(' . esc_attr( $rgba ) . '),
+						rgba(' . esc_attr( $rgba ) . ')
+						), url(' . esc_url( $fullscreen[0] ) . ');
+					}
+				}
+			</style>';
+		} else {
+
+			$css_selector = '.c-hero.c-hero__split .c-hero__split-img';
+
+			// Inline styles for background image.
+			echo '<style>
+				' . esc_html( $css_selector ) . ' {
+					background-image: url(' . esc_url( $large[0] ) . ');
+				}
+				@media (min-width: 1024px) {
+					' . esc_html( $css_selector ) . ' {
+						background-image: url(' . esc_url( $fullscreen[0] ) . ');
+					}
+				}
+			</style>';
+		}
 	}
 
 	/**
@@ -445,36 +526,24 @@ class Template {
 	 */
 	public function fullscreen_cta_image() {
 
-		$cta_bg_img        = get_theme_mod( 'conversions_hcta_bg_img' );
-		$cta_overlay_color = get_theme_mod( 'conversions_hcta_img_color', '#000000' );
-		$cta_img_overlay   = get_theme_mod( 'conversions_hcta_img_overlay', '.5' );
-
 		// Get featured image sizes.
+		$cta_bg_img = get_theme_mod( 'conversions_hcta_bg_img' );
 		$large      = wp_get_attachment_image_src( $cta_bg_img, 'large', false );
 		$fullscreen = wp_get_attachment_image_src( $cta_bg_img, 'conversions-fullscreen', false );
 
-		// convert color from hex to rgb.
-		$hex = str_replace( '#', '', $cta_overlay_color );
-		if ( strlen( $hex ) == 3 ) :
-			$rgb_array['r'] = hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) );
-			$rgb_array['g'] = hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) );
-			$rgb_array['b'] = hexdec( substr( $hex, 2, 1 ) . substr( $hex, 2, 1 ) );
-		else :
-			$rgb_array['r'] = hexdec( substr( $hex, 0, 2 ) );
-			$rgb_array['g'] = hexdec( substr( $hex, 2, 2 ) );
-			$rgb_array['b'] = hexdec( substr( $hex, 4, 2 ) );
-		endif;
+		$cta_overlay_color = get_theme_mod( 'conversions_hcta_img_color', '#000000' );
+		$cta_img_overlay   = get_theme_mod( 'conversions_hcta_img_overlay', '.5' );
 
-		$rgb_string  = implode( ',', $rgb_array );
-		$rgba_string = $rgb_string . ',' . $cta_img_overlay;
+		// convert color from hex to rgb.
+		$rgba = $this->hex_to_rgba( $cta_overlay_color, $cta_img_overlay );
 
 		// Inline styles for background image.
 		echo '<style>
 			section.c-cta {
 				background-image:
 					linear-gradient(
-						rgba(' . esc_attr( $rgba_string ) . '),
-						rgba(' . esc_attr( $rgba_string ) . ')
+						rgba(' . esc_attr( $rgba ) . '),
+						rgba(' . esc_attr( $rgba ) . ')
 					),
 				url(' . esc_url( $large[0] ) . ');
 				background-position: center;
@@ -485,8 +554,8 @@ class Template {
 				section.c-cta {
 					background-image:
 						linear-gradient(
-							rgba(' . esc_attr( $rgba_string ) . '),
-							rgba(' . esc_attr( $rgba_string ) . ')
+							rgba(' . esc_attr( $rgba ) . '),
+							rgba(' . esc_attr( $rgba ) . ')
 						),
 					url(' . esc_url( $fullscreen[0] ) . ');
 				}

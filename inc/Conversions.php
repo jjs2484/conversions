@@ -230,6 +230,9 @@ namespace conversions
 				'conversions_edd_primary_btn'      => 'btn-primary',
 				'conversions_edd_download_details' => true,
 				'conversions_bbp_primary_btn'      => 'btn-primary',
+				'conversions_hh_type'              => 'full',
+				'conversions_hh_img_color'         => '#000000',
+				'conversions_hh_img_overlay'       => '.5',
 			];
 
 			foreach ( $defaults as $c => $v ) {

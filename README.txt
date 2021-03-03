@@ -20,6 +20,10 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
+= 1.7.8 =
+* New: hex_to_rgba function.
+* New: get_hero_image function.
+
 = 1.7.7 =
 * New: Navbar toggler animation.
 * New: Vertical scrolling of the mobile Navbar when the contents are 75vh+.
