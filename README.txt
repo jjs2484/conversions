@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 1.7.7
+Stable tag: 1.7.8
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,6 +23,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 = 1.7.8 =
 * New: hex_to_rgba function.
 * New: get_hero_image function.
+* Update: NPM dependencies.
 
 = 1.7.7 =
 * New: Navbar toggler animation.
