@@ -474,7 +474,7 @@ class Template {
 		$large      = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
 		$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'conversions-fullscreen', false );
 
-		if ( get_theme_mod( 'conversions_hh_type', 'full' ) === 'full' ) {
+		if ( get_theme_mod( 'conversions_hh_type', 'split' ) === 'full' ) {
 
 			// Get the customizer setting.
 			$img_overlay_color = get_theme_mod( 'conversions_hh_img_color', '#000000' );
