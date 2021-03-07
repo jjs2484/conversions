@@ -374,6 +374,9 @@ class Template {
 	 * Hex to rgb.
 	 *
 	 * @since 2021-02-09
+	 *
+	 * @param string $hex Hex color.
+	 * @param string $alpha Alpha transparency.
 	 */
 	public function hex_to_rgba( $hex, $alpha ) {
 
