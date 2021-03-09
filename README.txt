@@ -20,7 +20,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
-= 1.7.8 =
+= 1.7.9 =
 * Update: bump WordPress tested version to 5.7.
 * Update: NPM dependencies.
 
