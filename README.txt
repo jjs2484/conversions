@@ -22,6 +22,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.7.8 =
 * Update: bump WordPress tested version to 5.7.
+* Update: NPM dependencies.
 
 = 1.7.8 =
 * New: hex_to_rgba function.
