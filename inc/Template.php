@@ -330,7 +330,7 @@ class Template {
 								<?php if ( has_post_thumbnail() ) : ?>
 									<?php the_post_thumbnail( 'conversions-news', array( 'class' => 'card-img-top' ) ); ?>
 								<?php else : ?>
-									<img class="card-img-top" alt="<?php the_title(); ?>" src="<?php echo esc_url( get_template_directory_uri() ); ?>/placeholder.png" />
+									<img class="card-img-top" loading="lazy" alt="<?php the_title(); ?>" src="<?php echo esc_url( get_template_directory_uri() ); ?>/placeholder.png" />
 								<?php endif; ?>
 							</a>
 							<div class="card-body pb-1">

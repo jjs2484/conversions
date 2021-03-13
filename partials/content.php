@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 				$conversions_index_img_lg  = wp_get_attachment_image_src( $conversions_index_img, 'conversions-blog', false );
 				$conversions_index_img_alt = get_post_meta( $conversions_index_img, '_wp_attachment_image_alt', true );
 
-				echo '<img class="card-img-top" src="' . esc_url( $conversions_index_img_lg[0] ) . '" alt="' . esc_attr( $conversions_index_img_alt ) . '" srcset="' . esc_url( $conversions_index_img_sm[0] ) . ' 550w, ' . esc_url( $conversions_index_img_lg[0] ) . ' 1200w">';
+				echo '<img class="card-img-top" loading="lazy" src="' . esc_url( $conversions_index_img_lg[0] ) . '" alt="' . esc_attr( $conversions_index_img_alt ) . '" srcset="' . esc_url( $conversions_index_img_sm[0] ) . ' 550w, ' . esc_url( $conversions_index_img_lg[0] ) . ' 1200w">';
 			?>
 		</a>
 	<?php endif; ?>
