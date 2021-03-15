@@ -22,6 +22,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.8.0 =
 * Update: Lazy load more images.
+* Update: Only show fab if cart is not empty.
 * Update: NPM dependencies.
 
 = 1.7.9 =
