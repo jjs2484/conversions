@@ -31,14 +31,22 @@ class Fab {
 	 */
 	public function wp_footer() {
 
-		if ( class_exists( 'woocommerce' ) || class_exists( 'Easy_Digital_Downloads' ) ) {
+		if ( class_exists( 'woocommerce' ) ) {
 
-			$fab_button = $this->fab_cart();
+			// Only show fab if cart is not empty.
+			if ( WC()->cart->get_cart_contents_count() != 0 ) {
+				$fab_button = $this->fab_cart();
+			}
+		} elseif ( class_exists( 'Easy_Digital_Downloads' ) ) {
 
+			// Only show fab if cart is not empty.
+			$edd_cart_contents = edd_get_cart_contents();
+			if ( ! empty( $edd_cart_contents ) ) {
+				$fab_button = $this->fab_cart();
+			}
 		} elseif ( get_theme_mod( 'conversions_nav_button', 'no' ) !== 'no' ) {
 
 			$fab_button = $this->fab_fullwidth();
-
 		}
 
 		// Check for filter before output.
