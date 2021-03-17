@@ -9,7 +9,7 @@ $wp_customize->add_section(
 	'conversions_featured_img',
 	[
 		'title'       => __( 'Featured Images', 'conversions' ),
-		'priority'    => 47,
+		'priority'    => 48,
 		'description' => __( 'Settings for the featured image displayed on posts and pages.', 'conversions' ),
 		'capability'  => 'edit_theme_options',
 	]
