@@ -89,3 +89,43 @@ $wp_customize->add_control(
 		]
 	)
 );
+$wp_customize->add_setting(
+	'conversions_link_color',
+	[
+		'default'           => '#0068d7',
+		'type'              => 'theme_mod',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
+	]
+);
+$wp_customize->add_control(
+	'conversions_link_color_control',
+	[
+		'label'       => __( 'Link color', 'conversions' ),
+		'description' => __( 'Select a color for hyperlinks.', 'conversions' ),
+		'section'     => 'conversions_typography',
+		'settings'    => 'conversions_link_color',
+		'priority'    => 4,
+		'type'        => 'color',
+	]
+);
+$wp_customize->add_setting(
+	'conversions_link_hcolor',
+	[
+		'default'           => '#00698c',
+		'type'              => 'theme_mod',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
+	]
+);
+$wp_customize->add_control(
+	'conversions_link_hcolor_control',
+	[
+		'label'       => __( 'Link hover color', 'conversions' ),
+		'description' => __( 'Select a hover color for hyperlinks.', 'conversions' ),
+		'section'     => 'conversions_typography',
+		'settings'    => 'conversions_link_hcolor',
+		'priority'    => 5,
+		'type'        => 'color',
+	]
+);

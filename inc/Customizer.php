@@ -114,6 +114,11 @@ namespace conversions
 			$wp_customize->get_section( 'background_image' )->active_callback = '__return_false';
 
 			// -----------------------------------------------------
+			// Remove colors section and move control
+			// -----------------------------------------------------
+			$wp_customize->get_section( 'colors' )->active_callback = '__return_false';
+
+			// -----------------------------------------------------
 			// Add logo height to site identity panel
 			// -----------------------------------------------------
 			$wp_customize->add_setting(
@@ -171,13 +176,12 @@ namespace conversions
 			include get_parent_theme_file_path( '/inc/customizer/layout.php' );
 			include get_parent_theme_file_path( '/inc/customizer/typography.php' );
 			include get_parent_theme_file_path( '/inc/customizer/call-to-action.php' );
-			include get_parent_theme_file_path( '/inc/customizer/footer-colors.php' );
+			include get_parent_theme_file_path( '/inc/customizer/footer.php' );
 			include get_parent_theme_file_path( '/inc/customizer/blog.php' );
 			include get_parent_theme_file_path( '/inc/customizer/featured-image.php' );
 			include get_parent_theme_file_path( '/inc/customizer/woocommerce.php' );
 			include get_parent_theme_file_path( '/inc/customizer/edd.php' );
 			include get_parent_theme_file_path( '/inc/customizer/bbpress.php' );
-			include get_parent_theme_file_path( '/inc/customizer/colors.php' );
 			// phpcs:enable
 
 			do_action( 'conversions_customize_register', $this );

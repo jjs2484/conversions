@@ -13,6 +13,8 @@ $wp_customize->add_section(
 		'priority'   => 42,
 	]
 );
+$wp_customize->get_control( 'background_color' )->section  = 'conversions_layout_options';
+$wp_customize->get_control( 'background_color' )->priority = 10;
 $wp_customize->add_setting(
 	'conversions_sidebar_position',
 	[
