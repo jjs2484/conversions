@@ -119,7 +119,7 @@ $wp_customize->add_control(
 		'conversions_nav_dropshadow',
 		[
 			'label'       => __( 'Navbar drop shadow', 'conversions' ),
-			'description' => __( 'Add drop shadow to the Navbar? Note: drop shadow combined with fixed Navbar may slightly degrade scroll performance.', 'conversions' ),
+			'description' => __( 'Add drop shadow to the Navbar?', 'conversions' ),
 			'section'     => 'conversions_nav',
 			'settings'    => 'conversions_nav_dropshadow',
 			'type'        => 'checkbox',
