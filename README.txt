@@ -21,6 +21,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 == Changelog ==
 
 = 1.8.0 =
+* Update: Font Awesome to 5.15.3
 * Update: Move customizer colors back to their respective sections.
 
 = 1.8.0 =
@@ -331,7 +332,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 == Resources ==
 
 * Bootstrap 4.6.0 | MIT License
-* Font Awesome v5.15.2 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
+* Font Awesome v5.15.3 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
 * TGM Plugin Activation | GPLv2 or later
