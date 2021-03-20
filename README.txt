@@ -24,6 +24,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Font Awesome to 5.15.3
 * Update: Move customizer colors back to their respective sections.
 * Update: Reorder customizer sections.
+* Update: add conversions-gallery image size.
 * Update: NPM Dependencies.
 
 = 1.8.0 =
