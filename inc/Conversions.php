@@ -113,7 +113,7 @@ namespace conversions
 			add_image_size( 'conversions-team', 270, 270, true );
 
 			// Add gallery image size.
-			add_image_size( 'conversions-gallery', 800, 450, true );
+			add_image_size( 'conversions-gallery', 800, 534, true );
 
 			// Set up the WordPress core custom background feature.
 			add_theme_support(
