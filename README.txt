@@ -20,7 +20,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
-= 1.8.0 =
+= 1.8.1 =
 * Update: Font Awesome to 5.15.3
 * Update: Move customizer colors back to their respective sections.
 * Update: Reorder customizer sections.
