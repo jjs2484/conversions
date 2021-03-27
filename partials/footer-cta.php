@@ -36,6 +36,8 @@ defined( 'ABSPATH' ) || exit;
 	}
 	?>
 
+		<?php do_action( 'conversions_before_cta' ); ?>
+
 		<div class="container-fluid">
 			<div class="row">
 					<div class="col-12">

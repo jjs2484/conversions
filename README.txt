@@ -20,6 +20,9 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
+= 1.8.2 =
+* New: Action hook conversions_before_cta.
+
 = 1.8.1 =
 * Update: Font Awesome to 5.15.3
 * Update: Move customizer colors back to their respective sections.
