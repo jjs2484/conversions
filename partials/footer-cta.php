@@ -11,6 +11,9 @@ defined( 'ABSPATH' ) || exit;
 
 	<!-- Call-to-action section -->
 	<?php
+
+	do_action( 'conversions_before_cta' );
+
 	// CTA background type.
 	$conversions_cta_bg_type = get_theme_mod( 'conversions_hcta_bg_choice', 'gradient' );
 	switch ( $conversions_cta_bg_type ) {
@@ -35,8 +38,6 @@ defined( 'ABSPATH' ) || exit;
 			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_gradient', 'crystal-clear' ) ) . '">';
 	}
 	?>
-
-		<?php do_action( 'conversions_before_cta' ); ?>
 
 		<div class="container-fluid">
 			<div class="row">
