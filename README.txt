@@ -22,6 +22,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.8.2 =
 * New: Action hook conversions_before_cta.
+* Update: NPM Dependencies.
 
 = 1.8.1 =
 * Update: Font Awesome to 5.15.3
