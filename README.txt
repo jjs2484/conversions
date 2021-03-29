@@ -23,6 +23,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 = 1.8.2 =
 * New: Action hook conversions_before_cta.
 * Update: Better navbar drop shadow.
+* Update: Navbar button add unique id.
 * Update: NPM Dependencies.
 
 = 1.8.1 =

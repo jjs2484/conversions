@@ -13237,6 +13237,10 @@ h5,
 h6 {
   color: #222; }
 
+b,
+strong {
+  font-weight: bold; }
+
 body,
 input,
 select,

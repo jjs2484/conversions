@@ -481,7 +481,7 @@ class Navbar {
 			}
 
 			$nav_button = sprintf(
-				'<li class="nav-callout-button menu-item nav-item"><a title="%1$s" href="%2$s" class="btn %3$s">%1$s</a></li>',
+				'<li id="c-nav__btn-0" class="nav-callout-button menu-item nav-item"><a title="%1$s" href="%2$s" class="btn %3$s">%1$s</a></li>',
 				esc_html( $nav_btn_text ),
 				esc_url( $nav_btn_url ),
 				esc_attr( get_theme_mod( 'conversions_nav_button' ) )
