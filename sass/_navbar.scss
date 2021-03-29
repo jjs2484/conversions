@@ -105,7 +105,7 @@
 
 	// Navbar drop shadow
 	&.drop-shadow-is-true {
-		box-shadow: 0 3px 3px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.1);
+		box-shadow: 0 6px 4px -4px rgba(0,0,0,.33);
 	}
 
 	// IE edge prefix for fixed navbar -- prevents element jitter
