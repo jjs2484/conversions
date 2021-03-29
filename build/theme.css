@@ -13171,7 +13171,7 @@ img,
 #wrapper-navbar.is-white-color:not(.drop-shadow-is-true) .navbar {
   border-bottom: 1px solid #dee2e6; }
 #wrapper-navbar.drop-shadow-is-true {
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.33); }
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.1); }
 #wrapper-navbar.fixed-top {
   position: -ms-device-fixed; }
 
