@@ -29,6 +29,7 @@ get_header();
 					<div class="col-sm-12">
     					<div class="conversions-hero-cover__inner">
     						<h1 class="entry-title text-center">' . esc_html( get_the_title() ) . '</h1>
+							' . wp_kses_post( do_action( 'conversions_after_page_hero_title' ) ) . '
     					</div>
     				</div>
     			</div>
