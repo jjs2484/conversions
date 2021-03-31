@@ -444,7 +444,7 @@ class Template {
 					rgba(' . esc_attr( $rgba ) . ')
 				), url(' . esc_url( $large[0] ) . ');
 			}
-			@media (min-width: 1024px) {
+			@media (min-width: 768px) {
 				' . esc_html( $css_selector ) . ' {
 					background-image: linear-gradient(
 						rgba(' . esc_attr( $rgba ) . '),

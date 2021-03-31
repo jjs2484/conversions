@@ -26,6 +26,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * New: Action hook conversions_after_post_hero_title.
 * Update: Better navbar drop shadow.
 * Update: Navbar button add unique id.
+* Update: fullscreen_featured_image media query image size.
 * Update: NPM Dependencies.
 
 = 1.8.1 =
