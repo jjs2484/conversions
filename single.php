@@ -20,19 +20,20 @@ get_header();
 
 	<?php
 	if ( has_post_thumbnail( get_the_ID() ) ) {
-		// HTML for background image and title.
-		echo '<div class="conversions-hero-cover">
-    		<div class="container-fluid" id="conversions-hero-content">
-    			<div class="row">
+		?>
+		<div class="conversions-hero-cover">
+			<div class="container-fluid" id="conversions-hero-content">
+				<div class="row">
 					<div class="col-sm-12">
-    					<div class="conversions-hero-cover__inner">
-    						<h1 class="entry-title text-center">' . esc_html( get_the_title() ) . '</h1>
-							' . wp_kses_post( do_action( 'conversions_after_post_hero_title' ) ) . '
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>';
+						<div class="conversions-hero-cover__inner">
+							<h1 class="entry-title text-center"><?php echo esc_html( get_the_title() ); ?></h1>
+							<?php do_action( 'conversions_after_post_hero_title' ); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php
 	}
 	?>
 
