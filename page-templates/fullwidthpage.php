@@ -10,10 +10,34 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+// Featured image styles.
+if ( has_post_thumbnail( get_the_ID() ) ) {
+	conversions()->template->get_featured_image();
+}
+
 get_header();
 ?>
 
 <div class="wrapper content-wrapper" id="full-width-page-wrapper">
+
+	<?php
+	if ( has_post_thumbnail( get_the_ID() ) ) {
+		?>
+		<div class="conversions-hero-cover">
+			<div class="container-fluid" id="conversions-hero-content">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="conversions-hero-cover__inner">
+							<h1 class="entry-title text-center"><?php echo esc_html( get_the_title() ); ?></h1>
+							<?php do_action( 'conversions_after_page_hero_title' ); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+	?>
 
 	<div class="container-fluid" id="content">
 

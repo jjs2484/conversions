@@ -24,6 +24,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * New: Action hook conversions_before_cta.
 * New: Action hook conversions_after_page_hero_title.
 * New: Action hook conversions_after_post_hero_title.
+* Update: Show featured image on full width page template.
 * Update: Better navbar drop shadow.
 * Update: Navbar button add unique id.
 * Update: Fullscreen_featured_image media query image size.
