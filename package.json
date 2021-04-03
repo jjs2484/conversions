@@ -33,7 +33,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
-    "hamburgers": "^1.1.3"
+    "hamburgers": "^1.1.3",
+    "responsive-bootstrap-tabs": "^1.0.0"
   },
   "description": ""
 }

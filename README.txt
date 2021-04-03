@@ -21,6 +21,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 == Changelog ==
 
 = 1.8.2 =
+* New: Bootstrap Responsive Tabs script.
 * New: Action hook conversions_before_cta.
 * New: Action hook conversions_cta_content.
 * New: Action hook conversions_after_page_hero_title.
@@ -141,6 +142,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * _s, or underscores | GPLv2 or later
 * TGM Plugin Activation | GPLv2 or later
 * Hamburgers v1.1.3 | MIT License
+* Bootstrap Responsive Tabs v1.0.0 | MIT License
 * Google Fonts
 
 	Comfortaa

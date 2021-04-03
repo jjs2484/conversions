@@ -135,4 +135,11 @@ function cScrollToCart() {
 	{
 		elem[0].scrollIntoView();
 	}
-} 
+}
+
+/**
+ * Initialize Bootstrap responsive tabs for AffiliatesWP
+*/
+jQuery(document).ready(function() {
+	jQuery('#affwp-affiliate-dashboard-tabs.nav-tabs').responsiveTabs();
+});

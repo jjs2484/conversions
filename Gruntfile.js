@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 		concat: {
 			basic_and_extras: {
 				files: {
-					'build/theme.js': ['node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'js/skip-link-focus-fix.js', 'js/theme.js'],
+					'build/theme.js': ['node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'node_modules/responsive-bootstrap-tabs/jquery.responsivetabs.js', 'js/skip-link-focus-fix.js', 'js/theme.js'],
 					'build/conversions-customizer.js': ['js/customizer.js'],
 				},
 			},
