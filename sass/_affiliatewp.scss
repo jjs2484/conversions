@@ -1,0 +1,24 @@
+// General buttons
+.affwp-form {
+    .button[type="submit"] {
+        @extend .btn;
+    }
+}
+
+// Dashboard nav
+#affwp-affiliate-dashboard-tabs {
+    @extend .nav;
+    @extend .nav-tabs;
+}
+.affwp-affiliate-dashboard-tab {
+    @extend .nav-item;
+
+    &.active {
+        a {
+            @extend .active;
+        }
+    }
+    a {
+        @extend .nav-link;
+    }
+}
