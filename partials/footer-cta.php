@@ -9,9 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-	<!-- Call-to-action section -->
 	<?php
-
 	do_action( 'conversions_before_cta' );
 
 	// CTA background type.
@@ -45,49 +43,13 @@ defined( 'ABSPATH' ) || exit;
 
 						<div class="w-md-80 w-lg-60 mx-auto">
 
-							<?php do_action( 'conversions_before_cta_content' ); ?>
-
-							<!-- Call-to-action text -->
-							<div class="c-cta__items">
-								<?php
-								if ( ! empty( get_theme_mod( 'conversions_hcta_title' ) ) ) {
-									// Title.
-									echo '<h2 class="h3">' . esc_html( get_theme_mod( 'conversions_hcta_title' ) ) . '</h2>';
-								}
-
-								if ( ! empty( get_theme_mod( 'conversions_hcta_desc' ) ) ) {
-									// Description.
-									echo '<p class="subtitle">' . wp_kses_post( get_theme_mod( 'conversions_hcta_desc' ) ) . '</p>';
-								}
-
-								if ( get_theme_mod( 'conversions_hcta_btn', 'no' ) !== 'no' ) {
-									// Button.
-									$conversions_cta_btn_text = get_theme_mod( 'conversions_hcta_btn_text' );
-									if ( empty( $conversions_cta_btn_text ) ) {
-										$conversions_cta_btn_text = '';
-									}
-									$conversions_cta_btn_url = get_theme_mod( 'conversions_cta_btn_url' );
-									if ( empty( $conversions_cta_btn_url ) ) {
-										$conversions_cta_btn_url = '';
-									}
-									echo sprintf(
-										'<a href="%s" class="btn %s btn-lg">%s</a>',
-										esc_url( $conversions_cta_btn_url ),
-										esc_attr( get_theme_mod( 'conversions_hcta_btn', 'btn-light' ) ),
-										esc_html( $conversions_cta_btn_text )
-									);
-								}
-								?>
-							</div>
-
 							<?php
-							if ( ! empty( get_theme_mod( 'conversions_hcta_shortcode' ) ) ) {
-								// Shortcode.
-								echo do_shortcode( wp_kses_post( get_theme_mod( 'conversions_hcta_shortcode' ) ) );
-							}
-							?>
+							do_action( 'conversions_before_cta_content' );
 
-							<?php do_action( 'conversions_after_cta_content' ); ?>
+							do_action( 'conversions_cta_content' );
+
+							do_action( 'conversions_after_cta_content' );
+							?>
 
 						</div>
 

@@ -22,8 +22,10 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 = 1.8.2 =
 * New: Action hook conversions_before_cta.
+* New: Action hook conversions_cta_content.
 * New: Action hook conversions_after_page_hero_title.
 * New: Action hook conversions_after_post_hero_title.
+* Update: Move some CTA stuff to functions in inc/Cta.php
 * Update: Show featured image on full width page template.
 * Update: Better navbar drop shadow.
 * Update: Navbar button add unique id.

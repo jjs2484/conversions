@@ -49,6 +49,7 @@ namespace conversions
 			new bbPress();
 			new Admin();
 			new Fab();
+			new Cta();
 
 			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			require_once get_parent_theme_file_path( '/inc/class-tgm-plugin-activation.php' );
