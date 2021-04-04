@@ -15065,13 +15065,13 @@ table#edd_user_history {
       font-size: 20px;
       vertical-align: middle; }
 
-@media (max-width: 991.98px) {
+@media (min-width: 768px) {
   #affwp-register-form {
     width: 46%;
     float: left;
     margin-right: 6%; } }
 
-@media (max-width: 991.98px) {
+@media (min-width: 768px) {
   #affwp-login-form {
     width: 46%;
     float: left; } }

@@ -39,14 +39,14 @@
 
 // Register and login form two columns
 #affwp-register-form {
-	@media (max-width: 991.98px) {
+	@media (min-width: 768px) {
 		width: 46%;
 		float: left;
 		margin-right: 6%;
 	}
 }
 #affwp-login-form {
-	@media (max-width: 991.98px) { 
+	@media (min-width: 768px) { 
 		width: 46%;
 		float: left;
 	}
