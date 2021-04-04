@@ -6,19 +6,25 @@
 }
 
 // Dashboard nav
-#affwp-affiliate-dashboard-tabs {
-    @extend .nav;
-    @extend .nav-tabs;
-}
-.affwp-affiliate-dashboard-tab {
-    @extend .nav-item;
+#affwp-affiliate-dashboard {
+	.nav-tabs {
+		margin-bottom: 1.5rem;
 
-    &.active {
-        a {
-            @extend .active;
-        }
-    }
-    a {
-        @extend .nav-link;
-    }
+		.responsivetabs-more {
+		
+			.dropdown-toggle {
+				padding: .5rem 1rem;
+				display: block;
+	
+				&::after {
+					display: none;
+				}
+	
+				i {
+					font-size: 20px;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
 }

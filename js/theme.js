@@ -141,5 +141,5 @@ function cScrollToCart() {
  * Initialize Bootstrap responsive tabs for AffiliatesWP
 */
 jQuery(document).ready(function() {
-	jQuery('#affwp-affiliate-dashboard-tabs.nav-tabs').responsiveTabs();
+	jQuery('#affwp-affiliate-dashboard .nav-tabs').responsiveTabs();
 });

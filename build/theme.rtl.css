@@ -2675,11 +2675,7 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .nf-form-wrap .nf-form-content input[type="submit"]:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.button:not(:disabled):not(.disabled).active, #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .affwp-affiliate-dashboard-tab.active a.button:not(:disabled):not(.disabled), .affwp-affiliate-dashboard-tab.active #footer-full-content
-  .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons a.button:not(:disabled):not(.disabled), .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-primary:not(:disabled):not(.disabled), .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled).active,
+  a.button:not(:disabled):not(.disabled).active, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled).active,
   .nf-form-wrap .nf-form-content input[type="button"]:not(:disabled):not(.disabled).active,
   .nf-form-wrap .nf-form-content input[type="submit"]:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, form.post-password-form .show > input.dropdown-toggle[type="submit"], #footer-full-content
   .woocommerce.widget_shopping_cart
@@ -2697,11 +2693,7 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
     .nf-form-wrap .nf-form-content input[type="submit"]:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active:focus, #footer-full-content
     .woocommerce.widget_shopping_cart
     .woocommerce-mini-cart__buttons.buttons
-    a.button:not(:disabled):not(.disabled).active:focus, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .affwp-affiliate-dashboard-tab.active a.button:not(:disabled):not(.disabled):focus, .affwp-affiliate-dashboard-tab.active #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons a.button:not(:disabled):not(.disabled):focus, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-primary:not(:disabled):not(.disabled):focus, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled).active:focus,
+    a.button:not(:disabled):not(.disabled).active:focus, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active:focus, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled).active:focus,
     .nf-form-wrap .nf-form-content input[type="button"]:not(:disabled):not(.disabled).active:focus,
     .nf-form-wrap .nf-form-content input[type="submit"]:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, form.post-password-form .show > input.dropdown-toggle[type="submit"]:focus, #footer-full-content
     .woocommerce.widget_shopping_cart
@@ -2727,11 +2719,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
     color: #fff;
     background-color: #6c757d;
     border-color: #6c757d; }
-  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-secondary:not(:disabled):not(.disabled), .show > .btn-secondary.dropdown-toggle {
+  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
     color: #fff;
     background-color: #545b62;
     border-color: #4e555b; }
-    .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-secondary:not(:disabled):not(.disabled):focus, .show > .btn-secondary.dropdown-toggle:focus {
+    .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5); }
 
 .btn-success {
@@ -2751,11 +2743,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
     color: #fff;
     background-color: #198754;
     border-color: #198754; }
-  .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-success:not(:disabled):not(.disabled), .show > .btn-success.dropdown-toggle {
+  .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active, .show > .btn-success.dropdown-toggle {
     color: #fff;
     background-color: #115c39;
     border-color: #0f5133; }
-    .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-success:not(:disabled):not(.disabled):focus, .show > .btn-success.dropdown-toggle:focus {
+    .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus, .show > .btn-success.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(60, 153, 110, 0.5); }
 
 .btn-info {
@@ -2775,11 +2767,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
     color: #fff;
     background-color: #17a2b8;
     border-color: #17a2b8; }
-  .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-info:not(:disabled):not(.disabled), .show > .btn-info.dropdown-toggle {
+  .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active, .show > .btn-info.dropdown-toggle {
     color: #fff;
     background-color: #117a8b;
     border-color: #10707f; }
-    .btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-info:not(:disabled):not(.disabled):focus, .show > .btn-info.dropdown-toggle:focus {
+    .btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus, .show > .btn-info.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5); }
 
 .btn-warning {
@@ -2799,11 +2791,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
     color: #212529;
     background-color: #ffc107;
     border-color: #ffc107; }
-  .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-warning:not(:disabled):not(.disabled), .show > .btn-warning.dropdown-toggle {
+  .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active, .show > .btn-warning.dropdown-toggle {
     color: #212529;
     background-color: #d39e00;
     border-color: #c69500; }
-    .btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-warning:not(:disabled):not(.disabled):focus, .show > .btn-warning.dropdown-toggle:focus {
+    .btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning:not(:disabled):not(.disabled).active:focus, .show > .btn-warning.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5); }
 
 .btn-danger {
@@ -2823,11 +2815,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545; }
-  .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-danger:not(:disabled):not(.disabled), .show > .btn-danger.dropdown-toggle {
+  .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active, .show > .btn-danger.dropdown-toggle {
     color: #fff;
     background-color: #bd2130;
     border-color: #b21f2d; }
-    .btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-danger:not(:disabled):not(.disabled):focus, .show > .btn-danger.dropdown-toggle:focus {
+    .btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger:not(:disabled):not(.disabled).active:focus, .show > .btn-danger.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5); }
 
 .btn-light {
@@ -2847,11 +2839,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
     color: #212529;
     background-color: #f8f9fa;
     border-color: #f8f9fa; }
-  .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-light:not(:disabled):not(.disabled), .show > .btn-light.dropdown-toggle {
+  .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active, .show > .btn-light.dropdown-toggle {
     color: #212529;
     background-color: #dae0e5;
     border-color: #d3d9df; }
-    .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-light:not(:disabled):not(.disabled):focus, .show > .btn-light.dropdown-toggle:focus {
+    .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus, .show > .btn-light.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5); }
 
 .btn-dark {
@@ -2871,11 +2863,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
     color: #fff;
     background-color: #151b26;
     border-color: #151b26; }
-  .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-dark:not(:disabled):not(.disabled), .show > .btn-dark.dropdown-toggle {
+  .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active, .show > .btn-dark.dropdown-toggle {
     color: #fff;
     background-color: #030405;
     border-color: black; }
-    .btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-dark:not(:disabled):not(.disabled):focus, .show > .btn-dark.dropdown-toggle:focus {
+    .btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(56, 61, 71, 0.5); }
 
 .btn-outline-primary {
@@ -2890,11 +2882,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-outline-primary.disabled, .btn-outline-primary:disabled {
     color: #007bff;
     background-color: transparent; }
-  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-outline-primary:not(:disabled):not(.disabled), .show > .btn-outline-primary.dropdown-toggle {
+  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff; }
-    .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-outline-primary:not(:disabled):not(.disabled):focus, .show > .btn-outline-primary.dropdown-toggle:focus {
+    .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
 
 .btn-outline-secondary {
@@ -2909,11 +2901,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
     color: #6c757d;
     background-color: transparent; }
-  .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-outline-secondary:not(:disabled):not(.disabled), .show > .btn-outline-secondary.dropdown-toggle {
+  .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
     color: #fff;
     background-color: #6c757d;
     border-color: #6c757d; }
-    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-outline-secondary:not(:disabled):not(.disabled):focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
+    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); }
 
 .btn-outline-success {
@@ -2928,11 +2920,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-outline-success.disabled, .btn-outline-success:disabled {
     color: #198754;
     background-color: transparent; }
-  .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-outline-success:not(:disabled):not(.disabled), .show > .btn-outline-success.dropdown-toggle {
+  .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active, .show > .btn-outline-success.dropdown-toggle {
     color: #fff;
     background-color: #198754;
     border-color: #198754; }
-    .btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-outline-success:not(:disabled):not(.disabled):focus, .show > .btn-outline-success.dropdown-toggle:focus {
+    .btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-success.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.5); }
 
 .btn-outline-info {
@@ -2947,11 +2939,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-outline-info.disabled, .btn-outline-info:disabled {
     color: #17a2b8;
     background-color: transparent; }
-  .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-outline-info:not(:disabled):not(.disabled), .show > .btn-outline-info.dropdown-toggle {
+  .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active, .show > .btn-outline-info.dropdown-toggle {
     color: #fff;
     background-color: #17a2b8;
     border-color: #17a2b8; }
-    .btn-outline-info:not(:disabled):not(.disabled):active:focus, .btn-outline-info:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-outline-info:not(:disabled):not(.disabled):focus, .show > .btn-outline-info.dropdown-toggle:focus {
+    .btn-outline-info:not(:disabled):not(.disabled):active:focus, .btn-outline-info:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-info.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5); }
 
 .btn-outline-warning {
@@ -2966,11 +2958,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-outline-warning.disabled, .btn-outline-warning:disabled {
     color: #ffc107;
     background-color: transparent; }
-  .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-outline-warning:not(:disabled):not(.disabled), .show > .btn-outline-warning.dropdown-toggle {
+  .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active, .show > .btn-outline-warning.dropdown-toggle {
     color: #212529;
     background-color: #ffc107;
     border-color: #ffc107; }
-    .btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-outline-warning:not(:disabled):not(.disabled):focus, .show > .btn-outline-warning.dropdown-toggle:focus {
+    .btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-warning.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5); }
 
 .btn-outline-danger {
@@ -2985,11 +2977,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-outline-danger.disabled, .btn-outline-danger:disabled {
     color: #dc3545;
     background-color: transparent; }
-  .btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-outline-danger:not(:disabled):not(.disabled), .show > .btn-outline-danger.dropdown-toggle {
+  .btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active, .show > .btn-outline-danger.dropdown-toggle {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545; }
-    .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-outline-danger:not(:disabled):not(.disabled):focus, .show > .btn-outline-danger.dropdown-toggle:focus {
+    .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-danger.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); }
 
 .btn-outline-light {
@@ -3004,11 +2996,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-outline-light.disabled, .btn-outline-light:disabled {
     color: #f8f9fa;
     background-color: transparent; }
-  .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-outline-light:not(:disabled):not(.disabled), .show > .btn-outline-light.dropdown-toggle {
+  .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active, .show > .btn-outline-light.dropdown-toggle {
     color: #212529;
     background-color: #f8f9fa;
     border-color: #f8f9fa; }
-    .btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-outline-light:not(:disabled):not(.disabled):focus, .show > .btn-outline-light.dropdown-toggle:focus {
+    .btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-light.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
 
 .btn-outline-dark {
@@ -3023,11 +3015,11 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-outline-dark.disabled, .btn-outline-dark:disabled {
     color: #151b26;
     background-color: transparent; }
-  .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active, .affwp-affiliate-dashboard-tab.active a.btn-outline-dark:not(:disabled):not(.disabled), .show > .btn-outline-dark.dropdown-toggle {
+  .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active, .show > .btn-outline-dark.dropdown-toggle {
     color: #fff;
     background-color: #151b26;
     border-color: #151b26; }
-    .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus, .affwp-affiliate-dashboard-tab.active a.btn-outline-dark:not(:disabled):not(.disabled):focus, .show > .btn-outline-dark.dropdown-toggle:focus {
+    .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(21, 27, 38, 0.5); }
 
 .btn-link {
@@ -3291,7 +3283,7 @@ input[type="button"].edd-submit,
     color: #16181b;
     text-decoration: none;
     background-color: #e9ecef; }
-  .dropdown-item.active, .affwp-affiliate-dashboard-tab.active a.dropdown-item, .dropdown-item:active {
+  .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
     background-color: #007bff; }
@@ -3396,18 +3388,11 @@ input[type="button"].edd-submit,
     #edd_checkout_form_wrap .edd-cart-adjustment .btn-group > .edd-apply-discount.edd-submit:active, .affwp-form .btn-group > .button[type="submit"]:active, .bbpress-wrapper#bbpress-forums .btn-group > .button.submit:active,
     .bbpress-wrapper#bbpress-forums .btn-group > input.button:active, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .button:active, .widget_display_search #bbp-search-form .btn-group > #bbp_search_submit:active, .nf-form-wrap .nf-form-content .btn-group > button:active,
     .nf-form-wrap .nf-form-content .btn-group > input[type="button"]:active,
-    .nf-form-wrap .nf-form-content .btn-group > input[type="submit"]:active, .btn-group > .btn.active, form.post-password-form .btn-group > input.active[type="submit"], .wp-block-button .btn-group > .active.wp-block-button__link, .wp-block-button .affwp-affiliate-dashboard-tab.active .btn-group > a.wp-block-button__link, .affwp-affiliate-dashboard-tab.active .wp-block-button .btn-group > a.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .btn-group > .active.added_to_cart, .wc-block-grid__products .wc-block-grid__product .affwp-affiliate-dashboard-tab.active .btn-group > a.added_to_cart, .affwp-affiliate-dashboard-tab.active .wc-block-grid__products .wc-block-grid__product .btn-group > a.added_to_cart, .woocommerce ul.products li.product .btn-group > .active.button, .woocommerce ul.products li.product .affwp-affiliate-dashboard-tab.active .btn-group > a.button, .affwp-affiliate-dashboard-tab.active .woocommerce ul.products li.product .btn-group > a.button, .woocommerce ul.products li.product .btn-group > .active.added_to_cart, .woocommerce ul.products li.product .affwp-affiliate-dashboard-tab.active .btn-group > a.added_to_cart, .affwp-affiliate-dashboard-tab.active .woocommerce ul.products li.product .btn-group > a.added_to_cart, #footer-full-content
+    .nf-form-wrap .nf-form-content .btn-group > input[type="submit"]:active, .btn-group > .btn.active, form.post-password-form .btn-group > input.active[type="submit"], .wp-block-button .btn-group > .active.wp-block-button__link, .wc-block-grid__products .wc-block-grid__product .btn-group > .active.added_to_cart, .woocommerce ul.products li.product .btn-group > .active.button, .woocommerce ul.products li.product .btn-group > .active.added_to_cart, #footer-full-content
     .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group > a.active.button, #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .affwp-affiliate-dashboard-tab.active .btn-group > a.button, .affwp-affiliate-dashboard-tab.active #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group > a.button, .wpcf7 .btn-group > input.active[type="submit"], .btn-group > .active#edd-purchase-button, .affwp-affiliate-dashboard-tab.active .btn-group > a#edd-purchase-button,
+    .woocommerce-mini-cart__buttons.buttons .btn-group > a.active.button, .wpcf7 .btn-group > input.active[type="submit"], .btn-group > .active#edd-purchase-button,
     .btn-group > .active.edd-submit,
-    .affwp-affiliate-dashboard-tab.active .btn-group > a.edd-submit,
-    #edd_checkout_form_wrap .edd-cart-adjustment .btn-group > .active.edd-apply-discount.edd-submit,
-    #edd_checkout_form_wrap .edd-cart-adjustment .affwp-affiliate-dashboard-tab.active .btn-group > a.edd-apply-discount.edd-submit,
-    .affwp-affiliate-dashboard-tab.active #edd_checkout_form_wrap .edd-cart-adjustment .btn-group > a.edd-apply-discount.edd-submit, .affwp-form .btn-group > .active.button[type="submit"], .affwp-form .affwp-affiliate-dashboard-tab.active .btn-group > a.button[type="submit"], .affwp-affiliate-dashboard-tab.active .affwp-form .btn-group > a.button[type="submit"], .affwp-affiliate-dashboard-tab.active .btn-group > a.btn, .affwp-affiliate-dashboard-tab.active .bbpress-wrapper#bbpress-forums .btn-group > a.button.submit, .bbpress-wrapper#bbpress-forums .affwp-affiliate-dashboard-tab.active .btn-group > a.button.submit, .affwp-affiliate-dashboard-tab.active .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > a.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .affwp-affiliate-dashboard-tab.active .btn-group > a.button, .affwp-affiliate-dashboard-tab.active .widget_display_search #bbp-search-form .btn-group > a#bbp_search_submit, .widget_display_search #bbp-search-form .affwp-affiliate-dashboard-tab.active .btn-group > a#bbp_search_submit, .bbpress-wrapper#bbpress-forums .btn-group > .active.button.submit,
+    #edd_checkout_form_wrap .edd-cart-adjustment .btn-group > .active.edd-apply-discount.edd-submit, .affwp-form .btn-group > .active.button[type="submit"], .bbpress-wrapper#bbpress-forums .btn-group > .active.button.submit,
     .bbpress-wrapper#bbpress-forums .btn-group > input.active.button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group > .active.button, .widget_display_search #bbp-search-form .btn-group > .active#bbp_search_submit, .nf-form-wrap .nf-form-content .btn-group > button.active,
     .nf-form-wrap .nf-form-content .btn-group > input.active[type="button"],
     .nf-form-wrap .nf-form-content .btn-group > input.active[type="submit"],
@@ -3456,44 +3441,17 @@ input[type="button"].edd-submit,
     .btn-group-vertical > .btn.active,
     form.post-password-form .btn-group-vertical > input.active[type="submit"],
     .wp-block-button .btn-group-vertical > .active.wp-block-button__link,
-    .wp-block-button .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.wp-block-button__link,
-    .affwp-affiliate-dashboard-tab.active .wp-block-button .btn-group-vertical > a.wp-block-button__link,
     .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > .active.added_to_cart,
-    .wc-block-grid__products .wc-block-grid__product .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.added_to_cart,
-    .affwp-affiliate-dashboard-tab.active .wc-block-grid__products .wc-block-grid__product .btn-group-vertical > a.added_to_cart,
     .woocommerce ul.products li.product .btn-group-vertical > .active.button,
-    .woocommerce ul.products li.product .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.button,
-    .affwp-affiliate-dashboard-tab.active .woocommerce ul.products li.product .btn-group-vertical > a.button,
     .woocommerce ul.products li.product .btn-group-vertical > .active.added_to_cart,
-    .woocommerce ul.products li.product .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.added_to_cart,
-    .affwp-affiliate-dashboard-tab.active .woocommerce ul.products li.product .btn-group-vertical > a.added_to_cart,
     #footer-full-content
     .woocommerce.widget_shopping_cart
     .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.active.button,
-    #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.button,
-    .affwp-affiliate-dashboard-tab.active #footer-full-content
-    .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .btn-group-vertical > a.button,
     .wpcf7 .btn-group-vertical > input.active[type="submit"],
     .btn-group-vertical > .active#edd-purchase-button,
-    .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a#edd-purchase-button,
     .btn-group-vertical > .active.edd-submit,
-    .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.edd-submit,
     #edd_checkout_form_wrap .edd-cart-adjustment .btn-group-vertical > .active.edd-apply-discount.edd-submit,
-    #edd_checkout_form_wrap .edd-cart-adjustment .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.edd-apply-discount.edd-submit,
-    .affwp-affiliate-dashboard-tab.active #edd_checkout_form_wrap .edd-cart-adjustment .btn-group-vertical > a.edd-apply-discount.edd-submit,
     .affwp-form .btn-group-vertical > .active.button[type="submit"],
-    .affwp-form .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.button[type="submit"],
-    .affwp-affiliate-dashboard-tab.active .affwp-form .btn-group-vertical > a.button[type="submit"],
-    .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.btn,
-    .affwp-affiliate-dashboard-tab.active .bbpress-wrapper#bbpress-forums .btn-group-vertical > a.button.submit,
-    .bbpress-wrapper#bbpress-forums .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.button.submit,
-    .affwp-affiliate-dashboard-tab.active .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > a.button,
-    .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a.button,
-    .affwp-affiliate-dashboard-tab.active .widget_display_search #bbp-search-form .btn-group-vertical > a#bbp_search_submit,
-    .widget_display_search #bbp-search-form .affwp-affiliate-dashboard-tab.active .btn-group-vertical > a#bbp_search_submit,
     .bbpress-wrapper#bbpress-forums .btn-group-vertical > .active.button.submit,
     .bbpress-wrapper#bbpress-forums .btn-group-vertical > input.active.button,
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password .btn-group-vertical > .active.button,
@@ -8403,80 +8361,67 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
     .custom-select {
       transition: none; } }
 
-.nav, #affwp-affiliate-dashboard-tabs, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation ul {
+.nav, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation ul {
   display: flex;
   flex-wrap: wrap;
   padding-right: 0;
   margin-bottom: 0;
   list-style: none; }
 
-.nav-link, .affwp-affiliate-dashboard-tab a {
+.nav-link {
   display: block;
   padding: 0.5rem 1rem; }
-  .nav-link:hover, .affwp-affiliate-dashboard-tab a:hover, .nav-link:focus, .affwp-affiliate-dashboard-tab a:focus {
+  .nav-link:hover, .nav-link:focus {
     text-decoration: none; }
-  .nav-link.disabled, .affwp-affiliate-dashboard-tab a.disabled {
+  .nav-link.disabled {
     color: #6c757d;
     pointer-events: none;
     cursor: default; }
 
-.nav-tabs, #affwp-affiliate-dashboard-tabs {
+.nav-tabs {
   border-bottom: 1px solid #dee2e6; }
-  .nav-tabs .nav-link, #affwp-affiliate-dashboard-tabs .nav-link, .nav-tabs .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab .nav-tabs a, #affwp-affiliate-dashboard-tabs .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab #affwp-affiliate-dashboard-tabs a {
+  .nav-tabs .nav-link {
     margin-bottom: -1px;
     border: 1px solid transparent;
     border-top-right-radius: 0.25rem;
     border-top-left-radius: 0.25rem; }
-    .nav-tabs .nav-link:hover, #affwp-affiliate-dashboard-tabs .nav-link:hover, .nav-tabs .affwp-affiliate-dashboard-tab a:hover, .affwp-affiliate-dashboard-tab .nav-tabs a:hover, #affwp-affiliate-dashboard-tabs .affwp-affiliate-dashboard-tab a:hover, .affwp-affiliate-dashboard-tab #affwp-affiliate-dashboard-tabs a:hover, .nav-tabs .nav-link:focus, #affwp-affiliate-dashboard-tabs .nav-link:focus, .nav-tabs .affwp-affiliate-dashboard-tab a:focus, .affwp-affiliate-dashboard-tab .nav-tabs a:focus, #affwp-affiliate-dashboard-tabs .affwp-affiliate-dashboard-tab a:focus, .affwp-affiliate-dashboard-tab #affwp-affiliate-dashboard-tabs a:focus {
+    .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
       border-color: #e9ecef #e9ecef #dee2e6; }
-    .nav-tabs .nav-link.disabled, #affwp-affiliate-dashboard-tabs .nav-link.disabled, .nav-tabs .affwp-affiliate-dashboard-tab a.disabled, .affwp-affiliate-dashboard-tab .nav-tabs a.disabled, #affwp-affiliate-dashboard-tabs .affwp-affiliate-dashboard-tab a.disabled, .affwp-affiliate-dashboard-tab #affwp-affiliate-dashboard-tabs a.disabled {
+    .nav-tabs .nav-link.disabled {
       color: #6c757d;
       background-color: transparent;
       border-color: transparent; }
-  .nav-tabs .nav-link.active, #affwp-affiliate-dashboard-tabs .nav-link.active, .nav-tabs .affwp-affiliate-dashboard-tab.active a, .affwp-affiliate-dashboard-tab.active .nav-tabs a, #affwp-affiliate-dashboard-tabs .affwp-affiliate-dashboard-tab.active a, .affwp-affiliate-dashboard-tab.active #affwp-affiliate-dashboard-tabs a, .nav-tabs .affwp-affiliate-dashboard-tab a.active, .affwp-affiliate-dashboard-tab .nav-tabs a.active, #affwp-affiliate-dashboard-tabs .affwp-affiliate-dashboard-tab a.active, .affwp-affiliate-dashboard-tab #affwp-affiliate-dashboard-tabs a.active,
-  .nav-tabs .nav-item.show .nav-link,
-  #affwp-affiliate-dashboard-tabs .nav-item.show .nav-link,
-  .nav-tabs .show.affwp-affiliate-dashboard-tab .nav-link,
-  #affwp-affiliate-dashboard-tabs .show.affwp-affiliate-dashboard-tab .nav-link,
-  .nav-tabs .nav-item.show .affwp-affiliate-dashboard-tab a,
-  .affwp-affiliate-dashboard-tab .nav-tabs .nav-item.show a,
-  #affwp-affiliate-dashboard-tabs .nav-item.show .affwp-affiliate-dashboard-tab a,
-  .affwp-affiliate-dashboard-tab #affwp-affiliate-dashboard-tabs .nav-item.show a,
-  .nav-tabs .show.affwp-affiliate-dashboard-tab a,
-  #affwp-affiliate-dashboard-tabs .show.affwp-affiliate-dashboard-tab a {
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
     color: #495057;
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff; }
-  .nav-tabs .dropdown-menu, #affwp-affiliate-dashboard-tabs .dropdown-menu {
+  .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-right-radius: 0;
     border-top-left-radius: 0; }
 
-.nav-pills .nav-link, .nav-pills .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab .nav-pills a {
+.nav-pills .nav-link {
   border-radius: 0.25rem; }
-.nav-pills .nav-link.active, .nav-pills .affwp-affiliate-dashboard-tab.active a, .affwp-affiliate-dashboard-tab.active .nav-pills a, .nav-pills .affwp-affiliate-dashboard-tab a.active, .affwp-affiliate-dashboard-tab .nav-pills a.active,
-.nav-pills .show > .nav-link,
-.nav-pills .affwp-affiliate-dashboard-tab .show > a,
-.affwp-affiliate-dashboard-tab .nav-pills .show > a {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   color: #fff;
   background-color: #007bff; }
 
-.nav-fill > .nav-link, .affwp-affiliate-dashboard-tab .nav-fill > a,
-.nav-fill .nav-item,
-.nav-fill .affwp-affiliate-dashboard-tab {
+.nav-fill > .nav-link,
+.nav-fill .nav-item {
   flex: 1 1 auto;
   text-align: center; }
 
-.nav-justified > .nav-link, .affwp-affiliate-dashboard-tab .nav-justified > a,
-.nav-justified .nav-item,
-.nav-justified .affwp-affiliate-dashboard-tab {
+.nav-justified > .nav-link,
+.nav-justified .nav-item {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center; }
 
 .tab-content > .tab-pane {
   display: none; }
-.tab-content > .active, .affwp-affiliate-dashboard-tab.active .tab-content > a {
+.tab-content > .active {
   display: block; }
 
 .navbar {
@@ -8514,7 +8459,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
   padding-right: 0;
   margin-bottom: 0;
   list-style: none; }
-  .navbar-nav .nav-link, .navbar-nav .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab .navbar-nav a {
+  .navbar-nav .nav-link {
     padding-left: 0;
     padding-right: 0; }
   .navbar-nav .dropdown-menu {
@@ -8570,7 +8515,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
       flex-direction: row; }
       .navbar-expand-sm .navbar-nav .dropdown-menu {
         position: absolute; }
-      .navbar-expand-sm .navbar-nav .nav-link, .navbar-expand-sm .navbar-nav .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab .navbar-expand-sm .navbar-nav a {
+      .navbar-expand-sm .navbar-nav .nav-link {
         padding-left: 0.5rem;
         padding-right: 0.5rem; }
     .navbar-expand-sm > .container,
@@ -8604,7 +8549,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
       flex-direction: row; }
       .navbar-expand-md .navbar-nav .dropdown-menu {
         position: absolute; }
-      .navbar-expand-md .navbar-nav .nav-link, .navbar-expand-md .navbar-nav .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab .navbar-expand-md .navbar-nav a {
+      .navbar-expand-md .navbar-nav .nav-link {
         padding-left: 0.5rem;
         padding-right: 0.5rem; }
     .navbar-expand-md > .container,
@@ -8638,7 +8583,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
       flex-direction: row; }
       .navbar-expand-lg .navbar-nav .dropdown-menu {
         position: absolute; }
-      .navbar-expand-lg .navbar-nav .nav-link, .navbar-expand-lg .navbar-nav .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab .navbar-expand-lg .navbar-nav a {
+      .navbar-expand-lg .navbar-nav .nav-link {
         padding-left: 0.5rem;
         padding-right: 0.5rem; }
     .navbar-expand-lg > .container,
@@ -8672,7 +8617,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
       flex-direction: row; }
       .navbar-expand-xl .navbar-nav .dropdown-menu {
         position: absolute; }
-      .navbar-expand-xl .navbar-nav .nav-link, .navbar-expand-xl .navbar-nav .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab .navbar-expand-xl .navbar-nav a {
+      .navbar-expand-xl .navbar-nav .nav-link {
         padding-left: 0.5rem;
         padding-right: 0.5rem; }
     .navbar-expand-xl > .container,
@@ -8704,7 +8649,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
     flex-direction: row; }
     .navbar-expand .navbar-nav .dropdown-menu {
       position: absolute; }
-    .navbar-expand .navbar-nav .nav-link, .navbar-expand .navbar-nav .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab .navbar-expand .navbar-nav a {
+    .navbar-expand .navbar-nav .nav-link {
       padding-left: 0.5rem;
       padding-right: 0.5rem; }
   .navbar-expand > .container,
@@ -8726,28 +8671,16 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
   color: rgba(0, 0, 0, 0.9); }
   .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
     color: rgba(0, 0, 0, 0.9); }
-.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab .navbar-light .navbar-nav a {
+.navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.5); }
-  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .affwp-affiliate-dashboard-tab a:hover, .affwp-affiliate-dashboard-tab .navbar-light .navbar-nav a:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .affwp-affiliate-dashboard-tab a:focus, .affwp-affiliate-dashboard-tab .navbar-light .navbar-nav a:focus {
+  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
     color: rgba(0, 0, 0, 0.7); }
-  .navbar-light .navbar-nav .nav-link.disabled, .navbar-light .navbar-nav .affwp-affiliate-dashboard-tab a.disabled, .affwp-affiliate-dashboard-tab .navbar-light .navbar-nav a.disabled {
+  .navbar-light .navbar-nav .nav-link.disabled {
     color: rgba(0, 0, 0, 0.3); }
-.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .affwp-affiliate-dashboard-tab .show > a, .affwp-affiliate-dashboard-tab .navbar-light .navbar-nav .show > a,
+.navbar-light .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .active > .nav-link,
-.navbar-light .navbar-nav .affwp-affiliate-dashboard-tab.active a > .nav-link,
-.affwp-affiliate-dashboard-tab.active .navbar-light .navbar-nav a > .nav-link,
-.navbar-light .navbar-nav .affwp-affiliate-dashboard-tab .active > a,
-.affwp-affiliate-dashboard-tab .navbar-light .navbar-nav .active > a,
-.navbar-light .navbar-nav .affwp-affiliate-dashboard-tab.active a > a,
-.affwp-affiliate-dashboard-tab.active .navbar-light .navbar-nav a > a,
 .navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .affwp-affiliate-dashboard-tab a.show,
-.affwp-affiliate-dashboard-tab .navbar-light .navbar-nav a.show,
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .affwp-affiliate-dashboard-tab.active a,
-.affwp-affiliate-dashboard-tab.active .navbar-light .navbar-nav a,
-.navbar-light .navbar-nav .affwp-affiliate-dashboard-tab a.active,
-.affwp-affiliate-dashboard-tab .navbar-light .navbar-nav a.active {
+.navbar-light .navbar-nav .nav-link.active {
   color: rgba(0, 0, 0, 0.9); }
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
@@ -8765,28 +8698,16 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
   color: #fff; }
   .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
     color: #fff; }
-.navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab .navbar-dark .navbar-nav a {
+.navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.5); }
-  .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab a:hover, .affwp-affiliate-dashboard-tab .navbar-dark .navbar-nav a:hover, .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab a:focus, .affwp-affiliate-dashboard-tab .navbar-dark .navbar-nav a:focus {
+  .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
     color: rgba(255, 255, 255, 0.75); }
-  .navbar-dark .navbar-nav .nav-link.disabled, .navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab a.disabled, .affwp-affiliate-dashboard-tab .navbar-dark .navbar-nav a.disabled {
+  .navbar-dark .navbar-nav .nav-link.disabled {
     color: rgba(255, 255, 255, 0.25); }
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab .show > a, .affwp-affiliate-dashboard-tab .navbar-dark .navbar-nav .show > a,
+.navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .active > .nav-link,
-.navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab.active a > .nav-link,
-.affwp-affiliate-dashboard-tab.active .navbar-dark .navbar-nav a > .nav-link,
-.navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab .active > a,
-.affwp-affiliate-dashboard-tab .navbar-dark .navbar-nav .active > a,
-.navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab.active a > a,
-.affwp-affiliate-dashboard-tab.active .navbar-dark .navbar-nav a > a,
 .navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab a.show,
-.affwp-affiliate-dashboard-tab .navbar-dark .navbar-nav a.show,
-.navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab.active a,
-.affwp-affiliate-dashboard-tab.active .navbar-dark .navbar-nav a,
-.navbar-dark .navbar-nav .affwp-affiliate-dashboard-tab a.active,
-.affwp-affiliate-dashboard-tab .navbar-dark .navbar-nav a.active {
+.navbar-dark .navbar-nav .nav-link.active {
   color: #fff; }
 .navbar-dark .navbar-toggler {
   color: rgba(255, 255, 255, 0.5);
@@ -8992,7 +8913,7 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
   text-decoration: underline; }
 .breadcrumb-item + .breadcrumb-item:hover::before {
   text-decoration: none; }
-.breadcrumb-item.active, .affwp-affiliate-dashboard-tab.active a.breadcrumb-item {
+.breadcrumb-item.active {
   color: #6c757d; }
 
 .pagination, .woocommerce nav.woocommerce-pagination ul.page-numbers, #edd_download_pagination, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links {
@@ -9041,18 +8962,12 @@ form.post-password-form .input-group > .input-group-prepend:first-child > input[
 .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child a.page-numbers, .page-item:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .page-item:last-child .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child #edd_download_pagination .page-numbers, #edd_download_pagination .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child .page-numbers, .page-item:last-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li:last-child .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-item:last-child .page-link {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
-.page-item.active .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .page-link, .affwp-affiliate-dashboard-tab.active a.page-item .page-link, .page-item.active .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item.active span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active span.page-numbers, .affwp-affiliate-dashboard-tab.active a.page-item .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .affwp-affiliate-dashboard-tab.active a.page-item span.page-numbers, .affwp-affiliate-dashboard-tab.active .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links a.page-item .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .affwp-affiliate-dashboard-tab.active .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links a.page-item span.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .affwp-affiliate-dashboard-tab.active a.page-item .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .affwp-affiliate-dashboard-tab.active a.page-item span.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item span.page-numbers,
+.page-item.active .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .page-link, .page-item.active .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item.active span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active span.page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item .woocommerce nav.woocommerce-pagination ul.page-numbers li span.page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item span.page-numbers,
 .page-item.active .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
 .woocommerce nav.woocommerce-pagination ul.page-numbers li .page-item.active a.page-numbers,
 .woocommerce nav.woocommerce-pagination ul.page-numbers li.active a.page-numbers,
-.affwp-affiliate-dashboard-tab.active a.page-item .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .affwp-affiliate-dashboard-tab.active a.page-item a.page-numbers,
-.affwp-affiliate-dashboard-tab.active .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links a.page-item .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .affwp-affiliate-dashboard-tab.active .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links a.page-item a.page-numbers,
-.bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .affwp-affiliate-dashboard-tab.active a.page-item .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .affwp-affiliate-dashboard-tab.active a.page-item a.page-numbers,
 .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item .woocommerce nav.woocommerce-pagination ul.page-numbers li a.page-numbers,
-.woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item a.page-numbers, .page-item.active #edd_download_pagination .page-numbers, #edd_download_pagination .page-item.active .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .page-numbers, .affwp-affiliate-dashboard-tab.active a.page-item #edd_download_pagination .page-numbers, #edd_download_pagination .affwp-affiliate-dashboard-tab.active a.page-item .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item #edd_download_pagination .page-numbers, #edd_download_pagination .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item .page-numbers, .page-item.active .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .page-link, .affwp-affiliate-dashboard-tab.active a.page-item .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .affwp-affiliate-dashboard-tab.active .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links a.page-item .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .affwp-affiliate-dashboard-tab.active a.page-item .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item .page-link {
+.woocommerce nav.woocommerce-pagination ul.page-numbers li .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item a.page-numbers, .page-item.active #edd_download_pagination .page-numbers, #edd_download_pagination .page-item.active .page-numbers, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active #edd_download_pagination .page-numbers, #edd_download_pagination .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .page-numbers, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item #edd_download_pagination .page-numbers, #edd_download_pagination .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item .page-numbers, .page-item.active .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .woocommerce nav.woocommerce-pagination ul.page-numbers li.active .page-link, .bbpress-wrapper#bbpress-forums .bbp-pagination .bbp-pagination-links .active.page-item .page-link {
   z-index: 3;
   color: #fff;
   background-color: #007bff;
@@ -9444,14 +9359,14 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
     color: #6c757d;
     pointer-events: none;
     background-color: #fff; }
-  .list-group-item.active, .affwp-affiliate-dashboard-tab.active a.list-group-item {
+  .list-group-item.active {
     z-index: 2;
     color: #fff;
     background-color: #007bff;
     border-color: #007bff; }
   .list-group-item + .list-group-item {
     border-top-width: 0; }
-    .list-group-item + .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-item + a.list-group-item {
+    .list-group-item + .list-group-item.active {
       margin-top: -1px;
       border-top-width: 1px; }
 
@@ -9463,12 +9378,12 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .list-group-horizontal > .list-group-item:last-child {
     border-top-left-radius: 0.25rem;
     border-bottom-right-radius: 0; }
-  .list-group-horizontal > .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-horizontal > a.list-group-item {
+  .list-group-horizontal > .list-group-item.active {
     margin-top: 0; }
   .list-group-horizontal > .list-group-item + .list-group-item {
     border-top-width: 1px;
     border-right-width: 0; }
-    .list-group-horizontal > .list-group-item + .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-horizontal > .list-group-item + a.list-group-item {
+    .list-group-horizontal > .list-group-item + .list-group-item.active {
       margin-right: -1px;
       border-right-width: 1px; }
 
@@ -9481,12 +9396,12 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
     .list-group-horizontal-sm > .list-group-item:last-child {
       border-top-left-radius: 0.25rem;
       border-bottom-right-radius: 0; }
-    .list-group-horizontal-sm > .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-horizontal-sm > a.list-group-item {
+    .list-group-horizontal-sm > .list-group-item.active {
       margin-top: 0; }
     .list-group-horizontal-sm > .list-group-item + .list-group-item {
       border-top-width: 1px;
       border-right-width: 0; }
-      .list-group-horizontal-sm > .list-group-item + .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-horizontal-sm > .list-group-item + a.list-group-item {
+      .list-group-horizontal-sm > .list-group-item + .list-group-item.active {
         margin-right: -1px;
         border-right-width: 1px; } }
 @media (min-width: 768px) {
@@ -9498,12 +9413,12 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
     .list-group-horizontal-md > .list-group-item:last-child {
       border-top-left-radius: 0.25rem;
       border-bottom-right-radius: 0; }
-    .list-group-horizontal-md > .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-horizontal-md > a.list-group-item {
+    .list-group-horizontal-md > .list-group-item.active {
       margin-top: 0; }
     .list-group-horizontal-md > .list-group-item + .list-group-item {
       border-top-width: 1px;
       border-right-width: 0; }
-      .list-group-horizontal-md > .list-group-item + .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-horizontal-md > .list-group-item + a.list-group-item {
+      .list-group-horizontal-md > .list-group-item + .list-group-item.active {
         margin-right: -1px;
         border-right-width: 1px; } }
 @media (min-width: 992px) {
@@ -9515,12 +9430,12 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
     .list-group-horizontal-lg > .list-group-item:last-child {
       border-top-left-radius: 0.25rem;
       border-bottom-right-radius: 0; }
-    .list-group-horizontal-lg > .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-horizontal-lg > a.list-group-item {
+    .list-group-horizontal-lg > .list-group-item.active {
       margin-top: 0; }
     .list-group-horizontal-lg > .list-group-item + .list-group-item {
       border-top-width: 1px;
       border-right-width: 0; }
-      .list-group-horizontal-lg > .list-group-item + .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-horizontal-lg > .list-group-item + a.list-group-item {
+      .list-group-horizontal-lg > .list-group-item + .list-group-item.active {
         margin-right: -1px;
         border-right-width: 1px; } }
 @media (min-width: 1200px) {
@@ -9532,12 +9447,12 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
     .list-group-horizontal-xl > .list-group-item:last-child {
       border-top-left-radius: 0.25rem;
       border-bottom-right-radius: 0; }
-    .list-group-horizontal-xl > .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-horizontal-xl > a.list-group-item {
+    .list-group-horizontal-xl > .list-group-item.active {
       margin-top: 0; }
     .list-group-horizontal-xl > .list-group-item + .list-group-item {
       border-top-width: 1px;
       border-right-width: 0; }
-      .list-group-horizontal-xl > .list-group-item + .list-group-item.active, .affwp-affiliate-dashboard-tab.active .list-group-horizontal-xl > .list-group-item + a.list-group-item {
+      .list-group-horizontal-xl > .list-group-item + .list-group-item.active {
         margin-right: -1px;
         border-right-width: 1px; } }
 .list-group-flush {
@@ -9553,7 +9468,7 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {
     color: #004085;
     background-color: #9fcdff; }
-  .list-group-item-primary.list-group-item-action.active, .affwp-affiliate-dashboard-tab.active a.list-group-item-primary.list-group-item-action {
+  .list-group-item-primary.list-group-item-action.active {
     color: #fff;
     background-color: #004085;
     border-color: #004085; }
@@ -9564,7 +9479,7 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
     color: #383d41;
     background-color: #c8cbcf; }
-  .list-group-item-secondary.list-group-item-action.active, .affwp-affiliate-dashboard-tab.active a.list-group-item-secondary.list-group-item-action {
+  .list-group-item-secondary.list-group-item-action.active {
     color: #fff;
     background-color: #383d41;
     border-color: #383d41; }
@@ -9575,7 +9490,7 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .list-group-item-success.list-group-item-action:hover, .list-group-item-success.list-group-item-action:focus {
     color: #0d462c;
     background-color: #aed4c3; }
-  .list-group-item-success.list-group-item-action.active, .affwp-affiliate-dashboard-tab.active a.list-group-item-success.list-group-item-action {
+  .list-group-item-success.list-group-item-action.active {
     color: #fff;
     background-color: #0d462c;
     border-color: #0d462c; }
@@ -9586,7 +9501,7 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .list-group-item-info.list-group-item-action:hover, .list-group-item-info.list-group-item-action:focus {
     color: #0c5460;
     background-color: #abdde5; }
-  .list-group-item-info.list-group-item-action.active, .affwp-affiliate-dashboard-tab.active a.list-group-item-info.list-group-item-action {
+  .list-group-item-info.list-group-item-action.active {
     color: #fff;
     background-color: #0c5460;
     border-color: #0c5460; }
@@ -9597,7 +9512,7 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .list-group-item-warning.list-group-item-action:hover, .list-group-item-warning.list-group-item-action:focus {
     color: #856404;
     background-color: #ffe8a1; }
-  .list-group-item-warning.list-group-item-action.active, .affwp-affiliate-dashboard-tab.active a.list-group-item-warning.list-group-item-action {
+  .list-group-item-warning.list-group-item-action.active {
     color: #fff;
     background-color: #856404;
     border-color: #856404; }
@@ -9608,7 +9523,7 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .list-group-item-danger.list-group-item-action:hover, .list-group-item-danger.list-group-item-action:focus {
     color: #721c24;
     background-color: #f1b0b7; }
-  .list-group-item-danger.list-group-item-action.active, .affwp-affiliate-dashboard-tab.active a.list-group-item-danger.list-group-item-action {
+  .list-group-item-danger.list-group-item-action.active {
     color: #fff;
     background-color: #721c24;
     border-color: #721c24; }
@@ -9619,7 +9534,7 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .list-group-item-light.list-group-item-action:hover, .list-group-item-light.list-group-item-action:focus {
     color: #818182;
     background-color: #ececf6; }
-  .list-group-item-light.list-group-item-action.active, .affwp-affiliate-dashboard-tab.active a.list-group-item-light.list-group-item-action {
+  .list-group-item-light.list-group-item-action.active {
     color: #fff;
     background-color: #818182;
     border-color: #818182; }
@@ -9630,7 +9545,7 @@ a.button .badge, .wpcf7 input[type="submit"] .badge, #edd-purchase-button .badge
   .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
     color: #0b0e14;
     background-color: #b0b2b6; }
-  .list-group-item-dark.list-group-item-action.active, .affwp-affiliate-dashboard-tab.active a.list-group-item-dark.list-group-item-action {
+  .list-group-item-dark.list-group-item-action.active {
     color: #fff;
     background-color: #0b0e14;
     border-color: #0b0e14; }
@@ -10084,42 +9999,36 @@ a.close.disabled {
     .carousel-item {
       transition: none; } }
 
-.carousel-item.active, .affwp-affiliate-dashboard-tab.active a.carousel-item,
+.carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
   display: block; }
 
 .carousel-item-next:not(.carousel-item-left),
-.active.carousel-item-right,
-.affwp-affiliate-dashboard-tab.active a.carousel-item-right {
+.active.carousel-item-right {
   transform: translateX(-100%); }
 
 .carousel-item-prev:not(.carousel-item-right),
-.active.carousel-item-left,
-.affwp-affiliate-dashboard-tab.active a.carousel-item-left {
+.active.carousel-item-left {
   transform: translateX(100%); }
 
 .carousel-fade .carousel-item {
   opacity: 0;
   transition-property: opacity;
   transform: none; }
-.carousel-fade .carousel-item.active, .carousel-fade .affwp-affiliate-dashboard-tab.active a.carousel-item, .affwp-affiliate-dashboard-tab.active .carousel-fade a.carousel-item,
+.carousel-fade .carousel-item.active,
 .carousel-fade .carousel-item-next.carousel-item-left,
 .carousel-fade .carousel-item-prev.carousel-item-right {
   z-index: 1;
   opacity: 1; }
-.carousel-fade .active.carousel-item-left, .carousel-fade .affwp-affiliate-dashboard-tab.active a.carousel-item-left, .affwp-affiliate-dashboard-tab.active .carousel-fade a.carousel-item-left,
-.carousel-fade .active.carousel-item-right,
-.carousel-fade .affwp-affiliate-dashboard-tab.active a.carousel-item-right,
-.affwp-affiliate-dashboard-tab.active .carousel-fade a.carousel-item-right {
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
   z-index: 0;
   opacity: 0;
   transition: opacity 0s 0.6s; }
   @media (prefers-reduced-motion: reduce) {
-    .carousel-fade .active.carousel-item-left, .carousel-fade .affwp-affiliate-dashboard-tab.active a.carousel-item-left, .affwp-affiliate-dashboard-tab.active .carousel-fade a.carousel-item-left,
-    .carousel-fade .active.carousel-item-right,
-    .carousel-fade .affwp-affiliate-dashboard-tab.active a.carousel-item-right,
-    .affwp-affiliate-dashboard-tab.active .carousel-fade a.carousel-item-right {
+    .carousel-fade .active.carousel-item-left,
+    .carousel-fade .active.carousel-item-right {
       transition: none; } }
 
 .carousel-control-prev,
@@ -10197,7 +10106,7 @@ a.close.disabled {
     @media (prefers-reduced-motion: reduce) {
       .carousel-indicators li {
         transition: none; } }
-  .carousel-indicators .active, .carousel-indicators .affwp-affiliate-dashboard-tab.active a, .affwp-affiliate-dashboard-tab.active .carousel-indicators a {
+  .carousel-indicators .active {
     opacity: 1; }
 
 .carousel-caption {
@@ -13514,7 +13423,7 @@ img,
   @media (max-width: 991.98px) {
     #wrapper-navbar .navbar .c-nav__social .c-nav__social-icon {
       margin-left: 1rem; } }
-#wrapper-navbar .navbar .nav-link i, #wrapper-navbar .navbar .affwp-affiliate-dashboard-tab a i, .affwp-affiliate-dashboard-tab #wrapper-navbar .navbar a i {
+#wrapper-navbar .navbar .nav-link i {
   font-size: 1.05rem; }
 #wrapper-navbar .navbar .cart-customlocation .fa-shopping-cart {
   margin-left: 0.2rem; }
@@ -13528,25 +13437,17 @@ img,
 #wrapper-navbar.fixed-top {
   position: -ms-device-fixed; }
 
-#wrapper-navbar nav.navbar-dark a.nav-link, #wrapper-navbar nav.navbar-dark .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab #wrapper-navbar nav.navbar-dark a,
-#wrapper-navbar nav div.navbar-dark a.nav-link,
-#wrapper-navbar nav div.navbar-dark .affwp-affiliate-dashboard-tab a,
-.affwp-affiliate-dashboard-tab #wrapper-navbar nav div.navbar-dark a {
+#wrapper-navbar nav.navbar-dark a.nav-link,
+#wrapper-navbar nav div.navbar-dark a.nav-link {
   color: white; }
-  #wrapper-navbar nav.navbar-dark a.nav-link:hover, #wrapper-navbar nav.navbar-dark .affwp-affiliate-dashboard-tab a:hover, .affwp-affiliate-dashboard-tab #wrapper-navbar nav.navbar-dark a:hover,
-  #wrapper-navbar nav div.navbar-dark a.nav-link:hover,
-  #wrapper-navbar nav div.navbar-dark .affwp-affiliate-dashboard-tab a:hover,
-  .affwp-affiliate-dashboard-tab #wrapper-navbar nav div.navbar-dark a:hover {
+  #wrapper-navbar nav.navbar-dark a.nav-link:hover,
+  #wrapper-navbar nav div.navbar-dark a.nav-link:hover {
     color: rgba(255, 255, 255, 0.8); }
-#wrapper-navbar nav.navbar-light a.nav-link, #wrapper-navbar nav.navbar-light .affwp-affiliate-dashboard-tab a, .affwp-affiliate-dashboard-tab #wrapper-navbar nav.navbar-light a,
-#wrapper-navbar nav div.navbar-light a.nav-link,
-#wrapper-navbar nav div.navbar-light .affwp-affiliate-dashboard-tab a,
-.affwp-affiliate-dashboard-tab #wrapper-navbar nav div.navbar-light a {
+#wrapper-navbar nav.navbar-light a.nav-link,
+#wrapper-navbar nav div.navbar-light a.nav-link {
   color: black; }
-  #wrapper-navbar nav.navbar-light a.nav-link:hover, #wrapper-navbar nav.navbar-light .affwp-affiliate-dashboard-tab a:hover, .affwp-affiliate-dashboard-tab #wrapper-navbar nav.navbar-light a:hover,
-  #wrapper-navbar nav div.navbar-light a.nav-link:hover,
-  #wrapper-navbar nav div.navbar-light .affwp-affiliate-dashboard-tab a:hover,
-  .affwp-affiliate-dashboard-tab #wrapper-navbar nav div.navbar-light a:hover {
+  #wrapper-navbar nav.navbar-light a.nav-link:hover,
+  #wrapper-navbar nav div.navbar-light a.nav-link:hover {
     color: rgba(0, 0, 0, 0.8); }
 
 .admin-bar #csearchModal {
@@ -13760,29 +13661,18 @@ section p.subtitle {
 .card-title {
   color: inherit; }
 
-.list-group-item.active .h1, .affwp-affiliate-dashboard-tab.active a.list-group-item .h1,
+.list-group-item.active .h1,
 .list-group-item.active .h2,
-.affwp-affiliate-dashboard-tab.active a.list-group-item .h2,
 .list-group-item.active .h3,
-.affwp-affiliate-dashboard-tab.active a.list-group-item .h3,
 .list-group-item.active .h4,
-.affwp-affiliate-dashboard-tab.active a.list-group-item .h4,
 .list-group-item.active .h5,
-.affwp-affiliate-dashboard-tab.active a.list-group-item .h5,
 .list-group-item.active .h6,
-.affwp-affiliate-dashboard-tab.active a.list-group-item .h6,
 .list-group-item.active h1,
-.affwp-affiliate-dashboard-tab.active a.list-group-item h1,
 .list-group-item.active h2,
-.affwp-affiliate-dashboard-tab.active a.list-group-item h2,
 .list-group-item.active h3,
-.affwp-affiliate-dashboard-tab.active a.list-group-item h3,
 .list-group-item.active h4,
-.affwp-affiliate-dashboard-tab.active a.list-group-item h4,
 .list-group-item.active h5,
-.affwp-affiliate-dashboard-tab.active a.list-group-item h5,
-.list-group-item.active h6,
-.affwp-affiliate-dashboard-tab.active a.list-group-item h6 {
+.list-group-item.active h6 {
   color: inherit; }
 
 #error-404-wrapper #main form#searchform,
@@ -15136,6 +15026,17 @@ table#edd_user_history {
   margin-top: 0; }
 #edd_profile_editor_form #edd_profile_editor_submit {
   margin: 1rem 0; }
+
+#affwp-affiliate-dashboard .nav-tabs {
+  margin-bottom: 1.5rem; }
+  #affwp-affiliate-dashboard .nav-tabs .responsivetabs-more .dropdown-toggle {
+    padding: .5rem 1rem;
+    display: block; }
+    #affwp-affiliate-dashboard .nav-tabs .responsivetabs-more .dropdown-toggle::after {
+      display: none; }
+    #affwp-affiliate-dashboard .nav-tabs .responsivetabs-more .dropdown-toggle i {
+      font-size: 20px;
+      vertical-align: middle; }
 
 @media (min-width: 576px) {
   .bbpress-wrapper#bbpress-forums ul.bbp-forums,
