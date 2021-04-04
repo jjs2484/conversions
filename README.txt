@@ -24,6 +24,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * New: Bootstrap Responsive Tabs script.
 * New: Action hook conversions_before_cta.
 * New: Action hook conversions_cta_content.
+* New: Filter conversions_cta_content_filter.
 * New: Action hook conversions_after_page_hero_title.
 * New: Action hook conversions_after_post_hero_title.
 * Update: Move some CTA stuff to functions in inc/Cta.php

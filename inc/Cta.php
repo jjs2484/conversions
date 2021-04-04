@@ -69,6 +69,12 @@ class Cta {
 		<?php
 		$content = ob_get_contents();
 		ob_clean();
+
+		// Apply filter if exists.
+		if ( has_filter( 'conversions_cta_content_filter' ) ) {
+			$content = apply_filters( 'conversions_cta_content_filter', $content );
+		}
+
 		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
