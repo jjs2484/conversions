@@ -2,7 +2,15 @@
 .affwp-form {
     .button[type="submit"] {
         @extend .btn;
+		@extend .btn-primary;
     }
+}
+
+// Generate URL button
+.affwp-referral-url-submit-wrap {
+	.button[type="submit"] {
+		@extend .btn-block;
+	}
 }
 
 // Dashboard nav
@@ -26,5 +34,20 @@
 				}
 			}
 		}
+	}
+}
+
+// Register and login form two columns
+#affwp-register-form {
+	@media (max-width: 991.98px) {
+		width: 46%;
+		float: left;
+		margin-right: 6%;
+	}
+}
+#affwp-login-form {
+	@media (max-width: 991.98px) { 
+		width: 46%;
+		float: left;
 	}
 }

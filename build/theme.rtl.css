@@ -2623,7 +2623,7 @@ fieldset:disabled .widget_display_search #bbp-search-form a#bbp_search_submit,
 .btn-primary, form.post-password-form input[type="submit"], #footer-full-content
 .woocommerce.widget_shopping_cart
 .woocommerce-mini-cart__buttons.buttons
-a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
+a.button, .wpcf7 input[type="submit"], .affwp-form .button[type="submit"], .nf-form-wrap .nf-form-content button,
 .nf-form-wrap .nf-form-content input[type="button"],
 .nf-form-wrap .nf-form-content input[type="submit"] {
   color: #fff;
@@ -2632,7 +2632,7 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-primary:hover, form.post-password-form input[type="submit"]:hover, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.button:hover, .wpcf7 input[type="submit"]:hover, .nf-form-wrap .nf-form-content button:hover,
+  a.button:hover, .wpcf7 input[type="submit"]:hover, .affwp-form .button[type="submit"]:hover, .nf-form-wrap .nf-form-content button:hover,
   .nf-form-wrap .nf-form-content input[type="button"]:hover,
   .nf-form-wrap .nf-form-content input[type="submit"]:hover {
     color: #fff;
@@ -2641,12 +2641,12 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-primary:focus, form.post-password-form input[type="submit"]:focus, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.button:focus, .wpcf7 input[type="submit"]:focus, .nf-form-wrap .nf-form-content button:focus,
+  a.button:focus, .wpcf7 input[type="submit"]:focus, .affwp-form .button[type="submit"]:focus, .nf-form-wrap .nf-form-content button:focus,
   .nf-form-wrap .nf-form-content input[type="button"]:focus,
   .nf-form-wrap .nf-form-content input[type="submit"]:focus, .btn-primary.focus, form.post-password-form input.focus[type="submit"], #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.focus.button, .wpcf7 input.focus[type="submit"], .nf-form-wrap .nf-form-content button.focus,
+  a.focus.button, .wpcf7 input.focus[type="submit"], .affwp-form .focus.button[type="submit"], .nf-form-wrap .nf-form-content button.focus,
   .nf-form-wrap .nf-form-content input.focus[type="button"],
   .nf-form-wrap .nf-form-content input.focus[type="submit"] {
     color: #fff;
@@ -2656,12 +2656,12 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-primary.disabled, form.post-password-form input.disabled[type="submit"], #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.disabled.button, .wpcf7 input.disabled[type="submit"], .nf-form-wrap .nf-form-content button.disabled,
+  a.disabled.button, .wpcf7 input.disabled[type="submit"], .affwp-form .disabled.button[type="submit"], .nf-form-wrap .nf-form-content button.disabled,
   .nf-form-wrap .nf-form-content input.disabled[type="button"],
   .nf-form-wrap .nf-form-content input.disabled[type="submit"], .btn-primary:disabled, form.post-password-form input[type="submit"]:disabled, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.button:disabled, .wpcf7 input[type="submit"]:disabled, .nf-form-wrap .nf-form-content button:disabled,
+  a.button:disabled, .wpcf7 input[type="submit"]:disabled, .affwp-form .button[type="submit"]:disabled, .nf-form-wrap .nf-form-content button:disabled,
   .nf-form-wrap .nf-form-content input[type="button"]:disabled,
   .nf-form-wrap .nf-form-content input[type="submit"]:disabled {
     color: #fff;
@@ -2670,16 +2670,16 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
   .btn-primary:not(:disabled):not(.disabled):active, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled):active, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.button:not(:disabled):not(.disabled):active, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled):active, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled):active,
+  a.button:not(:disabled):not(.disabled):active, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled):active, .affwp-form .button[type="submit"]:not(:disabled):not(.disabled):active, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled):active,
   .nf-form-wrap .nf-form-content input[type="button"]:not(:disabled):not(.disabled):active,
   .nf-form-wrap .nf-form-content input[type="submit"]:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active, #footer-full-content
   .woocommerce.widget_shopping_cart
   .woocommerce-mini-cart__buttons.buttons
-  a.button:not(:disabled):not(.disabled).active, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled).active,
+  a.button:not(:disabled):not(.disabled).active, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active, .affwp-form .button[type="submit"]:not(:disabled):not(.disabled).active, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled).active,
   .nf-form-wrap .nf-form-content input[type="button"]:not(:disabled):not(.disabled).active,
   .nf-form-wrap .nf-form-content input[type="submit"]:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, form.post-password-form .show > input.dropdown-toggle[type="submit"], #footer-full-content
   .woocommerce.widget_shopping_cart
-  .woocommerce-mini-cart__buttons.buttons .show > a.dropdown-toggle.button, .wpcf7 .show > input.dropdown-toggle[type="submit"], .nf-form-wrap .nf-form-content .show > button.dropdown-toggle,
+  .woocommerce-mini-cart__buttons.buttons .show > a.dropdown-toggle.button, .wpcf7 .show > input.dropdown-toggle[type="submit"], .affwp-form .show > .dropdown-toggle.button[type="submit"], .nf-form-wrap .nf-form-content .show > button.dropdown-toggle,
   .nf-form-wrap .nf-form-content .show > input.dropdown-toggle[type="button"],
   .nf-form-wrap .nf-form-content .show > input.dropdown-toggle[type="submit"] {
     color: #fff;
@@ -2688,16 +2688,16 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
     .btn-primary:not(:disabled):not(.disabled):active:focus, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled):active:focus, #footer-full-content
     .woocommerce.widget_shopping_cart
     .woocommerce-mini-cart__buttons.buttons
-    a.button:not(:disabled):not(.disabled):active:focus, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled):active:focus, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled):active:focus,
+    a.button:not(:disabled):not(.disabled):active:focus, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled):active:focus, .affwp-form .button[type="submit"]:not(:disabled):not(.disabled):active:focus, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled):active:focus,
     .nf-form-wrap .nf-form-content input[type="button"]:not(:disabled):not(.disabled):active:focus,
     .nf-form-wrap .nf-form-content input[type="submit"]:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, form.post-password-form input[type="submit"]:not(:disabled):not(.disabled).active:focus, #footer-full-content
     .woocommerce.widget_shopping_cart
     .woocommerce-mini-cart__buttons.buttons
-    a.button:not(:disabled):not(.disabled).active:focus, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active:focus, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled).active:focus,
+    a.button:not(:disabled):not(.disabled).active:focus, .wpcf7 input[type="submit"]:not(:disabled):not(.disabled).active:focus, .affwp-form .button[type="submit"]:not(:disabled):not(.disabled).active:focus, .nf-form-wrap .nf-form-content button:not(:disabled):not(.disabled).active:focus,
     .nf-form-wrap .nf-form-content input[type="button"]:not(:disabled):not(.disabled).active:focus,
     .nf-form-wrap .nf-form-content input[type="submit"]:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, form.post-password-form .show > input.dropdown-toggle[type="submit"]:focus, #footer-full-content
     .woocommerce.widget_shopping_cart
-    .woocommerce-mini-cart__buttons.buttons .show > a.dropdown-toggle.button:focus, .wpcf7 .show > input.dropdown-toggle[type="submit"]:focus, .nf-form-wrap .nf-form-content .show > button.dropdown-toggle:focus,
+    .woocommerce-mini-cart__buttons.buttons .show > a.dropdown-toggle.button:focus, .wpcf7 .show > input.dropdown-toggle[type="submit"]:focus, .affwp-form .show > .dropdown-toggle.button[type="submit"]:focus, .nf-form-wrap .nf-form-content .show > button.dropdown-toggle:focus,
     .nf-form-wrap .nf-form-content .show > input.dropdown-toggle[type="button"]:focus,
     .nf-form-wrap .nf-form-content .show > input.dropdown-toggle[type="submit"]:focus {
       box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
@@ -3066,34 +3066,42 @@ a.button, .wpcf7 input[type="submit"], .nf-form-wrap .nf-form-content button,
 .btn-block, #edd-purchase-button,
 .edd-submit,
 [type="submit"].edd-submit,
-#edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit {
+#edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit, .affwp-referral-url-submit-wrap .button[type="submit"] {
   display: block;
   width: 100%; }
   .btn-block + .btn-block, #edd-purchase-button + .btn-block,
   .edd-submit + .btn-block,
-  #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .btn-block, .btn-block + #edd-purchase-button, #edd-purchase-button + #edd-purchase-button,
+  #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .btn-block, .affwp-referral-url-submit-wrap .button[type="submit"] + .btn-block, .btn-block + #edd-purchase-button, #edd-purchase-button + #edd-purchase-button,
   .edd-submit + #edd-purchase-button,
-  #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + #edd-purchase-button,
+  #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + #edd-purchase-button, .affwp-referral-url-submit-wrap .button[type="submit"] + #edd-purchase-button,
   .btn-block + .edd-submit,
   #edd-purchase-button + .edd-submit,
   .edd-submit + .edd-submit,
   #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .edd-submit,
+  .affwp-referral-url-submit-wrap .button[type="submit"] + .edd-submit,
   #edd_checkout_form_wrap .edd-cart-adjustment .btn-block + .edd-apply-discount.edd-submit,
   #edd_checkout_form_wrap .edd-cart-adjustment #edd-purchase-button + .edd-apply-discount.edd-submit,
-  #edd_checkout_form_wrap .edd-cart-adjustment .edd-submit + .edd-apply-discount.edd-submit {
+  #edd_checkout_form_wrap .edd-cart-adjustment .edd-submit + .edd-apply-discount.edd-submit,
+  .affwp-referral-url-submit-wrap #edd_checkout_form_wrap .edd-cart-adjustment .button[type="submit"] + .edd-apply-discount.edd-submit,
+  #edd_checkout_form_wrap .edd-cart-adjustment .affwp-referral-url-submit-wrap .button[type="submit"] + .edd-apply-discount.edd-submit, .affwp-referral-url-submit-wrap .btn-block + .button[type="submit"], .affwp-referral-url-submit-wrap #edd-purchase-button + .button[type="submit"],
+  .affwp-referral-url-submit-wrap .edd-submit + .button[type="submit"],
+  #edd_checkout_form_wrap .edd-cart-adjustment .affwp-referral-url-submit-wrap .edd-apply-discount.edd-submit + .button[type="submit"],
+  .affwp-referral-url-submit-wrap #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .button[type="submit"], .affwp-referral-url-submit-wrap .button[type="submit"] + .button[type="submit"] {
     margin-top: 0.5rem; }
 
 input[type="submit"].btn-block, input[type="submit"]#edd-purchase-button,
 input[type="submit"].edd-submit,
-#edd_checkout_form_wrap .edd-cart-adjustment input[type="submit"].edd-apply-discount.edd-submit,
+#edd_checkout_form_wrap .edd-cart-adjustment input[type="submit"].edd-apply-discount.edd-submit, .affwp-referral-url-submit-wrap input[type="submit"].button,
 input[type="reset"].btn-block,
 input[type="reset"]#edd-purchase-button,
 input[type="reset"].edd-submit,
 #edd_checkout_form_wrap .edd-cart-adjustment input[type="reset"].edd-apply-discount.edd-submit,
+.affwp-referral-url-submit-wrap input[type="reset"].button[type="submit"],
 input[type="button"].btn-block,
 input[type="button"]#edd-purchase-button,
 input[type="button"].edd-submit,
-#edd_checkout_form_wrap .edd-cart-adjustment input[type="button"].edd-apply-discount.edd-submit {
+#edd_checkout_form_wrap .edd-cart-adjustment input[type="button"].edd-apply-discount.edd-submit,
+.affwp-referral-url-submit-wrap input[type="button"].button[type="submit"] {
   width: 100%; }
 
 .fade {
@@ -14797,16 +14805,23 @@ p.woocommerce-store-notice.demo_store {
     display: none !important; }
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .btn-block + .btn-block, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd-purchase-button + .btn-block,
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd-submit + .btn-block,
-  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .btn-block, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .btn-block + #edd-purchase-button, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd-purchase-button + #edd-purchase-button,
+  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .btn-block, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .affwp-referral-url-submit-wrap .button[type="submit"] + .btn-block, .affwp-referral-url-submit-wrap .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .button[type="submit"] + .btn-block, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .btn-block + #edd-purchase-button, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd-purchase-button + #edd-purchase-button,
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd-submit + #edd-purchase-button,
-  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + #edd-purchase-button,
+  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + #edd-purchase-button, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .affwp-referral-url-submit-wrap .button[type="submit"] + #edd-purchase-button, .affwp-referral-url-submit-wrap .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .button[type="submit"] + #edd-purchase-button,
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .btn-block + .edd-submit,
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd-purchase-button + .edd-submit,
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd-submit + .edd-submit,
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .edd-submit,
+  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .affwp-referral-url-submit-wrap .button[type="submit"] + .edd-submit,
+  .affwp-referral-url-submit-wrap .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .button[type="submit"] + .edd-submit,
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .btn-block + .edd-apply-discount.edd-submit,
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment #edd-purchase-button + .edd-apply-discount.edd-submit,
-  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-submit + .edd-apply-discount.edd-submit {
+  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-submit + .edd-apply-discount.edd-submit,
+  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .affwp-referral-url-submit-wrap #edd_checkout_form_wrap .edd-cart-adjustment .button[type="submit"] + .edd-apply-discount.edd-submit,
+  .affwp-referral-url-submit-wrap .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .button[type="submit"] + .edd-apply-discount.edd-submit, .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .affwp-referral-url-submit-wrap .btn-block + .button[type="submit"], .affwp-referral-url-submit-wrap .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .btn-block + .button[type="submit"], .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .affwp-referral-url-submit-wrap #edd-purchase-button + .button[type="submit"], .affwp-referral-url-submit-wrap .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd-purchase-button + .button[type="submit"],
+  .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .affwp-referral-url-submit-wrap .edd-submit + .button[type="submit"],
+  .affwp-referral-url-submit-wrap .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd-submit + .button[type="submit"],
+  .affwp-referral-url-submit-wrap .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .button[type="submit"], .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .affwp-referral-url-submit-wrap .button[type="submit"] + .button[type="submit"], .affwp-referral-url-submit-wrap .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .button[type="submit"] + .button[type="submit"] {
     margin-top: 0; }
   .single-download #edd-single-wrapper .widget-area .edd_download_purchase_form .edd_download_quantity_wrapper {
     margin: 0 0 0.75rem; }
@@ -14864,19 +14879,31 @@ p.woocommerce-store-notice.demo_store {
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + .btn-block, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd-purchase-button + .btn-block,
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-submit + .btn-block,
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .btn-block,
-        #edd_checkout_form_wrap .edd-cart-adjustment .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-apply-discount.edd-submit + .btn-block, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + #edd-purchase-button, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd-purchase-button + #edd-purchase-button,
+        #edd_checkout_form_wrap .edd-cart-adjustment .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-apply-discount.edd-submit + .btn-block, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .affwp-referral-url-submit-wrap .button[type="submit"] + .btn-block, .affwp-referral-url-submit-wrap .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .button[type="submit"] + .btn-block, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + #edd-purchase-button, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd-purchase-button + #edd-purchase-button,
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-submit + #edd-purchase-button,
-        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + #edd-purchase-button,
+        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + #edd-purchase-button, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .affwp-referral-url-submit-wrap .button[type="submit"] + #edd-purchase-button, .affwp-referral-url-submit-wrap .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .button[type="submit"] + #edd-purchase-button,
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + .edd-submit,
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd-purchase-button + .edd-submit,
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-submit + .edd-submit,
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .edd-submit,
         #edd_checkout_form_wrap .edd-cart-adjustment .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-apply-discount.edd-submit + .edd-submit,
+        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .affwp-referral-url-submit-wrap .button[type="submit"] + .edd-submit,
+        .affwp-referral-url-submit-wrap .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .button[type="submit"] + .edd-submit,
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .btn-block + .edd-apply-discount.edd-submit,
         #edd_checkout_form_wrap .edd-cart-adjustment .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + .edd-apply-discount.edd-submit,
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment #edd-purchase-button + .edd-apply-discount.edd-submit,
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-submit + .edd-apply-discount.edd-submit,
-        #edd_checkout_form_wrap .edd-cart-adjustment .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-submit + .edd-apply-discount.edd-submit {
+        #edd_checkout_form_wrap .edd-cart-adjustment .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-submit + .edd-apply-discount.edd-submit,
+        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .affwp-referral-url-submit-wrap #edd_checkout_form_wrap .edd-cart-adjustment .button[type="submit"] + .edd-apply-discount.edd-submit,
+        #edd_checkout_form_wrap .edd-cart-adjustment .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .affwp-referral-url-submit-wrap .button[type="submit"] + .edd-apply-discount.edd-submit,
+        .affwp-referral-url-submit-wrap .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .button[type="submit"] + .edd-apply-discount.edd-submit,
+        #edd_checkout_form_wrap .edd-cart-adjustment .affwp-referral-url-submit-wrap .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .button[type="submit"] + .edd-apply-discount.edd-submit, .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .affwp-referral-url-submit-wrap .btn-block + .button[type="submit"], .affwp-referral-url-submit-wrap .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .btn-block + .button[type="submit"], .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .affwp-referral-url-submit-wrap #edd-purchase-button + .button[type="submit"], .affwp-referral-url-submit-wrap .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd-purchase-button + .button[type="submit"],
+        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .affwp-referral-url-submit-wrap .edd-submit + .button[type="submit"],
+        .affwp-referral-url-submit-wrap .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-submit + .button[type="submit"],
+        .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .affwp-referral-url-submit-wrap .edd-apply-discount.edd-submit + .button[type="submit"],
+        .affwp-referral-url-submit-wrap .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit + .button[type="submit"],
+        #edd_checkout_form_wrap .edd-cart-adjustment .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .affwp-referral-url-submit-wrap .edd-apply-discount.edd-submit + .button[type="submit"],
+        .affwp-referral-url-submit-wrap #edd_checkout_form_wrap .edd-cart-adjustment .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd-apply-discount.edd-submit + .button[type="submit"], .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .affwp-referral-url-submit-wrap .button[type="submit"] + .button[type="submit"], .affwp-referral-url-submit-wrap .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .button[type="submit"] + .button[type="submit"] {
           margin-top: 0; }
         .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd_download_quantity_wrapper {
           margin: 0 0 0.75rem; }
@@ -15037,6 +15064,17 @@ table#edd_user_history {
     #affwp-affiliate-dashboard .nav-tabs .responsivetabs-more .dropdown-toggle i {
       font-size: 20px;
       vertical-align: middle; }
+
+@media (max-width: 991.98px) {
+  #affwp-register-form {
+    width: 46%;
+    float: right;
+    margin-left: 6%; } }
+
+@media (max-width: 991.98px) {
+  #affwp-login-form {
+    width: 46%;
+    float: right; } }
 
 @media (min-width: 576px) {
   .bbpress-wrapper#bbpress-forums ul.bbp-forums,
