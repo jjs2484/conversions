@@ -7045,7 +7045,7 @@
 //# sourceMappingURL=bootstrap.bundle.js.map
 
 (function( $ ) {
-			
+              
 	function storeTabs($tabs, $destination) {
 		// measure width
 		$tabs.each(function() {
@@ -7064,7 +7064,7 @@
 		var $firstTab = $tabs.first();
 
 		var individualTabHeight = $firstTab.outerHeight();
-		var tabsHeight = $element.outerHeight();
+		var tabsHeight = $element.outerHeight() - 1;
 
 		if(tabsHeight > individualTabHeight) {
 					
