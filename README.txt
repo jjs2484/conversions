@@ -35,6 +35,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Navbar button add unique id.
 * Update: Fullscreen_featured_image media query image size.
 * Update: NPM Dependencies.
+* Update: Composer Dependencies.
 
 = 1.8.1 =
 * Update: Font Awesome to 5.15.3
