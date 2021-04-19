@@ -111,4 +111,7 @@ body.no-sidebar .nf-form-content {
 		@extend .btn;
 		@extend .btn-primary;
 	}
+	.nf-form-content input.ninja-forms-field {
+		height: auto;
+	}
 }

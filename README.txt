@@ -36,6 +36,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Fullscreen_featured_image media query image size.
 * Update: NPM Dependencies.
 * Update: Composer Dependencies.
+* Fix: Ninja forms submit button height.
 
 = 1.8.1 =
 * Update: Font Awesome to 5.15.3

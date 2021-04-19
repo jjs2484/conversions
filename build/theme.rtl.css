@@ -15405,6 +15405,8 @@ body.no-sidebar .nf-form-content {
   color: #198754;
   height: 36px;
   line-height: 36px; }
+.nf-form-wrap .nf-form-content input.ninja-forms-field {
+  height: auto; }
 
 /*!
  * Hamburgers
