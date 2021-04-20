@@ -13,6 +13,14 @@ figure.woocommerce-product-gallery__wrapper {
 	border-collapse: collapse;
 }
 
+// Products loop - shop, archives, blocks.
+.wc-block-grid__products .wc-block-grid__product .woocommerce-LoopProduct-link,
+.wc-block-grid__products li.product .woocommerce-LoopProduct-link,
+ul.products .wc-block-grid__product .woocommerce-LoopProduct-link,
+ul.products li.product .woocommerce-LoopProduct-link {
+	display: block;
+}
+
 // shop page styles
 .woocommerce ul.products li.product {
 	text-align: center;

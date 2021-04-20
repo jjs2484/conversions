@@ -14440,6 +14440,12 @@ figure.woocommerce-product-gallery__wrapper {
 .woocommerce table.shop_table {
   border-collapse: collapse; }
 
+.wc-block-grid__products .wc-block-grid__product .woocommerce-LoopProduct-link,
+.wc-block-grid__products li.product .woocommerce-LoopProduct-link,
+ul.products .wc-block-grid__product .woocommerce-LoopProduct-link,
+ul.products li.product .woocommerce-LoopProduct-link {
+  display: block; }
+
 .woocommerce ul.products li.product {
   text-align: center; }
   .woocommerce ul.products li.product .price {

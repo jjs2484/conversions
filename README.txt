@@ -37,6 +37,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: NPM Dependencies.
 * Update: Composer Dependencies.
 * Fix: Ninja forms submit button height.
+* Fix: WooCommerce products loop display:block.
 
 = 1.8.1 =
 * Update: Font Awesome to 5.15.3
