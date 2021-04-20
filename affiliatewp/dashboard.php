@@ -8,7 +8,7 @@
 $active_tab = affwp_get_active_affiliate_area_tab(); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
 // phpcs:disable
 $affwp_user = affwp_get_affiliate_id();
-// phpcs:disable
+// phpcs:enable
 ?>
 
 <div id="affwp-affiliate-dashboard">
@@ -36,7 +36,7 @@ $affwp_user = affwp_get_affiliate_id();
 		 * @since 0.2
 		 * @since 1.8.2 Added the `$active_tab` parameter.
 		 *
-		 * @param int|false $affiliate_id ID for the current affiliate.
+		 * @param int|false $affwp_user ID for the current affiliate.
 		 * @param string    $active_tab   Slug for the currently-active tab.
 		 */
 		do_action( 'affwp_affiliate_dashboard_top', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
@@ -55,7 +55,7 @@ $affwp_user = affwp_get_affiliate_id();
 		 * @since 0.2
 		 * @since 1.8.2 Added the `$active_tab` parameter.
 		 *
-		 * @param int|false $affiliate_id ID for the current affiliate.
+		 * @param int|false $affwp_user ID for the current affiliate.
 		 * @param string    $active_tab   Slug for the currently-active tab.
 		 */
 		do_action( 'affwp_affiliate_dashboard_notices', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
@@ -85,7 +85,7 @@ $affwp_user = affwp_get_affiliate_id();
 			 *
 			 * @since 1.0
 			 *
-			 * @param int    $affiliate_id ID of the current affiliate.
+			 * @param int    $affwp_user ID of the current affiliate.
 			 * @param string $active_tab   Slug of the active tab.
 			 */
 			do_action( 'affwp_affiliate_dashboard_tabs', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
@@ -112,7 +112,7 @@ $affwp_user = affwp_get_affiliate_id();
 		 * @since 0.2
 		 * @since 1.8.2 Added the `$active_tab` parameter.
 		 *
-		 * @param int|false $affiliate_id ID for the current affiliate.
+		 * @param int|false $affwp_user ID for the current affiliate.
 		 * @param string    $active_tab   Slug for the currently-active tab.
 		 */
 		do_action( 'affwp_affiliate_dashboard_bottom', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
