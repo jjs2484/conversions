@@ -6,25 +6,28 @@
  */
 
 $active_tab = affwp_get_active_affiliate_area_tab(); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
+// phpcs:disable
+$affwp_user = affwp_get_affiliate_id();
+// phpcs:disable
 ?>
 
 <div id="affwp-affiliate-dashboard">
 
-	<?php if ( 'pending' == affwp_get_affiliate_status( affwp_get_affiliate_id() ) ) : ?>
+	<?php if ( 'pending' == affwp_get_affiliate_status( $affwp_user ) ) : ?>
 
 		<p class="affwp-notice"><?php esc_html_e( 'Your affiliate account is pending approval', 'conversions' ); ?></p>
 
-	<?php elseif ( 'inactive' == affwp_get_affiliate_status( affwp_get_affiliate_id() ) ) : ?>
+	<?php elseif ( 'inactive' == affwp_get_affiliate_status( $affwp_user ) ) : ?>
 
 		<p class="affwp-notice"><?php esc_html_e( 'Your affiliate account is not active', 'conversions' ); ?></p>
 
-	<?php elseif ( 'rejected' == affwp_get_affiliate_status( affwp_get_affiliate_id() ) ) : ?>
+	<?php elseif ( 'rejected' == affwp_get_affiliate_status( $affwp_user ) ) : ?>
 
 		<p class="affwp-notice"><?php esc_html_e( 'Your affiliate account request has been rejected', 'conversions' ); ?></p>
 
 	<?php endif; ?>
 
-	<?php if ( 'active' == affwp_get_affiliate_status( affwp_get_affiliate_id() ) ) : ?>
+	<?php if ( 'active' == affwp_get_affiliate_status( $affwp_user ) ) : ?>
 
 		<?php
 		/**
@@ -36,7 +39,7 @@ $active_tab = affwp_get_active_affiliate_area_tab(); // phpcs:ignore WPThemeRevi
 		 * @param int|false $affiliate_id ID for the current affiliate.
 		 * @param string    $active_tab   Slug for the currently-active tab.
 		 */
-		do_action( 'affwp_affiliate_dashboard_top', affwp_get_affiliate_id(), $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+		do_action( 'affwp_affiliate_dashboard_top', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		?>
 
 		<?php if ( ! empty( $_GET['affwp_notice'] ) && 'profile-updated' == $_GET['affwp_notice'] ) : ?>
@@ -55,7 +58,7 @@ $active_tab = affwp_get_active_affiliate_area_tab(); // phpcs:ignore WPThemeRevi
 		 * @param int|false $affiliate_id ID for the current affiliate.
 		 * @param string    $active_tab   Slug for the currently-active tab.
 		 */
-		do_action( 'affwp_affiliate_dashboard_notices', affwp_get_affiliate_id(), $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+		do_action( 'affwp_affiliate_dashboard_notices', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		?>
 
 		<ul class="c-affwp-dash-tabs nav nav-tabs">
@@ -85,7 +88,7 @@ $active_tab = affwp_get_active_affiliate_area_tab(); // phpcs:ignore WPThemeRevi
 			 * @param int    $affiliate_id ID of the current affiliate.
 			 * @param string $active_tab   Slug of the active tab.
 			 */
-			do_action( 'affwp_affiliate_dashboard_tabs', affwp_get_affiliate_id(), $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+			do_action( 'affwp_affiliate_dashboard_tabs', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 			?>
 
 			<?php if ( affiliate_wp()->settings->get( 'logout_link' ) ) : ?>
@@ -112,7 +115,7 @@ $active_tab = affwp_get_active_affiliate_area_tab(); // phpcs:ignore WPThemeRevi
 		 * @param int|false $affiliate_id ID for the current affiliate.
 		 * @param string    $active_tab   Slug for the currently-active tab.
 		 */
-		do_action( 'affwp_affiliate_dashboard_bottom', affwp_get_affiliate_id(), $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+		do_action( 'affwp_affiliate_dashboard_bottom', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		?>
 
 	<?php endif; ?>
