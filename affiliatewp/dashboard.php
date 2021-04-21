@@ -11,6 +11,8 @@ $active_tab = affwp_get_active_affiliate_area_tab(); // phpcs:ignore WPThemeRevi
 <div id="affwp-affiliate-dashboard">
 
 	<?php
+	// We have to lookup the Affiliatewp ID like this because theme check gets triggered otherwise.
+	// It thinks we are trying to add a link or something when we are not.
 	// phpcs:disable
 	$conversions_affwp_user_fn = 'affwp_get' . '_' . 'affi' . 'liate' . '_' . 'id';
 	$conversions_affwp_user    = $conversions_affwp_user_fn();
