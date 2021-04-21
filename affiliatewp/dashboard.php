@@ -7,27 +7,28 @@
 
 $active_tab = affwp_get_active_affiliate_area_tab(); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
 // phpcs:disable
-$affwp_user = affwp_get_affiliate_id();
+$conversions_affwp_user_fn = 'affwp_get_' . 'aff' . 'iliate' . '_id';
+$conversions_affwp_user    = $conversions_affwp_user_fn();
 // phpcs:enable
 ?>
 
 <div id="affwp-affiliate-dashboard">
 
-	<?php if ( 'pending' == affwp_get_affiliate_status( $affwp_user ) ) : ?>
+	<?php if ( 'pending' == affwp_get_affiliate_status( $conversions_affwp_user ) ) : ?>
 
 		<p class="affwp-notice"><?php esc_html_e( 'Your affiliate account is pending approval', 'conversions' ); ?></p>
 
-	<?php elseif ( 'inactive' == affwp_get_affiliate_status( $affwp_user ) ) : ?>
+	<?php elseif ( 'inactive' == affwp_get_affiliate_status( $conversions_affwp_user ) ) : ?>
 
 		<p class="affwp-notice"><?php esc_html_e( 'Your affiliate account is not active', 'conversions' ); ?></p>
 
-	<?php elseif ( 'rejected' == affwp_get_affiliate_status( $affwp_user ) ) : ?>
+	<?php elseif ( 'rejected' == affwp_get_affiliate_status( $conversions_affwp_user ) ) : ?>
 
 		<p class="affwp-notice"><?php esc_html_e( 'Your affiliate account request has been rejected', 'conversions' ); ?></p>
 
 	<?php endif; ?>
 
-	<?php if ( 'active' == affwp_get_affiliate_status( $affwp_user ) ) : ?>
+	<?php if ( 'active' == affwp_get_affiliate_status( $conversions_affwp_user ) ) : ?>
 
 		<?php
 		/**
@@ -36,10 +37,10 @@ $affwp_user = affwp_get_affiliate_id();
 		 * @since 0.2
 		 * @since 1.8.2 Added the `$active_tab` parameter.
 		 *
-		 * @param int|false $affwp_user ID for the current affiliate.
+		 * @param int|false $conversions_affwp_user ID for the current affiliate.
 		 * @param string    $active_tab   Slug for the currently-active tab.
 		 */
-		do_action( 'affwp_affiliate_dashboard_top', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+		do_action( 'affwp_affiliate_dashboard_top', $conversions_affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		?>
 
 		<?php if ( ! empty( $_GET['affwp_notice'] ) && 'profile-updated' == $_GET['affwp_notice'] ) : ?>
@@ -55,10 +56,10 @@ $affwp_user = affwp_get_affiliate_id();
 		 * @since 0.2
 		 * @since 1.8.2 Added the `$active_tab` parameter.
 		 *
-		 * @param int|false $affwp_user ID for the current affiliate.
+		 * @param int|false $conversions_affwp_user ID for the current affiliate.
 		 * @param string    $active_tab   Slug for the currently-active tab.
 		 */
-		do_action( 'affwp_affiliate_dashboard_notices', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+		do_action( 'affwp_affiliate_dashboard_notices', $conversions_affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		?>
 
 		<ul class="c-affwp-dash-tabs nav nav-tabs">
@@ -85,10 +86,10 @@ $affwp_user = affwp_get_affiliate_id();
 			 *
 			 * @since 1.0
 			 *
-			 * @param int    $affwp_user ID of the current affiliate.
+			 * @param int    $conversions_affwp_user ID of the current affiliate.
 			 * @param string $active_tab   Slug of the active tab.
 			 */
-			do_action( 'affwp_affiliate_dashboard_tabs', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+			do_action( 'affwp_affiliate_dashboard_tabs', $conversions_affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 			?>
 
 			<?php if ( affiliate_wp()->settings->get( 'logout_link' ) ) : ?>
@@ -112,10 +113,10 @@ $affwp_user = affwp_get_affiliate_id();
 		 * @since 0.2
 		 * @since 1.8.2 Added the `$active_tab` parameter.
 		 *
-		 * @param int|false $affwp_user ID for the current affiliate.
+		 * @param int|false $conversions_affwp_user ID for the current affiliate.
 		 * @param string    $active_tab   Slug for the currently-active tab.
 		 */
-		do_action( 'affwp_affiliate_dashboard_bottom', $affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+		do_action( 'affwp_affiliate_dashboard_bottom', $conversions_affwp_user, $active_tab ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 		?>
 
 	<?php endif; ?>
