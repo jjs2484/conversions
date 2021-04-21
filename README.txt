@@ -20,6 +20,9 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
+= 1.8.3 =
+* New: AffiliateWP support.
+
 = 1.8.2 =
 * New: Bootstrap Responsive Tabs script.
 * New: Action hook conversions_before_cta.

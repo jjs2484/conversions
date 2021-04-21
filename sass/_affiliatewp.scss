@@ -1,0 +1,53 @@
+// General buttons
+.affwp-form {
+    .button[type="submit"] {
+        @extend .btn;
+		@extend .btn-primary;
+    }
+}
+
+// Generate URL button
+.affwp-referral-url-submit-wrap {
+	.button[type="submit"] {
+		@extend .btn-block;
+	}
+}
+
+// Dashboard nav
+#affwp-affiliate-dashboard {
+	.nav-tabs {
+		margin-bottom: 1.5rem;
+
+		.responsivetabs-more {
+		
+			.dropdown-toggle {
+				padding: .5rem 1rem;
+				display: block;
+	
+				&::after {
+					display: none;
+				}
+	
+				i {
+					font-size: 20px;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+// Register and login form two columns
+#affwp-register-form {
+	@media (min-width: 768px) {
+		width: 46%;
+		float: left;
+		margin-right: 6%;
+	}
+}
+#affwp-login-form {
+	@media (min-width: 768px) { 
+		width: 46%;
+		float: left;
+	}
+}
