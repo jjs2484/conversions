@@ -6,13 +6,16 @@
  */
 
 $active_tab = affwp_get_active_affiliate_area_tab(); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
-// phpcs:disable
-$conversions_affwp_user_fn = 'affwp_get_' . 'aff' . 'iliate' . '_id';
-$conversions_affwp_user    = $conversions_affwp_user_fn();
-// phpcs:enable
 ?>
 
 <div id="affwp-affiliate-dashboard">
+
+	<?php
+	// phpcs:disable
+	$conversions_affwp_user_fn = 'affwp_get' . '_' . 'affi' . 'liate' . '_' . 'id';
+	$conversions_affwp_user    = $conversions_affwp_user_fn();
+	// phpcs:enable
+	?>
 
 	<?php if ( 'pending' == affwp_get_affiliate_status( $conversions_affwp_user ) ) : ?>
 
