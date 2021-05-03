@@ -20,6 +20,8 @@ defined( 'ABSPATH' ) || exit;
 			<div class="row">
 
 				<?php
+				do_action( 'conversions_before_footer_widgets' );
+
 				if ( is_active_sidebar( 'sidebar-3' ) ) {
 					echo '<div class="footer-widget-area col-md">';
 					dynamic_sidebar( 'sidebar-3' );
@@ -40,6 +42,8 @@ defined( 'ABSPATH' ) || exit;
 					dynamic_sidebar( 'sidebar-6' );
 					echo '</div>';
 				}
+
+				do_action( 'conversions_after_footer_widgets' );
 				?>
 
 			</div>
