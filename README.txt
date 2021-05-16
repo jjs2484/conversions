@@ -25,6 +25,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 * New: Action hook conversions_before_footer_widgets.
 * New: Action hook conversions_after_footer_widgets.
+* Update: WooCommerce grouped.php template to v4.8.0 
 * Update: NPM Dependencies.
 
 = 1.8.2 =
