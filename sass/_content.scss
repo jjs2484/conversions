@@ -18,9 +18,6 @@ select,
 textarea {
 	@extend .form-control;
 }
-input[type="file"] {
-	@extend .form-control-file;
-}
 
 // Fonts color
 .h1,

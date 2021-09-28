@@ -150,7 +150,7 @@ class Fab {
 		$color = $this->fab_color();
 
 		$fab_button = sprintf(
-			'<a title="%1$s" href="%2$s" class="c-fab__btn btn %3$s btn-lg btn-block">%4$s%1$s</a>',
+			'<div class="d-grid gap-2"><a title="%1$s" href="%2$s" class="c-fab__btn btn %3$s btn-lg">%4$s%1$s</a></div>',
 			esc_html( $fab_button_text ),
 			esc_url( $fab_button_url ),
 			esc_attr( $color ),

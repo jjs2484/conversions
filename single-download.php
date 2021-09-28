@@ -30,7 +30,7 @@ get_header();
 
 			</div>
 
-			<div class="col-lg-9 pr-lg-5 content-area" id="primary">
+			<div class="col-lg-9 pe-lg-5 content-area" id="primary">
 
 				<main class="site-main" id="main">
 
@@ -54,7 +54,7 @@ get_header();
 			</div>
 
 			<!-- right sidebar -->
-			<div class="col-lg-3 widget-area pl-lg-3" id="sidebar-1" role="complementary">
+			<div class="col-lg-3 widget-area ps-lg-3" id="sidebar-1" role="complementary">
 
 				<?php
 				// Price, purchase button, and download details.

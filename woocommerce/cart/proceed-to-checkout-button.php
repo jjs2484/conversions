@@ -23,6 +23,8 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 
-<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' ) ); ?> btn-lg btn-block">
-	<?php esc_html_e( 'Proceed to checkout', 'conversions' ); ?>
-</a>
+<div class="d-grid gap-2">
+	<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' ) ); ?> btn-lg">
+		<?php esc_html_e( 'Proceed to checkout', 'conversions' ); ?>
+	</a>
+</div>

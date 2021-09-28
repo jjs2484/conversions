@@ -176,11 +176,4 @@
 	#searchform input.field {
 		@extend .form-control-lg;
 	}
-	button.close {
-		opacity: 1;
-	}
-	i.fa-times {
-		color: $gray-200;
-		font-size: 30px;
-	}
 }

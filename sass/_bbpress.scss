@@ -35,31 +35,27 @@
 		@extend .alert;
 		
 		// add a default color in case no colors are defined
-		@include alert-variant(theme-color-level(warning, $alert-bg-level), theme-color-level(warning, $alert-border-level), theme-color-level(warning, $alert-color-level));
+		@include alert-variant($warning, $warning, $warning);
 		a {
-			font-weight: $alert-link-font-weight;
-			color: darken($yellow, 10%);
+			color: shade-color($warning, 20%);
 		}
 
 		&.info {
-			@include alert-variant(theme-color-level(info, $alert-bg-level), theme-color-level(info, $alert-border-level), theme-color-level(info, $alert-color-level));
+			@include alert-variant($info, $info, $info);
 			a {
-				font-weight: $alert-link-font-weight;
-				color: darken($cyan, 10%);
+				color: shade-color($info, 20%);
 			}
 		}
 		&.important {
-			@include alert-variant(theme-color-level(warning, $alert-bg-level), theme-color-level(warning, $alert-border-level), theme-color-level(warning, $alert-color-level));
+			@include alert-variant($warning, $warning, $warning);
 			a {
-				font-weight: $alert-link-font-weight;
-				color: darken($yellow, 10%);
+				color: shade-color($warning, 20%);
 			}
 		}
 		&.error, &.warning {
-			@include alert-variant(theme-color-level(danger, $alert-bg-level), theme-color-level(danger, $alert-border-level), theme-color-level(danger, $alert-color-level));
+			@include alert-variant($danger, $danger, $danger);
 			a {
-				font-weight: $alert-link-font-weight;
-				color: darken($red, 10%);
+				color: shade-color($danger, 20%);
 			}
 		}
 		li, p {
@@ -231,24 +227,21 @@
 				@extend .alert;
 
 				&.strong {
-					@include alert-variant(theme-color-level(success, $alert-bg-level), theme-color-level(success, $alert-border-level), theme-color-level(success, $alert-color-level));
+					@include alert-variant($success, $success, $success);
 					a {
-						font-weight: $alert-link-font-weight;
-						color: darken($success, 20%);
+						color: shade-color($success, 20%);
 					}
 				}
 				&.good {
-					@include alert-variant(theme-color-level(warning, $alert-bg-level), theme-color-level(warning, $alert-border-level), theme-color-level(warning, $alert-color-level));
+					@include alert-variant($warning, $warning, $warning);
 					a {
-						font-weight: $alert-link-font-weight;
-						color: darken($yellow, 20%);
+						color: shade-color($warning, 20%);
 					}
 				}
 				&.bad, &.short {
-					@include alert-variant(theme-color-level(danger, $alert-bg-level), theme-color-level(danger, $alert-border-level), theme-color-level(danger, $alert-color-level));
+					@include alert-variant($danger, $danger, $danger);
 					a {
-						font-weight: $alert-link-font-weight;
-						color: darken($red, 20%);
+						color: shade-color($danger, 20%);
 					}
 				}
 			}

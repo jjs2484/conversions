@@ -69,11 +69,11 @@ class WooCommerce {
 		$cart_totals = WC()->cart->get_cart_contents_count();
 		if ( $cart_totals > 0 ) {
 			$cart_totals = sprintf(
-				'<span>%d<span class="sr-only">' . __( 'items in your shopping cart', 'conversions' ) . '</span></span>',
+				'<span>%d<span class="visually-hidden">' . __( 'items in your shopping cart', 'conversions' ) . '</span></span>',
 				esc_html( WC()->cart->get_cart_contents_count() )
 			);
 		} else {
-			$cart_totals = '<span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
+			$cart_totals = '<span class="visually-hidden">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
 		}
 
 		$cart_icon = '<i aria-hidden="true" class="fas fa-shopping-cart"></i>';
@@ -153,7 +153,7 @@ class WooCommerce {
 			case 'select':
 				// Add a class to the field's html element wrapper - woocommerce
 				// input types (fields) are often wrapped within a <p></p> tag.
-				$args['class'][] = 'form-group';
+				$args['class'][] = 'mb-3';
 				// Add a class to the form input itself.
 				$args['input_class']       = array( 'form-control', 'input-lg' );
 				$args['label_class']       = array( 'control-label' );
@@ -167,14 +167,14 @@ class WooCommerce {
 			// By default WooCommerce will populate a select with the country names - $args
 			// defined for this specific input type targets only the country select element.
 			case 'country':
-				$args['class'][]     = 'form-group single-country';
+				$args['class'][]     = 'mb-3 single-country';
 				$args['label_class'] = array( 'control-label' );
 				break;
 			// By default WooCommerce will populate a select with state names - $args defined
 			// for this specific input type targets only the country select element.
 			case 'state':
 				// Add class to the field's html element wrapper.
-				$args['class'][] = 'form-group';
+				$args['class'][] = 'mb-3';
 				// add class to the form input itself.
 				$args['input_class']       = array( '', 'input-lg' );
 				$args['label_class']       = array( 'control-label' );
@@ -189,7 +189,7 @@ class WooCommerce {
 			case 'email':
 			case 'tel':
 			case 'number':
-				$args['class'][]     = 'form-group';
+				$args['class'][]     = 'mb-3';
 				$args['input_class'] = array( 'form-control', 'input-lg' );
 				$args['label_class'] = array( 'control-label' );
 				break;
@@ -206,7 +206,7 @@ class WooCommerce {
 				$args['input_class'] = array( 'custom-control-input', 'input-lg' );
 				break;
 			default:
-				$args['class'][]     = 'form-group';
+				$args['class'][]     = 'mb-3';
 				$args['input_class'] = array( 'form-control', 'input-lg' );
 				$args['label_class'] = array( 'control-label' );
 				break;

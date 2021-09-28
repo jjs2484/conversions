@@ -8,9 +8,7 @@
 
 // Generate URL button
 .affwp-referral-url-submit-wrap {
-	.button[type="submit"] {
-		@extend .btn-block;
-	}
+	display: $c-display-grid;
 }
 
 // Dashboard nav

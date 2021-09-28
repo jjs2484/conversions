@@ -45,7 +45,7 @@ get_header();
 
 			<?php get_template_part( 'partials/sidebar', 'left' ); ?>
 
-			<div class="<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>col-lg-9 pl-lg-5<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
+			<div class="<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>col-lg-9 ps-lg-5<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 

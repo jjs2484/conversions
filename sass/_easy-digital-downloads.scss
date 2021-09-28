@@ -1,13 +1,18 @@
 // Easy Digital Download styles
 
 // Buttons
+// Full width wrapper
+.edd_purchase_submit_wrapper,
+#edd_purchase_submit,
+.edd-discount-code-field-wrap {
+	display: $c-display-grid;
+}
 #edd-purchase-button,
 .edd-submit,
 [type="submit"].edd-submit,
 #edd_checkout_form_wrap .edd-cart-adjustment .edd-apply-discount.edd-submit {
 	@extend .btn;
 	@extend .btn-lg;
-	@extend .btn-block;
 }
 
 // Single product pages
@@ -34,9 +39,6 @@
 				margin-bottom: 2rem;
 				.edd-cart-ajax-alert {
 					display: none !important;
-				}
-				.btn-block + .btn-block {
-					margin-top: 0;
 				}
 				.edd_download_quantity_wrapper {
 					margin: 0 0 0.75rem;
@@ -122,9 +124,6 @@
 				.edd_download_purchase_form {
 					.edd-cart-ajax-alert {
 						display: none;
-					}
-					.btn-block + .btn-block {
-						margin-top: 0;
 					}
 					.edd_download_quantity_wrapper {
 						margin: 0 0 0.75rem;

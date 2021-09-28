@@ -120,7 +120,7 @@ class Navbar {
 
 		// mobile navbar toggler button.
 		$navbar_mobile_toggler = sprintf(
-			'<button class="navbar-toggler hamburger hamburger--spring" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="%s"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>',
+			'<button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="%s"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>',
 			esc_attr__( 'Toggle navigation', 'conversions' )
 		);
 
@@ -319,7 +319,7 @@ class Navbar {
 				}
 				// output the account icon if active.
 				$wc_account_link = sprintf(
-					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
+					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="visually-hidden">%2$s</span></a></li>',
 					esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ),
 					$wc_al
 				);
@@ -365,7 +365,7 @@ class Navbar {
 				}
 				// output the account icon if active.
 				$edd_account_link = sprintf(
-					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
+					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="visually-hidden">%2$s</span></a></li>',
 					esc_url( edd_get_user_verification_page() ),
 					$edd_al
 				);
@@ -378,7 +378,7 @@ class Navbar {
 			if ( get_theme_mod( 'conversions_edd_nav_cart', true ) === true ) {
 
 				$edd_cart_totals = sprintf(
-					'<span class="header-cart edd-cart-quantity">%s</span><span class="sr-only">' . __( 'View your shopping cart', 'conversions' ) . '</span>',
+					'<span class="header-cart edd-cart-quantity">%s</span><span class="visually-hidden">' . __( 'View your shopping cart', 'conversions' ) . '</span>',
 					edd_get_cart_quantity()
 				);
 
@@ -422,7 +422,7 @@ class Navbar {
 
 				// output the account icon if active.
 				$bbp_account_link = sprintf(
-					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="sr-only">%2$s</span></a></li>',
+					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="visually-hidden">%2$s</span></a></li>',
 					esc_url( $bbp_profile_url ),
 					$bbp_al
 				);
@@ -447,7 +447,7 @@ class Navbar {
 		// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 		if ( get_theme_mod( 'conversions_nav_search_icon', false ) === true ) {
 			$nav_search = sprintf(
-				'<li class="search-icon menu-item nav-item"><a href="#csearchModal" data-toggle="modal" class="nav-link" title="%1$s"><i aria-hidden="true" class="fas fa-search"></i><span class="sr-only">%1$s</span></a></li>',
+				'<li class="search-icon menu-item nav-item"><a href="#csearchModal" data-bs-toggle="modal" class="nav-link" title="%1$s"><i aria-hidden="true" class="fas fa-search"></i><span class="visually-hidden">%1$s</span></a></li>',
 				__( 'Search', 'conversions' )
 			);
 
@@ -507,7 +507,7 @@ class Navbar {
 				'<div class="modal-dialog">',
 					'<div class="modal-content">',
 						'<div class="modal-header">',
-							'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>',
+							'<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
 						'</div>',
 						'<div class="modal-body">',
 							'<h3 id="csearchModal__label" class="modal-title">' . esc_html__( 'Start typing and press enter to search', 'conversions' ) . '</h3>',

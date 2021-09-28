@@ -38,7 +38,7 @@
 							
 					if(!$dropdown.length) {
 						var dropdownMarkup = '<li class="dropdown show responsivetabs-more">'
-						+ '<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-ellipsis-h"></i></a>'
+						+ '<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-ellipsis-h"></i></a>'
 						+ '<div class="dropdown-menu dropdown-menu-right">'
 						+ '</div></li>';
 						$dropdown = $(dropdownMarkup);

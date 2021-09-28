@@ -41,7 +41,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 				<div class="commenter d-flex flex-row mb-1">
 
 					<?php if ( 0 != $args['avatar_size'] && 'pingback' !== $type && 'trackback' !== $type ) { ?>
-						<?php echo get_avatar( $comment, $args['avatar_size'], '', '', array( 'class' => 'comment_avatar mr-3' ) ); ?>
+						<?php echo get_avatar( $comment, $args['avatar_size'], '', '', array( 'class' => 'comment_avatar me-3' ) ); ?>
 					<?php }; ?>
 
 					<div class="comment-meta">
@@ -49,7 +49,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 							<?php
 							printf(
 								/* translators: 1: Comment author name and HTML link. 2: Screen reader text. */
-								'%s <span class="says sr-only">%s</span>',
+								'%s <span class="says visually-hidden">%s</span>',
 								sprintf(
 									'<b class="media-heading fn">%s</b>',
 									get_comment_author_link( $comment )

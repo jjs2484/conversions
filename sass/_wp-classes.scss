@@ -22,7 +22,7 @@
 	text-align: center;
 }
 .screen-reader-text {
-	@extend .sr-only;
+	@extend .visually-hidden;
 }
 .alignleft {
 	float: left;

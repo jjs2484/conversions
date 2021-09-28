@@ -607,10 +607,12 @@ $block-btns: (
 		.edd_price_options {
 			display: none;
 		}
+		.edd_purchase_submit_wrapper {
+			display: $c-display-grid;
+		}
 		a.edd-add-to-cart {
 			@extend .btn;
 			@extend .btn-lg;
-			@extend .btn-block;
 		}
 	}
 }

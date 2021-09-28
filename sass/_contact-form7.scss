@@ -14,9 +14,8 @@
 	}
 
 	.wpcf7-form {
-		// set paragraphs to behave like divs with class .form-group
 		p {
-			@extend .form-group;
+			margin-bottom: $paragraph-margin-bottom;
 		}
 
 		// let labels be 100%
@@ -27,27 +26,25 @@
 
 	// not valid tip for each control
 	.wpcf7-not-valid-tip {
-		color: theme-color("danger");
+		color: $danger;
 	}
 
 	// response messages
 	div.wpcf7-response-output {
 		@extend .alert;
 		
-		@include alert-variant(theme-color-level(primary, $alert-bg-level), theme-color-level(primary, $alert-border-level), theme-color-level(primary, $alert-color-level));
+		@include alert-variant($primary, $primary, $primary);
 		a {
-			font-weight: $alert-link-font-weight;
-			color: darken($primary, 10%);
+			color: shade-color($primary, 20%);
 		}
 	}
 
 	// success
 	.wpcf7-form.sent {
 		div.wpcf7-response-output {
-			@include alert-variant(theme-color-level(success, $alert-bg-level), theme-color-level(success, $alert-border-level), theme-color-level(success, $alert-color-level));
+			@include alert-variant($success, $success, $success);
 			a {
-				font-weight: $alert-link-font-weight;
-				color: darken($success, 10%);
+				color: shade-color($success, 20%);
 			}
 		}
 	}
@@ -55,10 +52,9 @@
 	// error
 	.wpcf7-form.invalid {
 		div.wpcf7-response-output {
-			@include alert-variant(theme-color-level(danger, $alert-bg-level), theme-color-level(danger, $alert-border-level), theme-color-level(danger, $alert-color-level));
+			@include alert-variant($danger, $danger, $danger);
 			a {
-				font-weight: $alert-link-font-weight;
-				color: darken($danger, 10%);
+				color: shade-color($danger, 20%);
 			}
 		}
 	}

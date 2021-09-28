@@ -43,7 +43,7 @@ get_header();
 
 		<div class="row">
 
-			<div class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-lg-9 pr-lg-5<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
+			<div class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-lg-9 pe-lg-5<?php else : ?>col-md-12<?php endif; ?> content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 

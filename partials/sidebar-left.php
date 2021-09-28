@@ -19,7 +19,7 @@ $conversions_sidebar_pos = get_theme_mod( 'conversions_sidebar_position', 'right
 <?php
 if ( 'left' === $conversions_sidebar_pos || is_page_template( 'page-templates/left-sidebarpage.php' ) ) {
 	?>
-	<div class="col-lg-3 widget-area pr-lg-3" id="sidebar-2" role="complementary">
+	<div class="col-lg-3 widget-area pe-lg-3" id="sidebar-2" role="complementary">
 	<?php
 }
 

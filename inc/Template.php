@@ -98,7 +98,7 @@ class Template {
 			sprintf(
 				/* translators: %s: Name of current post */
 				esc_html__( 'Edit %s', 'conversions' ),
-				the_title( '<span class="sr-only">"', '"</span>', false )
+				the_title( '<span class="visually-hidden">"', '"</span>', false )
 			),
 			'<span class="edit-link">',
 			'</span>'
@@ -171,7 +171,7 @@ class Template {
 		}
 		?>
 				<nav class="row navigation post-navigation">
-					<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'conversions' ); ?></h2>
+					<h2 class="visually-hidden"><?php esc_html_e( 'Post navigation', 'conversions' ); ?></h2>
 					<div class="nav-links d-flex justify-content-between">
 						<?php
 						if ( get_previous_post_link() ) {

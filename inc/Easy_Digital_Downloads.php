@@ -96,7 +96,7 @@ class Easy_Digital_Downloads {
 
 		echo edd_get_purchase_link( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			array(
-				'class' => 'btn btn-lg btn-block ' . esc_attr( $edd_primary_btn ) . '',
+				'class' => 'btn btn-lg ' . esc_attr( $edd_primary_btn ) . '',
 			)
 		);
 	}

@@ -47,7 +47,7 @@ if ( ! is_ajax() ) {
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="btn '.esc_attr( get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' ) ).' btn-block btn-lg" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<div class="d-grid gap-2"><button type="submit" class="btn '.esc_attr( get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' ) ).' btn-lg" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button></div>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
