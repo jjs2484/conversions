@@ -26,70 +26,67 @@
 	}
 
 	.comment {
-		.media {
-			flex-direction: column;
 
-			// Avatar
-			.avatar {
-				border-radius: 50%;
-				height: 100%;
-				align-self: flex-start;
+		// Avatar
+		.avatar {
+			border-radius: 50%;
+			height: 100%;
+			align-self: flex-start;
+		}
+
+		// User
+		.media-heading {
+			&::before {
+				font-family: "Font Awesome 5 Free";
+				content: "\f007";
+				color: $text-muted;
+				margin-right: 5px;
 			}
-
-			// User
-			.media-heading {
-				&::before {
-					font-family: "Font Awesome 5 Free";
-					content: "\f007";
-					color: $text-muted;
-					margin-right: 5px;
-				}
-				a {
-					color: $text-muted;
-					text-decoration: underline;
-					&:hover {
-						color: #5a6268;
-					}
+			a {
+				color: $text-muted;
+				text-decoration: underline;
+				&:hover {
+					color: #5a6268;
 				}
 			}
+		}
 
-			// Time
-			.comment-metadata time {
-				&::before {
-					font-family: "Font Awesome 5 Free";
-					content: "\f017";
-					color: $text-muted;
-					margin-right: 1px;
-				}
+		// Time
+		.comment-metadata time {
+			&::before {
+				font-family: "Font Awesome 5 Free";
+				content: "\f017";
+				color: $text-muted;
+				margin-right: 1px;
 			}
+		}
 			
-			// Permalink
-			.comm-perm {
-				&::before {
-					font-family: "Font Awesome 5 Free";
-					content: "\f02e";
-					color: $text-muted;
-					margin-right: 2px;
-				}
-				a {
-					color: $text-muted;
-					text-decoration: underline;
-				}
+		// Permalink
+		.comm-perm {
+			&::before {
+				font-family: "Font Awesome 5 Free";
+				content: "\f02e";
+				color: $text-muted;
+				margin-right: 2px;
 			}
-
-			// Content
-			.comment-content {
-				background: #f7f7f7;
-				border: 1px solid #e3e3e3;
-				padding: 1.5rem 1.5rem 0.2rem;
-				border-radius: 5px;
+			a {
+				color: $text-muted;
+				text-decoration: underline;
 			}
 		}
 
-		// Children styles
-		.children {
-			padding-left: 0.75em;
-			list-style: none;
+		// Content
+		.comment-content {
+			background: #f7f7f7;
+			border: 1px solid #e3e3e3;
+			padding: 1.5rem 1.5rem 0.2rem;
+			border-radius: 5px;
 		}
+	}
+
+	// Children styles
+	.children {
+		padding-left: 0.75em;
+		list-style: none;
 	}
 }

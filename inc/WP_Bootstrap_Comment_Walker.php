@@ -37,11 +37,13 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 
 		?>
 		<<?php echo $tag; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
-			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body media">
-				<div class="commenter d-flex flex-row mb-1">
+			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+				<div class="commenter d-flex align-items-center mb-1">
 
 					<?php if ( 0 != $args['avatar_size'] && 'pingback' !== $type && 'trackback' !== $type ) { ?>
-						<?php echo get_avatar( $comment, $args['avatar_size'], '', '', array( 'class' => 'comment_avatar me-3' ) ); ?>
+						<div class="flex-shrink-0 me-3">
+							<?php echo get_avatar( $comment, $args['avatar_size'], '', '', array( 'class' => 'comment_avatar' ) ); ?>
+						</div>
 					<?php }; ?>
 
 					<div class="comment-meta">
@@ -92,7 +94,7 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 
 				</div>
 
-				<div class="media-body w-100">
+				<div class="flex-grow-1">
 					<div class="mb-4">
 						<div class="comment-content">
 							<?php comment_text(); ?>
@@ -107,8 +109,8 @@ class WP_Bootstrap_Comment_Walker extends \Walker_Comment {
 							</li>
 						</ul><!-- comment actions -->
 					</div>
-				</div><!-- /.media-body -->
-			</article><!-- .media -->
+				</div><!-- comment body -->
+			</article><!-- comment -->
 		<?php
 	}
 

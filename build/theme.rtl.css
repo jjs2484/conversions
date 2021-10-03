@@ -11708,41 +11708,39 @@ section p.subtitle {
     .comments-area .pingback .comment-body .edit-link,
     .comments-area .trackback .comment-body .edit-link {
       margin-right: 1rem; }
-.comments-area .comment .media {
-  flex-direction: column; }
-  .comments-area .comment .media .avatar {
-    border-radius: 50%;
-    height: 100%;
-    align-self: flex-start; }
-  .comments-area .comment .media .media-heading::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f007";
-    color: #6c757d;
-    margin-left: 5px; }
-  .comments-area .comment .media .media-heading a {
-    color: #6c757d;
-    text-decoration: underline; }
-    .comments-area .comment .media .media-heading a:hover {
-      color: #5a6268; }
-  .comments-area .comment .media .comment-metadata time::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f017";
-    color: #6c757d;
-    margin-left: 1px; }
-  .comments-area .comment .media .comm-perm::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f02e";
-    color: #6c757d;
-    margin-left: 2px; }
-  .comments-area .comment .media .comm-perm a {
-    color: #6c757d;
-    text-decoration: underline; }
-  .comments-area .comment .media .comment-content {
-    background: #f7f7f7;
-    border: 1px solid #e3e3e3;
-    padding: 1.5rem 1.5rem 0.2rem;
-    border-radius: 5px; }
-.comments-area .comment .children {
+.comments-area .comment .avatar {
+  border-radius: 50%;
+  height: 100%;
+  align-self: flex-start; }
+.comments-area .comment .media-heading::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f007";
+  color: #6c757d;
+  margin-left: 5px; }
+.comments-area .comment .media-heading a {
+  color: #6c757d;
+  text-decoration: underline; }
+  .comments-area .comment .media-heading a:hover {
+    color: #5a6268; }
+.comments-area .comment .comment-metadata time::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f017";
+  color: #6c757d;
+  margin-left: 1px; }
+.comments-area .comment .comm-perm::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f02e";
+  color: #6c757d;
+  margin-left: 2px; }
+.comments-area .comment .comm-perm a {
+  color: #6c757d;
+  text-decoration: underline; }
+.comments-area .comment .comment-content {
+  background: #f7f7f7;
+  border: 1px solid #e3e3e3;
+  padding: 1.5rem 1.5rem 0.2rem;
+  border-radius: 5px; }
+.comments-area .children {
   padding-right: 0.75em;
   list-style: none; }
 
