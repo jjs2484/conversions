@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'db847db0a5f2bd105b8504031fba0149d7cf708b',
+    'reference' => '76ee90c7c9209a8cf12b8ab240f5111ac317baf0',
     'name' => '__root__',
   ),
   'versions' => 
@@ -31,7 +31,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'db847db0a5f2bd105b8504031fba0149d7cf708b',
+      'reference' => '76ee90c7c9209a8cf12b8ab240f5111ac317baf0',
     ),
     'dealerdirect/phpcodesniffer-composer-installer' => 
     array (
@@ -44,12 +44,12 @@ private static $installed = array (
     ),
     'squizlabs/php_codesniffer' => 
     array (
-      'pretty_version' => '3.6.0',
-      'version' => '3.6.0.0',
+      'pretty_version' => '3.6.1',
+      'version' => '3.6.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ffced0d2c8fa8e6cdc4d695a743271fab6c38625',
+      'reference' => 'f268ca40d54617c6e06757f83f699775c9b3ff2e',
     ),
     'wp-coding-standards/wpcs' => 
     array (

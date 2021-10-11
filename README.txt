@@ -2,7 +2,7 @@
 Contributors: uniquelylost
 Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, footer-widgets, full-width-template, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 Requires at least: 4.7
-Tested up to: 5.7
+Tested up to: 5.8
 Requires PHP: 5.6
 Stable tag: 1.8.6
 License: GPL-2.0-or-later
@@ -23,9 +23,10 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 == Changelog ==
 
 = 1.8.4 =
-* Update: Bootstrap to 5.1.1
+* Update: Bootstrap to 5.1.3
 * Update: Font Awesome to 5.15.4
 * Update: NPM Dependencies.
+* Update: Composer dependencies.
 
 = 1.8.3 =
 * New: AffiliateWP support.
@@ -155,7 +156,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Resources ==
 
-* Bootstrap 5.1.1 | MIT License
+* Bootstrap 5.1.3 | MIT License
 * Font Awesome 5.15.4 | Icons: CC BY 4.0, Font: SIL OFL 1.1, Code: MIT License
 * WP Bootstrap Navwalker | GPL-3.0+
 * _s, or underscores | GPLv2 or later
