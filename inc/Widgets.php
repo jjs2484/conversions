@@ -100,4 +100,21 @@ class Widgets {
 			)
 		);
 	}
+
+	/**
+	 * Show footer widget section filter.
+	 *
+	 * Override to show the footer widget section even if empty.
+	 *
+	 * @since 2021-11-24
+	 */
+	public function show_footer_widgets() {
+		$r = false;
+
+		if ( has_filter( 'conversions_show_footer_widgets' ) ) {
+			$r = apply_filters( 'conversions_show_footer_widgets', $r );
+		}
+
+		return $r;
+	}
 }

@@ -9,7 +9,14 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php if ( is_active_sidebar( 'sidebar-3' ) || is_active_sidebar( 'sidebar-4' ) || is_active_sidebar( 'sidebar-5' ) || is_active_sidebar( 'sidebar-6' ) ) : ?>
+<?php
+if ( is_active_sidebar( 'sidebar-3' ) ||
+	is_active_sidebar( 'sidebar-4' ) ||
+	is_active_sidebar( 'sidebar-5' ) ||
+	is_active_sidebar( 'sidebar-6' ) ||
+	conversions()->widgets->show_footer_widgets() === true
+) :
+	?>
 
 	<!-- Footer widget area -->
 
