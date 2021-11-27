@@ -51,12 +51,14 @@ class Extras {
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
 		}
+
 		// Adds class of no-sidebar if no active sidebar and not singular download post.
-		if ( ! is_active_sidebar( 'sidebar-1' ) && ! is_active_sidebar( 'sidebar-2' ) && ! is_singular( 'download' ) ) {
-			$classes[] = 'no-sidebar';
-		}
+		// Adds class of no-sidebar if customizer setting is set to no sidebar.
 		// Adds class of no-sidebar if is full width page template.
-		if ( is_page_template( 'page-templates/fullwidthpage.php' ) || is_page_template( 'page-templates/pagebuilder-fullwidth.php' ) ) {
+		if ( ! is_active_sidebar( 'sidebar-1' ) && ! is_active_sidebar( 'sidebar-2' ) && ! is_singular( 'download' ) ||
+			get_theme_mod( 'conversions_sidebar_position', 'right' ) === 'none' ||
+			is_page_template( 'page-templates/fullwidthpage.php' ) ||
+			is_page_template( 'page-templates/pagebuilder-fullwidth.php' ) ) {
 			$classes[] = 'no-sidebar';
 		}
 
