@@ -213,8 +213,14 @@ namespace conversions
 			$nav_below_ph                = $nav_link_height + $nav_menu_padding_height + $nav_branding_padding_height;
 			$total_nav_height_below      = $logo_height + $nav_below_ph + $logo_padding - .1250;
 
-			return [$total_nav_height, $total_nav_height_below];
+			$nav_height = [$total_nav_height, $total_nav_height_below];
 
+			// Apply filter if exists.
+			if ( has_filter( 'conversions_fixed_navbar_margin' ) ) {
+				$nav_height = apply_filters( 'conversions_fixed_navbar_margin', $nav_height );
+			}
+
+			return $nav_height;
 		}
 
 		/**
@@ -291,7 +297,7 @@ namespace conversions
 			$font_family = $this->get_font_family();
 
 			// fixed navbar height calc variables.
-			$fixed_navbar_height = $this->fixed_navbar_height_calc();
+			$nav_height = $this->fixed_navbar_height_calc();
 
 			// Sticky post highlight option.
 			$sticky_post_highlight = get_theme_mod( 'conversions_blog_sticky_posts', 'primary' );
@@ -378,11 +384,11 @@ namespace conversions
 					if ( get_theme_mod( 'conversions_nav_layout', 'right' ) === 'right' ) {
 						// Content margin.
 						echo '.content-wrapper {
-							margin-top: ' . esc_html( $fixed_navbar_height[0] ) . 'rem;
+							margin-top: ' . esc_html( $nav_height[0] ) . 'rem;
 						}';
 						// Anchor link padding.
 						echo 'html {
-							scroll-padding-top: ' . esc_html( $fixed_navbar_height[0] ) . 'rem;
+							scroll-padding-top: ' . esc_html( $nav_height[0] ) . 'rem;
 						}';
 					}
 				}
