@@ -219,16 +219,28 @@ class Template {
 	 * @since 2019-09-05
 	 */
 	public function reading_time() {
-		$content     = get_the_content();
-		$word_count  = str_word_count( wp_strip_all_tags( $content ) );
-		$readingtime = ceil( $word_count / 200 );
-		$time_unit   = _x( 'min read', 'time unit', 'conversions' );
+		$content    = get_the_content();
+		$word_count = str_word_count( wp_strip_all_tags( $content ) );
+		$calc_time  = ceil( $word_count / 200 );
+		$time_unit  = _x( 'min read', 'time unit', 'conversions' );
 
-		echo sprintf(
+		// If 0 make 1 min.
+		if ( $calc_time < 1 ) {
+			$calc_time = 1;
+		}
+
+		$reading_time = sprintf(
 			'<span class="c-reading-time">%d %s</span>',
-			esc_html( $readingtime ),
+			esc_html( $calc_time ),
 			esc_html( $time_unit )
 		);
+
+		// Apply filter if exists.
+		if ( has_filter( 'conversions_reading_time' ) ) {
+			$reading_time = apply_filters( 'conversions_reading_time', $reading_time );
+		}
+
+		echo $reading_time;
 	}
 
 	/**
@@ -263,7 +275,7 @@ class Template {
 
 		global $post;
 
-		if ( is_single() && 'post' != get_post_type() ) {
+		if ( is_single() && 'post' !== get_post_type() ) {
 			return;
 		}
 
@@ -327,11 +339,20 @@ class Template {
 
 							<!-- Post image -->
 							<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
-								<?php if ( has_post_thumbnail() ) : ?>
-									<?php the_post_thumbnail( 'conversions-news', array( 'class' => 'card-img-top' ) ); ?>
-								<?php else : ?>
-									<img class="card-img-top" loading="lazy" alt="<?php the_title(); ?>" src="<?php echo esc_url( get_template_directory_uri() ); ?>/placeholder.png" />
-								<?php endif; ?>
+								<?php
+								if ( has_post_thumbnail() ) :
+									$related_image = get_the_post_thumbnail( 'conversions-news', array( 'class' => 'card-img-top' ) );
+								else :
+									$related_image = '<img class="card-img-top" loading="lazy" alt="' . get_the_title() . '" src="' . esc_url( get_template_directory_uri() ) . '/placeholder.png" />';
+								endif;
+
+								// Apply filter if exists.
+								if ( has_filter( 'conversions_related_post_image' ) ) {
+									$related_image = apply_filters( 'conversions_related_post_image', $related_image );
+								}
+
+								echo wp_kses_post( $related_image );
+								?>
 							</a>
 							<div class="card-body pb-1">
 								<h4 class="h6">
@@ -345,6 +366,9 @@ class Template {
 									$related_content = strip_shortcodes( get_the_excerpt() );
 									$related_content = wp_trim_words( $related_content, 15, '...' );
 									$related_content = esc_html( str_replace( '[...]Read More', '', $related_content ) );
+									if ( substr( '...', 0, 3 ) === $related_content ) {
+										$related_content = '';
+									}
 
 									// Apply filter if exists.
 									if ( has_filter( 'conversions_related_post_content' ) ) {
