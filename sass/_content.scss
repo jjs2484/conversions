@@ -14,9 +14,16 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-select,
 textarea {
 	@extend .form-control;
+}
+
+select {
+	@extend .form-select;
+}
+
+form label {
+	@extend .form-label;
 }
 
 // Fonts color
