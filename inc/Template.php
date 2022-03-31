@@ -131,29 +131,29 @@ class Template {
 
 		$links = paginate_links( $args );
 
-		?>
+		$r = sprintf(
+			'<nav aria-label="%s"><ul class="pagination justify-content-center">',
+			esc_attr( $args['screen_reader_text'] )
+		);
 
-		<nav aria-label="<?php echo esc_attr( $args['screen_reader_text'] ); ?>">
-			<ul class="pagination justify-content-center">
-				<?php
-				foreach ( $links as $key => $link ) {
-					?>
-					<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
-						<?php
-						echo str_replace( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							'page-numbers',
-							'page-link',
-							$link
-						);
-						?>
-					</li>
-					<?php
-				}
-				?>
-			</ul>
-		</nav>
+		foreach ( $links as $key => $link ) {
+			$r .= sprintf(
+				'<li class="page-item %s">',
+				strpos( $link, 'current' ) ? 'active' : ''
+			);
 
-		<?php
+			$r .= str_replace(
+				'page-numbers',
+				'page-link',
+				$link
+			);
+
+			$r .= '</li>';
+		}
+
+		$r .= '</ul></nav>';
+
+		return $r;
 	}
 
 	/**

@@ -30,6 +30,33 @@ class Navbar {
 	}
 
 	/**
+	 * Skiplink.
+	 *
+	 * @since 2022-03-22
+	 */
+	public function skiplink() {
+
+		if ( is_page_template( 'page-templates/homepage.php' ) ) {
+			$anchor = '#homepage-wrapper';
+		} else {
+			$anchor = '#content';
+		}
+
+		if ( has_filter( 'conversions_skiplink_anchor' ) ) {
+			$anchor = apply_filters( 'conversions_skiplink_anchor', $anchor );
+		}
+
+		$r = sprintf(
+			'<a class="skip-link" href="%s">%s</a>',
+			$anchor,
+			esc_html__( 'Skip to content', 'conversions' )
+		);
+
+		return $r;
+
+	}
+
+	/**
 	 * Navbar color scheme.
 	 *
 	 * @since 2020-01-28
@@ -223,7 +250,7 @@ class Navbar {
 				'container_id'    => 'navbarNavDropdown',
 				'menu_class'      => 'navbar-nav navbar-nav-scroll',
 				'menu_id'         => 'main-menu',
-				'items_wrap'      => '<ul id="%1$s" class="%2$s" role="menu">%3$s</ul>',
+				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 				'depth'           => 2,
 				'fallback_cb'     => [ $walker, 'fallback' ],
 				'walker'          => $walker,

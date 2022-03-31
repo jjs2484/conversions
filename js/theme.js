@@ -21,40 +21,39 @@ jQuery(document).ready(function() {
 /**
  * If fixed header calc height and add margin to content 
 */
-jQuery(function() {
+function resizeFunction() {
+	// Get the navbar classes.
+	var navbarClasses = document.getElementById('wrapper-navbar').classList;
 
-	function resizeFunction() {
-		// Get the navbar classes.
-		var navbarClasses = document.getElementById('wrapper-navbar').classList;
-
-		// Are we using a fixed header? If not return.
-		if (navbarClasses.contains('header-p-n')) {
-			return;
-		}
-		else if (navbarClasses.contains('fixed-top')) {
-	
-			// get height of header.
-			var fixedHeight = jQuery('#wrapper-navbar.fixed-top').innerHeight();
-			var adjustedFixedHeight = fixedHeight - 2;
-			var anchorLinkOffset = fixedHeight + 50;
-	
-			// apply height to page as margin-top.
-			jQuery('.content-wrapper').css({'margin-top' : adjustedFixedHeight + 'px'});
-			// add anchor link offset.
-			jQuery('html').css({'scroll-padding-top' : anchorLinkOffset + 'px'});
-		}
+	// Are we using a fixed header? If not return.
+	if (navbarClasses.contains('header-p-n')) {
+		return;
 	}
+	else if (navbarClasses.contains('fixed-top')) {
+	
+		// get height of header.
+		var fixedHeight = jQuery('#wrapper-navbar').innerHeight();
+		var adjustedFixedHeight = fixedHeight - 2;
+		var anchorLinkOffset = fixedHeight + 50;
+	
+		// apply height to page as margin-top.
+		jQuery('.content-wrapper').css({'margin-top' : adjustedFixedHeight + 'px'});
+		// add anchor link offset.
+		jQuery('html').css({'scroll-padding-top' : anchorLinkOffset + 'px'});
+	}
+}
 
+// Onload, run the function.
+jQuery(window).load( resizeFunction );
+
+// On resize, run the function and reset the timeout.
+jQuery(document).ready(function() {
 	var resizeTimer; // Set resizeTimer to empty so it resets on page load.
 
-	// On resize, run the function and reset the timeout.
 	jQuery(window).resize(function() {
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(resizeFunction, 150);
 	});
-
-	// Onload, run the function.
-	jQuery( document ).ready( resizeFunction );
 });
 
 /**

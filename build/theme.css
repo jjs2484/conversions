@@ -11487,7 +11487,8 @@ h5,
 .h5,
 h6,
 .h6 {
-  color: #222; }
+  color: #222;
+  font-weight: normal; }
 
 b,
 strong {
@@ -12399,7 +12400,7 @@ figcaption.blocks-gallery-caption {
     padding: 0.5em 0;
     margin-bottom: 0;
     font-size: 1em;
-    font-weight: 500; }
+    font-weight: normal; }
   .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-price {
     margin-bottom: 0.5em;
     color: #555;

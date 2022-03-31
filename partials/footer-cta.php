@@ -16,13 +16,13 @@ defined( 'ABSPATH' ) || exit;
 	$conversions_cta_bg_type = get_theme_mod( 'conversions_hcta_bg_choice', 'gradient' );
 	switch ( $conversions_cta_bg_type ) {
 		case 'gradient':
-			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_gradient', 'crystal-clear' ) ) . '">';
+			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_gradient', 'crystal-clear' ) ) . '" role="complementary">';
 			break;
 		case 'bootstrap':
-			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_bootstrap', 'bg-secondary' ) ) . '">';
+			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_bootstrap', 'bg-secondary' ) ) . '" role="complementary">';
 			break;
 		case 'custom':
-			echo '<section class="c-cta" style="background-color: ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_color', '#6c757d' ) ) . '">';
+			echo '<section class="c-cta" style="background-color: ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_color', '#6c757d' ) ) . '" role="complementary">';
 			break;
 		case 'image':
 			// Get image ID.
@@ -30,10 +30,10 @@ defined( 'ABSPATH' ) || exit;
 			if ( ! empty( $conversions_cta_bg_img ) ) {
 				echo conversions()->template->fullscreen_cta_image(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
 			}
-			echo '<section class="c-cta">';
+			echo '<section class="c-cta" role="complementary">';
 			break;
 		default:
-			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_gradient', 'crystal-clear' ) ) . '">';
+			echo '<section class="c-cta ' . esc_attr( get_theme_mod( 'conversions_hcta_bg_gradient', 'crystal-clear' ) ) . '" role="complementary">';
 	}
 	?>
 

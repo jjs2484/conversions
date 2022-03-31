@@ -421,7 +421,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-weight: 500; }
+  font-weight: normal; }
 
 .editor-styles-wrapper .wp-block h1,
 .editor-styles-wrapper .wp-block .h1 {
@@ -549,7 +549,7 @@ blockquote.wp-block-quote.has-text-align-right {
 .wp-block-freeform.block-library-rich-text__tinymce h4,
 .wp-block-freeform.block-library-rich-text__tinymce h5,
 .wp-block-freeform.block-library-rich-text__tinymce h6 {
-  font-weight: 500; }
+  font-weight: normal; }
 .wp-block-freeform.block-library-rich-text__tinymce p {
   margin-top: 0;
   margin-bottom: 1.5rem; }
@@ -1140,7 +1140,7 @@ blockquote.wp-block-quote.has-text-align-right {
     padding: 0.5em 0;
     margin-bottom: 0;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: normal;
     color: #222; }
   .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-price.price {
     margin-bottom: 0.5em;

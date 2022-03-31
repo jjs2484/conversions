@@ -12,19 +12,7 @@ $conversions_navbar = new conversions\Navbar();
 
 	<div id="wrapper-navbar" class="<?php echo esc_attr( $conversions_navbar->conversions_wrapper_classes() ); ?>">
 
-		<?php if ( is_page_template( 'page-templates/homepage.php' ) ) : ?>
-
-			<a class="skip-link" href="#homepage-wrapper">
-				<?php esc_html_e( 'Skip to content', 'conversions' ); ?>
-			</a>
-
-		<?php else : ?>
-
-			<a class="skip-link" href="#content">
-				<?php esc_html_e( 'Skip to content', 'conversions' ); ?>
-			</a>
-
-		<?php endif; ?>
+		<?php echo $conversions_navbar->skiplink(); ?>
 
 		<?php
 		/**

@@ -18,7 +18,7 @@ if ( has_post_thumbnail( get_the_ID() ) ) {
 get_header();
 ?>
 
-<div id="homepage-wrapper" class="wrapper content-wrapper">
+<div id="homepage-wrapper" class="wrapper content-wrapper" role="main">
 
 	<?php
 	// If conversions extensions plugin isn't installed lets recommend it.
