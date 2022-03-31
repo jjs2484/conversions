@@ -60,7 +60,9 @@ $conversions_edd = new conversions\easy_digital_downloads();
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php echo conversions()->template->the_posts_pagination(); ?>
+			<?php
+			echo conversions()->template->the_posts_pagination(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
+			?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'partials/right-sidebar-check' ); ?>

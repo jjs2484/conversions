@@ -48,7 +48,7 @@ class Navbar {
 
 		$r = sprintf(
 			'<a class="skip-link" href="%s">%s</a>',
-			$anchor,
+			esc_attr( $anchor ),
 			esc_html__( 'Skip to content', 'conversions' )
 		);
 

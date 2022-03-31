@@ -240,7 +240,7 @@ class Template {
 			$reading_time = apply_filters( 'conversions_reading_time', $reading_time );
 		}
 
-		echo $reading_time;
+		echo $reading_time; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier.
 	}
 
 	/**

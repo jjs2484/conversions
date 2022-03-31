@@ -12,7 +12,9 @@ $conversions_navbar = new conversions\Navbar();
 
 	<div id="wrapper-navbar" class="<?php echo esc_attr( $conversions_navbar->conversions_wrapper_classes() ); ?>">
 
-		<?php echo $conversions_navbar->skiplink(); ?>
+		<?php
+		echo $conversions_navbar->skiplink(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
+		?>
 
 		<?php
 		/**
