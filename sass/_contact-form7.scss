@@ -32,30 +32,20 @@
 	// response messages
 	div.wpcf7-response-output {
 		@extend .alert;
-		
-		@include alert-variant($primary, $primary, $primary);
-		a {
-			color: shade-color($primary, 20%);
-		}
+		@include c-alert-colors($primary);
 	}
 
 	// success
 	.wpcf7-form.sent {
 		div.wpcf7-response-output {
-			@include alert-variant($success, $success, $success);
-			a {
-				color: shade-color($success, 20%);
-			}
+			@include c-alert-colors($success);
 		}
 	}
 
 	// error
 	.wpcf7-form.invalid {
 		div.wpcf7-response-output {
-			@include alert-variant($danger, $danger, $danger);
-			a {
-				color: shade-color($danger, 20%);
-			}
+			@include c-alert-colors($danger);
 		}
 	}
 }

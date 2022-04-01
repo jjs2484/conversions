@@ -1,0 +1,16 @@
+// Alerts
+@mixin c-alert-colors($value) {
+  $alert-background: shift-color($value, $alert-bg-scale);
+  $alert-border: shift-color($value, $alert-border-scale);
+  $alert-color: shift-color($value, $alert-color-scale);
+
+  @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
+    $alert-color: mix($value, color-contrast($alert-background), abs($alert-color-scale));
+  }
+
+  @include alert-variant($alert-background, $alert-border, $alert-color);
+
+  a {
+    color: shade-color($alert-color, 20%);
+  }
+}

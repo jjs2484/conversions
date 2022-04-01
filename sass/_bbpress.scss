@@ -35,28 +35,16 @@
 		@extend .alert;
 		
 		// add a default color in case no colors are defined
-		@include alert-variant($warning, $warning, $warning);
-		a {
-			color: shade-color($warning, 20%);
-		}
+		@include c-alert-colors($warning);
 
 		&.info {
-			@include alert-variant($info, $info, $info);
-			a {
-				color: shade-color($info, 20%);
-			}
+			@include c-alert-colors($info);
 		}
 		&.important {
-			@include alert-variant($warning, $warning, $warning);
-			a {
-				color: shade-color($warning, 20%);
-			}
+			@include c-alert-colors($warning);
 		}
 		&.error, &.warning {
-			@include alert-variant($danger, $danger, $danger);
-			a {
-				color: shade-color($danger, 20%);
-			}
+			@include c-alert-colors($danger);
 		}
 		li, p {
 			margin: 0 !important;
@@ -227,22 +215,13 @@
 				@extend .alert;
 
 				&.strong {
-					@include alert-variant($success, $success, $success);
-					a {
-						color: shade-color($success, 20%);
-					}
+					@include c-alert-colors($success);
 				}
 				&.good {
-					@include alert-variant($warning, $warning, $warning);
-					a {
-						color: shade-color($warning, 20%);
-					}
+					@include c-alert-colors($warning);
 				}
 				&.bad, &.short {
-					@include alert-variant($danger, $danger, $danger);
-					a {
-						color: shade-color($danger, 20%);
-					}
+					@include c-alert-colors($danger);
 				}
 			}
 		}

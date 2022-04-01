@@ -94,7 +94,7 @@ body.no-sidebar .nf-form-content {
 	// Bottom main error alert
 	.nf-form-errors .nf-error-msg {
 		@extend .alert;
-		@include alert-variant($danger, $danger, $danger);
+		@include c-alert-colors($danger);
 	}
 
 	// Success icon for individual fields

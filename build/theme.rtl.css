@@ -12777,29 +12777,29 @@ p.woocommerce-store-notice.demo_store {
   .wpcf7 .wpcf7-not-valid-tip {
     color: #dc3545; }
   .wpcf7 div.wpcf7-response-output {
-    color: #0d6efd;
-    background-color: #0d6efd;
-    border-color: #0d6efd; }
+    color: #084298;
+    background-color: #cfe2ff;
+    border-color: #b6d4fe; }
     .wpcf7 div.wpcf7-response-output .alert-link {
-      color: #0a58ca; }
+      color: #06357a; }
     .wpcf7 div.wpcf7-response-output a {
-      color: #0a58ca; }
+      color: #06357a; }
   .wpcf7 .wpcf7-form.sent div.wpcf7-response-output {
-    color: #198754;
-    background-color: #198754;
-    border-color: #198754; }
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc; }
     .wpcf7 .wpcf7-form.sent div.wpcf7-response-output .alert-link {
-      color: #146c43; }
+      color: #0c4128; }
     .wpcf7 .wpcf7-form.sent div.wpcf7-response-output a {
-      color: #146c43; }
+      color: #0c4128; }
   .wpcf7 .wpcf7-form.invalid div.wpcf7-response-output {
-    color: #dc3545;
-    background-color: #dc3545;
-    border-color: #dc3545; }
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7; }
     .wpcf7 .wpcf7-form.invalid div.wpcf7-response-output .alert-link {
-      color: #b02a37; }
+      color: #6a1a21; }
     .wpcf7 .wpcf7-form.invalid div.wpcf7-response-output a {
-      color: #b02a37; }
+      color: #6a1a21; }
 
 .edd_purchase_submit_wrapper,
 #edd_purchase_submit,
@@ -13061,51 +13061,51 @@ table#edd_user_history {
       font-size: 1rem; } }
 .bbpress-wrapper div.bbp-template-notice,
 .bbpress-wrapper .bbpress-wrapper div.indicator-hint {
-  color: #ffc107;
-  background-color: #ffc107;
-  border-color: #ffc107; }
+  color: #664d03;
+  background-color: #fff3cd;
+  border-color: #ffecb5; }
   .bbpress-wrapper div.bbp-template-notice .alert-link,
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint .alert-link {
-    color: #cc9a06; }
+    color: #523e02; }
   .bbpress-wrapper div.bbp-template-notice a,
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint a {
-    color: #cc9a06; }
+    color: #523e02; }
   .bbpress-wrapper div.bbp-template-notice.info,
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint.info {
-    color: #0dcaf0;
-    background-color: #0dcaf0;
-    border-color: #0dcaf0; }
+    color: #055160;
+    background-color: #cff4fc;
+    border-color: #b6effb; }
     .bbpress-wrapper div.bbp-template-notice.info .alert-link,
     .bbpress-wrapper .bbpress-wrapper div.indicator-hint.info .alert-link {
-      color: #0aa2c0; }
+      color: #04414d; }
     .bbpress-wrapper div.bbp-template-notice.info a,
     .bbpress-wrapper .bbpress-wrapper div.indicator-hint.info a {
-      color: #0aa2c0; }
+      color: #04414d; }
   .bbpress-wrapper div.bbp-template-notice.important,
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint.important {
-    color: #ffc107;
-    background-color: #ffc107;
-    border-color: #ffc107; }
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5; }
     .bbpress-wrapper div.bbp-template-notice.important .alert-link,
     .bbpress-wrapper .bbpress-wrapper div.indicator-hint.important .alert-link {
-      color: #cc9a06; }
+      color: #523e02; }
     .bbpress-wrapper div.bbp-template-notice.important a,
     .bbpress-wrapper .bbpress-wrapper div.indicator-hint.important a {
-      color: #cc9a06; }
+      color: #523e02; }
   .bbpress-wrapper div.bbp-template-notice.error, .bbpress-wrapper div.bbp-template-notice.warning,
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint.error,
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint.warning {
-    color: #dc3545;
-    background-color: #dc3545;
-    border-color: #dc3545; }
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7; }
     .bbpress-wrapper div.bbp-template-notice.error .alert-link, .bbpress-wrapper div.bbp-template-notice.warning .alert-link,
     .bbpress-wrapper .bbpress-wrapper div.indicator-hint.error .alert-link,
     .bbpress-wrapper .bbpress-wrapper div.indicator-hint.warning .alert-link {
-      color: #b02a37; }
+      color: #6a1a21; }
     .bbpress-wrapper div.bbp-template-notice.error a, .bbpress-wrapper div.bbp-template-notice.warning a,
     .bbpress-wrapper .bbpress-wrapper div.indicator-hint.error a,
     .bbpress-wrapper .bbpress-wrapper div.indicator-hint.warning a {
-      color: #b02a37; }
+      color: #6a1a21; }
   .bbpress-wrapper div.bbp-template-notice li, .bbpress-wrapper div.bbp-template-notice p,
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint li,
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint p {
@@ -13198,29 +13198,29 @@ table#edd_user_history {
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile .pw-weak label {
     width: 20% !important; }
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.strong {
-    color: #198754;
-    background-color: #198754;
-    border-color: #198754; }
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc; }
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.strong .alert-link {
-      color: #146c43; }
+      color: #0c4128; }
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.strong a {
-      color: #146c43; }
+      color: #0c4128; }
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.good {
-    color: #ffc107;
-    background-color: #ffc107;
-    border-color: #ffc107; }
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5; }
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.good .alert-link {
-      color: #cc9a06; }
+      color: #523e02; }
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.good a {
-      color: #cc9a06; }
+      color: #523e02; }
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.bad, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.short {
-    color: #dc3545;
-    background-color: #dc3545;
-    border-color: #dc3545; }
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7; }
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.bad .alert-link, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.short .alert-link {
-      color: #b02a37; }
+      color: #6a1a21; }
     .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.bad a, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile #password #pass-strength-result.short a {
-      color: #b02a37; }
+      color: #6a1a21; }
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-topic-search-form,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-user-body #bbp-reply-search-form {
     margin-bottom: .75rem; }
@@ -13329,11 +13329,13 @@ body.no-sidebar .nf-form-content {
 .nf-form-wrap .nf-error .nf-error-msg {
   color: #dc3545; }
 .nf-form-wrap .nf-form-errors .nf-error-msg {
-  color: #dc3545;
-  background-color: #dc3545;
-  border-color: #dc3545; }
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7; }
   .nf-form-wrap .nf-form-errors .nf-error-msg .alert-link {
-    color: #b02a37; }
+    color: #6a1a21; }
+  .nf-form-wrap .nf-form-errors .nf-error-msg a {
+    color: #6a1a21; }
 .nf-form-wrap .nf-pass.field-wrap .nf-field-element::after {
   color: #198754;
   height: 36px;
