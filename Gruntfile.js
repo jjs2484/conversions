@@ -5,6 +5,20 @@ module.exports = function(grunt) {
 	
 	// Configuration
 	grunt.initConfig({
+		modernizr: {
+			dist: {
+				'crawl': false,
+				'customTests': [],
+				'dest': 'build/modernizr-output.js',
+				'tests': [
+					'webp'
+				],
+				'options': [
+					'setClasses'
+				],
+				'uglify': true
+			}
+		},
 		sass: {
 			dist: {
 				options: {
@@ -116,6 +130,7 @@ module.exports = function(grunt) {
 	});
 
 	// Load plugins
+	grunt.loadNpmTasks('grunt-modernizr');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('@lodder/grunt-postcss');
@@ -127,6 +142,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-lineending');
 	
 	// Run All Tasks
-	grunt.registerTask('all', ['sass', 'concat', 'lineending', 'postcss', 'rtlcss', 'cssmin', 'uglify', 'copy']);
+	grunt.registerTask('all', ['modernizr', 'sass', 'concat', 'lineending', 'postcss', 'rtlcss', 'cssmin', 'uglify', 'copy']);
 
 };

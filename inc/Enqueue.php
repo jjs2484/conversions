@@ -26,6 +26,7 @@ class Enqueue {
 		add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ] );
 		add_action( 'customize_controls_enqueue_scripts', [ $this, 'customize_controls_enqueue_scripts' ] );
 		add_action( 'wp_head', [ $this, 'resource_hints' ], 1 );
+		add_action( 'wp_head', [ $this, 'no_js_class' ] );
 	}
 
 	/**
@@ -285,6 +286,13 @@ class Enqueue {
 
 		// Javascript.
 		wp_enqueue_script(
+			'conversions-modernizr',
+			get_theme_file_uri( '/build/modernizr-output.js' ),
+			[ 'jquery' ],
+			$theme_version,
+			true
+		);
+		wp_enqueue_script(
 			'conversions-scripts',
 			get_theme_file_uri( '/build/theme.min.js' ),
 			[ 'jquery' ],
@@ -356,6 +364,16 @@ class Enqueue {
 		}
 
 		echo $resources; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier.
+	}
 
+	/**
+	 * Add No-JS Class.
+	 *
+	 * @since 2022-04-03
+	 */
+	public function no_js_class() {
+		?>
+		<script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
+		<?php
 	}
 }
