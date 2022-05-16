@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/jjs2484/conversions#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "@lodder/grunt-postcss": "^3.1.1",
     "autoprefixer": "^10.2.5",
     "eslint": "^8.15.0",

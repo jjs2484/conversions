@@ -346,7 +346,7 @@ class Navbar {
 				}
 				// output the account icon if active.
 				$wc_account_link = sprintf(
-					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="visually-hidden">%2$s</span></a></li>',
+					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fa-solid fa-user"></i><span class="visually-hidden">%2$s</span></a></li>',
 					esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ),
 					$wc_al
 				);
@@ -392,7 +392,7 @@ class Navbar {
 				}
 				// output the account icon if active.
 				$edd_account_link = sprintf(
-					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="visually-hidden">%2$s</span></a></li>',
+					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fa-solid fa-user"></i><span class="visually-hidden">%2$s</span></a></li>',
 					esc_url( edd_get_user_verification_page() ),
 					$edd_al
 				);
@@ -411,7 +411,7 @@ class Navbar {
 
 				// output the cart icon with item count.
 				$edd_cart_link = sprintf(
-					'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fas fa-shopping-cart"></i>%s</a></li>',
+					'<li class="cart menu-item nav-item"><a title="' . __( 'View your shopping cart', 'conversions' ) . '" class="cart-customlocation nav-link" href="%s"><i aria-hidden="true" class="fa-solid fa-shopping-cart"></i>%s</a></li>',
 					esc_url( edd_get_checkout_uri() ),
 					$edd_cart_totals
 				);
@@ -449,7 +449,7 @@ class Navbar {
 
 				// output the account icon if active.
 				$bbp_account_link = sprintf(
-					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fas fa-user"></i><span class="visually-hidden">%2$s</span></a></li>',
+					'<li class="account-icon menu-item nav-item"><a href="%1$s" class="nav-link" title="%2$s"><i aria-hidden="true" class="fa-solid fa-user"></i><span class="visually-hidden">%2$s</span></a></li>',
 					esc_url( $bbp_profile_url ),
 					$bbp_al
 				);
@@ -474,7 +474,7 @@ class Navbar {
 		// Append Search Icon to nav? Separate function coversions_nav_search_modal adds modal html to footer.
 		if ( get_theme_mod( 'conversions_nav_search_icon', false ) === true ) {
 			$nav_search = sprintf(
-				'<li class="search-icon menu-item nav-item"><a href="#csearchModal" data-bs-toggle="modal" class="nav-link" title="%1$s"><i aria-hidden="true" class="fas fa-search"></i><span class="visually-hidden">%1$s</span></a></li>',
+				'<li class="search-icon menu-item nav-item"><a href="#csearchModal" data-bs-toggle="modal" class="nav-link" title="%1$s"><i aria-hidden="true" class="fa-solid fa-search"></i><span class="visually-hidden">%1$s</span></a></li>',
 				__( 'Search', 'conversions' )
 			);
 

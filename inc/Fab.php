@@ -84,7 +84,7 @@ class Fab {
 
 			// Add to cart FAB.
 			$fab_cart = sprintf(
-				'<button onclick="cScrollToCart()" title="%1$s" class="c-fab__btn btn %2$s"><i aria-hidden="true" class="fas fa-cart-plus"></i></button>',
+				'<button onclick="cScrollToCart()" title="%1$s" class="c-fab__btn btn %2$s"><i aria-hidden="true" class="fa-solid fa-cart-plus"></i></button>',
 				__( 'Add to your shopping cart', 'conversions' ),
 				esc_attr( $color )
 			);
@@ -93,7 +93,7 @@ class Fab {
 
 			// Cart FAD.
 			$fab_button = sprintf(
-				'<a title="%1$s" class="c-fab__btn btn %2$s" href="%3$s"><i aria-hidden="true" class="fas fa-shopping-cart"></i></a>',
+				'<a title="%1$s" class="c-fab__btn btn %2$s" href="%3$s"><i aria-hidden="true" class="fa-solid fa-shopping-cart"></i></a>',
 				__( 'View your shopping cart', 'conversions' ),
 				esc_attr( 'btn-light' ),
 				esc_url( $cart_url )
@@ -106,7 +106,7 @@ class Fab {
 
 			// Cart FAB.
 			$fab_button = sprintf(
-				'<a title="%1$s" class="c-fab__btn btn %2$s" href="%3$s"><i aria-hidden="true" class="fas fa-shopping-cart"></i></a>',
+				'<a title="%1$s" class="c-fab__btn btn %2$s" href="%3$s"><i aria-hidden="true" class="fa-solid fa-shopping-cart"></i></a>',
 				__( 'View your shopping cart', 'conversions' ),
 				esc_attr( $color ),
 				esc_url( $cart_url )
@@ -219,9 +219,9 @@ class Fab {
 
 		// Are we a phone number or email address?
 		if ( strlen( $phone_to_check ) >= 10 && strlen( $phone_to_check ) <= 14 ) {
-			$fab_button_icon = '<i class="fas fa-phone-alt"></i> ';
+			$fab_button_icon = '<i class="fa-solid fa-phone-alt"></i> ';
 		} elseif ( filter_var( $fab_button_text, FILTER_VALIDATE_EMAIL ) ) {
-			$fab_button_icon = '<i class="fas fa-envelope"></i> ';
+			$fab_button_icon = '<i class="fa-solid fa-envelope"></i> ';
 		} else {
 			$fab_button_icon = '';
 		}

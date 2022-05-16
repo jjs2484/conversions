@@ -76,7 +76,7 @@ class WooCommerce {
 			$cart_totals = '<span class="visually-hidden">' . __( 'View your shopping cart', 'conversions' ) . '</span>';
 		}
 
-		$cart_icon = '<i aria-hidden="true" class="fas fa-shopping-cart"></i>';
+		$cart_icon = '<i aria-hidden="true" class="fa-solid fa-shopping-cart"></i>';
 
 		$cart_html = sprintf(
 			'<a class="cart-customlocation nav-link" title="%s" href="%s">%s%s</a>',
