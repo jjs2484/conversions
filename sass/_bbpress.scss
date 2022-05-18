@@ -121,9 +121,13 @@
 
 	// Forms
 	&#bbpress-forums {
-		fieldset.bbp-form input[type="text"], 
-		fieldset.bbp-form select {
-			@extend .form-control;
+		fieldset.bbp-form {
+			input[type=text],
+			input[type=password],
+			select {
+				@extend .form-control;
+				height: auto;
+			}
 		}
 	}
 	
@@ -259,7 +263,7 @@
 		// Forums / Topics header
 		li.bbp-header {
 			li.bbp-forum-info, li.bbp-topic-title {
-				@include media-breakpoint-down(xs) {
+				@include media-breakpoint-down(sm) {
 					text-align: left;
 				}
 			}
@@ -268,7 +272,7 @@
 			li.bbp-forum-freshness,
 			li.bbp-topic-reply-count,
 			li.bbp-topic-freshness {
-				@include media-breakpoint-down(xs) { 
+				@include media-breakpoint-down(sm) { 
 					display: none;
 				}
 			}
@@ -279,14 +283,14 @@
 		li.bbp-body ul.topic {
 			padding: 0.625rem;
 
-			@include media-breakpoint-down(xs) { 
+			@include media-breakpoint-down(sm) { 
 				display: flex;
 				flex-direction: column;
 			}
 			
 			li.bbp-forum-info,
 			li.bbp-topic-title {
-				@include media-breakpoint-down(xs) { 
+				@include media-breakpoint-down(sm) { 
 					width: 100%;
 				}
 			}
@@ -295,7 +299,7 @@
 			.c-bbp-topic-count,
 			.c-bbp-post-count,
 			.c-bbp-freshness-text {
-				@include media-breakpoint-up(sm) {
+				@include media-breakpoint-up(md) {
 					display: none;
 				}
 			}
@@ -306,7 +310,7 @@
 			li.bbp-topic-voice-count,
 			li.bbp-forum-freshness, 
 			li.bbp-topic-freshness {
-				@include media-breakpoint-down(xs) { 
+				@include media-breakpoint-down(sm) { 
 					width: 100%;
 					text-align: left;
 				}
@@ -315,7 +319,7 @@
 			p.bbp-topic-meta {
 				span {
 					white-space: normal;
-					@include media-breakpoint-up(sm) {
+					@include media-breakpoint-up(md) {
 						white-space: nowrap;
 					}
 				}
@@ -324,7 +328,7 @@
 			li.bbp-topic-freshness,
 			li.bbp-forum-freshness {
 				.bbp-topic-meta {
-					@include media-breakpoint-down(xs) { 
+					@include media-breakpoint-down(sm) { 
 						display: none;
 					}
 				}
