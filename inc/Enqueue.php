@@ -26,7 +26,8 @@ class Enqueue {
 		add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ] );
 		add_action( 'customize_controls_enqueue_scripts', [ $this, 'customize_controls_enqueue_scripts' ] );
 		add_action( 'wp_head', [ $this, 'resource_hints' ], 1 );
-		add_action( 'wp_head', [ $this, 'no_js_class' ] );
+		add_action( 'wp_head', [ $this, 'no_js_root' ] );
+		add_action( 'wp_body_open', [ $this, 'no_js_body' ] );
 	}
 
 	/**
@@ -367,13 +368,27 @@ class Enqueue {
 	}
 
 	/**
-	 * Add No-JS Class.
+	 * Remove No-JS class root.
 	 *
 	 * @since 2022-04-03
 	 */
-	public function no_js_class() {
+	public function no_js_root() {
 		?>
 		<script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
 		<?php
+	}
+
+	/**
+	 * Remove no-js class body -- bbPress 2.6.9 fix.
+	 *
+	 * @since 2022-05-18
+	 */
+	public function no_js_body() {
+
+		if ( class_exists( 'bbPress' ) ) {
+			?>
+			<script>document.body.className = document.body.className.replace( 'no-js', 'js' );</script>
+			<?php
+		}
 	}
 }
