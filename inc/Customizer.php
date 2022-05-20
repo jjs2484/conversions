@@ -296,6 +296,12 @@ namespace conversions
 			// Get the user choices.
 			$font_family = $this->get_font_family();
 
+			// Bootstrap button colors.
+			$bs_btn_colors = \conversions\Conversions::bootstrap_btn_colors();
+
+			// Bootstrap color palette.
+			$bs_colors = \conversions\Conversions::bootstrap_color_palette();
+
 			// fixed navbar height calc variables.
 			$nav_height = $this->fixed_navbar_height_calc();
 
@@ -311,38 +317,6 @@ namespace conversions
 
 			// bbPress button option.
 			$bbp_primary_btn = get_theme_mod( 'conversions_bbp_primary_btn', 'btn-primary' );
-
-			// button multidimensional array.
-			$wc_btns = [
-				'btn-primary'           => [ 'btn_bg' => '#007bff', 'btn_color' => '#fff', 'btn_border' => '#007bff', 'btn_bg_hover' => '#0069d9', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#0069d9' ],
-				'btn-secondary'         => [ 'btn_bg' => '#6c757d', 'btn_color' => '#fff', 'btn_border' => '#6c757d', 'btn_bg_hover' => '#5a6268', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#5a6268' ],
-				'btn-success'           => [ 'btn_bg' => '#198754', 'btn_color' => '#fff', 'btn_border' => '#198754', 'btn_bg_hover' => '#017258', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#017258' ],
-				'btn-danger'            => [ 'btn_bg' => '#dc3545', 'btn_color' => '#fff', 'btn_border' => '#dc3545', 'btn_bg_hover' => '#c82333', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#c82333' ],
-				'btn-warning'           => [ 'btn_bg' => '#ffc107', 'btn_color' => '#212529', 'btn_border' => '#ffc107', 'btn_bg_hover' => '#e0a800', 'btn_color_hover' => '#212529', 'btn_border_hover' => '#e0a800' ],
-				'btn-info'              => [ 'btn_bg' => '#17a2b8', 'btn_color' => '#fff', 'btn_border' => '#17a2b8', 'btn_bg_hover' => '#138496', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#138496' ],
-				'btn-light'             => [ 'btn_bg' => '#f8f9fa', 'btn_color' => '#212529', 'btn_border' => '#f8f9fa', 'btn_bg_hover' => '#e2e6ea', 'btn_color_hover' => '#212529', 'btn_border_hover' => '#e2e6ea' ],
-				'btn-dark'              => [ 'btn_bg' => '#151b26', 'btn_color' => '#fff', 'btn_border' => '#151b26', 'btn_bg_hover' => '#07090d', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#07090d' ],
-				'btn-outline-primary'   => [ 'btn_bg' => 'transparent', 'btn_color' => '#007bff', 'btn_border' => '#007bff', 'btn_bg_hover' => '#007bff', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#007bff' ],
-				'btn-outline-secondary' => [ 'btn_bg' => 'transparent', 'btn_color' => '#6c757d', 'btn_border' => '#6c757d', 'btn_bg_hover' => '#6c757d', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#6c757d' ],
-				'btn-outline-success'   => [ 'btn_bg' => 'transparent', 'btn_color' => '#198754', 'btn_border' => '#198754', 'btn_bg_hover' => '#198754', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#198754' ],
-				'btn-outline-danger'    => [ 'btn_bg' => 'transparent', 'btn_color' => '#dc3545', 'btn_border' => '#dc3545', 'btn_bg_hover' => '#dc3545', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#dc3545' ],
-				'btn-outline-warning'   => [ 'btn_bg' => 'transparent', 'btn_color' => '#ffc107', 'btn_border' => '#ffc107', 'btn_bg_hover' => '#ffc107', 'btn_color_hover' => '#212529', 'btn_border_hover' => '#ffc107' ],
-				'btn-outline-info'      => [ 'btn_bg' => 'transparent', 'btn_color' => '#17a2b8', 'btn_border' => '#17a2b8', 'btn_bg_hover' => '#17a2b8', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#17a2b8' ],
-				'btn-outline-light'     => [ 'btn_bg' => 'transparent', 'btn_color' => '#f8f9fa', 'btn_border' => '#f8f9fa', 'btn_bg_hover' => '#f8f9fa', 'btn_color_hover' => '#212529', 'btn_border_hover' => '#f8f9fa' ],
-				'btn-outline-dark'      => [ 'btn_bg' => 'transparent', 'btn_color' => '#151b26', 'btn_border' => '#151b26', 'btn_bg_hover' => '#151b26', 'btn_color_hover' => '#fff', 'btn_border_hover' => '#151b26' ],
-			];
-
-			// bootstrap colors.
-			$bs_colors = [
-				'primary'   => [ '#007bff' ],
-				'secondary' => [ '#6c757d' ],
-				'success'   => [ '#198754' ],
-				'danger'    => [ '#dc3545' ],
-				'warning'   => [ '#ffc107' ],
-				'info'      => [ '#17a2b8' ],
-				'light'     => [ '#f8f9fa' ],
-				'dark'      => [ '#151b26' ],
-			];
 
 			$mods = [
 				[ '.navbar-brand img', 'max-height', get_theme_mod( 'conversions_logo_height' ), 'rem' ],
@@ -444,7 +418,7 @@ namespace conversions
 				// Sticky post highlight.
 				if ( $sticky_post_highlight !== 'no' ) {
 					echo '.blog:not(.paged) .card.c-sticky-highlight {
-						border-color: ' . esc_html( $bs_colors[$sticky_post_highlight][0] ) . ';
+						border-color: ' . esc_html( $bs_colors[$sticky_post_highlight] ) . ';
 					}';
 				}
 				// Woocommerce.
@@ -460,38 +434,38 @@ namespace conversions
 					}
 					// Shop buttons.
 					echo '.woocommerce ul.products li.product .button, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
-						background: ' . esc_html( $wc_btns[$wc_primary_btn]['btn_bg'] ) . ';
-						color: ' . esc_html( $wc_btns[$wc_primary_btn]['btn_color'] ) . ';
-						border: 1px solid ' . esc_html( $wc_btns[$wc_primary_btn]['btn_border'] ) . ';
+						background: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_bg'] ) . ';
+						color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_color'] ) . ';
+						border: 1px solid ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_border'] ) . ';
 					}';
 					echo '.woocommerce ul.products li.product .button:hover, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
-						color: ' . esc_html( $wc_btns[$wc_primary_btn]['btn_color_hover'] ) . ';
-						background-color: ' . esc_html( $wc_btns[$wc_primary_btn]['btn_bg_hover'] ) . ';
-						border-color: ' . esc_html( $wc_btns[$wc_primary_btn]['btn_border_hover'] ) . ';
+						color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_color_hover'] ) . ';
+						background-color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_bg_hover'] ) . ';
+						border-color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_border_hover'] ) . ';
 					}';
 					echo '.woocommerce ul.products li.product .added_to_cart, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart {
-						background: ' . esc_html( $wc_btns[$wc_secondary_btn]['btn_bg'] ) . ';
-						color: ' . esc_html( $wc_btns[$wc_secondary_btn]['btn_color'] ) . ';
-						border: 1px solid ' . esc_html( $wc_btns[$wc_secondary_btn]['btn_border'] ) . ';
+						background: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_bg'] ) . ';
+						color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_color'] ) . ';
+						border: 1px solid ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_border'] ) . ';
 					}';
 					echo '.woocommerce ul.products li.product .added_to_cart:hover, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart:hover {
-						color: ' . esc_html( $wc_btns[$wc_secondary_btn]['btn_color_hover'] ) . ';
-						background-color: ' . esc_html( $wc_btns[$wc_secondary_btn]['btn_bg_hover'] ) . ';
-						border-color: ' . esc_html( $wc_btns[$wc_secondary_btn]['btn_border_hover'] ) . ';
+						color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_color_hover'] ) . ';
+						background-color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_bg_hover'] ) . ';
+						border-color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_border_hover'] ) . ';
 					}';
 				}
 				// Easy Digital Downloads.
 				if ( class_exists( 'Easy_Digital_Downloads' ) ) {
 					// primary buttons.
 					echo '#edd-purchase-button, .edd-submit, [type="submit"].edd-submit, #edd_checkout_form_wrap input.edd-submit.button.blue {
-						background: ' . esc_html( $wc_btns[$edd_primary_btn]['btn_bg'] ) . ';
-						color: ' . esc_html( $wc_btns[$edd_primary_btn]['btn_color'] ) . ';
-						border: 1px solid ' . esc_html( $wc_btns[$edd_primary_btn]['btn_border'] ) . ';
+						background: ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_bg'] ) . ';
+						color: ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_color'] ) . ';
+						border: 1px solid ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_border'] ) . ';
 					}';
 					echo '#edd-purchase-button:hover, .edd-submit:hover, [type="submit"].edd-submit:hover, #edd_checkout_form_wrap input.edd-submit.button.blue:hover {
-						color: ' . esc_html( $wc_btns[$edd_primary_btn]['btn_color_hover'] ) . ';
-						background-color: ' . esc_html( $wc_btns[$edd_primary_btn]['btn_bg_hover'] ) . ';
-						border-color: ' . esc_html( $wc_btns[$edd_primary_btn]['btn_border_hover'] ) . ';
+						color: ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_color_hover'] ) . ';
+						background-color: ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_bg_hover'] ) . ';
+						border-color: ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_border_hover'] ) . ';
 					}';
 				}
 				// bbPress.
@@ -502,18 +476,18 @@ namespace conversions
 					.widget_display_search #bbp-search-form #bbp_search_submit,
 					#bbpress-forums.bbpress-wrapper .button.submit,
 					#bbpress-forums.bbpress-wrapper #bbp-user-wrapper #bbp-your-profile #password .button {
-						background: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_bg'] ) . ';
-						color: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_color'] ) . ';
-						border: 1px solid ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_border'] ) . ';
+						background: ' . esc_html( $bs_btn_colors[$bbp_primary_btn]['btn_bg'] ) . ';
+						color: ' . esc_html( $bs_btn_colors[$bbp_primary_btn]['btn_color'] ) . ';
+						border: 1px solid ' . esc_html( $bs_btn_colors[$bbp_primary_btn]['btn_border'] ) . ';
 					}';
 					echo '#bbpress-forums #bbp-search-form #bbp_search_submit:hover,
 					#bbpress-forums .bbp-search-form #bbp_search_submit:hover,
 					.widget_display_search #bbp-search-form #bbp_search_submit:hover,
 					#bbpress-forums.bbpress-wrapper .button.submit:hover,
 					#bbpress-forums.bbpress-wrapper #bbp-user-wrapper #bbp-your-profile #password .button:hover {
-						color: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_color_hover'] ) . ';
-						background-color: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_bg_hover'] ) . ';
-						border-color: ' . esc_html( $wc_btns[$bbp_primary_btn]['btn_border_hover'] ) . ';
+						color: ' . esc_html( $bs_btn_colors[$bbp_primary_btn]['btn_color_hover'] ) . ';
+						background-color: ' . esc_html( $bs_btn_colors[$bbp_primary_btn]['btn_bg_hover'] ) . ';
+						border-color: ' . esc_html( $bs_btn_colors[$bbp_primary_btn]['btn_border_hover'] ) . ';
 					}';
 					// Profile search box.
 					if ( get_theme_mod( 'conversions_bbp_profile_search', false ) === false ) {
