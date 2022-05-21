@@ -22,11 +22,28 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
-= 1.8.4 =
+= 1.9.1 =
 * Update: Bootstrap to 5.1.3
-* Update: Font Awesome to 5.15.4
+* Update: Better handling of BS5 colors in PHP
+* Fix: Comment structure for BS5
+* Fix: Alerts color fixes for BS5
+* Fix: Add select and form label BS5 styles
+* Update: Font Awesome to 6.1.1
+* Fix: Font Awesome prefixes
+* Update: More no-sidebar body classes check
+* Update: Navbar accessibility
+* Update: Homepage sections accessibility
 * Update: NPM Dependencies.
 * Update: Composer dependencies.
+* New: Filter conversions_show_footer_widgets
+* New: Filter conversions_fixed_navbar_margin
+* New: Filter conversions_reading_time
+* New: Filter conversions_related_post_image
+* New: Function skiplink()
+* New: Filter conversions_skiplink_anchor
+* New: Add modernizr, webp test, no-js test
+* Fix: bbPress no-js class on body
+* Fix: bbPress styles
 
 = 1.8.3 =
 * New: AffiliateWP support.
