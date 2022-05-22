@@ -13223,7 +13223,7 @@ table#edd_user_history {
       margin-bottom: 1rem; }
       .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation ul {
         flex-direction: column; }
-        @media (min-width: 576px) {
+        @media (min-width: 768px) {
           .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation ul {
             flex-direction: row; } }
       @media (min-width: 576px) {
@@ -13319,7 +13319,7 @@ table#edd_user_history {
     .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-forum-info,
     .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic li.bbp-topic-title {
       width: 100%; } }
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum .c-bbp-topic-count,
     .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum .c-bbp-post-count,
     .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum .c-bbp-freshness-text,
@@ -13345,10 +13345,6 @@ table#edd_user_history {
   .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum p.bbp-topic-meta span,
   .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic p.bbp-topic-meta span {
     white-space: normal; }
-    @media (min-width: 768px) {
-      .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum p.bbp-topic-meta span,
-      .bbpress-wrapper#bbpress-forums li.bbp-body ul.topic p.bbp-topic-meta span {
-        white-space: nowrap; } }
   @media (max-width: 575.98px) {
     .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-topic-freshness .bbp-topic-meta,
     .bbpress-wrapper#bbpress-forums li.bbp-body ul.forum li.bbp-forum-freshness .bbp-topic-meta,
