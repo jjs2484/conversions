@@ -63,8 +63,24 @@
 	&#bbpress-forums {
 		#bbp-search-form {
 			margin-bottom: .75rem;
-			#bbp_search {
-				vertical-align: middle;
+			margin: .25rem;
+
+			.input-group {
+
+				> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+					margin-left: -1px;
+					border-top-left-radius: .25rem;
+					border-bottom-left-radius: .25rem;
+				}
+
+				#bbp_search {
+					width: 1%;
+				}
+
+				button, input {
+					font-size: 1rem;
+					padding: .375rem .75rem;
+				}
 			}
 		}
 	}

@@ -13167,9 +13167,17 @@ table#edd_user_history {
   .bbpress-wrapper .bbpress-wrapper div.indicator-hint p {
     margin: 0 !important; }
 .bbpress-wrapper#bbpress-forums #bbp-search-form {
-  margin-bottom: .75rem; }
-  .bbpress-wrapper#bbpress-forums #bbp-search-form #bbp_search {
-    vertical-align: middle; }
+  margin-bottom: .75rem;
+  margin: .25rem; }
+  .bbpress-wrapper#bbpress-forums #bbp-search-form .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: -1px;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem; }
+  .bbpress-wrapper#bbpress-forums #bbp-search-form .input-group #bbp_search {
+    width: 1%; }
+  .bbpress-wrapper#bbpress-forums #bbp-search-form .input-group button, .bbpress-wrapper#bbpress-forums #bbp-search-form .input-group input {
+    font-size: 1rem;
+    padding: .375rem .75rem; }
 .bbpress-wrapper#bbpress-forums .bbp-pagination {
   display: flex;
   flex-direction: column;
