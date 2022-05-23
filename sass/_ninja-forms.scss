@@ -11,10 +11,18 @@ body.no-sidebar .nf-form-content {
 .nf-form-wrap {
 
 	// Add .form-control to inputs
-	.nf-form-content input:not([type="button"]), 
-	.nf-form-content textarea,
-	.nf-form-content .list-select-wrap > div select {
-		@extend .form-control;
+	.nf-form-content {
+		input:not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+		textarea {
+			@extend .form-control;
+		}
+
+		.list-select-wrap > div select {
+			@extend .form-select;
+		}
+		select.ninja-forms-field:not([multiple]) {
+			height: auto;
+		}
 	}
 
 	// Add .form-check-input to checkbox and radio inputs
@@ -49,7 +57,18 @@ body.no-sidebar .nf-form-content {
 		.listradio-wrap {
 			li {
 				@extend .form-check;
-				padding-left: 1.25rem !important;
+				padding-left: 1.5rem !important;
+				line-height: 1.5;
+
+				input[type="radio"] {
+					display: block;
+					padding: 0;
+					width: 1em !important;
+					margin-top: .15rem;
+				}
+				label {
+					margin: 0 !important;
+				}
 			}
 		}
 		.two-col-list,
