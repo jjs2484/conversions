@@ -23,6 +23,9 @@ body.no-sidebar .nf-form-content {
 		select.ninja-forms-field:not([multiple]) {
 			height: auto;
 		}
+		hr.ninja-forms-field {
+			margin-bottom: 1.5rem;
+		}
 	}
 
 	// Add .form-check-input to checkbox and radio inputs

@@ -13345,6 +13345,8 @@ body.no-sidebar .nf-form-content {
 
 .nf-form-wrap .nf-form-content select.ninja-forms-field:not([multiple]) {
   height: auto; }
+.nf-form-wrap .nf-form-content hr.ninja-forms-field {
+  margin-bottom: 1.5rem; }
 .nf-form-wrap .listradio-wrap .nf-field-element label::after,
 .nf-form-wrap .listradio-wrap .nf-field-element label.nf-checked-label::before,
 .nf-form-wrap .listcheckbox-wrap .nf-field-element label::after,
