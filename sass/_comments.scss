@@ -37,7 +37,7 @@
 		// User
 		.media-heading {
 			&::before {
-				font-family: "Font Awesome 5 Free";
+				font-family: "Font Awesome 6 Free";
 				content: "\f007";
 				color: $text-muted;
 				margin-right: 5px;
@@ -54,7 +54,7 @@
 		// Time
 		.comment-metadata time {
 			&::before {
-				font-family: "Font Awesome 5 Free";
+				font-family: "Font Awesome 6 Free";
 				content: "\f017";
 				color: $text-muted;
 				margin-right: 1px;
@@ -64,7 +64,7 @@
 		// Permalink
 		.comm-perm {
 			&::before {
-				font-family: "Font Awesome 5 Free";
+				font-family: "Font Awesome 6 Free";
 				content: "\f02e";
 				color: $text-muted;
 				margin-right: 2px;

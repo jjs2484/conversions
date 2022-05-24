@@ -206,7 +206,7 @@ section p.subtitle {
 // post author icon
 .c-posted-by {
 	&::before {
-		font-family: "Font Awesome 5 Free";
+		font-family: "Font Awesome 6 Free";
 		content: "\f007";
 		color: $text-muted;
 		margin-right: 2px;
@@ -215,7 +215,7 @@ section p.subtitle {
 // post date icon
 .c-posted-on {
 	&::before {
-		font-family: "Font Awesome 5 Free";
+		font-family: "Font Awesome 6 Free";
 		content: "\f073";
 		color: $text-muted;
 		margin-right: 3px;
@@ -224,7 +224,7 @@ section p.subtitle {
 // post comments icon
 .c-single-comments {
 	&::before {
-		font-family: "Font Awesome 5 Free";
+		font-family: "Font Awesome 6 Free";
 		content: "\f075";
 		color: $text-muted;
 		margin-right: 2px;
@@ -233,7 +233,7 @@ section p.subtitle {
 // post reading time icon
 .c-reading-time {
 	&::before {
-		font-family: "Font Awesome 5 Free";
+		font-family: "Font Awesome 6 Free";
 		content: "\f017";
 		color: $text-muted;
 		margin-right: 2px;
