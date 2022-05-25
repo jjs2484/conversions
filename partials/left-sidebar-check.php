@@ -19,8 +19,8 @@ if ( 'left' === $conversions_sidebar_pos ) :
 	get_template_part( 'partials/sidebar', 'left' );
 endif;
 
-// primary content area columns based on selected and active sidebars.
-// if left sidebar is selected.
+// Primary content area columns based on selected and active sidebars.
+// If left sidebar is selected.
 if ( 'left' === $conversions_sidebar_pos ) {
 	if ( is_active_sidebar( 'sidebar-2' ) ) {
 		echo sprintf(
@@ -30,7 +30,7 @@ if ( 'left' === $conversions_sidebar_pos ) {
 	} else {
 		echo '<div class="col-md-12 content-area" id="primary">';
 	}
-} elseif ( 'right' === $conversions_sidebar_pos ) { // if right sidebar is selected.
+} elseif ( 'right' === $conversions_sidebar_pos ) { // If right sidebar is selected.
 	if ( is_active_sidebar( 'sidebar-1' ) ) {
 		echo sprintf(
 			'<div class="col-lg-9 pe-lg-%s content-area" id="primary">',
@@ -39,6 +39,6 @@ if ( 'left' === $conversions_sidebar_pos ) {
 	} else {
 		echo '<div class="col-md-12 content-area" id="primary">';
 	}
-} elseif ( 'none' === $conversions_sidebar_pos ) { // if no sidebar is selected.
+} elseif ( 'none' === $conversions_sidebar_pos ) { // If no sidebar is selected.
 	echo '<div class="col-md-12 content-area" id="primary">';
 }
