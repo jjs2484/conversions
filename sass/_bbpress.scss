@@ -360,18 +360,3 @@
 		}
 	}
 }
-
-// Widget changes
-// Login widget
-.bbp_widget_login .avatar {
-	border-radius: 50%;
-}
-// Search widget
-.widget_display_search #bbp-search-form {
-	#bbp_search {
-		margin-bottom: .75rem;
-	}
-	#bbp_search_submit {
-		@extend .btn;
-	}
-}

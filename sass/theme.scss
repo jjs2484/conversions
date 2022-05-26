@@ -1,46 +1,65 @@
 // Loads Variables
 @import "variables";
 
-// Loads Variables
+// Variables
 @import "mixins";
 
-// Loads Bootstrap
+// Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Loads Underscores media styles
+// Underscores media styles
 @import "galleries";
 
-// Loads Adminbar styles
+// Adminbar
 @import "adminbar";
-// Loads Basic wp classes
+
+// Basic wp classes
 @import "wp-classes";
-// Loads Navbar styles
+
+// Navbar
 @import "navbar";
-// Loads Content styles
+
+// Content - general
 @import "content";
-// Loads Comments styles
+
+// Comments
 @import "comments";
-// Loads Sidebar styles
+
+// Sidebar
 @import "sidebar";
-// Loads Footer styles
+
+// Footer
 @import "footer";
-// Loads FAB styles
+
+// Widgets
+@import "widgets";
+
+// FAB - floating action button
 @import "fab";
-// Loads Gradient styles
+
+// Gradients
 @import "gradients";
-// Loads Gutenberg styles
+
+// Gutenberg
 @import "gutenberg";
-// Loads WooCommerce styles
+
+// WooCommerce
 @import "woocommerce";
-// Loads Contact Form 7 styles
+
+// Contact Form 7
 @import "contact-form7";
-// Loads Easy Digital Downloads styles
+
+// Easy Digital Downloads
 @import "easy-digital-downloads";
-// Loads Affiliatewp styles
+
+// Affiliatewp
 @import "affiliatewp";
-// Loads bbPress styles
+
+// bbPress
 @import "bbpress";
-// Loads bbPress styles
+
+// Ninja Forms
 @import "ninja-forms";
-// Loads Hamburgers styles
+
+// Hamburgers
 @import "../node_modules/hamburgers/_sass/hamburgers/hamburgers";

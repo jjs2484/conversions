@@ -81,33 +81,6 @@ code {
 	color: $body-color;
 }
 
-// Calender widget
-table#wp-calendar {
-	caption {
-		text-align: center;
-		caption-side: top;
-	}
-	th {
-		background: #edeff0;
-	}
-}
-.widget.widget_calendar,
-.footer-widget-area .widget_calendar {
-	table#wp-calendar {
-		table-layout: fixed;
-		td,
-		th {
-			padding: 0.35em;
-			text-align: center;
-		}
-	}
-}
-.footer-widget-area .widget_calendar {
-	table#wp-calendar th {
-		background: none;
-	}
-}
-
 // Post design
 .entry-footer span {
 	padding-right: 10px;

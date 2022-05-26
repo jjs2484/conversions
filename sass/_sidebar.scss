@@ -1,17 +1,8 @@
-// sidebar widgets
+// sidebar
 #sidebar-2,
 #sidebar-1 {
 	margin-top: 1.2rem;
 	@include media-breakpoint-up(md) {
 		margin-top: 0.5rem;
-	}
-	.widget {
-		margin-bottom: 2rem;
-		h3 {
-			font-size: 1.5rem;
-			&.widget-title {
-				border-bottom: 1px solid $border-color;
-			}
-		}
 	}
 }

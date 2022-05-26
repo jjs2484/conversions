@@ -1,0 +1,86 @@
+// Widgets
+
+// Calender widget
+table#wp-calendar {
+	table-layout: fixed;
+	caption {
+		text-align: center;
+		caption-side: top;
+	}
+	td, th {
+		padding: 0.35em;
+		text-align: center;
+		background: #edeff0;
+	}
+}
+
+// sidebar widgets
+#sidebar-2,
+#sidebar-1 {
+	.widget {
+		margin-bottom: 2rem;
+		h3 {
+			font-size: 1.5rem;
+			&.widget-title {
+				border-bottom: 1px solid $border-color;
+			}
+		}
+	}
+}
+
+// Footer widget area
+#wrapper-footer-full {
+	.footer-widget-area {
+		.footer-widget {
+			display: block;
+			margin: 0 auto 1.5rem;
+	
+			ul {
+				padding-left: 1.5rem;
+			}
+		}
+		.widget_calendar {
+			table#wp-calendar {
+				td,
+				th {
+					background: none;
+				}
+			}
+		}
+	}
+}
+
+// WooCommerce sidebar/footer cart and product widgets
+.widget-area,
+#footer-full-content {
+	.woocommerce ul.cart_list li img,
+	.woocommerce ul.product_list_widget li img {
+		float: left;
+		margin-right: 10px;
+		margin-top: 5px;
+	}
+}
+
+// WooCommerce footer cart buttons
+#footer-full-content
+.woocommerce.widget_shopping_cart
+.woocommerce-mini-cart__buttons.buttons
+a.button {
+	@extend .btn;
+	@extend .btn-primary;
+}
+
+// bbPress Login widget
+.bbp_widget_login .avatar {
+	border-radius: 50%;
+}
+
+// bbPress search widget
+.widget_display_search #bbp-search-form {
+	#bbp_search {
+		margin-bottom: .75rem;
+	}
+	#bbp_search_submit {
+		@extend .btn;
+	}
+}
