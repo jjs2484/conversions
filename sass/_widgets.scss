@@ -1,6 +1,6 @@
 // Widgets
 
-// Calender widget
+// Calender widget -- legacy
 table#wp-calendar {
 	table-layout: fixed;
 	caption {
@@ -11,6 +11,26 @@ table#wp-calendar {
 		padding: 0.35em;
 		text-align: center;
 		background: #edeff0;
+	}
+}
+
+// Block based
+.widget_block {
+	// Search -- outside button
+	.wp-block-search__button-outside {
+		.wp-block-search__button {
+			@extend .btn;
+			@extend .btn-primary;
+		}
+	}
+	// WooCommerce product search
+	.wc-block-product-search .wc-block-product-search__button {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+	// Latest posts
+	.wp-block-latest-posts.wp-block-latest-posts__list {
+		list-style: outside;
 	}
 }
 

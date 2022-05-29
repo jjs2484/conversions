@@ -323,7 +323,7 @@ namespace conversions
 				[ '.navbar', 'padding-top', get_theme_mod( 'conversions_nav_tbpadding' ), 'rem' ],
 				[ '.navbar', 'padding-bottom', get_theme_mod( 'conversions_nav_tbpadding' ), 'rem' ],
 				[ 'footer.site-footer', 'background-color', get_theme_mod( 'conversions_footer_bg_color' ) ],
-				[ 'footer.site-footer .h1, footer.site-footer .h2, footer.site-footer .h3, footer.site-footer .h4, footer.site-footer .h5, footer.site-footer .h6, footer.site-footer h1, footer.site-footer h2, footer.site-footer h3, footer.site-footer h4, footer.site-footer h5, footer.site-footer h6, footer.site-footer p, footer.site-footer table, footer.site-footer li, footer.site-footer dl, footer.site-footer caption, footer.site-footer .site-info .copyright, footer.site-footer label', 'color', get_theme_mod( 'conversions_footer_text_color' ) ],
+				[ 'footer.site-footer .h1, footer.site-footer .h2, footer.site-footer .h3, footer.site-footer .h4, footer.site-footer .h5, footer.site-footer .h6, footer.site-footer h1, footer.site-footer h2, footer.site-footer h3, footer.site-footer h4, footer.site-footer h5, footer.site-footer h6, footer.site-footer p, footer.site-footer table, footer.site-footer li, footer.site-footer dl, footer.site-footer caption, footer.site-footer .site-info .copyright, footer.site-footer label, .wp-block-calendar th, .wp-block-calendar td', 'color', get_theme_mod( 'conversions_footer_text_color' ) ],
 				[ 'footer.site-footer a:not(.btn), footer.site-footer .site-info .copyright a, footer.site-footer .social-media-icons ul li.list-inline-item i', 'color', get_theme_mod( 'conversions_footer_link_color' ) ],
 				[ 'footer.site-footer a:hover:not(.btn), footer.site-footer .site-info .copyright a:hover, footer.site-footer .social-media-icons ul li.list-inline-item i:hover', 'color', get_theme_mod( 'conversions_footer_link_hcolor' ) ],
 				[ 'a', 'color', get_theme_mod( 'conversions_link_color' ) ],
@@ -432,23 +432,23 @@ namespace conversions
 							body.woocommerce-checkout #order_review, body.woocommerce-checkout #order_review_heading { width: 48%; float: right; margin-right: 0; }
 						}';
 					}
-					// Shop buttons.
-					echo '.woocommerce ul.products li.product .button, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+					// Shop / search / mini cart.
+					echo '.woocommerce ul.products li.product .button, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link, .widget_block .wc-block-product-search .wc-block-product-search__button, #offcanvasWcMiniCart .button.wc-forward {
 						background: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_bg'] ) . ';
 						color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_color'] ) . ';
 						border: 1px solid ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_border'] ) . ';
 					}';
-					echo '.woocommerce ul.products li.product .button:hover, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
+					echo '.woocommerce ul.products li.product .button:hover, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover, .widget_block .wc-block-product-search .wc-block-product-search__button:hover, #offcanvasWcMiniCart .button.wc-forward:hover {
 						color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_color_hover'] ) . ';
 						background-color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_bg_hover'] ) . ';
 						border-color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_border_hover'] ) . ';
 					}';
-					echo '.woocommerce ul.products li.product .added_to_cart, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart {
+					echo '.woocommerce ul.products li.product .added_to_cart, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart, #offcanvasWcMiniCart .button.checkout.wc-forward {
 						background: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_bg'] ) . ';
 						color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_color'] ) . ';
 						border: 1px solid ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_border'] ) . ';
 					}';
-					echo '.woocommerce ul.products li.product .added_to_cart:hover, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart:hover {
+					echo '.woocommerce ul.products li.product .added_to_cart:hover, .wc-block-grid .wc-block-grid__products .wc-block-grid__product .added_to_cart:hover, #offcanvasWcMiniCart .button.checkout.wc-forward:hover {
 						color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_color_hover'] ) . ';
 						background-color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_bg_hover'] ) . ';
 						border-color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_border_hover'] ) . ';

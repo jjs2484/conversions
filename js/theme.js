@@ -139,23 +139,6 @@ jQuery( document ).ready( function( $ ) {
 	} );
 } );
 
-function cScrollToCart() { 
-	
-	// Check for WooCommerce add to cart button
-	var elem = jQuery('.summary.entry-summary');
-	
-	if( !elem.length )
-	{
-		// Check for EDD cart button.
-		var elem = jQuery('.edd_download_purchase_form');
-	}
-
-	if( elem.length )
-	{
-		elem[0].scrollIntoView();
-	}
-}
-
 /**
  * Initialize Bootstrap responsive tabs for AffiliatesWP
 */

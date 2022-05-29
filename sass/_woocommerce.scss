@@ -386,3 +386,138 @@ p.woocommerce-store-notice.demo_store {
 		}
 	}
 }
+
+// Mini cart
+#offcanvasWcMiniCart {
+	ul.cart_list,
+	ul.product_list_widget {
+		list-style: none outside;
+		padding: 0;
+		margin: 0;
+ 
+		li {
+			padding: 1rem 2em 1rem .25rem;
+			margin: 0;
+			list-style: none;
+			position: relative;
+			border-bottom: 1px solid #ddd;
+ 
+			a {
+				display: block;
+				font-weight: 700;
+			}
+ 
+			img {
+				float: left;
+				max-width: 4rem;
+				height: auto;
+				margin-right: 1rem;
+				width: 100%;
+			}
+ 
+			dl {
+				margin: 0;
+				padding-left: 1em;
+				border-left: 2px solid rgba(0, 0, 0, 0.1);
+ 
+				dt,
+				dd {
+					display: inline-block;
+					float: left;
+					margin-bottom: 1em;
+				}
+ 
+				dt {
+					font-weight: 700;
+					padding: 0 0 0.25em;
+					margin: 0 4px 0 0;
+					clear: left;
+				}
+ 
+				dd {
+					padding: 0 0 0.25em;
+ 
+					p:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+ 
+			.star-rating {
+				float: none;
+			}
+		}
+	}
+ 
+	&.widget_shopping_cart,
+	.widget_shopping_cart {
+ 
+		.total {
+			border-top: 3px double $secondary;
+			padding: 4px 0 0;
+ 
+			strong {
+				min-width: 40px;
+				display: inline-block;
+			}
+		}
+ 
+		.cart_list li {
+			padding-left: 2em;
+			position: relative;
+			padding-top: 0;
+ 
+			a.remove {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+ 
+		.buttons {
+ 
+			a {
+				margin-right: 5px;
+				margin-bottom: 5px;
+			}
+		}
+	}
+	a.remove {
+		display: block;
+		font-size: 1.1em;
+		height: 1em;
+		width: 1em;
+		text-align: center;
+		line-height: 1;
+		border-radius: 0;
+		text-decoration: none;
+		font-weight: 700;
+		border: 0;
+		position: absolute;
+		top: 1.25rem;
+		right: 0;
+		visibility: hidden;
+
+		&::before {
+			font-family: "Font Awesome 6 Free";
+			content: "\f1f8";
+			color: $text-muted;
+			font-weight: 700;
+			visibility: visible;
+		}
+		&:hover::before {
+			color: $danger;
+		}
+	}
+
+	.woocommerce-mini-cart__total.total {
+		margin: 1.5rem .25rem;
+	}
+
+	.woocommerce-mini-cart__buttons a {
+		@extend .btn;
+		display: block;
+		width: 100%;
+		margin: .5rem 0;
+	}
+}

@@ -72,36 +72,22 @@ class Fab {
 		// Get fab color.
 		$color = $this->fab_color();
 
-		// Get cart URL.
+		// Create variables.
 		if ( class_exists( 'woocommerce' ) ) {
 			$cart_url = wc_get_cart_url();
 		} else {
 			$cart_url = edd_get_checkout_uri();
 		}
 
-		// Check if we are on single product page.
-		if ( is_singular( 'product' ) || is_singular( 'download' ) ) {
+		// If WooCommerce and mini cart enabled.
+		if ( class_exists( 'woocommerce' ) && get_theme_mod( 'conversions_wc_minicart', true ) === true ) {
 
-			// Add to cart FAB.
-			$fab_cart = sprintf(
-				'<button onclick="cScrollToCart()" title="%1$s" class="c-fab__btn btn %2$s"><i aria-hidden="true" class="fa-solid fa-cart-plus"></i></button>',
-				__( 'Add to your shopping cart', 'conversions' ),
+			// Cart FAB.
+			$fab_button = sprintf(
+				'<a title="%1$s" class="c-fab__btn btn %2$s" data-bs-toggle="offcanvas" href="#offcanvasWcMiniCart" role="button" aria-controls="offcanvasWcMiniCart"><i aria-hidden="true" class="fa-solid fa-shopping-cart"></i></a>',
+				__( 'View your shopping cart', 'conversions' ),
 				esc_attr( $color )
 			);
-			// Add wrapper to add cart fab.
-			$fab_cart = '<div class="c-fab c-fab__cart-add">' . $fab_cart . '</div>';
-
-			// Cart FAD.
-			$fab_button = sprintf(
-				'<a title="%1$s" class="c-fab__btn btn %2$s" href="%3$s"><i aria-hidden="true" class="fa-solid fa-shopping-cart"></i></a>',
-				__( 'View your shopping cart', 'conversions' ),
-				esc_attr( 'btn-light' ),
-				esc_url( $cart_url )
-			);
-			// Add wrapper to cart fab.
-			$fab_button = '<div class="c-fab c-fab__cart-wrapper">' . $fab_button . '</div>';
-
-			$fab_button = $fab_cart . $fab_button;
 		} else {
 
 			// Cart FAB.
@@ -111,9 +97,10 @@ class Fab {
 				esc_attr( $color ),
 				esc_url( $cart_url )
 			);
-			// Add wrapper to cart fab.
-			$fab_button = '<div class="c-fab c-fab__cart-wrapper">' . $fab_button . '</div>';
 		}
+
+		// Add wrapper to cart fab.
+		$fab_button = '<div class="c-fab c-fab__cart-wrapper">' . $fab_button . '</div>';
 
 		// Check for filter before output.
 		if ( has_filter( 'conversions_fab_cart' ) ) {

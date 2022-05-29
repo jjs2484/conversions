@@ -143,3 +143,27 @@ $wp_customize->add_control(
 		]
 	)
 );
+$wp_customize->add_setting(
+	'conversions_wc_minicart',
+	[
+		'default'           => true,
+		'type'              => 'theme_mod',
+		'sanitize_callback' => 'conversions_sanitize_checkbox',
+		'capability'        => 'edit_theme_options',
+		'transport'         => 'refresh',
+	]
+);
+$wp_customize->add_control(
+	new \WP_Customize_Control(
+		$wp_customize,
+		'conversions_wc_minicart',
+		[
+			'label'       => __( 'Mini cart', 'conversions' ),
+			'description' => __( 'Enable mini cart', 'conversions' ),
+			'section'     => 'conversions_woocommerce',
+			'settings'    => 'conversions_wc_minicart',
+			'type'        => 'checkbox',
+			'priority'    => '50',
+		]
+	)
+);

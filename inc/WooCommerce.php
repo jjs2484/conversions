@@ -32,6 +32,8 @@ class WooCommerce {
 		add_filter( 'woocommerce_add_to_cart_fragments', [ $this, 'woocommerce_add_to_cart_fragments' ] );
 
 		$this->review_ratings();
+
+		add_action( 'wp_footer', [ $this, 'woocommerce_mini_cart' ] );
 	}
 
 	/**
@@ -78,13 +80,23 @@ class WooCommerce {
 
 		$cart_icon = '<i aria-hidden="true" class="fa-solid fa-shopping-cart"></i>';
 
-		$cart_html = sprintf(
-			'<a class="cart-customlocation nav-link" title="%s" href="%s">%s%s</a>',
-			esc_attr__( 'View your shopping cart', 'conversions' ), // title.
-			esc_url( wc_get_cart_url() ),                           // href.
-			$cart_icon,
-			$cart_totals
-		);
+		if ( get_theme_mod( 'conversions_wc_minicart', true ) === true ) {
+
+			$cart_html = sprintf(
+				'<a class="cart-customlocation nav-link" title="%s" data-bs-toggle="offcanvas" href="#offcanvasWcMiniCart" role="button" aria-controls="offcanvasWcMiniCart">%s%s</a>',
+				esc_attr__( 'View your shopping cart', 'conversions' ), // title.
+				$cart_icon,
+				$cart_totals
+			);
+		} else {
+			$cart_html = sprintf(
+				'<a class="cart-customlocation nav-link" title="%s" href="%s">%s%s</a>',
+				esc_attr__( 'View your shopping cart', 'conversions' ), // title.
+				esc_url( wc_get_cart_url() ),                           // href.
+				$cart_icon,
+				$cart_totals
+			);
+		}
 		return $cart_html;
 	}
 
@@ -240,4 +252,23 @@ class WooCommerce {
 		echo '</div><!-- Wrapper end -->';
 	}
 
+	/**
+	 * Mini cart offcanvas.
+	 *
+	 * @since 2012-05-27
+	 */
+	public function woocommerce_mini_cart() {
+
+		$b  = '<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWcMiniCart" aria-labelledby="offcanvasWcMiniCartLabel">';
+		$b .= '<div class="offcanvas-header">';
+		$b .= '<h2 id="offcanvasWcMiniCartLabel">' . esc_html__( 'Your Cart', 'conversions' ) . '</h2>';
+		$b .= '<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>';
+		$b .= '</div>';
+		$b .= '<div class="offcanvas-body">';
+		$b .= '<div class="widget_shopping_cart_content">' . woocommerce_mini_cart() . '</div>';
+		$b .= '</div>';
+		$b .= '</div>';
+
+		echo $b;
+	}
 }
