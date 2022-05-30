@@ -224,7 +224,7 @@ namespace conversions
 				'conversions_footer_link_color'    => '#0068d7',
 				'conversions_footer_link_hcolor'   => '#00698c',
 				'conversions_wc_cart_nav'          => true,
-				'conversions_wc_minicart'         => true,
+				'conversions_wc_minicart'          => true,
 				'conversions_wc_checkout_columns'  => 'two-column',
 				'conversions_wc_primary_btn'       => 'btn-outline-primary',
 				'conversions_wc_secondary_btn'     => 'btn-primary',

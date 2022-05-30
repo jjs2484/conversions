@@ -19,9 +19,8 @@ class WooCommerce {
 	 * @since 2019-08-06
 	 */
 	public function __construct() {
-		/**
-		* First unhook the WooCommerce wrappers
-		*/
+
+		// First unhook the WooCommerce wrappers.
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
 		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );
 
@@ -33,7 +32,17 @@ class WooCommerce {
 
 		$this->review_ratings();
 
-		add_action( 'wp_footer', [ $this, 'woocommerce_mini_cart' ] );
+		if ( class_exists( 'woocommerce' ) || get_theme_mod( 'conversions_wc_minicart', true ) === true ) {
+			add_action( 'wp_footer', [ $this, 'woocommerce_mini_cart' ] );
+			add_action( 'wp_footer', [ $this, 'woocommerce_single_ajax_add_to_cart' ] );
+			add_action( 'wc_ajax_c_add_to_cart', [ $this, 'ajax_add_to_cart_handling' ] );
+			add_action( 'wc_ajax_nopriv_c_add_to_cart', [ $this, 'ajax_add_to_cart_handling' ] );
+
+			// Remove WC Core add to cart handler to prevent double-add.
+			remove_action( 'wp_loaded', array( 'WC_Form_Handler', 'add_to_cart_action' ), 20 );
+
+			add_filter( 'woocommerce_add_to_cart_fragments', [ $this, 'ajax_add_to_cart_add_fragments' ] );
+		}
 	}
 
 	/**
@@ -259,6 +268,7 @@ class WooCommerce {
 	 */
 	public function woocommerce_mini_cart() {
 
+		// Offcanvas mini cart.
 		$b  = '<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWcMiniCart" aria-labelledby="offcanvasWcMiniCartLabel">';
 		$b .= '<div class="offcanvas-header">';
 		$b .= '<h2 id="offcanvasWcMiniCartLabel">' . esc_html__( 'Your Cart', 'conversions' ) . '</h2>';
@@ -269,6 +279,118 @@ class WooCommerce {
 		$b .= '</div>';
 		$b .= '</div>';
 
-		echo $b;
+		echo $b; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- already escaped
+	}
+
+	/**
+	 * JS for AJAX Add to Cart handling.
+	 *
+	 * @since 2012-05-29
+	 */
+	public function woocommerce_single_ajax_add_to_cart() {
+		?>
+		<script type="text/javascript" charset="UTF-8">
+		jQuery(function($) {
+
+			$('form.cart').on('submit', function(e) {
+				e.preventDefault();
+
+				var form = $(this);
+				form.block({ message: null, overlayCSS: { background: '#fff', opacity: 0.6 } });
+
+				var formData = new FormData(form[0]);
+				formData.append('add-to-cart', form.find('[name=add-to-cart]').val() );
+
+				// Ajax action.
+				$.ajax({
+					url: wc_add_to_cart_params.wc_ajax_url.toString().replace( '%%endpoint%%', 'c_add_to_cart' ),
+					data: formData,
+					type: 'POST',
+					processData: false,
+					contentType: false,
+					complete: function( response ) {
+						response = response.responseJSON;
+
+						if ( ! response ) {
+							return;
+						}
+
+						if ( response.error && response.product_url ) {
+							window.location = response.product_url;
+							return;
+						}
+
+						// Redirect to cart option
+						if ( wc_add_to_cart_params.cart_redirect_after_add === 'yes' ) {
+							window.location = wc_add_to_cart_params.cart_url;
+							return;
+						}
+
+						var $thisbutton = form.find('.single_add_to_cart_button'); //
+						// var $thisbutton = null; // uncomment this if you don't want the 'View cart' button
+
+						// Trigger event so themes can refresh other areas.
+						$( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, $thisbutton ] );
+
+						// Remove existing notices
+						$( '.woocommerce-error, .woocommerce-message, .woocommerce-info' ).remove();
+
+						// Add new notices
+						form.closest('.product').before(response.fragments.notices_html)
+
+						form.unblock();
+					}
+				});
+			});
+		});
+
+		jQuery(document).ready(function($){
+			$('body').on( 'added_to_cart', function(){
+				var myOffcanvas = document.getElementById('offcanvasWcMiniCart');
+				var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+				bsOffcanvas.show();
+			});
+		});
+		</script>
+		<?php
+	}
+
+	/**
+	 * AJAX Add to Cart handling.
+	 *
+	 * @since 2012-05-29
+	 */
+	public function ajax_add_to_cart_handling() {
+		\WC_Form_Handler::add_to_cart_action();
+		\WC_AJAX::get_refreshed_fragments();
+	}
+
+	/**
+	 * Add fragments for notices.
+	 *
+	 * @since 2012-05-30
+	 *
+	 * @param array $fragments Fragments to refresh via AJAX.
+	 */
+	public function ajax_add_to_cart_add_fragments( $fragments ) {
+		$all_notices  = WC()->session->get( 'wc_notices', array() );
+		$notice_types = apply_filters( 'woocommerce_notice_types', array( 'error', 'success', 'notice' ) );
+
+		ob_start();
+		foreach ( $notice_types as $notice_type ) {
+			if ( wc_notice_count( $notice_type ) > 0 ) {
+				wc_get_template(
+					"notices/{$notice_type}.php",
+					array(
+						'notices' => array_filter( $all_notices[ $notice_type ] ),
+					)
+				);
+			}
+		}
+		$fragments['notices_html'] = ob_get_clean();
+
+		wc_clear_notices();
+
+		return $fragments;
 	}
 }
