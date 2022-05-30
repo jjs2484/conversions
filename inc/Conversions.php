@@ -44,9 +44,15 @@ namespace conversions
 			new Extras();
 			$this->template = new Template();
 			$this->widgets  = new Widgets();
-			new WooCommerce();
-			new Easy_Digital_Downloads();
-			new bbPress();
+			if ( class_exists( 'woocommerce' ) ) {
+				new WooCommerce();
+			}
+			if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+				new Easy_Digital_Downloads();
+			}
+			if ( class_exists( 'bbPress' ) ) {
+				new bbPress();
+			}
 			new Admin();
 			new Fab();
 			new Cta();
