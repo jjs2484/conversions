@@ -32,7 +32,7 @@ class WooCommerce {
 
 		$this->review_ratings();
 
-		if ( class_exists( 'woocommerce' ) || get_theme_mod( 'conversions_wc_minicart', true ) === true ) {
+		if ( get_theme_mod( 'conversions_wc_minicart', true ) === true ) {
 			add_action( 'wp_footer', [ $this, 'woocommerce_mini_cart' ] );
 			add_action( 'wp_footer', [ $this, 'woocommerce_single_ajax_add_to_cart' ] );
 			add_action( 'wc_ajax_c_add_to_cart', [ $this, 'ajax_add_to_cart_handling' ] );
@@ -42,6 +42,7 @@ class WooCommerce {
 			remove_action( 'wp_loaded', array( 'WC_Form_Handler', 'add_to_cart_action' ), 20 );
 
 			add_filter( 'woocommerce_add_to_cart_fragments', [ $this, 'ajax_add_to_cart_add_fragments' ] );
+			add_action( 'wp_loaded', [ $this, 'disable_minicart_block' ], 99 );
 		}
 	}
 
@@ -392,5 +393,17 @@ class WooCommerce {
 		wc_clear_notices();
 
 		return $fragments;
+	}
+
+	/**
+	 * Disable minicart block if conversions mini cart is enabled.
+	 *
+	 * This is due to a conflict in both mini carts appearing.
+	 *
+	 * @since 2012-05-30
+	 */
+	public function disable_minicart_block() {
+
+		\WP_Block_Type_Registry::get_instance()->unregister( 'woocommerce/mini-cart' );
 	}
 }
