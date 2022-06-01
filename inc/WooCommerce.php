@@ -34,6 +34,7 @@ class WooCommerce {
 
 		if ( get_theme_mod( 'conversions_wc_minicart', true ) === true ) {
 			add_action( 'wp_footer', [ $this, 'woocommerce_mini_cart' ] );
+			add_action( 'woocommerce_widget_shopping_cart_buttons', [ $this, 'woocommerce_mini_cart_keep_shopping' ], 1 );
 			add_action( 'wp_footer', [ $this, 'woocommerce_single_ajax_add_to_cart' ] );
 			add_action( 'wc_ajax_c_add_to_cart', [ $this, 'ajax_add_to_cart_handling' ] );
 			add_action( 'wc_ajax_nopriv_c_add_to_cart', [ $this, 'ajax_add_to_cart_handling' ] );
@@ -284,6 +285,16 @@ class WooCommerce {
 	}
 
 	/**
+	 * Mini cart keep shopping button.
+	 */
+	public function woocommerce_mini_cart_keep_shopping() {
+		echo sprintf(
+			'<button type="button" class="btn c-wc__keep-shopping" data-bs-dismiss="offcanvas">%s</button>',
+			esc_html__( 'Keep shopping', 'conversions' )
+		);
+	}
+
+	/**
 	 * JS for AJAX Add to Cart handling.
 	 *
 	 * @since 2012-05-29
@@ -350,6 +361,16 @@ class WooCommerce {
 				var myOffcanvas = document.getElementById('offcanvasWcMiniCart');
 				var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
 				bsOffcanvas.show();
+			});
+		});
+
+		jQuery(document).ready(function($){
+			var myOffcanvas = document.getElementById('offcanvasWcMiniCart');
+			myOffcanvas.addEventListener('show.bs.offcanvas', function () {
+				$( '.c-fab__cart-wrapper' ).addClass( 'd-none' );
+			});
+			myOffcanvas.addEventListener('hidden.bs.offcanvas', function () {
+				$( '.c-fab__cart-wrapper' ).removeClass( 'd-none' );
 			});
 		});
 		</script>

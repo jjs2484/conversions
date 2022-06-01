@@ -516,8 +516,19 @@ p.woocommerce-store-notice.demo_store {
 
 	.woocommerce-mini-cart__buttons a {
 		@extend .btn;
-		display: block;
+	}
+	.c-wc__keep-shopping,
+	.wc-forward {
+		width: 48%;
+		display: inline-block;
+		margin-left: 1%;
+		margin-right: 1%;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.checkout.wc-forward {
 		width: 100%;
+		display: block;
 		margin: .5rem 0;
 	}
 }

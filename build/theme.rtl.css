@@ -13038,9 +13038,17 @@ p.woocommerce-store-notice.demo_store {
     color: #dc3545; }
 #offcanvasWcMiniCart .woocommerce-mini-cart__total.total {
   margin: 1.5rem .25rem; }
-#offcanvasWcMiniCart .woocommerce-mini-cart__buttons a {
-  display: block;
+#offcanvasWcMiniCart .c-wc__keep-shopping,
+#offcanvasWcMiniCart .wc-forward {
+  width: 48%;
+  display: inline-block;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-top: 0;
+  margin-bottom: 0; }
+#offcanvasWcMiniCart .checkout.wc-forward {
   width: 100%;
+  display: block;
   margin: .5rem 0; }
 
 /*
