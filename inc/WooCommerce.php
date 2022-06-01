@@ -269,19 +269,17 @@ class WooCommerce {
 	 * @since 2012-05-27
 	 */
 	public function woocommerce_mini_cart() {
-
-		// Offcanvas mini cart.
-		$b  = '<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWcMiniCart" aria-labelledby="offcanvasWcMiniCartLabel">';
-		$b .= '<div class="offcanvas-header">';
-		$b .= '<h2 id="offcanvasWcMiniCartLabel">' . esc_html__( 'Your Cart', 'conversions' ) . '</h2>';
-		$b .= '<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>';
-		$b .= '</div>';
-		$b .= '<div class="offcanvas-body">';
-		$b .= '<div class="widget_shopping_cart_content">' . woocommerce_mini_cart() . '</div>';
-		$b .= '</div>';
-		$b .= '</div>';
-
-		echo $b; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- already escaped
+		?>
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWcMiniCart" aria-labelledby="offcanvasWcMiniCartLabel">
+			<div class="offcanvas-header">
+				<h2 id="offcanvasWcMiniCartLabel"><?php esc_html_e( 'Your Cart', 'conversions' ); ?></h2>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<div class="widget_shopping_cart_content"><?php woocommerce_mini_cart(); ?></div>
+			</div>
+		</div>
+		<?php
 	}
 
 	/**

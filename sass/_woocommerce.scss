@@ -389,6 +389,14 @@ p.woocommerce-store-notice.demo_store {
 
 // Mini cart
 #offcanvasWcMiniCart {
+	.offcanvas-header {
+		padding: 3rem 1rem 0rem 1rem;
+		
+		#offcanvasWcMiniCartLabel {
+			margin-bottom: 0;
+		}
+	}
+	
 	ul.cart_list,
 	ul.product_list_widget {
 		list-style: none outside;
@@ -530,5 +538,12 @@ p.woocommerce-store-notice.demo_store {
 		width: 100%;
 		display: block;
 		margin: .5rem 0;
+	}
+}
+
+.content-wrapper,
+.site-footer {
+	.c-wc__keep-shopping {
+		display: none;
 	}
 }

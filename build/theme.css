@@ -12941,6 +12941,10 @@ p.woocommerce-store-notice.demo_store {
       content: "\f057";
       margin-right: 0.35rem; }
 
+#offcanvasWcMiniCart .offcanvas-header {
+  padding: 3rem 1rem 0rem 1rem; }
+  #offcanvasWcMiniCart .offcanvas-header #offcanvasWcMiniCartLabel {
+    margin-bottom: 0; }
 #offcanvasWcMiniCart ul.cart_list,
 #offcanvasWcMiniCart ul.product_list_widget {
   list-style: none outside;
@@ -13050,6 +13054,10 @@ p.woocommerce-store-notice.demo_store {
   width: 100%;
   display: block;
   margin: .5rem 0; }
+
+.content-wrapper .c-wc__keep-shopping,
+.site-footer .c-wc__keep-shopping {
+  display: none; }
 
 /*
 * Use existing Bootstrap 4 classes for CF7 styles
