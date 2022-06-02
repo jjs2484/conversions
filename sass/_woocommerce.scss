@@ -13,6 +13,13 @@ figure.woocommerce-product-gallery__wrapper {
 	border-collapse: collapse;
 }
 
+// Table head bottom border
+.woocommerce {
+	.table > :not(:first-child), table > :not(:first-child) {
+		border-top: 1px solid currentColor;
+	}
+}
+
 // Products loop - shop, archives, blocks.
 .wc-block-grid__products .wc-block-grid__product .woocommerce-LoopProduct-link,
 .wc-block-grid__products li.product .woocommerce-LoopProduct-link,
@@ -179,6 +186,14 @@ p.no-comments::before {
 		}
 		.woocommerce-tabs .panel {
 			margin: 0 0 3em;
+
+			table.shop_attributes {
+				@extend .table;
+
+				.woocommerce-product-attributes-item__label {
+					vertical-align: middle;
+				}
+			}
 		}
 		.entry-summary {
 			p.price .woocommerce-Price-amount {
@@ -197,6 +212,11 @@ p.no-comments::before {
 			table.woocommerce-grouped-product-list {
 				width: auto;
 				max-width: 100%;
+			}
+			table.variations {
+				tr {
+					border-width: 0;
+				}
 			}
 		}
 	}
@@ -396,7 +416,7 @@ p.woocommerce-store-notice.demo_store {
 			margin-bottom: 0;
 		}
 	}
-	
+
 	ul.cart_list,
 	ul.product_list_widget {
 		list-style: none outside;
