@@ -399,3 +399,10 @@ $block-btns: (
 .wc-block-grid.alignfull {
 	padding-left: 28px;
 }
+
+// WooCommerce search form button
+.wc-block-product-search__fields {
+	.wc-block-product-search__button {
+		@extend .btn;
+	}
+}

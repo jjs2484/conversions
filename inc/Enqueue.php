@@ -151,12 +151,14 @@ class Enqueue {
 			.wp-block-freeform.block-library-rich-text__tinymce a:hover {
 				color: ' . esc_html( $links_hcolor ) . ';
 			}
-			.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+			.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
+			.wc-block-product-search__fields .wc-block-product-search__button {
 				background: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_bg'] ) . ';
 				color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_color'] ) . ' !important;
 				border: 1px solid ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_border'] ) . ';
 			}
-			.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
+			.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover,
+			.wc-block-product-search__fields .wc-block-product-search__button:hover {
 				color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_color_hover'] ) . ' !important;
 				background-color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_bg_hover'] ) . ';
 				border-color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_border_hover'] ) . ';
