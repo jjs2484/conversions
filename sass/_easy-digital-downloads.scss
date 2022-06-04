@@ -15,6 +15,11 @@
 	@extend .btn-lg;
 }
 
+// Table head bottom border
+.edd-page table > :not(:first-child) {
+	border-top: 1px solid currentColor;
+}
+
 // Single product pages
 .single-download {
 	#edd-single-wrapper {

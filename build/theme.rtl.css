@@ -13159,6 +13159,9 @@ p.woocommerce-store-notice.demo_store {
 .edd-discount-code-field-wrap {
   display: grid; }
 
+.edd-page table > :not(:first-child) {
+  border-top: 1px solid currentColor; }
+
 .single-download #edd-single-wrapper .entry-header {
   text-align: center;
   margin-bottom: 2.5rem; }
