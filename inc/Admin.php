@@ -27,9 +27,21 @@ class Admin {
 	 * @since 2020-12-23
 	 */
 	public function __construct() {
+		add_action( 'after_setup_theme', [ $this, 'disable_widget_blocks' ] );
 		add_action( 'admin_menu', [ $this, 'add_theme_page' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'admin_enqueue_scripts' ] );
 		add_action( 'init', [ $this, 'get_tgmpa_plugins' ], 11 );
+	}
+
+	/**
+	 * Disable the new Widgets Block Editor.
+	 *
+	 * Note: Until its more stable.
+	 *
+	 * @since 2022-06-10
+	 */
+	public function disable_widget_blocks() {
+		remove_theme_support( 'widgets-block-editor' );
 	}
 
 	/**
