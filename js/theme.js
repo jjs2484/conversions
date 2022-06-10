@@ -138,10 +138,3 @@ jQuery( document ).ready( function( $ ) {
 		}
 	} );
 } );
-
-/**
- * Initialize Bootstrap responsive tabs for AffiliatesWP
-*/
-jQuery(document).ready(function() {
-	jQuery('#affwp-affiliate-dashboard .nav-tabs').responsiveTabs();
-});

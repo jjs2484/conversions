@@ -44,7 +44,6 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Fix: bbPress styles
 
 = 1.8.3 =
-* New: AffiliateWP support.
 * New: Action hook conversions_before_footer_widgets.
 * New: Action hook conversions_after_footer_widgets.
 * Update: WooCommerce grouped.php template to v4.8.0 

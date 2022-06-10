@@ -11,30 +11,6 @@
 	display: $c-display-grid;
 }
 
-// Dashboard nav
-#affwp-affiliate-dashboard {
-	.nav-tabs {
-		margin-bottom: 1.5rem;
-
-		.responsivetabs-more {
-		
-			.dropdown-toggle {
-				padding: .5rem 1rem;
-				display: block;
-	
-				&::after {
-					display: none;
-				}
-	
-				i {
-					font-size: 20px;
-					vertical-align: middle;
-				}
-			}
-		}
-	}
-}
-
 // Register and login form two columns
 #affwp-register-form {
 	@media (min-width: 768px) {

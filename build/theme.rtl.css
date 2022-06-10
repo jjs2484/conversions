@@ -13379,17 +13379,6 @@ table#edd_user_history {
 .affwp-referral-url-submit-wrap {
   display: grid; }
 
-#affwp-affiliate-dashboard .nav-tabs {
-  margin-bottom: 1.5rem; }
-  #affwp-affiliate-dashboard .nav-tabs .responsivetabs-more .dropdown-toggle {
-    padding: .5rem 1rem;
-    display: block; }
-    #affwp-affiliate-dashboard .nav-tabs .responsivetabs-more .dropdown-toggle::after {
-      display: none; }
-    #affwp-affiliate-dashboard .nav-tabs .responsivetabs-more .dropdown-toggle i {
-      font-size: 20px;
-      vertical-align: middle; }
-
 @media (min-width: 768px) {
   #affwp-register-form {
     width: 46%;
