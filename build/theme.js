@@ -6867,8 +6867,16 @@ jQuery(document).ready(function() {
  * If fixed header calc height and add margin to content 
 */
 function resizeFunction() {
+
+	// Get navbar.
+	var navbar = document.getElementById('wrapper-navbar');
+	
+	// Does the navbar exist.
+	if ( navbar == null || navbar.length < 1 )
+		return;
+
 	// Get the navbar classes.
-	var navbarClasses = document.getElementById('wrapper-navbar').classList;
+	var navbarClasses = navbar.classList;
 
 	// Are we using a fixed header? If not return.
 	if (navbarClasses.contains('header-p-n')) {
