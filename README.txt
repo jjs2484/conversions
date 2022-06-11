@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.9.7.2
+Stable tag: 1.9.8
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
-= 1.9.1 =
+= 1.9.8 =
 * Update: Bootstrap to 5.1.3
 * Update: Better handling of BS5 colors in PHP
 * Fix: Comment structure for BS5
@@ -31,6 +31,8 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: More no-sidebar body classes check
 * Update: Navbar accessibility
 * Update: Homepage sections accessibility
+* Update: Widget styles move to dedicated sass file
+* Update: Disable the new Widgets Block Editor
 * Update: NPM Dependencies.
 * Update: Composer dependencies.
 * New: Filter conversions_show_footer_widgets
@@ -40,8 +42,15 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * New: Function skiplink()
 * New: Filter conversions_skiplink_anchor
 * New: Add modernizr, webp test, no-js test
+* New: Optional WooCommerce mini cart and single product AJAX
+* Fix: WooCommerce styles for BS5
+* Fix: Easy Digital Downloads table styles
+* Update: bbPress better BS5 search form
 * Fix: bbPress no-js class on body
 * Fix: bbPress styles
+* Fix: Ninja Forms styles for BS5
+* Fix: Only load 3rd party integrations if active
+
 
 = 1.8.3 =
 * New: Action hook conversions_before_footer_widgets.
@@ -176,7 +185,6 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * _s, or underscores | GPLv2 or later
 * TGM Plugin Activation | GPLv2 or later
 * Hamburgers v1.1.3 | MIT License
-* Bootstrap Responsive Tabs v1.0.0 | MIT License
 * Google Fonts
 
 	Comfortaa
