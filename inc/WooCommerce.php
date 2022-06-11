@@ -394,7 +394,7 @@ class WooCommerce {
 	 */
 	public function ajax_add_to_cart_add_fragments( $fragments ) {
 		$all_notices  = WC()->session->get( 'wc_notices', array() );
-		$notice_types = apply_filters( 'woocommerce_notice_types', array( 'error', 'success', 'notice' ) );
+		$notice_types = apply_filters( 'woocommerce_notice_types', array( 'error', 'success', 'notice' ) ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 
 		ob_start();
 		foreach ( $notice_types as $notice_type ) {
