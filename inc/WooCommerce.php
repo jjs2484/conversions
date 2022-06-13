@@ -423,10 +423,6 @@ class WooCommerce {
 	 */
 	public function disable_minicart_block() {
 
-		$registry = \WP_Block_Type_Registry::get_instance();
-
-		if ( $registry->get_registered( 'woocommerce/mini-cart' ) ) {
-			$registry->unregister( 'woocommerce/mini-cart' );
-		}
+		\WP_Block_Type_Registry::get_instance()->unregister( 'woocommerce/mini-cart' );
 	}
 }
