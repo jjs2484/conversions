@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.9.9
+Stable tag: 1.9.8
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,9 +19,6 @@ Full documentation: https://conversionswp.com/docs/documentation/
 NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items with sub-menus are only used to toggle the sub-menu on or off.
 
 == Changelog ==
-
-= 1.9.8 =
-* Fix: Check WC mini cart block exists before unregistering
 
 = 1.9.8 =
 * Update: Bootstrap to 5.1.3
