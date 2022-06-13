@@ -1,6 +1,6 @@
 {
   "name": "conversions",
-  "version": "1.0.0",
+  "version": "1.9.9",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
