@@ -20,7 +20,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
-= 1.9.8 =
+= 1.9.9 =
 * Fix: Check WC mini cart block exists before unregistering
 
 = 1.9.8 =
