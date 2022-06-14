@@ -266,7 +266,7 @@ class WooCommerce {
 	/**
 	 * Mini cart offcanvas.
 	 *
-	 * @since 2012-05-27
+	 * @since 2022-05-27
 	 */
 	public function woocommerce_mini_cart() {
 		?>
@@ -295,7 +295,7 @@ class WooCommerce {
 	/**
 	 * JS for AJAX Add to Cart handling.
 	 *
-	 * @since 2012-05-29
+	 * @since 2022-05-29
 	 */
 	public function woocommerce_single_ajax_add_to_cart() {
 		?>
@@ -378,7 +378,7 @@ class WooCommerce {
 	/**
 	 * AJAX Add to Cart handling.
 	 *
-	 * @since 2012-05-29
+	 * @since 2022-05-29
 	 */
 	public function ajax_add_to_cart_handling() {
 		\WC_Form_Handler::add_to_cart_action();
@@ -388,7 +388,7 @@ class WooCommerce {
 	/**
 	 * Add fragments for notices.
 	 *
-	 * @since 2012-05-30
+	 * @since 2022-05-30
 	 *
 	 * @param array $fragments Fragments to refresh via AJAX.
 	 */
@@ -419,7 +419,7 @@ class WooCommerce {
 	 *
 	 * This is due to a conflict in both mini carts appearing.
 	 *
-	 * @since 2012-05-30
+	 * @since 2022-05-30
 	 */
 	public function disable_minicart_block() {
 
