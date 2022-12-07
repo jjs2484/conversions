@@ -13,18 +13,17 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 3.6.1
+ * @package WooCommerce\Templates
+ * @version 7.0.1
  */
 
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
-
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 ?>
 
 <div class="d-grid gap-2">
-	<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' ) ); ?> btn-lg">
+	<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' ) ); ?> btn-lg">
 		<?php esc_html_e( 'Proceed to checkout', 'conversions' ); ?>
 	</a>
 </div>

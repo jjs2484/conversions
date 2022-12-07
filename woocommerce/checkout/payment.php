@@ -11,15 +11,15 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.6.1
+ * @package WooCommerce\Templates
+ * @version 7.0.1
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! is_ajax() ) {
+if ( ! wp_doing_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
 ?>
@@ -39,7 +39,10 @@ if ( ! is_ajax() ) {
 	<?php endif; ?>
 	<div class="form-row place-order">
 		<noscript>
-			<?php esc_html_e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'conversions' ); ?>
+			<?php
+			/* translators: $1 and $2 opening and closing emphasis tags respectively */
+			printf( esc_html__( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the %1$sUpdate Totals%2$s button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'conversions' ), '<em>', '</em>' );
+			?>
 			<br/><button type="submit" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' ) ); ?>" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'conversions' ); ?>"><?php esc_html_e( 'Update totals', 'conversions' ); ?></button>
 		</noscript>
 
@@ -55,6 +58,6 @@ if ( ! is_ajax() ) {
 	</div>
 </div>
 <?php
-if ( ! is_ajax() ) {
+if ( ! wp_doing_ajax() ) {
 	do_action( 'woocommerce_review_order_after_payment' );
 }

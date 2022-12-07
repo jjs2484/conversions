@@ -11,8 +11,8 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.6.1
+ * @package WooCommerce\Templates
+ * @version 7.0.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -23,7 +23,7 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 
 ?>
 <div class="woocommerce-form-coupon-toggle">
-	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'conversions' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'conversions' ) . '</a>' ), 'notice' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>
+	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', esc_html__( 'Have a coupon?', 'conversions' ) . ' <a href="#" class="showcoupon">' . esc_html__( 'Click here to enter your code', 'conversions' ) . '</a>' ), 'notice' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>
 </div>
 
 <form class="checkout_coupon woocommerce-form-coupon" method="post" style="display:none">
@@ -31,6 +31,7 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 	<p><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'conversions' ); ?></p>
 
 	<p class="form-row form-row-first">
+		<label for="coupon_code" class="visually-hidden"><?php esc_html_e( 'Coupon:', 'conversions' ); ?></label>
 		<input type="text" name="coupon_code" class="form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'conversions' ); ?>" id="coupon_code" value="" />
 	</p>
 

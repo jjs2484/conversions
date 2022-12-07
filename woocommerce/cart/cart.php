@@ -11,8 +11,8 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 4.4.0
+ * @package WooCommerce\Templates
+ * @version 7.0.1
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
@@ -27,8 +27,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 		<thead>
 			<tr>
-				<th class="product-remove">&nbsp;</th>
-				<th class="product-thumbnail">&nbsp;</th>
+				<th class="product-remove"><span class="visually-hidden"><?php esc_html_e( 'Remove item', 'conversions' ); ?></span></th>
+				<th class="product-thumbnail"><span class="visually-hidden"><?php esc_html_e( 'Thumbnail image', 'conversions' ); ?></span></th>
 				<th class="product-name"><?php esc_html_e( 'Product', 'conversions' ); ?></th>
 				<th class="product-price"><?php esc_html_e( 'Price', 'conversions' ); ?></th>
 				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'conversions' ); ?></th>
