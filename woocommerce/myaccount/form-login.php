@@ -11,13 +11,14 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 4.1.0
+ * @package WooCommerce\Templates
+ * @version 7.0.1
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  */
 
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 do_action( 'woocommerce_before_customer_login_form' ); ?>
 
@@ -47,11 +48,11 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			<?php do_action( 'woocommerce_login_form' ); ?>
 
 			<p class="form-row">
-				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-				<button type="submit" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'conversions' ); ?>"><?php esc_html_e( 'Log in', 'conversions' ); ?></button>
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme ms-3">
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'conversions' ); ?></span>
 				</label>
+				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
+				<button type="submit" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'conversions' ); ?>"><?php esc_html_e( 'Log in', 'conversions' ); ?></button>
 			</p>
 			<p class="woocommerce-LostPassword lost_password">
 				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'conversions' ); ?></a>
@@ -62,7 +63,6 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 		</form>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
-
 
 	</div>
 
@@ -97,7 +97,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 				<?php else : ?>
 
-				<p><?php esc_html_e( 'A password will be sent to your email address.', 'conversions' ); ?></p>
+				<p><?php esc_html_e( 'A link to set a new password will be sent to your email address.', 'conversions' ); ?></p>
 
 			<?php endif; ?>
 

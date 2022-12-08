@@ -13,8 +13,8 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.7.0
+ * @package WooCommerce\Templates
+ * @version 7.0.1
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
@@ -100,7 +100,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 <?php else : ?>
 	<div class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
 		<a class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php esc_html_e( 'Go to the shop', 'conversions' ); ?>
+			<?php esc_html_e( 'Browse products', 'conversions' ); ?>
 		</a>
 		<?php esc_html_e( 'No order has been made yet.', 'conversions' ); ?>
 	</div>

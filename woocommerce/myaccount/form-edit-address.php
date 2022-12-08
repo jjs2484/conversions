@@ -11,13 +11,16 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.6.1
+ * @package WooCommerce\Templates
+ * @version 7.0.1
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
+
 defined( 'ABSPATH' ) || exit;
-$page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'conversions' ) : __( 'Shipping address', 'conversions' );
+
+$page_title = ( 'billing' === $load_address ) ? esc_html__( 'Billing address', 'conversions' ) : esc_html__( 'Shipping address', 'conversions' );
+
 do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
 <?php if ( ! $load_address ) : ?>

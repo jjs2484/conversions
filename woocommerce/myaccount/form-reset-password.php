@@ -11,12 +11,13 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.6.1
+ * @package WooCommerce\Templates
+ * @version 7.0.1
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  */
 
 defined( 'ABSPATH' ) || exit;
+
 do_action( 'woocommerce_before_reset_password_form' );
 ?>
 
