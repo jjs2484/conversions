@@ -2,9 +2,9 @@
 Contributors: uniquelylost
 Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, footer-widgets, full-width-template, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 Requires at least: 4.7
-Tested up to: 6.0
+Tested up to: 6.1
 Requires PHP: 5.6
-Stable tag: 1.9.9.1
+Stable tag: 1.9.9.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,14 @@ Full documentation: https://conversionswp.com/docs/documentation/
 NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items with sub-menus are only used to toggle the sub-menu on or off.
 
 == Changelog ==
+
+= 1.9.9.2 =
+* Update: Bootstrap to v5.2.3
+* Update: Fontawesome to v6.2.1
+* Update: WooCommerce templates to v7.0.1
+* Update: NPM Dependencies.
+* Update: Composer dependencies.
+* Fix: Minor accessibility color changes
 
 = 1.9.9 =
 * Fix: Check WC mini cart block exists before unregistering

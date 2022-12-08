@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd87a31058b7bc5bb3f423f0c5d631ea9fc84083e',
+        'reference' => '186e8298ee7b21d5252cfe4eeb490c9901c2381c',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd87a31058b7bc5bb3f423f0c5d631ea9fc84083e',
+            'reference' => '186e8298ee7b21d5252cfe4eeb490c9901c2381c',
             'dev_requirement' => false,
         ),
         'dealerdirect/phpcodesniffer-composer-installer' => array(
@@ -29,12 +29,12 @@
             'dev_requirement' => true,
         ),
         'squizlabs/php_codesniffer' => array(
-            'pretty_version' => '3.7.0',
-            'version' => '3.7.0.0',
+            'pretty_version' => '3.7.1',
+            'version' => '3.7.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../squizlabs/php_codesniffer',
             'aliases' => array(),
-            'reference' => 'a2cd51b45bcaef9c1f2a4bda48f2dd2fa2b95563',
+            'reference' => '1359e176e9307e906dc3d890bcc9603ff6d90619',
             'dev_requirement' => true,
         ),
         'wp-coding-standards/wpcs' => array(

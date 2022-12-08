@@ -10,7 +10,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 body.mce-content-body h1,
 body.mce-content-body h2,
@@ -18,26 +19,32 @@ body.mce-content-body h3,
 body.mce-content-body h4,
 body.mce-content-body h5,
 body.mce-content-body h6 {
-  color: #222; }
+  color: #222;
+}
 
 body.mce-content-body {
-  color: #222; }
+  color: #222;
+}
 
 p {
   margin-top: 0;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+}
 
 blockquote {
   border-left: 5px solid #aaa;
   padding: 10px 20px;
-  margin-left: 0; }
+  margin-left: 0;
+}
 
 dt {
-  font-weight: 700; }
+  font-weight: 700;
+}
 
 dd {
   margin-left: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+}
 
 code {
   padding: 0.202em 0.5407911001em;
@@ -45,18 +52,21 @@ code {
   border-radius: 0;
   color: #444;
   background: rgba(0, 0, 0, 0.05);
-  font-size: 87.5%; }
+  font-size: 87.5%;
+}
 
 pre {
   color: #444;
   background: rgba(0, 0, 0, 0.05);
   padding: 1em;
   max-width: 100%;
-  overflow: auto; }
+  overflow: auto;
+}
 
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
   color: #fff;
   background-color: #212529;
-  border-radius: 0.2rem; }
+  border-radius: 0.2rem;
+}

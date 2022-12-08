@@ -19,12 +19,10 @@ module.exports = function(grunt) {
 				'uglify': true
 			}
 		},
-		sass: {
-			dist: {
+		'dart-sass': {
+			target: {
 				options: {
-					style: 'nested',
-					precision: 5,
-					sourcemap: 'none',
+					sourceMap: false,
 				},
 				files: {
 					'build/theme.css': 'sass/theme.scss',
@@ -131,7 +129,7 @@ module.exports = function(grunt) {
 
 	// Load plugins
 	grunt.loadNpmTasks('grunt-modernizr');
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-dart-sass');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('@lodder/grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -142,6 +140,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-lineending');
 	
 	// Run All Tasks
-	grunt.registerTask('all', ['modernizr', 'sass', 'concat', 'lineending', 'postcss', 'rtlcss', 'cssmin', 'uglify', 'copy']);
+	grunt.registerTask('all', ['modernizr', 'dart-sass', 'concat', 'lineending', 'postcss', 'rtlcss', 'cssmin', 'uglify', 'copy']);
 
 };
