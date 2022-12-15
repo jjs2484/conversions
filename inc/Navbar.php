@@ -305,7 +305,7 @@ class Navbar {
 				$navbar_social_icons = \conversions\extensions\social\social_icons::social_icons_content();
 				if ( ! empty( $navbar_social_icons ) ) {
 					$navbar_social_icons = str_replace( 'list-inline-item', 'c-nav__social-icon menu-item nav-item', $navbar_social_icons );
-					$navbar_social_icons = str_replace( '<a title=', '<a class="nav-link" title=', $navbar_social_icons );
+					$navbar_social_icons = str_replace( '<a href=', '<a class="nav-link" href=', $navbar_social_icons );
 					$navbar_social_icons = '<ul class="c-nav__social">' . $navbar_social_icons . '</ul>';
 					$items              .= $navbar_social_icons;
 				}
