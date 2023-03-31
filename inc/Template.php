@@ -501,6 +501,10 @@ class Template {
 		$large      = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large', false );
 		$fullscreen = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'conversions-fullscreen', false );
 
+		// Preload image.
+		echo '<link rel="preload" href="' . esc_url( $large[0] ) . '" as="image" media="(max-width: 767.98px)">';
+		echo '<link rel="preload" href="' . esc_url( $fullscreen[0] ) . '" as="image" media="(min-width: 768px)">';
+
 		if ( get_theme_mod( 'conversions_hh_type', 'split' ) === 'full' ) {
 
 			// Get the customizer setting.
