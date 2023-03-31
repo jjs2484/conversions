@@ -24,6 +24,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Bootstrap to v5.2.3
 * Update: Fontawesome to v6.4.0
 * Update: WooCommerce templates to v7.0.1
+* Update: WooCommerce templates to v7.4.0
 * Update: NPM Dependencies.
 * Update: Composer dependencies.
 * Update: Preload hero images.
