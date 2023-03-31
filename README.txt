@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 6.1
 Requires PHP: 5.6
-Stable tag: 1.9.9.3
+Stable tag: 1.9.9.4
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,9 +20,9 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
-= 1.9.9.3 =
+= 1.9.9.4 =
 * Update: Bootstrap to v5.2.3
-* Update: Fontawesome to v6.2.1
+* Update: Fontawesome to v6.4.0
 * Update: WooCommerce templates to v7.0.1
 * Update: NPM Dependencies.
 * Update: Composer dependencies.
