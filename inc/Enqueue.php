@@ -333,10 +333,12 @@ class Enqueue {
 	 */
 	public function resource_hints() {
 
+		$resources = '';
+
 		// Are Google Fonts active?
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 			// Add Google Fonts preconnect.
-			$resources .= '<link rel="preconnect" href="' . esc_url( 'https://fonts.gstatic.com/' ) . '" crossorigin>';
+			$resources = '<link rel="preconnect" href="' . esc_url( 'https://fonts.gstatic.com/' ) . '" crossorigin>';
 		}
 
 		// Apply filter if exists.
