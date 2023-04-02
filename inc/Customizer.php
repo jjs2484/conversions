@@ -469,12 +469,12 @@ namespace conversions
 				// Easy Digital Downloads.
 				if ( class_exists( 'Easy_Digital_Downloads' ) ) {
 					// primary buttons.
-					echo '#edd-purchase-button, .edd-submit, [type="submit"].edd-submit, #edd_checkout_form_wrap input.edd-submit.button.blue {
+					echo '#edd-purchase-button, .edd-submit.button, .edd-submit.button:visited, [type="submit"].edd-submit, #edd_checkout_form_wrap input.edd-submit.button.blue {
 						background: ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_bg'] ) . ';
 						color: ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_color'] ) . ';
 						border: 1px solid ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_border'] ) . ';
 					}';
-					echo '#edd-purchase-button:hover, .edd-submit:hover, [type="submit"].edd-submit:hover, #edd_checkout_form_wrap input.edd-submit.button.blue:hover {
+					echo '#edd-purchase-button:hover, .edd-submit.button:hover, [type="submit"].edd-submit:hover, #edd_checkout_form_wrap input.edd-submit.button.blue:hover {
 						color: ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_color_hover'] ) . ';
 						background-color: ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_bg_hover'] ) . ';
 						border-color: ' . esc_html( $bs_btn_colors[$edd_primary_btn]['btn_border_hover'] ) . ';
