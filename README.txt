@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 6.1
 Requires PHP: 5.6
-Stable tag: 1.9.9.4
+Stable tag: 1.9.9.6
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 
 == Changelog ==
 
-= 1.9.9.4 =
+= 1.9.9.6 =
 * Update: Bootstrap to v5.2.3
 * Update: Fontawesome to v6.4.0
 * Update: WooCommerce templates to v7.0.1
@@ -28,7 +28,15 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: NPM Dependencies.
 * Update: Composer dependencies.
 * Update: Preload hero images.
-* Fix: Minor accessibility color changes
+* Fix: Minor accessibility color changes.
+* Fix: EDD download list - layout flex to grid.
+* Fix: EDD download list - show button for select options.
+* Fix: EDD download list - button style selector.
+* Fix: EDD blocks - remove old block styles.
+* Fix: Ninja forms - select appearance.
+* Fix: Ninja forms - submit button style selector.
+* Fix: Font Awesome - Remove preloading.
+
 
 = 1.9.9 =
 * Fix: Check WC mini cart block exists before unregistering

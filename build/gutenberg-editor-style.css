@@ -1,4 +1,4 @@
-.btn, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart, .wc-block-product-search__fields .wc-block-product-search__button, .wp-block-button .wp-block-button__link,
+.btn, .wc-block-product-search__fields .wc-block-product-search__button, .wp-block-button .wp-block-button__link,
 .wp-block-buttons .wp-block-button .wp-block-button__link {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
@@ -33,42 +33,42 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart, .wc-block-product-search__fields .wc-block-product-search__button, .wp-block-button .wp-block-button__link,
+  .btn, .wc-block-product-search__fields .wc-block-product-search__button, .wp-block-button .wp-block-button__link,
   .wp-block-buttons .wp-block-button .wp-block-button__link {
     transition: none;
   }
 }
-.btn:hover, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart:hover, .wc-block-product-search__fields .wc-block-product-search__button:hover, .wp-block-button .wp-block-button__link:hover {
+.btn:hover, .wc-block-product-search__fields .wc-block-product-search__button:hover, .wp-block-button .wp-block-button__link:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .btn:hover, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .btn-check + a.edd-add-to-cart:hover, .wc-block-product-search__fields .btn-check + .wc-block-product-search__button:hover, .wp-block-button .btn-check + .wp-block-button__link:hover {
+.btn-check + .btn:hover, .wc-block-product-search__fields .btn-check + .wc-block-product-search__button:hover, .wp-block-button .btn-check + .wp-block-button__link:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.btn:focus-visible, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart:focus-visible, .wc-block-product-search__fields .wc-block-product-search__button:focus-visible, .wp-block-button .wp-block-button__link:focus-visible {
+.btn:focus-visible, .wc-block-product-search__fields .wc-block-product-search__button:focus-visible, .wp-block-button .wp-block-button__link:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .btn-check:focus-visible + a.edd-add-to-cart, .wc-block-product-search__fields .btn-check:focus-visible + .wc-block-product-search__button, .wp-block-button .btn-check:focus-visible + .wp-block-button__link {
+.btn-check:focus-visible + .btn, .wc-block-product-search__fields .btn-check:focus-visible + .wc-block-product-search__button, .wp-block-button .btn-check:focus-visible + .wp-block-button__link {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .btn-check:checked + a.edd-add-to-cart, .wc-block-product-search__fields .btn-check:checked + .wc-block-product-search__button, .wp-block-button .btn-check:checked + .wp-block-button__link, :not(.btn-check) + .btn:active, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form :not(.btn-check) + a.edd-add-to-cart:active, .wc-block-product-search__fields :not(.btn-check) + .wc-block-product-search__button:active, .wp-block-button :not(.btn-check) + .wp-block-button__link:active, .btn:first-child:active, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart:first-child:active, .wc-block-product-search__fields .wc-block-product-search__button:first-child:active, .wp-block-button .wp-block-button__link:first-child:active, .btn.active, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.active.edd-add-to-cart, .wc-block-product-search__fields .active.wc-block-product-search__button, .wp-block-button .active.wp-block-button__link, .btn.show, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.show.edd-add-to-cart, .wc-block-product-search__fields .show.wc-block-product-search__button, .wp-block-button .show.wp-block-button__link {
+.btn-check:checked + .btn, .wc-block-product-search__fields .btn-check:checked + .wc-block-product-search__button, .wp-block-button .btn-check:checked + .wp-block-button__link, :not(.btn-check) + .btn:active, .wc-block-product-search__fields :not(.btn-check) + .wc-block-product-search__button:active, .wp-block-button :not(.btn-check) + .wp-block-button__link:active, .btn:first-child:active, .wc-block-product-search__fields .wc-block-product-search__button:first-child:active, .wp-block-button .wp-block-button__link:first-child:active, .btn.active, .wc-block-product-search__fields .active.wc-block-product-search__button, .wp-block-button .active.wp-block-button__link, .btn.show, .wc-block-product-search__fields .show.wc-block-product-search__button, .wp-block-button .show.wp-block-button__link {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .btn-check:checked + a.edd-add-to-cart:focus-visible, .wc-block-product-search__fields .btn-check:checked + .wc-block-product-search__button:focus-visible, .wp-block-button .btn-check:checked + .wp-block-button__link:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form :not(.btn-check) + a.edd-add-to-cart:active:focus-visible, .wc-block-product-search__fields :not(.btn-check) + .wc-block-product-search__button:active:focus-visible, .wp-block-button :not(.btn-check) + .wp-block-button__link:active:focus-visible, .btn:first-child:active:focus-visible, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart:first-child:active:focus-visible, .wc-block-product-search__fields .wc-block-product-search__button:first-child:active:focus-visible, .wp-block-button .wp-block-button__link:first-child:active:focus-visible, .btn.active:focus-visible, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.active.edd-add-to-cart:focus-visible, .wc-block-product-search__fields .active.wc-block-product-search__button:focus-visible, .wp-block-button .active.wp-block-button__link:focus-visible, .btn.show:focus-visible, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.show.edd-add-to-cart:focus-visible, .wc-block-product-search__fields .show.wc-block-product-search__button:focus-visible, .wp-block-button .show.wp-block-button__link:focus-visible {
+.btn-check:checked + .btn:focus-visible, .wc-block-product-search__fields .btn-check:checked + .wc-block-product-search__button:focus-visible, .wp-block-button .btn-check:checked + .wp-block-button__link:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .wc-block-product-search__fields :not(.btn-check) + .wc-block-product-search__button:active:focus-visible, .wp-block-button :not(.btn-check) + .wp-block-button__link:active:focus-visible, .btn:first-child:active:focus-visible, .wc-block-product-search__fields .wc-block-product-search__button:first-child:active:focus-visible, .wp-block-button .wp-block-button__link:first-child:active:focus-visible, .btn.active:focus-visible, .wc-block-product-search__fields .active.wc-block-product-search__button:focus-visible, .wp-block-button .active.wp-block-button__link:focus-visible, .btn.show:focus-visible, .wc-block-product-search__fields .show.wc-block-product-search__button:focus-visible, .wp-block-button .show.wp-block-button__link:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart:disabled, .wc-block-product-search__fields .wc-block-product-search__button:disabled, .wp-block-button .wp-block-button__link:disabled, .btn.disabled, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.disabled.edd-add-to-cart, .wc-block-product-search__fields .disabled.wc-block-product-search__button, .wp-block-button .disabled.wp-block-button__link, fieldset:disabled .btn, fieldset:disabled .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form fieldset:disabled a.edd-add-to-cart, fieldset:disabled .wc-block-product-search__fields .wc-block-product-search__button, .wc-block-product-search__fields fieldset:disabled .wc-block-product-search__button, fieldset:disabled .wp-block-button .wp-block-button__link, .wp-block-button fieldset:disabled .wp-block-button__link {
+.btn:disabled, .wc-block-product-search__fields .wc-block-product-search__button:disabled, .wp-block-button .wp-block-button__link:disabled, .btn.disabled, .wc-block-product-search__fields .disabled.wc-block-product-search__button, .wp-block-button .disabled.wp-block-button__link, fieldset:disabled .btn, fieldset:disabled .wc-block-product-search__fields .wc-block-product-search__button, .wc-block-product-search__fields fieldset:disabled .wc-block-product-search__button, fieldset:disabled .wp-block-button .wp-block-button__link, .wp-block-button fieldset:disabled .wp-block-button__link {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -370,7 +370,7 @@
   color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart {
+.btn-lg {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1rem;
   --bs-btn-font-size: 1.25rem;
@@ -729,7 +729,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .btn-check[disabled] + a.edd-add-to-cart, .wc-block-product-search__fields .btn-check[disabled] + .wc-block-product-search__button, .wp-block-button .btn-check[disabled] + .wp-block-button__link, .btn-check:disabled + .btn, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .btn-check:disabled + a.edd-add-to-cart, .wc-block-product-search__fields .btn-check:disabled + .wc-block-product-search__button, .wp-block-button .btn-check:disabled + .wp-block-button__link {
+.btn-check[disabled] + .btn, .wc-block-product-search__fields .btn-check[disabled] + .wc-block-product-search__button, .wp-block-button .btn-check[disabled] + .wp-block-button__link, .btn-check:disabled + .btn, .wc-block-product-search__fields .btn-check:disabled + .wc-block-product-search__button, .wp-block-button .btn-check:disabled + .wp-block-button__link {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -906,11 +906,11 @@ textarea.form-control-lg {
 .input-group > .form-floating:focus-within {
   z-index: 5;
 }
-.input-group .btn, .input-group .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .input-group a.edd-add-to-cart, .input-group .wc-block-product-search__fields .wc-block-product-search__button, .wc-block-product-search__fields .input-group .wc-block-product-search__button, .input-group .wp-block-button .wp-block-button__link, .wp-block-button .input-group .wp-block-button__link {
+.input-group .btn, .input-group .wc-block-product-search__fields .wc-block-product-search__button, .wc-block-product-search__fields .input-group .wc-block-product-search__button, .input-group .wp-block-button .wp-block-button__link, .wp-block-button .input-group .wp-block-button__link {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form a.edd-add-to-cart:focus, .editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .input-group a.edd-add-to-cart:focus, .input-group .wc-block-product-search__fields .wc-block-product-search__button:focus, .wc-block-product-search__fields .input-group .wc-block-product-search__button:focus, .input-group .wp-block-button .wp-block-button__link:focus, .wp-block-button .input-group .wp-block-button__link:focus {
+.input-group .btn:focus, .input-group .wc-block-product-search__fields .wc-block-product-search__button:focus, .wc-block-product-search__fields .input-group .wc-block-product-search__button:focus, .input-group .wp-block-button .wp-block-button__link:focus, .wp-block-button .input-group .wp-block-button__link:focus {
   z-index: 5;
 }
 
@@ -933,7 +933,6 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
-.editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .input-group-lg > a.edd-add-to-cart,
 .wc-block-product-search__fields .input-group-lg > .wc-block-product-search__button,
 .wp-block-button .input-group-lg > .wp-block-button__link {
   padding: 0.5rem 1rem;
@@ -945,7 +944,6 @@ textarea.form-control-lg {
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
-.editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .input-group-sm > a.edd-add-to-cart,
 .wc-block-product-search__fields .input-group-sm > .wc-block-product-search__button,
 .wp-block-button .input-group-sm > .wp-block-button__link {
   padding: 0.25rem 0.5rem;
@@ -2115,91 +2113,4 @@ blockquote.wp-block-quote.has-text-align-right {
 
 .wc-block-product-search__fields .wc-block-product-search__button {
   line-height: 0;
-}
-
-.editor-styles-wrapper .edd_downloads_list {
-  display: flex;
-  flex-wrap: wrap;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
-}
-.editor-styles-wrapper .edd_downloads_list.edd_download_columns_1 {
-  grid-template-columns: 0;
-}
-.editor-styles-wrapper .edd_downloads_list.edd_download_columns_1 .edd_download {
-  width: 100%;
-}
-.editor-styles-wrapper .edd_downloads_list.edd_download_columns_2, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_3, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_4, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_5, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_6 {
-  grid-template-columns: 0;
-}
-.editor-styles-wrapper .edd_downloads_list.edd_download_columns_2 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_3 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_4 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_5 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_6 .edd_download {
-  width: 100%;
-}
-@media (min-width: 576px) {
-  .editor-styles-wrapper .edd_downloads_list.edd_download_columns_2 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_3 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_4 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_5 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_6 .edd_download {
-    width: 50%;
-  }
-}
-@media (min-width: 992px) {
-  .editor-styles-wrapper .edd_downloads_list.edd_download_columns_3 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_4 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_5 .edd_download, .editor-styles-wrapper .edd_downloads_list.edd_download_columns_6 .edd_download {
-    width: 33%;
-  }
-}
-@media (min-width: 1200px) {
-  .editor-styles-wrapper .edd_downloads_list.edd_download_columns_4 .edd_download {
-    width: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .editor-styles-wrapper .edd_downloads_list.edd_download_columns_5 .edd_download {
-    width: 20%;
-  }
-}
-@media (min-width: 1200px) {
-  .editor-styles-wrapper .edd_downloads_list.edd_download_columns_6 .edd_download {
-    width: 16.6%;
-  }
-}
-.editor-styles-wrapper .edd_downloads_list .edd_download_inner {
-  display: flex;
-  display: -webkit-box;
-  flex-direction: column;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-}
-.editor-styles-wrapper .edd_downloads_list .edd_download_image {
-  margin: 0 0 1rem 0;
-}
-.editor-styles-wrapper .edd_downloads_list .edd_download_image + .edd_download_title {
-  margin-top: 0;
-}
-.editor-styles-wrapper .edd_downloads_list .edd_download_title a {
-  color: #222;
-}
-.editor-styles-wrapper .edd_downloads_list .edd_download_title a:hover {
-  color: #222;
-}
-.editor-styles-wrapper .edd_downloads_list .edd_download_excerpt p {
-  color: #6c757d;
-  margin: 0 0 1rem;
-  font-size: 15px;
-}
-.editor-styles-wrapper .edd_downloads_list div.edd_price {
-  margin-top: auto !important;
-  color: #555;
-}
-.editor-styles-wrapper .edd_downloads_list div.edd_price + .components-disabled {
-  margin-top: 0;
-}
-.editor-styles-wrapper .edd_downloads_list .components-disabled {
-  margin-top: auto;
-}
-.editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .edd_price_options {
-  display: none;
-}
-.editor-styles-wrapper .edd_downloads_list .edd_download_purchase_form .edd_purchase_submit_wrapper {
-  display: grid;
 }

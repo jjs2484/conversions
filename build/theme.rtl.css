@@ -1992,7 +1992,7 @@ progress {
   color: #6c757d;
 }
 
-.form-control, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio]),
+.form-control, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content textarea, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text],
@@ -2030,7 +2030,7 @@ textarea {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio]),
+  .form-control, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
   .nf-form-wrap .nf-form-content textarea, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text],
@@ -2054,7 +2054,7 @@ textarea {
     transition: none;
   }
 }
-.form-control[type=file], .nf-form-wrap .nf-form-content input[type=file]:not([type=button]):not([type=checkbox]):not([type=radio]),
+.form-control[type=file], .nf-form-wrap .nf-form-content input[type=file]:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content textarea[type=file], .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input[type=file],
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea[type=file],
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select[type=file], .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=file][type=text],
@@ -2077,7 +2077,7 @@ input[type=file][type=color],
 textarea[type=file] {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not([readonly]), .nf-form-wrap .nf-form-content input[type=file]:not(:disabled):not([readonly]):not([type=button]):not([type=checkbox]):not([type=radio]),
+.form-control[type=file]:not(:disabled):not([readonly]), .nf-form-wrap .nf-form-content input[type=file]:not(:disabled):not([readonly]):not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content textarea[type=file]:not(:disabled):not([readonly]), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input[type=file]:not(:disabled):not([readonly]),
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea[type=file]:not(:disabled):not([readonly]),
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select[type=file]:not(:disabled):not([readonly]), .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=file][type=text]:not(:disabled):not([readonly]),
@@ -2100,7 +2100,7 @@ input[type=file][type=color]:not(:disabled):not([readonly]),
 textarea[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
-.form-control:focus, .nf-form-wrap .nf-form-content input:focus:not([type=button]):not([type=checkbox]):not([type=radio]),
+.form-control:focus, .nf-form-wrap .nf-form-content input:focus:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content textarea:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input:focus,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea:focus,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select:focus, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text]:focus,
@@ -2127,7 +2127,7 @@ textarea:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-control::-webkit-date-and-time-value, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio])::-webkit-date-and-time-value,
+.form-control::-webkit-date-and-time-value, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit])::-webkit-date-and-time-value,
 .nf-form-wrap .nf-form-content textarea::-webkit-date-and-time-value, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input::-webkit-date-and-time-value,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea::-webkit-date-and-time-value,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select::-webkit-date-and-time-value, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text]::-webkit-date-and-time-value,
@@ -2150,11 +2150,11 @@ input[type=color]::-webkit-date-and-time-value,
 textarea::-webkit-date-and-time-value {
   height: 1.5em;
 }
-.form-control::-moz-placeholder, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio])::-moz-placeholder, .nf-form-wrap .nf-form-content textarea::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text]::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=password]::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form select::-moz-placeholder, input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=url]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=range]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=month]::-moz-placeholder, input[type=week]::-moz-placeholder, input[type=time]::-moz-placeholder, input[type=datetime]::-moz-placeholder, input[type=datetime-local]::-moz-placeholder, input[type=color]::-moz-placeholder, textarea::-moz-placeholder {
+.form-control::-moz-placeholder, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit])::-moz-placeholder, .nf-form-wrap .nf-form-content textarea::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text]::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=password]::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form select::-moz-placeholder, input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=url]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=range]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=month]::-moz-placeholder, input[type=week]::-moz-placeholder, input[type=time]::-moz-placeholder, input[type=datetime]::-moz-placeholder, input[type=datetime-local]::-moz-placeholder, input[type=color]::-moz-placeholder, textarea::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::placeholder, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio])::placeholder,
+.form-control::placeholder, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit])::placeholder,
 .nf-form-wrap .nf-form-content textarea::placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input::placeholder,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea::placeholder,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select::placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text]::placeholder,
@@ -2178,7 +2178,7 @@ textarea::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .nf-form-wrap .nf-form-content input:disabled:not([type=button]):not([type=checkbox]):not([type=radio]),
+.form-control:disabled, .nf-form-wrap .nf-form-content input:disabled:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content textarea:disabled, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input:disabled,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea:disabled,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select:disabled, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text]:disabled,
@@ -2202,7 +2202,7 @@ textarea:disabled {
   background-color: #e9ecef;
   opacity: 1;
 }
-.form-control::file-selector-button, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio])::file-selector-button,
+.form-control::file-selector-button, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit])::file-selector-button,
 .nf-form-wrap .nf-form-content textarea::file-selector-button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input::file-selector-button,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea::file-selector-button,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select::file-selector-button, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text]::file-selector-button,
@@ -2238,7 +2238,7 @@ textarea::file-selector-button {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::file-selector-button, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio])::file-selector-button,
+  .form-control::file-selector-button, .nf-form-wrap .nf-form-content input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit])::file-selector-button,
   .nf-form-wrap .nf-form-content textarea::file-selector-button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input::file-selector-button,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea::file-selector-button,
   .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select::file-selector-button, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text]::file-selector-button,
@@ -2262,7 +2262,7 @@ textarea::file-selector-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button, .nf-form-wrap .nf-form-content input:hover:not(:disabled):not([readonly]):not([type=button]):not([type=checkbox]):not([type=radio])::file-selector-button,
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button, .nf-form-wrap .nf-form-content input:hover:not(:disabled):not([readonly]):not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit])::file-selector-button,
 .nf-form-wrap .nf-form-content textarea:hover:not(:disabled):not([readonly])::file-selector-button, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input:hover:not(:disabled):not([readonly])::file-selector-button,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea:hover:not(:disabled):not([readonly])::file-selector-button,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select:hover:not(:disabled):not([readonly])::file-selector-button, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input[type=text]:hover:not(:disabled):not([readonly])::file-selector-button,
@@ -2366,7 +2366,7 @@ textarea.form-control-lg {
   height: calc(1.5em + 1rem + 2px);
 }
 
-.form-select, .nf-form-wrap .nf-form-content .list-select-wrap > div select, select {
+.form-select, .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element, select {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem 0.375rem 2.25rem;
@@ -2388,23 +2388,23 @@ textarea.form-control-lg {
           appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-select, .nf-form-wrap .nf-form-content .list-select-wrap > div select, select {
+  .form-select, .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element, select {
     transition: none;
   }
 }
-.form-select:focus, .nf-form-wrap .nf-form-content .list-select-wrap > div select:focus, select:focus {
+.form-select:focus, .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:focus, select:focus {
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-select[multiple], .nf-form-wrap .nf-form-content .list-select-wrap > div select[multiple], select[multiple], .form-select[size]:not([size="1"]), .nf-form-wrap .nf-form-content .list-select-wrap > div select[size]:not([size="1"]), select[size]:not([size="1"]) {
+.form-select[multiple], .nf-form-wrap .nf-form-content .list-select-wrap > div select[multiple].nf-element, select[multiple], .form-select[size]:not([size="1"]), .nf-form-wrap .nf-form-content .list-select-wrap > div select[size].nf-element:not([size="1"]), select[size]:not([size="1"]) {
   padding-left: 0.75rem;
   background-image: none;
 }
-.form-select:disabled, .nf-form-wrap .nf-form-content .list-select-wrap > div select:disabled, select:disabled {
+.form-select:disabled, .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:disabled, select:disabled {
   background-color: #e9ecef;
 }
-.form-select:-moz-focusring, .nf-form-wrap .nf-form-content .list-select-wrap > div select:-moz-focusring, select:-moz-focusring {
+.form-select:-moz-focusring, .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:-moz-focusring, select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #222;
 }
@@ -2433,9 +2433,12 @@ textarea.form-control-lg {
   margin-bottom: 0.125rem;
 }
 .form-check .form-check-input, .nf-form-wrap .nf-form-content .listcheckbox-wrap li .form-check-input,
-.nf-form-wrap .nf-form-content .listradio-wrap li .form-check-input, .form-check .nf-form-wrap .nf-form-content input[type=checkbox].ninja-forms-field, .nf-form-wrap .nf-form-content .form-check input[type=checkbox].ninja-forms-field, .nf-form-wrap .nf-form-content .listcheckbox-wrap li input[type=checkbox].ninja-forms-field,
+.nf-form-wrap .nf-form-content .listradio-wrap li .form-check-input, .form-check .nf-form-wrap .nf-form-content input[type=checkbox].ninja-forms-field, .nf-form-wrap .nf-form-content .listcheckbox-wrap li .nf-form-wrap .nf-form-content input[type=checkbox].ninja-forms-field,
+.nf-form-wrap .nf-form-content .listradio-wrap li .nf-form-wrap .nf-form-content input[type=checkbox].ninja-forms-field, .nf-form-wrap .nf-form-content .form-check input[type=checkbox].ninja-forms-field, .nf-form-wrap .nf-form-content .listcheckbox-wrap li input[type=checkbox].ninja-forms-field,
 .nf-form-wrap .nf-form-content .listradio-wrap li input[type=checkbox].ninja-forms-field,
 .form-check .nf-form-wrap .nf-form-content input[type=radio].ninja-forms-field,
+.nf-form-wrap .nf-form-content .listcheckbox-wrap li .nf-form-wrap .nf-form-content input[type=radio].ninja-forms-field,
+.nf-form-wrap .nf-form-content .listradio-wrap li .nf-form-wrap .nf-form-content input[type=radio].ninja-forms-field,
 .nf-form-wrap .nf-form-content .form-check input[type=radio].ninja-forms-field,
 .nf-form-wrap .nf-form-content .listcheckbox-wrap li input[type=radio].ninja-forms-field,
 .nf-form-wrap .nf-form-content .listradio-wrap li input[type=radio].ninja-forms-field {
@@ -2496,14 +2499,16 @@ textarea.form-control-lg {
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-.form-check-input:checked[type=checkbox], .nf-form-wrap .nf-form-content input.ninja-forms-field:checked[type=checkbox] {
+.form-check-input:checked[type=checkbox], .nf-form-wrap .nf-form-content input.ninja-forms-field:checked[type=checkbox],
+.nf-form-wrap .nf-form-content input[type=radio].ninja-forms-field:checked[type=checkbox] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 }
-.form-check-input:checked[type=radio],
+.form-check-input:checked[type=radio], .nf-form-wrap .nf-form-content input[type=checkbox].ninja-forms-field:checked[type=radio],
 .nf-form-wrap .nf-form-content input.ninja-forms-field:checked[type=radio] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
-.form-check-input[type=checkbox]:indeterminate, .nf-form-wrap .nf-form-content input[type=checkbox].ninja-forms-field:indeterminate {
+.form-check-input[type=checkbox]:indeterminate, .nf-form-wrap .nf-form-content input[type=checkbox].ninja-forms-field:indeterminate,
+.nf-form-wrap .nf-form-content input[type=checkbox][type=radio].ninja-forms-field:indeterminate {
   background-color: #0d6efd;
   border-color: #0d6efd;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
@@ -2705,7 +2710,7 @@ textarea.form-control-lg {
 .form-floating {
   position: relative;
 }
-.form-floating > .form-control, .nf-form-wrap .nf-form-content .form-floating > input:not([type=button]):not([type=checkbox]):not([type=radio]),
+.form-floating > .form-control, .nf-form-wrap .nf-form-content .form-floating > input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .form-floating > textarea, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text],
@@ -2728,7 +2733,7 @@ textarea.form-control-lg {
 .form-floating > textarea,
 .form-floating > .form-control-plaintext,
 .form-floating > .form-select,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .form-floating > select,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .form-floating > select.nf-element,
 .form-floating > select {
   height: calc(3.5rem + 2px);
   line-height: 1.25;
@@ -2754,7 +2759,7 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.form-floating > .form-control, .nf-form-wrap .nf-form-content .form-floating > input:not([type=button]):not([type=checkbox]):not([type=radio]),
+.form-floating > .form-control, .nf-form-wrap .nf-form-content .form-floating > input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .form-floating > textarea, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text],
@@ -2778,10 +2783,10 @@ textarea.form-control-lg {
 .form-floating > .form-control-plaintext {
   padding: 1rem 0.75rem;
 }
-.form-floating > .form-control::-moz-placeholder, .nf-form-wrap .nf-form-content .form-floating > input:not([type=button]):not([type=checkbox]):not([type=radio])::-moz-placeholder, .nf-form-wrap .nf-form-content .form-floating > textarea::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=password]::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > select::-moz-placeholder, .form-floating > input[type=text]::-moz-placeholder, .form-floating > input[type=email]::-moz-placeholder, .form-floating > input[type=url]::-moz-placeholder, .form-floating > input[type=password]::-moz-placeholder, .form-floating > input[type=search]::-moz-placeholder, .form-floating > input[type=number]::-moz-placeholder, .form-floating > input[type=tel]::-moz-placeholder, .form-floating > input[type=range]::-moz-placeholder, .form-floating > input[type=date]::-moz-placeholder, .form-floating > input[type=month]::-moz-placeholder, .form-floating > input[type=week]::-moz-placeholder, .form-floating > input[type=time]::-moz-placeholder, .form-floating > input[type=datetime]::-moz-placeholder, .form-floating > input[type=datetime-local]::-moz-placeholder, .form-floating > input[type=color]::-moz-placeholder, .form-floating > textarea::-moz-placeholder, .form-floating > .form-control-plaintext::-moz-placeholder {
+.form-floating > .form-control::-moz-placeholder, .nf-form-wrap .nf-form-content .form-floating > input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit])::-moz-placeholder, .nf-form-wrap .nf-form-content .form-floating > textarea::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea::-moz-placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=password]::-moz-placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > select::-moz-placeholder, .form-floating > input[type=text]::-moz-placeholder, .form-floating > input[type=email]::-moz-placeholder, .form-floating > input[type=url]::-moz-placeholder, .form-floating > input[type=password]::-moz-placeholder, .form-floating > input[type=search]::-moz-placeholder, .form-floating > input[type=number]::-moz-placeholder, .form-floating > input[type=tel]::-moz-placeholder, .form-floating > input[type=range]::-moz-placeholder, .form-floating > input[type=date]::-moz-placeholder, .form-floating > input[type=month]::-moz-placeholder, .form-floating > input[type=week]::-moz-placeholder, .form-floating > input[type=time]::-moz-placeholder, .form-floating > input[type=datetime]::-moz-placeholder, .form-floating > input[type=datetime-local]::-moz-placeholder, .form-floating > input[type=color]::-moz-placeholder, .form-floating > textarea::-moz-placeholder, .form-floating > .form-control-plaintext::-moz-placeholder {
   color: transparent;
 }
-.form-floating > .form-control::placeholder, .nf-form-wrap .nf-form-content .form-floating > input:not([type=button]):not([type=checkbox]):not([type=radio])::placeholder,
+.form-floating > .form-control::placeholder, .nf-form-wrap .nf-form-content .form-floating > input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit])::placeholder,
 .nf-form-wrap .nf-form-content .form-floating > textarea::placeholder, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input::placeholder,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea::placeholder,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select::placeholder, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]::placeholder,
@@ -2805,11 +2810,11 @@ textarea.form-control-lg {
 .form-floating > .form-control-plaintext::placeholder {
   color: transparent;
 }
-.form-floating > .form-control:not(:-moz-placeholder-shown), .nf-form-wrap .nf-form-content .form-floating > input:not(:-moz-placeholder-shown):not([type=button]):not([type=checkbox]):not([type=radio]), .nf-form-wrap .nf-form-content .form-floating > textarea:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=password]:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > select:not(:-moz-placeholder-shown), .form-floating > input[type=text]:not(:-moz-placeholder-shown), .form-floating > input[type=email]:not(:-moz-placeholder-shown), .form-floating > input[type=url]:not(:-moz-placeholder-shown), .form-floating > input[type=password]:not(:-moz-placeholder-shown), .form-floating > input[type=search]:not(:-moz-placeholder-shown), .form-floating > input[type=number]:not(:-moz-placeholder-shown), .form-floating > input[type=tel]:not(:-moz-placeholder-shown), .form-floating > input[type=range]:not(:-moz-placeholder-shown), .form-floating > input[type=date]:not(:-moz-placeholder-shown), .form-floating > input[type=month]:not(:-moz-placeholder-shown), .form-floating > input[type=week]:not(:-moz-placeholder-shown), .form-floating > input[type=time]:not(:-moz-placeholder-shown), .form-floating > input[type=datetime]:not(:-moz-placeholder-shown), .form-floating > input[type=datetime-local]:not(:-moz-placeholder-shown), .form-floating > input[type=color]:not(:-moz-placeholder-shown), .form-floating > textarea:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
+.form-floating > .form-control:not(:-moz-placeholder-shown), .nf-form-wrap .nf-form-content .form-floating > input:not(:-moz-placeholder-shown):not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]), .nf-form-wrap .nf-form-content .form-floating > textarea:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=password]:not(:-moz-placeholder-shown), .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > select:not(:-moz-placeholder-shown), .form-floating > input[type=text]:not(:-moz-placeholder-shown), .form-floating > input[type=email]:not(:-moz-placeholder-shown), .form-floating > input[type=url]:not(:-moz-placeholder-shown), .form-floating > input[type=password]:not(:-moz-placeholder-shown), .form-floating > input[type=search]:not(:-moz-placeholder-shown), .form-floating > input[type=number]:not(:-moz-placeholder-shown), .form-floating > input[type=tel]:not(:-moz-placeholder-shown), .form-floating > input[type=range]:not(:-moz-placeholder-shown), .form-floating > input[type=date]:not(:-moz-placeholder-shown), .form-floating > input[type=month]:not(:-moz-placeholder-shown), .form-floating > input[type=week]:not(:-moz-placeholder-shown), .form-floating > input[type=time]:not(:-moz-placeholder-shown), .form-floating > input[type=datetime]:not(:-moz-placeholder-shown), .form-floating > input[type=datetime-local]:not(:-moz-placeholder-shown), .form-floating > input[type=color]:not(:-moz-placeholder-shown), .form-floating > textarea:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:focus, .nf-form-wrap .nf-form-content .form-floating > input:focus:not([type=button]):not([type=checkbox]):not([type=radio]),
+.form-floating > .form-control:focus, .nf-form-wrap .nf-form-content .form-floating > input:focus:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .form-floating > textarea:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input:focus,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea:focus,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select:focus, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]:focus,
@@ -2829,7 +2834,7 @@ textarea.form-control-lg {
 .form-floating > input[type=datetime]:focus,
 .form-floating > input[type=datetime-local]:focus,
 .form-floating > input[type=color]:focus,
-.form-floating > textarea:focus, .form-floating > .form-control:not(:placeholder-shown), .nf-form-wrap .nf-form-content .form-floating > input:not(:placeholder-shown):not([type=button]):not([type=checkbox]):not([type=radio]),
+.form-floating > textarea:focus, .form-floating > .form-control:not(:placeholder-shown), .nf-form-wrap .nf-form-content .form-floating > input:not(:placeholder-shown):not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .form-floating > textarea:not(:placeholder-shown), .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input:not(:placeholder-shown),
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea:not(:placeholder-shown),
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select:not(:placeholder-shown), .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]:not(:placeholder-shown),
@@ -2855,7 +2860,7 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:-webkit-autofill, .nf-form-wrap .nf-form-content .form-floating > input:-webkit-autofill:not([type=button]):not([type=checkbox]):not([type=radio]),
+.form-floating > .form-control:-webkit-autofill, .nf-form-wrap .nf-form-content .form-floating > input:-webkit-autofill:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .form-floating > textarea:-webkit-autofill, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input:-webkit-autofill,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea:-webkit-autofill,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select:-webkit-autofill, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]:-webkit-autofill,
@@ -2880,15 +2885,15 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-select, .nf-form-wrap .nf-form-content .list-select-wrap > div .form-floating > select, .form-floating > select {
+.form-floating > .form-select, .nf-form-wrap .nf-form-content .list-select-wrap > div .form-floating > select.nf-element, .form-floating > select {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .nf-form-wrap .nf-form-content .form-floating > input:not(:-moz-placeholder-shown):not([type=button]):not([type=checkbox]):not([type=radio]) ~ label, .nf-form-wrap .nf-form-content .form-floating > textarea:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=password]:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=text]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=email]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=url]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=password]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=search]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=number]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=tel]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=range]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=date]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=month]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=week]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=time]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=datetime]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=datetime-local]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=color]:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .nf-form-wrap .nf-form-content .form-floating > input:not(:-moz-placeholder-shown):not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]) ~ label, .nf-form-wrap .nf-form-content .form-floating > textarea:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=password]:not(:-moz-placeholder-shown) ~ label, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=text]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=email]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=url]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=password]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=search]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=number]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=tel]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=range]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=date]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=month]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=week]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=time]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=datetime]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=datetime-local]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type=color]:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
 }
-.form-floating > .form-control:focus ~ label, .nf-form-wrap .nf-form-content .form-floating > input:focus:not([type=button]):not([type=checkbox]):not([type=radio]) ~ label,
+.form-floating > .form-control:focus ~ label, .nf-form-wrap .nf-form-content .form-floating > input:focus:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]) ~ label,
 .nf-form-wrap .nf-form-content .form-floating > textarea:focus ~ label, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input:focus ~ label,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea:focus ~ label,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select:focus ~ label, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]:focus ~ label,
@@ -2910,7 +2915,7 @@ textarea.form-control-lg {
 .form-floating > input[type=color]:focus ~ label,
 .form-floating > textarea:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
-.nf-form-wrap .nf-form-content .form-floating > input:not(:placeholder-shown):not([type=button]):not([type=checkbox]):not([type=radio]) ~ label,
+.nf-form-wrap .nf-form-content .form-floating > input:not(:placeholder-shown):not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]) ~ label,
 .nf-form-wrap .nf-form-content .form-floating > textarea:not(:placeholder-shown) ~ label,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input:not(:placeholder-shown) ~ label,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea:not(:placeholder-shown) ~ label,
@@ -2936,12 +2941,12 @@ textarea.form-control-lg {
 .form-floating > textarea:not(:placeholder-shown) ~ label,
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .form-floating > select ~ label,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .form-floating > select.nf-element ~ label,
 .form-floating > select ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
 }
-.form-floating > .form-control:-webkit-autofill ~ label, .nf-form-wrap .nf-form-content .form-floating > input:-webkit-autofill:not([type=button]):not([type=checkbox]):not([type=radio]) ~ label,
+.form-floating > .form-control:-webkit-autofill ~ label, .nf-form-wrap .nf-form-content .form-floating > input:-webkit-autofill:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]) ~ label,
 .nf-form-wrap .nf-form-content .form-floating > textarea:-webkit-autofill ~ label, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > input:-webkit-autofill ~ label,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > textarea:-webkit-autofill ~ label,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .form-floating > select:-webkit-autofill ~ label, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .form-floating > input[type=text]:-webkit-autofill ~ label,
@@ -2976,7 +2981,7 @@ textarea.form-control-lg {
   align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control, .nf-form-wrap .nf-form-content .input-group > input:not([type=button]):not([type=checkbox]):not([type=radio]),
+.input-group > .form-control, .nf-form-wrap .nf-form-content .input-group > input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .input-group > textarea, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > input,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > textarea,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > select, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .input-group > input[type=text],
@@ -2998,7 +3003,7 @@ textarea.form-control-lg {
 .input-group > input[type=color],
 .input-group > textarea,
 .input-group > .form-select,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select.nf-element,
 .input-group > select,
 .input-group > .form-floating {
   position: relative;
@@ -3006,7 +3011,7 @@ textarea.form-control-lg {
   width: 1%;
   min-width: 0;
 }
-.input-group > .form-control:focus, .nf-form-wrap .nf-form-content .input-group > input:focus:not([type=button]):not([type=checkbox]):not([type=radio]),
+.input-group > .form-control:focus, .nf-form-wrap .nf-form-content .input-group > input:focus:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .input-group > textarea:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > input:focus,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > textarea:focus,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > select:focus, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .input-group > input[type=text]:focus,
@@ -3028,7 +3033,7 @@ textarea.form-control-lg {
 .input-group > input[type=color]:focus,
 .input-group > textarea:focus,
 .input-group > .form-select:focus,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select:focus,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select.nf-element:focus,
 .input-group > select:focus,
 .input-group > .form-floating:focus-within {
   z-index: 5;
@@ -3074,7 +3079,7 @@ textarea.form-control-lg {
   border-radius: 0.375rem;
 }
 
-.input-group-lg > .form-control, .nf-form-wrap .nf-form-content .input-group-lg > input:not([type=button]):not([type=checkbox]):not([type=radio]),
+.input-group-lg > .form-control, .nf-form-wrap .nf-form-content .input-group-lg > input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .input-group-lg > textarea, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group-lg > input,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group-lg > textarea,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group-lg > select, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .input-group-lg > input[type=text],
@@ -3096,7 +3101,7 @@ textarea.form-control-lg {
 .input-group-lg > input[type=color],
 .input-group-lg > textarea,
 .input-group-lg > .form-select,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group-lg > select,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group-lg > select.nf-element,
 .input-group-lg > select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
@@ -3127,7 +3132,7 @@ form.post-password-form .input-group-lg > input[type=submit] {
   border-radius: 0.5rem;
 }
 
-.input-group-sm > .form-control, .nf-form-wrap .nf-form-content .input-group-sm > input:not([type=button]):not([type=checkbox]):not([type=radio]),
+.input-group-sm > .form-control, .nf-form-wrap .nf-form-content .input-group-sm > input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .input-group-sm > textarea, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group-sm > input,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group-sm > textarea,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group-sm > select, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .input-group-sm > input[type=text],
@@ -3149,7 +3154,7 @@ form.post-password-form .input-group-lg > input[type=submit] {
 .input-group-sm > input[type=color],
 .input-group-sm > textarea,
 .input-group-sm > .form-select,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group-sm > select,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group-sm > select.nf-element,
 .input-group-sm > select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
@@ -3180,9 +3185,9 @@ form.post-password-form .input-group-sm > input[type=submit] {
   border-radius: 0.25rem;
 }
 
-.input-group-lg > .form-select, .nf-form-wrap .nf-form-content .list-select-wrap > div .input-group-lg > select, .input-group-lg > select,
+.input-group-lg > .form-select, .nf-form-wrap .nf-form-content .list-select-wrap > div .input-group-lg > select.nf-element, .input-group-lg > select,
 .input-group-sm > .form-select,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group-sm > select,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group-sm > select.nf-element,
 .input-group-sm > select {
   padding-left: 3rem;
 }
@@ -3190,7 +3195,7 @@ form.post-password-form .input-group-sm > input[type=submit] {
 .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
 .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control,
-.nf-form-wrap .nf-form-content .input-group:not(.has-validation) > .form-floating:not(:last-child) > input:not([type=button]):not([type=checkbox]):not([type=radio]),
+.nf-form-wrap .nf-form-content .input-group:not(.has-validation) > .form-floating:not(:last-child) > input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .input-group:not(.has-validation) > .form-floating:not(:last-child) > textarea,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group:not(.has-validation) > .form-floating:not(:last-child) > input,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group:not(.has-validation) > .form-floating:not(:last-child) > textarea,
@@ -3215,7 +3220,7 @@ form.post-password-form .input-group-sm > input[type=submit] {
 .input-group:not(.has-validation) > .form-floating:not(:last-child) > input[type=color],
 .input-group:not(.has-validation) > .form-floating:not(:last-child) > textarea,
 .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group:not(.has-validation) > .form-floating:not(:last-child) > select,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group:not(.has-validation) > .form-floating:not(:last-child) > select.nf-element,
 .input-group:not(.has-validation) > .form-floating:not(:last-child) > select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3223,7 +3228,7 @@ form.post-password-form .input-group-sm > input[type=submit] {
 .input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4),
 .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-control,
-.nf-form-wrap .nf-form-content .input-group.has-validation > .form-floating:nth-last-child(n+3) > input:not([type=button]):not([type=checkbox]):not([type=radio]),
+.nf-form-wrap .nf-form-content .input-group.has-validation > .form-floating:nth-last-child(n+3) > input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .input-group.has-validation > .form-floating:nth-last-child(n+3) > textarea,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group.has-validation > .form-floating:nth-last-child(n+3) > input,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group.has-validation > .form-floating:nth-last-child(n+3) > textarea,
@@ -3248,7 +3253,7 @@ form.post-password-form .input-group-sm > input[type=submit] {
 .input-group.has-validation > .form-floating:nth-last-child(n+3) > input[type=color],
 .input-group.has-validation > .form-floating:nth-last-child(n+3) > textarea,
 .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-select,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group.has-validation > .form-floating:nth-last-child(n+3) > select,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group.has-validation > .form-floating:nth-last-child(n+3) > select.nf-element,
 .input-group.has-validation > .form-floating:nth-last-child(n+3) > select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3258,7 +3263,7 @@ form.post-password-form .input-group-sm > input[type=submit] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.input-group > .form-floating:not(:first-child) > .form-control, .nf-form-wrap .nf-form-content .input-group > .form-floating:not(:first-child) > input:not([type=button]):not([type=checkbox]):not([type=radio]),
+.input-group > .form-floating:not(:first-child) > .form-control, .nf-form-wrap .nf-form-content .input-group > .form-floating:not(:first-child) > input:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .input-group > .form-floating:not(:first-child) > textarea, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > .form-floating:not(:first-child) > input,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > .form-floating:not(:first-child) > textarea,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > .form-floating:not(:first-child) > select, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .input-group > .form-floating:not(:first-child) > input[type=text],
@@ -3280,7 +3285,7 @@ form.post-password-form .input-group-sm > input[type=submit] {
 .input-group > .form-floating:not(:first-child) > input[type=color],
 .input-group > .form-floating:not(:first-child) > textarea,
 .input-group > .form-floating:not(:first-child) > .form-select,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > .form-floating:not(:first-child) > select,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > .form-floating:not(:first-child) > select.nf-element,
 .input-group > .form-floating:not(:first-child) > select {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -3315,7 +3320,7 @@ form.post-password-form .input-group-sm > input[type=submit] {
   display: block;
 }
 
-.was-validated .form-control:valid, .was-validated .nf-form-wrap .nf-form-content input:valid:not([type=button]):not([type=checkbox]):not([type=radio]), .nf-form-wrap .nf-form-content .was-validated input:valid:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated .form-control:valid, .was-validated .nf-form-wrap .nf-form-content input:valid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]), .nf-form-wrap .nf-form-content .was-validated input:valid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .was-validated .nf-form-wrap .nf-form-content textarea:valid,
 .nf-form-wrap .nf-form-content .was-validated textarea:valid, .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input:valid, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .was-validated input:valid,
 .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea:valid,
@@ -3340,7 +3345,7 @@ form.post-password-form .input-group-sm > input[type=submit] {
 .was-validated input[type=datetime]:valid,
 .was-validated input[type=datetime-local]:valid,
 .was-validated input[type=color]:valid,
-.was-validated textarea:valid, .form-control.is-valid, .nf-form-wrap .nf-form-content input.is-valid:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated textarea:valid, .form-control.is-valid, .nf-form-wrap .nf-form-content input.is-valid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content textarea.is-valid, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input.is-valid,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea.is-valid,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select.is-valid, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input.is-valid[type=text],
@@ -3368,7 +3373,7 @@ textarea.is-valid {
   background-position: left calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:valid:focus, .was-validated .nf-form-wrap .nf-form-content input:valid:focus:not([type=button]):not([type=checkbox]):not([type=radio]), .nf-form-wrap .nf-form-content .was-validated input:valid:focus:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated .form-control:valid:focus, .was-validated .nf-form-wrap .nf-form-content input:valid:focus:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]), .nf-form-wrap .nf-form-content .was-validated input:valid:focus:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .was-validated .nf-form-wrap .nf-form-content textarea:valid:focus,
 .nf-form-wrap .nf-form-content .was-validated textarea:valid:focus, .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input:valid:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .was-validated input:valid:focus,
 .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea:valid:focus,
@@ -3393,7 +3398,7 @@ textarea.is-valid {
 .was-validated input[type=datetime]:valid:focus,
 .was-validated input[type=datetime-local]:valid:focus,
 .was-validated input[type=color]:valid:focus,
-.was-validated textarea:valid:focus, .form-control.is-valid:focus, .nf-form-wrap .nf-form-content input.is-valid:focus:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated textarea:valid:focus, .form-control.is-valid:focus, .nf-form-wrap .nf-form-content input.is-valid:focus:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content textarea.is-valid:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input.is-valid:focus,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea.is-valid:focus,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select.is-valid:focus, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input.is-valid[type=text]:focus,
@@ -3431,16 +3436,16 @@ textarea.is-valid {
   background-position: top calc(0.375em + 0.1875rem) left calc(0.375em + 0.1875rem);
 }
 
-.was-validated .form-select:valid, .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select:valid, .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select:valid, .was-validated select:valid, .form-select.is-valid, .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-valid, select.is-valid {
+.was-validated .form-select:valid, .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:valid, .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select.nf-element:valid, .was-validated select:valid, .form-select.is-valid, .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-valid.nf-element, select.is-valid {
   border-color: #198754;
 }
-.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select:valid:not([multiple]):not([size]), .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select:valid:not([multiple]):not([size]), .was-validated select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select:valid:not([multiple])[size="1"], .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select:valid:not([multiple])[size="1"], .was-validated select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-valid:not([multiple]):not([size]), select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-valid:not([multiple])[size="1"], select.is-valid:not([multiple])[size="1"] {
+.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:valid:not([multiple]):not([size]), .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select.nf-element:valid:not([multiple]):not([size]), .was-validated select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:valid:not([multiple])[size="1"], .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select.nf-element:valid:not([multiple])[size="1"], .was-validated select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-valid.nf-element:not([multiple]):not([size]), select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-valid.nf-element:not([multiple])[size="1"], select.is-valid:not([multiple])[size="1"] {
   padding-left: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: left 0.75rem center, center left 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-select:valid:focus, .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select:valid:focus, .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select:valid:focus, .was-validated select:valid:focus, .form-select.is-valid:focus, .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-valid:focus, select.is-valid:focus {
+.was-validated .form-select:valid:focus, .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:valid:focus, .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select.nf-element:valid:focus, .was-validated select:valid:focus, .form-select.is-valid:focus, .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-valid.nf-element:focus, select.is-valid:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
@@ -3529,7 +3534,7 @@ textarea.is-valid {
   margin-right: 0.5em;
 }
 
-.was-validated .input-group > .form-control:not(:focus):valid, .was-validated .nf-form-wrap .nf-form-content .input-group > input:not(:focus):valid:not([type=button]):not([type=checkbox]):not([type=radio]), .nf-form-wrap .nf-form-content .was-validated .input-group > input:not(:focus):valid:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated .input-group > .form-control:not(:focus):valid, .was-validated .nf-form-wrap .nf-form-content .input-group > input:not(:focus):valid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]), .nf-form-wrap .nf-form-content .was-validated .input-group > input:not(:focus):valid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .was-validated .nf-form-wrap .nf-form-content .input-group > textarea:not(:focus):valid,
 .nf-form-wrap .nf-form-content .was-validated .input-group > textarea:not(:focus):valid, .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > input:not(:focus):valid, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .was-validated .input-group > input:not(:focus):valid,
 .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > textarea:not(:focus):valid,
@@ -3554,7 +3559,7 @@ textarea.is-valid {
 .was-validated .input-group > input[type=datetime]:not(:focus):valid,
 .was-validated .input-group > input[type=datetime-local]:not(:focus):valid,
 .was-validated .input-group > input[type=color]:not(:focus):valid,
-.was-validated .input-group > textarea:not(:focus):valid, .input-group > .form-control:not(:focus).is-valid, .nf-form-wrap .nf-form-content .input-group > input:not(:focus).is-valid:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated .input-group > textarea:not(:focus):valid, .input-group > .form-control:not(:focus).is-valid, .nf-form-wrap .nf-form-content .input-group > input:not(:focus).is-valid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .input-group > textarea:not(:focus).is-valid, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > input:not(:focus).is-valid,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > textarea:not(:focus).is-valid,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > select:not(:focus).is-valid, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .input-group > input[type=text]:not(:focus).is-valid,
@@ -3576,11 +3581,11 @@ textarea.is-valid {
 .input-group > input[type=color]:not(:focus).is-valid,
 .input-group > textarea:not(:focus).is-valid,
 .was-validated .input-group > .form-select:not(:focus):valid,
-.was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select:not(:focus):valid,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated .input-group > select:not(:focus):valid,
+.was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select.nf-element:not(:focus):valid,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated .input-group > select.nf-element:not(:focus):valid,
 .was-validated .input-group > select:not(:focus):valid,
 .input-group > .form-select:not(:focus).is-valid,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select:not(:focus).is-valid,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select.nf-element:not(:focus).is-valid,
 .input-group > select:not(:focus).is-valid,
 .was-validated .input-group > .form-floating:not(:focus-within):valid,
 .input-group > .form-floating:not(:focus-within).is-valid {
@@ -3616,7 +3621,7 @@ textarea.is-valid {
   display: block;
 }
 
-.was-validated .form-control:invalid, .was-validated .nf-form-wrap .nf-form-content input:invalid:not([type=button]):not([type=checkbox]):not([type=radio]), .nf-form-wrap .nf-form-content .was-validated input:invalid:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated .form-control:invalid, .was-validated .nf-form-wrap .nf-form-content input:invalid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]), .nf-form-wrap .nf-form-content .was-validated input:invalid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .was-validated .nf-form-wrap .nf-form-content textarea:invalid,
 .nf-form-wrap .nf-form-content .was-validated textarea:invalid, .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input:invalid, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .was-validated input:invalid,
 .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea:invalid,
@@ -3641,7 +3646,7 @@ textarea.is-valid {
 .was-validated input[type=datetime]:invalid,
 .was-validated input[type=datetime-local]:invalid,
 .was-validated input[type=color]:invalid,
-.was-validated textarea:invalid, .form-control.is-invalid, .nf-form-wrap .nf-form-content input.is-invalid:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated textarea:invalid, .form-control.is-invalid, .nf-form-wrap .nf-form-content input.is-invalid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content textarea.is-invalid, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input.is-invalid,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea.is-invalid,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select.is-invalid, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input.is-invalid[type=text],
@@ -3669,7 +3674,7 @@ textarea.is-invalid {
   background-position: left calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:invalid:focus, .was-validated .nf-form-wrap .nf-form-content input:invalid:focus:not([type=button]):not([type=checkbox]):not([type=radio]), .nf-form-wrap .nf-form-content .was-validated input:invalid:focus:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated .form-control:invalid:focus, .was-validated .nf-form-wrap .nf-form-content input:invalid:focus:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]), .nf-form-wrap .nf-form-content .was-validated input:invalid:focus:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .was-validated .nf-form-wrap .nf-form-content textarea:invalid:focus,
 .nf-form-wrap .nf-form-content .was-validated textarea:invalid:focus, .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input:invalid:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .was-validated input:invalid:focus,
 .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea:invalid:focus,
@@ -3694,7 +3699,7 @@ textarea.is-invalid {
 .was-validated input[type=datetime]:invalid:focus,
 .was-validated input[type=datetime-local]:invalid:focus,
 .was-validated input[type=color]:invalid:focus,
-.was-validated textarea:invalid:focus, .form-control.is-invalid:focus, .nf-form-wrap .nf-form-content input.is-invalid:focus:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated textarea:invalid:focus, .form-control.is-invalid:focus, .nf-form-wrap .nf-form-content input.is-invalid:focus:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content textarea.is-invalid:focus, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset input.is-invalid:focus,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset textarea.is-invalid:focus,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset select.is-invalid:focus, .bbpress-wrapper#bbpress-forums fieldset.bbp-form input.is-invalid[type=text]:focus,
@@ -3732,16 +3737,16 @@ textarea.is-invalid {
   background-position: top calc(0.375em + 0.1875rem) left calc(0.375em + 0.1875rem);
 }
 
-.was-validated .form-select:invalid, .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select:invalid, .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select:invalid, .was-validated select:invalid, .form-select.is-invalid, .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-invalid, select.is-invalid {
+.was-validated .form-select:invalid, .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:invalid, .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select.nf-element:invalid, .was-validated select:invalid, .form-select.is-invalid, .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-invalid.nf-element, select.is-invalid {
   border-color: #dc3545;
 }
-.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select:invalid:not([multiple]):not([size]), .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select:invalid:not([multiple]):not([size]), .was-validated select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select:invalid:not([multiple])[size="1"], .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select:invalid:not([multiple])[size="1"], .was-validated select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-invalid:not([multiple]):not([size]), select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"], .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-invalid:not([multiple])[size="1"], select.is-invalid:not([multiple])[size="1"] {
+.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:invalid:not([multiple]):not([size]), .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select.nf-element:invalid:not([multiple]):not([size]), .was-validated select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:invalid:not([multiple])[size="1"], .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select.nf-element:invalid:not([multiple])[size="1"], .was-validated select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-invalid.nf-element:not([multiple]):not([size]), select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"], .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-invalid.nf-element:not([multiple])[size="1"], select.is-invalid:not([multiple])[size="1"] {
   padding-left: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-position: left 0.75rem center, center left 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-select:invalid:focus, .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select:invalid:focus, .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select:invalid:focus, .was-validated select:invalid:focus, .form-select.is-invalid:focus, .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-invalid:focus, select.is-invalid:focus {
+.was-validated .form-select:invalid:focus, .was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element:invalid:focus, .nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated select.nf-element:invalid:focus, .was-validated select:invalid:focus, .form-select.is-invalid:focus, .nf-form-wrap .nf-form-content .list-select-wrap > div select.is-invalid.nf-element:focus, select.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
@@ -3830,7 +3835,7 @@ textarea.is-invalid {
   margin-right: 0.5em;
 }
 
-.was-validated .input-group > .form-control:not(:focus):invalid, .was-validated .nf-form-wrap .nf-form-content .input-group > input:not(:focus):invalid:not([type=button]):not([type=checkbox]):not([type=radio]), .nf-form-wrap .nf-form-content .was-validated .input-group > input:not(:focus):invalid:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated .input-group > .form-control:not(:focus):invalid, .was-validated .nf-form-wrap .nf-form-content .input-group > input:not(:focus):invalid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]), .nf-form-wrap .nf-form-content .was-validated .input-group > input:not(:focus):invalid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .was-validated .nf-form-wrap .nf-form-content .input-group > textarea:not(:focus):invalid,
 .nf-form-wrap .nf-form-content .was-validated .input-group > textarea:not(:focus):invalid, .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > input:not(:focus):invalid, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .was-validated .input-group > input:not(:focus):invalid,
 .was-validated .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > textarea:not(:focus):invalid,
@@ -3855,7 +3860,7 @@ textarea.is-invalid {
 .was-validated .input-group > input[type=datetime]:not(:focus):invalid,
 .was-validated .input-group > input[type=datetime-local]:not(:focus):invalid,
 .was-validated .input-group > input[type=color]:not(:focus):invalid,
-.was-validated .input-group > textarea:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid, .nf-form-wrap .nf-form-content .input-group > input:not(:focus).is-invalid:not([type=button]):not([type=checkbox]):not([type=radio]),
+.was-validated .input-group > textarea:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid, .nf-form-wrap .nf-form-content .input-group > input:not(:focus).is-invalid:not([type=button]):not([type=checkbox]):not([type=radio]):not([type=submit]),
 .nf-form-wrap .nf-form-content .input-group > textarea:not(:focus).is-invalid, .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > input:not(:focus).is-invalid,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > textarea:not(:focus).is-invalid,
 .bbpress-wrapper#bbpress-forums #bbp-user-wrapper #bbp-your-profile fieldset .input-group > select:not(:focus).is-invalid, .bbpress-wrapper#bbpress-forums fieldset.bbp-form .input-group > input[type=text]:not(:focus).is-invalid,
@@ -3877,11 +3882,11 @@ textarea.is-invalid {
 .input-group > input[type=color]:not(:focus).is-invalid,
 .input-group > textarea:not(:focus).is-invalid,
 .was-validated .input-group > .form-select:not(:focus):invalid,
-.was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select:not(:focus):invalid,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated .input-group > select:not(:focus):invalid,
+.was-validated .nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select.nf-element:not(:focus):invalid,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .was-validated .input-group > select.nf-element:not(:focus):invalid,
 .was-validated .input-group > select:not(:focus):invalid,
 .input-group > .form-select:not(:focus).is-invalid,
-.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select:not(:focus).is-invalid,
+.nf-form-wrap .nf-form-content .list-select-wrap > div .input-group > select.nf-element:not(:focus).is-invalid,
 .input-group > select:not(:focus).is-invalid,
 .was-validated .input-group > .form-floating:not(:focus-within):invalid,
 .input-group > .form-floating:not(:focus-within).is-invalid {
@@ -15217,8 +15222,6 @@ p.woocommerce-store-notice.demo_store .woocommerce-store-notice__dismiss-link::b
 }
 
 .edd_downloads_list {
-  display: flex;
-  flex-wrap: wrap;
   margin: 1rem 0;
 }
 .edd_downloads_list .edd_download {
@@ -15264,6 +15267,9 @@ p.woocommerce-store-notice.demo_store .woocommerce-store-notice__dismiss-link::b
 .edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_download_purchase_form .edd_download_quantity_wrapper {
   margin: 0 0 0.75rem;
 }
+.edd_downloads_list .edd_download .edd_download_inner .edd-downloads-footer .edd_purchase_submit_wrapper a.edd-add-to-cart {
+  display: block;
+}
 
 #edd_download_pagination {
   justify-content: center;
@@ -15279,64 +15285,6 @@ p.woocommerce-store-notice.demo_store .woocommerce-store-notice__dismiss-link::b
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
-}
-
-.col-md-12.content-area .edd_downloads_list.edd_download_columns_2 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_3 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_4 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_5 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
-  width: 100%;
-}
-@media (min-width: 576px) {
-  .col-md-12.content-area .edd_downloads_list.edd_download_columns_2 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_3 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_4 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_5 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
-    width: 50%;
-  }
-}
-@media (min-width: 768px) {
-  .col-md-12.content-area .edd_downloads_list.edd_download_columns_3 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_4 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_5 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
-    width: 33%;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-12.content-area .edd_downloads_list.edd_download_columns_4 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_5 .edd_download, .col-md-12.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
-    width: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .col-md-12.content-area .edd_downloads_list.edd_download_columns_5 .edd_download {
-    width: 20%;
-  }
-}
-@media (min-width: 1200px) {
-  .col-md-12.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
-    width: 16.6%;
-  }
-}
-
-.col-md-8.content-area .edd_downloads_list.edd_download_columns_2 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_3 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_4 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_5 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
-  width: 100%;
-}
-@media (min-width: 576px) {
-  .col-md-8.content-area .edd_downloads_list.edd_download_columns_2 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_3 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_4 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_5 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
-    width: 50%;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-8.content-area .edd_downloads_list.edd_download_columns_3 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_4 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_5 .edd_download, .col-md-8.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
-    width: 33%;
-  }
-}
-@media (min-width: 1200px) {
-  .col-md-8.content-area .edd_downloads_list.edd_download_columns_4 .edd_download {
-    width: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .col-md-8.content-area .edd_downloads_list.edd_download_columns_5 .edd_download {
-    width: 20%;
-  }
-}
-@media (min-width: 1200px) {
-  .col-md-8.content-area .edd_downloads_list.edd_download_columns_6 .edd_download {
-    width: 16.6%;
-  }
 }
 
 .edd-checkout .col-md-12.content-area,
@@ -15845,6 +15793,11 @@ body.no-sidebar .nf-form-content {
   margin: 0 0 auto 0;
 }
 
+.nf-form-wrap .nf-form-content .list-select-wrap > div select.nf-element {
+  -webkit-appearance: inherit;
+  -moz-appearance: inherit;
+  appearance: inherit;
+}
 .nf-form-wrap .nf-form-content select.ninja-forms-field:not([multiple]) {
   height: auto;
 }
@@ -15879,11 +15832,6 @@ body.no-sidebar .nf-form-content {
 }
 .nf-form-wrap .nf-form-content .list-select-wrap .nf-field-element > div {
   display: none;
-}
-.nf-form-wrap .nf-form-content .list-select-wrap > div select {
-  -webkit-appearance: menulist;
-  -moz-appearance: menulist;
-  appearance: menulist;
 }
 .nf-form-wrap .nf-error.field-wrap .nf-field-element::after {
   background: #dc3545;
