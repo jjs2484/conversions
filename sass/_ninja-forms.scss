@@ -12,13 +12,16 @@ body.no-sidebar .nf-form-content {
 
 	// Add .form-control to inputs
 	.nf-form-content {
-		input:not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+		input:not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
 		textarea {
 			@extend .form-control;
 		}
 
-		.list-select-wrap > div select {
+		.list-select-wrap > div select.nf-element {
 			@extend .form-select;
+			-webkit-appearance: inherit;
+        	-moz-appearance: inherit;
+        	appearance: inherit;
 		}
 		select.ninja-forms-field:not([multiple]) {
 			height: auto;
@@ -91,13 +94,6 @@ body.no-sidebar .nf-form-content {
 	// Hide unused select div
 	.nf-form-content .list-select-wrap .nf-field-element > div {
 		display: none;
-	}
-
-	// Add normal dropdown arrow back
-	.nf-form-content .list-select-wrap > div select {
-		-webkit-appearance: menulist;
-		-moz-appearance: menulist;
-		appearance: menulist;
 	}
 
 	// Error icon for individual fields
