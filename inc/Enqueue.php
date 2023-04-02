@@ -333,11 +333,6 @@ class Enqueue {
 	 */
 	public function resource_hints() {
 
-		// Font Awesome preload.
-		$resources  = '<link rel="preload" href="' . esc_url( get_theme_file_uri( '/fonts/fa-solid-900.woff2' ) ) . '" as="font" type="font/woff2" crossorigin="anonymous">';
-		$resources .= '<link rel="preload" href="' . esc_url( get_theme_file_uri( '/fonts/fa-brands-400.woff2' ) ) . '" as="font" type="font/woff2" crossorigin="anonymous">';
-		$resources .= '<link rel="preload" href="' . esc_url( get_theme_file_uri( '/fonts/fa-regular-400.woff2' ) ) . '" as="font" type="font/woff2" crossorigin="anonymous">';
-
 		// Are Google Fonts active?
 		if ( get_theme_mod( 'conversions_google_fonts', true ) === true ) {
 			// Add Google Fonts preconnect.
