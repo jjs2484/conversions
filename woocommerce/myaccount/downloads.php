@@ -44,6 +44,6 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 	wc_print_notice( esc_html__( 'No downloads available yet.', 'conversions' ) . ' <a class="button wc-forward' . esc_attr( $wp_button_class ) . '" href="' . esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ) . '">' . esc_html__( 'Browse products', 'conversions' ) . '</a>', 'notice' ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingHookComment 
 	?>
 
-<?php endif; ?>
+<?php endif;
 
-<?php do_action( 'woocommerce_after_account_downloads', $has_downloads ); ?>
+do_action( 'woocommerce_after_account_downloads', $has_downloads );

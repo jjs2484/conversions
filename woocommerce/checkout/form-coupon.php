@@ -30,14 +30,10 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 
 	<p><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'conversions' ); ?></p>
 
-	<p class="form-row form-row-first">
-		<label for="coupon_code" class="visually-hidden"><?php esc_html_e( 'Coupon:', 'conversions' ); ?></label>
-		<input type="text" name="coupon_code" class="form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'conversions' ); ?>" id="coupon_code" value="" />
-	</p>
-
-	<p class="form-row form-row-last">
-		<button type="submit" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'conversions' ); ?>"><?php esc_html_e( 'Apply coupon', 'conversions' ); ?></button>
-	</p>
+	<div class="input-group mb-3">
+		<input type="text" name="coupon_code" class="form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'conversions' ); ?>" id="coupon_code" value="" aria-label="<?php esc_attr_e( 'Coupon:', 'conversions' ); ?>" aria-describedby="c-wc__coupon">
+		<button type="submit" id="c-wc__coupon" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'conversions' ); ?>"><?php esc_html_e( 'Apply coupon', 'conversions' ); ?></button>
+	</div>
 
 	<div class="clear"></div>
 </form>
