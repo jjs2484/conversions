@@ -2,7 +2,7 @@
 Contributors: uniquelylost
 Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, footer-widgets, full-width-template, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 Requires at least: 4.7
-Tested up to: 6.2
+Tested up to: 6.3
 Requires PHP: 5.6
 Stable tag: 2.0.0
 License: GPL-2.0-or-later
@@ -21,9 +21,9 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 == Changelog ==
 
 = 2.0.0 =
-
 * Update: Bootstrap to v5.3.1
 * Update: Fontawesome to v6.4.2
+* Update: WooCommerce templates.
 * Update: NPM Dependencies.
 * Update: Composer dependencies.
 
