@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 6.3
 Requires PHP: 5.6
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: WooCommerce templates.
 * Update: NPM Dependencies.
 * Update: Composer dependencies.
+* Fix: Ninja Forms - checkbox and radio styles.
 
 = 1.9.9.7 =
 * Update: Bootstrap to v5.2.3
