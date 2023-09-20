@@ -12,7 +12,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 7.0.1
+ * @version 7.8.0
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
@@ -78,7 +78,9 @@ $totals = $order->get_order_item_totals(); // phpcs:ignore WordPress.WP.GlobalVa
 						wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
 					}
 				} else {
-					echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', esc_html__( 'Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements.', 'conversions' ) ) . '</li>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo '<li>';
+					wc_print_notice( apply_filters( 'woocommerce_no_available_payment_methods_message', esc_html__( 'Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements.', 'conversions' ) ), 'notice' ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingHookComment
+					echo '</li>';
 				}
 				?>
 			</ul>
