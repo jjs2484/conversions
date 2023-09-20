@@ -66,16 +66,39 @@ body.no-sidebar .nf-form-content {
 				padding-left: 1.5rem !important;
 				line-height: 1.5;
 
+				label {
+					margin: 0 !important;
+				}
+			}
+		}
+		.listcheckbox-wrap {
+			li {
+				input[type="checkbox"] {
+					opacity: 1;
+					border: 1px solid rgba(0,0,0,.25);
+					width: 1rem !important;
+					height: 1rem !important;
+					padding: 0;
+				}
+			}
+		}
+		.listradio-wrap {
+			li {
 				input[type="radio"] {
 					display: block;
 					padding: 0;
 					width: 1em !important;
 					margin-top: .15rem;
-				}
-				label {
-					margin: 0 !important;
+					opacity: 1;
+					border: 1px solid rgba(0,0,0,.25);
 				}
 			}
+		}
+		.checkbox-wrap .nf-field-element label:before,
+		.checkbox-wrap .nf-field-label label:before,
+		.listcheckbox-wrap .nf-field-element label:before,
+		.listcheckbox-wrap .nf-field-label label:before {
+			display: none;
 		}
 		.two-col-list,
 		.three-col-list,

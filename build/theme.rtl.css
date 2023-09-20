@@ -17037,16 +17037,30 @@ body.no-sidebar .nf-form-content {
   padding-right: 1.5rem !important;
   line-height: 1.5;
 }
-.nf-form-wrap .nf-form-content .listcheckbox-wrap li input[type=radio],
+.nf-form-wrap .nf-form-content .listcheckbox-wrap li label,
+.nf-form-wrap .nf-form-content .listradio-wrap li label {
+  margin: 0 !important;
+}
+.nf-form-wrap .nf-form-content .listcheckbox-wrap li input[type=checkbox] {
+  opacity: 1;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  width: 1rem !important;
+  height: 1rem !important;
+  padding: 0;
+}
 .nf-form-wrap .nf-form-content .listradio-wrap li input[type=radio] {
   display: block;
   padding: 0;
   width: 1em !important;
   margin-top: 0.15rem;
+  opacity: 1;
+  border: 1px solid rgba(0, 0, 0, 0.25);
 }
-.nf-form-wrap .nf-form-content .listcheckbox-wrap li label,
-.nf-form-wrap .nf-form-content .listradio-wrap li label {
-  margin: 0 !important;
+.nf-form-wrap .nf-form-content .checkbox-wrap .nf-field-element label:before,
+.nf-form-wrap .nf-form-content .checkbox-wrap .nf-field-label label:before,
+.nf-form-wrap .nf-form-content .listcheckbox-wrap .nf-field-element label:before,
+.nf-form-wrap .nf-form-content .listcheckbox-wrap .nf-field-label label:before {
+  display: none;
 }
 .nf-form-wrap .nf-form-content .list-select-wrap .nf-field-element > div {
   display: none;
