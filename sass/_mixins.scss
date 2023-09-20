@@ -1,19 +1,5 @@
 @use 'sass:math';
 // Alerts
-@mixin c-alert-variant($background, $border, $color) {
-  --#{$prefix}alert-color: #{$color};
-  --#{$prefix}alert-bg: #{$background};
-  --#{$prefix}alert-border-color: #{$border};
-  --#{$prefix}alert-link-color: #{shade-color($color, 20%)};
-
-  @if $enable-gradients {
-    background-image: var(--#{$prefix}gradient);
-  }
-
-  .alert-link {
-    color: var(--#{$prefix}alert-link-color);
-  }
-}
 @mixin c-alert-colors($value) {
   $alert-background: shift-color($value, $alert-bg-scale);
   $alert-border: shift-color($value, $alert-border-scale);
@@ -23,8 +9,11 @@
     $alert-color: mix($value, color-contrast($alert-background), math.abs($alert-color-scale));
   }
 
-  @include c-alert-variant($alert-background, $alert-border, $alert-color);
+  color: #{$alert-color};
+  background-color: #{$alert-background};
+  border-color: #{$alert-border};
 
+  .alert-link,
   a {
     color: shade-color($alert-color, 20%);
   }
