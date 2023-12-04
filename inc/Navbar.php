@@ -545,4 +545,21 @@ class Navbar {
 			'</div>';
 		}
 	}
+
+	/**
+	 * Hide navbar section filter.
+	 *
+	 * Override to hide the navbar section.
+	 *
+	 * @since 2023-11-24
+	 */
+	public function hide_navbar_section() {
+		$r = false;
+
+		if ( has_filter( 'conversions_hide_navbar_section' ) ) {
+			$r = apply_filters( 'conversions_hide_navbar_section', $r );
+		}
+
+		return $r;
+	}
 }

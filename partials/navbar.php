@@ -8,7 +8,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 $conversions_navbar = new conversions\Navbar();
-?>
+
+if ( $conversions_navbar->hide_navbar_section() === false ) {
+	?>
 
 	<div id="wrapper-navbar" class="<?php echo esc_attr( $conversions_navbar->conversions_wrapper_classes() ); ?>" role="banner">
 
@@ -29,3 +31,6 @@ $conversions_navbar = new conversions\Navbar();
 		?>
 
 	</div><!-- #wrapper-navbar end -->
+
+	<?php
+}
