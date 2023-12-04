@@ -9,11 +9,15 @@
 defined( 'ABSPATH' ) || exit;
 
 // Call to action section.
-if ( get_theme_mod( 'conversions_hcta_state', false ) === true ) {
+if ( get_theme_mod( 'conversions_hcta_state', false ) === true && conversions()->template->hide_cta_section() === false ) {
 	get_template_part( 'partials/footer', 'cta' );
 } ?>
 
 <?php do_action( 'conversions_before_footer' ); ?>
+
+<?php
+if ( conversions()->template->hide_footer_section() === false ) {
+	?>
 
 <footer id="colophon" class="site-footer">
 
@@ -50,6 +54,10 @@ if ( get_theme_mod( 'conversions_hcta_state', false ) === true ) {
 	</div><!-- wrapper end -->
 
 </footer><!-- #colophon -->
+
+	<?php
+}
+?>
 
 <?php do_action( 'conversions_after_footer' ); ?>
 

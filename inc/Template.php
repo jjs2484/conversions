@@ -720,4 +720,38 @@ class Template {
 		echo '<div class="copyright col-md">' . $footer_credits . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped earlier
 	}
 
+	/**
+	 * Hide footer section filter.
+	 *
+	 * Override to hide the footer section.
+	 *
+	 * @since 2023-11-24
+	 */
+	public function hide_footer_section() {
+		$r = false;
+
+		if ( has_filter( 'conversions_hide_footer_section' ) ) {
+			$r = apply_filters( 'conversions_hide_footer_section', $r );
+		}
+
+		return $r;
+	}
+
+	/**
+	 * Hide CTA section filter.
+	 *
+	 * Override to hide the cta section.
+	 *
+	 * @since 2023-11-24
+	 */
+	public function hide_cta_section() {
+		$r = false;
+
+		if ( has_filter( 'conversions_hide_cta_section' ) ) {
+			$r = apply_filters( 'conversions_hide_cta_section', $r );
+		}
+
+		return $r;
+	}
+
 }
