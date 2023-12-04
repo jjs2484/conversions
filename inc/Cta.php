@@ -1,6 +1,6 @@
 <?php
 /**
- * Fab functions - Floating action button
+ * CTA functions - Floating action button
  *
  * @package conversions
  */
