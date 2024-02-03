@@ -1,6 +1,6 @@
 <?php
 /**
- * CTA functions - Floating action button
+ * CTA functions
  *
  * @package conversions
  */
@@ -56,12 +56,19 @@ class Cta {
 				if ( empty( $conversions_cta_btn_url ) ) {
 					$conversions_cta_btn_url = '';
 				}
-				echo sprintf(
+				$cta_callout_btn = sprintf(
 					'<a href="%s" class="btn %s btn-lg">%s</a>',
 					esc_url( $conversions_cta_btn_url ),
 					esc_attr( get_theme_mod( 'conversions_hcta_btn', 'btn-light' ) ),
 					esc_html( $conversions_cta_btn_text )
 				);
+
+				// Apply filter if exists.
+				if ( has_filter( 'conversions_cta_callout_btn' ) ) {
+					$cta_callout_btn = apply_filters( 'conversions_cta_callout_btn', $cta_callout_btn );
+				}
+
+				echo $cta_callout_btn;
 			}
 			?>
 		</div>
