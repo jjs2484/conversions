@@ -68,6 +68,9 @@
 .btn-check:checked + .btn:focus-visible, .wc-block-product-search__fields .btn-check:checked + .wc-block-product-search__button:focus-visible, .wp-block-button .btn-check:checked + .wp-block-button__link:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .wc-block-product-search__fields :not(.btn-check) + .wc-block-product-search__button:active:focus-visible, .wp-block-button :not(.btn-check) + .wp-block-button__link:active:focus-visible, .btn:first-child:active:focus-visible, .wc-block-product-search__fields .wc-block-product-search__button:first-child:active:focus-visible, .wp-block-button .wp-block-button__link:first-child:active:focus-visible, .btn.active:focus-visible, .wc-block-product-search__fields .active.wc-block-product-search__button:focus-visible, .wp-block-button .active.wp-block-button__link:focus-visible, .btn.show:focus-visible, .wc-block-product-search__fields .show.wc-block-product-search__button:focus-visible, .wp-block-button .show.wp-block-button__link:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
+.btn-check:checked:focus-visible + .btn, .wc-block-product-search__fields .btn-check:checked:focus-visible + .wc-block-product-search__button, .wp-block-button .btn-check:checked:focus-visible + .wp-block-button__link {
+  box-shadow: var(--bs-btn-focus-box-shadow);
+}
 .btn:disabled, .wc-block-product-search__fields .wc-block-product-search__button:disabled, .wp-block-button .wp-block-button__link:disabled, .btn.disabled, .wc-block-product-search__fields .disabled.wc-block-product-search__button, .wp-block-button .disabled.wp-block-button__link, fieldset:disabled .btn, fieldset:disabled .wc-block-product-search__fields .wc-block-product-search__button, .wc-block-product-search__fields fieldset:disabled .wc-block-product-search__button, fieldset:disabled .wp-block-button .wp-block-button__link, .wp-block-button fieldset:disabled .wp-block-button__link {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
@@ -648,6 +651,7 @@ textarea.form-control-lg {
 
 .form-check-input {
   --bs-form-check-bg: var(--bs-body-bg);
+  flex-shrink: 0;
   width: 1em;
   height: 1em;
   margin-top: 0.25em;
@@ -795,7 +799,7 @@ textarea.form-control-lg {
   height: 0.5rem;
   color: transparent;
   cursor: pointer;
-  background-color: var(--bs-tertiary-bg);
+  background-color: var(--bs-secondary-bg);
   border-color: transparent;
   border-radius: 1rem;
 }
@@ -821,7 +825,7 @@ textarea.form-control-lg {
   height: 0.5rem;
   color: transparent;
   cursor: pointer;
-  background-color: var(--bs-tertiary-bg);
+  background-color: var(--bs-secondary-bg);
   border-color: transparent;
   border-radius: 1rem;
 }
