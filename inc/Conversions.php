@@ -33,6 +33,27 @@ namespace conversions
 		}
 
 		/**
+		 * Customizer instance.
+		 *
+		 * @var $customizer
+		 */
+		public $customizer;
+
+		/**
+		 * Template instance.
+		 *
+		 * @var $template
+		 */
+		public $template;
+
+		/**
+		 * Widgets instance.
+		 *
+		 * @var $widgets
+		 */
+		public $widgets;
+
+		/**
 		 * Load the various modules.
 		 *
 		 * @since 2019-08-18
