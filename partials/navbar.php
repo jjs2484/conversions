@@ -32,5 +32,7 @@ if ( $conversions_navbar->hide_navbar_section() === false ) {
 
 	</div><!-- #wrapper-navbar end -->
 
+	<?php do_action( 'conversions_after_navbar' ); ?>
+
 	<?php
 }
