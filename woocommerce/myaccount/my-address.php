@@ -10,9 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://woo.com/document/template-structure/
+ * @see     https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 8.7.0
+ * @version 9.3.0
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
@@ -61,8 +61,16 @@ $col    = 1;
 
 	<div class="u-column<?php echo $col < 0 ? 1 : 2; ?> col-<?php echo $oldcol < 0 ? 1 : 2; ?> woocommerce-Address">
 		<header class="woocommerce-Address-title title">
-			<h3><?php echo esc_html( $address_title ); ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php echo $address ? esc_html__( 'Edit', 'conversions' ) : esc_html__( 'Add', 'conversions' ); ?></a>
+			<h2><?php echo esc_html( $address_title ); ?></h2>
+			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit">
+				<?php
+					printf(
+						/* translators: %s: Address title */
+						$address ? esc_html__( 'Edit %s', 'conversions' ) : esc_html__( 'Add %s', 'conversions' ),
+						esc_html( $address_title )
+					);
+				?>
+			</a>
 		</header>
 		<address>
 			<?php
