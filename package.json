@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/jjs2484/conversions#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@lodder/grunt-postcss": "^3.1.1",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.29.0",
@@ -31,7 +31,7 @@
     "node-sass": "^9.0.0"
   },
   "dependencies": {
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.3",
     "grunt-dart-sass": "^2.0.1",
     "grunt-modernizr": "^4.0.0",
     "hamburgers": "^1.1.3",
