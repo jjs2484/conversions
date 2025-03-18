@@ -2,9 +2,9 @@
 Contributors: uniquelylost
 Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, editor-style, featured-images, footer-widgets, full-width-template, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 Requires at least: 4.7
-Tested up to: 6.4
+Tested up to: 6.7.2
 Requires PHP: 5.6
-Stable tag: 2.1.0
+Stable tag: 2.2.0
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,13 @@ Full documentation: https://conversionswp.com/docs/documentation/
 NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items with sub-menus are only used to toggle the sub-menu on or off.
 
 == Changelog ==
+
+= 2.2.0 =
+* New: Action hook conversions_after_navbar
+* Update: Fontawesome to v6.7.2
+* Update: WooCommerce templates.
+* Update: NPM Dependencies.
+* Update: Composer dependencies.
 
 = 2.1.0 =
 * New: Filter conversions_hide_navbar_section
