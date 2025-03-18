@@ -12,9 +12,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 7.9.0
+ * @version 9.4.0
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_mini_cart' ); ?>
 
-<?php if ( ! WC()->cart->is_empty() ) : ?>
+<?php if ( WC()->cart && ! WC()->cart->is_empty() ) : ?>
 
 	<ul class="woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
 		<?php
@@ -55,7 +55,9 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 							esc_attr( sprintf( __( 'Remove %s from cart', 'conversions' ), wp_strip_all_tags( $product_name ) ) ),
 							esc_attr( $product_id ),
 							esc_attr( $cart_item_key ),
-							esc_attr( $_product->get_sku() )
+							esc_attr( $_product->get_sku() ),
+							/* translators: %s is the product name */
+							esc_attr( sprintf( __( '&ldquo;%s&rdquo; has been removed from your cart', 'conversions' ), wp_strip_all_tags( $product_name ) ) )
 						),
 						$cart_item_key
 					);

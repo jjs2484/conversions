@@ -10,9 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
+ * @see         https://woocommerce.com/document/template-structure/
  * @package     WooCommerce\Templates
- * @version     7.1.0
+ * @version     9.2.0
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  */
 
@@ -32,12 +32,12 @@ if ( is_user_logged_in() ) {
 	<?php echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 
 	<p class="form-row form-row-first">
-		<label for="username"><?php esc_html_e( 'Username or email', 'conversions' ); ?>&nbsp;<span class="required">*</span></label>
-		<input type="text" class="input-text form-control" name="username" id="username" autocomplete="username" />
+	<label for="username"><?php esc_html_e( 'Username or email', 'conversions' ); ?>&nbsp;<span class="required" aria-hidden="true">*</span><span class="screen-reader-text"><?php esc_html_e( 'Required', 'conversions' ); ?></span></label>
+		<input type="text" class="input-text form-control" name="username" id="username" autocomplete="username" required aria-required="true" />
 	</p>
 	<p class="form-row form-row-last">
-		<label for="password"><?php esc_html_e( 'Password', 'conversions' ); ?>&nbsp;<span class="required">*</span></label>
-		<input class="input-text form-control" type="password" name="password" id="password" autocomplete="current-password" />
+	<label for="password"><?php esc_html_e( 'Password', 'conversions' ); ?>&nbsp;<span class="required" aria-hidden="true">*</span><span class="screen-reader-text"><?php esc_html_e( 'Required', 'conversions' ); ?></span></label>
+		<input class="input-text form-control" type="password" name="password" id="password" autocomplete="current-password" required aria-required="true" />
 	</p>
 	<div class="clear"></div>
 

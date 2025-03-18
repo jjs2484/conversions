@@ -10,17 +10,32 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @package 	WooCommerce/Templates
- * @version     3.6.1
+ * @see         https://woocommerce.com/document/template-structure/
+ * @package     WooCommerce\Templates
+ * @version     9.7.0
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$id_suffix = wp_unique_id();
+
 ?>
 <form class="woocommerce-ordering" method="get">
-	<select name="orderby" class="orderby custom-select" aria-label="<?php esc_attr_e( 'Shop order', 'conversions' ); ?>">
+	<?php if ( $use_label ) : ?>
+		<label for="woocommerce-orderby-<?php echo esc_attr( $id_suffix ); ?>"><?php echo esc_html__( 'Sort by', 'conversions' ); ?></label>
+	<?php endif; ?>
+	<select
+		name="orderby"
+		class="orderby"
+		<?php if ( $use_label ) : ?>
+			id="woocommerce-orderby-<?php echo esc_attr( $id_suffix ); ?>"
+		<?php else : ?>
+			aria-label="<?php esc_attr_e( 'Shop order', 'conversions' ); ?>"
+		<?php endif; ?>
+	>
 		<?php foreach ( $catalog_orderby_options as $id => $name ) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
 			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
 		<?php endforeach; ?>
