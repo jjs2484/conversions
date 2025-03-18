@@ -10,10 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 2.6.1
+ * @see     https://woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 9.3.0
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
@@ -25,11 +24,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_before_account_navigation' );
 ?>
 
-<nav class="woocommerce-MyAccount-navigation" role="navigation">
+<nav class="woocommerce-MyAccount-navigation" aria-label="<?php esc_html_e( 'Account pages', 'conversions' ); ?>">
 	<div class="list-group">
 			<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
-				<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"
-				   class="list-group-item list-group-item-action"><?php echo esc_html( $label ); ?></a>
+				<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>" class="list-group-item list-group-item-action">
+					<?php echo esc_html( $label ); ?>
+				</a>
 			<?php endforeach; ?>
 	</div>
 </nav>
