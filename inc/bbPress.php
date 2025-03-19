@@ -34,6 +34,9 @@ class bbPress {
 	 */
 	public function bbp_get_pagination_links( $pagination ) {
 
+		// Ensure $pagination is a string.
+		$pagination = $pagination ?? '';
+
 		$pagination = str_replace( 'span', 'a', $pagination );
 		$pagination = str_replace( 'page-numbers', 'page-link', $pagination );
 		$pagination = str_replace( '<a', '<li class="page-item"><a', $pagination );
