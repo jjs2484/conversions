@@ -302,7 +302,7 @@ class Navbar {
 			}
 
 			if ( class_exists( '\conversions\extensions\social\Social' ) && get_theme_mod( 'conversions_social_navbar', false ) === true ) {
-				$navbar_social_icons = \conversions\extensions\social\social_icons::social_icons_content();
+				$navbar_social_icons = \conversions\extensions\social\Social::social_icons_content();
 				if ( ! empty( $navbar_social_icons ) ) {
 					$navbar_social_icons = str_replace( 'list-inline-item', 'c-nav__social-icon menu-item nav-item', $navbar_social_icons );
 					$navbar_social_icons = str_replace( '<a href=', '<a class="nav-link" href=', $navbar_social_icons );
