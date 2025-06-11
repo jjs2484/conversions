@@ -4,7 +4,7 @@ Tags: block-styles, blog, custom-colors, custom-logo, custom-menu, e-commerce, e
 Requires at least: 4.7
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 2.2.3
+Stable tag: 2.2.4
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,9 @@ Full documentation: https://conversionswp.com/docs/documentation/
 NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items with sub-menus are only used to toggle the sub-menu on or off.
 
 == Changelog ==
+
+= 2.2.4 =
+* Fix: _load_textdomain_just_in_time
 
 = 2.2.2 =
 * New: Action hook conversions_after_navbar
