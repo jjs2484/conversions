@@ -24,15 +24,6 @@ namespace conversions
 		public static $instance;
 
 		/**
-		 * Class constructor.
-		 *
-		 * @since 2019-08-06
-		 */
-		public function __construct() {
-			static::$instance = $this;
-		}
-
-		/**
 		 * Customizer instance.
 		 *
 		 * @var $customizer
@@ -52,6 +43,29 @@ namespace conversions
 		 * @var $widgets
 		 */
 		public $widgets;
+
+		/**
+		 * Constructor.
+		 *
+		 * @since 2019-08-06
+		 */
+		public function __construct() {
+			static::$instance = $this;
+		}
+
+		/**
+		 * Load language files.
+		 *
+		 * Runs first (priority 0) so every later __('…','conversions') call
+		 * finds its translations and avoids the “_load_textdomain_just_in_time”
+		 * notice introduced in WP 6.7.
+		 */
+		public function load_textdomain() {
+			load_theme_textdomain(
+				'conversions',
+				get_template_directory() . '/languages'
+			);
+		}
 
 		/**
 		 * Load the various modules.
@@ -81,9 +95,12 @@ namespace conversions
 			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			require_once get_parent_theme_file_path( '/inc/class-tgm-plugin-activation.php' );
 			// phpcs:enable
-
-			$this->setup();
 			add_action( 'tgmpa_register', [ $this, 'tgmpa_register' ] );
+
+			// 1) load translations (priority 0)
+			add_action( 'after_setup_theme', [ $this, 'load_textdomain' ], 0 );
+			// 2) run theme setup after translations are available (default priority 10)
+			add_action( 'after_setup_theme', [ $this, 'setup' ] );
 		}
 
 		/**
