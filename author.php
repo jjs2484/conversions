@@ -46,7 +46,7 @@ get_header();
 
 						<?php if ( ! empty( $curauth->user_description ) ) : ?>
 							<dt><?php esc_html_e( 'Profile', 'conversions' ); ?></dt>
-							<dd><?php esc_html( $curauth->user_description ); ?></dd>
+							<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
 						<?php endif; ?>
 					</dl>
 
@@ -64,8 +64,8 @@ get_header();
 							the_post();
 							?>
 							<li>
-								<a rel="bookmark" href="<?php esc_url( the_permalink() ); ?>" title="<?php esc_attr_e( 'Permanent Link:', 'conversions' ); ?> <?php the_title(); ?>">
-									<?php the_title(); ?>
+								<a rel="bookmark" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php esc_attr_e( 'Permanent Link:', 'conversions' ); ?> <?php the_title(); ?>">
+									<?php echo esc_html( get_the_title() ); ?>
 								</a>
 								<?php esc_html_e( 'posted on', 'conversions' ); ?>
 								<?php conversions()->template->posted_on(); ?>

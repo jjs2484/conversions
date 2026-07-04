@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<!-- Post image -->
 	<?php if ( has_post_thumbnail() ) : ?>
-		<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title(); ?>">
+		<a class="c-news__img-link" href="<?php echo esc_url( get_permalink() ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>">
 			<?php
 				/* grab the featured image sizes */
 				$conversions_index_img     = get_post_thumbnail_id( $post->ID );

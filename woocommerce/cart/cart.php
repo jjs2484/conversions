@@ -10,9 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 7.9.0
+ * @version 10.8.0
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
@@ -27,12 +27,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 		<thead>
 			<tr>
-				<th class="product-remove"><span class="visually-hidden"><?php esc_html_e( 'Remove item', 'conversions' ); ?></span></th>
-				<th class="product-thumbnail"><span class="visually-hidden"><?php esc_html_e( 'Thumbnail image', 'conversions' ); ?></span></th>
-				<th class="product-name"><?php esc_html_e( 'Product', 'conversions' ); ?></th>
-				<th class="product-price"><?php esc_html_e( 'Price', 'conversions' ); ?></th>
-				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'conversions' ); ?></th>
-				<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'conversions' ); ?></th>
+				<th class="product-remove"><span class="screen-reader-text"><?php esc_html_e( 'Remove item', 'conversions' ); ?></span></th>
+				<th class="product-thumbnail"><span class="screen-reader-text"><?php esc_html_e( 'Thumbnail image', 'conversions' ); ?></span></th>
+				<th scope="col" class="product-name"><?php esc_html_e( 'Product', 'conversions' ); ?></th>
+				<th scope="col" class="product-price"><?php esc_html_e( 'Price', 'conversions' ); ?></th>
+				<th scope="col" class="product-quantity"><?php esc_html_e( 'Quantity', 'conversions' ); ?></th>
+				<th scope="col" class="product-subtotal"><?php esc_html_e( 'Subtotal', 'conversions' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -42,17 +42,27 @@ do_action( 'woocommerce_before_cart' ); ?>
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 				$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+
 				/**
-				 * Filter the product name.
+				 * Filter whether this cart item is visible in the cart.
 				 *
 				 * @since 2.1.0
-				 * @param string $product_name Name of the product in the cart.
-				 * @param array $cart_item The product in the cart.
-				 * @param string $cart_item_key Key for the product in the cart.
+				 * @param bool   $visible     Whether the cart item is visible. Default true.
+				 * @param array  $cart_item     The cart item data.
+				 * @param string $cart_item_key The cart item key.
 				 */
-				$product_name = apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key );
+				$visible = apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key );
 
-				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+				if ( $_product instanceof WC_Product && $_product->exists() && $cart_item['quantity'] > 0 && $visible ) {
+					/**
+					 * Filter the product name.
+					 *
+					 * @since 2.1.0
+					 * @param string $product_name Name of the product in the cart.
+					 * @param array $cart_item The product in the cart.
+					 * @param string $cart_item_key Key for the product in the cart.
+					 */
+					$product_name      = apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key );
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 					?>
 					<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
@@ -62,7 +72,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 									'woocommerce_cart_item_remove_link',
 									sprintf(
-										'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+										'<a role="button" href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
 										esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 										/* translators: %s is the product name */
 										esc_attr( sprintf( __( 'Remove %s from cart', 'conversions' ), wp_strip_all_tags( $product_name ) ) ),
@@ -76,6 +86,19 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						<td class="product-thumbnail">
 						<?php
+						/**
+						 * Filter the product thumbnail displayed in the WooCommerce cart.
+						 *
+						 * This filter allows developers to customize the HTML output of the product
+						 * thumbnail. It passes the product image along with cart item data
+						 * for potential modifications before being displayed in the cart.
+						 *
+						 * @param string $thumbnail     The HTML for the product image.
+						 * @param array  $cart_item     The cart item data.
+						 * @param string $cart_item_key Unique key for the cart item.
+						 *
+						 * @since 2.1.0
+						 */
 						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
 						if ( ! $product_permalink ) {
@@ -86,7 +109,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 						</td>
 
-						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'conversions' ); ?>">
+						<td scope="row" role="rowheader" class="product-name" data-title="<?php esc_attr_e( 'Product', 'conversions' ); ?>">
 						<?php
 						if ( ! $product_permalink ) {
 							echo wp_kses_post( $product_name . '&nbsp;' );
@@ -126,18 +149,18 @@ do_action( 'woocommerce_before_cart' ); ?>
 							$min_quantity = 0;
 							$max_quantity = $_product->get_max_purchase_quantity();
 						}
-						
-							$product_quantity = woocommerce_quantity_input(
-								array(
-									'input_name'   => "cart[{$cart_item_key}][qty]",
-									'input_value'  => $cart_item['quantity'],
-									'max_value'    => $max_quantity,
-									'min_value'    => $min_quantity,
-									'product_name' => $product_name,
-								),
-								$_product,
-								false
-							);
+
+						$product_quantity = woocommerce_quantity_input(
+							array(
+								'input_name'   => "cart[{$cart_item_key}][qty]",
+								'input_value'  => $cart_item['quantity'],
+								'max_value'    => $max_quantity,
+								'min_value'    => $min_quantity,
+								'product_name' => $product_name,
+							),
+							$_product,
+							false
+						);
 
 						echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						?>
@@ -161,7 +184,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="coupon">
-							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'conversions' ); ?></label> <input type="text" name="coupon_code" class="input-text form-control" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'conversions' ); ?>" /> <button type="submit" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'conversions' ); ?>"><?php esc_html_e( 'Apply coupon', 'conversions' ); ?></button>
+							<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'conversions' ); ?></label> <input type="text" name="coupon_code" class="input-text form-control" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'conversions' ); ?>" /> <button type="submit" class="btn <?php echo esc_attr( get_theme_mod( 'conversions_wc_primary_btn', 'btn-outline-primary' ) ); ?>" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'conversions' ); ?>"><?php esc_html_e( 'Apply coupon', 'conversions' ); ?></button>
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 						</div>
 					<?php } ?>

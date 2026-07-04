@@ -12,22 +12,22 @@
  *
  * @see https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 9.7.0
+ * @version 10.5.0
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  */
 
- defined( 'ABSPATH' ) || exit;
+defined( 'ABSPATH' ) || exit;
 
- /**
-  * Hook - woocommerce_before_edit_account_form.
-  *
-  * @since 2.6.0
-  */
- do_action( 'woocommerce_before_edit_account_form' );
- ?>
- 
- 
- <form class="woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action( 'woocommerce_edit_account_form_tag' ); ?> >
+/**
+ * Hook - woocommerce_before_edit_account_form.
+ *
+ * @since 2.6.0
+ */
+do_action( 'woocommerce_before_edit_account_form' );
+?>
+
+
+<form class="woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action( 'woocommerce_edit_account_form_tag' ); ?> >
 
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
 
@@ -66,15 +66,15 @@
 
 		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 			<label for="password_current"><?php esc_html_e( 'Current password (leave blank to leave unchanged)', 'conversions' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text form-control" name="password_current" id="password_current" autocomplete="off" />
+			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text form-control" name="password_current" id="password_current" autocomplete="current-password" />
 		</p>
 		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 			<label for="password_1"><?php esc_html_e( 'New password (leave blank to leave unchanged)', 'conversions' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text form-control" name="password_1" id="password_1" autocomplete="off" />
+			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text form-control" name="password_1" id="password_1" autocomplete="new-password" />
 		</p>
 		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 			<label for="password_2"><?php esc_html_e( 'Confirm new password', 'conversions' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text form-control" name="password_2" id="password_2" autocomplete="off" />
+			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text form-control" name="password_2" id="password_2" autocomplete="new-password" />
 		</p>
 	</fieldset>
 	<div class="clear"></div>

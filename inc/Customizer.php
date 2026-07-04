@@ -280,7 +280,7 @@ namespace conversions
 
 			// Apply filter if exists.
 			if ( has_filter( 'conversions_font_family' ) ) {
-				$resources = apply_filters( 'conversions_font_family', $font_family );
+				$font_family = apply_filters( 'conversions_font_family', $font_family );
 			}
 
 			return $font_family;

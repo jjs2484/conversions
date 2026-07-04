@@ -10,9 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 8.1.0
+ * @version 9.8.0
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
  * @phpcs:disable WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
  */
@@ -24,7 +24,7 @@ if ( ! wp_doing_ajax() ) {
 }
 ?>
 <div id="payment" class="woocommerce-checkout-payment">
-	<?php if ( WC()->cart->needs_payment() ) : ?>
+	<?php if ( WC()->cart && WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods">
 			<?php
 			if ( ! empty( $available_gateways ) ) {
@@ -33,7 +33,7 @@ if ( ! wp_doing_ajax() ) {
 				}
 			} else {
 				echo '<li>';
-				wc_print_notice( apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? esc_html__( 'Sorry, it seems that there are no available payment methods. Please contact us if you require assistance or wish to make alternate arrangements.', 'conversions' ) : esc_html__( 'Please fill in your details above to see available payment methods.', 'conversions' ) ), 'notice' ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingHookComment
+				wc_print_notice( apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? esc_html__( 'Sorry, it seems that there are no available payment methods. Please contact us if you require assistance or wish to make alternate arrangements.', 'conversions' ) : esc_html__( 'Please fill in your details above to see available payment methods.', 'conversions' ) ), 'notice' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo '</li>';
 			}
 			?>
@@ -52,7 +52,7 @@ if ( ! wp_doing_ajax() ) {
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<div class="d-grid gap-2"><button type="submit" class="btn '.esc_attr( get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' ) ).' btn-lg" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button></div>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<div class="d-grid gap-2"><button type="submit" class="btn ' . esc_attr( get_theme_mod( 'conversions_wc_secondary_btn', 'btn-primary' ) ) . ' btn-lg" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button></div>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 

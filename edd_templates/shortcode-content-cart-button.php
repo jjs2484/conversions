@@ -13,7 +13,7 @@ $conversions_edd_primary_btn = get_theme_mod( 'conversions_edd_primary_btn', 'bt
 	if ( edd_has_variable_prices( get_the_ID() ) ) {
 		?>
 		<div class="edd_purchase_submit_wrapper">
-			<a href="<?php esc_url( the_permalink() ); ?>" class="edd-add-to-cart button btn btn-lg <?php echo esc_attr( $conversions_edd_primary_btn ); ?>">
+			<a href="<?php echo esc_url( get_permalink() ); ?>" class="edd-add-to-cart button btn btn-lg <?php echo esc_attr( $conversions_edd_primary_btn ); ?>">
 				<?php esc_html_e( 'Select options', 'conversions' ); ?>
 			</a>
 		</div>

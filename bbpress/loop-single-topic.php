@@ -91,7 +91,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<li class="bbp-topic-voice-count"><?php bbp_topic_voice_count(); ?></li>
 
-	<li class="bbp-topic-reply-count"><?php bbp_show_lead_topic() ? bbp_topic_reply_count() : bbp_topic_post_count(); ?> <span class="c-bbp-post-count"><?php echo esc_html_e( 'Posts', 'conversions' ); ?></span></li>
+	<li class="bbp-topic-reply-count"><?php bbp_show_lead_topic() ? bbp_topic_reply_count() : bbp_topic_post_count(); ?> <span class="c-bbp-post-count"><?php esc_html_e( 'Posts', 'conversions' ); ?></span></li>
 
 	<li class="bbp-topic-freshness">
 

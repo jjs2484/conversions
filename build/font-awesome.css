@@ -8285,8 +8285,8 @@ readers do not read off random characters that represent icons */
  * Copyright 2024 Fonticons, Inc.
  */
 :root, :host {
-  --fa-style-family-classic: "Font Awesome 6 Free";
-  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-style-family-classic: 'Font Awesome 6 Free';
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free';
 }
 
 @font-face {
@@ -8307,8 +8307,8 @@ readers do not read off random characters that represent icons */
  * Copyright 2024 Fonticons, Inc.
  */
 :root, :host {
-  --fa-style-family-classic: "Font Awesome 6 Free";
-  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-style-family-classic: 'Font Awesome 6 Free';
+  --fa-font-regular: normal 400 1em/1 'Font Awesome 6 Free';
 }
 
 @font-face {
@@ -8329,8 +8329,8 @@ readers do not read off random characters that represent icons */
  * Copyright 2024 Fonticons, Inc.
  */
 :root, :host {
-  --fa-style-family-brands: "Font Awesome 6 Brands";
-  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-style-family-brands: 'Font Awesome 6 Brands';
+  --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands';
 }
 
 @font-face {

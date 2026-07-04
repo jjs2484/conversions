@@ -74,8 +74,7 @@ class Cta {
 		</div>
 
 		<?php
-		$content = ob_get_contents();
-		ob_clean();
+		$content = ob_get_clean();
 
 		// Apply filter if exists.
 		if ( has_filter( 'conversions_cta_content_filter' ) ) {

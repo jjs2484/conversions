@@ -57,9 +57,9 @@ defined( 'ABSPATH' ) || exit;
 
 	</li>
 
-	<li class="bbp-forum-topic-count"><?php bbp_forum_topic_count(); ?> <span class="c-bbp-topic-count"><?php echo esc_html_e( 'Topics', 'conversions' ); ?></span></li>
+	<li class="bbp-forum-topic-count"><?php bbp_forum_topic_count(); ?> <span class="c-bbp-topic-count"><?php esc_html_e( 'Topics', 'conversions' ); ?></span></li>
 
-	<li class="bbp-forum-reply-count"><?php bbp_show_lead_topic() ? bbp_forum_reply_count() : bbp_forum_post_count(); ?> <span class="c-bbp-post-count"><?php echo esc_html_e( 'Posts', 'conversions' ); ?></span></li>
+	<li class="bbp-forum-reply-count"><?php bbp_show_lead_topic() ? bbp_forum_reply_count() : bbp_forum_post_count(); ?> <span class="c-bbp-post-count"><?php esc_html_e( 'Posts', 'conversions' ); ?></span></li>
 
 	<li class="bbp-forum-freshness">
 
