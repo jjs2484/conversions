@@ -27,6 +27,7 @@ NOTE: Nav menu only supports 2 levels of sub-menus. Additionally, nav menu items
 * Update: Composer dependencies.
 * Fix: minor escaping and echoing.
 * Fix: CTA ob_get_contents
+* Fix: conversions_font_family filter.
 
 = 2.2.4 =
 * Fix: _load_textdomain_just_in_time
