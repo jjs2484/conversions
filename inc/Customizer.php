@@ -16,6 +16,61 @@ namespace conversions
 	 * @since 2019-08-15
 	 */
 	class Customizer {
+
+		/**
+		 * WordPress Customizer object.
+		 *
+		 * @since 2.7.8
+		 *
+		 * @var \WP_Customize_Manager|null
+		 */
+		public $wp_customize = null;
+
+		/**
+		 * Font choices.
+		 *
+		 * @since 2.7.8
+		 *
+		 * @var array
+		 */
+		public $font_choices = [];
+
+		/**
+		 * Button style choices.
+		 *
+		 * @since 2.7.8
+		 *
+		 * @var array
+		 */
+		public $button_choices = [];
+
+		/**
+		 * Extra button style choices.
+		 *
+		 * @since 2.7.8
+		 *
+		 * @var array
+		 */
+		public $extra_button_choices = [];
+
+		/**
+		 * Alternate button style choices.
+		 *
+		 * @since 2.7.8
+		 *
+		 * @var array
+		 */
+		public $alt_button_choices = [];
+
+		/**
+		 * Gradient choices.
+		 *
+		 * @since 2.7.8
+		 *
+		 * @var array
+		 */
+		public $gradient_choices = [];
+
 		/**
 		 * Class constructor.
 		 *
@@ -437,7 +492,8 @@ namespace conversions
 					.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
 					.widget_block .wc-block-product-search .wc-block-product-search__button,
 					#offcanvasWcMiniCart .button.wc-forward, #offcanvasWcMiniCart .c-wc__keep-shopping,
-					.wc-block-product-search__fields .wc-block-product-search__button {
+					.wc-block-product-search__fields .wc-block-product-search__button,
+					.wc-block-components-button:not(.is-link) {
 						background: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_bg'] ) . ';
 						color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_color'] ) . ';
 						border: 1px solid ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_border'] ) . ';
@@ -446,7 +502,8 @@ namespace conversions
 					.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover,
 					.widget_block .wc-block-product-search .wc-block-product-search__button:hover,
 					#offcanvasWcMiniCart .button.wc-forward:hover, #offcanvasWcMiniCart .c-wc__keep-shopping:hover,
-					.wc-block-product-search__fields .wc-block-product-search__button:hover {
+					.wc-block-product-search__fields .wc-block-product-search__button:hover,
+					.wc-block-components-button:not(.is-link):hover {
 						color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_color_hover'] ) . ';
 						background-color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_bg_hover'] ) . ';
 						border-color: ' . esc_html( $bs_btn_colors[$wc_primary_btn]['btn_border_hover'] ) . ';
@@ -464,6 +521,24 @@ namespace conversions
 						color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_color_hover'] ) . ';
 						background-color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_bg_hover'] ) . ';
 						border-color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_border_hover'] ) . ';
+					}';
+					echo '.wc-block-cart__submit .wc-block-components-button:not(.is-link),
+					.wc-block-components-checkout-place-order-button.wc-block-components-button:not(.is-link) {
+						background: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_bg'] ) . ';
+						color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_color'] ) . ';
+						border: 1px solid ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_border'] ) . ';
+						padding: 0.5rem 1rem;
+						font-size: 1.25rem;
+						border-radius: .5rem;
+					}';
+					echo '.wc-block-cart__submit .wc-block-components-button:not(.is-link):hover,
+					.wc-block-components-checkout-place-order-button.wc-block-components-button:not(.is-link):hover {
+						color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_color_hover'] ) . ';
+						background-color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_bg_hover'] ) . ';
+						border-color: ' . esc_html( $bs_btn_colors[$wc_secondary_btn]['btn_border_hover'] ) . ';
+						padding: 0.5rem 1rem;
+						font-size: 1.25rem;
+						border-radius: .5rem;
 					}';
 				}
 				// Easy Digital Downloads.
